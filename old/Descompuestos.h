@@ -1,0 +1,64 @@
+//Descompuestos.h
+
+#ifndef DESCOMPUESTOS_H
+#define DESCOMPUESTOS_H
+
+#include "Elementos.h"
+#include "UdObra.h"
+#include <fstream>
+#include "MapaConceptos.h"
+#include <set>
+
+class BuscadorDescompuestos;
+
+class Descompuestos: public MapaConceptos<UdObra>
+//Unidades de obra.
+{
+public:
+    typedef std::set<std::string> set_pendientes;
+    typedef MapaConceptos<UdObra> mapa_conceptos;
+
+    void AgregaComponente(const Elementos &,const std::string &,const std::string &,const float &, const float &f= 1.0);
+    BuscadorDescompuestos GetBuscador(void);
+
+    void LeeBC3Fase1(const Codigos &cds);
+    set_pendientes LeeBC3Fase2(const Codigos &cds,Buscadores &bp);
+    void LeeSpre(std::istream &is,const Elementos &elementos);
+    void EscribeSpre(std::ostream &os) const;
+    void AsignaFactor(const float &f);
+    void ImprLtxJustPre(std::ostream &os) const;
+    void ImprLtxCP1(std::ostream &os) const;
+    void ImprLtxCP2(std::ostream &os) const;
+    void EscribeHCalc(std::ostream &os) const;
+
+    void SimulaDescomp(const UdObra &origen, UdObra &destino)
+    //Toma la descomposición de origen y se la da a destino
+    //sin alterar el precio final de origen.
+    {
+        const double lambda= destino.SimulaDescomp(origen);
+        if(lambda<0.0)
+            std::cerr << "Los precios de los materiales de la unidad: "
+                      << origen.Codigo() << " son muy altos para la unidad: "
+                      << destino.Codigo() << " lambda= " << lambda << std::endl;
+    }
+    void SimulaDescomp(const std::string &origen, const std::string &destino)
+    {
+        const UdObra *org= Busca(origen);
+        UdObra *dest= Busca(destino);
+        if(org && dest)
+            SimulaDescomp(*org,*dest);
+    }
+};
+
+class BuscadorDescompuestos: public BuscadorPtros
+{
+    Descompuestos *contenedor; //Contenedor donde se buscan los punteros.
+public:
+    BuscadorDescompuestos(Descompuestos *c)
+        : contenedor(c) {}
+    virtual void const *Busca(const std::string &clave) const;
+    virtual void *Busca(const std::string &clave);
+};
+
+
+#endif

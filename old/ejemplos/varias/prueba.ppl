@@ -1,0 +1,8 @@
+\Obra
+  {
+    \incluye{precios.ppl}
+    \c{\pp{}
+    \QQ{}}
+  }
+\salva_ppl_descompuestos{salvado.ppl}
+\fin{}

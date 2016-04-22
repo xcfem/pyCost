@@ -1,0 +1,47 @@
+\Obra
+  {
+    \porcentajes
+      {
+        \gastos_generales{0.00}
+        \beneficio_industrial{0.00}
+        \iva{0.16}
+      }
+    \incluye{precios.ppl}
+    \capitulo
+        {
+          \codigo{PBlending}
+          \titulo{Planta "Blending" Recitermia}
+          \fr { \factor{1} \rendimiento{1.0} }
+          \mediciones
+             {
+               \med_uobra
+                 {
+                   \ref{040.001}
+                   \lineas_medicion
+                     {
+                       \medicion_vol { \comentario{según medición auxiliar} \unidades{1} \largo{4200} \ancho{1} \alto{1} }
+                     }
+                 }
+               \pieza
+                 {
+                   \ref{220.001}
+                   \mmedida{longitud}
+                   \geom
+                      {
+                        \segmento
+                           {
+                             \org{\x{0} \y{0} \z{0}}
+                             \dest{\x{1} \y{1} \z{1}}
+                           }
+                        \segmento
+                           {
+                             \org{\x{0} \y{0} \z{0}}
+                             \dest{\x{1} \y{0} \z{0}}
+                           }
+                      }
+                 }
+             }
+          \subcapitulos {}
+        } \c{fin capitulo:PR}
+  } \c{fin obra:PR}
+\escribe_latex_mediciones{textos/meds.tex}

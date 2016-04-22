@@ -1,0 +1,101 @@
+              \capitulo
+                 {
+                   \codigo{7}
+                   \titulo{Parque de tanques}
+                   \fr { \factor{1} \rendimiento{1.0000000000000} }
+                   \mediciones
+                     {
+                     \med_uobra
+                       {
+                       \ref{030.001}
+                       \lineas_medicion
+                          {
+                          \medicion_vol { \comentario{} \unidades{1} \largo{844} \ancho{0.1} \alto{1} }
+                          }
+                       }
+                     \med_uobra
+                       {
+                       \ref{030.003.1}
+                       \lineas_medicion
+                          {
+                          \medicion_vol { \comentario{} \unidades{1} \largo{844} \ancho{0.4} \alto{1} }
+                          \medicion_vol { \comentario{} \unidades{1} \largo{844} \ancho{0.035} \alto{1} }
+                          \medicion_vol { \comentario{} \unidades{1} \largo{98.33} \ancho{0.25} \alto{1} }
+                          \medicion_vol { \comentario{} \unidades{10} \largo{11.92} \ancho{1.1} \alto{0.3} }
+                          \medicion_vol { \comentario{} \unidades{4} \largo{15.12} \ancho{1.5} \alto{0.3} }
+                          }
+                        }
+                     \med_uobra
+                       {
+                       \ref{030.009}
+                       \lineas_medicion
+                          {
+                          \medicion_vol { \comentario{Muro} \unidades{1} \largo{5.13} \ancho{1} \alto{1} }
+                          \medicion_vol { \comentario{} \unidades{1} \largo{4.96} \ancho{1} \alto{1} }
+                          \medicion_vol { \comentario{} \unidades{1} \largo{2.89} \ancho{1} \alto{1} }
+                          \medicion_vol { \comentario{} \unidades{1} \largo{25.58} \ancho{1} \alto{1} }
+                          \medicion_vol { \comentario{} \unidades{1} \largo{25.84} \ancho{1} \alto{1} }
+                          \medicion_vol { \comentario{} \unidades{1} \largo{12.85} \ancho{1} \alto{1} }
+                          \medicion_vol { \comentario{} \unidades{1} \largo{2.96} \ancho{1} \alto{1} }
+                          \medicion_vol { \comentario{} \unidades{1} \largo{2.75} \ancho{1} \alto{1} }
+                          \medicion_vol { \comentario{} \unidades{1} \largo{12.44} \ancho{1} \alto{1} }
+                          \medicion_vol { \comentario{} \unidades{1} \largo{12.85} \ancho{1} \alto{1} }
+                          \medicion_vol { \comentario{} \unidades{1} \largo{2.75} \ancho{1} \alto{1} }
+                          \medicion_vol { \comentario{} \unidades{1} \largo{25.58} \ancho{1} \alto{1} }
+                          \medicion_vol { \comentario{} \unidades{1} \largo{3.01} \ancho{1} \alto{1} }
+                          \medicion_vol { \comentario{} \unidades{1} \largo{2.89} \ancho{1} \alto{1} }
+                          \medicion_vol { \comentario{} \unidades{1} \largo{4.96} \ancho{1} \alto{1} }
+                          \medicion_vol { \comentario{} \unidades{1} \largo{5.13} \ancho{1} \alto{1} }
+                          \medicion_vol { \comentario{} \unidades{1} \largo{4.3} \ancho{1} \alto{1} }
+                          \medicion_vol { \comentario{} \unidades{1} \largo{15.01} \ancho{1} \alto{1} }
+                          \medicion_vol { \comentario{} \unidades{1} \largo{15.51} \ancho{1} \alto{1} }
+                          \medicion_vol { \comentario{Soportes tanques} \unidades{10} \largo{8.46} \ancho{0.3} \alto{1} }
+                          \medicion_vol { \comentario{} \unidades{10} \largo{15.38} \ancho{0.3} \alto{1} }
+                          \medicion_vol { \comentario{} \unidades{10} \largo{10.41} \ancho{0.3} \alto{1} }
+                          \medicion_vol { \comentario{} \unidades{10} \largo{19.84} \ancho{0.3} \alto{1} }
+                          }
+                        }
+                     \med_uobra
+                       {
+                       \ref{030.008}
+                       \lineas_medicion
+                          {
+                          \medicion_vol { \comentario{Losa} \unidades{1} \largo{883.332} \ancho{37.92} \alto{1} }
+                          \medicion_vol { \comentario{T.R.} \unidades{120} \largo{11.92} \ancho{1.58} \alto{1} }
+                          \medicion_vol { \comentario{T.R.} \unidades{610} \largo{2.5} \ancho{1.58} \alto{1} }
+                          \medicion_vol { \comentario{T.M.} \unidades{64} \largo{15.12} \ancho{1.58} \alto{1} }
+                          \medicion_vol { \comentario{T.M.} \unidades{308} \largo{2.9} \ancho{1.58} \alto{1} }
+                          \medicion_vol { \comentario{Muro} \unidades{1314} \largo{1.75} \ancho{0.62} \alto{1} }
+                          \medicion_vol { \comentario{} \unidades{16} \largo{98.33} \ancho{0.62} \alto{1} }
+                          \medicion_vol { \comentario{} \unidades{318} \largo{1.75} \ancho{0.62} \alto{1} }
+                          \medicion_vol { \comentario{} \unidades{16} \largo{23.6} \ancho{0.62} \alto{1} }
+                          }
+                       }
+                     \med_uobra
+                       {
+                       \ref{038.227}
+                       \lineas_medicion
+                          {
+                          \medicion_vol { \comentario{} \unidades{1} \largo{301} \ancho{0} \alto{0} }
+                          }
+                       }
+                     \med_uobra
+                       {
+                       \ref{130.001}
+                       \lineas_medicion
+                          {
+                          \medicion_vol { \comentario{Losa} \unidades{1} \largo{883.332} \ancho{1} \alto{1} }
+                          \medicion_vol { \comentario{Muros} \unidades{1} \largo{174.83} \ancho{1} \alto{1} }
+                          }
+                       }
+                     \med_uobra
+                       {
+                       \ref{030.001}
+                       \lineas_medicion
+                          {
+                          \medicion_vol { \comentario{Limpieza} \unidades{1} \largo{15.5} \ancho{7} \alto{0.1} }
+                          }
+                        }
+                     }
+                   \subcapitulos{}
+                 } \c{fin capitulo parque de tanques}

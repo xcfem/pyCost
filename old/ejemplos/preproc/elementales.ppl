@@ -1,0 +1,11 @@
+  \elementales
+    {
+    \elemento
+      {
+        \codigo{SINDESCO}
+        \desc{Unidad sin descompuesto}
+        \ud{***}
+        \precio{1}
+        \tipo{1}
+      }
+    }

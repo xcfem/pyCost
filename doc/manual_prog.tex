@@ -1,0 +1,2020 @@
+\documentclass[spanish,a4paper,oneside]{book}
+\usepackage[spanish]{babel}
+\selectlanguage{spanish}
+\usepackage{epsfig}
+\usepackage{amsmath}
+\usepackage{isolatin1}
+
+\begin{document}
+\tableofcontents
+\chapter{Clases}
+\section{Clase EntPpl} \label{sc_cls_entppl}
+\subsection{Propósito de diseño}
+La clase EntPpl sirve como base a todas las entidades que componen
+el presupuesto de la obra.
+
+\subsection{Ascendientes}
+no tiene.
+
+\subsection{Descendientes}
+Las clases que se derivan de EntPpl son las siguientes:
+
+\begin{itemize}
+\item La clase CompBC3 (ver sección \ref{sc_cls_compbc3} en la página \pageref{sc_cls_compbc3}).
+\item La clase ComptesBC3 (ver sección \ref{sc_cls_comptesbc3} en la página \pageref{sc_cls_comptesbc3}).
+\item La clase CuaPre (ver sección \ref{sc_cls_cuapre} en la página \pageref{sc_cls_cuapre}).
+\item La clase EntBC3 (ver sección \ref{sc_cls_entbc3} en la página \pageref{sc_cls_entbc3}).
+\item La clase patrón MapaConceptos$<T>$ 
+(ver sección \ref{sc_cls_mapaconceptos_t} en la página \pageref{sc_cls_mapaconceptos_t}).
+\end{itemize}
+
+\subsection{Propiedades}
+no tiene
+
+\subsection{Métodos}
+
+\subsubsection{Método procesa\_comando}
+
+\paragraph{Propósito de diseño:}
+Este método se encarga de procesar los comandos del archivo de datos
+que corresponden a cada objeto. Es virtual y se redefine en cada clase
+de manera que un objeto de la clase se encarge de leer sus propiedades
+desde el archivo de entrada.
+
+\paragraph{Parámetros}
+El método recibe dos parámetros:
+\begin{itemize}
+\item cmd: Cadena de caracteres que contiene el comando a procesar.
+\item is: Flujo de entrada (istream) del que se leen los datos.
+\end{itemize}
+
+\subsubsection{Método LeePpl}
+\paragraph{Propósito de diseño:}
+Este método se encarga de leer el archivo de datos y detectar los
+comandos, dirigiéndolos a continuación al método ``procesa\_comando''
+del objeto que lanzó su ejecución (la de LeePpl). También se encarga
+de detectar el final de los parámetros de un comando del archivo
+de datos (detectando el carácter '\}').
+
+\paragraph{Parámetros}
+El método sólo recibe el parámetro ``is'' que es el flujo de
+entrada del que se leen los datos.
+
+\section{Clase EntBC3} \label{sc_cls_entbc3}
+\subsection{Propósito de diseño}
+La clase EntBC3 es la clase base de los objetos que forman parte
+de la descripción de la obra y que tienen código y descripción.
+
+\subsection{Ascendientes}
+La clase EntBC3 deriva de la clase EntPpl.
+
+\subsection{Descendientes}
+Las clases descendientes de EntBC3 son las siguientes:
+
+\begin{itemize}
+\item La clase CompuestoBC3 (ver sección \ref{sc_cls_compuestobc3} en la página \pageref{sc_cls_compuestobc3}).
+\item La clase Medible (ver sección \ref{sc_cls_medible} en la página \pageref{sc_cls_medible}).
+\end{itemize}
+
+\subsection{Propiedades}
+Los miembros de la clase EntBC3 son:
+
+\begin{itemize}
+\item codigo: Cadena de caracteres que identifica de forma unívoca a la entidad en la descripción de la obra.
+\item titulo: Título o descripción de la entidad.
+\end{itemize}
+
+\subsection{Métodos}
+\subsubsection{Método procesa\_comando}
+
+\paragraph{Propósito de diseño:}
+Este método se encarga de procesar los comandos que definen
+el código y la descripción de un objeto de la clase EntBC3.
+
+\paragraph{Parámetros}
+El método recibe dos parámetros:
+\begin{itemize}
+\item cmd: Cadena de caracteres que contiene el comando a procesar.
+\item is: Flujo de entrada (istream) del que se leen los datos.
+\end{itemize}
+
+\subsubsection{Constructor}
+\paragraph{Propósito de diseño:}
+Inicializa código y título.
+\paragraph{Parámetros:} Recibe cómo parámetros dos cadenas de caracteres que contienen
+el código y la descripción de la entidad.
+
+\subsubsection{Método Codigo}
+\paragraph{Propósito de diseño:}
+Devuelve una referencia al código de la entidad.
+\paragraph{Parámetros:} Ninguno.
+
+\subsubsection{Método Titulo}
+\paragraph{Propósito de diseño:}
+Devuelve una referencia al título o la descripción de la entidad.
+\paragraph{Parámetros:} Ninguno.
+
+\subsubsection{Método Unidad}
+\paragraph{Propósito de diseño:}
+Devuelve una referencia a la unidad de medida de la entidad.
+Este método es virtual y debe redefinirse en las clases
+descendientes.
+\paragraph{Parámetros:} Ninguno.
+
+\subsubsection{Método Precio}
+\paragraph{Propósito de diseño:}
+Devuelve el precio de la entidad. Este método es virtual y debe 
+redefinirse en las clases descendientes.
+\paragraph{Parámetros:} Ninguno.
+
+\subsubsection{Método StrPrecio}
+\paragraph{Propósito de diseño:}
+Devuelve una cadena de caracteres que contiene el precio de la entidad. Este método es 
+virtual y debe  redefinirse en las clases descendientes.
+\paragraph{Parámetros:} Ninguno.
+
+\subsubsection{Método Fecha}
+\paragraph{Propósito de diseño:}
+Devuelve una cadena de caracteres que contiene la fecha en que se 
+definió o actualizó la entidad. Este método es virtual y debe 
+redefinirse en las clases descendientes.
+\paragraph{Parámetros:} Ninguno.
+
+\subsubsection{Método Tipo}
+\paragraph{Propósito de diseño:}
+Devuelve el tipo (maquinaria, mano de obra, materiales o sin clasificar)
+de la entidad. Este método es virtual y debe redefinirse en las clases 
+descendientes.
+\paragraph{Parámetros:} Ninguno.
+
+\subsubsection{Método TextoLargo}
+\paragraph{Propósito de diseño:}
+Devuelve una cadena de caracteres que contiene una
+descripción de la entidad más detallada que el la propiedad titulo. 
+Este método es virtual y debe  redefinirse en las clases descendientes.
+\paragraph{Parámetros:} Ninguno.
+
+\subsubsection{Método ChrTipo}
+\paragraph{Propósito de diseño:}
+Devuelve una carácter que corresponde al tipo del elemento
+según la especificación FIEBDC, esto es:
+
+\begin{itemize}
+\item 0: Si el tipo es ``sin clasificar''
+\item 1: Si el tipo es ``mano de obra''.
+\item 2: Si el tipo es ``maquinaria''.
+\item 3: Si el tipo es ``material''.
+\end{itemize}
+Este método es virtual y puede redefinirse en las clases descendientes.
+
+\paragraph{Parámetros:} Ninguno.
+
+\subsubsection{Método LeeBC3}
+\paragraph{Propósito de diseño:} Este método se encarga de
+leer el código y el título de una entidad a partir de
+un parámetro r que posea dos métodos: Codigo() y Datos().Titulo().
+
+\paragraph{Parámetros:} El método recibe un parámetro de clase
+T, que cumple las condiciones mencionadas en el párrafo anterior.
+
+\subsubsection{Método EscribeSpre}
+\paragraph{Propósito de diseño:} Este método se encarga
+de escribir el código, la unidad, el título y el precio
+de una entidad en el formato ``estándar'' de Sispre.
+
+\paragraph{Parámetros:} Este método recibe un único parámetro
+``os'' que es el flujo de salida en el que se deben escribir
+los datos.
+
+\subsubsection{Método EscribeBC3}
+\paragraph{Propósito de diseño:} Este método se encarga
+de escribir el código, la unidad, el título, el precio,
+la fecha y el tipo de una entidad en el formato FIEBDC3.
+
+\paragraph{Parámetros:} Este método recibe un único parámetro
+``os'' que es el flujo de salida en el que se deben escribir
+los datos.
+
+\subsubsection{Método Escribe}
+\paragraph{Propósito de diseño:} Este método se encarga
+de escribir el código, la unidad, el título, el precio,
+la fecha,el tipo y el texto largo de una entidad en un formato libre
+con el propósito de poder depurar el programa.
+
+\paragraph{Parámetros:} Este método recibe un único parámetro
+``os'' que es el flujo de salida en el que se deben escribir
+los datos.
+
+\subsection{Operadores}
+\subsubsection{Operador de inserción en flujo de salida}
+\paragraph{Propósito de diseño:} Escribe los valores
+de las propiedades de la entidad en el flujo de salida
+que se le pasa como parámetro. Se emplea para depurar
+el programa.
+
+\section{Clase CompBC3} \label{sc_cls_compbc3}
+\subsection{Propósito de diseño}
+Un objeto de la clase CompBC3 representa una componente de un objeto
+que admite descomposición.
+\subsection{Ascendientes}
+La clase CompBC3 desciende de la clase EntPpl.
+\subsection{Descendientes}
+No tiene.
+
+\subsection{Propiedades}
+Los miembros de la clase CompBC3 son los siguientes:
+\begin{itemize}
+\item *ent: Puntero a un objeto de clase EntBC3 
+(ver sección \ref{sc_cls_entbc3} en la página \pageref{sc_cls_entbc3})
+\item factor: Real que multiplica al rendimiento de la componente.
+\item rendimiento: Rendimiento de la componente en la descomposición.
+\end{itemize}
+
+\subsection{Métodos}
+\subsubsection{Método procesa\_comando}
+
+\paragraph{Propósito de diseño:}
+Este método se encarga de procesar los comandos que definen
+el código y la descripción de un objeto de la clase CompBC3, esto
+es los que definen la entidad a la que se refiere la componente,
+el factor y el rendimiento.
+
+\paragraph{Parámetros}
+El método recibe dos parámetros:
+\begin{itemize}
+\item cmd: Cadena de caracteres que contiene el comando a procesar.
+\item is: Flujo de entrada (istream) del que se leen los datos.
+\end{itemize}
+
+\subsubsection{Constructores}
+
+\paragraph{Propósito de diseño:}
+Se encargan de inicializar los valores de la componente.
+
+\paragraph{Parámetros}
+El constructor recibe tres parámetros:
+\begin{itemize}
+\item e: Referencia a la entidad a la que se refiere la componente.
+\item f: Factor que multiplica al rendimiento.
+\item r: Rendimiento de la entidad en la componente.
+\end{itemize}
+
+\subsubsection{Factor}
+\paragraph{Propósito de diseño:}
+Devuelve el valor del factor.
+
+\paragraph{Parámetros}
+Ninguno.
+
+\subsubsection{Precio}
+\paragraph{Propósito de diseño:}
+Devuelve el precio de la componente calculando
+el producto del precio de la entidad a la que
+se refiere por el rendimiento y por el factor.
+
+\paragraph{Parámetros}
+Ninguno.
+
+\subsubsection{Método EscribeSpre}
+\paragraph{Propósito de diseño:} Este método se encarga
+de escribir el código y el rendimiento de la componente
+en el formato ``estándar'' de Sispre.
+
+\paragraph{Parámetros:} Este método recibe un único parámetro
+``os'' que es el flujo de salida en el que se deben escribir
+los datos.
+
+\subsubsection{Método EscribeBC3}
+\paragraph{Propósito de diseño:} Este método se encarga
+de escribir el código, el factor y el rendimiento de 
+la componente en el formato FIEBDC3.
+
+\paragraph{Parámetros:} Este método recibe un único parámetro
+``os'' que es el flujo de salida en el que se deben escribir
+los datos.
+
+\subsubsection{Método SalvaPpl}
+\paragraph{Propósito de diseño:} Este método se encarga de escribir 
+los comandos que definen la componente en el formato nativo
+del programa.
+
+\paragraph{Parámetros:} Este método recibe un único parámetro
+``os'' que es el flujo de salida en el que se deben escribir
+los datos.
+
+\section{Clase ComptesBC3} \label{sc_cls_comptesbc3}
+\subsection{Propósito de diseño}
+Esta clase es una contenedor que almacena las componentes
+(CompBC3 \footnote{ver sección \ref{sc_cls_compbc3} en 
+la página \pageref{sc_cls_compbc3}}) de una descomposición. 
+\subsection{Ascendientes}
+Las clases base de esta son:
+
+\begin{itemize}
+\item deque$<CompBC3>$: Contenedor de la STL.
+\item EntPpl (ver sección \ref{sc_cls_entppl} en la página \pageref{sc_cls_entppl}).
+\end{itemize}
+
+\subsection{Descendientes}
+No tiene.
+
+\subsection{Propiedades}
+No tiene.
+
+\subsection{Métodos}
+\subsubsection{Método procesa\_comando}
+
+\paragraph{Propósito de diseño:}
+Este método se encarga de procesar los comandos que definen
+las componentes de un objeto de la clase ComptesBC3, esto
+es la lista de objetos de la clase CompBC3 que forman la
+descomposición.
+
+\paragraph{Parámetros}
+El método recibe dos parámetros:
+\begin{itemize}
+\item cmd: Cadena de caracteres que contiene el comando a procesar.
+\item is: Flujo de entrada (istream) del que se leen los datos.
+\end{itemize}
+
+\subsubsection{Método Precio}
+\paragraph{Propósito de diseño:}
+Devuelve el precio de la descomposición calculando
+las suma del de todas sus componentes.
+
+\paragraph{Parámetros}
+Ninguno.
+
+\subsubsection{Método AsignaFactor}
+\paragraph{Propósito de diseño:}
+Asigna el factor que se pasa como parámetro
+a todas las componentes de la descomposición.
+
+\paragraph{Parámetros}
+Valor del factor.
+
+\subsubsection{Método EscribeSpre}
+\paragraph{Propósito de diseño:} Este método se encarga
+de escribir la descomposición en el formato ``estándar'' de Sispre.
+
+\paragraph{Parámetros:} Este método recibe un único parámetro
+``os'' que es el flujo de salida en el que se deben escribir
+los datos.
+
+\subsubsection{Método EscribeBC3}
+\paragraph{Propósito de diseño:} Este método se encarga
+de escribir la descomposición en el formato FIEBDC3.
+
+\paragraph{Parámetros:} Este método recibe un único parámetro
+``os'' que es el flujo de salida en el que se deben escribir
+los datos.
+
+\subsubsection{Método SalvaPpl}
+\paragraph{Propósito de diseño:} Este método se encarga de escribir 
+los comandos que definen la descomposición en el formato nativo
+del programa.
+
+\paragraph{Parámetros:} Este método recibe un único parámetro
+``os'' que es el flujo de salida en el que se deben escribir
+los datos.
+
+\section{Clase Medible} \label{sc_cls_medible}
+\subsection{Propósito de diseño}
+Los objetos de la clase Medible representan entidades que
+forman parte de la descripción de la obra y que son susceptibles
+de medirse (en metros, horas, kilogramos,\ldots).
+
+\subsection{Ascendientes}
+La clase base de Medible es EntBC3 \footnote{ver sección \ref{sc_cls_entbc3} en la página \pageref{sc_cls_entbc3}}.
+\subsection{Descendientes}
+Las clases descendientes de Medible son:
+
+\begin{itemize}
+\item La clase Elemento (ver sección \ref{sc_cls_elemento} en la página \pageref{sc_cls_elemento}).
+\item La clase UdObra (ver sección \ref{sc_cls_udobra} en la página \pageref{sc_cls_udobra}).
+\end{itemize}
+
+\subsection{Propiedades}
+Los miembros de los objetos de esta clase son:
+
+\begin{itemize}
+\item unidad: Cadena de caracteres que identifica la unidad en que se mide (kg,m3,h,\ldots).
+\item txt\_largo: Descripción extensa de la entidad que representa el objeto.
+\end{itemize}
+
+\subsection{Métodos}
+\subsubsection{Método procesa\_comando}
+
+\paragraph{Propósito de diseño:}
+Este método se encarga de procesar los comandos que definen
+los miembros del objeto.
+
+\paragraph{Parámetros}
+El método recibe dos parámetros:
+\begin{itemize}
+\item cmd: Cadena de caracteres que contiene el comando a procesar.
+\item is: Flujo de entrada (istream) del que se leen los datos.
+\end{itemize}
+
+\subsubsection{Constructor}
+\paragraph{Propósito de diseño}
+Se encarga de inicializar los valores de los
+miembros del objeto.
+
+\paragraph{Parámetros}
+El constructor recibe tres parámetros:
+
+\begin{itemize}
+\item cod: Código de la entidad.
+\item tit: Título o descripción de la entidad.
+\item ud: Cadena de caracteres que identifica la unidad en que se mide (kg,m3,h,\ldots).
+\end{itemize}
+
+\subsubsection{Método TextoLargo}
+\paragraph{Propósito de diseño:} 
+Devuelve la descripción detallada de la entidad.
+\paragraph{Parámetros}
+Ninguno.
+
+\subsubsection{Método Unidad}
+\paragraph{Propósito de diseño:} 
+Devuelve una cadena de caracteres que describe la unidad
+en que se mide la entidad.
+\paragraph{Parámetros}
+Ninguno.
+
+\subsubsection{Método LeeBC3}
+\paragraph{Propósito de diseño:} 
+Se encarga de leer los datos correspondientes a
+la entidad en formato FIEBDC3.
+\paragraph{Parámetros:} El método recibe un parámetro de clase
+T, que posee los métodos r.Datos().Unidad() y
+r.Datos().Texto().
+
+\subsubsection{Método EscribeBC3}
+\paragraph{Propósito de diseño:} Este método se encarga
+de escribir el texto largo de la entidad en el formato FIEBDC3.
+
+\paragraph{Parámetros:} Este método recibe un único parámetro
+``os'' que es el flujo de salida en el que se deben escribir
+los datos.
+
+\section{Clase Elemento} \label{sc_cls_elemento}
+\subsection{Propósito de diseño}
+La clase elemento define los objetos que representan
+los precios elementales en la descripción de la obra.
+\subsection{Ascendientes}
+La clase base de Elemento es Medible \footnote{ver sección \ref{sc_cls_medible} en la página \pageref{sc_cls_medible}}.
+\subsection{Descendientes}
+No tiene.
+\subsection{Propiedades}
+Los miembros de la clase medible son:
+
+\begin{itemize}
+\item precio: Almacena el precio unitario.
+\item tipo: Almacena el tipo al que corresponde el elemento: mano de obra, maquinaria,ldots
+\end{itemize}
+\subsection{Métodos}
+
+\subsubsection{Método procesa\_comando}
+
+\paragraph{Propósito de diseño:}
+Este método se encarga de procesar los comandos que definen
+el contenido de los miembros del objeto.
+
+\paragraph{Parámetros}
+El método recibe dos parámetros:
+\begin{itemize}
+\item cmd: Cadena de caracteres que contiene el comando a procesar.
+\item is: Flujo de entrada (istream) del que se leen los datos.
+\end{itemize}
+
+\subsubsection{Constructor}
+\paragraph{Propósito de diseño}
+Se encarga de inicializar los valores de los
+miembros del objeto.
+
+\paragraph{Parámetros}
+El constructor recibe cinco parámetros:
+
+\begin{itemize}
+\item cod: Código de la entidad.
+\item tit: Título o descripción de la entidad.
+\item ud: Cadena de caracteres que identifica la unidad en que se mide (kg,m3,h,\ldots).
+\item precio: Precio por unidad de medida.
+\item tp: Tipo del concepto.
+\end{itemize}
+
+\subsubsection{Método Precio}
+\paragraph{Propósito de diseño:} 
+Devuelve el precio del elemento.
+\paragraph{Parámetros}
+Ninguno.
+
+\subsubsection{Método LeeBC3}
+\paragraph{Propósito de diseño:} 
+Se encarga de leer los datos correspondientes al
+Elemento en formato FIEBDC3.
+\paragraph{Parámetros:} El método recibe un parámetro de clase
+T, que posee los métodos r.Datos().Precio() y
+r.Datos().Tipo().
+
+\subsubsection{Método SalvaPpl}
+\paragraph{Propósito de diseño:} 
+Se encarga de escribir los datos correspondientes al
+Elemento en el formato nativo del programa.
+\paragraph{Parámetros:} El método recibe un único
+parámetro que es el flujo de salida en el
+que se escribirán los datos.
+
+\section{Clase patrón MapaConceptos$<T>$} \label{sc_cls_mapaconceptos_t}
+\subsection{Propósito de diseño}
+La clase MapaConceptos$<T>$ define un contenedor
+capaz de almacenar objetos de clase T indexados
+por una cadena de caracteres. 
+\subsection{Ascendientes}
+Las clases base de MapaConceptos son:
+
+\begin{itemize}
+\item map: Contenedor de la STL.
+\item EntPpl: Ver sección \ref{sc_cls_entppl} en la página \pageref{sc_cls_entppl}.
+\end{itemize}
+
+\subsection{Descendientes}
+Las clases hijas de MapaConceptos$<T>$ son:
+
+\begin{itemize}
+\item Descompuestos: Ver sección \ref{sc_cls_descompuestos} en la página \pageref{sc_cls_descompuestos}.
+\item Elementos: Ver sección \ref{sc_cls_elementos} en la página \pageref{sc_cls_elementos}.
+\end{itemize}
+
+\subsection{Propiedades}
+No tiene.
+
+\subsection{Métodos}
+
+\subsubsection{Método Agrega}
+\paragraph{Propósito de diseño:} 
+Inserta en el contenedor un objeto de la clase T.
+\paragraph{Parámetros}
+Objeto de la clase T que ha de tener definido el
+método Codigo().
+
+\subsubsection{Método Busca}
+\paragraph{Propósito de diseño:} 
+Devuelve un puntero al objeto cuyo código se pasa
+como parámetro, si no lo encuentra devuelve NULL.
+\paragraph{Parámetros}
+Cadena de caracteres que contiene el código
+del objeto a buscar.
+
+\subsubsection{Método EscribeBC3}
+\paragraph{Propósito de diseño:} Este método se encarga
+de escribir cada uno de los objetos del contenedor
+en el formato FIEBDC3.
+
+\paragraph{Parámetros:} Este método recibe un único parámetro
+``os'' que es el flujo de salida en el que se deben escribir
+los datos.
+
+\subsubsection{Método Escribe}
+\paragraph{Propósito de diseño:} Este método se encarga
+de escribir cada uno de los objetos del contenedor
+en formato libre para propósitos de depuración.
+
+\paragraph{Parámetros:} Este método recibe un único parámetro
+``os'' que es el flujo de salida en el que se deben escribir
+los datos.
+
+\section{Clase Elementos} \label{sc_cls_elementos}
+\subsection{Propósito de diseño}
+Los objetos de la clase Elementos son los encargados
+de almacenar los precios elementales de la descripción
+de la obra.
+\subsection{Ascendientes}
+La clase base de Elementos es MapaConceptos$<T>$\footnote{ver 
+sección \ref{sc_cls_mapaconceptos_t} en la página \pageref{sc_cls_mapaconceptos_t}}.
+\subsection{Descendientes}
+No tiene.
+\subsection{Propiedades}
+No tiene.
+\subsection{Métodos}
+\subsubsection{Método procesa\_comando}
+
+\paragraph{Propósito de diseño:}
+Este método se encarga de procesar los comandos que definen
+el contenido de los objetos contenidos por éste.
+
+\paragraph{Parámetros}
+El método recibe dos parámetros:
+\begin{itemize}
+\item cmd: Cadena de caracteres que contiene el comando a procesar.
+\item is: Flujo de entrada (istream) del que se leen los datos.
+\end{itemize}
+
+\subsubsection{Método ObtienePunteros}
+
+\paragraph{Propósito de diseño:}
+Este método se encarga de obtener los objetos de clase
+CompBC3 \footnote{ver sección \ref{sc_cls_compbc3} en la página \pageref{sc_cls_compbc3}}.
+en particular el puntero al precio elemental que llevan
+las componentes a partir de un objeto de tipo regBC3\_d.
+Estos objetos se devuelven en un contenedor de la clase
+ComptesBC3 \footnote{ver sección \ref{sc_cls_comptesbc3} en la página \pageref{sc_cls_comptesbc3}}.
+
+\paragraph{Parámetros}
+El método recibe dos parámetros:
+\begin{itemize}
+\item cmd: Cadena de caracteres que contiene el comando a procesar.
+\item is: Flujo de entrada (istream) del que se leen los datos.
+\end{itemize}
+
+\subsubsection{Método LeeMdoSpre}
+\paragraph{Propósito de diseño:}
+Este método se encarga de leer los precios elementales
+de tipo ``mano de obra'' a partir de un archivo
+en formato estándar de Sispre.
+
+\paragraph{Parámetros}
+Este método recibe un único parámetro
+``is'' que es el flujo de entrada del que se 
+deben leer los datos.
+
+\subsubsection{Método LeeMaqSpre}
+\paragraph{Propósito de diseño:}
+Este método se encarga de leer los precios elementales
+de tipo ``maquinaria'' a partir de un archivo
+en formato estándar de Sispre.
+
+\paragraph{Parámetros}
+Este método recibe un único parámetro
+``is'' que es el flujo de entrada del que se 
+deben leer los datos.
+
+\subsubsection{Método LeeMatSpre}
+\paragraph{Propósito de diseño:}
+Este método se encarga de leer los precios elementales
+de tipo ``materiales'' a partir de un archivo
+en formato estándar de Sispre.
+
+\paragraph{Parámetros}
+Este método recibe un único parámetro
+``is'' que es el flujo de entrada del que se 
+deben leer los datos.
+
+\subsubsection{Método EscribeSpre}
+\paragraph{Propósito de diseño:}
+Este método se encarga de escribir los precios elementales
+en un archivo en formato estándar de Sispre.
+
+\paragraph{Parámetros:}
+Ninguno.
+
+\subsubsection{Método LeeSpre}
+\paragraph{Propósito de diseño:}
+Este método se encarga de leer los precios elementales
+a partir de un archivo en formato estándar de Sispre.
+
+\paragraph{Parámetros:}
+Este método recibe un único parámetro
+``is'' que es el flujo de entrada del que se 
+deben leer los datos.
+
+\subsubsection{Método LeeBC3}
+\paragraph{Propósito de diseño:}
+Este método se encarga de leer los precios elementales
+a partir de objeto de tipo Códigos cargado
+de un archivo en formato FIEBD3.
+
+\paragraph{Parámetros:}
+Este método recibe un único parámetro
+de clase Codigos.
+
+\subsubsection{Método ImprLtx}
+\paragraph{Propósito de diseño:}
+Este método se encarga de escribir los precios elementales
+en formato \LaTeXe.
+
+\paragraph{Parámetros:}
+Este método recibe un único parámetro
+que es el flujo de salida donde debe escribir
+los datos.
+
+\subsubsection{Método EscribeHCalc}
+\paragraph{Propósito de diseño:}
+Este método se encarga de escribir los precios elementales
+en un formato legible por un programa de hoja de cálculo.
+
+\paragraph{Parámetros:}
+Este método recibe un único parámetro
+que es el flujo de salida donde debe escribir
+los datos.
+
+\subsubsection{Método SalvaPpl}
+\paragraph{Propósito de diseño:} 
+Se encarga de escribir los datos correspondientes al
+los precios elementales en el formato nativo del programa.
+\paragraph{Parámetros:} El método recibe un único
+parámetro que es el flujo de salida en el
+que se escribirán los datos.
+
+\section{Clase UdObra} \label{sc_cls_udobra}
+\subsection{Propósito de diseño}
+Los objetos de la clase UdObra representan las
+unidades de obra que se emplean en la descripción de
+la misma.
+
+\subsection{Ascendientes}
+La clase base de UdObra es Medible \footnote{ver sección \ref{sc_cls_medible} en la página \pageref{sc_cls_medible}}.
+\subsection{Descendientes}
+No tiene.
+\subsection{Propiedades}
+La clase UdObra sólo tiene el miembro ``lista'' de
+la clase ComptesBC3 \footnote{ver sección \ref{sc_cls_comptesbc3} en la página \pageref{sc_cls_comptesbc3}}.
+Este miembro es el encargado de almacenar la descomposición
+en precios elementales de la unidad de obra.
+
+\subsection{Métodos}
+\subsubsection{Método procesa\_comando}
+
+\paragraph{Propósito de diseño:}
+Este método se encarga de procesar los comandos que definen
+el contenido de los objetos miembro de éste.
+
+\paragraph{Parámetros}
+El método recibe dos parámetros:
+\begin{itemize}
+\item cmd: Cadena de caracteres que contiene el comando a procesar.
+\item is: Flujo de entrada (istream) del que se leen los datos.
+\end{itemize}
+
+\subsubsection{Constructor}
+\paragraph{Propósito de diseño:}
+Se encarga de inicializar los valores de los
+miembros del objeto.
+
+\paragraph{Parámetros:}
+El constructor recibe tres parámetros:
+\begin{itemize}
+\item cod: Código de la entidad.
+\item tit: Título o descripción de la entidad.
+\item ud: Cadena de caracteres que identifica la unidad en que se mide (kg,m3,h,\ldots).
+\end{itemize}
+
+\subsubsection{Método StrPrecio}
+\paragraph{Propósito de diseño:}
+Devuelve una cadena de caracteres con el precio
+unitario de la unidad de obra.
+
+\paragraph{Parámetros:}
+Ninguno.
+
+\subsubsection{Método StrPrecioLtx}
+\paragraph{Propósito de diseño:}
+Devuelve una cadena de caracteres con el precio
+unitario de la unidad de obra. Esta cadena de
+caracteres utiliza el caracter ' para separar
+los decimales y el punto . como separador de miles.
+
+\paragraph{Parámetros:}
+Ninguno.
+
+\subsubsection{Método StrPrecioEnLetra}
+\paragraph{Propósito de diseño:}
+Devuelve una cadena de caracteres con el precio
+unitario de la unidad de obra expresado en letra.
+
+\paragraph{Parámetros:}
+Ninguno.
+
+\subsubsection{Método Precio}
+\paragraph{Propósito de diseño:}
+Devuelve el precio unitario de la unidad de obra,
+calculandolo como suma de los precios de la 
+descomposición.
+
+\paragraph{Parámetros:}
+Ninguno.
+
+\subsubsection{Método AsignaFactor}
+\paragraph{Propósito de diseño:}
+Asigna el factor que se pasa como parámetro
+a todas las componentes del miembro lista.
+
+\paragraph{Parámetros:}
+Valor del factor.
+
+\subsubsection{Método Agrega}
+\paragraph{Propósito de diseño:}
+Agrega una componente a la descomposición 
+de la unidad de obra.
+
+\paragraph{Parámetros:}
+El método recibe tres parámetros.
+
+\begin{itemize}
+\item e: Referencia al objeto de la clase CompBC3 \footnote{ver sección \ref{sc_cls_compbc3} en la página \pageref{sc_cls_compbc3}}.
+sobre el que opera la componente.
+\item f: Factor que multiplica al rendimiento de la componente.
+\item r: Rendimiento de la componente.
+\end{itemize}
+
+\subsubsection{Método LeeBC3}
+\paragraph{Propósito de diseño:}
+Este método se encarga de leer las unidades de obra
+a partir de un objeto de tipo reg\_udobra cargado
+de un archivo en formato FIEBDC3.
+
+\paragraph{Parámetros:}
+Este método recibe dos parámetros:
+\begin{itemize}
+\item reg\_udobra: Contiene los registros correspondientes a las unidades de obra del archivo FIEBDC3.
+\item els: Referencia al objeto de clase Elementos \footnote{ver sección \ref{sc_cls_elementos} en la página \pageref{sc_cls_elementos}}
+que contiene los precios elementales que intervienen en las descomposiciones de las unidades de obra.
+\end{itemize}
+
+\subsubsection{Método EscribeSpre}
+\paragraph{Propósito de diseño:}
+Este método se encarga de escribir las unidades de obra
+en un archivo en formato estándar de Sispre.
+
+\paragraph{Parámetros:}
+El método recibe un único parámetro que es el flujo
+de salida donde se escribirán los datos.
+
+\subsubsection{Método EscribeBC3}
+\paragraph{Propósito de diseño:}
+Este método se encarga de escribir la unidad de obra
+en un archivo en formato FIEBDC3.
+
+\paragraph{Parámetros:}
+El método recibe un único parámetro que es el flujo
+de salida donde se escribirán los datos.
+
+\subsubsection{Método ImprLtx}
+\paragraph{Propósito de diseño:}
+Este método se encarga de escribir la unidad de obra
+en formato \LaTeXe.
+
+\paragraph{Parámetros:}
+Este método recibe un único parámetro
+que es el flujo de salida donde debe escribir
+los datos.
+
+\subsubsection{Método EscribeHCalc}
+\paragraph{Propósito de diseño:}
+Este método se encarga de escribir la unidad de obra
+en un formato legible por un programa de hoja de cálculo.
+
+\paragraph{Parámetros:}
+Este método recibe un único parámetro
+que es el flujo de salida donde debe escribir
+los datos.
+
+\subsubsection{Método SalvaPpl}
+\paragraph{Propósito de diseño:} 
+Se encarga de escribir los datos correspondientes a
+la unidad de obra en el formato nativo del programa.
+
+\paragraph{Parámetros:} El método recibe un único
+parámetro que es el flujo de salida en el
+que se escribirán los datos.
+
+\section{Clase Descompuestos} \label{sc_cls_descompuestos}
+\subsection{Propósito de diseño}
+La clase Descompuestos es un contenedor que se encarga
+de almacenar los objetos de clase UdObra \footnote{ver sección \ref{sc_cls_udobra} en la página \pageref{sc_cls_udobra}}
+que intervienen en la descripción de la obra.
+
+\subsection{Ascendientes}
+La clase base de Descompuestos es MapaConceptos$<T>$ \footnote{ver sección \ref{sc_cls_mapaconceptos_t} en la página \pageref{sc_cls_mapaconceptos_t}}
+\subsection{Descendientes}
+No tiene.
+\subsection{Propiedades}
+No tiene.
+\subsection{Métodos}
+\subsubsection{Método procesa\_comando}
+
+\paragraph{Propósito de diseño:}
+Este método se encarga de procesar los comandos que definen
+el contenido de los objetos contenidos por éste (las unidades
+de obra).
+
+\paragraph{Parámetros}
+El método recibe dos parámetros:
+\begin{itemize}
+\item cmd: Cadena de caracteres que contiene el comando a procesar.
+\item is: Flujo de entrada (istream) del que se leen los datos.
+\end{itemize}
+
+\subsubsection{Método AgregaComponente}
+\paragraph{Propósito de diseño:}
+Agrega una componente a la descomposición 
+de una unidad de obra de las pertenecientes al objeto.
+
+\paragraph{Parámetros:}
+El método recibe cinco parámetros.
+
+\begin{itemize}
+\item el: Referencia al objeto de la clase Elementos \footnote{ver sección \ref{sc_cls_elementos} en la página \pageref{sc_cls_elementos}}.
+que contiene los precios elementales de la descripción de la obra.
+\item cod\_ud: Código de la unidad a la que se va a agregar la componente.
+\item cod\_el: Código del precio elemental sobre el que opera la componente.
+\item r: Rendimiento de la componente.
+\item f: Factor que multiplica al rendimiento de la componente.
+\end{itemize}
+
+\subsubsection{Método LeeBC3}
+\paragraph{Propósito de diseño:}
+Este método se encarga de leer las unidades de obra
+que contendrá el objeto Descompuestos a partir de un 
+objeto de tipo Codigos cargado de un archivo 
+en formato FIEBDC3.
+
+\paragraph{Parámetros:}
+Este método recibe dos parámetros:
+\begin{itemize}
+\item Codigos: Contiene los registros correspondientes del archivo FIEBDC3.
+\item elementos: Referencia al objeto de clase Elementos 
+\footnote{ver sección \ref{sc_cls_elementos} en la página \pageref{sc_cls_elementos}}
+que contiene los precios elementales que intervienen en las descomposiciones de las unidades de obra.
+\end{itemize}
+
+\subsubsection{Método LeeSpre}
+\paragraph{Propósito de diseño:}
+Este método se encarga de leer las unidades de obra
+a partir de un archivo en formato estándar de Sispre.
+
+\paragraph{Parámetros:}
+Este método recibe dos parámetros
+
+\begin{itemize}
+\item is:flujo de entrada del que se deben leer los datos.
+\item elementos: Referencia al objeto de clase Elementos 
+\footnote{ver sección \ref{sc_cls_elementos} en la página \pageref{sc_cls_elementos}}
+que contiene los precios elementales que intervienen en las descomposiciones de las unidades de obra.
+\end{itemize}
+
+\subsubsection{Método EscribeSpre}
+\paragraph{Propósito de diseño:}
+Este método se encarga de escribir las unidades de obra
+en un archivo en formato estándar de Sispre.
+
+\paragraph{Parámetros:}
+El método recibe un único parámetro que es el flujo
+de salida donde se escribirán los datos.
+
+\subsubsection{Método AsignaFactor}
+\paragraph{Propósito de diseño:}
+Asigna el factor que se pasa como parámetro
+a todas las unidades de obra contenidas en 
+el objeto Descompuestos.
+
+\paragraph{Parámetros:}
+Valor del factor.
+
+\subsubsection{Método ImprLtx}
+\paragraph{Propósito de diseño:}
+Este método se encarga de escribir las unidades de obra
+en formato \LaTeXe.
+
+\paragraph{Parámetros:}
+Este método recibe un único parámetro
+que es el flujo de salida donde debe escribir
+los datos.
+
+\subsubsection{Método EscribeHCalc}
+\paragraph{Propósito de diseño:}
+Este método se encarga de escribir las unidades de obra
+en un formato legible por un programa de hoja de cálculo.
+
+\paragraph{Parámetros:}
+Este método recibe un único parámetro
+que es el flujo de salida donde debe escribir
+los datos.
+
+\subsubsection{Método SalvaPpl}
+\paragraph{Propósito de diseño:} 
+Se encarga de escribir los datos correspondientes a
+las unidades de obra en el formato nativo del programa.
+
+\paragraph{Parámetros:} El método recibe un único
+parámetro que es el flujo de salida en el
+que se escribirán los datos.
+
+
+\section{Clase CuaPre} \label{sc_cls_cuapre}
+\subsection{Propósito de diseño}
+La clase CuaPre define el objeto encargado de contener
+los precios elementales y unitarios de la obra.
+\subsection{Ascendientes}
+Las clases base de esta es EntPpl 
+(ver sección \ref{sc_cls_entppl} en la página \pageref{sc_cls_entppl}).
+
+\subsection{Descendientes}
+No tiene.
+
+\subsection{Propiedades}
+Los miembros de la clase CuaPre son:
+
+\begin{itemize}
+\item elementos: Precios elementales de la obra representados por un objeto de la
+clase Elementos (ver sección \ref{sc_cls_elementos} en la página \pageref{sc_cls_elementos}).
+\item unidades: Unidades de la obra representadas por un objeto del tipo Descompuestos
+(ver sección \ref{sc_cls_descompuestos} en la página \pageref{sc_cls_descompuestos}).
+\end{itemize}
+\subsection{Métodos}
+\subsubsection{Método procesa\_comando}
+
+\paragraph{Propósito de diseño:}
+Este método se encarga de procesar los comandos que definen
+el contenido de los objetos contenidos por éste (los precios
+elementales en el miembro elementos y las unidades de obra
+en el miembro unidades).
+
+\paragraph{Parámetros:}
+El método recibe dos parámetros:
+\begin{itemize}
+\item cmd: Cadena de caracteres que contiene el comando a procesar.
+\item is: Flujo de entrada (istream) del que se leen los datos.
+\end{itemize}
+
+\subsubsection{Método Elementales}
+
+\paragraph{Propósito de diseño:}
+Devuelve una referencia al miembro elementos.
+\paragraph{Parámetros:}
+Ninguno.
+
+\subsubsection{Método UdsObra}
+
+\paragraph{Propósito de diseño:}
+Devuelve una referencia al miembro unidades.
+\paragraph{Parámetros:}
+Ninguno.
+
+\subsubsection{Método AgregaComponente}
+\paragraph{Propósito de diseño:}
+Agrega una componente a la descomposición 
+de una unidad de obra de las pertenecientes al objeto.
+
+\paragraph{Parámetros:}
+El método recibe cuatro parámetros.
+
+\begin{itemize}
+\item cod\_ud: Código de la unidad a la que se va a agregar la componente.
+\item cod\_el: Código del precio elemental sobre el que opera la componente.
+\item r: Rendimiento de la componente.
+\item f: Factor que multiplica al rendimiento de la componente.
+\end{itemize}
+
+\subsubsection{Método EscribeSpre}
+\paragraph{Propósito de diseño:}
+Este método se encarga de escribir los precios elementales
+y las unidades de obra en un archivo en formato estándar de Sispre.
+
+\paragraph{Parámetros:}
+El método recibe un único parámetro que es el flujo
+de salida donde se escribirán los datos.
+
+\subsubsection{Método EscribeSpre}
+\paragraph{Propósito de diseño:}
+Este método se encarga de escribir los precios elementales
+y las unidades de obra en un archivo en formato FIEBDC3.
+
+\paragraph{Parámetros:}
+El método recibe un único parámetro que es el flujo
+de salida donde se escribirán los datos.
+
+\subsubsection{Método LeeSpre}
+\paragraph{Propósito de diseño:}
+Este método se encarga de leer los precios elementales
+y las unidades de obra a partir de un archivo en formato 
+estándar de Sispre.
+
+\paragraph{Parámetros:}
+Este método recibe un único parámetro que es el
+flujo de entrada del que se deben leer los datos.
+
+\subsubsection{Método LeeBC3}
+\paragraph{Propósito de diseño:}
+Este método se encarga de leer los precios elementales
+y las unidades de obra a partir de un archivo en formato 
+FIEBDC3.
+
+\paragraph{Parámetros:}
+Este método recibe un único parámetro que es
+un bojeto de la clase CodigosObra del que se 
+deben leer los datos.
+
+\subsubsection{Método ImprLtx}
+\paragraph{Propósito de diseño:}
+Este método se encarga de escribir los precios
+elementales y las unidades de obra en formato \LaTeXe.
+
+\paragraph{Parámetros:}
+Este método recibe un único parámetro
+que es el flujo de salida donde debe escribir
+los datos.
+
+\subsubsection{Método EscribeHCalc}
+\paragraph{Propósito de diseño:}
+Este método se encarga de escribir los precios elementales
+y las unidades de obra en un formato legible por un programa 
+de hoja de cálculo.
+
+\paragraph{Parámetros:}
+Este método recibe un único parámetro
+que es el flujo de salida donde debe escribir
+los datos.
+
+\subsubsection{Método SalvaPpl}
+\paragraph{Propósito de diseño:} 
+Se encarga de escribir los datos correspondientes a
+los precios elementales y a las unidades de obra en 
+el formato nativo del programa.
+
+\paragraph{Parámetros:} El método recibe un único
+parámetro que es el flujo de salida en el
+que se escribirán los datos.
+
+\section{Clase CompuestoBC3} \label{sc_cls_compuestobc3}
+\subsection{Propósito de diseño}
+La clase CompuestoBC3 sirve para gestionar los
+factores y rendimientos de la lista de
+subcapítulos que componen un capítulo.
+
+LO MEJOR SERIA HACERLO DESAPARECER.
+
+\subsection{Ascendientes}
+La clase base de CompuestoBC3 es EntBC3 \footnote{ver sección \ref{sc_cls_entbc3} en la página \pageref{sc_cls_entbc3}}.
+
+\subsection{Descendientes}
+CompuestoBC3 es una clase base de la clase Capitulo \footnote{ver sección \ref{sc_cls_capitulo} en la página \pageref{sc_cls_capitulo}}.
+
+\subsection{Propiedades}
+El único miembre de la clase CompuestoBC3 es ``lista'' que
+es un objeto de la clase ComptesBC3 \footnote{ver sección \ref{sc_cls_comptesbc3} en la página \pageref{sc_cls_comptesbc3}}.
+\subsection{Métodos}
+
+\subsubsection{Método procesa\_comando}
+
+\paragraph{Propósito de diseño:}
+Este método se encarga de procesar los comandos que definen
+el contenido de los objetos contenidos por éste (la lista
+de subcapitulos).
+
+\paragraph{Parámetros:}
+El método recibe dos parámetros:
+\begin{itemize}
+\item cmd: Cadena de caracteres que contiene el comando a procesar.
+\item is: Flujo de entrada (istream) del que se leen los datos.
+\end{itemize}
+
+\subsubsection{Constructor}
+\paragraph{Propósito de diseño:}
+Se encarga de inicializar los valores de los
+miembros del objeto.
+
+\paragraph{Parámetros:}
+El constructor recibe dos parámetros:
+\begin{itemize}
+\item cod: Código de la entidad.
+\item tit: Título o descripción de la entidad.
+\end{itemize}
+
+\subsubsection{Método GetComponentes}
+\paragraph{Propósito de diseño:}
+Devuelve la lista de subcapítulos en un un objeto
+de la clase ComptesBC3\footnote{ver sección \ref{sc_cls_comptesbc3} en la página \pageref{sc_cls_comptesbc3}}.
+\paragraph{Parámetros:}
+Ninguno.
+
+\subsubsection{Método Agrega}
+\paragraph{Propósito de diseño:}
+Inserta en la lista un subcapítulo.
+\paragraph{Parámetros:}
+El único parámetro de este método es un objeto de la 
+clase CompBC3\footnote{ver sección \ref{sc_cls_compbc3} en la página \pageref{sc_cls_compbc3}}.
+
+\subsubsection{Método Precio}
+\paragraph{Propósito de diseño:}
+Devuelve el precio.
+\paragraph{Parámetros:}
+Ninguno.
+
+\subsubsection{Método AsignaFactor}
+\paragraph{Propósito de diseño:}
+Asigna el factor que se pasa como parámetro
+a todas los elementos de la lista.
+
+\paragraph{Parámetros:}
+Valor del factor.
+
+\subsubsection{Método EscribeDescompSpre}
+\paragraph{Propósito de diseño:}
+Escribe la descomposición expresada por el
+miembro lista en el formato estándar de
+Sispre.
+
+\paragraph{Parámetros:}
+El método recibe un único parámetro que es el flujo
+de salida donde se escribirán los datos.
+
+\subsubsection{Método EscribeDescompBC3}
+\paragraph{Propósito de diseño:}
+Escribe la descomposición expresada por el
+miembro lista en el formato FIEBDC3.
+
+\paragraph{Parámetros:}
+El método recibe un único parámetro que es el flujo
+de salida donde se escribirán los datos.
+
+\subsubsection{Método SalvaDescompPpl}
+\paragraph{Propósito de diseño:}
+Escribe la descomposición expresada por el
+miembro lista en el formato nativo del programa.
+
+\paragraph{Parámetros:}
+El método recibe un único parámetro que es el flujo
+de salida donde se escribirán los datos.
+
+\subsubsection{Método EscribeBC3}
+\paragraph{Propósito de diseño:}
+Escribe los datos de los miembros del objeto
+en el formato FIEBDC3.
+
+\paragraph{Parámetros:}
+El método recibe un único parámetro que es el flujo
+de salida donde se escribirán los datos.
+
+\subsubsection{Método SalvaPpl}
+\paragraph{Propósito de diseño:}
+Escribe los datos de los miembros del objeto
+en el formato nativo del programa.
+
+\paragraph{Parámetros:}
+El método recibe un único parámetro que es el flujo
+de salida donde se escribirán los datos.
+
+
+\section{Clase RegMedicion} \label{sc_cls_regmedicion}
+\subsection{Propósito de diseño}
+La clase RegMedicion representa una línea de medición
+de un volumen.
+
+\subsection{Ascendientes}
+No tiene.
+\subsection{Descendientes}
+No tiene.
+\subsection{Propiedades}
+Los miembros de esta clase son:
+\begin{itemize}
+\item comentario: Cadena de caracteres que contendrá un comentario a la medición.
+\item unidades: Número de unidades iguales que se miden.
+\item largo: Longitud del objeto que se mide.
+\item ancho: Anchura del objeto que se mide.
+\item alto: Altura del objeto que se mide.
+\end{itemize}
+\subsection{Métodos}
+
+\subsubsection{Constructor}
+\paragraph{Propósito de diseño:}
+Se encarga de inicializar los valores de los
+miembros del objeto.
+
+\paragraph{Parámetros:}
+El constructor recibe cinco parámetros:
+\begin{itemize}
+\item c: Comentario.
+\item uds: Número de unidades iguales que se miden.
+\item l: Longitud del objeto que se mide.
+\item an: Anchura del objeto que se mide.
+\item al: Altura del objeto que se mide.
+\end{itemize}
+
+\subsubsection{Método Total}
+\paragraph{Propósito de diseño:}
+Calcula el volumen total de la medición.
+\paragraph{Parámetros:}
+Ninguno.
+
+\subsubsection{Método LeeBC3}
+\paragraph{Propósito de diseño:}
+Lee los valores de los miembros del objeto
+RegMedicion a partir de un objeto
+de clase regBC3\_linea\_med creado a partir
+de un fichero FIEBDC3.
+
+\paragraph{Parámetros:}
+El objeto regBC3\_linea\_med que contiene los datos.
+
+\subsubsection{Método EscribeBC3}
+\paragraph{Propósito de diseño:}
+Escribe los datos correspondientes a la medición 
+en un archivo FIEBDC3.
+\paragraph{Parámetros:}
+El único parámetro que recibe es el flujo de
+salida en el que se escribirán los datos.
+
+\subsubsection{Método Escribe}
+\paragraph{Propósito de diseño:}
+Escribe los datos de la medición en formato libre
+para propósitos de depuración.
+\paragraph{Parámetros:}
+El único parámetro que recibe es el flujo de
+salida en el que se escribirán los datos.
+
+\subsubsection{Método ImprLtx}
+\paragraph{Propósito de diseño:}
+Imprime la medición en formato de \LaTeXe.
+\paragraph{Parámetros:}
+El único parámetro que recibe es el flujo de
+salida en el que se escribirán los datos.
+
+\subsubsection{Método EscribeHCalc}
+\paragraph{Propósito de diseño:}
+Imprime la medición en un formato legible
+por un programa de hoja de cálculo.
+\paragraph{Parámetros:}
+El único parámetro que recibe es el flujo de
+salida en el que se escribirán los datos.
+
+\subsubsection{Método SalvaPpl}
+\paragraph{Propósito de diseño:}
+Escribe la medición en el formato nativo del programa.
+\paragraph{Parámetros:}
+El único parámetro que recibe es el flujo de
+salida en el que se escribirán los datos.
+
+\section{Clase Mediciones} \label{sc_cls_mediciones}
+\subsection{Propósito de diseño}
+La clase Mediciones almacena los objetos RegMedicion
+que corresponden a una misma unidad de obra, dentro de
+un capítulo.
+
+\subsection{Ascendientes}
+La clase base de Mediciones es la clase deque<RegMedicion>
+de la STL.
+
+\subsection{Descendientes}
+Ninguno.
+
+\subsection{Propiedades}
+Ninguna.
+
+\subsection{Métodos}
+\subsubsection{Método Total}
+\paragraph{Propósito de diseño:}
+Devuelve el volumen total que corresponde a todos
+los objetos RegMedicion que contiene.
+
+\paragraph{Parámetros:}
+Ninguno.
+
+\subsubsection{Método LeeBC3}
+\paragraph{Propósito de diseño:}
+Lee los valores de los miembros del objeto
+Mediciones a partir de un objeto
+de clase regBC3\_lista\_med creado a partir
+de un fichero FIEBDC3.
+
+\paragraph{Parámetros:}
+El objeto regBC3\_lista\_med que contiene los datos.
+
+\subsubsection{Método EscribeBC3}
+\paragraph{Propósito de diseño:}
+Escribe los datos correspondientes a la medición 
+en un archivo FIEBDC3.
+\paragraph{Parámetros:}
+El único parámetro que recibe es el flujo de
+salida en el que se escribirán los datos.
+
+\subsubsection{Método ImprLtx}
+\paragraph{Propósito de diseño:}
+Imprime la medición en formato de \LaTeXe.
+\paragraph{Parámetros:}
+El único parámetro que recibe es el flujo de
+salida en el que se escribirán los datos.
+
+\subsubsection{Método EscribeHCalc}
+\paragraph{Propósito de diseño:}
+Imprime la medición en un formato legible
+por un programa de hoja de cálculo.
+\paragraph{Parámetros:}
+El único parámetro que recibe es el flujo de
+salida en el que se escribirán los datos.
+
+\subsubsection{Método SalvaPpl}
+\paragraph{Propósito de diseño:}
+Escribe la medición en el formato nativo del programa.
+\paragraph{Parámetros:}
+El único parámetro que recibe es el flujo de
+salida en el que se escribirán los datos.
+
+\section{Clase MedUObra} \label{sc_cls_meduobra}
+\subsection{Propósito de diseño}
+La clase MedUdObra maneja las mediciones de una unidad
+de obra a la que hace referencia a través de un puntero.
+
+\subsection{Ascendientes}
+No tiene.
+\subsection{Descendientes}
+No tiene.
+\subsection{Propiedades}
+Los miembros de UdObra son los siguientes:
+
+\begin{itemize}
+\item *ud; Puntero al objeto UdObra 
+\footnote{ver sección \ref{sc_cls_udobra} en la 
+página \pageref{sc_cls_udobra}} al que se refiere la medición.
+\end{itemize}
+
+\subsection{Métodos}
+\subsubsection{Constructor}
+\paragraph{Propósito de diseño:}
+Se encarga de inicializar los valores de los
+miembros del objeto.
+
+\paragraph{Parámetros:}
+El constructor recibe un sólo parámetro que
+es la referencia al objeto UdObra al que
+se refieren las mediciones.
+
+\subsubsection{Método Agrega}
+\paragraph{Propósito de diseño:}
+Inserta un objeto RegMedicion en el contenedor
+de mediciones.
+\paragraph{Parámetros:}
+El único parámetro de este método es un objeto de la 
+clase RegMedicion.
+
+\subsubsection{Método CodigoUdObra}
+\paragraph{Propósito de diseño:}
+Devuelve el código de la unidad de obra a la
+que hace referencia la medición.
+\paragraph{Parámetros:}
+Ninguno.
+
+\subsubsection{Método UnidadMedida}
+\paragraph{Propósito de diseño:}
+Devuelve el texto que describe la unidad
+de medida que se emplea para esta unidad de
+obra.
+\paragraph{Parámetros:}
+Ninguno.
+
+\subsubsection{Método TextoLUdObra}
+\paragraph{Propósito de diseño:}
+Devuelve el texto que describe la unidad
+de obra a la que se refiere la medición.
+\paragraph{Parámetros:}
+Ninguno.
+
+\subsubsection{Método Total}
+\paragraph{Propósito de diseño:}
+Devuelve el volumen total que corresponde a todos
+los objetos RegMedicion que contiene.
+
+\paragraph{Parámetros:}
+Ninguno.
+
+\subsubsection{Método Precio}
+\paragraph{Propósito de diseño:}
+Devuelve el precio total aplicando al volumen
+de obra calculado el precio de la unidad de
+obra al que corresponde.
+
+\paragraph{Parámetros:}
+Ninguno.
+
+\subsubsection{Método StrPrecioLtx}
+\paragraph{Propósito de diseño:}
+Devuelve una cadena de caracteres con el precio
+del capítulo. Esta cadena de caracteres utiliza 
+el caracter ' para separar
+los decimales y el punto . como separador de miles.
+
+\paragraph{Parámetros:}
+Ninguno.
+
+\subsubsection{Método LeeBC3}
+\paragraph{Propósito de diseño:}
+Lee los valores de los miembros del objeto
+MedUObra a partir de un objeto
+de clase regBC3\_medicion creado a partir
+de un fichero FIEBDC3.
+
+\paragraph{Parámetros:}
+El objeto regBC3\_medicion que contiene los datos.
+
+\subsubsection{Método EscribeBC3}
+\paragraph{Propósito de diseño:}
+Escribe los datos correspondientes a la medición 
+en un archivo FIEBDC3.
+\paragraph{Parámetros:}
+Recibe tres parámetros:
+
+\begin{itemize}
+\item os: flujo de salida en el que se escribirán los datos.
+\item cap\_padre: Capítulo al que pertenece la medición.
+\item pos: ??
+\end{itemize}
+
+\subsubsection{Método ImprLtxMed}
+\paragraph{Propósito de diseño:}
+Imprime la medición en formato de \LaTeXe.
+\paragraph{Parámetros:}
+El único parámetro que recibe es el flujo de
+salida en el que se escribirán los datos.
+
+\subsubsection{Método ImprLtxPre}
+\paragraph{Propósito de diseño:}
+Imprime el presupuesto parcial que corresponde
+a la medición en formato de \LaTeXe.
+\paragraph{Parámetros:}
+El único parámetro que recibe es el flujo de
+salida en el que se escribirán los datos.
+
+\subsubsection{Método EscribeHCalcMed}
+\paragraph{Propósito de diseño:}
+Imprime la medición en un formato legible
+por un programa de hoja de cálculo.
+\paragraph{Parámetros:}
+El único parámetro que recibe es el flujo de
+salida en el que se escribirán los datos.
+
+\subsubsection{Método EscribeHCalcPre}
+\paragraph{Propósito de diseño:}
+Imprime el presupuesto parcial que corresponde
+a la medición en un formato legible
+por un programa de hoja de cálculo.
+\paragraph{Parámetros:}
+El único parámetro que recibe es el flujo de
+salida en el que se escribirán los datos.
+
+\subsubsection{Método SalvaPpl}
+\paragraph{Propósito de diseño:}
+Escribe la medición en el formato nativo del programa.
+\paragraph{Parámetros:}
+El único parámetro que recibe es el flujo de
+salida en el que se escribirán los datos.
+
+\section{Clase Capitulo} \label{sc_cls_capitulo}
+\subsection{Propósito de diseño}
+La clase Capitulo representa un capítulo de mediciones
+de la obra.
+\subsection{Ascendientes}
+La clase Capitulo deriva de CompuestoBC3 \footnote{ver sección \ref{sc_cls_compuestobc3} en la página \pageref{sc_cls_compuestobc3}}.
+\subsection{Descendientes}
+De la clase Capitulo deriva la clase Obra \footnote{ver sección \ref{sc_cls_obra} en la página \pageref{sc_cls_obra}}.
+\subsection{Propiedades}
+Los miembros de la clase Capitulo son:
+
+\begin{itemize}
+\item mediciones: Contenedor de la clase deque$<MedUObra>$ \footnote{ver sección \ref{sc_cls_meduobra} en la página \pageref{sc_cls_meduobra}}, en el que se guardan las mediciones del capítulo.
+\item subcapitulos: Contenedor de la clas deque$<Capitulo>$ en el que se guardan los subcapítulos del capítulo. 
+\end{itemize}
+
+\subsection{Métodos}
+\subsubsection{Constructor}
+\paragraph{Propósito de diseño:}
+Se encarga de inicializar los valores de los
+miembros del objeto.
+
+\paragraph{Parámetros:}
+El constructor recibe dos parámetros:
+\begin{itemize}
+\item cod: Código del capitulo.
+\item tit: Título o descripción del capitulo.
+\end{itemize}
+
+\subsubsection{Método Agrega}
+\paragraph{Propósito de diseño:}
+Inserta un subcapítulo en el contenedor de capítulos y una
+componente con el puntero a éste capítulo, el factor y el
+rendimiento con valor unidad en el objeto padre CompuestoBC3 .
+\paragraph{Parámetros:}
+El único parámetro de este método es un objeto de la 
+clase Capítulo.
+
+\subsubsection{Método AgregaCapitulo}
+\paragraph{Propósito de diseño:}
+Inserta un subcapítulo en el contenedor de capítulos y una
+componente con el puntero a éste capítulo, el factor y el
+rendimiento en el objeto padre CompuestoBC3.
+
+\paragraph{Parámetros:}
+El único parámetro de este método es un objeto de la 
+clase regBC3\_desc.
+
+\subsubsection{Método AgregaDescomp}
+\paragraph{Propósito de diseño:}
+Agrega una descomposición en subcapitulos en el contenedor 
+de capítulos a partir de un objeto regBC3\_d.
+
+\paragraph{Parámetros:}
+El único parámetro de este método es un objeto de la 
+clase regBC3\_d.
+
+\subsubsection{Método Agrega}
+\paragraph{Propósito de diseño:}
+Agrega al capítulo la medición correspondiente a una 
+unidad de obra insertándola en el contenedor de mediciones.
+
+\paragraph{Parámetros:}
+El único parámetro de este método es un objeto de la 
+clase MedUdObra\footnote{ver sección \ref{sc_cls_meduobra} 
+en la página \pageref{sc_cls_meduobra}}.
+
+\subsubsection{Método BuscaSubcapitulo}
+\paragraph{Propósito de diseño:}
+Devuelve un puntero a un capítulo a partir de la
+información contenida en un objeto de la clase
+regBC3\_ruta.
+
+\paragraph{Parámetros:}
+El único parámetro de este método es un objeto de la 
+clase regBC3\_ruta.
+
+\subsubsection{Método BuscaSubcapitulo}
+\paragraph{Propósito de diseño:}
+Devuelve un puntero a un capítulo a partir de la
+información contenida en una cadena de caracteres
+de la forma I\\J\\K\\L\ldots en la que I,J,K,L\ldots
+son los índices de capitulo, subcapítulo, subsubcapitulo
+\ldots.
+
+\paragraph{Parámetros:}
+El único parámetro de este método es la cadena de caracteres
+descrita.
+
+\subsubsection{Método PrecioSubcapitulos}
+Devuelve el precio que resulta de sumar los
+importes arrojados por cada uno de los subcapítulos.
+
+\paragraph{Parámetros:}
+Ninguno.
+
+\subsubsection{Método PrecioMediciones}
+Devuelve el precio que resulta de sumar los
+importes arrojados por cada una de las mediciones
+del capítulo.
+
+\paragraph{Parámetros:}
+Ninguno.
+
+\subsubsection{Método Precio}
+
+\paragraph{Propósito de diseño:}
+Devuelve el importe del capítulo, sumando el precio de las
+mediciones y el de los subcapítulos. Aparentemente no considera
+el factor ni el rendimiento.
+
+\paragraph{Parámetros:}
+Ninguno.
+
+\subsubsection{Método StrPrecio}
+\paragraph{Propósito de diseño:}
+Devuelve una cadena de caracteres con el precio
+de capítulo.
+
+\paragraph{Parámetros:}
+Ninguno.
+
+\subsubsection{Método StrPrecioLtx}
+\paragraph{Propósito de diseño:}
+Devuelve una cadena de caracteres con el precio
+del capítulo. Esta cadena de
+caracteres utiliza el caracter ' para separar
+los decimales y el punto . como separador de miles.
+
+\paragraph{Parámetros:}
+Ninguno.
+
+\subsubsection{Método FiltraCapitulos}
+\paragraph{Propósito de diseño:}
+A partir de un objeto del tipo regBC3\_d y dos
+objetos de tipo Codigos, devuelve un objeto
+regBC3\_d que contiene los capítulos que
+faltan (o algo así).
+
+\paragraph{Parámetros:}
+El método recibe tres parámetros:
+
+\begin{itemize}
+\item descomp
+\item cp
+\item sc
+\end{itemize}
+
+\subsubsection{Método LeeBC3Caps}
+\paragraph{Propósito de diseño:}
+Lee los capitulos a partir de dos registros
+de la clase Codigos.
+
+\paragraph{Parámetros:}
+El método recibe dos parámetros:
+
+\begin{itemize}
+\item cp
+\item sc
+\end{itemize}
+
+\subsubsection{Método LeeBC3SCaps}
+\paragraph{Propósito de diseño:}
+Lee los subcapitulos a partir de dos registros
+de la clase Codigos.
+
+\paragraph{Parámetros:}
+El método recibe dos parámetros:
+
+\begin{itemize}
+\item cp
+\item sc
+\end{itemize}
+
+\subsubsection{Método EscribeMediciones}
+\paragraph{Propósito de diseño:}
+Escribe las mediciones del capítulo
+al parecer en BC3.
+
+\paragraph{Parámetros:}
+El método recibe dos parámetros:
+
+\begin{itemize}
+\item os: Flujo de salida en el que se escribe.
+\item pos: ??.
+\end{itemize}
+
+\subsubsection{Método EscribeSubcapitulos}
+\paragraph{Propósito de diseño:}
+Escribe los subcapitulos del capítulo
+al parecer en BC3.
+
+\paragraph{Parámetros:}
+El método recibe tres parámetros:
+
+\begin{itemize}
+\item os: Flujo de salida en el que se escribe.
+\item primero: Variable boleana.
+\item pos: ??.
+\end{itemize}
+
+\subsubsection{Método EscribeDescompBC3}
+\paragraph{Propósito de diseño:}
+Escribe la descomposición del capítulo
+en subcapitulos y mediciones en formato
+FIEBDC3.
+
+\paragraph{Parámetros:}
+El método recibe un único parámetro
+que es el flujo de salida en el que se escribe.
+
+\subsubsection{Método SectionLtx}
+\paragraph{Propósito de diseño:}
+Devuelve la sección en \LaTeXe que corresponde
+al subcapítulo a partir de la que correspondía al
+capítulo que se le pasa como parámetro.
+
+\paragraph{Parámetros:}
+Cadena de caracteres.
+
+\subsubsection{Método ImprLtxMed}
+\paragraph{Propósito de diseño:}
+Escribe en \LaTeXe las mediciones del capítulo.
+
+
+\paragraph{Parámetros:}
+Los parámetros que recibe el método son
+
+\begin{itemize}
+\item os: Flujo de salida en que se escriben los datos.
+\item sect: Cadena de caracteres con la sección \LaTeXe que corresponde.
+\end{itemize}
+
+\subsubsection{Método ImprLtxResumen}
+\paragraph{Propósito de diseño:}
+Escribe en \LaTeXe un resumen del presupuesto.
+
+\paragraph{Parámetros:}
+El único parámetro que recibe el método es el flujo 
+de salida en que se escriben los datos.
+
+\subsubsection{Método ImprLtxPre}
+\paragraph{Propósito de diseño:}
+Escribe en \LaTeXe los presupuestos parciales.
+
+\paragraph{Parámetros:}
+Los parámetros que recibe el método son
+
+\begin{itemize}
+\item os: Flujo de salida en que se escriben los datos.
+\item sect: Cadena de caracteres con la sección \LaTeXe que corresponde.
+\end{itemize}
+
+\subsubsection{Método ImprHCalcMed}
+\paragraph{Propósito de diseño:}
+Escribe las mediciones del capítulo en un formato
+legible por una hoja de cálculo.
+
+
+\paragraph{Parámetros:}
+Los parámetros que recibe el método son
+
+\begin{itemize}
+\item os: Flujo de salida en que se escriben los datos.
+\item sect: Cadena de caracteres con la sección que corresponde.
+\end{itemize}
+
+\subsubsection{Método ImprHCalcPre}
+\paragraph{Propósito de diseño:}
+Escribe los presupuestos parciales del capítulo en un formato
+legible por una hoja de cálculo.
+
+
+\paragraph{Parámetros:}
+Los parámetros que recibe el método son
+
+\begin{itemize}
+\item os: Flujo de salida en que se escriben los datos.
+\item sect: Cadena de caracteres con la sección que corresponde.
+\end{itemize}
+
+\subsubsection{Método SalvaPpl}
+\paragraph{Propósito de diseño:}
+Escribe los datos de los miembros del objeto
+en el formato nativo del programa.
+
+\paragraph{Parámetros:}
+El método recibe un único parámetro que es el flujo
+de salida donde se escribirán los datos.
+
+\section{Clase Obra} \label{sc_cls_obra}
+\subsection{Propósito de diseño}
+Los objetos de la clase Obra tienen por misión almacenar
+toda la descripción de la obra.
+\subsection{Ascendientes}
+La clase Obra desciende de la clase Capitulo\footnote{ver sección \ref{sc_cls_capitulo} en la página \pageref{sc_cls_capitulo}}.
+\subsection{Descendientes}
+No tiene.
+\subsection{Propiedades}
+El único miembro de la clase Obra es el objeto precios de la clase CuaPre\footnote{ver sección \ref{sc_cls_cuapre} en la página \pageref{sc_cls_cuapre}}.
+\subsection{Métodos}
+\subsubsection{Constructor}
+\paragraph{Propósito de diseño:}
+Se encarga de inicializar los valores de los
+miembros del objeto.
+
+\paragraph{Parámetros:}
+El constructor recibe dos parámetros:
+\begin{itemize}
+\item cod: Código de la obra.
+\item tit: Título o descripción de la obra.
+\end{itemize}
+
+\subsubsection{Método Codigo}
+\paragraph{Propósito de diseño:}
+Devuelve el código de la obra orlado
+con dos caracteres almohadilla para que
+valga en FIEBDC3.
+
+\paragraph{Parámetros:}
+Ninguno.
+
+\subsubsection{Método CuadroPrecios}
+\paragraph{Propósito de diseño:}
+Devuelve una referencia al miembro precios.
+
+\paragraph{Parámetros:}
+Ninguno.
+
+\subsubsection{Método Agrega}
+\paragraph{Propósito de diseño:}
+Añade un capítulo a la obra.
+
+\paragraph{Parámetros:}
+Recibe dos parámetros:
+
+\begin{itemize}
+\item cap\_padre: Código del capítulo contenedor del que se añade.
+\item cap: Capítulo a añadir.
+\end{itemize}
+
+\subsubsection{Método Agrega}
+\paragraph{Propósito de diseño:}
+Añade un objeto MedUObra a la obra.
+
+\paragraph{Parámetros:}
+Recibe dos parámetros:
+
+\begin{itemize}
+\item cap\_padre: Código del capítulo contenedor de la medición que se añade.
+\item m: Objeto MedUObra a añadir.
+\end{itemize}
+
+\subsubsection{Método LeeBC3DatosObra}
+\paragraph{Propósito de diseño:}
+Lee los datos de la obra a partir de un objeto Codigos
+procedente de un archivo FIEBDC3.
+
+\paragraph{Parámetros:}
+El objeto Codigos.
+
+\subsubsection{Método LeeBC3DatosCapsPpales}
+\paragraph{Propósito de diseño:}
+Lee los datos de los capítulos de la obra
+que cuelgan directamente de ella a partir
+de un objeto Codigos procedente de un archivo FIEBDC3.
+
+\paragraph{Parámetros:}
+El objeto Codigos.
+
+\subsubsection{Método EscribeSpre}
+\paragraph{Propósito de diseño:}
+Este método se encarga de escribir la obra
+en estándar de Sispre.
+
+\paragraph{Parámetros:}
+El método recibe un único parámetro que es el flujo
+de salida donde se escribirán los datos.
+
+\subsubsection{Método EscribeBC3}
+\paragraph{Propósito de diseño:}
+Escribe los datos correspondientes a la obra 
+en un archivo FIEBDC3.
+\paragraph{Parámetros:}
+Recibe dos parámetros:
+
+\begin{itemize}
+\item os: flujo de salida en el que se escribirán los datos.
+\item pos: ??
+\end{itemize}
+
+\subsubsection{Método LeeMedicSpre}
+\paragraph{Propósito de diseño:}
+Lee los datos correspondientes a las mediciones 
+a partir de un archivo estándar de Sispre.
+\paragraph{Parámetros:}
+Recibe un parámetro que es el flujo de entrada
+del que se leerán los datos.
+
+\subsubsection{Método LeeMedicSpre}
+\paragraph{Propósito de diseño:}
+Lee los datos de la obra a partir de un archivo estándar de Sispre.
+\paragraph{Parámetros:}
+Recibe un parámetro que es el flujo de entrada
+del que se leerán los datos.
+
+\subsubsection{Método BuscaCapituloMedicion}
+\paragraph{Propósito de diseño:}
+Devuelve un puntero al capítulo a partir de la ruta
+almacenada en un objeto de clase regBC3\_ruta.
+
+\paragraph{Parámetros:}
+Recibe un parámetro que es el objeto de clase regBC3\_ruta.
+
+\subsubsection{Método LeeBC3Mediciones}
+\paragraph{Propósito de diseño:}
+Lee las mediciones a partir de los datos
+contenidos en un objeto de clase Codigos.
+
+
+\paragraph{Parámetros:}
+Recibe un parámetro que es el objeto de clase Codigos.
+
+\subsubsection{Método LeeBC3}
+\paragraph{Propósito de diseño:}
+Lee la obra a partir de los datos
+contenidos en un archivo FIEBDC3.
+
+
+\paragraph{Parámetros:}
+Recibe un parámetro que es el flujo de entrada que
+corresponde al archivo BC3.
+
+\subsubsection{Método ImprLtx}
+\paragraph{Propósito de diseño:}
+Escribe en \LaTeXe el presupuesto de la obra.
+
+\paragraph{Parámetros:}
+El parámetro que recibe el método es el flujo de salida en que se escriben los datos.
+
+\subsubsection{Método EscribeHCalc}
+\paragraph{Propósito de diseño:}
+Escribe los datos de la obra en un formato
+legible por un programa de hoja de cálculo.
+
+\paragraph{Parámetros:}
+El parámetro que recibe el método es el flujo de salida en que se escriben los datos.
+
+\subsubsection{Método SalvaPpl}
+\paragraph{Propósito de diseño:}
+Escribe los datos de la obra en el formato
+nativo del programa.
+
+\paragraph{Parámetros:}
+El parámetro que recibe el método es el flujo de salida en que se escriben los datos.
+
+
+\end{document}

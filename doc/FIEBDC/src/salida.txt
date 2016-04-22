@@ -1,0 +1,433 @@
+
+EJEMPLO DE PROGRAMA QUE ACCEDE A LA BASE "BASE.DLL"
+
+ATENCIÓN: No existe Paramétrico Global en la Base
+
+Precio "ABPH.1$": Número de parámetros: 3
+
+Parámetro 0: Rótulo: RESISTENCIA
+	Opción 0: Rótulo: H-50
+	Opción 1: Rótulo: H-100
+	Opción 2: Rótulo: H-125
+	Opción 3: Rótulo: H-150
+	Opción 4: Rótulo: H-175
+
+Parámetro 1: Rótulo: CONSISTENCIA
+	Opción 0: Rótulo: plástica
+	Opción 1: Rótulo: blanda
+
+Parámetro 2: Rótulo: Tmax
+	Opción 0: Rótulo: 18
+	Opción 1: Rótulo: 38
+	Opción 2: Rótulo: 78
+
+CODIGO: ABPH.1aaa
+OPCIONES: 0 0 0 
+RESUMEN:H-50 C/plástica Tmax=18 mm
+TEXTO:Hormigón H-50, resistencia característica 50 Kg/cm2, consistencia plástica, cemento tipo II-Z/35-A, arena silícea (0/6) y grava silícea rodada, tamaño máximo 18 mm, confeccionado en obra con hormigonera de 300 l de capacidad. Según RC-93 y EH-91.
+PLIEGO:
+DESCOMPOSICIÓN:
+	 1 SBAC.5ccaa 	0.180
+	 2 SBAA.1a 	0.180
+	 3 SBRA.5ab 	0.695
+	 4 SBRG.1a 	1.390
+	 5 MAMA19a 	1.000
+	 6 MOOC13a 	2.000
+
+CODIGO: ABPH.1aab
+OPCIONES: 0 0 1 
+RESUMEN:H-50 C/plástica Tmax=38 mm
+TEXTO:Hormigón H-50, resistencia característica 50 Kg/cm2, consistencia plástica, cemento tipo II-Z/35-A, arena silícea (0/6) y grava silícea rodada, tamaño máximo 38 mm, confeccionado en obra con hormigonera de 300 l de capacidad. Según RC-93 y EH-91.
+PLIEGO:
+DESCOMPOSICIÓN:
+	 1 SBAC.5ccaa 	0.160
+	 2 SBAA.1a 	0.160
+	 3 SBRA.5ab 	0.720
+	 4 SBRG.1b 	1.440
+	 5 MAMA19a 	1.000
+	 6 MOOC13a 	2.000
+
+CODIGO: ABPH.1aac
+OPCIONES: 0 0 2 
+RESUMEN:H-50 C/plástica Tmax=78 mm
+TEXTO:Hormigón H-50, resistencia característica 50 Kg/cm2, consistencia plástica, cemento tipo II-Z/35-A, arena silícea (0/6) y grava silícea rodada, tamaño máximo 78 mm, confeccionado en obra con hormigonera de 300 l de capacidad. Según RC-93 y EH-91.
+PLIEGO:
+DESCOMPOSICIÓN:
+	 1 SBAC.5ccaa 	0.140
+	 2 SBAA.1a 	0.140
+	 3 SBRA.5ab 	0.740
+	 4 SBRG.1c 	1.480
+	 5 MAMA19a 	1.000
+	 6 MOOC13a 	2.000
+
+CODIGO: ABPH.1aba
+OPCIONES: 0 1 0 
+RESUMEN:H-50 C/blanda Tmax=18 mm
+TEXTO:Hormigón H-50, resistencia característica 50 Kg/cm2, consistencia blanda, cemento tipo II-Z/35-A, arena silícea (0/6) y grava silícea rodada, tamaño máximo 18 mm, confeccionado en obra con hormigonera de 300 l de capacidad. Según RC-93 y EH-91.
+PLIEGO:
+DESCOMPOSICIÓN:
+	 1 SBAC.5ccaa 	0.210
+	 2 SBAA.1a 	0.205
+	 3 SBRA.5ab 	0.665
+	 4 SBRG.1a 	1.330
+	 5 MAMA19a 	1.000
+	 6 MOOC13a 	2.000
+
+CODIGO: ABPH.1abb
+OPCIONES: 0 1 1 
+RESUMEN:H-50 C/blanda Tmax=38 mm
+TEXTO:Hormigón H-50, resistencia característica 50 Kg/cm2, consistencia blanda, cemento tipo II-Z/35-A, arena silícea (0/6) y grava silícea rodada, tamaño máximo 38 mm, confeccionado en obra con hormigonera de 300 l de capacidad. Según RC-93 y EH-91.
+PLIEGO:
+DESCOMPOSICIÓN:
+	 1 SBAC.5ccaa 	0.185
+	 2 SBAA.1a 	0.185
+	 3 SBRA.5ab 	0.690
+	 4 SBRG.1b 	1.380
+	 5 MAMA19a 	1.000
+	 6 MOOC13a 	2.000
+
+CODIGO: ABPH.1abc
+OPCIONES: 0 1 2 
+RESUMEN:H-50 C/blanda Tmax=78 mm
+TEXTO:Hormigón H-50, resistencia característica 50 Kg/cm2, consistencia blanda, cemento tipo II-Z/35-A, arena silícea (0/6) y grava silícea rodada, tamaño máximo 78 mm, confeccionado en obra con hormigonera de 300 l de capacidad. Según RC-93 y EH-91.
+PLIEGO:
+DESCOMPOSICIÓN:
+	 1 SBAC.5ccaa 	0.165
+	 2 SBAA.1a 	0.165
+	 3 SBRA.5ab 	0.715
+	 4 SBRG.1c 	1.430
+	 5 MAMA19a 	1.000
+	 6 MOOC13a 	2.000
+
+CODIGO: ABPH.1baa
+OPCIONES: 1 0 0 
+RESUMEN:H-100 C/plástica Tmax=18 mm
+TEXTO:Hormigón H-100, resistencia característica 100 Kg/cm2, consistencia plástica, cemento tipo II-Z/35-A, arena silícea (0/6) y grava silícea rodada, tamaño máximo 18 mm, confeccionado en obra con hormigonera de 300 l de capacidad. Según RC-93 y EH-91.
+PLIEGO:
+DESCOMPOSICIÓN:
+	 1 SBAC.5ccaa 	0.255
+	 2 SBAA.1a 	0.180
+	 3 SBRA.5ab 	0.675
+	 4 SBRG.1a 	1.350
+	 5 MAMA19a 	1.000
+	 6 MOOC13a 	2.000
+
+CODIGO: ABPH.1bab
+OPCIONES: 1 0 1 
+RESUMEN:H-100 C/plástica Tmax=38 mm
+TEXTO:Hormigón H-100, resistencia característica 100 Kg/cm2, consistencia plástica, cemento tipo II-Z/35-A, arena silícea (0/6) y grava silícea rodada, tamaño máximo 38 mm, confeccionado en obra con hormigonera de 300 l de capacidad. Según RC-93 y EH-91.
+PLIEGO:
+DESCOMPOSICIÓN:
+	 1 SBAC.5ccaa 	0.225
+	 2 SBAA.1a 	0.160
+	 3 SBRA.5ab 	0.700
+	 4 SBRG.1b 	1.400
+	 5 MAMA19a 	1.000
+	 6 MOOC13a 	2.000
+
+CODIGO: ABPH.1bac
+OPCIONES: 1 0 2 
+RESUMEN:H-100 C/plástica Tmax=78 mm
+TEXTO:Hormigón H-100, resistencia característica 100 Kg/cm2, consistencia plástica, cemento tipo II-Z/35-A, arena silícea (0/6) y grava silícea rodada, tamaño máximo 78 mm, confeccionado en obra con hormigonera de 300 l de capacidad. Según RC-93 y EH-91.
+PLIEGO:
+DESCOMPOSICIÓN:
+	 1 SBAC.5ccaa 	0.200
+	 2 SBAA.1a 	0.140
+	 3 SBRA.5ab 	0.725
+	 4 SBRG.1c 	1.450
+	 5 MAMA19a 	1.000
+	 6 MOOC13a 	2.000
+
+CODIGO: ABPH.1bba
+OPCIONES: 1 1 0 
+RESUMEN:H-100 C/blanda Tmax=18 mm
+TEXTO:Hormigón H-100, resistencia característica 100 Kg/cm2, consistencia blanda, cemento tipo II-Z/35-A, arena silícea (0/6) y grava silícea rodada, tamaño máximo 18 mm, confeccionado en obra con hormigonera de 300 l de capacidad. Según RC-93 y EH-91.
+PLIEGO:
+DESCOMPOSICIÓN:
+	 1 SBAC.5ccaa 	0.290
+	 2 SBAA.1a 	0.205
+	 3 SBRA.5ab 	0.640
+	 4 SBRG.1a 	1.280
+	 5 MAMA19a 	1.000
+	 6 MOOC13a 	2.000
+
+CODIGO: ABPH.1bbb
+OPCIONES: 1 1 1 
+RESUMEN:H-100 C/blanda Tmax=38 mm
+TEXTO:Hormigón H-100, resistencia característica 100 Kg/cm2, consistencia blanda, cemento tipo II-Z/35-A, arena silícea (0/6) y grava silícea rodada, tamaño máximo 38 mm, confeccionado en obra con hormigonera de 300 l de capacidad. Según RC-93 y EH-91.
+PLIEGO:
+DESCOMPOSICIÓN:
+	 1 SBAC.5ccaa 	0.260
+	 2 SBAA.1a 	0.185
+	 3 SBRA.5ab 	0.670
+	 4 SBRG.1b 	1.340
+	 5 MAMA19a 	1.000
+	 6 MOOC13a 	2.000
+
+CODIGO: ABPH.1bbc
+OPCIONES: 1 1 2 
+RESUMEN:H-100 C/blanda Tmax=78 mm
+TEXTO:Hormigón H-100, resistencia característica 100 Kg/cm2, consistencia blanda, cemento tipo II-Z/35-A, arena silícea (0/6) y grava silícea rodada, tamaño máximo 78 mm, confeccionado en obra con hormigonera de 300 l de capacidad. Según RC-93 y EH-91.
+PLIEGO:
+DESCOMPOSICIÓN:
+	 1 SBAC.5ccaa 	0.235
+	 2 SBAA.1a 	0.165
+	 3 SBRA.5ab 	0.695
+	 4 SBRG.1c 	1.390
+	 5 MAMA19a 	1.000
+	 6 MOOC13a 	2.000
+
+CODIGO: ABPH.1caa
+OPCIONES: 2 0 0 
+RESUMEN:H-125 C/plástica Tmax=18 mm
+TEXTO:Hormigón H-125, resistencia característica 125 Kg/cm2, consistencia plástica, cemento tipo II-Z/35-A, arena silícea (0/6) y grava silícea rodada, tamaño máximo 18 mm, confeccionado en obra con hormigonera de 300 l de capacidad. Según RC-93 y EH-91.
+PLIEGO:
+DESCOMPOSICIÓN:
+	 1 SBAC.5ccaa 	0.290
+	 2 SBAA.1a 	0.180
+	 3 SBRA.5ab 	0.665
+	 4 SBRG.1a 	1.330
+	 5 MAMA19a 	1.000
+	 6 MOOC13a 	2.000
+
+CODIGO: ABPH.1cab
+OPCIONES: 2 0 1 
+RESUMEN:H-125 C/plástica Tmax=38 mm
+TEXTO:Hormigón H-125, resistencia característica 125 Kg/cm2, consistencia plástica, cemento tipo II-Z/35-A, arena silícea (0/6) y grava silícea rodada, tamaño máximo 38 mm, confeccionado en obra con hormigonera de 300 l de capacidad. Según RC-93 y EH-91.
+PLIEGO:
+DESCOMPOSICIÓN:
+	 1 SBAC.5ccaa 	0.260
+	 2 SBAA.1a 	0.160
+	 3 SBRA.5ab 	0.690
+	 4 SBRG.1b 	1.380
+	 5 MAMA19a 	1.000
+	 6 MOOC13a 	2.000
+
+CODIGO: ABPH.1cac
+OPCIONES: 2 0 2 
+RESUMEN:H-125 C/plástica Tmax=78 mm
+TEXTO:Hormigón H-125, resistencia característica 125 Kg/cm2, consistencia plástica, cemento tipo II-Z/35-A, arena silícea (0/6) y grava silícea rodada, tamaño máximo 78 mm, confeccionado en obra con hormigonera de 300 l de capacidad. Según RC-93 y EH-91.
+PLIEGO:
+DESCOMPOSICIÓN:
+	 1 SBAC.5ccaa 	0.225
+	 2 SBAA.1a 	0.140
+	 3 SBRA.5ab 	0.720
+	 4 SBRG.1c 	1.440
+	 5 MAMA19a 	1.000
+	 6 MOOC13a 	2.000
+
+CODIGO: ABPH.1cba
+OPCIONES: 2 1 0 
+RESUMEN:H-125 C/blanda Tmax=18 mm
+TEXTO:Hormigón H-125, resistencia característica 125 Kg/cm2, consistencia blanda, cemento tipo II-Z/35-A, arena silícea (0/6) y grava silícea rodada, tamaño máximo 18 mm, confeccionado en obra con hormigonera de 300 l de capacidad. Según RC-93 y EH-91.
+PLIEGO:
+DESCOMPOSICIÓN:
+	 1 SBAC.5ccaa 	0.330
+	 2 SBAA.1a 	0.205
+	 3 SBRA.5ab 	0.630
+	 4 SBRG.1a 	1.260
+	 5 MAMA19a 	1.000
+	 6 MOOC13a 	2.000
+
+CODIGO: ABPH.1cbb
+OPCIONES: 2 1 1 
+RESUMEN:H-125 C/blanda Tmax=38 mm
+TEXTO:Hormigón H-125, resistencia característica 125 Kg/cm2, consistencia blanda, cemento tipo II-Z/35-A, arena silícea (0/6) y grava silícea rodada, tamaño máximo 38 mm, confeccionado en obra con hormigonera de 300 l de capacidad. Según RC-93 y EH-91.
+PLIEGO:
+DESCOMPOSICIÓN:
+	 1 SBAC.5ccaa 	0.300
+	 2 SBAA.1a 	0.185
+	 3 SBRA.5ab 	0.665
+	 4 SBRG.1b 	1.330
+	 5 MAMA19a 	1.000
+	 6 MOOC13a 	2.000
+
+CODIGO: ABPH.1cbc
+OPCIONES: 2 1 2 
+RESUMEN:H-125 C/blanda Tmax=78 mm
+TEXTO:Hormigón H-125, resistencia característica 125 Kg/cm2, consistencia blanda, cemento tipo II-Z/35-A, arena silícea (0/6) y grava silícea rodada, tamaño máximo 78 mm, confeccionado en obra con hormigonera de 300 l de capacidad. Según RC-93 y EH-91.
+PLIEGO:
+DESCOMPOSICIÓN:
+	 1 SBAC.5ccaa 	0.265
+	 2 SBAA.1a 	0.165
+	 3 SBRA.5ab 	0.685
+	 4 SBRG.1c 	1.370
+	 5 MAMA19a 	1.000
+	 6 MOOC13a 	2.000
+
+CODIGO: ABPH.1daa
+OPCIONES: 3 0 0 
+RESUMEN:H-150 C/plástica Tmax=18 mm
+TEXTO:Hormigón H-150, resistencia característica 150 Kg/cm2, consistencia plástica, cemento tipo II-Z/35-A, arena silícea (0/6) y grava silícea rodada, tamaño máximo 18 mm, confeccionado en obra con hormigonera de 300 l de capacidad. Según RC-93 y EH-91.
+PLIEGO:
+DESCOMPOSICIÓN:
+	 1 SBAC.5ccaa 	0.330
+	 2 SBAA.1a 	0.180
+	 3 SBRA.5ab 	0.650
+	 4 SBRG.1a 	1.300
+	 5 MAMA19a 	1.000
+	 6 MOOC13a 	2.000
+
+CODIGO: ABPH.1dab
+OPCIONES: 3 0 1 
+RESUMEN:H-150 C/plástica Tmax=38 mm
+TEXTO:Hormigón H-150, resistencia característica 150 Kg/cm2, consistencia plástica, cemento tipo II-Z/35-A, arena silícea (0/6) y grava silícea rodada, tamaño máximo 38 mm, confeccionado en obra con hormigonera de 300 l de capacidad. Según RC-93 y EH-91.
+PLIEGO:
+DESCOMPOSICIÓN:
+	 1 SBAC.5ccaa 	0.290
+	 2 SBAA.1a 	0.160
+	 3 SBRA.5ab 	0.680
+	 4 SBRG.1b 	1.360
+	 5 MAMA19a 	1.000
+	 6 MOOC13a 	2.000
+
+CODIGO: ABPH.1dac
+OPCIONES: 3 0 2 
+RESUMEN:H-150 C/plástica Tmax=78 mm
+TEXTO:Hormigón H-150, resistencia característica 150 Kg/cm2, consistencia plástica, cemento tipo II-Z/35-A, arena silícea (0/6) y grava silícea rodada, tamaño máximo 78 mm, confeccionado en obra con hormigonera de 300 l de capacidad. Según RC-93 y EH-91.
+PLIEGO:
+DESCOMPOSICIÓN:
+	 1 SBAC.5ccaa 	0.255
+	 2 SBAA.1a 	0.140
+	 3 SBRA.5ab 	0.710
+	 4 SBRG.1c 	1.420
+	 5 MAMA19a 	1.000
+	 6 MOOC13a 	2.000
+
+CODIGO: ABPH.1dba
+OPCIONES: 3 1 0 
+RESUMEN:H-150 C/blanda Tmax=18 mm
+TEXTO:Hormigón H-150, resistencia característica 150 Kg/cm2, consistencia blanda, cemento tipo II-Z/35-A, arena silícea (0/6) y grava silícea rodada, tamaño máximo 18 mm, confeccionado en obra con hormigonera de 300 l de capacidad. Según RC-93 y EH-91.
+PLIEGO:
+DESCOMPOSICIÓN:
+	 1 SBAC.5ccaa 	0.375
+	 2 SBAA.1a 	0.205
+	 3 SBRA.5ab 	0.615
+	 4 SBRG.1a 	1.230
+	 5 MAMA19a 	1.000
+	 6 MOOC13a 	2.000
+
+CODIGO: ABPH.1dbb
+OPCIONES: 3 1 1 
+RESUMEN:H-150 C/blanda Tmax=38 mm
+TEXTO:Hormigón H-150, resistencia característica 150 Kg/cm2, consistencia blanda, cemento tipo II-Z/35-A, arena silícea (0/6) y grava silícea rodada, tamaño máximo 38 mm, confeccionado en obra con hormigonera de 300 l de capacidad. Según RC-93 y EH-91.
+PLIEGO:
+DESCOMPOSICIÓN:
+	 1 SBAC.5ccaa 	0.335
+	 2 SBAA.1a 	0.185
+	 3 SBRA.5ab 	0.645
+	 4 SBRG.1b 	1.290
+	 5 MAMA19a 	1.000
+	 6 MOOC13a 	2.000
+
+CODIGO: ABPH.1dbc
+OPCIONES: 3 1 2 
+RESUMEN:H-150 C/blanda Tmax=78 mm
+TEXTO:Hormigón H-150, resistencia característica 150 Kg/cm2, consistencia blanda, cemento tipo II-Z/35-A, arena silícea (0/6) y grava silícea rodada, tamaño máximo 78 mm, confeccionado en obra con hormigonera de 300 l de capacidad. Según RC-93 y EH-91.
+PLIEGO:
+DESCOMPOSICIÓN:
+	 1 SBAC.5ccaa 	0.300
+	 2 SBAA.1a 	0.165
+	 3 SBRA.5ab 	0.775
+	 4 SBRG.1c 	1.550
+	 5 MAMA19a 	1.000
+	 6 MOOC13a 	2.000
+
+CODIGO: ABPH.1eaa
+OPCIONES: 4 0 0 
+RESUMEN:H-175 C/plástica Tmax=18 mm
+TEXTO:Hormigón H-175, resistencia característica 175 Kg/cm2, consistencia plástica, cemento tipo II-Z/35-A, arena silícea (0/6) y grava silícea rodada, tamaño máximo 18 mm, confeccionado en obra con hormigonera de 300 l de capacidad. Según RC-93 y EH-91.
+PLIEGO:
+DESCOMPOSICIÓN:
+	 1 SBAC.5ccaa 	0.365
+	 2 SBAA.1a 	0.180
+	 3 SBRA.5ab 	0.640
+	 4 SBRG.1a 	1.280
+	 5 MAMA19a 	1.000
+	 6 MOOC13a 	2.000
+
+CODIGO: ABPH.1eab
+OPCIONES: 4 0 1 
+RESUMEN:H-175 C/plástica Tmax=38 mm
+TEXTO:Hormigón H-175, resistencia característica 175 Kg/cm2, consistencia plástica, cemento tipo II-Z/35-A, arena silícea (0/6) y grava silícea rodada, tamaño máximo 38 mm, confeccionado en obra con hormigonera de 300 l de capacidad. Según RC-93 y EH-91.
+PLIEGO:
+DESCOMPOSICIÓN:
+	 1 SBAC.5ccaa 	0.325
+	 2 SBAA.1a 	0.160
+	 3 SBRA.5ab 	0.670
+	 4 SBRG.1b 	1.340
+	 5 MAMA19a 	1.000
+	 6 MOOC13a 	2.000
+
+CODIGO: ABPH.1eac
+OPCIONES: 4 0 2 
+RESUMEN:H-175 C/plástica Tmax=78 mm
+TEXTO:Hormigón H-175, resistencia característica 175 Kg/cm2, consistencia plástica, cemento tipo II-Z/35-A, arena silícea (0/6) y grava silícea rodada, tamaño máximo 78 mm, confeccionado en obra con hormigonera de 300 l de capacidad. Según RC-93 y EH-91.
+PLIEGO:
+DESCOMPOSICIÓN:
+	 1 SBAC.5ccaa 	0.285
+	 2 SBAA.1a 	0.140
+	 3 SBRA.5ab 	0.700
+	 4 SBRG.1c 	1.400
+	 5 MAMA19a 	1.000
+	 6 MOOC13a 	2.000
+
+CODIGO : ABPH.1eba
+ERROR: Combinación no permitida
+
+CODIGO: ABPH.1ebb
+OPCIONES: 4 1 1 
+RESUMEN:H-175 C/blanda Tmax=38 mm
+TEXTO:Hormigón H-175, resistencia característica 175 Kg/cm2, consistencia blanda, cemento tipo II-Z/35-A, arena silícea (0/6) y grava silícea rodada, tamaño máximo 38 mm, confeccionado en obra con hormigonera de 300 l de capacidad. Según RC-93 y EH-91.
+PLIEGO:
+DESCOMPOSICIÓN:
+	 1 SBAC.5ccaa 	0.375
+	 2 SBAA.1a 	0.185
+	 3 SBRA.5ab 	0.635
+	 4 SBRG.1b 	1.270
+	 5 MAMA19a 	1.000
+	 6 MOOC13a 	2.000
+
+CODIGO: ABPH.1ebc
+OPCIONES: 4 1 2 
+RESUMEN:H-175 C/blanda Tmax=78 mm
+TEXTO:Hormigón H-175, resistencia característica 175 Kg/cm2, consistencia blanda, cemento tipo II-Z/35-A, arena silícea (0/6) y grava silícea rodada, tamaño máximo 78 mm, confeccionado en obra con hormigonera de 300 l de capacidad. Según RC-93 y EH-91.
+PLIEGO:
+DESCOMPOSICIÓN:
+	 1 SBAC.5ccaa 	0.335
+	 2 SBAA.1a 	0.165
+	 3 SBRA.5ab 	0.665
+	 4 SBRG.1c 	1.330
+	 5 MAMA19a 	1.000
+	 6 MOOC13a 	2.000
+
+Precio "SBRG.1$": Número de parámetros: 1
+
+Parámetro 0: Rótulo: Tmax
+	Opción 0: Rótulo: 18
+	Opción 1: Rótulo: 38
+	Opción 2: Rótulo: 78
+
+CODIGO: SBRG.1_18
+OPCIONES: 0 
+RESUMEN:Grava de Tmáx. 18
+TEXTO:
+PLIEGO:
+PRECIO:125.50
+
+CODIGO: SBRG.1_38
+OPCIONES: 1 
+RESUMEN:Grava de Tmáx. 38
+TEXTO:
+PLIEGO:
+PRECIO:125.75
+
+CODIGO: SBRG.1_78
+OPCIONES: 2 
+RESUMEN:Grava de Tmáx. 78
+TEXTO:
+PLIEGO:
+PRECIO:126.00
+
+ERROR: El precio "NoExiste" no existe
+ 

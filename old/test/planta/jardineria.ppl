@@ -1,0 +1,154 @@
+              \capitulo
+                 {
+                   \codigo{5}
+                   \titulo{Jardinería}
+                   \fr { \factor{1} \rendimiento{1.0000000000000} }
+                   \mediciones
+                     {
+                     \med_uobra
+                       {
+                       \ref{280.001}
+                       \lineas_medicion
+                          {
+                          \medicion_vol { \comentario{} \unidades{19} \largo{0} \ancho{0} \alto{0} }
+                          }
+                        }
+                     \med_uobra
+                       {
+                       \ref{280.002}
+                       \lineas_medicion
+                          {
+                          \medicion_vol { \comentario{} \unidades{3} \largo{0} \ancho{0} \alto{0} }
+                          }
+                        }
+                     \med_uobra
+                       {
+                       \ref{280.003}
+                       \lineas_medicion
+                          {
+                          \medicion_vol { \comentario{} \unidades{1} \largo{0} \ancho{0} \alto{0} }
+                          }
+                        }
+                     \med_uobra
+                       {
+                       \ref{280.004}
+                       \lineas_medicion
+                          {
+                          \medicion_vol { \comentario{} \unidades{2} \largo{0} \ancho{0} \alto{0} }
+                          }
+                        }
+                     \med_uobra
+                       {
+                       \ref{280.005}
+                       \lineas_medicion
+                          {
+                          \medicion_vol { \comentario{} \unidades{3} \largo{0} \ancho{0} \alto{0} }
+                          }
+                        }
+                     \med_uobra
+                       {
+                       \ref{280.006}
+                       \lineas_medicion
+                          {
+                          \medicion_vol { \comentario{} \unidades{24} \largo{0} \ancho{0} \alto{0} }
+                          }
+                        }
+                     \med_uobra
+                       {
+                       \ref{280.007}
+                       \lineas_medicion
+                          {
+                          \medicion_vol { \comentario{} \unidades{15} \largo{0} \ancho{0} \alto{0} }
+                          }
+                        }
+                     \med_uobra
+                       {
+                       \ref{280.008}
+                       \lineas_medicion
+                          {
+                          \medicion_vol { \comentario{} \unidades{8} \largo{0} \ancho{0} \alto{0} }
+                          }
+                        }
+                     \med_uobra
+                       {
+                       \ref{280.009}
+                       \lineas_medicion
+                          {
+                          \medicion_vol { \comentario{} \unidades{3} \largo{0} \ancho{0} \alto{0} }
+                          }
+                        }
+                     \med_uobra
+                       {
+                       \ref{280.010}
+                       \lineas_medicion
+                          {
+                          \medicion_vol { \comentario{} \unidades{3} \largo{0} \ancho{0} \alto{0} }
+                          }
+                        }
+                     \med_uobra
+                       {
+                       \ref{280.011}
+                       \lineas_medicion
+                          {
+                          \medicion_vol { \comentario{} \unidades{386} \largo{0} \ancho{0} \alto{0} }
+                          }
+                        }
+                     \med_uobra
+                       {
+                       \ref{280.012}
+                       \lineas_medicion
+                          {
+                          \medicion_vol { \comentario{} \unidades{294} \largo{0} \ancho{0} \alto{0} }
+                          }
+                        }
+                     \med_uobra
+                       {
+                       \ref{280.013}
+                       \lineas_medicion
+                          {
+                          \medicion_vol { \comentario{} \unidades{492} \largo{0} \ancho{0} \alto{0} }
+                          }
+                        }
+                     \med_uobra
+                       {
+                       \ref{280.014}
+                       \lineas_medicion
+                          {
+                          \medicion_vol { \comentario{} \unidades{610} \largo{0} \ancho{0} \alto{0} }
+                          }
+                        }
+                     \med_uobra
+                       {
+                       \ref{280.015}
+                       \lineas_medicion
+                          {
+                          \medicion_vol { \comentario{} \unidades{2} \largo{0} \ancho{0} \alto{0} }
+                          }
+                        }
+                     \med_uobra
+                       {
+                       \ref{280.016}
+                       \lineas_medicion
+                          {
+                          \medicion_vol { \comentario{} \unidades{1143} \largo{0} \ancho{0} \alto{0} }
+                          }
+                        }
+                     \med_uobra
+                       {
+                       \ref{280.017}
+                       \lineas_medicion
+                          {
+                          \medicion_vol { \comentario{} \unidades{72} \largo{0} \ancho{0} \alto{0} }
+                          }
+                        }
+                     \med_uobra
+                       {
+                       \ref{280.018}
+                       \lineas_medicion
+                          {
+                          \medicion_vol { \comentario{} \unidades{290} \largo{0} \ancho{0} \alto{0} }
+                          }
+                        }
+                     }
+                   \subcapitulos{}
+                 } \c{fin capitulo jardinería}

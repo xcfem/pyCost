@@ -1,0 +1,36 @@
+\Obra
+  {
+    \porcentajes
+      {
+        \gastos_generales{0.00}
+        \beneficio_industrial{0.00}
+        \iva{0.16}
+      }
+    \incluye{precios.ppl}
+    \capitulo
+        {
+          \codigo{PBlending}
+          \titulo{Planta "Blending" Recitermia}
+          \fr { \factor{1} \rendimiento{1.0} }
+          \mediciones{}
+          \subcapitulos
+             {
+               \incluye{demoliciones.ppl} 
+               \incluye{explanacion.ppl}
+               \incluye{viales.ppl}
+               \incluye{abast_agua.ppl}
+               \incluye{red_incendios.ppl}
+               \incluye{saneamiento.ppl}
+               \incluye{red_electrica.ppl}
+               \incluye{jardinernia.ppl}
+               \incluye{cerramiento.ppl}
+               \incluye{parque_tanques.ppl}
+               \incluye{edif_bombas.ppl}
+               \incluye{plataf.ppl}
+               \incluye{nave_bidones.ppl}
+               \incluye{ciment_thb.ppl}
+               \incluye{bombas_vaciado.ppl}
+               \incluye{bascula.ppl}
+               \incluye{depos_incendios.ppl}
+        } \c{fin capitulo:PR}
+  } \c{fin obra:PR}

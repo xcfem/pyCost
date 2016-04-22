@@ -1,0 +1,142 @@
+//EntBC3.cxx
+
+#include "EntBC3.h"
+
+const std::string EntBC3::txtud= "";
+const std::string EntBC3::txtl= "";
+
+EntBC3::EntBC3(const std::string &cod,const std::string &tit)
+  : codigo(cod), titulo(tit) {}
+const std::string &EntBC3::Codigo(void) const
+  { return codigo; }
+std::string &EntBC3::Codigo(void)
+  { return codigo; }
+std::string EntBC3::CodigoBC3(void) const
+  { return Codigo(); }
+const std::string &EntBC3::Unidad(void) const
+  { return txtud; }
+const std::string &EntBC3::Titulo(void) const
+  { return titulo; }
+std::string &EntBC3::Titulo(void)
+  { return titulo; }
+std::string EntBC3::StrPrecio(void) const
+  { return precio2str(Precio()); }
+std::string EntBC3::StrPrecioLtx(void) const
+  { return PrecioR().EnHumano(); }
+std::string EntBC3::StrPrecioEnLetra(const bool &genero) const
+  { return PrecioR().EnLetra(genero); }
+long double EntBC3::Precio(void) const
+  { return 0.0; }
+ppl_precio EntBC3::PrecioR(void) const
+  { return ppl_precio(Precio()); }
+std::string EntBC3::Fecha(void) const
+  { return "040400"; } // xxx
+tipo_concepto EntBC3::Tipo(void) const
+  { return sin_clasif; }
+const std::string &EntBC3::TextoLargo(void) const
+  { return txtl; }
+
+tipo_concepto str2tipo_concepto(const std::string &str)
+  {
+    if(str.length()<1) return sin_clasif;
+    if(str[0]=='0') return sin_clasif;
+    if(str[0]=='1') return mdo;
+    if(str[0]=='2') return maq;
+    if(str[0]=='3') return mat;
+    return sin_clasif;
+  }
+
+tipo_concepto sint2tipo_concepto(const short int &si)
+  {
+    switch(si)
+      {
+      case 0:
+        return sin_clasif;
+      case 1:
+        return mdo;
+      case 2:
+        return maq;
+      case 3:
+        return mat;
+      default:
+        return sin_clasif;
+      }
+  }
+
+std::string tipo_concepto2str(const tipo_concepto &t)
+  {
+    switch(t)
+      {
+      case 0:
+        return "sin_clasif";
+      case 1:
+        return "mdo";
+      case 2:
+        return "maq";
+      case 3:
+        return "mat";
+      default:
+        return "sin_clasif";
+      }
+    return "sin_clasif";
+  }
+
+char EntBC3::ChrTipo(void) const
+  {
+    switch(Tipo())
+      {
+      case sin_clasif:
+        return '0';
+      case mdo:
+        return '1';
+      case maq:
+        return '2';
+      case mat:
+        return '3';
+      default:
+        return '0';
+      };
+  }
+bool EntBC3::EsPorcentaje(void) const
+  {
+    if(codigo.find('%')<codigo.length())
+      return true;
+    else
+      return false;
+  }
+
+void EntBC3::EscribeSpre(std::ostream &os) const
+  {
+    os << Codigo() << '|'
+       << Unidad() << '|'
+       << Titulo() << '|'
+       << StrPrecio() << '|' << endl_msdos;
+  }
+void EntBC3::EscribeConceptoBC3(std::ostream &os,const bool &primero) const
+  { 
+    os << "~C" << '|'
+       << CodigoBC3();
+    //if(primero) os << '#';
+    os << '|'
+       << Unidad() << '|'
+       << latin1TOpc850ML(Titulo()) << '|'
+       << StrPrecio() << '|'
+       << Fecha() << '|'
+       << ChrTipo() << '|' << endl_msdos;
+  }
+void EntBC3::Escribe(std::ostream &os) const
+  { 
+    os << "Codigo: " << Codigo() << std::endl
+       << "Unidad: " << Unidad() << std::endl
+       << "Titulo: " << Titulo() << std::endl
+       << "Precio: " << StrPrecio() << std::endl
+       << "Fecha: "  << Fecha() << std::endl
+       << "Tipo: " << ChrTipo() << std::endl
+       << "Texto largo: " << TextoLargo() << std::endl;
+  }
+
+std::ostream &operator<<(std::ostream &os,const EntBC3 &e)
+  {
+    e.Escribe(os);
+    return os;
+  }

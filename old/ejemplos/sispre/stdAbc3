@@ -1,0 +1,34 @@
+#!/bin/sh
+echo "[MDO]" > salida.std
+for arch_mdo in ./MDO*
+do
+  cat $arch_mdo >> salida.std
+done
+echo "[MAQ]" >> salida.std
+for arch_maq in ./MAQ*
+do
+  cat $arch_maq >> salida.std
+done
+echo "[MAT]" >> salida.std
+for arch_mat in ./MAT*
+do
+  cat $arch_mat >> salida.std
+done
+echo "[DES]" >> salida.std
+for arch_des in ./DES*
+do
+  cat $arch_des >> salida.std
+done
+echo "[MED]" >> salida.std
+for arch_cap in ./CAP*
+do
+  cat $arch_cap >> capitulos.std
+done
+./ord_caps < capitulos.std > capitulos.ord
+rm capitulos.std
+cat capitulos.ord >> salida.std
+rm capitulos.ord
+./sispre2bc3 < salida.std > salida.bc3
+rm salida.std
+
+

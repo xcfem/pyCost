@@ -1,0 +1,68 @@
+\documentclass[spanish,a4paper,oneside]{book}
+\usepackage[spanish]{babel}
+\selectlanguage{spanish}
+\usepackage{epsfig}
+\usepackage{amsmath}
+\usepackage{isolatin1}
+\usepackage{rotating}
+\usepackage{longtable} %Tablas largas
+\usepackage{lscape}
+\usepackage{minitoc}
+\usepackage{fancyheadings}
+
+\doparttoc
+
+\pagestyle{fancyplain}
+\addtolength{\headwidth}{\marginparsep}
+\addtolength{\headwidth}{\marginparwidth}
+\renewcommand{\chaptermark}[1]
+{\markboth{#1}{}}
+\renewcommand{\sectionmark}[1]
+{\markright{\thesection\ #1}}
+\lhead[\fancyplain{}{\bfseries\thepage}]
+{\fancyplain{}{\bfseries\rightmark}}
+\rhead[\fancyplain{}{\bfseries\leftmark}]
+{\fancyplain{}{\bfseries\thepage}}
+\cfoot{}
+\lfoot[\fancyplain{}{}]
+{\fancyplain{ }{\emph{Aprovechamiento hidroeléctrico de Sahechores (Proy. Construcción)}}{}
+\rfoot[\fancyplain{}{Documento no. 4: Presupuesto}]
+{\fancyplain{}{}}}
+
+\newcommand{\HRule}{\rule{\linewidth}{1mm}}
+\newcommand{\cabezaportadilla}[1]{%
+  \cleardoublepage 
+  \thispagestyle{empty}
+  \vspace*{#1}
+  \begin{center}}
+\newcommand{\superportadilla}[2]{%
+  \cabezaportadilla{5cm}
+  \HRule \\
+  \Huge \textbf{\textsc{#1}} \\[5mm]%
+        \textbf{\textsc{#2}}
+  \HRule
+  \end{center}
+  \newpage}
+
+\newcommand{\portadilla}[2]{%
+  \cabezaportadilla{5cm}
+  \HRule \\
+  \Huge #1 \\[5mm]%
+        #2
+  \HRule
+  \end{center}
+  \newpage}
+
+\newcommand{\subportadilla}[2]{%
+  \cabezaportadilla{15cm}
+  \HRule \\
+  \Large #1 \\[5mm]%
+         #2
+  \HRule
+  \end{center}
+  \newpage}
+
+\begin{document}
+\renewcommand{\partname}{}
+\tableofcontents
+\newpage

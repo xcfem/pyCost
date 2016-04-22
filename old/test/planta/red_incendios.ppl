@@ -1,0 +1,77 @@
+              \capitulo
+                 {
+                   \codigo{3}
+                   \titulo{Red contra incendios}
+                   \fr { \factor{1} \rendimiento{1.0000000000000} }
+                   \mediciones
+                     {
+                     \med_uobra
+                       {
+                       \ref{230.001.2}
+                       \lineas_medicion
+                          {
+                          \medicion_vol { \comentario{} \unidades{1} \largo{20.54} \ancho{0} \alto{0} }
+                          \medicion_vol { \comentario{} \unidades{1} \largo{20.56} \ancho{0} \alto{0} }
+                          \medicion_vol { \comentario{} \unidades{1} \largo{35.9} \ancho{0} \alto{0} }
+                          \medicion_vol { \comentario{} \unidades{1} \largo{10.69} \ancho{0} \alto{0} }
+                          \medicion_vol { \comentario{} \unidades{1} \largo{25.64} \ancho{0} \alto{0} }
+                          \medicion_vol { \comentario{} \unidades{1} \largo{26.77} \ancho{0} \alto{0} }
+                          \medicion_vol { \comentario{} \unidades{1} \largo{28.52} \ancho{0} \alto{0} }
+                          \medicion_vol { \comentario{} \unidades{1} \largo{19.06} \ancho{0} \alto{0} }
+                          \medicion_vol { \comentario{} \unidades{1} \largo{55.24} \ancho{0} \alto{0} }
+                          \medicion_vol { \comentario{} \unidades{1} \largo{39.9} \ancho{0} \alto{0} }
+                          \medicion_vol { \comentario{} \unidades{1} \largo{15.06} \ancho{0} \alto{0} }
+                          \medicion_vol { \comentario{} \unidades{1} \largo{78.95} \ancho{0} \alto{0} }
+                          \medicion_vol { \comentario{} \unidades{1} \largo{15} \ancho{0} \alto{0} }
+                          \medicion_vol { \comentario{} \unidades{1} \largo{13.39} \ancho{0} \alto{0} }
+                          \medicion_vol { \comentario{} \unidades{1} \largo{77.79} \ancho{0} \alto{0} }
+                          \medicion_vol { \comentario{} \unidades{1} \largo{8} \ancho{0} \alto{0} }
+                          \medicion_vol { \comentario{} \unidades{1} \largo{51.9} \ancho{0} \alto{0} }
+                          \medicion_vol { \comentario{} \unidades{1} \largo{70.10} \ancho{0} \alto{0} }
+                          \medicion_vol { \comentario{} \unidades{1} \largo{9} \ancho{0} \alto{0} }
+                          \medicion_vol { \comentario{} \unidades{1} \largo{6} \ancho{0} \alto{0} }
+                          }
+                       }
+                     \med_uobra
+                       {
+                       \ref{230.001.4}
+                       \lineas_medicion
+                          {
+                          \medicion_vol { \comentario{} \unidades{1} \largo{15.58} \ancho{0} \alto{0} }
+                          \medicion_vol { \comentario{} \unidades{1} \largo{9.13} \ancho{0} \alto{0} }
+                          \medicion_vol { \comentario{} \unidades{1} \largo{30} \ancho{0} \alto{0} }
+                          \medicion_vol { \comentario{} \unidades{1} \largo{10} \ancho{0} \alto{0} }
+                          }
+                       }
+                     \med_uobra
+                       {
+                       \ref{020.003}
+                       \lineas_medicion
+                          {
+                          \medicion_vol { \comentario{} \unidades{1} \largo{6} \ancho{0.77} \alto{0.85} }
+                          \medicion_vol { \comentario{} \unidades{1} \largo{9} \ancho{0.77} \alto{0.85} }
+                          \medicion_vol { \comentario{} \unidades{1} \largo{10.69} \ancho{0.77} \alto{0.85} }
+                          }
+                        }
+                     \med_uobra
+                       {
+                       \ref{020.006}
+                       \lineas_medicion
+                          {
+                          \medicion_vol { \comentario{} \unidades{1} \largo{6} \ancho{0.77} \alto{0.85} }
+                          \medicion_vol { \comentario{} \unidades{1} \largo{9} \ancho{0.77} \alto{0.85} }
+                          \medicion_vol { \comentario{} \unidades{1} \largo{10.69} \ancho{0.77} \alto{0.85} }
+                          \medicion_vol { \comentario{a deducir} \unidades{-1} \largo{25.69} \ancho{0.011} \alto{0} }
+                          }
+                        }
+                     \med_uobra
+                       {
+                       \ref{220.003}
+                       \lineas_medicion
+                          {
+                          \medicion_vol { \comentario{} \unidades{7} \largo{0} \ancho{0} \alto{0} }
+                          }
+                        }
+                     }
+                   \subcapitulos{}
+                 } \c{ fin capitulo Red contra incendios}

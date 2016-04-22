@@ -1,0 +1,31 @@
+LIBRARY   BASE
+
+CODE      PRELOAD MOVEABLE DISCARDABLE
+DATA      PRELOAD SINGLE
+
+HEAPSIZE  1024
+
+EXPORTS
+	BdcGloLee
+	BdcGloParNumero
+	BdcGloOpcNumero
+	BdcGloParRotulo
+	BdcGloOpcRotulo
+	BdcGloCierra
+	BdcLee
+	BdcParNumero
+	BdcOpcNumero
+	BdcParRotulo
+	BdcOpcRotulo
+	BdcOpciones
+	BdcCalcula
+	BdcCierra
+	BdcDesNumero
+	BdcDesCodigo
+	BdcRendimiento
+	BdcPrecio
+	BdcCodigo
+	BdcResumen
+	BdcTexto
+	BdcPliego
+	BdcError

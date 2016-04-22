@@ -1,0 +1,34 @@
+              \capitulo
+                 {
+                   \codigo{0}
+                   \titulo{Demoliciones}
+                   \fr { \factor{1} \rendimiento{1.0000000000000} }
+                   \mediciones
+                     {
+                     \med_uobra
+                       {
+                       \ref{010.001}
+                       \lineas_medicion
+                           {
+                           \medicion_vol { \comentario{} \unidades{1} \largo{0} \ancho{0} \alto{0} }
+                           }
+                       }
+                     \med_uobra
+                       {
+                       \ref{010.002}
+                       \lineas_medicion
+                         {
+                         \medicion_vol { \comentario{} \unidades{1450} \largo{0} \ancho{0} \alto{0} }
+                         }
+                       }
+                     \med_uobra
+                       {
+                       \ref{010.003}
+                       \lineas_medicion
+                         {
+                         \medicion_vol { \comentario{} \unidades{24} \largo{0} \ancho{0} \alto{0} }
+                         }
+                       }
+                     }
+                   \subcapitulos{}
+                 }

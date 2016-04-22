@@ -1,0 +1,18 @@
+    \capitulo
+        {
+          \codigo{1_2}
+          \titulo{CANAL DE TOMA}
+          \fr              {
+                 \factor{1}
+                 \rendimiento{1.0000000000000}
+              }
+          \mediciones
+              {
+              }
+          \subcapitulos
+              {
+                \incluye{cap_canal.ppl}
+                \incluye{cap_drenaje.ppl}
+                \incluye{cap_rampa_acceso.ppl}
+              }
+        }

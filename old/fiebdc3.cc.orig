@@ -1,0 +1,268 @@
+//fiebdc3.cc
+
+#include "fiebdc3.h"
+#include "boost/lexical_cast.hpp"
+
+//! @brief Devuelve verdadero si el código corresponde a una obra.
+bool es_codigo_obra(const std::string &c)
+  {
+    const size_t sz= c.size();
+    if(sz>1)
+      {
+        return ((c[sz-2]=='#') && (c[sz-1]=='#'));
+      }
+    else
+      return false;   
+  }
+
+//! @brief Devuelve verdadero si el código corresponde a un capítulo.
+bool es_codigo_capitulo(const std::string &c)
+  {
+    bool retval= false;
+    const size_t sz= c.length();
+    if(es_codigo_capitulo_u_obra(c))
+      {
+        if(sz<2)
+          retval= true; //Capítulo sin nombre.
+        else
+          retval= (c[sz-2]!='#'); //Si no es obra, es capítulo.
+      }
+    return retval;   
+  }
+
+bool es_codigo_capitulo_u_obra(const std::string &c)
+  {
+    const size_t sz= c.length();
+    if(sz>0)
+      return (c[sz-1]=='#');
+    else
+      return false;   
+  }
+
+std::string regBC3::limpia_str(const std::string &str)
+  { return q_car(q_car(str,char(10)),char(13)); }
+
+std::ostream &operator<<(std::ostream &os,const regBC3 &r)
+  {
+    r.Escribe(os);
+    return os;
+  }
+
+void regBC3::decod_str_bc3(const std::string &str)
+  {
+    if(!str.empty())
+      {
+        StrTok strtk(limpia_str(str));
+        decod_bc3(strtk);
+      }
+  }
+
+regBC3_desc::regBC3_desc(const std::string &str)
+  { decod_str_bc3(limpia_str(str)); }
+
+//! @brief Decodifica la cadena str
+StrTok &regBC3_desc::decod_bc3(StrTok &strtk)
+  {
+    codigo= strtk.get_token('\\');
+    std::string tmp= strtk.get_token('\\');
+    if(!tmp.empty())
+      factor= boost::lexical_cast<float>(tmp);
+    if(factor==0.0) factor= 1.0; //Por defecto factor=1.0;
+    tmp= strtk.get_token('\\');
+    if(!tmp.empty())
+      rendimiento= boost::lexical_cast<float>(tmp);
+    return strtk;
+  }
+
+regBC3_d::regBC3_d(const std::string &str)
+  { decod_str_bc3(limpia_str(str)); }
+
+StrTok &regBC3_d::decod_bc3(StrTok &strtk)
+//La cadena que se pasa es la que queda a la derecha
+//de ~D|
+  {
+    StrTok strtk_lista_desc= strtk.get_token('|');
+    regBC3_lista_desc::decod_bc3(strtk_lista_desc);
+    return strtk;
+  }
+
+//! @brief Devuelve verdadero si el registro corresponde a un capítulo.
+bool regBC3_d::EsCapitulo(const regBC3_desc &r,const std::set<std::string> &nombres_capitulo) const
+  {
+    bool retval= r.EsCapitulo();
+    if(!retval)
+      retval= (nombres_capitulo.find(r.codigo+'#')!= nombres_capitulo.end());
+    return retval;
+  }
+
+//! @brief Devuelve los elementos de la descomposición que son capítulos.
+regBC3_d regBC3_d::FiltraCapitulos(const std::set<std::string> &nombres_capitulo) const
+  {
+    regBC3_d retval;
+    for(size_t i= 0;i<size();i++)
+      if(EsCapitulo((*this)[i],nombres_capitulo))
+        retval.push_back((*this)[i]);
+    return retval;
+  }
+//! @brief Devuelve los elementos de la descomposición que son precios elementales o descompuestos.
+regBC3_d regBC3_d::FiltraPrecios(const std::set<std::string> &nombres_capitulo) const
+  {
+    regBC3_d retval;
+    for(size_t i= 0;i<size();i++)
+      if(!EsCapitulo((*this)[i],nombres_capitulo))
+        retval.push_back((*this)[i]);
+    return retval;
+  }
+
+
+//! @brief Decodifica la cadena str
+StrTok &regBC3_ruta::decod_bc3(StrTok &strtk)
+  {
+    StrTok::dq_campos::operator=(strtk.campos('\\'));
+    return strtk;
+  }
+
+
+void regBC3_ruta::Escribe(std::ostream &os) const
+  {
+    std::string str= "Capitulo: ";
+    for(size_t i= 0;i<Capitulos();i++)
+      {
+        os << str << (*this)[i] << std::endl;
+        str= "Sub" + str;
+      }
+    os << "Posición: " << Posicion();
+  }
+
+
+StrTok &MedArq::decod_bc3(StrTok &strtk)
+//Decodifica la cadena str
+  {
+    unidades= 1; largo= 1; ancho= 1; alto= 1;
+    comentario= strtk.get_token('\\');
+    std::string tmp= strtk.get_token('\\');
+    if(!tmp.empty())
+      unidades= boost::lexical_cast<double>(tmp);
+    tmp= strtk.get_token('\\');
+    if(!tmp.empty())
+      largo= boost::lexical_cast<double>(tmp);
+    tmp= strtk.get_token('\\');
+    if(!tmp.empty())
+      ancho= boost::lexical_cast<double>(tmp);
+    tmp= strtk.get_token('\\');
+    if(!tmp.empty())
+      alto= boost::lexical_cast<double>(tmp);
+    return strtk;
+  }
+
+void MedArq::Escribe(std::ostream &os) const
+  {
+    os << "Comentario: " << comentario << std::endl
+       << "Unidades: " << unidades << std::endl
+       << "Largo: " << largo << std::endl
+       << "Ancho: " << ancho << std::endl
+       << "Alto: " << alto << std::endl;
+  }
+
+regBC3_linea_med::regBC3_linea_med(const std::string &str)
+  { decod_str_bc3(limpia_str(str)); }
+
+//! @brief Decodifica la cadena str
+StrTok &regBC3_linea_med::decod_bc3(StrTok &strtk)
+  {
+    const std::string tmp= strtk.get_token('\\');
+    if(!tmp.empty())
+      tipo= boost::lexical_cast<short int>(tmp);
+    return med.decod_bc3(strtk);
+  }
+
+void regBC3_linea_med::Escribe(std::ostream &os) const
+  {
+    os << "Tipo: " << tipo << std::endl;
+    med.Escribe(os);
+  }
+
+regBC3_m::regBC3_m(const std::string &str)
+  { decod_str_bc3(limpia_str(str)); }
+
+//! @brief Decodifica un registro de tipo medición (~M).
+StrTok &regBC3_m::decod_bc3(StrTok &strtk)
+//La cadena que se pasa es la que queda a la derecha
+//de ~M|
+  {
+    StrTok strtk_ruta= strtk.get_token('|');
+    ruta.decod_bc3(strtk_ruta);
+    std::string tmp= strtk.get_token('|');
+    if(!tmp.empty())
+      med_total= boost::lexical_cast<double>(tmp);
+    StrTok strtk_lista_med= strtk.get_token('|');
+    lista_med.decod_bc3(strtk_lista_med);
+    return strtk;
+  }
+
+void regBC3_m::Escribe(std::ostream &os) const
+  {
+    os << "Ruta: ";
+    ruta.Escribe(os);
+    os << std::endl << "Total: " << med_total << std::endl;
+    lista_med.Escribe(os);
+  }
+
+regBC3_c::regBC3_c(const std::string &str)
+  { decod_str_bc3(limpia_str(str)); }
+
+StrTok &regBC3_c::decod_bc3(StrTok &strtk)
+//Decodifica la cadena str
+  {
+    unidad= strtk.get_token('|');
+    resumen= strtk.get_token('|');
+    std::string tmp= strtk.get_token('|');
+    if(!tmp.empty())
+      precio= boost::lexical_cast<double>(tmp);
+    fecha= strtk.get_token('|');
+    tmp= strtk.get_token('|');
+    if(!tmp.empty())
+      tipo= boost::lexical_cast<short int>(tmp);
+    return strtk;
+  }
+
+void regBC3_c::Escribe(std::ostream &os) const
+  {
+    os << "Unidad: " << unidad << std::endl
+       << "Resumen: " << resumen << std::endl
+       << "Precio: " << precio << std::endl
+       << "Fecha: " << fecha << std::endl
+       << "Tipo: " << tipo << std::endl;
+  }
+
+
+regBC3_t::regBC3_t(const std::string &str)
+  { decod_str_bc3(limpia_str(str)); }
+
+StrTok &regBC3_t::decod_bc3(StrTok &strtk)
+//Decodifica la cadena str
+  {
+    texto= strtk.get_token('|');
+    return strtk;
+  }
+
+void regBC3_t::Escribe(std::ostream &os) const
+  {  os << "Texto: " << texto << std::endl; }    
+
+std::ostream &operator<<(std::ostream &os,const regBC3_elemento &e)
+  {
+    e.Escribe(os);
+    return os;
+  }
+
+std::ostream &operator<<(std::ostream &os,const regBC3_medicion &rm)
+  {
+    rm.Escribe(os);
+    return os;
+  }
+
+regBC3_capitulo::regBC3_capitulo(const regBC3_c &c,const regBC3_t &t,const regBC3_d &d)
+  : regBC3_udobra(c,t,d) {}
+
+regBC3_d regBC3_capitulo::FiltraCapitulos(const std::set<std::string> &nombres_capitulo) const
+  { return desc.FiltraCapitulos(nombres_capitulo); }

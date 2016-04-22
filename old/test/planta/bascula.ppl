@@ -1,0 +1,101 @@
+              \capitulo
+                 {
+                   \codigo{14}
+                   \titulo{Báscula}
+                   \fr { \factor{1} \rendimiento{1.0000000000000} }
+                   \mediciones
+                     {
+                     \med_uobra
+                       {
+                       \ref{020.002}
+                       \lineas_medicion
+                          {
+                          \medicion_vol { \comentario{} \unidades{1} \largo{1} \ancho{98} \alto{1.2} }
+                          }
+                       }
+                     \med_uobra
+                       {
+                       \ref{020.004}
+                       \lineas_medicion
+                          {
+                          \medicion_vol { \comentario{} \unidades{1} \largo{4} \ancho{7.4} \alto{0.4} }
+                          }
+                       }
+                     \med_uobra
+                       {
+                       \ref{020.005}
+                       \lineas_medicion
+                          {
+                          \medicion_vol { \comentario{} \unidades{1} \largo{1} \ancho{130} \alto{1} }
+                          }
+                       }
+                     \med_uobra
+                       {
+                       \ref{030.001}
+                       \lineas_medicion
+                          {
+                          \medicion_vol { \comentario{} \unidades{8} \largo{1.5} \ancho{1.5} \alto{0.1} }
+                          \medicion_vol { \comentario{} \unidades{1} \largo{16} \ancho{3} \alto{0.1} }
+                          }
+                       }
+                     \med_uobra
+                       {
+                       \ref{030.002}
+                       \lineas_medicion
+                          {
+                          \medicion_vol { \comentario{} \unidades{1} \largo{15.4} \ancho{2.4} \alto{0.1} }
+                          }
+                       }
+                     \med_uobra
+                       {
+                       \ref{038.227}
+                       \lineas_medicion
+                          {
+                          \medicion_vol { \comentario{} \unidades{8} \largo{1.5} \ancho{1.5} \alto{0.1} }
+                          \medicion_vol { \comentario{} \unidades{1} \largo{16} \ancho{3} \alto{0.1} }
+                          }
+                       }
+                     \med_uobra
+                       {
+                       \ref{030.003.1}
+                       \lineas_medicion
+                          {
+                          \medicion_vol { \comentario{} \unidades{8} \largo{1.5} \ancho{1.5} \alto{0.5} }
+                          \medicion_vol { \comentario{} \unidades{1} \largo{16} \ancho{3} \alto{0.2} }
+                          \medicion_vol { \comentario{} \unidades{2} \largo{16} \ancho{0.79} \alto{0.3} }
+                          \medicion_vol { \comentario{} \unidades{2} \largo{2.4} \ancho{0.79} \alto{0.3} }
+                          \medicion_vol { \comentario{} \unidades{8} \largo{0.5} \ancho{0.6} \alto{0.6} }
+                          \medicion_vol { \comentario{} \unidades{2} \largo{16} \ancho{0.3} \alto{0.2} }
+                          }
+                       }
+                     \med_uobra
+                       {
+                       \ref{030.009}
+                       \lineas_medicion
+                          {
+                          \medicion_vol { \comentario{} \unidades{1} \largo{2} \ancho{16} \alto{1} }
+                          \medicion_vol { \comentario{} \unidades{1} \largo{2} \ancho{3} \alto{1} }
+                          \medicion_vol { \comentario{} \unidades{1} \largo{8} \ancho{0.6} \alto{0.6} }
+                          \medicion_vol { \comentario{} \unidades{1} \largo{12} \ancho{0.5} \alto{0.6} }
+                          }
+                       }
+                     \med_uobra
+                       {
+                       \ref{030.008}
+                       \lineas_medicion
+                          {
+                          \medicion_vol { \comentario{en zapatas} \unidades{8} \largo{18} \ancho{1.7} \alto{1.578} }
+                          \medicion_vol { \comentario{en pilares} \unidades{8} \largo{10} \ancho{0.8} \alto{0.888} }
+                          \medicion_vol { \comentario{en pilares} \unidades{8} \largo{4} \ancho{22} \alto{0.395} }
+                          \medicion_vol { \comentario{en losa} \unidades{1} \largo{30} \ancho{16.2} \alto{0.395} }
+                          \medicion_vol { \comentario{en losa} \unidades{1} \largo{162} \ancho{3.2} \alto{0.395} }
+                          \medicion_vol { \comentario{en muro} \unidades{1} \largo{368} \ancho{1.4} \alto{0.395} }
+                          \medicion_vol { \comentario{en muro} \unidades{1} \largo{5} \ancho{35.6} \alto{0.395} }
+                          \medicion_vol { \comentario{en muro} \unidades{1} \largo{5} \ancho{38} \alto{0.395} }
+                          \medicion_vol { \comentario{dintel} \unidades{1} \largo{246} \ancho{1} \alto{0.395} }
+                          \medicion_vol { \comentario{dintel} \unidades{1} \largo{6} \ancho{36.8} \alto{0.617} }
+                          }
+                       }
+                     }
+                   \subcapitulos{}
+                }

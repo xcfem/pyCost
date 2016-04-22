@@ -1,0 +1,44 @@
+\elementales
+   {
+     \elemento { \codigo{SINDESCO} \desc{Unidad sin descompuesto} \ud{***} \precio{1} \tipo{1} }
+
+     \c{Varios}
+     \elemento { \codigo{ELEC} \desc{Consumo eléctrico} \ud{h} \precio{1.8/8} \tipo{3} }
+     \elemento { \codigo{CLF} \desc{Calefacción} \ud{h} \precio{1.0/8} \tipo{3} }
+     \elemento { \codigo{AG} \desc{Consumo de agua} \ud{h} \precio{0.2/8} \tipo{3} }
+     \elemento { \codigo{ALQ} \desc{alquiler de oficina hasta 80 m2} \ud{h} \precio{100000/166.386/20/8} \tipo{3} }
+     \elemento { \codigo{MOB} \desc{mobiliario de oficina hasta 80 m2} \ud{h} \precio{1000000/166.386/5/12/20/8} \tipo{3} }
+     \elemento { \codigo{PAP} \desc{papelería y consumibles informática} \ud{h} \precio{10000/166.386/20/8} \tipo{3} }
+     \elemento { \codigo{COP} \desc{copistería} \ud{h} \precio{15000/166.386/20/8} \tipo{3} }
+     \elemento { \codigo{GEST} \desc{gestoría} \ud{h} \precio{25000/166.386/20/8} \tipo{3} }
+     \elemento { \codigo{TLFM} \desc{Telefonía móvil} \ud{h} \precio{5/8} \tipo{3} }
+     \elemento { \codigo{TLFF} \desc{Telefonía fija} \ud{h} \precio{1/8} \tipo{3} }
+     \elemento { \codigo{ADSL} \desc{Línea ADSL 2Mb/s} \ud{h} \precio{15000/166.386/20/8} \tipo{3} }
+     \elemento { \codigo{MNS} \desc{Mensajería y correo} \ud{h} \precio{10000/166.386/20/8} \tipo{1} }
+     \elemento { \codigo{FORM} \desc{Presupuesto anual formación} \ud{h} \precio{700000/166.386/12/20/8} \tipo{1} }
+     \c{Mano de obra}
+     \elemento { \codigo{ING_JR} \desc{Ingeniero} \ud{h} \precio{4500/166.386} \tipo{1} }
+     \elemento { \codigo{ITOP} \desc{Ingeniero técnico jr.} \ud{h} \precio{3000/166.386} \tipo{1} }
+     \elemento { \codigo{ADSIS} \desc{Administrador de Sistemas} \ud{h} \precio{3500/166.386} \tipo{1} }
+     \elemento { \codigo{DELIN} \desc{Delineante} \ud{h} \precio{2000/166.386} \tipo{1} }
+     \elemento { \codigo{DELIN_JR} \desc{Delineante Jr.} \ud{h} \precio{1500/166.386} \tipo{1} }
+     \elemento { \codigo{MECANOG} \desc{Mecanógrafo} \ud{h} \precio{1700/166.386} \tipo{1} }
+     \elemento { \codigo{LIMP} \desc{Operario de limpieza} \ud{h} \precio{1400/166.386} \tipo{1} }
+
+     \c{Software}
+     \elemento { \codigo{S_OP} \desc{Sistema operativo} \ud{h} \precio{100/12/20/8} \tipo{3} }
+     \elemento { \codigo{PRG_MAT} \desc{Programa convencional de cálculo de estructuras} \ud{h} \precio{100/166.386} \tipo{3} }
+     \elemento { \codigo{PRG_EF} \desc{Programa elementos finitos} \ud{h} \precio{1200/166.386} \tipo{3} }
+     \elemento { \codigo{PRG_CAD} \desc{Programa de CAD} \ud{h} \precio{150/166.386} \tipo{3} }
+     \elemento { \codigo{PRG_TRZ} \desc{Programa de trazado y movimiento de tierras} \ud{h} \precio{2e6/166.386/4/12/20/8} \tipo{3} }
+     \elemento { \codigo{PRG_TXT} \desc{Programa para tratamiento de textos} \ud{h} \precio{50/166.386} \tipo{3} }
+     \c{Hardware}
+     \elemento { \codigo{CMPTR} \desc{Ordenador} \ud{h} \precio{300e3/166.386/2/12/20/8} \tipo{3} }
+     \elemento { \codigo{PLOTR} \desc{Ploter Din A1} \ud{h} \precio{800e3/166.386/3/12/20/8} \tipo{3} }
+     \elemento { \codigo{ILSR} \desc{Impresora láser Din A4} \ud{h} \precio{300e3/166.386/3/12/20/8} \tipo{3} }
+     \elemento { \codigo{IRED} \desc{Instalación de red hasta 8 puestos} \ud{h} \precio{70e3/166.386/5/12/20/8} \tipo{3} }
+     \elemento { \codigo{FAX} \desc{Fax/Módem} \ud{h} \precio{17e3/166.386/3/12/20/8} \tipo{3} }
+
+     \c{Viajes}
+     \elemento { \codigo{KM_LOC} \desc{Locomoción} \ud{Km} \precio{30/166.386} \tipo{1} }
+   }\c{fin elementales}

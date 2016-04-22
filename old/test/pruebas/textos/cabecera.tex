@@ -1,0 +1,68 @@
+\documentclass[spanish,a4paper,twoside]{book}
+\usepackage[spanish]{babel}
+\selectlanguage{spanish}
+\usepackage{epsfig}
+\usepackage{amsmath}
+\usepackage{isolatin1}
+\usepackage{rotating}
+\usepackage{longtable} %Tablas largas
+\usepackage{lscape}
+\usepackage{minitoc}
+\usepackage{lscape}
+\usepackage{fancyheadings}
+
+\doparttoc
+
+\pagestyle{fancy}
+\chead{Presupuesto Los Escoriales}
+\rhead{}
+\lhead{}
+\rfoot{\sectionmark}
+
+%%\rfoot{\leftmark\\\rightmark}
+
+\newcommand{\HRule}{\rule{\linewidth}{1mm}}
+\newcommand{\cabezaportadilla}[1]{%
+  \cleardoublepage 
+  \thispagestyle{empty}
+  \vspace*{#1}
+  \begin{center}}
+\newcommand{\superportadilla}[2]{%
+  \cabezaportadilla{5cm}
+  \HRule \\
+  \Huge \textbf{\textsc{#1}} \\[5mm]%
+        \textbf{\textsc{#2}}
+  \HRule
+  \end{center}
+  \newpage}
+
+\newcommand{\portadilla}[2]{%
+  \cabezaportadilla{5cm}
+  \HRule \\
+  \Huge #1 \\[5mm]%
+        #2
+  \HRule
+  \end{center}
+  \newpage}
+
+\newcommand{\subportadilla}[2]{%
+  \cabezaportadilla{15cm}
+  \HRule \\
+  \Large #1 \\[5mm]%
+         #2
+  \HRule
+  \end{center}
+  \newpage}
+
+%%\addtolength{\textwidth}{\marginparsep}
+%%\addtolength{\textwidth}{20pt}
+%%\setlength{\marginparsep}{0pt}
+%%\addtolength{\hoffset}{-20pt}
+%%\setlength{\marginparwidth}{20pt}
+
+\begin{document}
+\superportadilla{Documento no. IV} {Presupuesto}
+\renewcommand{\partname}{}
+\renewcommand{\contentsname}{Presupuesto}
+\tableofcontents
+\newpage

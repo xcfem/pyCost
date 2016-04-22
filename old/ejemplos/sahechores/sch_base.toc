@@ -1,0 +1,93 @@
+\select@language {spanish}
+\select@language {spanish}
+\chapterbegin 
+\contentsline {part}{I\hspace {1em}Mediciones}{4}
+\contentsline {chapter}{\numberline {1}OBRA CIVIL}{7}
+\contentsline {section}{\numberline {1.1}OBRA DE TOMA}{7}
+\contentsline {section}{\numberline {1.2}CANAL DE TOMA}{10}
+\contentsline {subsection}{\numberline {1.2.1}CANAL}{10}
+\contentsline {subsection}{\numberline {1.2.2}DRENAJE}{13}
+\contentsline {subsubsection}{DRENAJE LONGITUDINAL}{13}
+\contentsline {subsubsection}{DRENAJE PROFUNDO}{13}
+\contentsline {subsection}{\numberline {1.2.3}RAMPA DE ACCESO}{14}
+\contentsline {section}{\numberline {1.3}C\'AMARA DE CARGA}{15}
+\contentsline {section}{\numberline {1.4}TUBER\'IA FORZADA}{20}
+\contentsline {section}{\numberline {1.5}CENTRAL HIDROEL\'ECTRICA}{23}
+\contentsline {section}{\numberline {1.6}SUBESTACI\'ON}{29}
+\contentsline {section}{\numberline {1.7}CANAL DE DESAG\@umlaut UE}{34}
+\contentsline {section}{\numberline {1.8}URBANIZACI\'ON}{35}
+\contentsline {subsection}{\numberline {1.8.1}ACCESOS}{35}
+\contentsline {subsection}{\numberline {1.8.2}VIALES Y ACERAS}{36}
+\contentsline {subsection}{\numberline {1.8.3}CERRAMIENTO}{37}
+\contentsline {subsection}{\numberline {1.8.4}ILUMINACI\'ON}{38}
+\contentsline {section}{\numberline {1.9}IMPACTO AMBIENTAL}{38}
+\contentsline {chapter}{\numberline {2}EQUIPOS ELECTROMEC\'ANICOS}{40}
+\contentsline {section}{\numberline {2.1}CANAL DE TOMA Y C\'AMARA DE DESCARGA}{40}
+\contentsline {section}{\numberline {2.2}EQUIPOS HIDROMEC\'ANICOS DE LA CENTRAL}{43}
+\contentsline {section}{\numberline {2.3}GRUPOS TURBINA-ALTERNADOR}{47}
+\contentsline {section}{\numberline {2.4}INSTALACIONES DE MEDIA TENSI\'ON}{49}
+\contentsline {section}{\numberline {2.5}INSTALACIONES DE BAJA TENSI\'ON}{52}
+\contentsline {section}{\numberline {2.6}INSTRUMENT., CONTROL, AUTOMATISMO Y COMUNICACI\'ON}{61}
+\contentsline {section}{\numberline {2.7}REPUESTOS}{65}
+\contentsline {chapter}{\numberline {3}SUBESTACI\'ON TRANSFORMADORA}{67}
+\contentsline {section}{\numberline {3.1}APARELLAJE A.T.}{67}
+\contentsline {section}{\numberline {3.2}TRANSFORMADOR}{69}
+\contentsline {section}{\numberline {3.3}MATERIAL DE INSTALACI\'ON}{69}
+\contentsline {chapter}{\numberline {4}L\'INEA EL\'ECTRICA DE ALTA TENSI\'ON}{75}
+\contentsline {chapter}{\numberline {5}EXPLOTACI\'ON Y CONSERVACI\'ON}{77}
+\contentsline {chapter}{\numberline {6}SEGURIDAD Y SALUD}{79}
+\contentsline {section}{\numberline {6.1}PROTECCIONES INDIVIDUALES}{79}
+\contentsline {section}{\numberline {6.2}PROTECCIONES COLECTIVAS}{81}
+\contentsline {section}{\numberline {6.3}EXTINCI\'ON DE INCENDIOS}{84}
+\contentsline {section}{\numberline {6.4}PROTECCI\'ON DE INSTALACIONES EL\'ECTRICAS}{84}
+\contentsline {section}{\numberline {6.5}INSTALACI\'ON DE HIGIENE Y BIENESTAR}{84}
+\contentsline {section}{\numberline {6.6}MEDICINA PREVENTIVA. 1\S {} AUXILIOS}{87}
+\contentsline {section}{\numberline {6.7}FORMACI\'ON, REUNIONES O CUMPLIMIENTO}{87}
+\contentsline {part}{II\hspace {1em}Cuadros de precios}{89}
+\contentsline {part}{III\hspace {1em}Presupuestos parciales}{132}
+\contentsline {chapter}{\numberline {1}OBRA CIVIL}{135}
+\contentsline {section}{\numberline {1.1}OBRA DE TOMA}{135}
+\contentsline {section}{\numberline {1.2}CANAL DE TOMA}{136}
+\contentsline {subsection}{\numberline {1.2.1}CANAL}{136}
+\contentsline {subsection}{\numberline {1.2.2}DRENAJE}{137}
+\contentsline {subsubsection}{DRENAJE LONGITUDINAL}{137}
+\contentsline {subsubsection}{DRENAJE PROFUNDO}{138}
+\contentsline {subsection}{\numberline {1.2.3}RAMPA DE ACCESO}{138}
+\contentsline {section}{\numberline {1.3}C\'AMARA DE CARGA}{139}
+\contentsline {section}{\numberline {1.4}TUBER\'IA FORZADA}{140}
+\contentsline {section}{\numberline {1.5}CENTRAL HIDROEL\'ECTRICA}{141}
+\contentsline {section}{\numberline {1.6}SUBESTACI\'ON}{142}
+\contentsline {section}{\numberline {1.7}CANAL DE DESAG\@umlaut UE}{144}
+\contentsline {section}{\numberline {1.8}URBANIZACI\'ON}{145}
+\contentsline {subsection}{\numberline {1.8.1}ACCESOS}{145}
+\contentsline {subsection}{\numberline {1.8.2}VIALES Y ACERAS}{145}
+\contentsline {subsection}{\numberline {1.8.3}CERRAMIENTO}{146}
+\contentsline {subsection}{\numberline {1.8.4}ILUMINACI\'ON}{147}
+\contentsline {section}{\numberline {1.9}IMPACTO AMBIENTAL}{147}
+\contentsline {chapter}{\numberline {2}EQUIPOS ELECTROMEC\'ANICOS}{148}
+\contentsline {section}{\numberline {2.1}CANAL DE TOMA Y C\'AMARA DE DESCARGA}{148}
+\contentsline {section}{\numberline {2.2}EQUIPOS HIDROMEC\'ANICOS DE LA CENTRAL}{150}
+\contentsline {section}{\numberline {2.3}GRUPOS TURBINA-ALTERNADOR}{153}
+\contentsline {section}{\numberline {2.4}INSTALACIONES DE MEDIA TENSI\'ON}{155}
+\contentsline {section}{\numberline {2.5}INSTALACIONES DE BAJA TENSI\'ON}{157}
+\contentsline {section}{\numberline {2.6}INSTRUMENT., CONTROL, AUTOMATISMO Y COMUNICACI\'ON}{163}
+\contentsline {section}{\numberline {2.7}REPUESTOS}{166}
+\contentsline {chapter}{\numberline {3}SUBESTACI\'ON TRANSFORMADORA}{168}
+\contentsline {section}{\numberline {3.1}APARELLAJE A.T.}{168}
+\contentsline {section}{\numberline {3.2}TRANSFORMADOR}{170}
+\contentsline {section}{\numberline {3.3}MATERIAL DE INSTALACI\'ON}{170}
+\contentsline {chapter}{\numberline {4}L\'INEA EL\'ECTRICA DE ALTA TENSI\'ON}{174}
+\contentsline {chapter}{\numberline {5}EXPLOTACI\'ON Y CONSERVACI\'ON}{176}
+\contentsline {chapter}{\numberline {6}SEGURIDAD Y SALUD}{177}
+\contentsline {section}{\numberline {6.1}PROTECCIONES INDIVIDUALES}{177}
+\contentsline {section}{\numberline {6.2}PROTECCIONES COLECTIVAS}{178}
+\contentsline {section}{\numberline {6.3}EXTINCI\'ON DE INCENDIOS}{179}
+\contentsline {section}{\numberline {6.4}PROTECCI\'ON DE INSTALACIONES EL\'ECTRICAS}{179}
+\contentsline {section}{\numberline {6.5}INSTALACI\'ON DE HIGIENE Y BIENESTAR}{180}
+\contentsline {section}{\numberline {6.6}MEDICINA PREVENTIVA. 1\S {} AUXILIOS}{181}
+\contentsline {section}{\numberline {6.7}FORMACI\'ON, REUNIONES O CUMPLIMIENTO}{181}
+\contentsline {part}{IV\hspace {1em}Resumen de los presupuestos parciales}{182}
+\chapterbegin 
+\contentsline {part}{V\hspace {1em}Presupuestos Generales}{185}
+\contentsline {starchapter}{Presupuesto de ejecuci\'on material}{187}
+\contentsline {starchapter}{Presupuesto de ejecuci\'on por contrata}{189}

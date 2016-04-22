@@ -1,0 +1,27 @@
+              \capitulo
+                 {
+                   \codigo{6}
+                   \titulo{Cerramiento}
+                   \fr { \factor{1} \rendimiento{1.0000000000000} }
+                   \mediciones
+                     {
+                     \med_uobra
+                       {
+                       \ref{070.002}
+                       \lineas_medicion
+                          {
+                          \medicion_vol { \comentario{} \unidades{55.94} \largo{0} \ancho{0} \alto{0} }
+                          \medicion_vol { \comentario{} \unidades{117.56} \largo{0} \ancho{0} \alto{0} }
+                          }
+                        }
+                     \med_uobra
+                       {
+                       \ref{070.001}
+                       \lineas_medicion
+                          {
+                          \medicion_vol { \comentario{} \unidades{89.14} \largo{0} \ancho{0} \alto{0} }
+                          }
+                        }
+                     }
+                   \subcapitulos{}
+                 } \c{fin capitulo cerramiento}

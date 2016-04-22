@@ -1,0 +1,8 @@
+\expr{TRABSIMUL= 2} \c{Número de trabajos simultáneos}
+\expr{NTRAB= 3} \c{Número de trabajadores}
+\expr{FACTOFIC= 1.0/(TRABSIMUL*NTRAB)} \c{Coeficiente de reparto gastos de oficina}
+\precios
+   {
+     \incluye{precios_elementales.ppl}
+     \incluye{precios_auxiliares.ppl}
+   }

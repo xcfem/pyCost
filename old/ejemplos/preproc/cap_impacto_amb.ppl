@@ -1,0 +1,30 @@
+    \capitulo
+        {
+          \codigo{1_9}
+          \titulo{IMPACTO AMBIENTAL}
+          \fr              {
+                 \factor{1}
+                 \rendimiento{1.0000000000000}
+              }
+          \mediciones
+              {
+                \med_uobra
+                   {
+                     \ref{26.001}
+                     \lineas_medicion
+                        {
+                          \medicion_vol
+                            {
+                              \comentario{}
+                              \unidades{1}
+                              \largo{0}
+                              \ancho{0}
+                              \alto{0}
+                            }
+                        }
+                   }
+              }
+          \subcapitulos
+              {
+              }
+        }

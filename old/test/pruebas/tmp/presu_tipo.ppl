@@ -1,0 +1,10 @@
+\Obra
+  {
+    \porcentajes
+      {
+        \gastos_generales{0.17}
+        \beneficio_industrial{0.06}
+        \iva{0.16}
+      }
+    \incluye{precios_basicos.ppl}
+  } \c{fin obra:PR}

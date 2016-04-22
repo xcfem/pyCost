@@ -1,0 +1,90 @@
+              \capitulo
+                 {
+                   \codigo{9}
+                   \titulo{Plataformas de carga y descarga}
+                   \fr { \factor{1} \rendimiento{1.0000000000000} }
+                   \mediciones
+                     {
+                     \med_uobra
+                       {
+                       \ref{040.001}
+                       \lineas_medicion
+                          {
+                          \medicion_vol { \comentario{según medición auxiliar} \unidades{1} \largo{4200} \ancho{1} \alto{1} }
+                          }
+                        }
+                     \med_uobra
+                       {
+                       \ref{060.001}
+                       \lineas_medicion
+                          {
+                          \medicion_vol { \comentario{} \unidades{1} \largo{261} \ancho{1} \alto{1} }
+                          }
+                        }
+                     \med_uobra
+                       {
+                       \ref{030.001}
+                       \lineas_medicion
+                          {
+                          \medicion_vol { \comentario{} \unidades{1} \largo{8} \ancho{17} \alto{0.1} }
+                          }
+                        }
+                     \med_uobra
+                       {
+                       \ref{030.003.1}
+                       \lineas_medicion
+                          {
+                          \medicion_vol { \comentario{} \unidades{1} \largo{8} \ancho{17} \alto{0.2} }
+                          }
+                        }
+                     \med_uobra
+                       {
+                       \ref{030.009}
+                       \lineas_medicion
+                          {
+                          \medicion_vol { \comentario{} \unidades{1} \largo{50} \ancho{0.2} \alto{1} }
+                          }
+                        }
+                     \med_uobra
+                       {
+                       \ref{030.008}
+                       \lineas_medicion
+                          {
+                          \medicion_vol { \comentario{} \unidades{1} \largo{8} \ancho{17} \alto{10.68} }
+                          }
+                        }
+                     \med_uobra
+                       {
+                       \ref{150.002}
+                       \lineas_medicion
+                          {
+                          \medicion_vol { \comentario{} \unidades{1} \largo{8} \ancho{17} \alto{0.2} }
+                          }
+                        }
+                     \med_uobra
+                       {
+                       \ref{220.003}
+                       \lineas_medicion
+                          {
+                          \medicion_vol { \comentario{} \unidades{1} \largo{1} \ancho{1} \alto{1} }
+                          }
+                        }
+                     \med_uobra
+                       {
+                       \ref{130.001}
+                       \lineas_medicion
+                          {
+                          \medicion_vol { \comentario{Losa} \unidades{1} \largo{8} \ancho{17} \alto{1} }
+                          }
+                       }
+                     \med_uobra
+                       {
+                       \ref{220.009}
+                       \lineas_medicion
+                          {
+                          \medicion_vol { \comentario{} \unidades{1} \largo{10} \ancho{1} \alto{1} }
+                          }
+                       }
+                     }
+                   \subcapitulos{}
+                 } \c{fin capitulo plataformas}

@@ -1,0 +1,137 @@
+\select@language {spanish}
+\select@language {spanish}
+\contentsline {part}{I\hspace {1em}Mediciones}{4}
+\contentsline {chapter}{\numberline {1}CONDUCCION BY-PASS DE ROYO FRIO.}{5}
+\contentsline {section}{\numberline {1.1}OBRAS DE CONEXION CON TUBERIA EXISTENTE.}{5}
+\contentsline {section}{\numberline {1.2}VALVULERIA Y PIEZAS ESPECIALES CONTROL BY-PASS.}{6}
+\contentsline {section}{\numberline {1.3}CONDUCCION BY-PASS. MVTO DE TIERRAS Y TUBERIAS.}{8}
+\contentsline {section}{\numberline {1.4}VALVULERIA Y PIEZAS ESPECIALES EN CONDUCCION.}{13}
+\contentsline {subsection}{\numberline {1.4.1}EN DESAG\@umlaut UES.}{13}
+\contentsline {subsection}{\numberline {1.4.2}EN VALVULAS DE CORTE Y DESAG\@umlaut UE CONJUNTAS.}{14}
+\contentsline {subsection}{\numberline {1.4.3}EN VENTOSAS.}{15}
+\contentsline {section}{\numberline {1.5}ARQUETAS DE VALVULAS.}{16}
+\contentsline {subsection}{\numberline {1.5.1}EN DESAG\@umlaut UES SIN CASETA.}{16}
+\contentsline {subsection}{\numberline {1.5.2}EN DESAG\@umlaut UES CON CASETA.}{17}
+\contentsline {subsection}{\numberline {1.5.3}EN VALVULAS DE CORTE Y DESAG\@umlaut UES.}{19}
+\contentsline {subsection}{\numberline {1.5.4}EN VALVULAS MOTORIZADAS.}{21}
+\contentsline {subsection}{\numberline {1.5.5}EN VENTOSAS CON CASETA.}{23}
+\contentsline {subsection}{\numberline {1.5.6}EN VENTOSAS SIN CASETA.}{25}
+\contentsline {section}{\numberline {1.6}TUBERIAS DE DESAG\@umlaut UE.}{26}
+\contentsline {section}{\numberline {1.7}INSTALACION DE ENERGIA SOLAR.}{28}
+\contentsline {section}{\numberline {1.8}INSTALACION ELECTRICA.}{29}
+\contentsline {chapter}{\numberline {2}CONDUCC. DESDE LAS GRAJAS A DEPOSITO CEMENTERIO.}{31}
+\contentsline {section}{\numberline {2.1}PRIMER TRAMO.LAS GRAJAS AL PUENTE LOS DESCALZOS.}{31}
+\contentsline {subsection}{\numberline {2.1.1}OBRAS DE CONEXION CON TUBERIA EXISTENTE.}{31}
+\contentsline {subsection}{\numberline {2.1.2}CONDUCCION. MOVIMIENTO DE TIERRAS Y TUBERIAS.}{32}
+\contentsline {subsection}{\numberline {2.1.3}VALVULERIA Y PIEZAS ESPECIALES.}{36}
+\contentsline {subsubsection}{EN DESAG\@umlaut UES.}{36}
+\contentsline {subsubsection}{EN VENTOSAS.}{37}
+\contentsline {subsubsection}{EN VALVULAS DE CORTE.}{37}
+\contentsline {subsection}{\numberline {2.1.4}ARQUETAS DE VALVULAS.}{38}
+\contentsline {subsubsection}{DE DESAG\@umlaut UE CON CASETA.}{38}
+\contentsline {subsubsection}{DE DESAG\@umlaut UE SIN CASETA.}{40}
+\contentsline {subsubsection}{DE VENTOSA SIN CASETA.}{41}
+\contentsline {subsubsection}{DE VALVULAS DE MARIPOSA CON CASETA.}{43}
+\contentsline {subsection}{\numberline {2.1.5}TUBERIAS DE DESAG\@umlaut UE.}{44}
+\contentsline {section}{\numberline {2.2}SEGUNDO TRAMO. CRUCE DEL RIO.}{47}
+\contentsline {subsection}{\numberline {2.2.1}CONDUCCION. MOVIMIENTO DE TIERRAS Y TUBERIAS.}{47}
+\contentsline {subsection}{\numberline {2.2.2}VALVULAS Y PIEZAS ESPECIALES.}{48}
+\contentsline {subsection}{\numberline {2.2.3}ARQUETAS.}{50}
+\contentsline {subsubsection}{DE VALVULAS SIN CASETA.}{50}
+\contentsline {subsubsection}{DE VALVULAS Y DESAG\@umlaut UE SIN CASETA.}{51}
+\contentsline {section}{\numberline {2.3}TERCER TRAMO. RIO A DEPOSITO.}{53}
+\contentsline {subsection}{\numberline {2.3.1}CONDUCCION. MOVIMIENTO DE TIERRAS Y TUBERIAS.}{53}
+\contentsline {subsection}{\numberline {2.3.2}VALVULAS Y PIEZAS ESPECIALES.}{56}
+\contentsline {subsubsection}{EN DESAG\@umlaut UES. (INCLUYE CONEXION ALCANTARILLADO).}{56}
+\contentsline {subsubsection}{EN VENTOSAS.}{58}
+\contentsline {subsection}{\numberline {2.3.3}ARQUETAS.}{59}
+\contentsline {subsubsection}{DE DESAG\@umlaut UE SIN CASETA.}{59}
+\contentsline {subsubsection}{DE VENTOSA SIN CASETA.}{60}
+\contentsline {section}{\numberline {2.4}PARTIDA ALZADA A JUSTIFICAR PARA REPOSICIONES.}{62}
+\contentsline {chapter}{\numberline {3}CONDUCCION DESDE DEPOSITO CEMENTERIO A CIUDAD.}{63}
+\contentsline {chapter}{\numberline {4}DEPOSITO DE CABECERA.}{66}
+\contentsline {section}{\numberline {4.1}URBANIZACION.}{66}
+\contentsline {section}{\numberline {4.2}DEPOSITO.}{71}
+\contentsline {section}{\numberline {4.3}CAMARA DE LLAVES.}{76}
+\contentsline {section}{\numberline {4.4}TUBERIAS, VALVULAS Y ACCESORIOS.}{79}
+\contentsline {subsection}{\numberline {4.4.1}TUBERIAS, VALVULAS Y ACCESORIOS.}{79}
+\contentsline {subsection}{\numberline {4.4.2}ENTRADA A DEPOSITO.}{80}
+\contentsline {subsection}{\numberline {4.4.3}SALIDA DE DEPOSITO.}{82}
+\contentsline {subsection}{\numberline {4.4.4}DESAG\@umlaut UE DE FONDO.}{83}
+\contentsline {subsection}{\numberline {4.4.5}ALIVIADERO.}{85}
+\contentsline {section}{\numberline {4.5}COLECTOR, ALIVIADERO DEL DEPOSITO.}{85}
+\contentsline {subsection}{\numberline {4.5.1}COLECTOR, ALIVIADERO DEL DEPOSITO.}{85}
+\contentsline {subsection}{\numberline {4.5.2}POZO REGISTRO ALTURA MEDIA 1.92M}{87}
+\contentsline {section}{\numberline {4.6}CAMINO DE ACCESO.}{88}
+\contentsline {chapter}{\numberline {5}SISTEMA DE AUTOMATIZACION.}{90}
+\contentsline {chapter}{\numberline {6}ESTACION DE TRATAMIENTO.}{93}
+\contentsline {section}{\numberline {6.1}TOMA DEL RIO}{93}
+\contentsline {section}{\numberline {6.2}ACCIONAMIENTO.}{95}
+\contentsline {part}{II\hspace {1em}Cuadros de precios}{100}
+\contentsline {part}{III\hspace {1em}Presupuestos parciales}{147}
+\contentsline {chapter}{\numberline {7}CONDUCCION BY-PASS DE ROYO FRIO.}{148}
+\contentsline {section}{\numberline {7.1}OBRAS DE CONEXION CON TUBERIA EXISTENTE.}{148}
+\contentsline {section}{\numberline {7.2}VALVULERIA Y PIEZAS ESPECIALES CONTROL BY-PASS.}{149}
+\contentsline {section}{\numberline {7.3}CONDUCCION BY-PASS. MVTO DE TIERRAS Y TUBERIAS.}{150}
+\contentsline {section}{\numberline {7.4}VALVULERIA Y PIEZAS ESPECIALES EN CONDUCCION.}{152}
+\contentsline {subsection}{\numberline {7.4.1}EN DESAG\@umlaut UES.}{152}
+\contentsline {subsection}{\numberline {7.4.2}EN VALVULAS DE CORTE Y DESAG\@umlaut UE CONJUNTAS.}{153}
+\contentsline {subsection}{\numberline {7.4.3}EN VENTOSAS.}{154}
+\contentsline {section}{\numberline {7.5}ARQUETAS DE VALVULAS.}{154}
+\contentsline {subsection}{\numberline {7.5.1}EN DESAG\@umlaut UES SIN CASETA.}{154}
+\contentsline {subsection}{\numberline {7.5.2}EN DESAG\@umlaut UES CON CASETA.}{155}
+\contentsline {subsection}{\numberline {7.5.3}EN VALVULAS DE CORTE Y DESAG\@umlaut UES.}{156}
+\contentsline {subsection}{\numberline {7.5.4}EN VALVULAS MOTORIZADAS.}{158}
+\contentsline {subsection}{\numberline {7.5.5}EN VENTOSAS CON CASETA.}{159}
+\contentsline {subsection}{\numberline {7.5.6}EN VENTOSAS SIN CASETA.}{160}
+\contentsline {section}{\numberline {7.6}TUBERIAS DE DESAG\@umlaut UE.}{161}
+\contentsline {section}{\numberline {7.7}INSTALACION DE ENERGIA SOLAR.}{162}
+\contentsline {section}{\numberline {7.8}INSTALACION ELECTRICA.}{162}
+\contentsline {chapter}{\numberline {8}CONDUCC. DESDE LAS GRAJAS A DEPOSITO CEMENTERIO.}{164}
+\contentsline {section}{\numberline {8.1}PRIMER TRAMO.LAS GRAJAS AL PUENTE LOS DESCALZOS.}{164}
+\contentsline {subsection}{\numberline {8.1.1}OBRAS DE CONEXION CON TUBERIA EXISTENTE.}{164}
+\contentsline {subsection}{\numberline {8.1.2}CONDUCCION. MOVIMIENTO DE TIERRAS Y TUBERIAS.}{165}
+\contentsline {subsection}{\numberline {8.1.3}VALVULERIA Y PIEZAS ESPECIALES.}{167}
+\contentsline {subsubsection}{EN DESAG\@umlaut UES.}{167}
+\contentsline {subsubsection}{EN VENTOSAS.}{168}
+\contentsline {subsubsection}{EN VALVULAS DE CORTE.}{168}
+\contentsline {subsection}{\numberline {8.1.4}ARQUETAS DE VALVULAS.}{169}
+\contentsline {subsubsection}{DE DESAG\@umlaut UE CON CASETA.}{169}
+\contentsline {subsubsection}{DE DESAG\@umlaut UE SIN CASETA.}{170}
+\contentsline {subsubsection}{DE VENTOSA SIN CASETA.}{171}
+\contentsline {subsubsection}{DE VALVULAS DE MARIPOSA CON CASETA.}{172}
+\contentsline {subsection}{\numberline {8.1.5}TUBERIAS DE DESAG\@umlaut UE.}{173}
+\contentsline {section}{\numberline {8.2}SEGUNDO TRAMO. CRUCE DEL RIO.}{174}
+\contentsline {subsection}{\numberline {8.2.1}CONDUCCION. MOVIMIENTO DE TIERRAS Y TUBERIAS.}{174}
+\contentsline {subsection}{\numberline {8.2.2}VALVULAS Y PIEZAS ESPECIALES.}{175}
+\contentsline {subsection}{\numberline {8.2.3}ARQUETAS.}{176}
+\contentsline {subsubsection}{DE VALVULAS SIN CASETA.}{176}
+\contentsline {subsubsection}{DE VALVULAS Y DESAG\@umlaut UE SIN CASETA.}{177}
+\contentsline {section}{\numberline {8.3}TERCER TRAMO. RIO A DEPOSITO.}{178}
+\contentsline {subsection}{\numberline {8.3.1}CONDUCCION. MOVIMIENTO DE TIERRAS Y TUBERIAS.}{178}
+\contentsline {subsection}{\numberline {8.3.2}VALVULAS Y PIEZAS ESPECIALES.}{180}
+\contentsline {subsubsection}{EN DESAG\@umlaut UES. (INCLUYE CONEXION ALCANTARILLADO).}{180}
+\contentsline {subsubsection}{EN VENTOSAS.}{182}
+\contentsline {subsection}{\numberline {8.3.3}ARQUETAS.}{182}
+\contentsline {subsubsection}{DE DESAG\@umlaut UE SIN CASETA.}{182}
+\contentsline {subsubsection}{DE VENTOSA SIN CASETA.}{183}
+\contentsline {section}{\numberline {8.4}PARTIDA ALZADA A JUSTIFICAR PARA REPOSICIONES.}{184}
+\contentsline {chapter}{\numberline {9}CONDUCCION DESDE DEPOSITO CEMENTERIO A CIUDAD.}{185}
+\contentsline {chapter}{\numberline {10}DEPOSITO DE CABECERA.}{187}
+\contentsline {section}{\numberline {10.1}URBANIZACION.}{187}
+\contentsline {section}{\numberline {10.2}DEPOSITO.}{190}
+\contentsline {section}{\numberline {10.3}CAMARA DE LLAVES.}{193}
+\contentsline {section}{\numberline {10.4}TUBERIAS, VALVULAS Y ACCESORIOS.}{195}
+\contentsline {subsection}{\numberline {10.4.1}TUBERIAS, VALVULAS Y ACCESORIOS.}{195}
+\contentsline {subsection}{\numberline {10.4.2}ENTRADA A DEPOSITO.}{195}
+\contentsline {subsection}{\numberline {10.4.3}SALIDA DE DEPOSITO.}{197}
+\contentsline {subsection}{\numberline {10.4.4}DESAG\@umlaut UE DE FONDO.}{198}
+\contentsline {subsection}{\numberline {10.4.5}ALIVIADERO.}{199}
+\contentsline {section}{\numberline {10.5}COLECTOR, ALIVIADERO DEL DEPOSITO.}{200}
+\contentsline {subsection}{\numberline {10.5.1}COLECTOR, ALIVIADERO DEL DEPOSITO.}{200}
+\contentsline {subsection}{\numberline {10.5.2}POZO REGISTRO ALTURA MEDIA 1.92M}{201}
+\contentsline {section}{\numberline {10.6}CAMINO DE ACCESO.}{201}
+\contentsline {chapter}{\numberline {11}SISTEMA DE AUTOMATIZACION.}{203}
+\contentsline {chapter}{\numberline {12}ESTACION DE TRATAMIENTO.}{205}
+\contentsline {section}{\numberline {12.1}TOMA DEL RIO}{205}
+\contentsline {section}{\numberline {12.2}ACCIONAMIENTO.}{207}

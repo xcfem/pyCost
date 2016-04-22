@@ -1,0 +1,88 @@
+              \capitulo
+                 {
+                   \codigo{15}
+                   \titulo{Depósito contra incendios}
+                   \fr { \factor{1} \rendimiento{1.0000000000000} }
+                   \mediciones
+                     {
+                     \med_uobra
+                       {
+                       \ref{020.004}
+                       \lineas_medicion
+                          {
+                          \medicion_vol { \comentario{} \unidades{1} \largo{25.13} \ancho{2.7} \alto{1.2} }
+                          }
+                       }
+                     \med_uobra
+                       {
+                       \ref{020.005}
+                       \lineas_medicion
+                          {
+                          \medicion_vol { \comentario{} \unidades{1} \largo{81.5} \ancho{1} \alto{1} }
+                          }
+                       }
+                     \med_uobra
+                       {
+                       \ref{038.227}
+                       \lineas_medicion
+                          {
+                          \medicion_vol { \comentario{} \unidades{1} \largo{25.13} \ancho{2} \alto{0.5} }
+                          }
+                       }
+                     \med_uobra
+                       {
+                       \ref{020.007}
+                       \lineas_medicion
+                          {
+                          \medicion_vol { \comentario{} \unidades{1} \largo{25.13} \ancho{3.2} \alto{0.7} }
+                          \medicion_vol { \comentario{} \unidades{-1} \largo{25.13} \ancho{1.5} \alto{0.7} }
+                          }
+                       }
+                     \med_uobra
+                       {
+                       \ref{030.001}
+                       \lineas_medicion
+                          {
+                          \medicion_vol { \comentario{} \unidades{1} \largo{25.13} \ancho{1.5} \alto{0.1} }
+                          }
+                       }
+                     \med_uobra
+                       {
+                       \ref{030.003.1}
+                       \lineas_medicion
+                          {
+                          \medicion_vol { \comentario{} \unidades{1} \largo{25.13} \ancho{1.5} \alto{0.7} }
+                          }
+                       }
+                     \med_uobra
+                       {
+                       \ref{030.009}
+                       \lineas_medicion
+                          {
+                          \medicion_vol { \comentario{} \unidades{1} \largo{1} \ancho{20.42} \alto{0.7} }
+                          \medicion_vol { \comentario{} \unidades{1} \largo{1} \ancho{29.84} \alto{0.7} }
+                          }
+                       }
+                     \med_uobra
+                       {
+                       \ref{030.008}
+                       \lineas_medicion
+                          {
+                          \medicion_vol { \comentario{} \unidades{1} \largo{16} \ancho{25.13} \alto{1.578} }
+                          \medicion_vol { \comentario{} \unidades{1} \largo{11} \ancho{25.13} \alto{1.578} }
+                          \medicion_vol { \comentario{} \unidades{1} \largo{126} \ancho{4.25} \alto{1.578} }
+                          \medicion_vol { \comentario{} \unidades{1} \largo{1} \ancho{20.42} \alto{0.888} }
+                          \medicion_vol { \comentario{} \unidades{1} \largo{1} \ancho{29.84} \alto{0.888} }
+                          }
+                       }
+                     \med_uobra
+                       {
+                       \ref{240.001}
+                       \lineas_medicion
+                          {
+                          \medicion_vol { \comentario{} \unidades{8} \largo{1} \ancho{1} \alto{1} }
+                          }
+                       }
+                     }
+                   \subcapitulos{}
+                }

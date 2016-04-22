@@ -1,0 +1,197 @@
+              \capitulo
+                 {
+                   \codigo{13}
+                   \titulo{Parque de bombas, c. elec. y vaciado bidones}
+                   \fr { \factor{1} \rendimiento{1.0000000000000} }
+                   \mediciones
+                     {
+                     \med_uobra
+                       {
+                       \ref{040.001}
+                       \lineas_medicion
+                          {
+                          \medicion_vol { \comentario{según medición auxiliar} \unidades{1102} \largo{} \ancho{} \alto{} }
+                          \medicion_vol { \comentario{correas} \unidades{3} \largo{11.6} \ancho{8.32} \alto{} }
+                          }
+                        }
+                     \med_uobra
+                       {
+                       \ref{030.001}
+                       \lineas_medicion
+                          {
+                          \medicion_vol { \comentario{} \unidades{1} \largo{6.5} \ancho{11.60} \alto{0.1} }
+                          }
+                        }
+                     \med_uobra
+                       {
+                       \ref{030.003.1}
+                       \lineas_medicion
+                          {
+                          \medicion_vol { \comentario{} \unidades{1} \largo{6.5} \ancho{11.60} \alto{0.3} }
+                          }
+                        }
+                     \med_uobra
+                       {
+                       \ref{030.009}
+                       \lineas_medicion
+                          {
+                          \medicion_vol { \comentario{} \unidades{2} \largo{11.6} \ancho{0.3} \alto{} }
+                          \medicion_vol { \comentario{} \unidades{2} \largo{6.5} \ancho{0.3} \alto{} }
+                          }
+                        }
+                     \med_uobra
+                       {
+                       \ref{030.008}
+                       \lineas_medicion
+                          {
+                          \medicion_vol { \comentario{} \unidades{50} \largo{11.8} \ancho{0.888} \alto{} }
+                          \medicion_vol { \comentario{} \unidades{94} \largo{6.70} \ancho{0.888} \alto{} }
+                          \medicion_vol { \comentario{} \unidades{4} \largo{10} \ancho{1.25} \alto{0.617} }
+                          \medicion_vol { \comentario{} \unidades{2} \largo{7} \ancho{1.25} \alto{0.617} }
+                          \medicion_vol { \comentario{} \unidades{2} \largo{5} \ancho{1.50} \alto{0.617} }
+                          }
+                        }
+                     \med_uobra
+                       {
+                       \ref{060.001}
+                       \lineas_medicion
+                          {
+                          \medicion_vol { \comentario{} \unidades{1} \largo{11.6} \ancho{6.4} \alto{} }
+                          \medicion_vol { \comentario{} \unidades{1} \largo{11.6} \ancho{1.45} \alto{} }
+                          \medicion_vol { \comentario{} \unidades{2} \largo{6.40} \ancho{1.45} \alto{} }
+                          \medicion_vol { \comentario{} \unidades{1} \largo{6.40} \ancho{1.50} \alto{} }
+                          }
+                        }
+                     \med_uobra
+                       {
+                       \ref{070.007}
+                       \lineas_medicion
+                          {
+                          \medicion_vol { \comentario{} \unidades{1} \largo{11.60} \ancho{2.05} \alto{} }
+                          \medicion_vol { \comentario{} \unidades{1} \largo{5.20} \ancho{4.0} \alto{} }
+                          \medicion_vol { \comentario{} \unidades{2} \largo{6.40} \ancho{2.05} \alto{} }
+                          \medicion_vol { \comentario{} \unidades{-2} \largo{0.85} \ancho{2.05} \alto{} }
+                          \medicion_vol { \comentario{} \unidades{-1} \largo{3} \ancho{2.05} \alto{} }
+                          \medicion_vol { \comentario{} \unidades{1} \largo{6.10} \ancho{3.30} \alto{} }
+                          \medicion_vol { \comentario{} \unidades{0.5} \largo{6.10} \ancho{0.5} \alto{} }
+                          \medicion_vol { \comentario{} \unidades{1} \largo{6} \ancho{3.4} \alto{} }
+                          }
+                        }
+                     \med_uobra
+                       {
+                       \ref{100.002}
+                       \lineas_medicion
+                          {
+                          \medicion_vol { \comentario{} \unidades{2} \largo{11.60} \ancho{2.05} \alto{} }
+                          \medicion_vol { \comentario{} \unidades{2} \largo{5.20} \ancho{4.0} \alto{} }
+                          \medicion_vol { \comentario{} \unidades{4} \largo{6.40} \ancho{2.05} \alto{} }
+                          \medicion_vol { \comentario{} \unidades{-4} \largo{0.85} \ancho{2.05} \alto{} }
+                          \medicion_vol { \comentario{} \unidades{-2} \largo{3.0} \ancho{2.05} \alto{} }
+                          \medicion_vol { \comentario{} \unidades{2} \largo{6.10} \ancho{3.30} \alto{} }
+                          \medicion_vol { \comentario{} \unidades{1} \largo{6.10} \ancho{0.5} \alto{} }
+                          \medicion_vol { \comentario{} \unidades{2} \largo{6} \ancho{3.4} \alto{} }
+                          }
+                        }
+                     \med_uobra
+                       {
+                       \ref{200.002}
+                       \lineas_medicion
+                          {
+                          \medicion_vol { \comentario{} \unidades{1} \largo{11.60} \ancho{2.05} \alto{} }
+                          \medicion_vol { \comentario{} \unidades{2} \largo{6.40} \ancho{2.05} \alto{} }
+                          \medicion_vol { \comentario{} \unidades{-2} \largo{0.85} \ancho{2.05} \alto{} }
+                          \medicion_vol { \comentario{} \unidades{-1} \largo{3} \ancho{2.05} \alto{} }
+                          }
+                       }
+                     \med_uobra
+                       {
+                       \ref{140.003}
+                       \lineas_medicion
+                          {
+                          \medicion_vol { \comentario{} \unidades{2} \largo{5.20} \ancho{2.5} \alto{} }
+                          \medicion_vol { \comentario{} \unidades{2} \largo{6.10} \ancho{2.5} \alto{} }
+                          \medicion_vol { \comentario{} \unidades{2} \largo{3.60} \ancho{2.5} \alto{} }
+                          \medicion_vol { \comentario{} \unidades{1} \largo{6.0} \ancho{2.5} \alto{} }
+                          \medicion_vol { \comentario{} \unidades{-1} \largo{0.85} \ancho{2.05} \alto{} }
+                          \medicion_vol { \comentario{} \unidades{-1} \largo{3.0} \ancho{2.05} \alto{} }
+                          }
+                        }
+                     \med_uobra
+                       {
+                       \ref{200.001}
+                       \lineas_medicion
+                          {
+                          \medicion_vol { \comentario{} \unidades{1} \largo{5.20} \ancho{0.80} \alto{} }
+                          \medicion_vol { \comentario{} \unidades{1} \largo{5.20} \ancho{1.30} \alto{} }
+                          \medicion_vol { \comentario{} \unidades{2} \largo{6.10} \ancho{0.80} \alto{} }
+                          \medicion_vol { \comentario{} \unidades{1} \largo{6.10} \ancho{0.50} \alto{} }
+                          \medicion_vol { \comentario{} \unidades{1} \largo{6} \ancho{0.80} \alto{} }
+                          \medicion_vol { \comentario{} \unidades{2} \largo{3.60} \ancho{0.80} \alto{} }
+                          \medicion_vol { \comentario{} \unidades{1} \largo{3.60} \ancho{0.50} \alto{} }
+                          \medicion_vol { \comentario{} \unidades{1} \largo{5.90} \ancho{3.30} \alto{} }
+                          \medicion_vol { \comentario{} \unidades{1} \largo{5.90} \ancho{3.40} \alto{} }
+                          \medicion_vol { \comentario{} \unidades{2} \largo{2.5} \ancho{3.35} \alto{} }
+                          \medicion_vol { \comentario{} \unidades{-1} \largo{0.85} \ancho{2.05} \alto{} }
+                          }
+                       }
+                     \med_uobra
+                       {
+                       \ref{170.004}
+                       \lineas_medicion
+                          {
+                          \medicion_vol { \comentario{} \unidades{2} \largo{2.05} \ancho{0.85} \alto{} }
+                          }
+                       }
+                     \med_uobra
+                       {
+                       \ref{170.002}
+                       \lineas_medicion
+                          {
+                          \medicion_vol { \comentario{} \unidades{1} \largo{2.30} \ancho{3.0} \alto{} }
+                          }
+                       }
+                     \med_uobra
+                       {
+                       \ref{150.004}
+                       \lineas_medicion
+                          {
+                          \medicion_vol { \comentario{} \unidades{1} \largo{6.10} \ancho{5.20} \alto{} }
+                          \medicion_vol { \comentario{} \unidades{1} \largo{2.5} \ancho{5.90} \alto{} }
+                          \medicion_vol { \comentario{} \unidades{1} \largo{3.6} \ancho{5.9} \alto{} }
+                          }
+                       }
+                     \med_uobra
+                       {
+                       \ref{230.007}
+                       \lineas_medicion
+                          {
+                          \medicion_vol { \comentario{} \unidades{1} \largo{12.6} \ancho{} \alto{} }
+                          }
+                       }
+                     \med_uobra
+                       {
+                       \ref{230.008}
+                       \lineas_medicion
+                          {
+                          \medicion_vol { \comentario{} \unidades{1} \largo{3.80} \ancho{} \alto{} }
+                          }
+                       }
+                     \med_uobra
+                       {
+                       \ref{170.005}
+                       \lineas_medicion
+                          {
+                          \medicion_vol { \comentario{} \unidades{2} \largo{0.5} \ancho{0.5} \alto{} }
+                          }
+                       }
+                     \med_uobra
+                       {
+                       \ref{180.001}
+                       \lineas_medicion
+                          {
+                          \medicion_vol { \comentario{} \unidades{2} \largo{0.5} \ancho{0.5} \alto{} }
+                          }
+                       }
+                     }
+                   \subcapitulos{}
+                }

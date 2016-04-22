@@ -1,0 +1,159 @@
+              \capitulo
+                 {
+                   \codigo{8}
+                   \titulo{Edificio de bombas}
+                   \fr { \factor{1} \rendimiento{1.0000000000000} }
+                   \mediciones
+                     {
+                     \med_uobra
+                       {
+                       \ref{040.001}
+                       \lineas_medicion
+                          {
+                          \medicion_vol { \comentario{según medición auxiliar} \unidades{2088} \largo{1} \ancho{1} \alto{1} }
+                          \medicion_vol { \comentario{correas} \unidades{3} \largo{14.7} \ancho{8.34} \alto{0} }
+                          }
+                        }
+                     \med_uobra
+                       {
+                       \ref{060.001}
+                       \lineas_medicion
+                          {
+                          \medicion_vol { \comentario{} \unidades{1} \largo{15.4} \ancho{6.98} \alto{1} }
+                          \medicion_vol { \comentario{} \unidades{1} \largo{15.4} \ancho{2.75} \alto{1} }
+                          \medicion_vol { \comentario{} \unidades{2} \largo{6.96} \ancho{2.75} \alto{1} }
+                          \medicion_vol { \comentario{} \unidades{1} \largo{6.96} \ancho{0.5} \alto{1} }
+                          \medicion_vol { \comentario{} \unidades{1} \largo{15.4} \ancho{3.25} \alto{1} }
+                          \medicion_vol { \comentario{} \unidades{-1} \largo{2.05} \ancho{0.85} \alto{1} }
+                          }
+                        }
+                     \med_uobra
+                       {
+                       \ref{030.001}
+                       \lineas_medicion
+                          {
+                          \medicion_vol { \comentario{Limpieza} \unidades{1} \largo{15.5} \ancho{7} \alto{0.1} }
+                          }
+                        }
+                     \med_uobra
+                       {
+                       \ref{030.003.1}
+                       \lineas_medicion
+                          {
+                          \medicion_vol { \comentario{Losa} \unidades{1} \largo{15.5} \ancho{7} \alto{0.3} }
+                          \medicion_vol { \comentario{Muros} \unidades{1} \largo{45} \ancho{0.25} \alto{2.35} }
+                          }
+                        }
+                     \med_uobra
+                       {
+                       \ref{030.009}
+                       \lineas_medicion
+                          {
+                          \medicion_vol { \comentario{Muros} \unidades{1} \largo{90} \ancho{2.35} \alto{1} }
+                          }
+                        }
+                     \med_uobra
+                       {
+                       \ref{030.008}
+                       \lineas_medicion
+                          {
+                          \medicion_vol { \comentario{Losa} \unidades{1} \largo{108.5} \ancho{21.36} \alto{1} }
+                          \medicion_vol { \comentario{Refuerzos} \unidades{8} \largo{7.94} \ancho{1} \alto{1} }
+                          \medicion_vol { \comentario{Muro} \unidades{1} \largo{105.75} \ancho{14.88} \alto{1} }
+                          }
+                        }
+                     \med_uobra
+                       {
+                       \ref{070.007}
+                       \lineas_medicion
+                          {
+                          \medicion_vol { \comentario{} \unidades{2} \largo{15.10} \ancho{2.15} \alto{1} }
+                          \medicion_vol { \comentario{} \unidades{2} \largo{6.7} \ancho{2.15} \alto{1} }
+                          }
+                       }
+                     \med_uobra
+                       {
+                       \ref{170.004}
+                       \lineas_medicion
+                          {
+                          \medicion_vol { \comentario{} \unidades{1} \largo{2.05} \ancho{0.85} \alto{} }
+                          }
+                       }
+                     \med_uobra
+                       {
+                       \ref{140.003}
+                       \lineas_medicion
+                          {
+                          \medicion_vol { \comentario{} \unidades{2} \largo{14.8} \ancho{2.35} \alto{} }
+                          \medicion_vol { \comentario{} \unidades{2} \largo{6.4} \ancho{2.35} \alto{} }
+                          }
+                       }
+                     \med_uobra
+                       {
+                       \ref{100.002}
+                       \lineas_medicion
+                          {
+                          \medicion_vol { \comentario{} \unidades{2} \largo{15.4} \ancho{1.75} \alto{} }
+                          \medicion_vol { \comentario{} \unidades{2} \largo{6.96} \ancho{1.75} \alto{} }
+                          }
+                       }
+                     \med_uobra
+                       {
+                       \ref{200.002}
+                       \lineas_medicion
+                          {
+                          \medicion_vol { \comentario{} \unidades{2} \largo{15.4} \ancho{1.75} \alto{} }
+                          \medicion_vol { \comentario{} \unidades{2} \largo{6.96} \ancho{1.75} \alto{} }
+                          }
+                       }
+                     \med_uobra
+                       {
+                       \ref{220.004}
+                       \lineas_medicion
+                          {
+                          \medicion_vol { \comentario{} \unidades{1} \largo{} \ancho{} \alto{} }
+                          }
+                       }
+                     \med_uobra
+                       {
+                       \ref{220.001}
+                       \lineas_medicion
+                          {
+                          \medicion_vol { \comentario{} \unidades{9} \largo{} \ancho{} \alto{} }
+                          }
+                       }
+                     \med_uobra
+                       {
+                       \ref{180.002}
+                       \lineas_medicion
+                          {
+                          \medicion_vol { \comentario{} \unidades{2} \largo{} \ancho{} \alto{} }
+                          }
+                       }
+                     \med_uobra
+                       {
+                       \ref{150.004}
+                       \lineas_medicion
+                          {
+                          \medicion_vol { \comentario{} \unidades{1} \largo{14.8} \ancho{6.4} \alto{} }
+                          }
+                       }
+                     \med_uobra
+                       {
+                       \ref{230.007}
+                       \lineas_medicion
+                          {
+                          \medicion_vol { \comentario{} \unidades{1} \largo{15.4} \ancho{} \alto{} }
+                          }
+                       }
+                     \med_uobra
+                       {
+                       \ref{230.008}
+                       \lineas_medicion
+                          {
+                          \medicion_vol { \comentario{} \unidades{1} \largo{5} \ancho{} \alto{} }
+                          }
+                       }
+                     }
+                   \subcapitulos{}
+                 } \c{fin capitulo edif. bombas}

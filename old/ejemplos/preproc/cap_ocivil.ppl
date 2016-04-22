@@ -1,0 +1,25 @@
+    \capitulo
+        {
+          \codigo{1}
+          \titulo{OBRA CIVIL}
+          \fr
+              {
+                 \factor{1}
+                 \rendimiento{1.0000000000000}
+              }
+          \mediciones
+              {
+              }
+          \subcapitulos
+              {
+                \incluye{cap_obra_civil.ppl}
+                \incluye{cap_canal_toma.ppl}
+                \incluye{cap_camara_carga.ppl}
+                \incluye{cap_tub_forzada.ppl}
+                \incluye{cap_central_hidroel.ppl}
+                \incluye{cap_subestacion.ppl}
+                \incluye{cap_canal_desag.ppl}
+                \incluye{cap_urbanizacion.ppl}
+                \incluye{cap_impacto_amb.ppl}
+              }
+        }

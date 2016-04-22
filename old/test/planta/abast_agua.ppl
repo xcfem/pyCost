@@ -1,0 +1,92 @@
+              \capitulo
+                 {
+                   \codigo{2}
+                   \titulo{Abastecimiento de agua}
+                   \fr { \factor{1} \rendimiento{1.0000000000000} }
+                   \mediciones
+                     {
+                     \med_uobra
+                       {
+                       \ref{230.001}
+                       \lineas_medicion
+                          {
+                          \medicion_vol { \comentario{} \unidades{1} \largo{22} \ancho{0} \alto{0} }
+                          \medicion_vol { \comentario{} \unidades{1} \largo{20} \ancho{0} \alto{0} }
+                          \medicion_vol { \comentario{} \unidades{1} \largo{45} \ancho{0} \alto{0} }
+                          \medicion_vol { \comentario{} \unidades{1} \largo{53} \ancho{0} \alto{0} }
+                          \medicion_vol { \comentario{} \unidades{1} \largo{30} \ancho{0} \alto{0} }
+                          \medicion_vol { \comentario{} \unidades{1} \largo{26} \ancho{0} \alto{0} }
+                          \medicion_vol { \comentario{} \unidades{1} \largo{53} \ancho{0} \alto{0} }
+                          \medicion_vol { \comentario{} \unidades{1} \largo{45} \ancho{0} \alto{0} }
+                          \medicion_vol { \comentario{} \unidades{1} \largo{13} \ancho{0} \alto{0} }
+                          \medicion_vol { \comentario{} \unidades{1} \largo{30} \ancho{0} \alto{0} }
+                          \medicion_vol { \comentario{} \unidades{1} \largo{22} \ancho{0} \alto{0} }
+                          \medicion_vol { \comentario{} \unidades{1} \largo{14} \ancho{0} \alto{0} }
+                          \medicion_vol { \comentario{} \unidades{1} \largo{17} \ancho{0} \alto{0} }
+                          }
+                       }
+                     \med_uobra
+                       {
+                       \ref{230.001.3}
+                       \lineas_medicion
+                          {
+                          \medicion_vol { \comentario{} \unidades{1} \largo{15} \ancho{0} \alto{0} }
+                          \medicion_vol { \comentario{} \unidades{1} \largo{13} \ancho{0} \alto{0} }
+                          \medicion_vol { \comentario{} \unidades{1} \largo{11} \ancho{0} \alto{0} }
+                          }
+                        }
+                     \med_uobra
+                       {
+                       \ref{020.003}
+                       \lineas_medicion
+                          {
+                          \medicion_vol { \comentario{} \unidades{1} \largo{22} \ancho{0.77} \alto{0.85} }
+                          \medicion_vol { \comentario{} \unidades{1} \largo{20} \ancho{0.77} \alto{0.85} }
+                          \medicion_vol { \comentario{} \unidades{1} \largo{45} \ancho{0.77} \alto{0.85} }
+                          \medicion_vol { \comentario{} \unidades{1} \largo{53} \ancho{0.77} \alto{0.85} }
+                          \medicion_vol { \comentario{} \unidades{1} \largo{30} \ancho{0.77} \alto{0.85} }
+                          \medicion_vol { \comentario{} \unidades{1} \largo{26} \ancho{0.77} \alto{0.85} }
+                          \medicion_vol { \comentario{} \unidades{1} \largo{53} \ancho{0.77} \alto{0.85} }
+                          \medicion_vol { \comentario{} \unidades{1} \largo{45} \ancho{0.77} \alto{0.85} }
+                          \medicion_vol { \comentario{} \unidades{1} \largo{13} \ancho{0.77} \alto{0.85} }
+                          \medicion_vol { \comentario{} \unidades{1} \largo{30} \ancho{0.77} \alto{0.85} }
+                          \medicion_vol { \comentario{} \unidades{1} \largo{22} \ancho{0.77} \alto{0.85} }
+                          \medicion_vol { \comentario{} \unidades{1} \largo{14} \ancho{0.77} \alto{0.85} }
+                          \medicion_vol { \comentario{} \unidades{1} \largo{17} \ancho{0.77} \alto{0.85} }
+                          \medicion_vol { \comentario{} \unidades{1} \largo{11} \ancho{0.77} \alto{0.85} }
+                          }
+                       }
+                     \med_uobra
+                       {
+                       \ref{020.006}
+                       \lineas_medicion
+                          {
+                          \medicion_vol { \comentario{} \unidades{1} \largo{22} \ancho{0.77} \alto{0.85} }
+                          \medicion_vol { \comentario{} \unidades{1} \largo{20} \ancho{0.77} \alto{0.85} }
+                          \medicion_vol { \comentario{} \unidades{1} \largo{45} \ancho{0.77} \alto{0.85} }
+                          \medicion_vol { \comentario{} \unidades{1} \largo{53} \ancho{0.77} \alto{0.85} }
+                          \medicion_vol { \comentario{} \unidades{1} \largo{30} \ancho{0.77} \alto{0.85} }
+                          \medicion_vol { \comentario{} \unidades{1} \largo{26} \ancho{0.77} \alto{0.85} }
+                          \medicion_vol { \comentario{} \unidades{1} \largo{53} \ancho{0.77} \alto{0.85} }
+                          \medicion_vol { \comentario{} \unidades{1} \largo{45} \ancho{0.77} \alto{0.85} }
+                          \medicion_vol { \comentario{} \unidades{1} \largo{13} \ancho{0.77} \alto{0.85} }
+                          \medicion_vol { \comentario{} \unidades{1} \largo{30} \ancho{0.77} \alto{0.85} }
+                          \medicion_vol { \comentario{} \unidades{1} \largo{22} \ancho{0.77} \alto{0.85} }
+                          \medicion_vol { \comentario{} \unidades{1} \largo{14} \ancho{0.77} \alto{0.85} }
+                          \medicion_vol { \comentario{} \unidades{1} \largo{17} \ancho{0.77} \alto{0.85} }
+                          \medicion_vol { \comentario{} \unidades{1} \largo{15} \ancho{0.77} \alto{0.85} }
+                          \medicion_vol { \comentario{} \unidades{1} \largo{13} \ancho{0.77} \alto{0.85} }
+                          \medicion_vol { \comentario{} \unidades{1} \largo{11} \ancho{0.77} \alto{0.85} }
+                          }
+                       }
+                     \med_uobra
+                       {
+                       \ref{220.003}
+                       \lineas_medicion
+                          {
+                          \medicion_vol { \comentario{} \unidades{10} \largo{0} \ancho{0} \alto{0} }
+                          }
+                       }
+                     }
+                   \subcapitulos{}
+                 } \c{fin capitulo Abastecimiento de agua}

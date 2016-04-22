@@ -1,0 +1,617 @@
+Presupuestos parciales
+CONDUCCION BY-PASS DE ROYO FRIO.
+OBRAS DE CONEXION CON TUBERIA EXISTENTE.
+003011	2	ud	Carrete de desmontaje de DN800mm, montaje y pruebas. 	128643.0000000000000	257286
+003085	2	ud	Empalme brida-liso de 800mm de diámetro interior en chapas de calderería de 8mm de espesor y longitud no mayor de 1.8m, para unión de tubería de hormigón armado con piezas metálicas, incluso juntas de goma, colocado y probado. 	217818.0000000000000	435636
+003106	2	ud	Empalme brida-enchufe de 800mm de diámetro interior en chapa de caldedería de 8mm de espesor y hormigón armado con piezas metálicas, incluso junta de goma, colocado y probado 	224806.0000000000000	449612
+003107	2	ud	Pieza en T de fundición dúctil brida-brida de 800/800/800mm derivación brida, totalmente instalada. 	1095118.0000000000000	2.19024e+06
+003108	2	ud	Codo 90§ brida-brida de fundición dúctil de DN800mm, incluso p.p. de tornillos, juntas, colocado y probado. 	1236688.0000000000000	2.47338e+06
+005036	2	ud	Retirada de un tubo de 5m de longitud de hormigón armado de 800mm de diámetro interior, existente, achique necesario, excavación necesaria, retirada de material sobrante a vertedero y limpieza y preparación de juntas para unión de nuevas piezas y relleno necesario. 	71240.0000000000000	142480
+03064V	2	ud	Empalme brida-liso de fundición dúctil, PN 16 atm. DN 800 mm, incluida p.p. junta y demas elementos necesarios, colocado y probado. 	221563.0000000000000	443126
+				Total: 	OBRAS DE CONEXION CON TUBERIA EXISTENTE.	6391752.0000000000000
+VALVULERIA Y PIEZAS ESPECIALES CONTROL BY-PASS.
+003005	4	ud	Válvula de mariposa de DN800mm, presión máxima de trabajo 16kp/cm2, montaje entre bridas PN-16, accionada mediante servomotor eléctrico de 0.37kw, 380 V III 50 Hz, con índice visual, mando manual por volante, desmultiplicador, dos limitadores de par y dos contactos finales de carrera, incluyendo montaje y pruebas. Según E.T. 	2729031.0000000000000	1.09161e+07
+003011	4	ud	Carrete de desmontaje de DN800mm, montaje y pruebas. 	128643.0000000000000	514572
+003085	1	ud	Empalme brida-liso de 800mm de diámetro interior en chapas de calderería de 8mm de espesor y longitud no mayor de 1.8m, para unión de tubería de hormigón armado con piezas metálicas, incluso juntas de goma, colocado y probado. 	217818.0000000000000	217818
+003086	4	ud	Carrete de anclaje pasamuros de fundición dúctil con bridas de DN 800mm y 1.5m de longitud, completamente colocado y probado. 	269869.0000000000000	1.07948e+06
+003087	3	ud	Manguito de fundición dúctil de DN800mm según ISO 2531, embridado de 1m de longitud, colocado y probado. 	231038.0000000000000	693114
+003106	1	ud	Empalme brida-enchufe de 800mm de diámetro interior en chapa de caldedería de 8mm de espesor y hormigón armado con piezas metálicas, incluso junta de goma, colocado y probado 	224806.0000000000000	224806
+003109	1	ud	Actuador eléctrico para válvula de mariposa D800mm, con todos los elementos necesarios para su funcionamiento, colocado y probado. 	1477798.0000000000000	1.4778e+06
+007008	1	pa	Partida alzada de abono íntegro de retirada de válvula de compuerta D800 existente en tubería de hormigón 	28080.0000000000000	28080
+03064V	4	ud	Empalme brida-liso de fundición dúctil, PN 16 atm. DN 800 mm, incluida p.p. junta y demas elementos necesarios, colocado y probado. 	221563.0000000000000	886252
+				Total: 	VALVULERIA Y PIEZAS ESPECIALES CONTROL BY-PASS.	16038040.0000000000000
+CONDUCCION BY-PASS. MVTO DE TIERRAS Y TUBERIAS.
+001001	24118.3	m2	Desbroce y limpieza de terreno por medios mecánicos hasta 30 cm de espesor, incluido el transporte a vertedero. 	99.0000000000000	2.38771e+06
+001003	30369.2	m3	Excavación mecánica en zanja, con retroexcavadora, incluso apeos, entibaciones y transporte de material sobrante, en cualquier clase de terreno excluidos los de roca. 	750.0000000000000	2.27769e+07
+001006	11025.7	m3	Excavación en zanja con retromartillo rompedor, con extracción, apeos, entibaciones y transporte de material sobrante, en terreno de roca. 	3294.0000000000000	3.63187e+07
+001010	1747.95	m3	Zahorra natural, incluso extendido, perfilado y compactación. 	1026.0000000000000	1.79339e+06
+001013	11653	m2	Rotura de pavimento de cualquier clase, con martillo rompedor, incluso transporte de material sobrante a vertedero. 	671.0000000000000	7.81916e+06
+001016	11653	m2	Reparación de pavimento bituminoso mediante riego de imprimación y cpa de mezcla asfáltica en frío de 5 cm de espesor, extendida y compactada. 	855.0000000000000	9.96332e+06
+001019	3270.59	m3	Arena de zanja para asiento y recubrimiento de tuberías, incluso compactación cin medios ligeros, hasta el 90% del Proctor Normal. 	2370.0000000000000	7.75129e+06
+001027	639.14	m	Apertura de camino de 5m de anchura, incluyendo tala de árboles destoconado, retirada de piedras y bloques, desbroce y demás operaciones necesarias para el acceso de la maquinaria, incluso retirada de material sobrante a vertedero. 	1424.0000000000000	910135
+001028	593.132	m3	Excavación mecánica en zanja con retroexcavadora en cualquier clase de terreno con agotamiento, incluso apeos, entibaciones y transporte de material sobrante a vertedero. 	856.0000000000000	507721
+003074	9361.53	m	Tubería de fundición dúctil de DN 800mm según ISO 2531 con p.p. de junta, incluso cinta de señalización y demas accesorios, colocada y probada. 	50604.0000000000000	4.73731e+08
+01120V	12228.6	m3	Relleno y compactación de zanjas con productos seleccionados procedentes de la propia excavación o de préstamos, tendido en capas sucesivas de 30 cm de espesor, hasta alcanzar el 95% del P.N., incluso transporte. 	721.0000000000000	8.81684e+06
+01220V	28861.3	m3	Relleno y compactación de zanjas con productos procedentes de la propia excavación, tamaño máximo 100 mm, tendido en capas sucesivas de 30 cm de espesor, hasta alcanzar el 95% del P.N., incluso transporte. 	549.0000000000000	1.58449e+07
+02002V	1956.47	m3	Hormigón en masa HM-15 en rellenos, soleras y pequeñas unidades sin armar, inlcuso transporte y colocación. 	12760.0000000000000	2.49645e+07
+03051V	3	ud	Codo de 45§ en fundición dúctil PN 16 atm, DN 800 mm, incluso p.p. de juntas, colocacion y pruebas. 	501415.0000000000000	1.50424e+06
+				Total: 	CONDUCCION BY-PASS. MVTO DE TIERRAS Y TUBERIAS.	615089700.4448113425751
+VALVULERIA Y PIEZAS ESPECIALES EN CONDUCCION.
+EN DESAGÜES.
+003043	9	ud	Codo de 90§ brida-brida de fundición dúctil DN 200mm, incluso p.p. tornillos,juntas, colocacion y pruebas. 	27202.0000000000000	244818
+003054	9	ud	Válvula de compuerta de asiento elástico de DN 200mm, unión mediante bridas, modelo corto, colocada y probada. 	95547.0000000000000	859923
+003086	9	ud	Carrete de anclaje pasamuros de fundición dúctil con bridas de DN 800mm y 1.5m de longitud, completamente colocado y probado. 	269869.0000000000000	2.42882e+06
+003087	9	ud	Manguito de fundición dúctil de DN800mm según ISO 2531, embridado de 1m de longitud, colocado y probado. 	231038.0000000000000	2.07934e+06
+003090	9	ud	T brida-brida derivación brida de fundición dúctil de DN800/800/200mm, tornillos para bridas p.p. de junta, colocada y probada. 	652532.0000000000000	5.87279e+06
+003102	9	ud	Adaptador de brida enchufe para tubos de PVC de D 200mm, incluso tornillos y p.p. de junta colocado y probado. 	15658.0000000000000	140922
+003104	9	ud	Pasamuro de PVC de DN 200mm, con junta de caucho, totalmente instalado. 	6577.0000000000000	59193
+03064V	18	ud	Empalme brida-liso de fundición dúctil, PN 16 atm. DN 800 mm, incluida p.p. junta y demas elementos necesarios, colocado y probado. 	221563.0000000000000	3.98813e+06
+				Total: 	EN DESAGÜES.	15673941.0000000000000
+EN VALVULAS DE CORTE Y DESAGÜE CONJUNTAS.
+003011	4	ud	Carrete de desmontaje de DN800mm, montaje y pruebas. 	128643.0000000000000	514572
+003043	4	ud	Codo de 90§ brida-brida de fundición dúctil DN 200mm, incluso p.p. tornillos,juntas, colocacion y pruebas. 	27202.0000000000000	108808
+003054	4	ud	Válvula de compuerta de asiento elástico de DN 200mm, unión mediante bridas, modelo corto, colocada y probada. 	95547.0000000000000	382188
+003086	4	ud	Carrete de anclaje pasamuros de fundición dúctil con bridas de DN 800mm y 1.5m de longitud, completamente colocado y probado. 	269869.0000000000000	1.07948e+06
+003087	4	ud	Manguito de fundición dúctil de DN800mm según ISO 2531, embridado de 1m de longitud, colocado y probado. 	231038.0000000000000	924152
+003090	4	ud	T brida-brida derivación brida de fundición dúctil de DN800/800/200mm, tornillos para bridas p.p. de junta, colocada y probada. 	652532.0000000000000	2.61013e+06
+003102	4	ud	Adaptador de brida enchufe para tubos de PVC de D 200mm, incluso tornillos y p.p. de junta colocado y probado. 	15658.0000000000000	62632
+003104	4	ud	Pasamuro de PVC de DN 200mm, con junta de caucho, totalmente instalado. 	6577.0000000000000	26308
+003105	4	ud	Válvula de mariposa de DN800mm, presión máxima de trabajo 16kp/cm2, montaje entre bridas, mando manual por volante, desmultiplicador, dos limitadores de para y dos contactos finales de carrera, incluso montaje y pruebas. 	1251232.0000000000000	5.00493e+06
+03064V	8	ud	Empalme brida-liso de fundición dúctil, PN 16 atm. DN 800 mm, incluida p.p. junta y demas elementos necesarios, colocado y probado. 	221563.0000000000000	1.7725e+06
+				Total: 	EN VALVULAS DE CORTE Y DESAGÜE CONJUNTAS.	12485696.0000000000000
+EN VENTOSAS.
+003022	13	ud	Ventosa trifuncional, DN150mm, con válvula de cierre incorporada, caudal máximo de entrada de aire 649 l/seg, caudal máximo salida de aire 442 l/seg. 	265403.0000000000000	3.45024e+06
+003087	26	ud	Manguito de fundición dúctil de DN800mm según ISO 2531, embridado de 1m de longitud, colocado y probado. 	231038.0000000000000	6.00699e+06
+003089	13	ud	T brida-brida derivación brida de fundición dúctil de DN500/500/100mm, tornillos para bridas p.p. de junta, colocada y probada. 	195487.0000000000000	2.54133e+06
+03064V	26	ud	Empalme brida-liso de fundición dúctil, PN 16 atm. DN 800 mm, incluida p.p. junta y demas elementos necesarios, colocado y probado. 	221563.0000000000000	5.76064e+06
+				Total: 	EN VENTOSAS.	17759196.0000000000000
+ARQUETAS DE VALVULAS.
+EN DESAGÜES SIN CASETA.
+001004	210.85	m3	Excavación mecánica en pozos, con retroexcavadora, incluso apeos, relleno, compactación y transporte de material sobrante, en cualquier clase de terreno excluidos los de roca. 	753.0000000000000	158770
+001013	65.28	m2	Rotura de pavimento de cualquier clase, con martillo rompedor, incluso transporte de material sobrante a vertedero. 	671.0000000000000	43802.9
+002005	294.32	m2	Encofrado de madera y desencofrado en cimentaciones y alzados, incluso apeos. 	3547.0000000000000	1.04395e+06
+002006	16.2	m2	Encofrado de madera y desencofrado en losas o bóvedas y alzados, incluso apeos. 	4996.0000000000000	80935.2
+002009	60	ud	Pate de polipropileno con alma de acero de 16 mm de diámetro y 1.00 m de desarrollo, colocado. 	764.0000000000000	45840
+005002	6	ud	Tapa de fundición nodular o dúctil de 0.70m de diámetro, incluso acero colocado. 	18209.0000000000000	109254
+02003V	55.54	m3	Hormigón para armar HA-25, en cimentaciones y estructuras, incluso transporte, colocación y vibrado. 	14318.0000000000000	795222
+02015V	3927.55	kg	Acero B-500 S de LE 5000kg/cm2 en redondos corrugados colocado. 	142.0000000000000	557712
+				Total: 	EN DESAGÜES SIN CASETA.	2835488.9899999999823
+EN DESAGÜES CON CASETA.
+001004	68.33	m3	Excavación mecánica en pozos, con retroexcavadora, incluso apeos, relleno, compactación y transporte de material sobrante, en cualquier clase de terreno excluidos los de roca. 	753.0000000000000	51452.5
+002005	101.98	m2	Encofrado de madera y desencofrado en cimentaciones y alzados, incluso apeos. 	3547.0000000000000	361723
+002009	18	ud	Pate de polipropileno con alma de acero de 16 mm de diámetro y 1.00 m de desarrollo, colocado. 	764.0000000000000	13752
+004002	32.63	m2	Fabrica de ladrillo macizo de medio pie de espesor, recibido con mortero de cemento 1:6, incluso p.p. de replanteo, aplomado y nivelación, totalmente acabado. 	3207.0000000000000	104644
+004010	10	ud	Pieza de hormigón de 20 x 20 x 8 cm, para celosias, con galce de vidrio, colocada. 	500.0000000000000	5000
+004011	71.97	m2	Enfoscado y fratasado con morteo de cemento 1:3 en paramentos verticales y horizontales. 	1211.0000000000000	87155.7
+004013	38.96	m2	Encalado a dos manos en paramentos verticales y horizontales 	235.0000000000000	9155.6
+005037	5.28	m2	Puerta de chapa lisa de acero con rigidizadores rectangulares, incluso cerco, herrajes de colgar y seguridad, pintada y colocada, incluso cerradura 	15163.0000000000000	80060.6
+005038	13.44	m2	Cubierta de teja curva formada con tablero machiembrado de 100x25x4, capa de compresión de 30mm, de mortero 1:6 y teja cerámica curva recibida con mortero de cemento 1:8, i/p.p. de arriostramiento transversal, limas, caballetes, emboquillado y remates. 	5888.0000000000000	79134.7
+02003V	17.67	m3	Hormigón para armar HA-25, en cimentaciones y estructuras, incluso transporte, colocación y vibrado. 	14318.0000000000000	252999
+02008V	114.05	kg	Acero S-275 JR de LE 4200 kg/cm2 en perfiles laminados y basas, imprimación de minio, solado y colocado. 	250.0000000000000	28512.5
+02015V	1146.1	kg	Acero B-500 S de LE 5000kg/cm2 en redondos corrugados colocado. 	142.0000000000000	162746
+				Total: 	EN DESAGÜES CON CASETA.	1236336.3500000000315
+EN VALVULAS DE CORTE Y DESAGÜES.
+001004	256	m3	Excavación mecánica en pozos, con retroexcavadora, incluso apeos, relleno, compactación y transporte de material sobrante, en cualquier clase de terreno excluidos los de roca. 	753.0000000000000	192768
+002003	78.96	m3	Hormigón para armar H-175, en cimentaciones y estructuras, incluso transporte, colocación y vibrado. 	13160.0000000000000	1.03911e+06
+002005	375	m2	Encofrado de madera y desencofrado en cimentaciones y alzados, incluso apeos. 	3547.0000000000000	1.33012e+06
+002008	732.82	kg	Acero A-42b de LE 4200 kg/cm2 en perfiles laminados y basas, imprimación de minio, solado y colocado. 	250.0000000000000	183205
+002009	32	ud	Pate de polipropileno con alma de acero de 16 mm de diámetro y 1.00 m de desarrollo, colocado. 	764.0000000000000	24448
+002015	3114.18	kg	Acero AEH-500 de LE 5000kg/cm2 en redondos corrugados colocado. 	142.0000000000000	442214
+004002	107.2	m2	Fabrica de ladrillo macizo de medio pie de espesor, recibido con mortero de cemento 1:6, incluso p.p. de replanteo, aplomado y nivelación, totalmente acabado. 	3207.0000000000000	343790
+004010	20	ud	Pieza de hormigón de 20 x 20 x 8 cm, para celosias, con galce de vidrio, colocada. 	500.0000000000000	10000
+004011	210.24	m2	Enfoscado y fratasado con morteo de cemento 1:3 en paramentos verticales y horizontales. 	1211.0000000000000	254601
+004013	116.32	m2	Encalado a dos manos en paramentos verticales y horizontales 	235.0000000000000	27335.2
+005037	10.56	m2	Puerta de chapa lisa de acero con rigidizadores rectangulares, incluso cerco, herrajes de colgar y seguridad, pintada y colocada, incluso cerradura 	15163.0000000000000	160121
+005038	38.44	m2	Cubierta de teja curva formada con tablero machiembrado de 100x25x4, capa de compresión de 30mm, de mortero 1:6 y teja cerámica curva recibida con mortero de cemento 1:8, i/p.p. de arriostramiento transversal, limas, caballetes, emboquillado y remates. 	5888.0000000000000	226335
+				Total: 	EN VALVULAS DE CORTE Y DESAGÜES.	4234055.3999999999196
+EN VALVULAS MOTORIZADAS.
+001004	127.76	m3	Excavación mecánica en pozos, con retroexcavadora, incluso apeos, relleno, compactación y transporte de material sobrante, en cualquier clase de terreno excluidos los de roca. 	753.0000000000000	96203.3
+002003	52.84	m3	Hormigón para armar H-175, en cimentaciones y estructuras, incluso transporte, colocación y vibrado. 	13160.0000000000000	695374
+002005	194.34	m2	Encofrado de madera y desencofrado en cimentaciones y alzados, incluso apeos. 	3547.0000000000000	689324
+002008	514.91	kg	Acero A-42b de LE 4200 kg/cm2 en perfiles laminados y basas, imprimación de minio, solado y colocado. 	250.0000000000000	128727
+002009	24	ud	Pate de polipropileno con alma de acero de 16 mm de diámetro y 1.00 m de desarrollo, colocado. 	764.0000000000000	18336
+002015	1664.85	kg	Acero AEH-500 de LE 5000kg/cm2 en redondos corrugados colocado. 	142.0000000000000	236409
+004002	62.62	m2	Fabrica de ladrillo macizo de medio pie de espesor, recibido con mortero de cemento 1:6, incluso p.p. de replanteo, aplomado y nivelación, totalmente acabado. 	3207.0000000000000	200822
+004010	15	ud	Pieza de hormigón de 20 x 20 x 8 cm, para celosias, con galce de vidrio, colocada. 	500.0000000000000	7500
+004011	128.79	m2	Enfoscado y fratasado con morteo de cemento 1:3 en paramentos verticales y horizontales. 	1211.0000000000000	155965
+004013	68.86	m2	Encalado a dos manos en paramentos verticales y horizontales 	235.0000000000000	16182.1
+005037	7.92	m2	Puerta de chapa lisa de acero con rigidizadores rectangulares, incluso cerco, herrajes de colgar y seguridad, pintada y colocada, incluso cerradura 	15163.0000000000000	120091
+005038	23.4	m2	Cubierta de teja curva formada con tablero machiembrado de 100x25x4, capa de compresión de 30mm, de mortero 1:6 y teja cerámica curva recibida con mortero de cemento 1:8, i/p.p. de arriostramiento transversal, limas, caballetes, emboquillado y remates. 	5888.0000000000000	137779
+				Total: 	EN VALVULAS MOTORIZADAS.	2502713.1500000000124
+EN VENTOSAS CON CASETA.
+001004	109.62	m3	Excavación mecánica en pozos, con retroexcavadora, incluso apeos, relleno, compactación y transporte de material sobrante, en cualquier clase de terreno excluidos los de roca. 	753.0000000000000	82543.9
+002003	27.38	m3	Hormigón para armar H-175, en cimentaciones y estructuras, incluso transporte, colocación y vibrado. 	13160.0000000000000	360321
+002005	77.16	m2	Encofrado de madera y desencofrado en cimentaciones y alzados, incluso apeos. 	3547.0000000000000	273687
+002008	199.58	kg	Acero A-42b de LE 4200 kg/cm2 en perfiles laminados y basas, imprimación de minio, solado y colocado. 	250.0000000000000	49895
+002009	32	ud	Pate de polipropileno con alma de acero de 16 mm de diámetro y 1.00 m de desarrollo, colocado. 	764.0000000000000	24448
+002015	1286.06	kg	Acero AEH-500 de LE 5000kg/cm2 en redondos corrugados colocado. 	142.0000000000000	182621
+004002	70.72	m2	Fabrica de ladrillo macizo de medio pie de espesor, recibido con mortero de cemento 1:6, incluso p.p. de replanteo, aplomado y nivelación, totalmente acabado. 	3207.0000000000000	226799
+004010	20	ud	Pieza de hormigón de 20 x 20 x 8 cm, para celosias, con galce de vidrio, colocada. 	500.0000000000000	10000
+004011	143.93	m2	Enfoscado y fratasado con morteo de cemento 1:3 en paramentos verticales y horizontales. 	1211.0000000000000	174299
+004013	77.92	m2	Encalado a dos manos en paramentos verticales y horizontales 	235.0000000000000	18311.2
+005037	10.56	m2	Puerta de chapa lisa de acero con rigidizadores rectangulares, incluso cerco, herrajes de colgar y seguridad, pintada y colocada, incluso cerradura 	15163.0000000000000	160121
+005038	23.52	m2	Cubierta de teja curva formada con tablero machiembrado de 100x25x4, capa de compresión de 30mm, de mortero 1:6 y teja cerámica curva recibida con mortero de cemento 1:8, i/p.p. de arriostramiento transversal, limas, caballetes, emboquillado y remates. 	5888.0000000000000	138486
+				Total: 	EN VENTOSAS CON CASETA.	1701531.2099999999837
+EN VENTOSAS SIN CASETA.
+001004	246.64	m3	Excavación mecánica en pozos, con retroexcavadora, incluso apeos, relleno, compactación y transporte de material sobrante, en cualquier clase de terreno excluidos los de roca. 	753.0000000000000	185720
+001013	94.86	m2	Rotura de pavimento de cualquier clase, con martillo rompedor, incluso transporte de material sobrante a vertedero. 	671.0000000000000	63651.1
+002003	63.52	m3	Hormigón para armar H-175, en cimentaciones y estructuras, incluso transporte, colocación y vibrado. 	13160.0000000000000	835923
+002005	347.22	m2	Encofrado de madera y desencofrado en cimentaciones y alzados, incluso apeos. 	3547.0000000000000	1.23159e+06
+002006	24.3	m2	Encofrado de madera y desencofrado en losas o bóvedas y alzados, incluso apeos. 	4996.0000000000000	121403
+002009	72	ud	Pate de polipropileno con alma de acero de 16 mm de diámetro y 1.00 m de desarrollo, colocado. 	764.0000000000000	55008
+002015	3009.18	kg	Acero AEH-500 de LE 5000kg/cm2 en redondos corrugados colocado. 	142.0000000000000	427304
+005002	9	ud	Tapa de fundición nodular o dúctil de 0.70m de diámetro, incluso acero colocado. 	18209.0000000000000	163881
+				Total: 	EN VENTOSAS SIN CASETA.	3084478.8800000001077
+TUBERIAS DE DESAGÜE.
+001003	701.212	m3	Excavación mecánica en zanja, con retroexcavadora, incluso apeos, entibaciones y transporte de material sobrante, en cualquier clase de terreno excluidos los de roca. 	750.0000000000000	525909
+001010	3.59137	m3	Zahorra natural, incluso extendido, perfilado y compactación. 	1026.0000000000000	3684.75
+001013	23.94	m2	Rotura de pavimento de cualquier clase, con martillo rompedor, incluso transporte de material sobrante a vertedero. 	671.0000000000000	16063.7
+001016	23.94	m2	Reparación de pavimento bituminoso mediante riego de imprimación y cpa de mezcla asfáltica en frío de 5 cm de espesor, extendida y compactada. 	855.0000000000000	20468.7
+001019	33.9255	m3	Arena de zanja para asiento y recubrimiento de tuberías, incluso compactación cin medios ligeros, hasta el 90% del Proctor Normal. 	2370.0000000000000	80403.4
+003101	359	m	Tubería PVC PN 6atm D200mm UNE 53.112, con p.p. de junta colocada y probada. 	3353.0000000000000	1.20373e+06
+01120V	149.911	m3	Relleno y compactación de zanjas con productos seleccionados procedentes de la propia excavación o de préstamos, tendido en capas sucesivas de 30 cm de espesor, hasta alcanzar el 95% del P.N., incluso transporte. 	721.0000000000000	108086
+01220V	485.306	m3	Relleno y compactación de zanjas con productos procedentes de la propia excavación, tamaño máximo 100 mm, tendido en capas sucesivas de 30 cm de espesor, hasta alcanzar el 95% del P.N., incluso transporte. 	549.0000000000000	266433
+02002V	17.205	m3	Hormigón en masa HM-15 en rellenos, soleras y pequeñas unidades sin armar, inlcuso transporte y colocación. 	12760.0000000000000	219536
+				Total: 	TUBERIAS DE DESAGÜE.	2444311.7063499999717
+INSTALACION DE ENERGIA SOLAR.
+005013	1	ud	Instalación de energia solar para alimentación de dos válvulas motorizadas, constato de dos módulos solares, batería, regulador de carga, convertidor de corriente continua a alterna y estructura soporte, totalmente instalado en cubierta de caseta, incluso instalación eléctrica necesaria. 	663760.0000000000000	663760
+				Total: 	INSTALACION DE ENERGIA SOLAR.	663760.0000000000000
+INSTALACION ELECTRICA.
+001003	21.84	m3	Excavación mecánica en zanja, con retroexcavadora, incluso apeos, entibaciones y transporte de material sobrante, en cualquier clase de terreno excluidos los de roca. 	750.0000000000000	16380
+001020	21.84	m3	Relleno y compactación de zanjas con suelo seleccionado procedente de la propia excavación o de préstamos, tendido en capas sucesivas de 30cm de espesor, hasta alcanzar el 100% del P.N., incluso transporte. 	772.0000000000000	16860.5
+006012	5	ud	Toma de tierra, formada por pica de alma de acero al carbono con una capa de cobre puro, según definición en planos, colocada. 	2045.0000000000000	10225
+006021	299	m	Conductor de cobre con aislamiento de P.R.C. de 3.5X1.5mm2, colocado y conexionado. 	175.0000000000000	52325
+006022	1	ud	Cuadro eléctrico en caja metálica para protección y mando automático de 5 válvulas con pulsadores y pilotos de señalización de marcha y parada en la tapa, y demás mecanismos necesarios para un correcto funcionamiento colocado y probado 	204888.0000000000000	204888
+				Total: 	INSTALACION ELECTRICA.	300678.4799999999998
+CONDUCC. DESDE LAS GRAJAS A DEPOSITO CEMENTERIO.
+PRIMER TRAMO.LAS GRAJAS AL PUENTE LOS DESCALZOS.
+OBRAS DE CONEXION CON TUBERIA EXISTENTE.
+003110	1	ud	T en chapa de acero enchufe-enchufe derivación brida diámetro 500/500/500 para acoplar a tubería de fibrocemento existente, incluso arandelas, tornillos para bridas y anclaje de hormigón, colocado y probado. 	139663.0000000000000	139663
+003112	1	ud	Codo 90§ brida-brida de fundición dúctil de DN500mm, incluso p.p. de tornillos, juntas, colocado y probado. 	316941.0000000000000	316941
+005039	1	ud	Retirada de un tubo de 6m de fibrocemento presión de 500mm de diámetro nominal, existente, incluso excavación necesaria, retirada del material sobrante a vertedero, achique necesario ennsu caso, colocación de dos tramos de tubo de fibrocemento de 16atm de presión nominal D 500mm, preparados para intercalar pieza en T para derivación de tubería y relleno necesario. 	56368.0000000000000	56368
+03065V	1	ud	Empalme brida-liso de fundición dúctil, PN 16 atm. DN 500 mm, incluida p.p. junta y demas elementos necesarios, colocado y probado. 	43597.0000000000000	43597
+				Total: 	OBRAS DE CONEXION CON TUBERIA EXISTENTE.	556569.0000000000000
+CONDUCCION. MOVIMIENTO DE TIERRAS Y TUBERIAS.
+001001	1836.2	m2	Desbroce y limpieza de terreno por medios mecánicos hasta 30 cm de espesor, incluido el transporte a vertedero. 	99.0000000000000	181784
+001003	3888.95	m3	Excavación mecánica en zanja, con retroexcavadora, incluso apeos, entibaciones y transporte de material sobrante, en cualquier clase de terreno excluidos los de roca. 	750.0000000000000	2.91672e+06
+001006	2746.87	m3	Excavación en zanja con retromartillo rompedor, con extracción, apeos, entibaciones y transporte de material sobrante, en terreno de roca. 	3294.0000000000000	9.04819e+06
+001010	251.878	m3	Zahorra natural, incluso extendido, perfilado y compactación. 	1026.0000000000000	258427
+001013	1718.4	m2	Rotura de pavimento de cualquier clase, con martillo rompedor, incluso transporte de material sobrante a vertedero. 	671.0000000000000	1.15305e+06
+001016	1718.4	m2	Reparación de pavimento bituminoso mediante riego de imprimación y cpa de mezcla asfáltica en frío de 5 cm de espesor, extendida y compactada. 	855.0000000000000	1.46923e+06
+001019	810.88	m3	Arena de zanja para asiento y recubrimiento de tuberías, incluso compactación cin medios ligeros, hasta el 90% del Proctor Normal. 	2370.0000000000000	1.92178e+06
+001027	133	m	Apertura de camino de 5m de anchura, incluyendo tala de árboles destoconado, retirada de piedras y bloques, desbroce y demás operaciones necesarias para el acceso de la maquinaria, incluso retirada de material sobrante a vertedero. 	1424.0000000000000	189392
+001028	2348.94	m3	Excavación mecánica en zanja con retroexcavadora en cualquier clase de terreno con agotamiento, incluso apeos, entibaciones y transporte de material sobrante a vertedero. 	856.0000000000000	2.01069e+06
+003002	2823.5	m	Tubería de fundición dúctil de 500mm de diámetro nominal, según ISO 2531, con p.p. de junta, incluso cinta de señalización y demás accesorios, colocado y probado. 	24972.0000000000000	7.05084e+07
+01120V	596.198	m3	Relleno y compactación de zanjas con productos seleccionados procedentes de la propia excavación o de préstamos, tendido en capas sucesivas de 30 cm de espesor, hasta alcanzar el 95% del P.N., incluso transporte. 	721.0000000000000	429859
+01220V	6473.32	m3	Relleno y compactación de zanjas con productos procedentes de la propia excavación, tamaño máximo 100 mm, tendido en capas sucesivas de 30 cm de espesor, hasta alcanzar el 95% del P.N., incluso transporte. 	549.0000000000000	3.55385e+06
+02002V	257.76	m3	Hormigón en masa HM-15 en rellenos, soleras y pequeñas unidades sin armar, inlcuso transporte y colocación. 	12760.0000000000000	3.28902e+06
+03052V	2	ud	Codo de 45§ en fundición dúctil PN 16 atm, DN 500mm, incluso p.p. de juntas, colocacion y pruebas. 	218706.0000000000000	437412
+				Total: 	CONDUCCION. MOVIMIENTO DE TIERRAS Y TUBERIAS.	97367847.1797774378210
+VALVULERIA Y PIEZAS ESPECIALES.
+EN DESAGÜES.
+003026	5	ud	Carrete de anclaje pasamuros de fundición dúctil de 500mm de diámetro nominal y 1m de longitud,colocado y probado. 	133790.0000000000000	668950
+003031	5	ud	T enchufe-enchufe derivación brida de fundición dúctil de DN500/500/150mm, tornillos para bridas, p.p. de junta, anclaje de hormigón, colocada y probada. 	168120.0000000000000	840600
+003045	5	ud	Codo de 90§ brida-brida de fundición dúctil DN 150mm, incluso p.p. de tornillos, juntas, colocacion y pruebas. 	18829.0000000000000	94145
+003055	5	ud	Válvula de compuerta de asiento elástico de DN 150mm, unión mediante bridas, modelo corto, colocada y probada. 	56697.0000000000000	283485
+003103	5	ud	Pasamuro de PVC de DN hasta 150mm, con junta de caucho, totalmente instalado. 	3470.0000000000000	17350
+003111	5	ud	Manguito de fundición dúctil de DN500mm, según ISO 2531, embridado de 1m de longitud colocado y probado. 	215402.0000000000000	1.07701e+06
+003114	5	ud	Adaptador de brida enchufe para tubos de PVC de D 160mm, incluso tornillos y p.p. de junta colocado y probado. 	12986.0000000000000	64930
+03065V	10	ud	Empalme brida-liso de fundición dúctil, PN 16 atm. DN 500 mm, incluida p.p. junta y demas elementos necesarios, colocado y probado. 	43597.0000000000000	435970
+				Total: 	EN DESAGÜES.	3482440.0000000000000
+EN VENTOSAS.
+003021	5	ud	Ventosa trifuncional, DN100mm, con válvula de cierre incorporada, caudal máximo de entrada de aire 649 l/seg, caudal máximo salida de aire 442 l/seg. 	162803.0000000000000	814015
+003035	5	ud	T enchufe-enchufe derivación brida de fundición dúctil de DN500/500/100mm, tornillos para bridas, p.p. de junta, anclaje de hormigón, colocada y probada. 	168120.0000000000000	840600
+003111	10	ud	Manguito de fundición dúctil de DN500mm, según ISO 2531, embridado de 1m de longitud colocado y probado. 	215402.0000000000000	2.15402e+06
+03065V	10	ud	Empalme brida-liso de fundición dúctil, PN 16 atm. DN 500 mm, incluida p.p. junta y demas elementos necesarios, colocado y probado. 	43597.0000000000000	435970
+				Total: 	EN VENTOSAS.	4244605.0000000000000
+EN VALVULAS DE CORTE.
+003006	1	ud	Válvula de mariposa de DN500mm, presión máxima de trabajo 16kp/cm2, montaje entre bridas PN-16, accionada mediante servomotor eléctrico de 0.37kw, 380 V III 50 Hz, con índice visual, mando manual por volante, desmultiplicador, dos limitadores de par y dos contactos finales de carrera, incluyendo montaje y pruebas. Según E.T. 	1637708.0000000000000	1.63771e+06
+003008	1	ud	Carrete de desmontaje de DN500mm, montaje y pruebas. 	116645.0000000000000	116645
+003026	1	ud	Carrete de anclaje pasamuros de fundición dúctil de 500mm de diámetro nominal y 1m de longitud,colocado y probado. 	133790.0000000000000	133790
+003115	1	ud	Actuador eléctrico para válvula de mariposa D500 con todos los elementos necesarios para su funcionamiento colocado y probado 	1077747.0000000000000	1.07775e+06
+03065V	2	ud	Empalme brida-liso de fundición dúctil, PN 16 atm. DN 500 mm, incluida p.p. junta y demas elementos necesarios, colocado y probado. 	43597.0000000000000	87194
+				Total: 	EN VALVULAS DE CORTE.	3053084.0000000000000
+ARQUETAS DE VALVULAS.
+DE DESAGÜE CON CASETA.
+001004	79.9	m3	Excavación mecánica en pozos, con retroexcavadora, incluso apeos, relleno, compactación y transporte de material sobrante, en cualquier clase de terreno excluidos los de roca. 	753.0000000000000	60164.7
+001013	27.84	m2	Rotura de pavimento de cualquier clase, con martillo rompedor, incluso transporte de material sobrante a vertedero. 	671.0000000000000	18680.6
+002005	122.29	m2	Encofrado de madera y desencofrado en cimentaciones y alzados, incluso apeos. 	3547.0000000000000	433763
+002009	27	ud	Pate de polipropileno con alma de acero de 16 mm de diámetro y 1.00 m de desarrollo, colocado. 	764.0000000000000	20628
+004002	42.1	m2	Fabrica de ladrillo macizo de medio pie de espesor, recibido con mortero de cemento 1:6, incluso p.p. de replanteo, aplomado y nivelación, totalmente acabado. 	3207.0000000000000	135015
+004010	15	ud	Pieza de hormigón de 20 x 20 x 8 cm, para celosias, con galce de vidrio, colocada. 	500.0000000000000	7500
+004011	88.61	m2	Enfoscado y fratasado con morteo de cemento 1:3 en paramentos verticales y horizontales. 	1211.0000000000000	107307
+004013	46.54	m2	Encalado a dos manos en paramentos verticales y horizontales 	235.0000000000000	10936.9
+005037	7.92	m2	Puerta de chapa lisa de acero con rigidizadores rectangulares, incluso cerco, herrajes de colgar y seguridad, pintada y colocada, incluso cerradura 	15163.0000000000000	120091
+005038	14.04	m2	Cubierta de teja curva formada con tablero machiembrado de 100x25x4, capa de compresión de 30mm, de mortero 1:6 y teja cerámica curva recibida con mortero de cemento 1:8, i/p.p. de arriostramiento transversal, limas, caballetes, emboquillado y remates. 	5888.0000000000000	82667.5
+02003V	20.79	m3	Hormigón para armar HA-25, en cimentaciones y estructuras, incluso transporte, colocación y vibrado. 	14318.0000000000000	297671
+02008V	135.43	kg	Acero S-275 JR de LE 4200 kg/cm2 en perfiles laminados y basas, imprimación de minio, solado y colocado. 	250.0000000000000	33857.5
+02015V	841.04	kg	Acero B-500 S de LE 5000kg/cm2 en redondos corrugados colocado. 	142.0000000000000	119428
+				Total: 	DE DESAGÜE CON CASETA.	1447709.1600000000082
+DE DESAGÜE SIN CASETA.
+001004	53.27	m3	Excavación mecánica en pozos, con retroexcavadora, incluso apeos, relleno, compactación y transporte de material sobrante, en cualquier clase de terreno excluidos los de roca. 	753.0000000000000	40112.3
+001013	18.56	m2	Rotura de pavimento de cualquier clase, con martillo rompedor, incluso transporte de material sobrante a vertedero. 	671.0000000000000	12453.8
+002005	75.86	m2	Encofrado de madera y desencofrado en cimentaciones y alzados, incluso apeos. 	3547.0000000000000	269075
+002006	3.84	m2	Encofrado de madera y desencofrado en losas o bóvedas y alzados, incluso apeos. 	4996.0000000000000	19184.6
+002009	18	ud	Pate de polipropileno con alma de acero de 16 mm de diámetro y 1.00 m de desarrollo, colocado. 	764.0000000000000	13752
+005002	2	ud	Tapa de fundición nodular o dúctil de 0.70m de diámetro, incluso acero colocado. 	18209.0000000000000	36418
+02003V	14.04	m3	Hormigón para armar HA-25, en cimentaciones y estructuras, incluso transporte, colocación y vibrado. 	14318.0000000000000	201025
+02015V	663.33	kg	Acero B-500 S de LE 5000kg/cm2 en redondos corrugados colocado. 	142.0000000000000	94192.9
+				Total: 	DE DESAGÜE SIN CASETA.	686213.7099999999924
+DE VENTOSA SIN CASETA.
+001004	99.82	m3	Excavación mecánica en pozos, con retroexcavadora, incluso apeos, relleno, compactación y transporte de material sobrante, en cualquier clase de terreno excluidos los de roca. 	753.0000000000000	75164.5
+001013	17.36	m2	Rotura de pavimento de cualquier clase, con martillo rompedor, incluso transporte de material sobrante a vertedero. 	671.0000000000000	11648.6
+002005	143.7	m2	Encofrado de madera y desencofrado en cimentaciones y alzados, incluso apeos. 	3547.0000000000000	509704
+002006	9	m2	Encofrado de madera y desencofrado en losas o bóvedas y alzados, incluso apeos. 	4996.0000000000000	44964
+002009	35	ud	Pate de polipropileno con alma de acero de 16 mm de diámetro y 1.00 m de desarrollo, colocado. 	764.0000000000000	26740
+005002	5	ud	Tapa de fundición nodular o dúctil de 0.70m de diámetro, incluso acero colocado. 	18209.0000000000000	91045
+02003V	25.38	m3	Hormigón para armar HA-25, en cimentaciones y estructuras, incluso transporte, colocación y vibrado. 	14318.0000000000000	363391
+02015V	2049.35	kg	Acero B-500 S de LE 5000kg/cm2 en redondos corrugados colocado. 	142.0000000000000	291008
+				Total: 	DE VENTOSA SIN CASETA.	1413664.4599999999270
+DE VALVULAS DE MARIPOSA CON CASETA.
+001004	29.17	m3	Excavación mecánica en pozos, con retroexcavadora, incluso apeos, relleno, compactación y transporte de material sobrante, en cualquier clase de terreno excluidos los de roca. 	753.0000000000000	21965
+002005	42.88	m2	Encofrado de madera y desencofrado en cimentaciones y alzados, incluso apeos. 	3547.0000000000000	152095
+002009	8	ud	Pate de polipropileno con alma de acero de 16 mm de diámetro y 1.00 m de desarrollo, colocado. 	764.0000000000000	6112
+004002	15.86	m2	Fabrica de ladrillo macizo de medio pie de espesor, recibido con mortero de cemento 1:6, incluso p.p. de replanteo, aplomado y nivelación, totalmente acabado. 	3207.0000000000000	50863
+004010	5	ud	Pieza de hormigón de 20 x 20 x 8 cm, para celosias, con galce de vidrio, colocada. 	500.0000000000000	2500
+004011	35	m2	Enfoscado y fratasado con morteo de cemento 1:3 en paramentos verticales y horizontales. 	1211.0000000000000	42385
+004013	18.99	m2	Encalado a dos manos en paramentos verticales y horizontales 	235.0000000000000	4462.65
+005037	2.52	m2	Puerta de chapa lisa de acero con rigidizadores rectangulares, incluso cerco, herrajes de colgar y seguridad, pintada y colocada, incluso cerradura 	15163.0000000000000	38210.8
+005038	5.67	m2	Cubierta de teja curva formada con tablero machiembrado de 100x25x4, capa de compresión de 30mm, de mortero 1:6 y teja cerámica curva recibida con mortero de cemento 1:8, i/p.p. de arriostramiento transversal, limas, caballetes, emboquillado y remates. 	5888.0000000000000	33385
+02003V	8.63	m3	Hormigón para armar HA-25, en cimentaciones y estructuras, incluso transporte, colocación y vibrado. 	14318.0000000000000	123564
+02008V	111.55	kg	Acero S-275 JR de LE 4200 kg/cm2 en perfiles laminados y basas, imprimación de minio, solado y colocado. 	250.0000000000000	27887.5
+02015V	507.95	kg	Acero B-500 S de LE 5000kg/cm2 en redondos corrugados colocado. 	142.0000000000000	72128.9
+				Total: 	DE VALVULAS DE MARIPOSA CON CASETA.	575559.5000000000169
+TUBERIAS DE DESAGÜE.
+001003	283.229	m3	Excavación mecánica en zanja, con retroexcavadora, incluso apeos, entibaciones y transporte de material sobrante, en cualquier clase de terreno excluidos los de roca. 	750.0000000000000	212422
+001006	154.982	m3	Excavación en zanja con retromartillo rompedor, con extracción, apeos, entibaciones y transporte de material sobrante, en terreno de roca. 	3294.0000000000000	510512
+001010	0.75	m3	Zahorra natural, incluso extendido, perfilado y compactación. 	1026.0000000000000	769.5
+001013	5	m2	Rotura de pavimento de cualquier clase, con martillo rompedor, incluso transporte de material sobrante a vertedero. 	671.0000000000000	3355
+001016	5	m2	Reparación de pavimento bituminoso mediante riego de imprimación y cpa de mezcla asfáltica en frío de 5 cm de espesor, extendida y compactada. 	855.0000000000000	4275
+001019	24.948	m3	Arena de zanja para asiento y recubrimiento de tuberías, incluso compactación cin medios ligeros, hasta el 90% del Proctor Normal. 	2370.0000000000000	59126.8
+003113	252	m	Tubería PVC PN 6atm D160mm con p.p. de junta colocada y probada 	2307.0000000000000	581364
+01120V	66.9312	m3	Relleno y compactación de zanjas con productos seleccionados procedentes de la propia excavación o de préstamos, tendido en capas sucesivas de 30 cm de espesor, hasta alcanzar el 95% del P.N., incluso transporte. 	721.0000000000000	48257.4
+01220V	335.506	m3	Relleno y compactación de zanjas con productos procedentes de la propia excavación, tamaño máximo 100 mm, tendido en capas sucesivas de 30 cm de espesor, hasta alcanzar el 95% del P.N., incluso transporte. 	549.0000000000000	184193
+02002V	2.16312	m3	Hormigón en masa HM-15 en rellenos, soleras y pequeñas unidades sin armar, inlcuso transporte y colocación. 	12760.0000000000000	27601.4
+				Total: 	TUBERIAS DE DESAGÜE.	1631876.0457999999853
+SEGUNDO TRAMO. CRUCE DEL RIO.
+CONDUCCION. MOVIMIENTO DE TIERRAS Y TUBERIAS.
+001028	201.715	m3	Excavación mecánica en zanja con retroexcavadora en cualquier clase de terreno con agotamiento, incluso apeos, entibaciones y transporte de material sobrante a vertedero. 	856.0000000000000	172668
+001033	561	m3	Terraplén de suelo adecuado de préstamos, según Art. 330 PG3, en tongadas de 0.30m de espesor como máximo, humectación compactado hasta el 95% del ensayo. Proctor Modificado. 	2905.0000000000000	1.6297e+06
+001034	34	m3	Escollera en protección de taludes y rellenos con peso mínimo de piedra de 50kg, totalmente colocada. 	2538.0000000000000	86292
+001035	595	m3	Demolición de terraplén, incluso carga y transporte a acopio o vertedero. 	617.0000000000000	367115
+003002	34	m	Tubería de fundición dúctil de 500mm de diámetro nominal, según ISO 2531, con p.p. de junta, incluso cinta de señalización y demás accesorios, colocado y probado. 	24972.0000000000000	849048
+02002V	50.2984	m3	Hormigón en masa HM-15 en rellenos, soleras y pequeñas unidades sin armar, inlcuso transporte y colocación. 	12760.0000000000000	641808
+				Total: 	CONDUCCION. MOVIMIENTO DE TIERRAS Y TUBERIAS.	3746636.1780000000454
+VALVULAS Y PIEZAS ESPECIALES.
+003008	2	ud	Carrete de desmontaje de DN500mm, montaje y pruebas. 	116645.0000000000000	233290
+003017	1	ud	Empalme brida-enchufe de fundición dúctil de DN 500 mm, incluida p.p. junta y demás elementos necesarios, colocado y probado. 	76833.0000000000000	76833
+003026	2	ud	Carrete de anclaje pasamuros de fundición dúctil de 500mm de diámetro nominal y 1m de longitud,colocado y probado. 	133790.0000000000000	267580
+003031	1	ud	T enchufe-enchufe derivación brida de fundición dúctil de DN500/500/150mm, tornillos para bridas, p.p. de junta, anclaje de hormigón, colocada y probada. 	168120.0000000000000	168120
+003045	1	ud	Codo de 90§ brida-brida de fundición dúctil DN 150mm, incluso p.p. de tornillos, juntas, colocacion y pruebas. 	18829.0000000000000	18829
+003055	1	ud	Válvula de compuerta de asiento elástico de DN 150mm, unión mediante bridas, modelo corto, colocada y probada. 	56697.0000000000000	56697
+003092	2	ud	Empalme brida-liso de fundición dúctil de DN500mm, incluso p.p. tornillos y junta y demás elementos necesarios, colocado y probado. 	48329.0000000000000	96658
+003095	2	ud	Válvula de mariposa de DN 500mm, presión máxima de trabajo 16kp/cm2, montaje entre bridas, mando manual por volante, desmultiplicador, dos limitadores de par y dos contactos finales de carrera, incluyendo montaje y pruebas. 	559961.0000000000000	1.11992e+06
+003103	1	ud	Pasamuro de PVC de DN hasta 150mm, con junta de caucho, totalmente instalado. 	3470.0000000000000	3470
+003111	2	ud	Manguito de fundición dúctil de DN500mm, según ISO 2531, embridado de 1m de longitud colocado y probado. 	215402.0000000000000	430804
+003112	2	ud	Codo 90§ brida-brida de fundición dúctil de DN500mm, incluso p.p. de tornillos, juntas, colocado y probado. 	316941.0000000000000	633882
+003114	1	ud	Adaptador de brida enchufe para tubos de PVC de D 160mm, incluso tornillos y p.p. de junta colocado y probado. 	12986.0000000000000	12986
+03065V	1	ud	Empalme brida-liso de fundición dúctil, PN 16 atm. DN 500 mm, incluida p.p. junta y demas elementos necesarios, colocado y probado. 	43597.0000000000000	43597
+				Total: 	VALVULAS Y PIEZAS ESPECIALES.	3162668.0000000000000
+ARQUETAS.
+DE VALVULAS SIN CASETA.
+001004	39.16	m3	Excavación mecánica en pozos, con retroexcavadora, incluso apeos, relleno, compactación y transporte de material sobrante, en cualquier clase de terreno excluidos los de roca. 	753.0000000000000	29487.5
+002005	53.66	m2	Encofrado de madera y desencofrado en cimentaciones y alzados, incluso apeos. 	3547.0000000000000	190332
+002006	2.55	m2	Encofrado de madera y desencofrado en losas o bóvedas y alzados, incluso apeos. 	4996.0000000000000	12739.8
+002009	10	ud	Pate de polipropileno con alma de acero de 16 mm de diámetro y 1.00 m de desarrollo, colocado. 	764.0000000000000	7640
+004014	18.55	m2	Pintura plástica de resina epoxy, dos capas sobre suelo y paredes de hormigón, incluso ligado o limpieza, mano de imprimación especial epoxy, diluido, pastecido de golpes con masilla especial y lijado de parches. 	2040.0000000000000	37842
+005002	1	ud	Tapa de fundición nodular o dúctil de 0.70m de diámetro, incluso acero colocado. 	18209.0000000000000	18209
+02003V	11.45	m3	Hormigón para armar HA-25, en cimentaciones y estructuras, incluso transporte, colocación y vibrado. 	14318.0000000000000	163941
+02015V	729.46	kg	Acero B-500 S de LE 5000kg/cm2 en redondos corrugados colocado. 	142.0000000000000	103583
+				Total: 	DE VALVULAS SIN CASETA.	563774.7199999999809
+DE VALVULAS Y DESAGÜE SIN CASETA.
+001004	41.18	m3	Excavación mecánica en pozos, con retroexcavadora, incluso apeos, relleno, compactación y transporte de material sobrante, en cualquier clase de terreno excluidos los de roca. 	753.0000000000000	31008.5
+002005	56.36	m2	Encofrado de madera y desencofrado en cimentaciones y alzados, incluso apeos. 	3547.0000000000000	199909
+002006	3.2	m2	Encofrado de madera y desencofrado en losas o bóvedas y alzados, incluso apeos. 	4996.0000000000000	15987.2
+002009	10	ud	Pate de polipropileno con alma de acero de 16 mm de diámetro y 1.00 m de desarrollo, colocado. 	764.0000000000000	7640
+004014	21.2	m2	Pintura plástica de resina epoxy, dos capas sobre suelo y paredes de hormigón, incluso ligado o limpieza, mano de imprimación especial epoxy, diluido, pastecido de golpes con masilla especial y lijado de parches. 	2040.0000000000000	43248
+005002	1	ud	Tapa de fundición nodular o dúctil de 0.70m de diámetro, incluso acero colocado. 	18209.0000000000000	18209
+02003V	11.97	m3	Hormigón para armar HA-25, en cimentaciones y estructuras, incluso transporte, colocación y vibrado. 	14318.0000000000000	171386
+02015V	759.36	kg	Acero B-500 S de LE 5000kg/cm2 en redondos corrugados colocado. 	142.0000000000000	107829
+				Total: 	DE VALVULAS Y DESAGÜE SIN CASETA.	595217.2400000000083
+TERCER TRAMO. RIO A DEPOSITO.
+CONDUCCION. MOVIMIENTO DE TIERRAS Y TUBERIAS.
+001003	5644.6	m3	Excavación mecánica en zanja, con retroexcavadora, incluso apeos, entibaciones y transporte de material sobrante, en cualquier clase de terreno excluidos los de roca. 	750.0000000000000	4.23345e+06
+001005	1271.05	m3	Exvcavación manual en zanja o pozo, en cualquier clase de terreno, incluso apeos, entibaciones y transporte de material sobrante. 	4330.0000000000000	5.50366e+06
+001006	1046.1	m3	Excavación en zanja con retromartillo rompedor, con extracción, apeos, entibaciones y transporte de material sobrante, en terreno de roca. 	3294.0000000000000	3.44586e+06
+001010	342.901	m3	Zahorra natural, incluso extendido, perfilado y compactación. 	1026.0000000000000	351817
+001013	2389.65	m2	Rotura de pavimento de cualquier clase, con martillo rompedor, incluso transporte de material sobrante a vertedero. 	671.0000000000000	1.60346e+06
+001016	2389.65	m2	Reparación de pavimento bituminoso mediante riego de imprimación y cpa de mezcla asfáltica en frío de 5 cm de espesor, extendida y compactada. 	855.0000000000000	2.04315e+06
+001019	753.638	m3	Arena de zanja para asiento y recubrimiento de tuberías, incluso compactación cin medios ligeros, hasta el 90% del Proctor Normal. 	2370.0000000000000	1.78612e+06
+003002	2740.5	m	Tubería de fundición dúctil de 500mm de diámetro nominal, según ISO 2531, con p.p. de junta, incluso cinta de señalización y demás accesorios, colocado y probado. 	24972.0000000000000	6.84358e+07
+003017	1	ud	Empalme brida-enchufe de fundición dúctil de DN 500 mm, incluida p.p. junta y demás elementos necesarios, colocado y probado. 	76833.0000000000000	76833
+003092	1	ud	Empalme brida-liso de fundición dúctil de DN500mm, incluso p.p. tornillos y junta y demás elementos necesarios, colocado y probado. 	48329.0000000000000	48329
+003112	1	ud	Codo 90§ brida-brida de fundición dúctil de DN500mm, incluso p.p. de tornillos, juntas, colocado y probado. 	316941.0000000000000	316941
+003121	3	ud	Codo de 45§ enchufe-enchufe de fundición dúctil de DN500mm incluso p.p. de juntas, colocado y probado. 	170050.0000000000000	510150
+01120V	2603.27	m3	Relleno y compactación de zanjas con productos seleccionados procedentes de la propia excavación o de préstamos, tendido en capas sucesivas de 30 cm de espesor, hasta alcanzar el 95% del P.N., incluso transporte. 	721.0000000000000	1.87696e+06
+01220V	3331.53	m3	Relleno y compactación de zanjas con productos procedentes de la propia excavación, tamaño máximo 100 mm, tendido en capas sucesivas de 30 cm de espesor, hasta alcanzar el 95% del P.N., incluso transporte. 	549.0000000000000	1.82901e+06
+02002V	353.171	m3	Hormigón en masa HM-15 en rellenos, soleras y pequeñas unidades sin armar, inlcuso transporte y colocación. 	12760.0000000000000	4.50647e+06
+				Total: 	CONDUCCION. MOVIMIENTO DE TIERRAS Y TUBERIAS.	96567972.9740825008994
+VALVULAS Y PIEZAS ESPECIALES.
+EN DESAGÜES. (INCLUYE CONEXION ALCANTARILLADO).
+001003	13.68	m3	Excavación mecánica en zanja, con retroexcavadora, incluso apeos, entibaciones y transporte de material sobrante, en cualquier clase de terreno excluidos los de roca. 	750.0000000000000	10260
+001010	1.26	m3	Zahorra natural, incluso extendido, perfilado y compactación. 	1026.0000000000000	1292.76
+001013	8.4	m2	Rotura de pavimento de cualquier clase, con martillo rompedor, incluso transporte de material sobrante a vertedero. 	671.0000000000000	5636.4
+001016	8.4	m2	Reparación de pavimento bituminoso mediante riego de imprimación y cpa de mezcla asfáltica en frío de 5 cm de espesor, extendida y compactada. 	855.0000000000000	7182
+001019	2.88	m3	Arena de zanja para asiento y recubrimiento de tuberías, incluso compactación cin medios ligeros, hasta el 90% del Proctor Normal. 	2370.0000000000000	6825.6
+003017	2	ud	Empalme brida-enchufe de fundición dúctil de DN 500 mm, incluida p.p. junta y demás elementos necesarios, colocado y probado. 	76833.0000000000000	153666
+003026	2	ud	Carrete de anclaje pasamuros de fundición dúctil de 500mm de diámetro nominal y 1m de longitud,colocado y probado. 	133790.0000000000000	267580
+003031	2	ud	T enchufe-enchufe derivación brida de fundición dúctil de DN500/500/150mm, tornillos para bridas, p.p. de junta, anclaje de hormigón, colocada y probada. 	168120.0000000000000	336240
+003045	2	ud	Codo de 90§ brida-brida de fundición dúctil DN 150mm, incluso p.p. de tornillos, juntas, colocacion y pruebas. 	18829.0000000000000	37658
+003055	2	ud	Válvula de compuerta de asiento elástico de DN 150mm, unión mediante bridas, modelo corto, colocada y probada. 	56697.0000000000000	113394
+003092	2	ud	Empalme brida-liso de fundición dúctil de DN500mm, incluso p.p. tornillos y junta y demás elementos necesarios, colocado y probado. 	48329.0000000000000	96658
+003103	2	ud	Pasamuro de PVC de DN hasta 150mm, con junta de caucho, totalmente instalado. 	3470.0000000000000	6940
+003111	2	ud	Manguito de fundición dúctil de DN500mm, según ISO 2531, embridado de 1m de longitud colocado y probado. 	215402.0000000000000	430804
+003113	12	m	Tubería PVC PN 6atm D160mm con p.p. de junta colocada y probada 	2307.0000000000000	27684
+003114	2	ud	Adaptador de brida enchufe para tubos de PVC de D 160mm, incluso tornillos y p.p. de junta colocado y probado. 	12986.0000000000000	25972
+01120V	10.8	m3	Relleno y compactación de zanjas con productos seleccionados procedentes de la propia excavación o de préstamos, tendido en capas sucesivas de 30 cm de espesor, hasta alcanzar el 95% del P.N., incluso transporte. 	721.0000000000000	7786.8
+02002V	1.26	m3	Hormigón en masa HM-15 en rellenos, soleras y pequeñas unidades sin armar, inlcuso transporte y colocación. 	12760.0000000000000	16077.6
+				Total: 	EN DESAGÜES. (INCLUYE CONEXION ALCANTARILLADO).	1551657.1600000000008
+EN VENTOSAS.
+003017	2	ud	Empalme brida-enchufe de fundición dúctil de DN 500 mm, incluida p.p. junta y demás elementos necesarios, colocado y probado. 	76833.0000000000000	153666
+003021	2	ud	Ventosa trifuncional, DN100mm, con válvula de cierre incorporada, caudal máximo de entrada de aire 649 l/seg, caudal máximo salida de aire 442 l/seg. 	162803.0000000000000	325606
+003035	2	ud	T enchufe-enchufe derivación brida de fundición dúctil de DN500/500/100mm, tornillos para bridas, p.p. de junta, anclaje de hormigón, colocada y probada. 	168120.0000000000000	336240
+003092	2	ud	Empalme brida-liso de fundición dúctil de DN500mm, incluso p.p. tornillos y junta y demás elementos necesarios, colocado y probado. 	48329.0000000000000	96658
+003111	4	ud	Manguito de fundición dúctil de DN500mm, según ISO 2531, embridado de 1m de longitud colocado y probado. 	215402.0000000000000	861608
+				Total: 	EN VENTOSAS.	1773778.0000000000000
+ARQUETAS.
+DE DESAGÜE SIN CASETA.
+001004	52.9	m3	Excavación mecánica en pozos, con retroexcavadora, incluso apeos, relleno, compactación y transporte de material sobrante, en cualquier clase de terreno excluidos los de roca. 	753.0000000000000	39833.7
+001013	18.56	m2	Rotura de pavimento de cualquier clase, con martillo rompedor, incluso transporte de material sobrante a vertedero. 	671.0000000000000	12453.8
+002005	78.72	m2	Encofrado de madera y desencofrado en cimentaciones y alzados, incluso apeos. 	3547.0000000000000	279220
+002006	3.84	m2	Encofrado de madera y desencofrado en losas o bóvedas y alzados, incluso apeos. 	4996.0000000000000	19184.6
+002009	18	ud	Pate de polipropileno con alma de acero de 16 mm de diámetro y 1.00 m de desarrollo, colocado. 	764.0000000000000	13752
+005002	2	ud	Tapa de fundición nodular o dúctil de 0.70m de diámetro, incluso acero colocado. 	18209.0000000000000	36418
+02003V	15.19	m3	Hormigón para armar HA-25, en cimentaciones y estructuras, incluso transporte, colocación y vibrado. 	14318.0000000000000	217490
+02015V	660.27	kg	Acero B-500 S de LE 5000kg/cm2 en redondos corrugados colocado. 	142.0000000000000	93758.3
+				Total: 	DE DESAGÜE SIN CASETA.	712110.6999999999837
+DE VENTOSA SIN CASETA.
+001004	39.93	m3	Excavación mecánica en pozos, con retroexcavadora, incluso apeos, relleno, compactación y transporte de material sobrante, en cualquier clase de terreno excluidos los de roca. 	753.0000000000000	30067.3
+001013	17.36	m2	Rotura de pavimento de cualquier clase, con martillo rompedor, incluso transporte de material sobrante a vertedero. 	671.0000000000000	11648.6
+002005	57.48	m2	Encofrado de madera y desencofrado en cimentaciones y alzados, incluso apeos. 	3547.0000000000000	203882
+002006	3.6	m2	Encofrado de madera y desencofrado en losas o bóvedas y alzados, incluso apeos. 	4996.0000000000000	17985.6
+002009	14	ud	Pate de polipropileno con alma de acero de 16 mm de diámetro y 1.00 m de desarrollo, colocado. 	764.0000000000000	10696
+005002	2	ud	Tapa de fundición nodular o dúctil de 0.70m de diámetro, incluso acero colocado. 	18209.0000000000000	36418
+02003V	10.16	m3	Hormigón para armar HA-25, en cimentaciones y estructuras, incluso transporte, colocación y vibrado. 	14318.0000000000000	145471
+02015V	819.74	kg	Acero B-500 S de LE 5000kg/cm2 en redondos corrugados colocado. 	142.0000000000000	116403
+				Total: 	DE VENTOSA SIN CASETA.	572570.9699999999921
+PARTIDA ALZADA A JUSTIFICAR PARA REPOSICIONES.
+pa001	1	pa$	Partida alzada a justificar para reposición en zona urbana. 	9500000.0000000000000	9.5e+06
+				Total: 	PARTIDA ALZADA A JUSTIFICAR PARA REPOSICIONES.	9500000.0000000000000
+CONDUCCION DESDE DEPOSITO CEMENTERIO A CIUDAD.
+001003	3713.28	m3	Excavación mecánica en zanja, con retroexcavadora, incluso apeos, entibaciones y transporte de material sobrante, en cualquier clase de terreno excluidos los de roca. 	750.0000000000000	2.78496e+06
+001010	46.2726	m3	Zahorra natural, incluso extendido, perfilado y compactación. 	1026.0000000000000	47475.7
+001013	323.874	m2	Rotura de pavimento de cualquier clase, con martillo rompedor, incluso transporte de material sobrante a vertedero. 	671.0000000000000	217319
+001016	323.874	m2	Reparación de pavimento bituminoso mediante riego de imprimación y cpa de mezcla asfáltica en frío de 5 cm de espesor, extendida y compactada. 	855.0000000000000	276912
+001019	365.988	m3	Arena de zanja para asiento y recubrimiento de tuberías, incluso compactación cin medios ligeros, hasta el 90% del Proctor Normal. 	2370.0000000000000	867390
+003002	1273	m	Tubería de fundición dúctil de 500mm de diámetro nominal, según ISO 2531, con p.p. de junta, incluso cinta de señalización y demás accesorios, colocado y probado. 	24972.0000000000000	3.17894e+07
+003121	1	ud	Codo de 45§ enchufe-enchufe de fundición dúctil de DN500mm incluso p.p. de juntas, colocado y probado. 	170050.0000000000000	170050
+003127	1	ud	Brida ciega de fundición dúctil de DN 500mm, incluso anclaje de hormigón, completa, colocada y probada. 	116178.0000000000000	116178
+01120V	1194.69	m3	Relleno y compactación de zanjas con productos seleccionados procedentes de la propia excavación o de préstamos, tendido en capas sucesivas de 30 cm de espesor, hasta alcanzar el 95% del P.N., incluso transporte. 	721.0000000000000	861372
+01220V	1790.38	m3	Relleno y compactación de zanjas con productos procedentes de la propia excavación, tamaño máximo 100 mm, tendido en capas sucesivas de 30 cm de espesor, hasta alcanzar el 95% del P.N., incluso transporte. 	549.0000000000000	982918
+02002V	47.8116	m3	Hormigón en masa HM-15 en rellenos, soleras y pequeñas unidades sin armar, inlcuso transporte y colocación. 	12760.0000000000000	610076
+				Total: 	CONDUCCION DESDE DEPOSITO CEMENTERIO A CIUDAD.	38724007.6383100005623
+DEPOSITO DE CABECERA.
+URBANIZACION.
+001001	298.125	m2	Desbroce y limpieza de terreno por medios mecánicos hasta 30 cm de espesor, incluido el transporte a vertedero. 	99.0000000000000	29514.4
+001002	5721.67	m3	Excavación mecánica de desmonte y transporte a lugar de empleo o vertedero de terrenos de cualquier naturaleza o consistencia. 	352.0000000000000	2.01403e+06
+001008	149.062	m3	Formación de terraplén con suelo adecuado procedente de la propia excavación o prestamos, con índice CBR>5, extendido en capas de 20 cm de espesor, riego a humedad óptima y compactación mínima del 96% del Proctor Normal. 	749.0000000000000	111648
+001009	67	m3	Zahorra artificial, incluso extendido, perfilado y compactación. 	1610.0000000000000	107870
+001017	297.5	m2	Riego de imprimación de firme granular, mediante riego de emulsión asfáltica ECR-0 en caliente, en la cantidad de 1kg/m2, incluida la limpisa orevia del firme par aeliminación completa del polvo. 	115.0000000000000	34212.5
+001022	19.3375	tm	Mezcla bituminosa en caliente tipo S-12, con árido calizo, incluida su puesta en obra, extendido y compactación. 	3713.0000000000000	71800.1
+001031	32	m	Canalización tipo para cable eléctrico, de 0,40 x 0,60 m, incluso tubo de PCV, colocado. 	650.0000000000000	20800
+004004	42	m	Bordillo recto doble capa de hormigón prefabricado, de 22cm de alto y 20cm de base, colocado. 	959.0000000000000	40278
+004008	34	m2	Pavimento de baldosa hibráulica antideslizante de 0.3 x 0.3 m2, con 66 pastillas color gris y p.p. roja, incluso mortero de agarre proporción 1:6, colocación y enlechado. 	2311.0000000000000	78574
+005012	4	ud	Suministro y plantación de plátano de 14-16cm, a raíz desnuda, incluso apertura de hoyo de 0.60x0.60x0.60m y primer riego. 	4804.0000000000000	19216
+005019	2.5	m3	Mantillo expendido en capas de 1cm 	4056.0000000000000	10140
+005020	25	m2	Césped semillado, con mezcla de Lolium Poa, Agrostis y Festuca, incluso preparación del terreno, abono siembra, riego y primer corte. 	354.0000000000000	8850
+005021	5	m3	Tierra vegetal en aporte de capas de espesor medio de 20cm incluso extendido y perfilado a mano. 	1820.0000000000000	9100
+005035	215	m2	Cerramiento metálico realizado con postes cada 2.5m de pletinas metálicas de 40x20mm de espesor y malla galvanizada de simple torsión, tirantes, garras y p.p. de cimentación y ayuds de albañileria. Medida la superficie ejecutada. 	1361.0000000000000	292615
+005047	1	ud	Puerta batiente, en perfiles galvanizados en caliente, alambre ondulado de 30x30cm, provista de columna de sosten y cerradura para llave plana, de 5x2m, toatalmente instalada. 	110231.0000000000000	110231
+006004	36	m	Cable conductor para tensión de servicio de hasta 1000V formado por cuerda compacta de hilo de cobre estañado, aislado con polietileno reticulado cargado y recubierto por una funda de PVC (UNE RV - 0.6/1 KV) de 4x16mm2, totalmente colocado en canalización de baja tensión 	998.0000000000000	35928
+006005	16	m	Cable conductor para tensión de servicio de hasta 1000V formado por cuerda compacta de hilo de cobre estañado, aislado con polietileno reticulado cargado y recubierto por una funda de PVC (UNE RV - 0.6/1 KV) de 2x1.5mm2, totalmente colocado en canalización de baja tensión 	146.0000000000000	2336
+006007	2	ud	Báculo de 9m de altura y brazo de 1.5m en chapa de acero galvanizado de 4mm de espesor, incluso anclaje y conexión a la canalización de alumbrado según se especifica en planos. 	84874.0000000000000	169748
+006008	2	ud	Luminaria tipo M-400A o similar, carcasa de fundición inyectada de aluminio, reflector de aluminio tratado, filtro, cierre refractor de aluminio vidrio borosilicatado, equipada indistintamente para lámpara V.S.A.P. de 400W o 250W, con reductro de consumo totalmente instalada sobre columna o báculo. 	48922.0000000000000	97844
+006009	2	ud	Lámpara de 250W de vapor sodio de alta presión rosca Goliar, colocada. 	8294.0000000000000	16588
+006010	2	ud	Equipo de reactancia, condensador, de 250W 220V AF para lámpara de vapor de sodio de alta presión, colocado. 	12696.0000000000000	25392
+006011	2	ud	Cofre para protección de conexión a punto de luz, situado en báculo o columna colocado. 	2205.0000000000000	4410
+006012	2	ud	Toma de tierra, formada por pica de alma de acero al carbono con una capa de cobre puro, según definición en planos, colocada. 	2045.0000000000000	4090
+006013	1	ud	Interruptor IV manual, Norma UNE 20.129, tipo S-23 bc de 100A, incluso mangueta colocado. 	12230.0000000000000	12230
+006014	1	ud	Interruptor III manual, Norma UNE 20.129, tipo S-23 b de 63A, incluso mangueta colocado. 	6523.0000000000000	6523
+006020	1	ud	Módulo de contadores III para activa, reactiva y horas valle, según normas de la empresa suministradora, colocado. 	32032.0000000000000	32032
+006024	1	pa$	Partida Alzada de enganche de la instalación a la red general, a justificar. 	208000.0000000000000	208000
+02001V	3.4	m3	Hormigón en masa HM-12,5 con capa de base de calzadas incluso transporte, colocación y vibrado. 	10698.0000000000000	36373.2
+02002V	7.5	m3	Hormigón en masa HM-15 en rellenos, soleras y pequeñas unidades sin armar, inlcuso transporte y colocación. 	12760.0000000000000	95700
+				Total: 	URBANIZACION.	3706070.4250000001750
+DEPOSITO.
+001001	1785	m2	Desbroce y limpieza de terreno por medios mecánicos hasta 30 cm de espesor, incluido el transporte a vertedero. 	99.0000000000000	176715
+001002	5721.67	m3	Excavación mecánica de desmonte y transporte a lugar de empleo o vertedero de terrenos de cualquier naturaleza o consistencia. 	352.0000000000000	2.01403e+06
+001029	65.025	m3	Gravilla para protección de lámina impermeabilizante de cubierta de depósito, colocada en capa de 10cm de espesor medio. 	3278.0000000000000	213152
+002005	2328.94	m2	Encofrado de madera y desencofrado en cimentaciones y alzados, incluso apeos. 	3547.0000000000000	8.26075e+06
+002006	263.16	m2	Encofrado de madera y desencofrado en losas o bóvedas y alzados, incluso apeos. 	4996.0000000000000	1.31475e+06
+002009	38	ud	Pate de polipropileno con alma de acero de 16 mm de diámetro y 1.00 m de desarrollo, colocado. 	764.0000000000000	29032
+002010	144.55	m	Junta de dilatación en solera de depósito formada por banda de PVC de 25 cm de anchura, cordón de espuma de polietileno de célula cerrada para relleno de junta y soporte de sellado, imprimación para sellador de polisulfuro y sellador bicomponente de polisulfuro según detalle de planos, totalmente realizada y probada, incluso p.p. de soldadura y piezas especiales en cruces y uniones entre juntas. 	2338.0000000000000	337958
+002012	144.55	m	Sellado de juntas verticales y muro zapata de depósito formado por cordón de espuma de polietileno de célula cerrada para relleno de junta y soporte de sellado, imprimación para sellador de polisulfuro y sellador bicomponente de polisulfuro según detalle de planos, totalmente realizada y probada. 	661.0000000000000	95547.6
+005014	2678	m2	Lámina de impermeabilización de PVC armado con fibra de poliester de 1.2mm de espesor para impermeabilización de cubierta de depósito, incluso parte proporcional de solapes, soldaduras y recortes, totalmente colocada y probada 	1912.0000000000000	5.12034e+06
+005046	2	ud	Trampa de acceso simple en acero inoxidable de 0.70x0.70m con marco angular y cierre estanco, totalmente colocada. 	31683.0000000000000	63366
+005048	1.08	m2	Malla tupida en alambre de acero inoxidable para ventilación del depósito, de paso inferior a 2mm colocada en parte superior de paneles prefabricados, incluso colocación. 	2271.0000000000000	2452.68
+01014V	535.6	m3	Suministro, extensión y compactación de grava bajo soleras, incluso recebo y nivelación 	2110.0000000000000	1.13012e+06
+02001V	133.9	m3	Hormigón en masa HM-12,5 con capa de base de calzadas incluso transporte, colocación y vibrado. 	10698.0000000000000	1.43246e+06
+02004V	1343.07	m3	Hormigón para armar HA-30, en soleras y muros, incluso transporte, colocación y vibrado. 	15030.0000000000000	2.01864e+07
+02014V	1339	m2	Forjado alveolar de elementos prefabricados de 20 cm de espesor de placas pretensadas aligeradas por alveolos longitudinales para una sobrecarga de uso de 100 Kg/m2 con una luz máxima de 6,50 m 	8753.0000000000000	1.17203e+07
+02015V	97962.6	kg	Acero B-500 S de LE 5000kg/cm2 en redondos corrugados colocado. 	142.0000000000000	1.39107e+07
+02024V	82.3005	m3	Hormigón para armar HA-30, en pilares y vigas, incluso transporte, colocación y vibrado. 	15407.0000000000000	1.268e+06
+02025V	66.95	m3	Hormigón celulara en rellenos para formación de pendientes, incluso transporte y colocación. 	11729.0000000000000	785257
+02026V	43.2	dm3	Neopreno zunchado en apoyos anclados 	4059.0000000000000	175349
+02027V	103.5	m	Tubo dren de polietileno de 150 mm de diámetro, incluso cama de arena silícea, completamente instalado 	1021.0000000000000	105674
+02028V	9	m	Escalera metálica formada por dos largueros de UPN 100 y peldaños de malla de 30x30 mm con pletina portante de 25x2 mm de 1,50 m de ancho, soldada con barandillas, pintado al esmalte y colocada 	5750.0000000000000	51750
+02029V	4	ud	Sumidero de cubierta formado por tubería de PVC rígido extruido de 80 mm de diámetro, incluso codo, alcachofa y demás accesorios 	4500.0000000000000	18000
+02030V	53.9	m2	Fábrica de ladrillo macizo de un pie de espesor, una cara vista y enfoscda con mortero de cemento la otra, incluyendo los materiales y su colocación 	8325.0000000000000	448717
+02031V	154	m	Albardilla de piedra artificial totalmente colocada 	1475.0000000000000	227150
+02035V	26.78	m3	Mortero de cemento, dosificación 1/3, incluso parte proporcional de extendido, rasanteo, nivelación y enlucido 	11360.0000000000000	304221
+				Total: 	DEPOSITO.	69392159.4634999999616
+CAMARA DE LLAVES.
+001004	164.835	m3	Excavación mecánica en pozos, con retroexcavadora, incluso apeos, relleno, compactación y transporte de material sobrante, en cualquier clase de terreno excluidos los de roca. 	753.0000000000000	124121
+001029	2.9	m3	Gravilla para protección de lámina impermeabilizante de cubierta de depósito, colocada en capa de 10cm de espesor medio. 	3278.0000000000000	9506.2
+002005	161.68	m2	Encofrado de madera y desencofrado en cimentaciones y alzados, incluso apeos. 	3547.0000000000000	573479
+002014	58	m2	Forjado 20+5cm, formado a base de viguetas de hormigón pretensado, autoresistente, separados 60 cm entre ejes, bovedilla de 60x25x20cm y capa de compresión de 5cm de H-175kp/cm2. Tmax 20mm, elaborado en obra o central, armadura(1.80 kg/m2) totalmente terminado (carga total 630kg/m2) 	8753.0000000000000	507674
+004012	58	m2	Enfoscado, maestrado y fratasado con mortero de cemento 1:3 en paramentos verticales y horizontales. 	2039.0000000000000	118262
+004015	3.52	m2	Puerta de doble chapa lisa de acero con rigidizadores rectangulares, incluso acero, herrajes de colgar y seguridad, pintada y colocada. 	15588.0000000000000	54869.8
+005014	116	m2	Lámina de impermeabilización de PVC armado con fibra de poliester de 1.2mm de espesor para impermeabilización de cubierta de depósito, incluso parte proporcional de solapes, soldaduras y recortes, totalmente colocada y probada 	1912.0000000000000	221792
+005045	1	ud	Polipasto de accionamiento manual con capacidad máxima de 500 kg colocado 	27117.0000000000000	27117
+005046	1	ud	Trampa de acceso simple en acero inoxidable de 0.70x0.70m con marco angular y cierre estanco, totalmente colocada. 	31683.0000000000000	31683
+01014V	30.496	m3	Suministro, extensión y compactación de grava bajo soleras, incluso recebo y nivelación 	2110.0000000000000	64346.6
+02001V	7.624	m3	Hormigón en masa HM-12,5 con capa de base de calzadas incluso transporte, colocación y vibrado. 	10698.0000000000000	81561.6
+02004V	57.592	m3	Hormigón para armar HA-30, en soleras y muros, incluso transporte, colocación y vibrado. 	15030.0000000000000	865608
+02015V	3201.08	kg	Acero B-500 S de LE 5000kg/cm2 en redondos corrugados colocado. 	142.0000000000000	454553
+02025V	2.9	m3	Hormigón celulara en rellenos para formación de pendientes, incluso transporte y colocación. 	11729.0000000000000	34014.1
+02029V	1	ud	Sumidero de cubierta formado por tubería de PVC rígido extruido de 80 mm de diámetro, incluso codo, alcachofa y demás accesorios 	4500.0000000000000	4500
+02030V	7.77	m2	Fábrica de ladrillo macizo de un pie de espesor, una cara vista y enfoscda con mortero de cemento la otra, incluyendo los materiales y su colocación 	8325.0000000000000	64685.2
+02031V	22.2	m	Albardilla de piedra artificial totalmente colocada 	1475.0000000000000	32745
+02032V	7.2	m2	Carpintería metálica en ventanas, incluso acristalamiento, colocación, pintado y acabado 	15250.0000000000000	109800
+02033V	4.2	m	Vierteaguas de piedra artificial recibido con mortero de cemento, totalmente colocado 	1760.0000000000000	7392
+02035V	1.16	m3	Mortero de cemento, dosificación 1/3, incluso parte proporcional de extendido, rasanteo, nivelación y enlucido 	11360.0000000000000	13177.6
+				Total: 	CAMARA DE LLAVES.	3400886.8569999999563
+TUBERIAS, VALVULAS Y ACCESORIOS.
+TUBERIAS, VALVULAS Y ACCESORIOS.
+001003	22.68	m3	Excavación mecánica en zanja, con retroexcavadora, incluso apeos, entibaciones y transporte de material sobrante, en cualquier clase de terreno excluidos los de roca. 	750.0000000000000	17010
+001019	6.52	m3	Arena de zanja para asiento y recubrimiento de tuberías, incluso compactación cin medios ligeros, hasta el 90% del Proctor Normal. 	2370.0000000000000	15452.4
+001020	14.18	m3	Relleno y compactación de zanjas con suelo seleccionado procedente de la propia excavación o de préstamos, tendido en capas sucesivas de 30cm de espesor, hasta alcanzar el 100% del P.N., incluso transporte. 	772.0000000000000	10947
+				Total: 	TUBERIAS, VALVULAS Y ACCESORIOS.	43409.3599999999986
+ENTRADA A DEPOSITO.
+003008	1	ud	Carrete de desmontaje de DN500mm, montaje y pruebas. 	116645.0000000000000	116645
+003012	1	ud	Carrete de desmontaje de DN300mm, montaje y pruebas. 	27949.0000000000000	27949
+003014	1	ud	Cono de reducción brida-brida de fundición dúctil de 500/350mm de diámetro nominal, completo, incluso anclaje de hormigón, colocado y probado. 	128986.0000000000000	128986
+003017	1	ud	Empalme brida-enchufe de fundición dúctil de DN 500 mm, incluida p.p. junta y demás elementos necesarios, colocado y probado. 	76833.0000000000000	76833
+003023	2	ud	Carrete de anclaje pasamuros de fundición dúctil con bridad de 300mm de diámetro nominal, y 1m de longitud,colocada y probada. 	62431.0000000000000	124862
+003025	3	ud	Codo de 90§ brida-brida de fundición dúctil DN 300mm, incluso p.p. juntas, colocacion y pruebas. 	69592.0000000000000	208776
+003030	1	ud	Medidor de caudal por ultrasonidos, incluyendo carrete para su montaje en tubería de 500mm de diámetro, totalmente instalado. Según E.T. 	747802.0000000000000	747802
+003094	1	ud	Cono de reducción de fundición dúctil brida-brida DN 350-300mm completo, incluso anclaje de hormigón colocado y probado. 	83014.0000000000000	83014
+003095	1	ud	Válvula de mariposa de DN 500mm, presión máxima de trabajo 16kp/cm2, montaje entre bridas, mando manual por volante, desmultiplicador, dos limitadores de par y dos contactos finales de carrera, incluyendo montaje y pruebas. 	559961.0000000000000	559961
+003096	1	ud	Válvula de mariposa de DN 300mm, presión máxima de trabajo 16kp/cm2, montaje entre bridas, mando manual por volante, desmultiplicador, dos limitadores de par y dos contactos finales de carrera, incluyendo montaje y pruebas. 	237360.0000000000000	237360
+003116	2	ud	Tubería de fundición dúctil de DN500mm, según ISO 2531, embridada en tramos de 0.5 a 1m de longitud, colocada y probada. 	242010.0000000000000	484020
+003133	2	ud	T con bridas de fundición dúctil de DN 500/500/300mm en bridas, incluso arandelas de material de plástico,tornillos para bridas, colocada y probada. 	195487.0000000000000	390974
+				Total: 	ENTRADA A DEPOSITO.	3187182.0000000000000
+SALIDA DE DEPOSITO.
+003012	2	ud	Carrete de desmontaje de DN300mm, montaje y pruebas. 	27949.0000000000000	55898
+003014	1	ud	Cono de reducción brida-brida de fundición dúctil de 500/350mm de diámetro nominal, completo, incluso anclaje de hormigón, colocado y probado. 	128986.0000000000000	128986
+003023	2	ud	Carrete de anclaje pasamuros de fundición dúctil con bridad de 300mm de diámetro nominal, y 1m de longitud,colocada y probada. 	62431.0000000000000	124862
+003024	2	ud	Tubería fundición dúctil de DN300mm, según ISO 2531, embridada en tramos de 0.5 y 2m de longitud, colocada y probada. 	165803.0000000000000	331606
+003025	7	ud	Codo de 90§ brida-brida de fundición dúctil DN 300mm, incluso p.p. juntas, colocacion y pruebas. 	69592.0000000000000	487144
+003030	1	ud	Medidor de caudal por ultrasonidos, incluyendo carrete para su montaje en tubería de 500mm de diámetro, totalmente instalado. Según E.T. 	747802.0000000000000	747802
+003092	1	ud	Empalme brida-liso de fundición dúctil de DN500mm, incluso p.p. tornillos y junta y demás elementos necesarios, colocado y probado. 	48329.0000000000000	48329
+003094	1	ud	Cono de reducción de fundición dúctil brida-brida DN 350-300mm completo, incluso anclaje de hormigón colocado y probado. 	83014.0000000000000	83014
+003096	2	ud	Válvula de mariposa de DN 300mm, presión máxima de trabajo 16kp/cm2, montaje entre bridas, mando manual por volante, desmultiplicador, dos limitadores de par y dos contactos finales de carrera, incluyendo montaje y pruebas. 	237360.0000000000000	474720
+003133	1	ud	T con bridas de fundición dúctil de DN 500/500/300mm en bridas, incluso arandelas de material de plástico,tornillos para bridas, colocada y probada. 	195487.0000000000000	195487
+				Total: 	SALIDA DE DEPOSITO.	2677848.0000000000000
+DESAGÜE DE FONDO.
+003012	2	ud	Carrete de desmontaje de DN300mm, montaje y pruebas. 	27949.0000000000000	55898
+003023	2	ud	Carrete de anclaje pasamuros de fundición dúctil con bridad de 300mm de diámetro nominal, y 1m de longitud,colocada y probada. 	62431.0000000000000	124862
+003024	2	ud	Tubería fundición dúctil de DN300mm, según ISO 2531, embridada en tramos de 0.5 y 2m de longitud, colocada y probada. 	165803.0000000000000	331606
+003025	7	ud	Codo de 90§ brida-brida de fundición dúctil DN 300mm, incluso p.p. juntas, colocacion y pruebas. 	69592.0000000000000	487144
+003096	2	ud	Válvula de mariposa de DN 300mm, presión máxima de trabajo 16kp/cm2, montaje entre bridas, mando manual por volante, desmultiplicador, dos limitadores de par y dos contactos finales de carrera, incluyendo montaje y pruebas. 	237360.0000000000000	474720
+003097	2	ud	Empalme brida-liso de fundición dúctil de DN 300mm, incluso p.p. de tornillos y junta y demas elementos necesarios, colocado y probado. 	17422.0000000000000	34844
+003129	2	ud	Tubería de fundición dúctil de DN300mm, según ISO 2531, embridada en tramos de 2 a 3m de longitud, colocada y probada. 	183620.0000000000000	367240
+003131	4	ud	Tubería de fundición dúctil de DN300mm, según ISO 2531, embridada en tramos de 4 a 5m de longitud, colocada y probada. 	219262.0000000000000	877048
+003134	1	ud	T con bridas de fundición dúctil de DN 300/300/300mm en bridas, tornillos para bridas, colocada y probada. 	73684.0000000000000	73684
+				Total: 	DESAGÜE DE FONDO.	2827046.0000000000000
+ALIVIADERO.
+003025	3	ud	Codo de 90§ brida-brida de fundición dúctil DN 300mm, incluso p.p. juntas, colocacion y pruebas. 	69592.0000000000000	208776
+003132	1	ud	Tubería de fundición dúctil de DN300mm, según ISO 2531, embridada en tramos de 5 a 6m de longitud, colocada y probada. 	223222.0000000000000	223222
+003134	2	ud	T con bridas de fundición dúctil de DN 300/300/300mm en bridas, tornillos para bridas, colocada y probada. 	73684.0000000000000	147368
+				Total: 	ALIVIADERO.	579366.0000000000000
+COLECTOR, ALIVIADERO DEL DEPOSITO.
+COLECTOR, ALIVIADERO DEL DEPOSITO.
+001003	250.66	m3	Excavación mecánica en zanja, con retroexcavadora, incluso apeos, entibaciones y transporte de material sobrante, en cualquier clase de terreno excluidos los de roca. 	750.0000000000000	187995
+001009	1.44	m3	Zahorra artificial, incluso extendido, perfilado y compactación. 	1610.0000000000000	2318.4
+001013	7.2	m2	Rotura de pavimento de cualquier clase, con martillo rompedor, incluso transporte de material sobrante a vertedero. 	671.0000000000000	4831.2
+001016	7.2	m2	Reparación de pavimento bituminoso mediante riego de imprimación y cpa de mezcla asfáltica en frío de 5 cm de espesor, extendida y compactada. 	855.0000000000000	6156
+001019	18.11	m3	Arena de zanja para asiento y recubrimiento de tuberías, incluso compactación cin medios ligeros, hasta el 90% del Proctor Normal. 	2370.0000000000000	42920.7
+001020	215.84	m3	Relleno y compactación de zanjas con suelo seleccionado procedente de la propia excavación o de préstamos, tendido en capas sucesivas de 30cm de espesor, hasta alcanzar el 100% del P.N., incluso transporte. 	772.0000000000000	166628
+003067	186.5	m	Tubería de hormigón compresión radial o turbocomprimido clase III, norma ASTM, enchufe de campana, de DN 300mm, incluso p.p. de junta delta, montaje, colocación y pruebas. 	5011.0000000000000	934552
+02002V	5	m3	Hormigón en masa HM-15 en rellenos, soleras y pequeñas unidades sin armar, inlcuso transporte y colocación. 	12760.0000000000000	63800
+				Total: 	COLECTOR, ALIVIADERO DEL DEPOSITO.	1409201.2799999999989
+POZO REGISTRO ALTURA MEDIA 1.92M
+001004	60.81	m3	Excavación mecánica en pozos, con retroexcavadora, incluso apeos, relleno, compactación y transporte de material sobrante, en cualquier clase de terreno excluidos los de roca. 	753.0000000000000	45789.9
+002002	9.75	m3	Hormigón en masa H-150 en rellenos, soleras y pequeñas unidades sin armar, inlcuso transporte y colocación. 	12760.0000000000000	124410
+002005	99.5	m2	Encofrado de madera y desencofrado en cimentaciones y alzados, incluso apeos. 	3547.0000000000000	352926
+002009	35	ud	Pate de polipropileno con alma de acero de 16 mm de diámetro y 1.00 m de desarrollo, colocado. 	764.0000000000000	26740
+004003	2.3	m2	Enlucido con mortero hidrófugo de cemento 1:4 	2101.0000000000000	4832.3
+005009	7	ud	Tapa de fundición dúctil de 0.631m de diámetro incluso cerco, según planos, colocada 	16023.0000000000000	112161
+				Total: 	POZO REGISTRO ALTURA MEDIA 1.92M	666859.7300000000013
+CAMINO DE ACCESO.
+001001	1176	m2	Desbroce y limpieza de terreno por medios mecánicos hasta 30 cm de espesor, incluido el transporte a vertedero. 	99.0000000000000	116424
+001002	40.65	m3	Excavación mecánica de desmonte y transporte a lugar de empleo o vertedero de terrenos de cualquier naturaleza o consistencia. 	352.0000000000000	14308.8
+001008	1434.4	m3	Formación de terraplén con suelo adecuado procedente de la propia excavación o prestamos, con índice CBR>5, extendido en capas de 20 cm de espesor, riego a humedad óptima y compactación mínima del 96% del Proctor Normal. 	749.0000000000000	1.07437e+06
+001009	171.36	m3	Zahorra artificial, incluso extendido, perfilado y compactación. 	1610.0000000000000	275890
+001017	856.8	m2	Riego de imprimación de firme granular, mediante riego de emulsión asfáltica ECR-0 en caliente, en la cantidad de 1kg/m2, incluida la limpisa orevia del firme par aeliminación completa del polvo. 	115.0000000000000	98532
+001022	54.6	tm	Mezcla bituminosa en caliente tipo S-12, con árido calizo, incluida su puesta en obra, extendido y compactación. 	3713.0000000000000	202730
+				Total: 	CAMINO DE ACCESO.	1782249.8000000000897
+SISTEMA DE AUTOMATIZACION.
+003029	4	ud	Presostado de 0-16bar. Diferencial ajustable. Según E.T. 	22771.0000000000000	91084
+003030	1	ud	Medidor de caudal por ultrasonidos, incluyendo carrete para su montaje en tubería de 500mm de diámetro, totalmente instalado. Según E.T. 	747802.0000000000000	747802
+005024	7	ud	Autómata de válvula. Servicio local y automático, totalmente instalado y probado. Según E.T.3 	197412.0000000000000	1.38188e+06
+005025	3	ud	Entradas digitales, totalmente instalado y probado. Según E.T.11 	136503.0000000000000	409509
+005026	1	ud	Entradas analógicas, totalmente instalado y probado. Según E.T.12 	188311.0000000000000	188311
+005027	1	ud	Medida, recepción, indicación y tratamiento de señales analógicas, totalmente instalado y probado. Según E.T.2 	224982.0000000000000	224982
+005028	3	ud	Remota de telemando de válvulas, totalmente instalado y probado. Según E.T.13 	140017.0000000000000	420051
+005029	1	ud	Coordinador: mando cialico, totalmente instalado y probado. Según E.T.1 	184618.0000000000000	184618
+005030	7	ud	Chasis de 19" DIN 41612 para autómatas de válvulas, totalmente instalado y probado. Según E.T.4 	105331.0000000000000	737317
+005031	3	ud	Conjunto de comunicación por radio, totalmente instalado y probado. Según E.T.14 	346456.0000000000000	1.03937e+06
+005032	6	ud	Teleacción para transferencia de datos entre bus local y bus de transporte, totalmente instalado y probado. Según E.T.14 	158759.0000000000000	952554
+005033	3	ud	Modem seleccionable (cable privado), totalmente instalado y probado. Según E.T.16 	257419.0000000000000	772257
+005040	1	ud	Salidas analógicas controlado por microprocesador, según E.T.9 	212246.0000000000000	212246
+005041	1	ud	Sonda de nivel para depósito según E.T.-5 	149560.0000000000000	149560
+005042	1	ud	Transmisor de caudal, según E.T.-5 	174402.0000000000000	174402
+005043	1	ud	Contador/indicador digital programable, según E.T.-10 	212246.0000000000000	212246
+006023	1	ud	Cuadro general de mando y control con panel sinóptico, embarrado, cableado, interuptores diferenciales, magnetotérmicos, contadores auxiliares, relés de enclavamiento, botoneras de marcha y parada, testigos luminosos de marcha y parada, bases con fusibles, voltímetro con conmutador, amperímetros y demás elementos necesarios incluso transporte, montaje y puesta en marcha. 	702208.0000000000000	702208
+007009	1	pa	Partida alzada a justificar cableado necesario para comunicación entre los diferentes elementos de la automatización 	1747200.0000000000000	1.7472e+06
+				Total: 	SISTEMA DE AUTOMATIZACION.	10347599.0000000000000
+ESTACION DE TRATAMIENTO.
+TOMA DEL RIO
+001004	18.27	m3	Excavación mecánica en pozos, con retroexcavadora, incluso apeos, relleno, compactación y transporte de material sobrante, en cualquier clase de terreno excluidos los de roca. 	753.0000000000000	13757.3
+001016	6.3	m2	Reparación de pavimento bituminoso mediante riego de imprimación y cpa de mezcla asfáltica en frío de 5 cm de espesor, extendida y compactada. 	855.0000000000000	5386.5
+001020	6.8	m3	Relleno y compactación de zanjas con suelo seleccionado procedente de la propia excavación o de préstamos, tendido en capas sucesivas de 30cm de espesor, hasta alcanzar el 100% del P.N., incluso transporte. 	772.0000000000000	5249.6
+001023	6.3	m2	Rotura de pavimento con bulldocer y ripper, incluso transporte de material sobrante a vertedero. 	399.0000000000000	2513.7
+001030	4.88	m3	Demolición de obra de hormigón en masa o armado, incluso retirada de escombro a vertedero. 	20565.0000000000000	100357
+002005	39.14	m2	Encofrado de madera y desencofrado en cimentaciones y alzados, incluso apeos. 	3547.0000000000000	138830
+002009	8	ud	Pate de polipropileno con alma de acero de 16 mm de diámetro y 1.00 m de desarrollo, colocado. 	764.0000000000000	6112
+002016	1	ud	Reja de limpieza manual instalada en canal de 0.80 m de ancho, formada por 10 pletinas de 8x0.2cm y 100cm de largo separadas 8cm y rigidizadas con otras dos pletinas de 80x8x0.2cm incluso marco metálico y anclajes, totalmente colocada y probada. 	8962.0000000000000	8962
+003074	4.2	m	Tubería de fundición dúctil de DN 800mm según ISO 2531 con p.p. de junta, incluso cinta de señalización y demas accesorios, colocada y probada. 	50604.0000000000000	212537
+005001	1.68	m2	Chapa de acero inoxidable de 2mm en elementos metálicos, incluso p.p. de marco estanco y angular de rigidización, colocado. 	10348.0000000000000	17384.6
+005010	1	ud	Compuerta mural de 0.80x0.80 cm instalada en canal de 0.80x2.50 m incluso marco, anclajes y colocación. Según E.T. 	335078.0000000000000	335078
+005035	3.75	m2	Cerramiento metálico realizado con postes cada 2.5m de pletinas metálicas de 40x20mm de espesor y malla galvanizada de simple torsión, tirantes, garras y p.p. de cimentación y ayuds de albañileria. Medida la superficie ejecutada. 	1361.0000000000000	5103.75
+02002V	3.94	m3	Hormigón en masa HM-15 en rellenos, soleras y pequeñas unidades sin armar, inlcuso transporte y colocación. 	12760.0000000000000	50274.4
+02003V	7.97	m3	Hormigón para armar HA-25, en cimentaciones y estructuras, incluso transporte, colocación y vibrado. 	14318.0000000000000	114114
+02015V	443.4	kg	Acero B-500 S de LE 5000kg/cm2 en redondos corrugados colocado. 	142.0000000000000	62962.8
+				Total: 	TOMA DEL RIO	1078622.7400000000000
+ACCIONAMIENTO.
+003012	20	ud	Carrete de desmontaje de DN300mm, montaje y pruebas. 	27949.0000000000000	558980
+003077	5	ud	Válvula de mariposa embridada de 150 mm de DN presión de trabajo 16atm, incluyendo montaje y pruebas. 	79009.0000000000000	395045
+003078	5	ud	Carrete de desmontaje de DN 150mm, colocado y probado. 	52583.0000000000000	262915
+003079	5	ud	Purgador de aire para filtro de arena, colocado y probado. 	24938.0000000000000	124690
+003080	10	ud	Manómetro de muelle tubular, con separador de tipo membrana, concéntrico en baño de glicerina totalmente instalado y probado. 	48209.0000000000000	482090
+003081	1	ud	Conjunto de tuberías y piezas galvanizadas en caliente, incluyendo bridas y juntas y tornillería, con tratamiento interior con pintura epoxi alimentaria y otro exterior con esmalte cloro-caucho con resinas acrílicas, para distribución y entrada de agua bruta a filtros constando de: Colector general D350mm con cinco salidas D300, cada una de ellas con dos derivaciones D300 una entrada a cada filtro y otra a desage. Cinco tramos D300 intercalados entre válvulas. Cinco tramos D300 de entrada a filtros. Cinco tramos D300 de salida de desage. Según esquema y medición aproximada en planos 	2182602.0000000000000	2.1826e+06
+003082	1	ud	Conjunto de tuberías y piezas galvanizadas en caliente, incluyendo bridas y juntas y tornillería, con tratamiento interior con pintura epoxi alimentaria y otro exterior con esmalte cloro-caucho con resinas acrílicas, para salida y recogida de agua filtrada hasta depósito, constando de: Colector general D350mm con cinco entradas D300,cada una de ellas con dos derivaciones D300 una salida de agua del filtro y otra de salida de agua del lavabo. Cinco tramos D300 intercalados entre válvulas. Cinco tramos D300 de salida de agua tratada. Cinco tramos D300 de derivación de agua de lavabo. Según esquema y medición aproximada en planos 	2014172.0000000000000	2.01417e+06
+003083	1	ud	Conjunto de tuberías y piezas galvanizadas en caliente, incluyendo bridas y juntas y tornillería, con tratamiento interior con pintura epoxi alimentaria y otro exterior con esmalte cloro-caucho con resinas acrílicas, para salida y recogida de agua filtrada hasta depósito, constando de: Colector general D300mm con cinco entradas Cinco tramos D300 de conexión de salida de filtros. Según esquema y medición aproximada en planos 	999631.0000000000000	999631
+003084	1	ud	Conjunto de tuberías y piezas galvanizadas en caliente, incluyendo bridas y juntas y tornillería, con tratamiento interior con pintura epoxi alimentaria y otro exterior con esmalte cloro-caucho con resinas acrílicas, para vaciado de filtros, constando de: Cinco tramos D150mm antes de vávula. Cinco tramos D150mm despues de válvula. Según esquema y medición aproximada en planos 	282767.0000000000000	282767
+003096	20	ud	Válvula de mariposa de DN 300mm, presión máxima de trabajo 16kp/cm2, montaje entre bridas, mando manual por volante, desmultiplicador, dos limitadores de par y dos contactos finales de carrera, incluyendo montaje y pruebas. 	237360.0000000000000	4.7472e+06
+005015	345.4	m2	Traramiento de protección interior de las paredes de los filtros mediante aplicación de dos capas de pintura epoxy (alimentaria sin disolvente) previo limpieza con chorro de arena seco de la superficie. 	3104.0000000000000	1.07212e+06
+005016	345.4	m2	Traramiento de protección exterior de las paredes de los filtros mediante aplicación de dos capas de pintura epoxy (alimentaria sin disolvente) previo limpieza con chorro de arena seco de la superficie. 	2310.0000000000000	797874
+007001	1	pa	Partida Alzada de abono integro de desmontaje de los colectores de reparto en el interior de los filtros. 	156000.0000000000000	156000
+007002	1	pa	Partida Alzada de abono integro de retirada del material filtrante y grava existente en los filtrados. 	291200.0000000000000	291200
+007003	1	pa$	Partida alzada a justificar para montaje de los colectores de reparto en el interior de los filtros, incluido el material necesario. 	988000.0000000000000	988000
+007004	1	pa	Partida alzada de abono integro para desmontaje de colectores de alimentación recogida de agua filtrada y desage y valvulería existente, retirada y transporte a lugar adecuado. 	124800.0000000000000	124800
+007005	1	pa$	Partida alzada a justificar de reposición de material filtrante. 	332800.0000000000000	332800
+007006	1	pa$	Partida alzada a justificar del primer nivel de grava. 	83200.0000000000000	83200
+007007	1	pa$	Partida alzada a justificar del segundo nivel de grava. 	83200.0000000000000	83200
+				Total: 	ACCIONAMIENTO.	15979287.5999999998767

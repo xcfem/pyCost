@@ -1,0 +1,47 @@
+              \capitulo
+                 {
+                   \codigo{12}
+                   \titulo{Cimentación tanques THB}
+                   \fr { \factor{1} \rendimiento{1.0000000000000} }
+                   \mediciones
+                     {
+                     \med_uobra
+                       {
+                       \ref{030.001}
+                       \lineas_medicion
+                          {
+                          \medicion_vol { \comentario{} \unidades{1} \largo{12.5} \ancho{6} \alto{0.1} }
+                          }
+                        }
+                     \med_uobra
+                       {
+                       \ref{030.003.1}
+                       \lineas_medicion
+                          {
+                          \medicion_vol { \comentario{} \unidades{1} \largo{12.5} \ancho{6} \alto{0.4} }
+                          \medicion_vol { \comentario{} \unidades{2} \largo{4.71} \ancho{0.3} \alto{1} }
+                          }
+                        }
+                     \med_uobra
+                       {
+                       \ref{030.009}
+                       \lineas_medicion
+                          {
+                          \medicion_vol { \comentario{} \unidades{2} \largo{12.5} \ancho{6} \alto{0.4} }
+                          \medicion_vol { \comentario{} \unidades{2} \largo{6.28} \ancho{1.25} \alto{0.3} }
+                          \medicion_vol { \comentario{} \unidades{2} \largo{6.28} \ancho{1.75} \alto{0.3} }
+                          }
+                        }
+                     \med_uobra
+                       {
+                       \ref{030.008}
+                       \lineas_medicion
+                          {
+                          \medicion_vol { \comentario{} \unidades{2} \largo{12.5} \ancho{6} \alto{10.68} }
+                          \medicion_vol { \comentario{} \unidades{189} \largo{2.5} \ancho{0.62} \alto{1} }
+                          \medicion_vol { \comentario{} \unidades{6} \largo{19} \ancho{0.62} \alto{1} }
+                          }
+                        }
+                     }
+                   \subcapitulos{}
+                }

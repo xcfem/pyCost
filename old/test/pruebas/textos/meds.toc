@@ -1,0 +1,4 @@
+\select@language {spanish}
+\select@language {spanish}
+\chapterbegin 
+\contentsline {part}{I\hspace {1em}Mediciones}{5}

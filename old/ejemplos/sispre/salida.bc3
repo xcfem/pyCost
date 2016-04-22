@@ -1,0 +1,1591 @@
+~V|Iturribizia, S.L.|FIEBDC-3/95|ppl 0.1|
+~C|SINDESCO|***|Unidad sin descompuesto|1|040400|1|
+~T|SINDESCO|Unidad sin descompuesto|
+~C|001001|m2|Desbroce y limpieza de terreno por medios mec†nicos hasta 30 cm de espesor, incluido el transporte a vertedero. |99|040400|0|
+~T|001001|Desbroce y limpieza de terreno por medios mec†nicos hasta 30 cm de espesor, incluido el transporte a vertedero. |
+~D|001001|SINDESCO\1\99\|
+~C|001002|m3|Excavaci¢n mec†nica de desmonte y transporte a lugar de empleo o vertedero de terrenos de cualquier naturaleza o consistencia. |352|040400|0|
+~T|001002|Excavaci¢n mec†nica de desmonte y transporte a lugar de empleo o vertedero de terrenos de cualquier naturaleza o consistencia. |
+~D|001002|SINDESCO\1\352\|
+~C|001003|m3|Excavaci¢n mec†nica en zanja, con retroexcavadora, incluso apeos, entibaciones y transporte de material sobrante, en cualquier clase de terreno excluidos los de roca. |750|040400|0|
+~T|001003|Excavaci¢n mec†nica en zanja, con retroexcavadora, incluso apeos, entibaciones y transporte de material sobrante, en cualquier clase de terreno excluidos los de roca. |
+~D|001003|SINDESCO\1\750\|
+~C|001004|m3|Excavaci¢n mec†nica en pozos, con retroexcavadora, incluso apeos, relleno, compactaci¢n y transporte de material sobrante, en cualquier clase de terreno excluidos los de roca. |753|040400|0|
+~T|001004|Excavaci¢n mec†nica en pozos, con retroexcavadora, incluso apeos, relleno, compactaci¢n y transporte de material sobrante, en cualquier clase de terreno excluidos los de roca. |
+~D|001004|SINDESCO\1\753\|
+~C|001005|m3|Exvcavaci¢n manual en zanja o pozo, en cualquier clase de terreno, incluso apeos, entibaciones y transporte de material sobrante. |4330|040400|0|
+~T|001005|Exvcavaci¢n manual en zanja o pozo, en cualquier clase de terreno, incluso apeos, entibaciones y transporte de material sobrante. |
+~D|001005|SINDESCO\1\4330\|
+~C|001006|m3|Excavaci¢n en zanja con retromartillo rompedor, con extracci¢n, apeos, entibaciones y transporte de material sobrante, en terreno de roca. |3294|040400|0|
+~T|001006|Excavaci¢n en zanja con retromartillo rompedor, con extracci¢n, apeos, entibaciones y transporte de material sobrante, en terreno de roca. |
+~D|001006|SINDESCO\1\3294\|
+~C|001007|m3|Excavaci¢n en pozo con retromartillo rompedor, con extracci¢n, apeos, relleno, compactacion y transporte de material sobrante, en terreno de roca. |3874|040400|0|
+~T|001007|Excavaci¢n en pozo con retromartillo rompedor, con extracci¢n, apeos, relleno, compactacion y transporte de material sobrante, en terreno de roca. |
+~D|001007|SINDESCO\1\3874\|
+~C|001008|m3|Formaci¢n de terraplÇn con suelo adecuado procedente de la propia excavaci¢n o prestamos, con °ndice CBR>5, extendido en capas de 20 cm de espesor, riego a humedad ¢ptima y compactaci¢n m°nima del 96% del Proctor Normal. |749|040400|0|
+~T|001008|Formaci¢n de terraplÇn con suelo adecuado procedente de la propia excavaci¢n o prestamos, con °ndice CBR>5, extendido en capas de 20 cm de espesor, riego a humedad ¢ptima y compactaci¢n m°nima del 96% del Proctor Normal. |
+~D|001008|SINDESCO\1\749\|
+~C|001009|m3|Zahorra artificial, incluso extendido, perfilado y compactaci¢n. |1610|040400|0|
+~T|001009|Zahorra artificial, incluso extendido, perfilado y compactaci¢n. |
+~D|001009|SINDESCO\1\1610\|
+~C|001010|m3|Zahorra natural, incluso extendido, perfilado y compactaci¢n. |1026|040400|0|
+~T|001010|Zahorra natural, incluso extendido, perfilado y compactaci¢n. |
+~D|001010|SINDESCO\1\1026\|
+~C|001011|m3|Demolici¢n completa de edificio desde la rasante, por bola de impacto, incluso retirada de escombros por medios mec†nicos, carga y transporte a vertedero. |4396|040400|0|
+~T|001011|Demolici¢n completa de edificio desde la rasante, por bola de impacto, incluso retirada de escombros por medios mec†nicos, carga y transporte a vertedero. |
+~D|001011|SINDESCO\1\4396\|
+~C|001012|m3|Demolici¢n completa de edificio desde la rasante, por empuje de maquina, incluso retirada de escombros, carga y transporte a vertedero. |2414|040400|0|
+~T|001012|Demolici¢n completa de edificio desde la rasante, por empuje de maquina, incluso retirada de escombros, carga y transporte a vertedero. |
+~D|001012|SINDESCO\1\2414\|
+~C|001013|m2|Rotura de pavimento de cualquier clase, con martillo rompedor, incluso transporte de material sobrante a vertedero. |671|040400|0|
+~T|001013|Rotura de pavimento de cualquier clase, con martillo rompedor, incluso transporte de material sobrante a vertedero. |
+~D|001013|SINDESCO\1\671\|
+~C|001014|m3|Encachado de piedra caliza partida 40/80 mm bajo soleras, compactado, incluso recebo. |1820|040400|0|
+~T|001014|Encachado de piedra caliza partida 40/80 mm bajo soleras, compactado, incluso recebo. |
+~D|001014|SINDESCO\1\1820\|
+~C|001015|m2|Picado y limpieza de superficies de hormig¢n, incluso carga y transporte a vertedero. |4166|040400|0|
+~T|001015|Picado y limpieza de superficies de hormig¢n, incluso carga y transporte a vertedero. |
+~D|001015|SINDESCO\1\4166\|
+~C|001016|m2|Reparaci¢n de pavimento bituminoso mediante riego de imprimaci¢n y cpa de mezcla asf†ltica en fr°o de 5 cm de espesor, extendida y compactada. |855|040400|0|
+~T|001016|Reparaci¢n de pavimento bituminoso mediante riego de imprimaci¢n y cpa de mezcla asf†ltica en fr°o de 5 cm de espesor, extendida y compactada. |
+~D|001016|SINDESCO\1\855\|
+~C|001017|m2|Riego de imprimaci¢n de firme granular, mediante riego de emulsi¢n asf†ltica ECR-0 en caliente, en la cantidad de 1kg/m2, incluida la limpisa orevia del firme par aeliminaci¢n completa del polvo. |115|040400|0|
+~T|001017|Riego de imprimaci¢n de firme granular, mediante riego de emulsi¢n asf†ltica ECR-0 en caliente, en la cantidad de 1kg/m2, incluida la limpisa orevia del firme par aeliminaci¢n completa del polvo. |
+~D|001017|SINDESCO\1\115\|
+~C|001018|m2|Riego de adherencia sobre firme bituminoso, mediante riego de emulsi¢n asf†ltica ECR-1 en caliente, en la cantidad de 1kg/m2, incluida la limpieza previa del firme para eliminaci¢n completa del polvo. |115|040400|0|
+~T|001018|Riego de adherencia sobre firme bituminoso, mediante riego de emulsi¢n asf†ltica ECR-1 en caliente, en la cantidad de 1kg/m2, incluida la limpieza previa del firme para eliminaci¢n completa del polvo. |
+~D|001018|SINDESCO\1\115\|
+~C|001019|m3|Arena de zanja para asiento y recubrimiento de tuber°as, incluso compactaci¢n cin medios ligeros, hasta el 90% del Proctor Normal. |2370|040400|0|
+~T|001019|Arena de zanja para asiento y recubrimiento de tuber°as, incluso compactaci¢n cin medios ligeros, hasta el 90% del Proctor Normal. |
+~D|001019|SINDESCO\1\2370\|
+~C|001020|m3|Relleno y compactaci¢n de zanjas con suelo seleccionado procedente de la propia excavaci¢n o de prÇstamos, tendido en capas sucesivas de 30cm de espesor, hasta alcanzar el 100% del P.N., incluso transporte. |772|040400|0|
+~T|001020|Relleno y compactaci¢n de zanjas con suelo seleccionado procedente de la propia excavaci¢n o de prÇstamos, tendido en capas sucesivas de 30cm de espesor, hasta alcanzar el 100% del P.N., incluso transporte. |
+~D|001020|SINDESCO\1\772\|
+~C|001021|tm|Mezcla bituminosa en caliente tipo D-12, con †rido of°tico, incluida su puesta en obra, extendido y compactaci¢n. |3648|040400|0|
+~T|001021|Mezcla bituminosa en caliente tipo D-12, con †rido of°tico, incluida su puesta en obra, extendido y compactaci¢n. |
+~D|001021|SINDESCO\1\3648\|
+~C|001022|tm|Mezcla bituminosa en caliente tipo S-12, con †rido calizo, incluida su puesta en obra, extendido y compactaci¢n. |3713|040400|0|
+~T|001022|Mezcla bituminosa en caliente tipo S-12, con †rido calizo, incluida su puesta en obra, extendido y compactaci¢n. |
+~D|001022|SINDESCO\1\3713\|
+~C|001023|m2|Rotura de pavimento con bulldocer y ripper, incluso transporte de material sobrante a vertedero. |399|040400|0|
+~T|001023|Rotura de pavimento con bulldocer y ripper, incluso transporte de material sobrante a vertedero. |
+~D|001023|SINDESCO\1\399\|
+~C|001024|m2|L†mina de geotextil de 180gr/m2, colocada. |250|040400|0|
+~T|001024|L†mina de geotextil de 180gr/m2, colocada. |
+~D|001024|SINDESCO\1\250\|
+~C|001025|m2|Entibaci¢n semicuajada. |980|040400|0|
+~T|001025|Entibaci¢n semicuajada. |
+~D|001025|SINDESCO\1\980\|
+~C|001026|m2|Entibaci¢n cuajada. |1771|040400|0|
+~T|001026|Entibaci¢n cuajada. |
+~D|001026|SINDESCO\1\1771\|
+~C|001027|m|Apertura de camino de 5m de anchura, incluyendo tala de †rboles destoconado, retirada de piedras y bloques, desbroce y dem†s operaciones necesarias para el acceso de la maquinaria, incluso retirada de material sobrante a vertedero. |1424|040400|0|
+~T|001027|Apertura de camino de 5m de anchura, incluyendo tala de †rboles destoconado, retirada de piedras y bloques, desbroce y dem†s operaciones necesarias para el acceso de la maquinaria, incluso retirada de material sobrante a vertedero. |
+~D|001027|SINDESCO\1\1424\|
+~C|001028|m3|Excavaci¢n mec†nica en zanja con retroexcavadora en cualquier clase de terreno con agotamiento, incluso apeos, entibaciones y transporte de material sobrante a vertedero. |856|040400|0|
+~T|001028|Excavaci¢n mec†nica en zanja con retroexcavadora en cualquier clase de terreno con agotamiento, incluso apeos, entibaciones y transporte de material sobrante a vertedero. |
+~D|001028|SINDESCO\1\856\|
+~C|001029|m3|Gravilla para protecci¢n de l†mina impermeabilizante de cubierta de dep¢sito, colocada en capa de 10cm de espesor medio. |3278|040400|0|
+~T|001029|Gravilla para protecci¢n de l†mina impermeabilizante de cubierta de dep¢sito, colocada en capa de 10cm de espesor medio. |
+~D|001029|SINDESCO\1\3278\|
+~C|001030|m3|Demolici¢n de obra de hormig¢n en masa o armado, incluso retirada de escombro a vertedero. |20565|040400|0|
+~T|001030|Demolici¢n de obra de hormig¢n en masa o armado, incluso retirada de escombro a vertedero. |
+~D|001030|SINDESCO\1\20565\|
+~C|001031|m|Canalizaci¢n tipo para cable elÇctrico, de 0,40 x 0,60 m, incluso tubo de PCV, colocado. |650|040400|0|
+~T|001031|Canalizaci¢n tipo para cable elÇctrico, de 0,40 x 0,60 m, incluso tubo de PCV, colocado. |
+~D|001031|SINDESCO\1\650\|
+~C|001032|m2|Tratamiento superficial bituminoso doble sobre firme imprimado, mediante un primer riego de emulsi¢n asf†ltica ERC.1, en cantidad de 2.4kg/m2 saturado con 14 l/m2, de gravilla seleccionada al tama§o 13/18mm y un segundo riego en caliente de emulsi¢n asf†ltica ECR.a en la cantidad de 1.5kg/m2 saturado con 9l/m2 de gravilla seleccionadas al tama§o 7/13mm, incluidos la limpieza previa de la superficie a tratar, el coste de las gravillas y la emulsi¢n asf†ltica a pie de obra y la compactaci¢n. |380|040400|0|
+~T|001032|Tratamiento superficial bituminoso doble sobre firme imprimado, mediante un primer riego de emulsi¢n asf†ltica ERC.1, en cantidad de 2.4kg/m2 saturado con 14 l/m2, de gravilla seleccionada al tama§o 13/18mm y un segundo riego en caliente de emulsi¢n asf†ltica ECR.a en la cantidad de 1.5kg/m2 saturado con 9l/m2 de gravilla seleccionadas al tama§o 7/13mm, incluidos la limpieza previa de la superficie a tratar, el coste de las gravillas y la emulsi¢n asf†ltica a pie de obra y la compactaci¢n. |
+~D|001032|SINDESCO\1\380\|
+~C|001033|m3|TerraplÇn de suelo adecuado de prÇstamos, seg£n Art. 330 PG3, en tongadas de 0.30m de espesor como m†ximo, humectaci¢n compactado hasta el 95% del ensayo. Proctor Modificado. |2905|040400|0|
+~T|001033|TerraplÇn de suelo adecuado de prÇstamos, seg£n Art. 330 PG3, en tongadas de 0.30m de espesor como m†ximo, humectaci¢n compactado hasta el 95% del ensayo. Proctor Modificado. |
+~D|001033|SINDESCO\1\2905\|
+~C|001034|m3|Escollera en protecci¢n de taludes y rellenos con peso m°nimo de piedra de 50kg, totalmente colocada. |2538|040400|0|
+~T|001034|Escollera en protecci¢n de taludes y rellenos con peso m°nimo de piedra de 50kg, totalmente colocada. |
+~D|001034|SINDESCO\1\2538\|
+~C|001035|m3|Demolici¢n de terraplÇn, incluso carga y transporte a acopio o vertedero. |617|040400|0|
+~T|001035|Demolici¢n de terraplÇn, incluso carga y transporte a acopio o vertedero. |
+~D|001035|SINDESCO\1\617\|
+~C|002001|m3|Hormig¢n en masa H-125 con capa de base de calzadas incluso transporte, colocaci¢n y vibrado. |10698|040400|0|
+~T|002001|Hormig¢n en masa H-125 con capa de base de calzadas incluso transporte, colocaci¢n y vibrado. |
+~D|002001|SINDESCO\1\10698\|
+~C|002002|m3|Hormig¢n en masa H-150 en rellenos, soleras y peque§as unidades sin armar, inlcuso transporte y colocaci¢n. |12760|040400|0|
+~T|002002|Hormig¢n en masa H-150 en rellenos, soleras y peque§as unidades sin armar, inlcuso transporte y colocaci¢n. |
+~D|002002|SINDESCO\1\12760\|
+~C|002003|m3|Hormig¢n para armar H-175, en cimentaciones y estructuras, incluso transporte, colocaci¢n y vibrado. |13160|040400|0|
+~T|002003|Hormig¢n para armar H-175, en cimentaciones y estructuras, incluso transporte, colocaci¢n y vibrado. |
+~D|002003|SINDESCO\1\13160\|
+~C|002004|m3|Hormig¢n para armar H-200, en cimentaciones y estructuras, incluso transporte, colocaci¢n y vibrado. |13546|040400|0|
+~T|002004|Hormig¢n para armar H-200, en cimentaciones y estructuras, incluso transporte, colocaci¢n y vibrado. |
+~D|002004|SINDESCO\1\13546\|
+~C|002005|m2|Encofrado de madera y desencofrado en cimentaciones y alzados, incluso apeos. |3547|040400|0|
+~T|002005|Encofrado de madera y desencofrado en cimentaciones y alzados, incluso apeos. |
+~D|002005|SINDESCO\1\3547\|
+~C|002006|m2|Encofrado de madera y desencofrado en losas o b¢vedas y alzados, incluso apeos. |4996|040400|0|
+~T|002006|Encofrado de madera y desencofrado en losas o b¢vedas y alzados, incluso apeos. |
+~D|002006|SINDESCO\1\4996\|
+~C|002007|kg|Acero AEH-400N de LE 4200 kg/cm2 en redondos, colocado. |133|040400|0|
+~T|002007|Acero AEH-400N de LE 4200 kg/cm2 en redondos, colocado. |
+~D|002007|SINDESCO\1\133\|
+~C|002008|kg|Acero A-42b de LE 4200 kg/cm2 en perfiles laminados y basas, imprimaci¢n de minio, solado y colocado. |250|040400|0|
+~T|002008|Acero A-42b de LE 4200 kg/cm2 en perfiles laminados y basas, imprimaci¢n de minio, solado y colocado. |
+~D|002008|SINDESCO\1\250\|
+~C|002009|ud|Pate de polipropileno con alma de acero de 16 mm de di†metro y 1.00 m de desarrollo, colocado. |764|040400|0|
+~T|002009|Pate de polipropileno con alma de acero de 16 mm de di†metro y 1.00 m de desarrollo, colocado. |
+~D|002009|SINDESCO\1\764\|
+~C|002010|m|Junta de dilataci¢n en solera de dep¢sito formada por banda de PVC de 25 cm de anchura, cord¢n de espuma de polietileno de cÇlula cerrada para relleno de junta y soporte de sellado, imprimaci¢n para sellador de polisulfuro y sellador bicomponente de polisulfuro seg£n detalle de planos, totalmente realizada y probada, incluso p.p. de soldadura y piezas especiales en cruces y uniones entre juntas. |2338|040400|0|
+~T|002010|Junta de dilataci¢n en solera de dep¢sito formada por banda de PVC de 25 cm de anchura, cord¢n de espuma de polietileno de cÇlula cerrada para relleno de junta y soporte de sellado, imprimaci¢n para sellador de polisulfuro y sellador bicomponente de polisulfuro seg£n detalle de planos, totalmente realizada y probada, incluso p.p. de soldadura y piezas especiales en cruces y uniones entre juntas. |
+~D|002010|SINDESCO\1\2338\|
+~C|002011|m|Junta de retracci¢n en solera de dep¢sito formada por banda de PVC de 25 cm de anchura y sellador bicomponente de polisulfuro seg£n detalle de planos, totalmente realizada y probada, incluso p.p. de soldadura y piezas especiales en cruces y uniones entre juntas. |2265|040400|0|
+~T|002011|Junta de retracci¢n en solera de dep¢sito formada por banda de PVC de 25 cm de anchura y sellador bicomponente de polisulfuro seg£n detalle de planos, totalmente realizada y probada, incluso p.p. de soldadura y piezas especiales en cruces y uniones entre juntas. |
+~D|002011|SINDESCO\1\2265\|
+~C|002012|m|Sellado de juntas verticales y muro zapata de dep¢sito formado por cord¢n de espuma de polietileno de cÇlula cerrada para relleno de junta y soporte de sellado, imprimaci¢n para sellador de polisulfuro y sellador bicomponente de polisulfuro seg£n detalle de planos, totalmente realizada y probada. |661|040400|0|
+~T|002012|Sellado de juntas verticales y muro zapata de dep¢sito formado por cord¢n de espuma de polietileno de cÇlula cerrada para relleno de junta y soporte de sellado, imprimaci¢n para sellador de polisulfuro y sellador bicomponente de polisulfuro seg£n detalle de planos, totalmente realizada y probada. |
+~D|002012|SINDESCO\1\661\|
+~C|002013|m2|Panel de muro prefabricado en paredes de dep¢sito seg£n definici¢n de planos, incluso p.p. de montaje y pruebas. |20081|040400|0|
+~T|002013|Panel de muro prefabricado en paredes de dep¢sito seg£n definici¢n de planos, incluso p.p. de montaje y pruebas. |
+~D|002013|SINDESCO\1\20081\|
+~C|002014|m2|Forjado 20+5cm, formado a base de viguetas de hormig¢n pretensado, autoresistente, separados 60 cm entre ejes, bovedilla de 60x25x20cm y capa de compresi¢n de 5cm de H-175kp/cm2. Tmax 20mm, elaborado en obra o central, armadura(1.80 kg/m2) totalmente terminado (carga total 630kg/m2) |8753|040400|0|
+~T|002014|Forjado 20+5cm, formado a base de viguetas de hormig¢n pretensado, autoresistente, separados 60 cm entre ejes, bovedilla de 60x25x20cm y capa de compresi¢n de 5cm de H-175kp/cm2. Tmax 20mm, elaborado en obra o central, armadura(1.80 kg/m2) totalmente terminado (carga total 630kg/m2) |
+~D|002014|SINDESCO\1\8753\|
+~C|002015|kg|Acero AEH-500 de LE 5000kg/cm2 en redondos corrugados colocado. |142|040400|0|
+~T|002015|Acero AEH-500 de LE 5000kg/cm2 en redondos corrugados colocado. |
+~D|002015|SINDESCO\1\142\|
+~C|002016|ud|Reja de limpieza manual instalada en canal de 0.80 m de ancho, formada por 10 pletinas de 8x0.2cm y 100cm de largo separadas 8cm y rigidizadas con otras dos pletinas de 80x8x0.2cm incluso marco met†lico y anclajes, totalmente colocada y probada. |8962|040400|0|
+~T|002016|Reja de limpieza manual instalada en canal de 0.80 m de ancho, formada por 10 pletinas de 8x0.2cm y 100cm de largo separadas 8cm y rigidizadas con otras dos pletinas de 80x8x0.2cm incluso marco met†lico y anclajes, totalmente colocada y probada. |
+~D|002016|SINDESCO\1\8962\|
+~C|002017|m2|Entibaci¢n met†lica en zanjas. |1228|040400|0|
+~T|002017|Entibaci¢n met†lica en zanjas. |
+~D|002017|SINDESCO\1\1228\|
+~C|002018|ud|Soporte para sujecci¢n de tuber°a de P.R.F.V. de di†metro 500mm a estructura del puente,seg£n definici¢n de planos, formada por chapa de acero en pefiles A-42b de 8 y 5mm de espesor, anclado a estructura del puente mediante 4 pernos de di†metro 12AEH-500N embebidos 20cm en el hormig¢n realizado mediante perforaci¢n a rotaci¢n y percusi¢n y soplado posterior de aire con di†metro 20mm, relleno de resina de poliester con resistencia a compresi¢n de 900 kp/cm2 incluso soldaduras, tornilleria, banda de caucho aislante de la tuber°a, colocado y probado. |12132|040400|0|
+~T|002018|Soporte para sujecci¢n de tuber°a de P.R.F.V. de di†metro 500mm a estructura del puente,seg£n definici¢n de planos, formada por chapa de acero en pefiles A-42b de 8 y 5mm de espesor, anclado a estructura del puente mediante 4 pernos de di†metro 12AEH-500N embebidos 20cm en el hormig¢n realizado mediante perforaci¢n a rotaci¢n y percusi¢n y soplado posterior de aire con di†metro 20mm, relleno de resina de poliester con resistencia a compresi¢n de 900 kp/cm2 incluso soldaduras, tornilleria, banda de caucho aislante de la tuber°a, colocado y probado. |
+~D|002018|SINDESCO\1\12132\|
+~C|003001|m|Tuber°a de fundici¢n d£ctil de 300mm de di†metro nominal, seg£n ISO 2531, con p.p. de junta, incluso cinta de se§alizaci¢n y dem†s accesorios, colocado y probado. |12379|040400|0|
+~T|003001|Tuber°a de fundici¢n d£ctil de 300mm de di†metro nominal, seg£n ISO 2531, con p.p. de junta, incluso cinta de se§alizaci¢n y dem†s accesorios, colocado y probado. |
+~D|003001|SINDESCO\1\12379\|
+~C|003002|m|Tuber°a de fundici¢n d£ctil de 500mm de di†metro nominal, seg£n ISO 2531, con p.p. de junta, incluso cinta de se§alizaci¢n y dem†s accesorios, colocado y probado. |24972|040400|0|
+~T|003002|Tuber°a de fundici¢n d£ctil de 500mm de di†metro nominal, seg£n ISO 2531, con p.p. de junta, incluso cinta de se§alizaci¢n y dem†s accesorios, colocado y probado. |
+~D|003002|SINDESCO\1\24972\|
+~C|003003|m|Tuber°a de fundici¢n d£ctil de 500mm de di†metro nominal, seg£n ISO 2531, embridada en tramos de 1 a 2m de longitud, colocada y probado. |271987|040400|0|
+~T|003003|Tuber°a de fundici¢n d£ctil de 500mm de di†metro nominal, seg£n ISO 2531, embridada en tramos de 1 a 2m de longitud, colocada y probado. |
+~D|003003|SINDESCO\1\271987\|
+~C|003004|ud|V†lvula de compuerta de asiento el†stico de 300mm de di†metro nominal, uni¢n mediante bridas, modelo corto, colocada y probada. |198850|040400|0|
+~T|003004|V†lvula de compuerta de asiento el†stico de 300mm de di†metro nominal, uni¢n mediante bridas, modelo corto, colocada y probada. |
+~D|003004|SINDESCO\1\198850\|
+~C|003005|ud|V†lvula de mariposa de DN800mm, presi¢n m†xima de trabajo 16kp/cm2, montaje entre bridas PN-16, accionada mediante servomotor elÇctrico de 0.37kw, 380 V III 50 Hz, con °ndice visual, mando manual por volante, desmultiplicador, dos limitadores de par y dos contactos finales de carrera, incluyendo montaje y pruebas. Seg£n E.T. |2729031|040400|0|
+~T|003005|V†lvula de mariposa de DN800mm, presi¢n m†xima de trabajo 16kp/cm2, montaje entre bridas PN-16, accionada mediante servomotor elÇctrico de 0.37kw, 380 V III 50 Hz, con °ndice visual, mando manual por volante, desmultiplicador, dos limitadores de par y dos contactos finales de carrera, incluyendo montaje y pruebas. Seg£n E.T. |
+~D|003005|SINDESCO\1\2729031\|
+~C|003006|ud|V†lvula de mariposa de DN500mm, presi¢n m†xima de trabajo 16kp/cm2, montaje entre bridas PN-16, accionada mediante servomotor elÇctrico de 0.37kw, 380 V III 50 Hz, con °ndice visual, mando manual por volante, desmultiplicador, dos limitadores de par y dos contactos finales de carrera, incluyendo montaje y pruebas. Seg£n E.T. |1637708|040400|0|
+~T|003006|V†lvula de mariposa de DN500mm, presi¢n m†xima de trabajo 16kp/cm2, montaje entre bridas PN-16, accionada mediante servomotor elÇctrico de 0.37kw, 380 V III 50 Hz, con °ndice visual, mando manual por volante, desmultiplicador, dos limitadores de par y dos contactos finales de carrera, incluyendo montaje y pruebas. Seg£n E.T. |
+~D|003006|SINDESCO\1\1637708\|
+~C|003007|ud|V†lvula de mariposa de DN300mm, presi¢n m†xima de trabajo 16kp/cm2, montaje entre bridas PN-16, accionada mediante servomotor elÇctrico de 0.37kw, 380 V III 50 Hz, con °ndice visual, mando manual por volante, desmultiplicador, dos limitadores de par y dos contactos finales de carrera, incluyendo montaje y pruebas. Seg£n E.T. |1194257|040400|0|
+~T|003007|V†lvula de mariposa de DN300mm, presi¢n m†xima de trabajo 16kp/cm2, montaje entre bridas PN-16, accionada mediante servomotor elÇctrico de 0.37kw, 380 V III 50 Hz, con °ndice visual, mando manual por volante, desmultiplicador, dos limitadores de par y dos contactos finales de carrera, incluyendo montaje y pruebas. Seg£n E.T. |
+~D|003007|SINDESCO\1\1194257\|
+~C|003008|ud|Carrete de desmontaje de DN500mm, montaje y pruebas. |116645|040400|0|
+~T|003008|Carrete de desmontaje de DN500mm, montaje y pruebas. |
+~D|003008|SINDESCO\1\116645\|
+~C|003009|ud|T con bridas de funcici¢n d£ctil de 500/500/300mm de di†metro nominal en bridas, tornillos para bridas y anclaje de hormig¢n, colocada y probada. |229131|040400|0|
+~T|003009|T con bridas de funcici¢n d£ctil de 500/500/300mm de di†metro nominal en bridas, tornillos para bridas y anclaje de hormig¢n, colocada y probada. |
+~D|003009|SINDESCO\1\229131\|
+~C|003010|ud|T con bridas de funcici¢n d£ctil de 300/300/300mm de di†metro nominal en bridas, tornillos para bridas y anclaje de hormig¢n, colocada y probada. |107329|040400|0|
+~T|003010|T con bridas de funcici¢n d£ctil de 300/300/300mm de di†metro nominal en bridas, tornillos para bridas y anclaje de hormig¢n, colocada y probada. |
+~D|003010|SINDESCO\1\107329\|
+~C|003011|ud|Carrete de desmontaje de DN800mm, montaje y pruebas. |128643|040400|0|
+~T|003011|Carrete de desmontaje de DN800mm, montaje y pruebas. |
+~D|003011|SINDESCO\1\128643\|
+~C|003012|ud|Carrete de desmontaje de DN300mm, montaje y pruebas. |27949|040400|0|
+~T|003012|Carrete de desmontaje de DN300mm, montaje y pruebas. |
+~D|003012|SINDESCO\1\27949\|
+~C|003013|m|Tuber°a de hormig¢n pretensado transversal con camisa de chapa y junta de goma de 800mm de di†metro para una presi¢n nominal de 10 atm, incluso materiales a pie de obra, montaje, colocaci¢n y pruebas. |36795|040400|0|
+~T|003013|Tuber°a de hormig¢n pretensado transversal con camisa de chapa y junta de goma de 800mm de di†metro para una presi¢n nominal de 10 atm, incluso materiales a pie de obra, montaje, colocaci¢n y pruebas. |
+~D|003013|SINDESCO\1\36795\|
+~C|003014|ud|Cono de reducci¢n brida-brida de fundici¢n d£ctil de 500/350mm de di†metro nominal, completo, incluso anclaje de hormig¢n, colocado y probado. |128986|040400|0|
+~T|003014|Cono de reducci¢n brida-brida de fundici¢n d£ctil de 500/350mm de di†metro nominal, completo, incluso anclaje de hormig¢n, colocado y probado. |
+~D|003014|SINDESCO\1\128986\|
+~C|003015|ud|Cono de reducci¢n enchufe-enchufe de fundici¢n d£ctil de 500/400mm de di†metro nominal, completo, incluso anclaje de hormig¢n, colocado y probado. |114384|040400|0|
+~T|003015|Cono de reducci¢n enchufe-enchufe de fundici¢n d£ctil de 500/400mm de di†metro nominal, completo, incluso anclaje de hormig¢n, colocado y probado. |
+~D|003015|SINDESCO\1\114384\|
+~C|003016|m|Tuber°a de hormig¢n pretensado transversal con camisa de chapa y junta de goma de 800mm de di†metro para una presi¢n nominal de 15 atm, incluso materiales a pie de obra, montaje, colocaci¢n y pruebas. |38698|040400|0|
+~T|003016|Tuber°a de hormig¢n pretensado transversal con camisa de chapa y junta de goma de 800mm de di†metro para una presi¢n nominal de 15 atm, incluso materiales a pie de obra, montaje, colocaci¢n y pruebas. |
+~D|003016|SINDESCO\1\38698\|
+~C|003017|ud|Empalme brida-enchufe de fundici¢n d£ctil de DN 500 mm, incluida p.p. junta y dem†s elementos necesarios, colocado y probado. |76833|040400|0|
+~T|003017|Empalme brida-enchufe de fundici¢n d£ctil de DN 500 mm, incluida p.p. junta y dem†s elementos necesarios, colocado y probado. |
+~D|003017|SINDESCO\1\76833\|
+~C|003018|ud|Empalme brida-enchufe de fundici¢n d£ctil de DN300mm, incluida p.p. junta y dem†s elementos necesarios, colocado y probado. |32443|040400|0|
+~T|003018|Empalme brida-enchufe de fundici¢n d£ctil de DN300mm, incluida p.p. junta y dem†s elementos necesarios, colocado y probado. |
+~D|003018|SINDESCO\1\32443\|
+~C|003019|ud|Empalme brida-enchufe de fundici¢n d£ctil de DN400mm, incluida p.p. junta y dem†s elementos necesarios, colocado y probado. |39945|040400|0|
+~T|003019|Empalme brida-enchufe de fundici¢n d£ctil de DN400mm, incluida p.p. junta y dem†s elementos necesarios, colocado y probado. |
+~D|003019|SINDESCO\1\39945\|
+~C|003020|ud|Ventosa trifuncional, DN800mm, con v†lvula de cierre incorporada, caudal m†ximo de entrada de aire 649 l/seg, caudal m†ximo salida de aire 442 l/seg. |121295|040400|0|
+~T|003020|Ventosa trifuncional, DN800mm, con v†lvula de cierre incorporada, caudal m†ximo de entrada de aire 649 l/seg, caudal m†ximo salida de aire 442 l/seg. |
+~D|003020|SINDESCO\1\121295\|
+~C|003021|ud|Ventosa trifuncional, DN100mm, con v†lvula de cierre incorporada, caudal m†ximo de entrada de aire 649 l/seg, caudal m†ximo salida de aire 442 l/seg. |162803|040400|0|
+~T|003021|Ventosa trifuncional, DN100mm, con v†lvula de cierre incorporada, caudal m†ximo de entrada de aire 649 l/seg, caudal m†ximo salida de aire 442 l/seg. |
+~D|003021|SINDESCO\1\162803\|
+~C|003022|ud|Ventosa trifuncional, DN150mm, con v†lvula de cierre incorporada, caudal m†ximo de entrada de aire 649 l/seg, caudal m†ximo salida de aire 442 l/seg. |265403|040400|0|
+~T|003022|Ventosa trifuncional, DN150mm, con v†lvula de cierre incorporada, caudal m†ximo de entrada de aire 649 l/seg, caudal m†ximo salida de aire 442 l/seg. |
+~D|003022|SINDESCO\1\265403\|
+~C|003023|ud|Carrete de anclaje pasamuros de fundici¢n d£ctil con bridad de 300mm de di†metro nominal, y 1m de longitud,colocada y probada. |62431|040400|0|
+~T|003023|Carrete de anclaje pasamuros de fundici¢n d£ctil con bridad de 300mm de di†metro nominal, y 1m de longitud,colocada y probada. |
+~D|003023|SINDESCO\1\62431\|
+~C|003024|ud|Tuber°a fundici¢n d£ctil de DN300mm, seg£n ISO 2531, embridada en tramos de 0.5 y 2m de longitud, colocada y probada. |165803|040400|0|
+~T|003024|Tuber°a fundici¢n d£ctil de DN300mm, seg£n ISO 2531, embridada en tramos de 0.5 y 2m de longitud, colocada y probada. |
+~D|003024|SINDESCO\1\165803\|
+~C|003025|ud|Codo de 90ß brida-brida de fundici¢n d£ctil DN 300mm, incluso p.p. juntas, colocacion y pruebas. |69592|040400|0|
+~T|003025|Codo de 90ß brida-brida de fundici¢n d£ctil DN 300mm, incluso p.p. juntas, colocacion y pruebas. |
+~D|003025|SINDESCO\1\69592\|
+~C|003026|ud|Carrete de anclaje pasamuros de fundici¢n d£ctil de 500mm de di†metro nominal y 1m de longitud,colocado y probado. |133790|040400|0|
+~T|003026|Carrete de anclaje pasamuros de fundici¢n d£ctil de 500mm de di†metro nominal y 1m de longitud,colocado y probado. |
+~D|003026|SINDESCO\1\133790\|
+~C|003027|m|Tuber°a de hormig¢n compresi¢n radial o turbocomprimido clase III, norma ASTM, enchufe de campana, de DN400mm, incluso p.p. de junta delta, montaje, colocaci¢n y pruebas |7010|040400|0|
+~T|003027|Tuber°a de hormig¢n compresi¢n radial o turbocomprimido clase III, norma ASTM, enchufe de campana, de DN400mm, incluso p.p. de junta delta, montaje, colocaci¢n y pruebas |
+~D|003027|SINDESCO\1\7010\|
+~C|003028|ud|V†lvula de altitud D300mm semimodulante PN16atm para instalar a la salida del dep¢sito de cola para regular su llenado y vaciado. |1285284|040400|0|
+~T|003028|V†lvula de altitud D300mm semimodulante PN16atm para instalar a la salida del dep¢sito de cola para regular su llenado y vaciado. |
+~D|003028|SINDESCO\1\1285284\|
+~C|003029|ud|Presostado de 0-16bar. Diferencial ajustable. Seg£n E.T. |22771|040400|0|
+~T|003029|Presostado de 0-16bar. Diferencial ajustable. Seg£n E.T. |
+~D|003029|SINDESCO\1\22771\|
+~C|003030|ud|Medidor de caudal por ultrasonidos, incluyendo carrete para su montaje en tuber°a de 500mm de di†metro, totalmente instalado. Seg£n E.T. |747802|040400|0|
+~T|003030|Medidor de caudal por ultrasonidos, incluyendo carrete para su montaje en tuber°a de 500mm de di†metro, totalmente instalado. Seg£n E.T. |
+~D|003030|SINDESCO\1\747802\|
+~C|003031|ud|T enchufe-enchufe derivaci¢n brida de fundici¢n d£ctil de DN500/500/150mm, tornillos para bridas, p.p. de junta, anclaje de hormig¢n, colocada y probada. |168120|040400|0|
+~T|003031|T enchufe-enchufe derivaci¢n brida de fundici¢n d£ctil de DN500/500/150mm, tornillos para bridas, p.p. de junta, anclaje de hormig¢n, colocada y probada. |
+~D|003031|SINDESCO\1\168120\|
+~C|003032|ud|T enchufe-enchufe derivaci¢n brida de P.R.F.V de DN500/500/150mm, tornillos para bridas, p.p. de junta, anclaje de hormig¢n, colocada y probada. |576003|040400|0|
+~T|003032|T enchufe-enchufe derivaci¢n brida de P.R.F.V de DN500/500/150mm, tornillos para bridas, p.p. de junta, anclaje de hormig¢n, colocada y probada. |
+~D|003032|SINDESCO\1\576003\|
+~C|003033|ud|T enchufe-enchufe derivaci¢n brida de fundici¢n d£ctil de DN300/300/100mm, tornillos para bridas, p.p. de junta, anclaje de hormig¢n, colocada y probada. |79215|040400|0|
+~T|003033|T enchufe-enchufe derivaci¢n brida de fundici¢n d£ctil de DN300/300/100mm, tornillos para bridas, p.p. de junta, anclaje de hormig¢n, colocada y probada. |
+~D|003033|SINDESCO\1\79215\|
+~C|003034|ud|T enchufe-enchufe derivaci¢n brida de P.R.F.V de DN500/500/150mm, tornillos para bridas, p.p. de junta, anclaje de hormig¢n, colocada y probada. |164835|040400|0|
+~T|003034|T enchufe-enchufe derivaci¢n brida de P.R.F.V de DN500/500/150mm, tornillos para bridas, p.p. de junta, anclaje de hormig¢n, colocada y probada. |
+~D|003034|SINDESCO\1\164835\|
+~C|003035|ud|T enchufe-enchufe derivaci¢n brida de fundici¢n d£ctil de DN500/500/100mm, tornillos para bridas, p.p. de junta, anclaje de hormig¢n, colocada y probada. |168120|040400|0|
+~T|003035|T enchufe-enchufe derivaci¢n brida de fundici¢n d£ctil de DN500/500/100mm, tornillos para bridas, p.p. de junta, anclaje de hormig¢n, colocada y probada. |
+~D|003035|SINDESCO\1\168120\|
+~C|003036|ud|T enchufe-enchufe derivaci¢n brida de P.R.F.V de DN300/300/100mm, tornillos para bridas, p.p. de junta, anclaje de hormig¢n, colocada y probada. |369639|040400|0|
+~T|003036|T enchufe-enchufe derivaci¢n brida de P.R.F.V de DN300/300/100mm, tornillos para bridas, p.p. de junta, anclaje de hormig¢n, colocada y probada. |
+~D|003036|SINDESCO\1\369639\|
+~C|003037|ud|T enchufe-enchufe derivaci¢n brida de fundici¢n d£ctil de DN500/500/200mm, tornillos para bridas, p.p. de junta, anclaje de hormig¢n, colocada y probada. |168120|040400|0|
+~T|003037|T enchufe-enchufe derivaci¢n brida de fundici¢n d£ctil de DN500/500/200mm, tornillos para bridas, p.p. de junta, anclaje de hormig¢n, colocada y probada. |
+~D|003037|SINDESCO\1\168120\|
+~C|003038|ud|T enchufe-enchufe derivaci¢n brida de P.R.F.V de DN800/800/150mm, tornillos para bridas, p.p. de junta, anclaje de hormig¢n, colocada y probada. |541865|040400|0|
+~T|003038|T enchufe-enchufe derivaci¢n brida de P.R.F.V de DN800/800/150mm, tornillos para bridas, p.p. de junta, anclaje de hormig¢n, colocada y probada. |
+~D|003038|SINDESCO\1\541865\|
+~C|003039|ud|T enchufe-enchufe derivaci¢n brida de P.R.F.V. de DN300/300/80mm, tornillos para bridas, p.p. de junta, anclaje de hormig¢n, colocada y probada. |350915|040400|0|
+~T|003039|T enchufe-enchufe derivaci¢n brida de P.R.F.V. de DN300/300/80mm, tornillos para bridas, p.p. de junta, anclaje de hormig¢n, colocada y probada. |
+~D|003039|SINDESCO\1\350915\|
+~C|003040|ud|T enchufe-enchufe derivaci¢n brida de P.R.F.V de DN800/800/800mm, tornillos para bridas, p.p. de junta, anclaje de hormig¢n, colocada y probada. |1172677|040400|0|
+~T|003040|T enchufe-enchufe derivaci¢n brida de P.R.F.V de DN800/800/800mm, tornillos para bridas, p.p. de junta, anclaje de hormig¢n, colocada y probada. |
+~D|003040|SINDESCO\1\1172677\|
+~C|003041|ud|T enchufe-enchufe derivaci¢n brida de P.R.F.V. de DN800/800/500mm, tornillos para bridas, p.p. de junta, anclaje de hormig¢n, colocada y probada. |1126551|040400|0|
+~T|003041|T enchufe-enchufe derivaci¢n brida de P.R.F.V. de DN800/800/500mm, tornillos para bridas, p.p. de junta, anclaje de hormig¢n, colocada y probada. |
+~D|003041|SINDESCO\1\1126551\|
+~C|003042|ud|Codo de 90ß brida-brida de P.R.F.V. de DN 200mm, incluso p.p. de tornillos, junta, colocacion y pruebas. |112552|040400|0|
+~T|003042|Codo de 90ß brida-brida de P.R.F.V. de DN 200mm, incluso p.p. de tornillos, junta, colocacion y pruebas. |
+~D|003042|SINDESCO\1\112552\|
+~C|003043|ud|Codo de 90ß brida-brida de fundici¢n d£ctil DN 200mm, incluso p.p. tornillos,juntas, colocacion y pruebas. |27202|040400|0|
+~T|003043|Codo de 90ß brida-brida de fundici¢n d£ctil DN 200mm, incluso p.p. tornillos,juntas, colocacion y pruebas. |
+~D|003043|SINDESCO\1\27202\|
+~C|003044|ud|Codo de 90ß brida-brida de P.R.F.V. de DN 150mm, incluso p.p. de tornillos, junta, colocacion y pruebas. |18347|040400|0|
+~T|003044|Codo de 90ß brida-brida de P.R.F.V. de DN 150mm, incluso p.p. de tornillos, junta, colocacion y pruebas. |
+~D|003044|SINDESCO\1\18347\|
+~C|003045|ud|Codo de 90ß brida-brida de fundici¢n d£ctil DN 150mm, incluso p.p. de tornillos, juntas, colocacion y pruebas. |18829|040400|0|
+~T|003045|Codo de 90ß brida-brida de fundici¢n d£ctil DN 150mm, incluso p.p. de tornillos, juntas, colocacion y pruebas. |
+~D|003045|SINDESCO\1\18829\|
+~C|003046|ud|Codo de 90ß brida-brida de P.R.F.V. de DN 100mm, incluso p.p. de tornillos, junta, colocacion y pruebas. |10355|040400|0|
+~T|003046|Codo de 90ß brida-brida de P.R.F.V. de DN 100mm, incluso p.p. de tornillos, junta, colocacion y pruebas. |
+~D|003046|SINDESCO\1\10355\|
+~C|003047|ud|Codo de 90ß brida-brida de fundici¢n d£ctil DN 100mm, incluso p.p. de tornillos, juntas, colocacion y pruebas. |9935|040400|0|
+~T|003047|Codo de 90ß brida-brida de fundici¢n d£ctil DN 100mm, incluso p.p. de tornillos, juntas, colocacion y pruebas. |
+~D|003047|SINDESCO\1\9935\|
+~C|003048|ud|Codo de 90ß en P.R.F.V. PN16atm. Rigidez 5000N/m2, DN 800mm, incluso p.p. de juntas, colocacion y pruebas. |677300|040400|0|
+~T|003048|Codo de 90ß en P.R.F.V. PN16atm. Rigidez 5000N/m2, DN 800mm, incluso p.p. de juntas, colocacion y pruebas. |
+~D|003048|SINDESCO\1\677300\|
+~C|003049|ud|Codo de 90ß en P.R.F.V. PN16atm. Rigidez 5000N/m2, DN 500mm, incluso p.p. de juntas, colocacion y pruebas. |318153|040400|0|
+~T|003049|Codo de 90ß en P.R.F.V. PN16atm. Rigidez 5000N/m2, DN 500mm, incluso p.p. de juntas, colocacion y pruebas. |
+~D|003049|SINDESCO\1\318153\|
+~C|003050|ud|Codo de 90ß en P.R.F.V. PN16atm. Rigidez 5000N/m2, DN 300mm, incluso p.p. de juntas, colocacion y pruebas. |148648|040400|0|
+~T|003050|Codo de 90ß en P.R.F.V. PN16atm. Rigidez 5000N/m2, DN 300mm, incluso p.p. de juntas, colocacion y pruebas. |
+~D|003050|SINDESCO\1\148648\|
+~C|003051|ud|Codo de 45ß en P.R.F.V. PN16atm. Rigidez 5000N/m2, DN 800mm, incluso p.p. de juntas, colocacion y pruebas. |468612|040400|0|
+~T|003051|Codo de 45ß en P.R.F.V. PN16atm. Rigidez 5000N/m2, DN 800mm, incluso p.p. de juntas, colocacion y pruebas. |
+~D|003051|SINDESCO\1\468612\|
+~C|003052|ud|Codo de 45ß en P.R.F.V. PN16atm. Rigidez 5000N/m2, DN 500mm, incluso p.p. de juntas, colocacion y pruebas. |204398|040400|0|
+~T|003052|Codo de 45ß en P.R.F.V. PN16atm. Rigidez 5000N/m2, DN 500mm, incluso p.p. de juntas, colocacion y pruebas. |
+~D|003052|SINDESCO\1\204398\|
+~C|003053|ud|Codo de 45ß en P.R.F.V. PN16atm. Rigidez 5000N/m2, DN 300mm, incluso p.p. de juntas, colocacion y pruebas. |100212|040400|0|
+~T|003053|Codo de 45ß en P.R.F.V. PN16atm. Rigidez 5000N/m2, DN 300mm, incluso p.p. de juntas, colocacion y pruebas. |
+~D|003053|SINDESCO\1\100212\|
+~C|003054|ud|V†lvula de compuerta de asiento el†stico de DN 200mm, uni¢n mediante bridas, modelo corto, colocada y probada. |95547|040400|0|
+~T|003054|V†lvula de compuerta de asiento el†stico de DN 200mm, uni¢n mediante bridas, modelo corto, colocada y probada. |
+~D|003054|SINDESCO\1\95547\|
+~C|003055|ud|V†lvula de compuerta de asiento el†stico de DN 150mm, uni¢n mediante bridas, modelo corto, colocada y probada. |56697|040400|0|
+~T|003055|V†lvula de compuerta de asiento el†stico de DN 150mm, uni¢n mediante bridas, modelo corto, colocada y probada. |
+~D|003055|SINDESCO\1\56697\|
+~C|003056|ud|V†lvula de compuerta de asiento el†stico de DN 100mm, uni¢n mediante bridas, modelo corto, colocada y probada. |30682|040400|0|
+~T|003056|V†lvula de compuerta de asiento el†stico de DN 100mm, uni¢n mediante bridas, modelo corto, colocada y probada. |
+~D|003056|SINDESCO\1\30682\|
+~C|003057|ud|V†lvula de compuerta de asiento el†stico de DN 80mm, uni¢n mediante bridas, modelo corto, colocada y probada. |25809|040400|0|
+~T|003057|V†lvula de compuerta de asiento el†stico de DN 80mm, uni¢n mediante bridas, modelo corto, colocada y probada. |
+~D|003057|SINDESCO\1\25809\|
+~C|003058|m|Tuber°a de P.R.F.V. PN 16atm. Rigidez 2500N/m2 de D 800mm incluso parte proporcional de juntas, colocaci¢n y pruebas. |46192|040400|0|
+~T|003058|Tuber°a de P.R.F.V. PN 16atm. Rigidez 2500N/m2 de D 800mm incluso parte proporcional de juntas, colocaci¢n y pruebas. |
+~D|003058|SINDESCO\1\46192\|
+~C|003059|m|Tuber°a de P.R.F.V. PN 10atm. Rigidez 2500N/m2 de D 800mm incluso parte proporcional de juntas, colocaci¢n y pruebas. |41116|040400|0|
+~T|003059|Tuber°a de P.R.F.V. PN 10atm. Rigidez 2500N/m2 de D 800mm incluso parte proporcional de juntas, colocaci¢n y pruebas. |
+~D|003059|SINDESCO\1\41116\|
+~C|003060|m|Tuber°a de P.R.F.V. PN 16atm. Rigidez 5000N/m2 de D 300mm incluso parte proporcional de juntas, colocaci¢n y pruebas. |11286|040400|0|
+~T|003060|Tuber°a de P.R.F.V. PN 16atm. Rigidez 5000N/m2 de D 300mm incluso parte proporcional de juntas, colocaci¢n y pruebas. |
+~D|003060|SINDESCO\1\11286\|
+~C|003061|m|Tuber°a de P.R.F.V. PN 16atm. Rigidez 5000N/m2 de D 500mm incluso parte proporcional de juntas, colocaci¢n y pruebas. |25755|040400|0|
+~T|003061|Tuber°a de P.R.F.V. PN 16atm. Rigidez 5000N/m2 de D 500mm incluso parte proporcional de juntas, colocaci¢n y pruebas. |
+~D|003061|SINDESCO\1\25755\|
+~C|003062|m|Tuber°a de P.R.F.V. PN 10atm. Rigidez 2500N/m2 de D 500mm incluso parte proporcional de juntas, colocaci¢n y pruebas. |18674|040400|0|
+~T|003062|Tuber°a de P.R.F.V. PN 10atm. Rigidez 2500N/m2 de D 500mm incluso parte proporcional de juntas, colocaci¢n y pruebas. |
+~D|003062|SINDESCO\1\18674\|
+~C|003063|m|Tuber°a de P.R.F.V. PN 10atm. Rigidez 5000N/m2 de D 300mm incluso parte proporcional de juntas, colocaci¢n y pruebas. |9922|040400|0|
+~T|003063|Tuber°a de P.R.F.V. PN 10atm. Rigidez 5000N/m2 de D 300mm incluso parte proporcional de juntas, colocaci¢n y pruebas. |
+~D|003063|SINDESCO\1\9922\|
+~C|003064|ud|Empalme brida-liso de P.R.F.V. PN 16atm. Rigidez 5000 N/m2 de DN 800mm, incluida p.p. junta y demas elementos necesarios, colocado y probado. |207068|040400|0|
+~T|003064|Empalme brida-liso de P.R.F.V. PN 16atm. Rigidez 5000 N/m2 de DN 800mm, incluida p.p. junta y demas elementos necesarios, colocado y probado. |
+~D|003064|SINDESCO\1\207068\|
+~C|003065|ud|Empalme brida-liso de P.R.F.V. PN 16atm. Rigidez 5000 N/m2 de DN 500mm, incluida p.p. junta y demas elementos necesarios, colocado y probado. |40745|040400|0|
+~T|003065|Empalme brida-liso de P.R.F.V. PN 16atm. Rigidez 5000 N/m2 de DN 500mm, incluida p.p. junta y demas elementos necesarios, colocado y probado. |
+~D|003065|SINDESCO\1\40745\|
+~C|003066|ud|Empalme fundici¢n d£ctil brida-enchufe de DN 800mm, incluida p.p.junta y demas elementos necesarios, colocado y probado. |241207|040400|0|
+~T|003066|Empalme fundici¢n d£ctil brida-enchufe de DN 800mm, incluida p.p.junta y demas elementos necesarios, colocado y probado. |
+~D|003066|SINDESCO\1\241207\|
+~C|003067|m|Tuber°a de hormig¢n compresi¢n radial o turbocomprimido clase III, norma ASTM, enchufe de campana, de DN 300mm, incluso p.p. de junta delta, montaje, colocaci¢n y pruebas. |5011|040400|0|
+~T|003067|Tuber°a de hormig¢n compresi¢n radial o turbocomprimido clase III, norma ASTM, enchufe de campana, de DN 300mm, incluso p.p. de junta delta, montaje, colocaci¢n y pruebas. |
+~D|003067|SINDESCO\1\5011\|
+~C|003068|ud|Carrete de anclaje de fundici¢n d£ctil con bridas, de DN 300mm y 1m de longitud, incluso dado de anclaje para v†lvula del misn≠mo di†metro, completamente colocado y probado. |82028|040400|0|
+~T|003068|Carrete de anclaje de fundici¢n d£ctil con bridas, de DN 300mm y 1m de longitud, incluso dado de anclaje para v†lvula del misn≠mo di†metro, completamente colocado y probado. |
+~D|003068|SINDESCO\1\82028\|
+~C|003069|ud|Carrete de anclaje de fundici¢n d£ctil con bridas, de DN 500mm y 1m de longitud, incluso dado de anclaje para v†lvula del misn≠mo di†metro, completamente colocado y probado. |215649|040400|0|
+~T|003069|Carrete de anclaje de fundici¢n d£ctil con bridas, de DN 500mm y 1m de longitud, incluso dado de anclaje para v†lvula del misn≠mo di†metro, completamente colocado y probado. |
+~D|003069|SINDESCO\1\215649\|
+~C|003070|ud|Carrete de anclaje de fundici¢n d£ctil con bridas, de DN 800mm y 1.5m de longitud, incluso dado de anclaje para v†lvula del misn≠mo di†metro, completamente colocado y probado. |471987|040400|0|
+~T|003070|Carrete de anclaje de fundici¢n d£ctil con bridas, de DN 800mm y 1.5m de longitud, incluso dado de anclaje para v†lvula del misn≠mo di†metro, completamente colocado y probado. |
+~D|003070|SINDESCO\1\471987\|
+~C|003071|ud|Pieza de acoplamiento entre tuber°a de hormig¢n armado de di†metro interior 800mm y tuber°a de P.R.F.V de diemetro interior 800mm (di†metros exteriores aproximados respectivos 950 y 821mm) formada por dos manguitos y pieza de transici¢n totalmente colocada y montada. Seg£n E.T. |530181|040400|0|
+~T|003071|Pieza de acoplamiento entre tuber°a de hormig¢n armado de di†metro interior 800mm y tuber°a de P.R.F.V de diemetro interior 800mm (di†metros exteriores aproximados respectivos 950 y 821mm) formada por dos manguitos y pieza de transici¢n totalmente colocada y montada. Seg£n E.T. |
+~D|003071|SINDESCO\1\530181\|
+~C|003072|ud|Cono de reducci¢n de P.R.F.V. PN 16atm. Rigidez 2500 N/m2 de DN800/500mm, completo incluso anclaje de hormig¢n, colocado y probado. |776532|040400|0|
+~T|003072|Cono de reducci¢n de P.R.F.V. PN 16atm. Rigidez 2500 N/m2 de DN800/500mm, completo incluso anclaje de hormig¢n, colocado y probado. |
+~D|003072|SINDESCO\1\776532\|
+~C|003073|ud|Cono de reducci¢n de P.R.F.V. PN 16atm. Rigidez 2500 N/m2 de DN500/300mm, completo incluso anclaje de hormig¢n, colocado y probado. |218804|040400|0|
+~T|003073|Cono de reducci¢n de P.R.F.V. PN 16atm. Rigidez 2500 N/m2 de DN500/300mm, completo incluso anclaje de hormig¢n, colocado y probado. |
+~D|003073|SINDESCO\1\218804\|
+~C|003074|m|Tuber°a de fundici¢n d£ctil de DN 800mm seg£n ISO 2531 con p.p. de junta, incluso cinta de se§alizaci¢n y demas accesorios, colocada y probada. |50604|040400|0|
+~T|003074|Tuber°a de fundici¢n d£ctil de DN 800mm seg£n ISO 2531 con p.p. de junta, incluso cinta de se§alizaci¢n y demas accesorios, colocada y probada. |
+~D|003074|SINDESCO\1\50604\|
+~C|003075|ud|Tuber°a de P.R.F.V. PN 10atm.Rigidez 5000 N/m2 de DN800mm,incluso p.p. de juntas colocada y probada. |46186|040400|0|
+~T|003075|Tuber°a de P.R.F.V. PN 10atm.Rigidez 5000 N/m2 de DN800mm,incluso p.p. de juntas colocada y probada. |
+~D|003075|SINDESCO\1\46186\|
+~C|003076|m|Tuber°a de P.R.F.V. PN 10atm.Rigidez 5000 N/m2 de DN500mm,incluso p.p. de juntas colocada y probada. |21468|040400|0|
+~T|003076|Tuber°a de P.R.F.V. PN 10atm.Rigidez 5000 N/m2 de DN500mm,incluso p.p. de juntas colocada y probada. |
+~D|003076|SINDESCO\1\21468\|
+~C|003077|ud|V†lvula de mariposa embridada de 150 mm de DN presi¢n de trabajo 16atm, incluyendo montaje y pruebas. |79009|040400|0|
+~T|003077|V†lvula de mariposa embridada de 150 mm de DN presi¢n de trabajo 16atm, incluyendo montaje y pruebas. |
+~D|003077|SINDESCO\1\79009\|
+~C|003078|ud|Carrete de desmontaje de DN 150mm, colocado y probado. |52583|040400|0|
+~T|003078|Carrete de desmontaje de DN 150mm, colocado y probado. |
+~D|003078|SINDESCO\1\52583\|
+~C|003079|ud|Purgador de aire para filtro de arena, colocado y probado. |24938|040400|0|
+~T|003079|Purgador de aire para filtro de arena, colocado y probado. |
+~D|003079|SINDESCO\1\24938\|
+~C|003080|ud|Man¢metro de muelle tubular, con separador de tipo membrana, concÇntrico en ba§o de glicerina totalmente instalado y probado. |48209|040400|0|
+~T|003080|Man¢metro de muelle tubular, con separador de tipo membrana, concÇntrico en ba§o de glicerina totalmente instalado y probado. |
+~D|003080|SINDESCO\1\48209\|
+~C|003081|ud|Conjunto de tuber°as y piezas galvanizadas en caliente, incluyendo bridas y juntas y torniller°a, con tratamiento interior con pintura epoxi alimentaria y otro exterior con esmalte cloro-caucho con resinas acr°licas, para distribuci¢n y entrada de agua bruta a filtros constando de: Colector general D350mm con cinco salidas D300, cada una de ellas con dos derivaciones D300 una entrada a cada filtro y otra a desagÅe. Cinco tramos D300 intercalados entre v†lvulas. Cinco tramos D300 de entrada a filtros. Cinco tramos D300 de salida de desagÅe. Seg£n esquema y medici¢n aproximada en planos |2182602|040400|0|
+~T|003081|Conjunto de tuber°as y piezas galvanizadas en caliente, incluyendo bridas y juntas y torniller°a, con tratamiento interior con pintura epoxi alimentaria y otro exterior con esmalte cloro-caucho con resinas acr°licas, para distribuci¢n y entrada de agua bruta a filtros constando de: Colector general D350mm con cinco salidas D300, cada una de ellas con dos derivaciones D300 una entrada a cada filtro y otra a desagÅe. Cinco tramos D300 intercalados entre v†lvulas. Cinco tramos D300 de entrada a filtros. Cinco tramos D300 de salida de desagÅe. Seg£n esquema y medici¢n aproximada en planos |
+~D|003081|SINDESCO\1\2182602\|
+~C|003082|ud|Conjunto de tuber°as y piezas galvanizadas en caliente, incluyendo bridas y juntas y torniller°a, con tratamiento interior con pintura epoxi alimentaria y otro exterior con esmalte cloro-caucho con resinas acr°licas, para salida y recogida de agua filtrada hasta dep¢sito, constando de: Colector general D350mm con cinco entradas D300,cada una de ellas con dos derivaciones D300 una salida de agua del filtro y otra de salida de agua del lavabo. Cinco tramos D300 intercalados entre v†lvulas. Cinco tramos D300 de salida de agua tratada. Cinco tramos D300 de derivaci¢n de agua de lavabo. Seg£n esquema y medici¢n aproximada en planos |2014172|040400|0|
+~T|003082|Conjunto de tuber°as y piezas galvanizadas en caliente, incluyendo bridas y juntas y torniller°a, con tratamiento interior con pintura epoxi alimentaria y otro exterior con esmalte cloro-caucho con resinas acr°licas, para salida y recogida de agua filtrada hasta dep¢sito, constando de: Colector general D350mm con cinco entradas D300,cada una de ellas con dos derivaciones D300 una salida de agua del filtro y otra de salida de agua del lavabo. Cinco tramos D300 intercalados entre v†lvulas. Cinco tramos D300 de salida de agua tratada. Cinco tramos D300 de derivaci¢n de agua de lavabo. Seg£n esquema y medici¢n aproximada en planos |
+~D|003082|SINDESCO\1\2014172\|
+~C|003083|ud|Conjunto de tuber°as y piezas galvanizadas en caliente, incluyendo bridas y juntas y torniller°a, con tratamiento interior con pintura epoxi alimentaria y otro exterior con esmalte cloro-caucho con resinas acr°licas, para salida y recogida de agua filtrada hasta dep¢sito, constando de: Colector general D300mm con cinco entradas Cinco tramos D300 de conexi¢n de salida de filtros. Seg£n esquema y medici¢n aproximada en planos |999631|040400|0|
+~T|003083|Conjunto de tuber°as y piezas galvanizadas en caliente, incluyendo bridas y juntas y torniller°a, con tratamiento interior con pintura epoxi alimentaria y otro exterior con esmalte cloro-caucho con resinas acr°licas, para salida y recogida de agua filtrada hasta dep¢sito, constando de: Colector general D300mm con cinco entradas Cinco tramos D300 de conexi¢n de salida de filtros. Seg£n esquema y medici¢n aproximada en planos |
+~D|003083|SINDESCO\1\999631\|
+~C|003084|ud|Conjunto de tuber°as y piezas galvanizadas en caliente, incluyendo bridas y juntas y torniller°a, con tratamiento interior con pintura epoxi alimentaria y otro exterior con esmalte cloro-caucho con resinas acr°licas, para vaciado de filtros, constando de: Cinco tramos D150mm antes de v†vula. Cinco tramos D150mm despues de v†lvula. Seg£n esquema y medici¢n aproximada en planos |282767|040400|0|
+~T|003084|Conjunto de tuber°as y piezas galvanizadas en caliente, incluyendo bridas y juntas y torniller°a, con tratamiento interior con pintura epoxi alimentaria y otro exterior con esmalte cloro-caucho con resinas acr°licas, para vaciado de filtros, constando de: Cinco tramos D150mm antes de v†vula. Cinco tramos D150mm despues de v†lvula. Seg£n esquema y medici¢n aproximada en planos |
+~D|003084|SINDESCO\1\282767\|
+~C|003085|ud|Empalme brida-liso de 800mm de di†metro interior en chapas de calderer°a de 8mm de espesor y longitud no mayor de 1.8m, para uni¢n de tuber°a de hormig¢n armado con piezas met†licas, incluso juntas de goma, colocado y probado. |217818|040400|0|
+~T|003085|Empalme brida-liso de 800mm de di†metro interior en chapas de calderer°a de 8mm de espesor y longitud no mayor de 1.8m, para uni¢n de tuber°a de hormig¢n armado con piezas met†licas, incluso juntas de goma, colocado y probado. |
+~D|003085|SINDESCO\1\217818\|
+~C|003086|ud|Carrete de anclaje pasamuros de fundici¢n d£ctil con bridas de DN 800mm y 1.5m de longitud, completamente colocado y probado. |269869|040400|0|
+~T|003086|Carrete de anclaje pasamuros de fundici¢n d£ctil con bridas de DN 800mm y 1.5m de longitud, completamente colocado y probado. |
+~D|003086|SINDESCO\1\269869\|
+~C|003087|ud|Manguito de fundici¢n d£ctil de DN800mm seg£n ISO 2531, embridado de 1m de longitud, colocado y probado. |231038|040400|0|
+~T|003087|Manguito de fundici¢n d£ctil de DN800mm seg£n ISO 2531, embridado de 1m de longitud, colocado y probado. |
+~D|003087|SINDESCO\1\231038\|
+~C|003088|ud|T brida-brida derivaci¢n brida de fundici¢n d£ctil de DN500/500/150mm, tornillos para bridas p.p. de junta, colocada y probada. |195487|040400|0|
+~T|003088|T brida-brida derivaci¢n brida de fundici¢n d£ctil de DN500/500/150mm, tornillos para bridas p.p. de junta, colocada y probada. |
+~D|003088|SINDESCO\1\195487\|
+~C|003089|ud|T brida-brida derivaci¢n brida de fundici¢n d£ctil de DN500/500/100mm, tornillos para bridas p.p. de junta, colocada y probada. |195487|040400|0|
+~T|003089|T brida-brida derivaci¢n brida de fundici¢n d£ctil de DN500/500/100mm, tornillos para bridas p.p. de junta, colocada y probada. |
+~D|003089|SINDESCO\1\195487\|
+~C|003090|ud|T brida-brida derivaci¢n brida de fundici¢n d£ctil de DN800/800/200mm, tornillos para bridas p.p. de junta, colocada y probada. |652532|040400|0|
+~T|003090|T brida-brida derivaci¢n brida de fundici¢n d£ctil de DN800/800/200mm, tornillos para bridas p.p. de junta, colocada y probada. |
+~D|003090|SINDESCO\1\652532\|
+~C|003091|ud|T brida-brida derivaci¢n brida de fundici¢n d£ctil de DN800/800/150mm, tornillos para bridas p.p. de junta, colocada y probada. |652532|040400|0|
+~T|003091|T brida-brida derivaci¢n brida de fundici¢n d£ctil de DN800/800/150mm, tornillos para bridas p.p. de junta, colocada y probada. |
+~D|003091|SINDESCO\1\652532\|
+~C|003092|ud|Empalme brida-liso de fundici¢n d£ctil de DN500mm, incluso p.p. tornillos y junta y dem†s elementos necesarios, colocado y probado. |48329|040400|0|
+~T|003092|Empalme brida-liso de fundici¢n d£ctil de DN500mm, incluso p.p. tornillos y junta y dem†s elementos necesarios, colocado y probado. |
+~D|003092|SINDESCO\1\48329\|
+~C|003093|ud|Empalme brida-liso de fundici¢n d£ctil de DN800mm, incluso p.p. tornillos y junta y dem†s elementos necesarios, colocado y probado. |234743|040400|0|
+~T|003093|Empalme brida-liso de fundici¢n d£ctil de DN800mm, incluso p.p. tornillos y junta y dem†s elementos necesarios, colocado y probado. |
+~D|003093|SINDESCO\1\234743\|
+~C|003094|ud|Cono de reducci¢n de fundici¢n d£ctil brida-brida DN 350-300mm completo, incluso anclaje de hormig¢n colocado y probado. |83014|040400|0|
+~T|003094|Cono de reducci¢n de fundici¢n d£ctil brida-brida DN 350-300mm completo, incluso anclaje de hormig¢n colocado y probado. |
+~D|003094|SINDESCO\1\83014\|
+~C|003095|ud|V†lvula de mariposa de DN 500mm, presi¢n m†xima de trabajo 16kp/cm2, montaje entre bridas, mando manual por volante, desmultiplicador, dos limitadores de par y dos contactos finales de carrera, incluyendo montaje y pruebas. |559961|040400|0|
+~T|003095|V†lvula de mariposa de DN 500mm, presi¢n m†xima de trabajo 16kp/cm2, montaje entre bridas, mando manual por volante, desmultiplicador, dos limitadores de par y dos contactos finales de carrera, incluyendo montaje y pruebas. |
+~D|003095|SINDESCO\1\559961\|
+~C|003096|ud|V†lvula de mariposa de DN 300mm, presi¢n m†xima de trabajo 16kp/cm2, montaje entre bridas, mando manual por volante, desmultiplicador, dos limitadores de par y dos contactos finales de carrera, incluyendo montaje y pruebas. |237360|040400|0|
+~T|003096|V†lvula de mariposa de DN 300mm, presi¢n m†xima de trabajo 16kp/cm2, montaje entre bridas, mando manual por volante, desmultiplicador, dos limitadores de par y dos contactos finales de carrera, incluyendo montaje y pruebas. |
+~D|003096|SINDESCO\1\237360\|
+~C|003097|ud|Empalme brida-liso de fundici¢n d£ctil de DN 300mm, incluso p.p. de tornillos y junta y demas elementos necesarios, colocado y probado. |17422|040400|0|
+~T|003097|Empalme brida-liso de fundici¢n d£ctil de DN 300mm, incluso p.p. de tornillos y junta y demas elementos necesarios, colocado y probado. |
+~D|003097|SINDESCO\1\17422\|
+~C|003098|m|Canalizaci¢n para alumbrado p£blico en aceras, seg£n detalle, con tuber°a de PVC de 90mm de di†metro, incluso alambre fiador y dado de hormig¢n de 0.40x0.40m2 |2330|040400|0|
+~T|003098|Canalizaci¢n para alumbrado p£blico en aceras, seg£n detalle, con tuber°a de PVC de 90mm de di†metro, incluso alambre fiador y dado de hormig¢n de 0.40x0.40m2 |
+~D|003098|SINDESCO\1\2330\|
+~C|003099|ud|Purgador de aire de alta tensi¢n PN 16atm de DN60mm, con v†lvula de cierre incorporada para conexi¢n con bridas, totalmente instalado y probado. |34655|040400|0|
+~T|003099|Purgador de aire de alta tensi¢n PN 16atm de DN60mm, con v†lvula de cierre incorporada para conexi¢n con bridas, totalmente instalado y probado. |
+~D|003099|SINDESCO\1\34655\|
+~C|003100|ud|Pieza en T de fundici¢n d£ctil brida-brida de 300/300/60mm derivada brida, totalmente instalada, tornillos para bridas y p.p. de junta |73681|040400|0|
+~T|003100|Pieza en T de fundici¢n d£ctil brida-brida de 300/300/60mm derivada brida, totalmente instalada, tornillos para bridas y p.p. de junta |
+~D|003100|SINDESCO\1\73681\|
+~C|003101|m|Tuber°a PVC PN 6atm D200mm UNE 53.112, con p.p. de junta colocada y probada. |3353|040400|0|
+~T|003101|Tuber°a PVC PN 6atm D200mm UNE 53.112, con p.p. de junta colocada y probada. |
+~D|003101|SINDESCO\1\3353\|
+~C|003102|ud|Adaptador de brida enchufe para tubos de PVC de D 200mm, incluso tornillos y p.p. de junta colocado y probado. |15658|040400|0|
+~T|003102|Adaptador de brida enchufe para tubos de PVC de D 200mm, incluso tornillos y p.p. de junta colocado y probado. |
+~D|003102|SINDESCO\1\15658\|
+~C|003103|ud|Pasamuro de PVC de DN hasta 150mm, con junta de caucho, totalmente instalado. |3470|040400|0|
+~T|003103|Pasamuro de PVC de DN hasta 150mm, con junta de caucho, totalmente instalado. |
+~D|003103|SINDESCO\1\3470\|
+~C|003104|ud|Pasamuro de PVC de DN 200mm, con junta de caucho, totalmente instalado. |6577|040400|0|
+~T|003104|Pasamuro de PVC de DN 200mm, con junta de caucho, totalmente instalado. |
+~D|003104|SINDESCO\1\6577\|
+~C|003105|ud|V†lvula de mariposa de DN800mm, presi¢n m†xima de trabajo 16kp/cm2, montaje entre bridas, mando manual por volante, desmultiplicador, dos limitadores de para y dos contactos finales de carrera, incluso montaje y pruebas. |1251232|040400|0|
+~T|003105|V†lvula de mariposa de DN800mm, presi¢n m†xima de trabajo 16kp/cm2, montaje entre bridas, mando manual por volante, desmultiplicador, dos limitadores de para y dos contactos finales de carrera, incluso montaje y pruebas. |
+~D|003105|SINDESCO\1\1251232\|
+~C|003106|ud|Empalme brida-enchufe de 800mm de di†metro interior en chapa de caldeder°a de 8mm de espesor y hormig¢n armado con piezas met†licas, incluso junta de goma, colocado y probado |224806|040400|0|
+~T|003106|Empalme brida-enchufe de 800mm de di†metro interior en chapa de caldeder°a de 8mm de espesor y hormig¢n armado con piezas met†licas, incluso junta de goma, colocado y probado |
+~D|003106|SINDESCO\1\224806\|
+~C|003107|ud|Pieza en T de fundici¢n d£ctil brida-brida de 800/800/800mm derivaci¢n brida, totalmente instalada. |1095118|040400|0|
+~T|003107|Pieza en T de fundici¢n d£ctil brida-brida de 800/800/800mm derivaci¢n brida, totalmente instalada. |
+~D|003107|SINDESCO\1\1095118\|
+~C|003108|ud|Codo 90ß brida-brida de fundici¢n d£ctil de DN800mm, incluso p.p. de tornillos, juntas, colocado y probado. |1236688|040400|0|
+~T|003108|Codo 90ß brida-brida de fundici¢n d£ctil de DN800mm, incluso p.p. de tornillos, juntas, colocado y probado. |
+~D|003108|SINDESCO\1\1236688\|
+~C|003109|ud|Actuador elÇctrico para v†lvula de mariposa D800mm, con todos los elementos necesarios para su funcionamiento, colocado y probado. |1477798|040400|0|
+~T|003109|Actuador elÇctrico para v†lvula de mariposa D800mm, con todos los elementos necesarios para su funcionamiento, colocado y probado. |
+~D|003109|SINDESCO\1\1477798\|
+~C|003110|ud|T en chapa de acero enchufe-enchufe derivaci¢n brida di†metro 500/500/500 para acoplar a tuber°a de fibrocemento existente, incluso arandelas, tornillos para bridas y anclaje de hormig¢n, colocado y probado. |139663|040400|0|
+~T|003110|T en chapa de acero enchufe-enchufe derivaci¢n brida di†metro 500/500/500 para acoplar a tuber°a de fibrocemento existente, incluso arandelas, tornillos para bridas y anclaje de hormig¢n, colocado y probado. |
+~D|003110|SINDESCO\1\139663\|
+~C|003111|ud|Manguito de fundici¢n d£ctil de DN500mm, seg£n ISO 2531, embridado de 1m de longitud colocado y probado. |215402|040400|0|
+~T|003111|Manguito de fundici¢n d£ctil de DN500mm, seg£n ISO 2531, embridado de 1m de longitud colocado y probado. |
+~D|003111|SINDESCO\1\215402\|
+~C|003112|ud|Codo 90ß brida-brida de fundici¢n d£ctil de DN500mm, incluso p.p. de tornillos, juntas, colocado y probado. |316941|040400|0|
+~T|003112|Codo 90ß brida-brida de fundici¢n d£ctil de DN500mm, incluso p.p. de tornillos, juntas, colocado y probado. |
+~D|003112|SINDESCO\1\316941\|
+~C|003113|m|Tuber°a PVC PN 6atm D160mm con p.p. de junta colocada y probada |2307|040400|0|
+~T|003113|Tuber°a PVC PN 6atm D160mm con p.p. de junta colocada y probada |
+~D|003113|SINDESCO\1\2307\|
+~C|003114|ud|Adaptador de brida enchufe para tubos de PVC de D 160mm, incluso tornillos y p.p. de junta colocado y probado. |12986|040400|0|
+~T|003114|Adaptador de brida enchufe para tubos de PVC de D 160mm, incluso tornillos y p.p. de junta colocado y probado. |
+~D|003114|SINDESCO\1\12986\|
+~C|003115|ud|Actuador elÇctrico para v†lvula de mariposa D500 con todos los elementos necesarios para su funcionamiento colocado y probado |1077747|040400|0|
+~T|003115|Actuador elÇctrico para v†lvula de mariposa D500 con todos los elementos necesarios para su funcionamiento colocado y probado |
+~D|003115|SINDESCO\1\1077747\|
+~C|003116|ud|Tuber°a de fundici¢n d£ctil de DN500mm, seg£n ISO 2531, embridada en tramos de 0.5 a 1m de longitud, colocada y probada. |242010|040400|0|
+~T|003116|Tuber°a de fundici¢n d£ctil de DN500mm, seg£n ISO 2531, embridada en tramos de 0.5 a 1m de longitud, colocada y probada. |
+~D|003116|SINDESCO\1\242010\|
+~C|003117|ud|Tuber°a de fundici¢n d£ctil de DN500mm, seg£n ISO 2531, embridada en tramos de 2 a 3m de longitud, colocada y probada. |301963|040400|0|
+~T|003117|Tuber°a de fundici¢n d£ctil de DN500mm, seg£n ISO 2531, embridada en tramos de 2 a 3m de longitud, colocada y probada. |
+~D|003117|SINDESCO\1\301963\|
+~C|003118|ud|Tuber°a de fundici¢n d£ctil de DN500mm, seg£n ISO 2531, embridada en tramos de 3 a 4m de longitud, colocada y probada. |331936|040400|0|
+~T|003118|Tuber°a de fundici¢n d£ctil de DN500mm, seg£n ISO 2531, embridada en tramos de 3 a 4m de longitud, colocada y probada. |
+~D|003118|SINDESCO\1\331936\|
+~C|003119|ud|Tuber°a de fundici¢n d£ctil de DN500mm, seg£n ISO 2531, embridada en tramos de 4 a 5m de longitud, colocada y probada. |361913|040400|0|
+~T|003119|Tuber°a de fundici¢n d£ctil de DN500mm, seg£n ISO 2531, embridada en tramos de 4 a 5m de longitud, colocada y probada. |
+~D|003119|SINDESCO\1\361913\|
+~C|003120|ud|Tuber°a de fundici¢n d£ctil de DN500mm, seg£n ISO 2531, embridada en tramos de 5 a 6m de longitud, colocada y probada. |369606|040400|0|
+~T|003120|Tuber°a de fundici¢n d£ctil de DN500mm, seg£n ISO 2531, embridada en tramos de 5 a 6m de longitud, colocada y probada. |
+~D|003120|SINDESCO\1\369606\|
+~C|003121|ud|Codo de 45ß enchufe-enchufe de fundici¢n d£ctil de DN500mm incluso p.p. de juntas, colocado y probado. |170050|040400|0|
+~T|003121|Codo de 45ß enchufe-enchufe de fundici¢n d£ctil de DN500mm incluso p.p. de juntas, colocado y probado. |
+~D|003121|SINDESCO\1\170050\|
+~C|003122|ud|Empalme brida-liso de fundici¢n d£ctil de DN 400mm, iincluso p.p. tornillos y junta y dem†s elementos necesarios, colocado y probado. |24679|040400|0|
+~T|003122|Empalme brida-liso de fundici¢n d£ctil de DN 400mm, iincluso p.p. tornillos y junta y dem†s elementos necesarios, colocado y probado. |
+~D|003122|SINDESCO\1\24679\|
+~C|003123|ud|Codo de 90ß brida-brida de fundici¢n d£ctil de DN400mm incluso p.p. de juntas, colocado y probado. |237648|040400|0|
+~T|003123|Codo de 90ß brida-brida de fundici¢n d£ctil de DN400mm incluso p.p. de juntas, colocado y probado. |
+~D|003123|SINDESCO\1\237648\|
+~C|003124|m|Tuber°a de fundici¢n d£ctil de DN400mm, seg£n ISO 2531, con p.p. de junta, incluso cinta de se§alizaci¢n y demas accesorios, colocado y probado. |22439|040400|0|
+~T|003124|Tuber°a de fundici¢n d£ctil de DN400mm, seg£n ISO 2531, con p.p. de junta, incluso cinta de se§alizaci¢n y demas accesorios, colocado y probado. |
+~D|003124|SINDESCO\1\22439\|
+~C|003125|ud|T con bridas de fundici¢n d£ctil de DN 400/400/400mm en bridas, tornillos para bridas y anclaje de hormig¢n, colocada y probada. |156202|040400|0|
+~T|003125|T con bridas de fundici¢n d£ctil de DN 400/400/400mm en bridas, tornillos para bridas y anclaje de hormig¢n, colocada y probada. |
+~D|003125|SINDESCO\1\156202\|
+~C|003126|ud|Manguito de adaptaci¢n de diferentes materiales D 400 en fudici¢n d£ctil. |58670|040400|0|
+~T|003126|Manguito de adaptaci¢n de diferentes materiales D 400 en fudici¢n d£ctil. |
+~D|003126|SINDESCO\1\58670\|
+~C|003127|ud|Brida ciega de fundici¢n d£ctil de DN 500mm, incluso anclaje de hormig¢n, completa, colocada y probada. |116178|040400|0|
+~T|003127|Brida ciega de fundici¢n d£ctil de DN 500mm, incluso anclaje de hormig¢n, completa, colocada y probada. |
+~D|003127|SINDESCO\1\116178\|
+~C|003128|ud|Brida ciega de fundici¢n d£ctil de DN 150mm, incluso anclaje de hormig¢n, completa, colocada y probada. |85366|040400|0|
+~T|003128|Brida ciega de fundici¢n d£ctil de DN 150mm, incluso anclaje de hormig¢n, completa, colocada y probada. |
+~D|003128|SINDESCO\1\85366\|
+~C|003129|ud|Tuber°a de fundici¢n d£ctil de DN300mm, seg£n ISO 2531, embridada en tramos de 2 a 3m de longitud, colocada y probada. |183620|040400|0|
+~T|003129|Tuber°a de fundici¢n d£ctil de DN300mm, seg£n ISO 2531, embridada en tramos de 2 a 3m de longitud, colocada y probada. |
+~D|003129|SINDESCO\1\183620\|
+~C|003130|ud|Tuber°a de fundici¢n d£ctil de DN300mm, seg£n ISO 2531, embridada en tramos de 3 a 4m de longitud, colocada y probada. |201442|040400|0|
+~T|003130|Tuber°a de fundici¢n d£ctil de DN300mm, seg£n ISO 2531, embridada en tramos de 3 a 4m de longitud, colocada y probada. |
+~D|003130|SINDESCO\1\201442\|
+~C|003131|ud|Tuber°a de fundici¢n d£ctil de DN300mm, seg£n ISO 2531, embridada en tramos de 4 a 5m de longitud, colocada y probada. |219262|040400|0|
+~T|003131|Tuber°a de fundici¢n d£ctil de DN300mm, seg£n ISO 2531, embridada en tramos de 4 a 5m de longitud, colocada y probada. |
+~D|003131|SINDESCO\1\219262\|
+~C|003132|ud|Tuber°a de fundici¢n d£ctil de DN300mm, seg£n ISO 2531, embridada en tramos de 5 a 6m de longitud, colocada y probada. |223222|040400|0|
+~T|003132|Tuber°a de fundici¢n d£ctil de DN300mm, seg£n ISO 2531, embridada en tramos de 5 a 6m de longitud, colocada y probada. |
+~D|003132|SINDESCO\1\223222\|
+~C|003133|ud|T con bridas de fundici¢n d£ctil de DN 500/500/300mm en bridas, incluso arandelas de material de pl†stico,tornillos para bridas, colocada y probada. |195487|040400|0|
+~T|003133|T con bridas de fundici¢n d£ctil de DN 500/500/300mm en bridas, incluso arandelas de material de pl†stico,tornillos para bridas, colocada y probada. |
+~D|003133|SINDESCO\1\195487\|
+~C|003134|ud|T con bridas de fundici¢n d£ctil de DN 300/300/300mm en bridas, tornillos para bridas, colocada y probada. |73684|040400|0|
+~T|003134|T con bridas de fundici¢n d£ctil de DN 300/300/300mm en bridas, tornillos para bridas, colocada y probada. |
+~D|003134|SINDESCO\1\73684\|
+~C|004001|m2|Tabic¢n de ladrillo hueco doble de 9 cm de espesor tomado con mortero 1:6 de cemento |2392|040400|0|
+~T|004001|Tabic¢n de ladrillo hueco doble de 9 cm de espesor tomado con mortero 1:6 de cemento |
+~D|004001|SINDESCO\1\2392\|
+~C|004002|m2|Fabrica de ladrillo macizo de medio pie de espesor, recibido con mortero de cemento 1:6, incluso p.p. de replanteo, aplomado y nivelaci¢n, totalmente acabado. |3207|040400|0|
+~T|004002|Fabrica de ladrillo macizo de medio pie de espesor, recibido con mortero de cemento 1:6, incluso p.p. de replanteo, aplomado y nivelaci¢n, totalmente acabado. |
+~D|004002|SINDESCO\1\3207\|
+~C|004003|m2|Enlucido con mortero hidr¢fugo de cemento 1:4 |2101|040400|0|
+~T|004003|Enlucido con mortero hidr¢fugo de cemento 1:4 |
+~D|004003|SINDESCO\1\2101\|
+~C|004004|m|Bordillo recto doble capa de hormig¢n prefabricado, de 22cm de alto y 20cm de base, colocado. |959|040400|0|
+~T|004004|Bordillo recto doble capa de hormig¢n prefabricado, de 22cm de alto y 20cm de base, colocado. |
+~D|004004|SINDESCO\1\959\|
+~C|004005|m|Bordillo curvo monocapa de hormig¢n prefabricado, de 22cm de alto y 20cm de base, colocado. |1461|040400|0|
+~T|004005|Bordillo curvo monocapa de hormig¢n prefabricado, de 22cm de alto y 20cm de base, colocado. |
+~D|004005|SINDESCO\1\1461\|
+~C|004006|m|Bordillo recto doble capa de hormig¢n prefabricado tipo 1, en acceso a fincas, dimensiones seg£n planos, incluso p.p. de bordillos tipo 2I y 2D, colocado. |1143|040400|0|
+~T|004006|Bordillo recto doble capa de hormig¢n prefabricado tipo 1, en acceso a fincas, dimensiones seg£n planos, incluso p.p. de bordillos tipo 2I y 2D, colocado. |
+~D|004006|SINDESCO\1\1143\|
+~C|004007|m|R°gola in situ de hormig¢n H-250 de 0.3 x 0.12 x 0.1, incluso enlucido superior, colocada. |844|040400|0|
+~T|004007|R°gola in situ de hormig¢n H-250 de 0.3 x 0.12 x 0.1, incluso enlucido superior, colocada. |
+~D|004007|SINDESCO\1\844\|
+~C|004008|m2|Pavimento de baldosa hibr†ulica antideslizante de 0.3 x 0.3 m2, con 66 pastillas color gris y p.p. roja, incluso mortero de agarre proporci¢n 1:6, colocaci¢n y enlechado. |2311|040400|0|
+~T|004008|Pavimento de baldosa hibr†ulica antideslizante de 0.3 x 0.3 m2, con 66 pastillas color gris y p.p. roja, incluso mortero de agarre proporci¢n 1:6, colocaci¢n y enlechado. |
+~D|004008|SINDESCO\1\2311\|
+~C|004009|m2|Pavimento de adoqu°n de 6cm de espesor en acceso a fincas y aparcamiento, incluso recebado de juntas con arena, compactado de adoqu°n y remates. |2593|040400|0|
+~T|004009|Pavimento de adoqu°n de 6cm de espesor en acceso a fincas y aparcamiento, incluso recebado de juntas con arena, compactado de adoqu°n y remates. |
+~D|004009|SINDESCO\1\2593\|
+~C|004010|ud|Pieza de hormig¢n de 20 x 20 x 8 cm, para celosias, con galce de vidrio, colocada. |500|040400|0|
+~T|004010|Pieza de hormig¢n de 20 x 20 x 8 cm, para celosias, con galce de vidrio, colocada. |
+~D|004010|SINDESCO\1\500\|
+~C|004011|m2|Enfoscado y fratasado con morteo de cemento 1:3 en paramentos verticales y horizontales. |1211|040400|0|
+~T|004011|Enfoscado y fratasado con morteo de cemento 1:3 en paramentos verticales y horizontales. |
+~D|004011|SINDESCO\1\1211\|
+~C|004012|m2|Enfoscado, maestrado y fratasado con mortero de cemento 1:3 en paramentos verticales y horizontales. |2039|040400|0|
+~T|004012|Enfoscado, maestrado y fratasado con mortero de cemento 1:3 en paramentos verticales y horizontales. |
+~D|004012|SINDESCO\1\2039\|
+~C|004013|m2|Encalado a dos manos en paramentos verticales y horizontales |235|040400|0|
+~T|004013|Encalado a dos manos en paramentos verticales y horizontales |
+~D|004013|SINDESCO\1\235\|
+~C|004014|m2|Pintura pl†stica de resina epoxy, dos capas sobre suelo y paredes de hormig¢n, incluso ligado o limpieza, mano de imprimaci¢n especial epoxy, diluido, pastecido de golpes con masilla especial y lijado de parches. |2040|040400|0|
+~T|004014|Pintura pl†stica de resina epoxy, dos capas sobre suelo y paredes de hormig¢n, incluso ligado o limpieza, mano de imprimaci¢n especial epoxy, diluido, pastecido de golpes con masilla especial y lijado de parches. |
+~D|004014|SINDESCO\1\2040\|
+~C|004015|m2|Puerta de doble chapa lisa de acero con rigidizadores rectangulares, incluso acero, herrajes de colgar y seguridad, pintada y colocada. |15588|040400|0|
+~T|004015|Puerta de doble chapa lisa de acero con rigidizadores rectangulares, incluso acero, herrajes de colgar y seguridad, pintada y colocada. |
+~D|004015|SINDESCO\1\15588\|
+~C|004016|m2|Fabrica de bloques de hormig¢n aligerado, de 10cm de espesor, tomado con mortero 1:6 de 250 kg de cemento, para enroscar y guarnecer. |3046|040400|0|
+~T|004016|Fabrica de bloques de hormig¢n aligerado, de 10cm de espesor, tomado con mortero 1:6 de 250 kg de cemento, para enroscar y guarnecer. |
+~D|004016|SINDESCO\1\3046\|
+~C|005001|m2|Chapa de acero inoxidable de 2mm en elementos met†licos, incluso p.p. de marco estanco y angular de rigidizaci¢n, colocado. |10348|040400|0|
+~T|005001|Chapa de acero inoxidable de 2mm en elementos met†licos, incluso p.p. de marco estanco y angular de rigidizaci¢n, colocado. |
+~D|005001|SINDESCO\1\10348\|
+~C|005002|ud|Tapa de fundici¢n nodular o d£ctil de 0.70m de di†metro, incluso acero colocado. |18209|040400|0|
+~T|005002|Tapa de fundici¢n nodular o d£ctil de 0.70m de di†metro, incluso acero colocado. |
+~D|005002|SINDESCO\1\18209\|
+~C|005003|ud|Tapa de fundici¢n nodular o d£ctil de 0.60m de di†metro, incluso acero colocado. |13791|040400|0|
+~T|005003|Tapa de fundici¢n nodular o d£ctil de 0.60m de di†metro, incluso acero colocado. |
+~D|005003|SINDESCO\1\13791\|
+~C|005004|ud|Rejilla normalizada para sumidero en calzada, en fundici¢n, dimensiones seg£n plano, incluso cerco, bisagras y patillas de anclaje, colocada |3468|040400|0|
+~T|005004|Rejilla normalizada para sumidero en calzada, en fundici¢n, dimensiones seg£n plano, incluso cerco, bisagras y patillas de anclaje, colocada |
+~D|005004|SINDESCO\1\3468\|
+~C|005005|ud|Sif¢n de descarga autom†tica en acero inoxidable, caudal de 20 l/sg, colocado. |17367|040400|0|
+~T|005005|Sif¢n de descarga autom†tica en acero inoxidable, caudal de 20 l/sg, colocado. |
+~D|005005|SINDESCO\1\17367\|
+~C|005006|ud|Sumidero sif¢nico prefabricado, seg£n planos, incluso rejilla y colocaci¢n |17367|040400|0|
+~T|005006|Sumidero sif¢nico prefabricado, seg£n planos, incluso rejilla y colocaci¢n |
+~D|005006|SINDESCO\1\17367\|
+~C|005007|ud|Registro de fundic¢n d£ctil reforzada para arqueta visitable, seg£n planos, colocado. |20543|040400|0|
+~T|005007|Registro de fundic¢n d£ctil reforzada para arqueta visitable, seg£n planos, colocado. |
+~D|005007|SINDESCO\1\20543\|
+~C|005008|ud|Registro de hierro fundido para boca de riego seg£n planos, colocado |9306|040400|0|
+~T|005008|Registro de hierro fundido para boca de riego seg£n planos, colocado |
+~D|005008|SINDESCO\1\9306\|
+~C|005009|ud|Tapa de fundici¢n d£ctil de 0.631m de di†metro incluso cerco, seg£n planos, colocada |16023|040400|0|
+~T|005009|Tapa de fundici¢n d£ctil de 0.631m de di†metro incluso cerco, seg£n planos, colocada |
+~D|005009|SINDESCO\1\16023\|
+~C|005010|ud|Compuerta mural de 0.80x0.80 cm instalada en canal de 0.80x2.50 m incluso marco, anclajes y colocaci¢n. Seg£n E.T. |335078|040400|0|
+~T|005010|Compuerta mural de 0.80x0.80 cm instalada en canal de 0.80x2.50 m incluso marco, anclajes y colocaci¢n. Seg£n E.T. |
+~D|005010|SINDESCO\1\335078\|
+~C|005011|ud|Alcoque de hormig¢n prefabricado de 0.90x.090m2 en el exterior, incluso cimiento de 0.20x0.05m de hormig¢n H-125 y rejilla de fundici¢n para protecci¢n de alcorques de 0.79x0.79m2 seg£n detalle, pintada, colocado. |10779|040400|0|
+~T|005011|Alcoque de hormig¢n prefabricado de 0.90x.090m2 en el exterior, incluso cimiento de 0.20x0.05m de hormig¢n H-125 y rejilla de fundici¢n para protecci¢n de alcorques de 0.79x0.79m2 seg£n detalle, pintada, colocado. |
+~D|005011|SINDESCO\1\10779\|
+~C|005012|ud|Suministro y plantaci¢n de pl†tano de 14-16cm, a ra°z desnuda, incluso apertura de hoyo de 0.60x0.60x0.60m y primer riego. |4804|040400|0|
+~T|005012|Suministro y plantaci¢n de pl†tano de 14-16cm, a ra°z desnuda, incluso apertura de hoyo de 0.60x0.60x0.60m y primer riego. |
+~D|005012|SINDESCO\1\4804\|
+~C|005013|ud|Instalaci¢n de energia solar para alimentaci¢n de dos v†lvulas motorizadas, constato de dos m¢dulos solares, bater°a, regulador de carga, convertidor de corriente continua a alterna y estructura soporte, totalmente instalado en cubierta de caseta, incluso instalaci¢n elÇctrica necesaria. |663760|040400|0|
+~T|005013|Instalaci¢n de energia solar para alimentaci¢n de dos v†lvulas motorizadas, constato de dos m¢dulos solares, bater°a, regulador de carga, convertidor de corriente continua a alterna y estructura soporte, totalmente instalado en cubierta de caseta, incluso instalaci¢n elÇctrica necesaria. |
+~D|005013|SINDESCO\1\663760\|
+~C|005014|m2|L†mina de impermeabilizaci¢n de PVC armado con fibra de poliester de 1.2mm de espesor para impermeabilizaci¢n de cubierta de dep¢sito, incluso parte proporcional de solapes, soldaduras y recortes, totalmente colocada y probada |1912|040400|0|
+~T|005014|L†mina de impermeabilizaci¢n de PVC armado con fibra de poliester de 1.2mm de espesor para impermeabilizaci¢n de cubierta de dep¢sito, incluso parte proporcional de solapes, soldaduras y recortes, totalmente colocada y probada |
+~D|005014|SINDESCO\1\1912\|
+~C|005015|m2|Traramiento de protecci¢n interior de las paredes de los filtros mediante aplicaci¢n de dos capas de pintura epoxy (alimentaria sin disolvente) previo limpieza con chorro de arena seco de la superficie. |3104|040400|0|
+~T|005015|Traramiento de protecci¢n interior de las paredes de los filtros mediante aplicaci¢n de dos capas de pintura epoxy (alimentaria sin disolvente) previo limpieza con chorro de arena seco de la superficie. |
+~D|005015|SINDESCO\1\3104\|
+~C|005016|m2|Traramiento de protecci¢n exterior de las paredes de los filtros mediante aplicaci¢n de dos capas de pintura epoxy (alimentaria sin disolvente) previo limpieza con chorro de arena seco de la superficie. |2310|040400|0|
+~T|005016|Traramiento de protecci¢n exterior de las paredes de los filtros mediante aplicaci¢n de dos capas de pintura epoxy (alimentaria sin disolvente) previo limpieza con chorro de arena seco de la superficie. |
+~D|005016|SINDESCO\1\2310\|
+~C|005017|ud|Tapa de fundici¢n d£ctil en arqueta de acometida a punto de luz, seg£n planos, incluido marco, colocada. |11131|040400|0|
+~T|005017|Tapa de fundici¢n d£ctil en arqueta de acometida a punto de luz, seg£n planos, incluido marco, colocada. |
+~D|005017|SINDESCO\1\11131\|
+~C|005018|ud|Tapa de fundici¢n d£ctil en arqueta tipo red de distribuci¢n, seg£n planos, incluido marco, colocada. |7654|040400|0|
+~T|005018|Tapa de fundici¢n d£ctil en arqueta tipo red de distribuci¢n, seg£n planos, incluido marco, colocada. |
+~D|005018|SINDESCO\1\7654\|
+~C|005019|m3|Mantillo expendido en capas de 1cm |4056|040400|0|
+~T|005019|Mantillo expendido en capas de 1cm |
+~D|005019|SINDESCO\1\4056\|
+~C|005020|m2|CÇsped semillado, con mezcla de Lolium Poa, Agrostis y Festuca, incluso preparaci¢n del terreno, abono siembra, riego y primer corte. |354|040400|0|
+~T|005020|CÇsped semillado, con mezcla de Lolium Poa, Agrostis y Festuca, incluso preparaci¢n del terreno, abono siembra, riego y primer corte. |
+~D|005020|SINDESCO\1\354\|
+~C|005021|m3|Tierra vegetal en aporte de capas de espesor medio de 20cm incluso extendido y perfilado a mano. |1820|040400|0|
+~T|005021|Tierra vegetal en aporte de capas de espesor medio de 20cm incluso extendido y perfilado a mano. |
+~D|005021|SINDESCO\1\1820\|
+~C|005024|ud|Aut¢mata de v†lvula. Servicio local y autom†tico, totalmente instalado y probado. Seg£n E.T.3 |197412|040400|0|
+~T|005024|Aut¢mata de v†lvula. Servicio local y autom†tico, totalmente instalado y probado. Seg£n E.T.3 |
+~D|005024|SINDESCO\1\197412\|
+~C|005025|ud|Entradas digitales, totalmente instalado y probado. Seg£n E.T.11 |136503|040400|0|
+~T|005025|Entradas digitales, totalmente instalado y probado. Seg£n E.T.11 |
+~D|005025|SINDESCO\1\136503\|
+~C|005026|ud|Entradas anal¢gicas, totalmente instalado y probado. Seg£n E.T.12 |188311|040400|0|
+~T|005026|Entradas anal¢gicas, totalmente instalado y probado. Seg£n E.T.12 |
+~D|005026|SINDESCO\1\188311\|
+~C|005027|ud|Medida, recepci¢n, indicaci¢n y tratamiento de se§ales anal¢gicas, totalmente instalado y probado. Seg£n E.T.2 |224982|040400|0|
+~T|005027|Medida, recepci¢n, indicaci¢n y tratamiento de se§ales anal¢gicas, totalmente instalado y probado. Seg£n E.T.2 |
+~D|005027|SINDESCO\1\224982\|
+~C|005028|ud|Remota de telemando de v†lvulas, totalmente instalado y probado. Seg£n E.T.13 |140017|040400|0|
+~T|005028|Remota de telemando de v†lvulas, totalmente instalado y probado. Seg£n E.T.13 |
+~D|005028|SINDESCO\1\140017\|
+~C|005029|ud|Coordinador: mando cialico, totalmente instalado y probado. Seg£n E.T.1 |184618|040400|0|
+~T|005029|Coordinador: mando cialico, totalmente instalado y probado. Seg£n E.T.1 |
+~D|005029|SINDESCO\1\184618\|
+~C|005030|ud|Chasis de 19" DIN 41612 para aut¢matas de v†lvulas, totalmente instalado y probado. Seg£n E.T.4 |105331|040400|0|
+~T|005030|Chasis de 19" DIN 41612 para aut¢matas de v†lvulas, totalmente instalado y probado. Seg£n E.T.4 |
+~D|005030|SINDESCO\1\105331\|
+~C|005031|ud|Conjunto de comunicaci¢n por radio, totalmente instalado y probado. Seg£n E.T.14 |346456|040400|0|
+~T|005031|Conjunto de comunicaci¢n por radio, totalmente instalado y probado. Seg£n E.T.14 |
+~D|005031|SINDESCO\1\346456\|
+~C|005032|ud|Teleacci¢n para transferencia de datos entre bus local y bus de transporte, totalmente instalado y probado. Seg£n E.T.14 |158759|040400|0|
+~T|005032|Teleacci¢n para transferencia de datos entre bus local y bus de transporte, totalmente instalado y probado. Seg£n E.T.14 |
+~D|005032|SINDESCO\1\158759\|
+~C|005033|ud|Modem seleccionable (cable privado), totalmente instalado y probado. Seg£n E.T.16 |257419|040400|0|
+~T|005033|Modem seleccionable (cable privado), totalmente instalado y probado. Seg£n E.T.16 |
+~D|005033|SINDESCO\1\257419\|
+~C|005035|m2|Cerramiento met†lico realizado con postes cada 2.5m de pletinas met†licas de 40x20mm de espesor y malla galvanizada de simple torsi¢n, tirantes, garras y p.p. de cimentaci¢n y ayuds de alba§ileria. Medida la superficie ejecutada. |1361|040400|0|
+~T|005035|Cerramiento met†lico realizado con postes cada 2.5m de pletinas met†licas de 40x20mm de espesor y malla galvanizada de simple torsi¢n, tirantes, garras y p.p. de cimentaci¢n y ayuds de alba§ileria. Medida la superficie ejecutada. |
+~D|005035|SINDESCO\1\1361\|
+~C|005036|ud|Retirada de un tubo de 5m de longitud de hormig¢n armado de 800mm de di†metro interior, existente, achique necesario, excavaci¢n necesaria, retirada de material sobrante a vertedero y limpieza y preparaci¢n de juntas para uni¢n de nuevas piezas y relleno necesario. |71240|040400|0|
+~T|005036|Retirada de un tubo de 5m de longitud de hormig¢n armado de 800mm de di†metro interior, existente, achique necesario, excavaci¢n necesaria, retirada de material sobrante a vertedero y limpieza y preparaci¢n de juntas para uni¢n de nuevas piezas y relleno necesario. |
+~D|005036|SINDESCO\1\71240\|
+~C|005037|m2|Puerta de chapa lisa de acero con rigidizadores rectangulares, incluso cerco, herrajes de colgar y seguridad, pintada y colocada, incluso cerradura |15163|040400|0|
+~T|005037|Puerta de chapa lisa de acero con rigidizadores rectangulares, incluso cerco, herrajes de colgar y seguridad, pintada y colocada, incluso cerradura |
+~D|005037|SINDESCO\1\15163\|
+~C|005038|m2|Cubierta de teja curva formada con tablero machiembrado de 100x25x4, capa de compresi¢n de 30mm, de mortero 1:6 y teja cer†mica curva recibida con mortero de cemento 1:8, i/p.p. de arriostramiento transversal, limas, caballetes, emboquillado y remates. |5888|040400|0|
+~T|005038|Cubierta de teja curva formada con tablero machiembrado de 100x25x4, capa de compresi¢n de 30mm, de mortero 1:6 y teja cer†mica curva recibida con mortero de cemento 1:8, i/p.p. de arriostramiento transversal, limas, caballetes, emboquillado y remates. |
+~D|005038|SINDESCO\1\5888\|
+~C|005039|ud|Retirada de un tubo de 6m de fibrocemento presi¢n de 500mm de di†metro nominal, existente, incluso excavaci¢n necesaria, retirada del material sobrante a vertedero, achique necesario ennsu caso, colocaci¢n de dos tramos de tubo de fibrocemento de 16atm de presi¢n nominal D 500mm, preparados para intercalar pieza en T para derivaci¢n de tuber°a y relleno necesario. |56368|040400|0|
+~T|005039|Retirada de un tubo de 6m de fibrocemento presi¢n de 500mm de di†metro nominal, existente, incluso excavaci¢n necesaria, retirada del material sobrante a vertedero, achique necesario ennsu caso, colocaci¢n de dos tramos de tubo de fibrocemento de 16atm de presi¢n nominal D 500mm, preparados para intercalar pieza en T para derivaci¢n de tuber°a y relleno necesario. |
+~D|005039|SINDESCO\1\56368\|
+~C|005040|ud|Salidas anal¢gicas controlado por microprocesador, seg£n E.T.9 |212246|040400|0|
+~T|005040|Salidas anal¢gicas controlado por microprocesador, seg£n E.T.9 |
+~D|005040|SINDESCO\1\212246\|
+~C|005041|ud|Sonda de nivel para dep¢sito seg£n E.T.-5 |149560|040400|0|
+~T|005041|Sonda de nivel para dep¢sito seg£n E.T.-5 |
+~D|005041|SINDESCO\1\149560\|
+~C|005042|ud|Transmisor de caudal, seg£n E.T.-5 |174402|040400|0|
+~T|005042|Transmisor de caudal, seg£n E.T.-5 |
+~D|005042|SINDESCO\1\174402\|
+~C|005043|ud|Contador/indicador digital programable, seg£n E.T.-10 |212246|040400|0|
+~T|005043|Contador/indicador digital programable, seg£n E.T.-10 |
+~D|005043|SINDESCO\1\212246\|
+~C|005044|ud|Retirada de un tramo de 8m de tuber°a de fibrocemento presi¢n existente de 400mm de di†metro, incluso rotura de pavimento, excavaci¢n necesaria, retirada de material sobrante a vertedero, achique necesario en su caso y preparaci¢n de la zona para realizar la conexi¢n. |93184|040400|0|
+~T|005044|Retirada de un tramo de 8m de tuber°a de fibrocemento presi¢n existente de 400mm de di†metro, incluso rotura de pavimento, excavaci¢n necesaria, retirada de material sobrante a vertedero, achique necesario en su caso y preparaci¢n de la zona para realizar la conexi¢n. |
+~D|005044|SINDESCO\1\93184\|
+~C|005045|ud|Polipasto de accionamiento manual con capacidad m†xima de 500 kg colocado |27117|040400|0|
+~T|005045|Polipasto de accionamiento manual con capacidad m†xima de 500 kg colocado |
+~D|005045|SINDESCO\1\27117\|
+~C|005046|ud|Trampa de acceso simple en acero inoxidable de 0.70x0.70m con marco angular y cierre estanco, totalmente colocada. |31683|040400|0|
+~T|005046|Trampa de acceso simple en acero inoxidable de 0.70x0.70m con marco angular y cierre estanco, totalmente colocada. |
+~D|005046|SINDESCO\1\31683\|
+~C|005047|ud|Puerta batiente, en perfiles galvanizados en caliente, alambre ondulado de 30x30cm, provista de columna de sosten y cerradura para llave plana, de 5x2m, toatalmente instalada. |110231|040400|0|
+~T|005047|Puerta batiente, en perfiles galvanizados en caliente, alambre ondulado de 30x30cm, provista de columna de sosten y cerradura para llave plana, de 5x2m, toatalmente instalada. |
+~D|005047|SINDESCO\1\110231\|
+~C|005048|m2|Malla tupida en alambre de acero inoxidable para ventilaci¢n del dep¢sito, de paso inferior a 2mm colocada en parte superior de paneles prefabricados, incluso colocaci¢n. |2271|040400|0|
+~T|005048|Malla tupida en alambre de acero inoxidable para ventilaci¢n del dep¢sito, de paso inferior a 2mm colocada en parte superior de paneles prefabricados, incluso colocaci¢n. |
+~D|005048|SINDESCO\1\2271\|
+~C|006001|m|Cable conductor para tensi¢n de servicio de hasta 20000V tipo D.H.V.-12/20 KV de 1x240mm2, totalmente colocado en canalizaci¢n de media tensi¢n. |2059|040400|0|
+~T|006001|Cable conductor para tensi¢n de servicio de hasta 20000V tipo D.H.V.-12/20 KV de 1x240mm2, totalmente colocado en canalizaci¢n de media tensi¢n. |
+~D|006001|SINDESCO\1\2059\|
+~C|006002|m|Cable conductor para tensi¢n de servicio de hasta 1000V formado por cuerda compacta de hilo de cobre esta§ado, aislado con polietileno reticulado cargado y recubierto por una funda de PVC (UNE RV - 0.6/1 KV) de 1x150mm2, totalmente colocado en canalizaci¢n de baja tensi¢n |634|040400|0|
+~T|006002|Cable conductor para tensi¢n de servicio de hasta 1000V formado por cuerda compacta de hilo de cobre esta§ado, aislado con polietileno reticulado cargado y recubierto por una funda de PVC (UNE RV - 0.6/1 KV) de 1x150mm2, totalmente colocado en canalizaci¢n de baja tensi¢n |
+~D|006002|SINDESCO\1\634\|
+~C|006003|m|Cable conductor para tensi¢n de servicio de hasta 1000V formado por cuerda compacta de hilo de cobre esta§ado, aislado con polietileno reticulado cargado y recubierto por una funda de PVC (UNE RV - 0.6/1 KV) de 1x95mm2, totalmente colocado en canalizaci¢n de baja tensi¢n |374|040400|0|
+~T|006003|Cable conductor para tensi¢n de servicio de hasta 1000V formado por cuerda compacta de hilo de cobre esta§ado, aislado con polietileno reticulado cargado y recubierto por una funda de PVC (UNE RV - 0.6/1 KV) de 1x95mm2, totalmente colocado en canalizaci¢n de baja tensi¢n |
+~D|006003|SINDESCO\1\374\|
+~C|006004|m|Cable conductor para tensi¢n de servicio de hasta 1000V formado por cuerda compacta de hilo de cobre esta§ado, aislado con polietileno reticulado cargado y recubierto por una funda de PVC (UNE RV - 0.6/1 KV) de 4x16mm2, totalmente colocado en canalizaci¢n de baja tensi¢n |998|040400|0|
+~T|006004|Cable conductor para tensi¢n de servicio de hasta 1000V formado por cuerda compacta de hilo de cobre esta§ado, aislado con polietileno reticulado cargado y recubierto por una funda de PVC (UNE RV - 0.6/1 KV) de 4x16mm2, totalmente colocado en canalizaci¢n de baja tensi¢n |
+~D|006004|SINDESCO\1\998\|
+~C|006005|m|Cable conductor para tensi¢n de servicio de hasta 1000V formado por cuerda compacta de hilo de cobre esta§ado, aislado con polietileno reticulado cargado y recubierto por una funda de PVC (UNE RV - 0.6/1 KV) de 2x1.5mm2, totalmente colocado en canalizaci¢n de baja tensi¢n |146|040400|0|
+~T|006005|Cable conductor para tensi¢n de servicio de hasta 1000V formado por cuerda compacta de hilo de cobre esta§ado, aislado con polietileno reticulado cargado y recubierto por una funda de PVC (UNE RV - 0.6/1 KV) de 2x1.5mm2, totalmente colocado en canalizaci¢n de baja tensi¢n |
+~D|006005|SINDESCO\1\146\|
+~C|006006|ud|Columna de 12m de altura en chapa de acero galvanizado de 4mm de espesor, incluso anclaje y conexi¢n a la canalizaci¢n de alumbrado seg£n se especifica en planos. |126830|040400|0|
+~T|006006|Columna de 12m de altura en chapa de acero galvanizado de 4mm de espesor, incluso anclaje y conexi¢n a la canalizaci¢n de alumbrado seg£n se especifica en planos. |
+~D|006006|SINDESCO\1\126830\|
+~C|006007|ud|B†culo de 9m de altura y brazo de 1.5m en chapa de acero galvanizado de 4mm de espesor, incluso anclaje y conexi¢n a la canalizaci¢n de alumbrado seg£n se especifica en planos. |84874|040400|0|
+~T|006007|B†culo de 9m de altura y brazo de 1.5m en chapa de acero galvanizado de 4mm de espesor, incluso anclaje y conexi¢n a la canalizaci¢n de alumbrado seg£n se especifica en planos. |
+~D|006007|SINDESCO\1\84874\|
+~C|006008|ud|Luminaria tipo M-400A o similar, carcasa de fundici¢n inyectada de aluminio, reflector de aluminio tratado, filtro, cierre refractor de aluminio vidrio borosilicatado, equipada indistintamente para l†mpara V.S.A.P. de 400W o 250W, con reductro de consumo totalmente instalada sobre columna o b†culo. |48922|040400|0|
+~T|006008|Luminaria tipo M-400A o similar, carcasa de fundici¢n inyectada de aluminio, reflector de aluminio tratado, filtro, cierre refractor de aluminio vidrio borosilicatado, equipada indistintamente para l†mpara V.S.A.P. de 400W o 250W, con reductro de consumo totalmente instalada sobre columna o b†culo. |
+~D|006008|SINDESCO\1\48922\|
+~C|006009|ud|L†mpara de 250W de vapor sodio de alta presi¢n rosca Goliar, colocada. |8294|040400|0|
+~T|006009|L†mpara de 250W de vapor sodio de alta presi¢n rosca Goliar, colocada. |
+~D|006009|SINDESCO\1\8294\|
+~C|006010|ud|Equipo de reactancia, condensador, de 250W 220V AF para l†mpara de vapor de sodio de alta presi¢n, colocado. |12696|040400|0|
+~T|006010|Equipo de reactancia, condensador, de 250W 220V AF para l†mpara de vapor de sodio de alta presi¢n, colocado. |
+~D|006010|SINDESCO\1\12696\|
+~C|006011|ud|Cofre para protecci¢n de conexi¢n a punto de luz, situado en b†culo o columna colocado. |2205|040400|0|
+~T|006011|Cofre para protecci¢n de conexi¢n a punto de luz, situado en b†culo o columna colocado. |
+~D|006011|SINDESCO\1\2205\|
+~C|006012|ud|Toma de tierra, formada por pica de alma de acero al carbono con una capa de cobre puro, seg£n definici¢n en planos, colocada. |2045|040400|0|
+~T|006012|Toma de tierra, formada por pica de alma de acero al carbono con una capa de cobre puro, seg£n definici¢n en planos, colocada. |
+~D|006012|SINDESCO\1\2045\|
+~C|006013|ud|Interruptor IV manual, Norma UNE 20.129, tipo S-23 bc de 100A, incluso mangueta colocado. |12230|040400|0|
+~T|006013|Interruptor IV manual, Norma UNE 20.129, tipo S-23 bc de 100A, incluso mangueta colocado. |
+~D|006013|SINDESCO\1\12230\|
+~C|006014|ud|Interruptor III manual, Norma UNE 20.129, tipo S-23 b de 63A, incluso mangueta colocado. |6523|040400|0|
+~T|006014|Interruptor III manual, Norma UNE 20.129, tipo S-23 b de 63A, incluso mangueta colocado. |
+~D|006014|SINDESCO\1\6523\|
+~C|006015|ud|Contador tipo CK 0.5A con protecci¢n IP00 de 60A a 220V colocado |25043|040400|0|
+~T|006015|Contador tipo CK 0.5A con protecci¢n IP00 de 60A a 220V colocado |
+~D|006015|SINDESCO\1\25043\|
+~C|006016|ud|Seccionador III de entrada norma UNE 21.103 tipo SLPOO 160A, con cartucho de 100A, colocado |14664|040400|0|
+~T|006016|Seccionador III de entrada norma UNE 21.103 tipo SLPOO 160A, con cartucho de 100A, colocado |
+~D|006016|SINDESCO\1\14664\|
+~C|006017|ud|Base de cortacircuitos norma UNE 12.103 tipo L.1-80 con cartucho tipo CL-80 de 63A colocado |1258|040400|0|
+~T|006017|Base de cortacircuitos norma UNE 12.103 tipo L.1-80 con cartucho tipo CL-80 de 63A colocado |
+~D|006017|SINDESCO\1\1258\|
+~C|006018|ud|Base de cortacircuitos norma UNE 12.103 tipo L.1-20 con cartucho tipo CL-20 de 10A colocado |582|040400|0|
+~T|006018|Base de cortacircuitos norma UNE 12.103 tipo L.1-20 con cartucho tipo CL-20 de 10A colocado |
+~D|006018|SINDESCO\1\582\|
+~C|006019|ud|Interruptor astron¢mico electr¢nico con encendido y dos apagados, programable anualmente, con referencias alhorario nacional e internacional, reserva de mecha sin red superior a 120 horas, colocado. |34944|040400|0|
+~T|006019|Interruptor astron¢mico electr¢nico con encendido y dos apagados, programable anualmente, con referencias alhorario nacional e internacional, reserva de mecha sin red superior a 120 horas, colocado. |
+~D|006019|SINDESCO\1\34944\|
+~C|006020|ud|M¢dulo de contadores III para activa, reactiva y horas valle, seg£n normas de la empresa suministradora, colocado. |32032|040400|0|
+~T|006020|M¢dulo de contadores III para activa, reactiva y horas valle, seg£n normas de la empresa suministradora, colocado. |
+~D|006020|SINDESCO\1\32032\|
+~C|006021|m|Conductor de cobre con aislamiento de P.R.C. de 3.5X1.5mm2, colocado y conexionado. |175|040400|0|
+~T|006021|Conductor de cobre con aislamiento de P.R.C. de 3.5X1.5mm2, colocado y conexionado. |
+~D|006021|SINDESCO\1\175\|
+~C|006022|ud|Cuadro elÇctrico en caja met†lica para protecci¢n y mando autom†tico de 5 v†lvulas con pulsadores y pilotos de se§alizaci¢n de marcha y parada en la tapa, y dem†s mecanismos necesarios para un correcto funcionamiento colocado y probado |204888|040400|0|
+~T|006022|Cuadro elÇctrico en caja met†lica para protecci¢n y mando autom†tico de 5 v†lvulas con pulsadores y pilotos de se§alizaci¢n de marcha y parada en la tapa, y dem†s mecanismos necesarios para un correcto funcionamiento colocado y probado |
+~D|006022|SINDESCO\1\204888\|
+~C|006023|ud|Cuadro general de mando y control con panel sin¢ptico, embarrado, cableado, interuptores diferenciales, magnetotÇrmicos, contadores auxiliares, relÇs de enclavamiento, botoneras de marcha y parada, testigos luminosos de marcha y parada, bases con fusibles, volt°metro con conmutador, amper°metros y dem†s elementos necesarios incluso transporte, montaje y puesta en marcha. |702208|040400|0|
+~T|006023|Cuadro general de mando y control con panel sin¢ptico, embarrado, cableado, interuptores diferenciales, magnetotÇrmicos, contadores auxiliares, relÇs de enclavamiento, botoneras de marcha y parada, testigos luminosos de marcha y parada, bases con fusibles, volt°metro con conmutador, amper°metros y dem†s elementos necesarios incluso transporte, montaje y puesta en marcha. |
+~D|006023|SINDESCO\1\702208\|
+~C|006024|pa$|Partida Alzada de enganche de la instalaci¢n a la red general, a justificar. |208000|040400|0|
+~T|006024|Partida Alzada de enganche de la instalaci¢n a la red general, a justificar. |
+~D|006024|SINDESCO\1\208000\|
+~C|007001|pa|Partida Alzada de abono integro de desmontaje de los colectores de reparto en el interior de los filtros. |156000|040400|0|
+~T|007001|Partida Alzada de abono integro de desmontaje de los colectores de reparto en el interior de los filtros. |
+~D|007001|SINDESCO\1\156000\|
+~C|007002|pa|Partida Alzada de abono integro de retirada del material filtrante y grava existente en los filtrados. |291200|040400|0|
+~T|007002|Partida Alzada de abono integro de retirada del material filtrante y grava existente en los filtrados. |
+~D|007002|SINDESCO\1\291200\|
+~C|007003|pa$|Partida alzada a justificar para montaje de los colectores de reparto en el interior de los filtros, incluido el material necesario. |988000|040400|0|
+~T|007003|Partida alzada a justificar para montaje de los colectores de reparto en el interior de los filtros, incluido el material necesario. |
+~D|007003|SINDESCO\1\988000\|
+~C|007004|pa|Partida alzada de abono integro para desmontaje de colectores de alimentaci¢n recogida de agua filtrada y desagÅe y valvuler°a existente, retirada y transporte a lugar adecuado. |124800|040400|0|
+~T|007004|Partida alzada de abono integro para desmontaje de colectores de alimentaci¢n recogida de agua filtrada y desagÅe y valvuler°a existente, retirada y transporte a lugar adecuado. |
+~D|007004|SINDESCO\1\124800\|
+~C|007005|pa$|Partida alzada a justificar de reposici¢n de material filtrante. |332800|040400|0|
+~T|007005|Partida alzada a justificar de reposici¢n de material filtrante. |
+~D|007005|SINDESCO\1\332800\|
+~C|007006|pa$|Partida alzada a justificar del primer nivel de grava. |83200|040400|0|
+~T|007006|Partida alzada a justificar del primer nivel de grava. |
+~D|007006|SINDESCO\1\83200\|
+~C|007007|pa$|Partida alzada a justificar del segundo nivel de grava. |83200|040400|0|
+~T|007007|Partida alzada a justificar del segundo nivel de grava. |
+~D|007007|SINDESCO\1\83200\|
+~C|007008|pa|Partida alzada de abono °ntegro de retirada de v†lvula de compuerta D800 existente en tuber°a de hormig¢n |28080|040400|0|
+~T|007008|Partida alzada de abono °ntegro de retirada de v†lvula de compuerta D800 existente en tuber°a de hormig¢n |
+~D|007008|SINDESCO\1\28080\|
+~C|007009|pa|Partida alzada a justificar cableado necesario para comunicaci¢n entre los diferentes elementos de la automatizaci¢n |1747200|040400|0|
+~T|007009|Partida alzada a justificar cableado necesario para comunicaci¢n entre los diferentes elementos de la automatizaci¢n |
+~D|007009|SINDESCO\1\1747200\|
+~C|01014V|m3|Suministro, extensi¢n y compactaci¢n de grava bajo soleras, incluso recebo y nivelaci¢n |2110|040400|0|
+~T|01014V|Suministro, extensi¢n y compactaci¢n de grava bajo soleras, incluso recebo y nivelaci¢n |
+~D|01014V|SINDESCO\1\2110\|
+~C|01120V|m3|Relleno y compactaci¢n de zanjas con productos seleccionados procedentes de la propia excavaci¢n o de prÇstamos, tendido en capas sucesivas de 30 cm de espesor, hasta alcanzar el 95% del P.N., incluso transporte. |721|040400|0|
+~T|01120V|Relleno y compactaci¢n de zanjas con productos seleccionados procedentes de la propia excavaci¢n o de prÇstamos, tendido en capas sucesivas de 30 cm de espesor, hasta alcanzar el 95% del P.N., incluso transporte. |
+~D|01120V|SINDESCO\1\721\|
+~C|01220V|m3|Relleno y compactaci¢n de zanjas con productos procedentes de la propia excavaci¢n, tama§o m†ximo 100 mm, tendido en capas sucesivas de 30 cm de espesor, hasta alcanzar el 95% del P.N., incluso transporte. |549|040400|0|
+~T|01220V|Relleno y compactaci¢n de zanjas con productos procedentes de la propia excavaci¢n, tama§o m†ximo 100 mm, tendido en capas sucesivas de 30 cm de espesor, hasta alcanzar el 95% del P.N., incluso transporte. |
+~D|01220V|SINDESCO\1\549\|
+~C|02001V|m3|Hormig¢n en masa HM-12,5 con capa de base de calzadas incluso transporte, colocaci¢n y vibrado. |10698|040400|0|
+~T|02001V|Hormig¢n en masa HM-12,5 con capa de base de calzadas incluso transporte, colocaci¢n y vibrado. |
+~D|02001V|SINDESCO\1\10698\|
+~C|02002V|m3|Hormig¢n en masa HM-15 en rellenos, soleras y peque§as unidades sin armar, inlcuso transporte y colocaci¢n. |12760|040400|0|
+~T|02002V|Hormig¢n en masa HM-15 en rellenos, soleras y peque§as unidades sin armar, inlcuso transporte y colocaci¢n. |
+~D|02002V|SINDESCO\1\12760\|
+~C|02003V|m3|Hormig¢n para armar HA-25, en cimentaciones y estructuras, incluso transporte, colocaci¢n y vibrado. |14318|040400|0|
+~T|02003V|Hormig¢n para armar HA-25, en cimentaciones y estructuras, incluso transporte, colocaci¢n y vibrado. |
+~D|02003V|SINDESCO\1\14318\|
+~C|02004V|m3|Hormig¢n para armar HA-30, en soleras y muros, incluso transporte, colocaci¢n y vibrado. |15030|040400|0|
+~T|02004V|Hormig¢n para armar HA-30, en soleras y muros, incluso transporte, colocaci¢n y vibrado. |
+~D|02004V|SINDESCO\1\15030\|
+~C|02007V|kg|Acero B-400 SD de LE 4200 kg/cm2 en redondos, colocado. |133|040400|0|
+~T|02007V|Acero B-400 SD de LE 4200 kg/cm2 en redondos, colocado. |
+~D|02007V|SINDESCO\1\133\|
+~C|02008V|kg|Acero S-275 JR de LE 4200 kg/cm2 en perfiles laminados y basas, imprimaci¢n de minio, solado y colocado. |250|040400|0|
+~T|02008V|Acero S-275 JR de LE 4200 kg/cm2 en perfiles laminados y basas, imprimaci¢n de minio, solado y colocado. |
+~D|02008V|SINDESCO\1\250\|
+~C|02014V|m2|Forjado alveolar de elementos prefabricados de 20 cm de espesor de placas pretensadas aligeradas por alveolos longitudinales para una sobrecarga de uso de 100 Kg/m2 con una luz m†xima de 6,50 m |8753|040400|0|
+~T|02014V|Forjado alveolar de elementos prefabricados de 20 cm de espesor de placas pretensadas aligeradas por alveolos longitudinales para una sobrecarga de uso de 100 Kg/m2 con una luz m†xima de 6,50 m |
+~D|02014V|SINDESCO\1\8753\|
+~C|02015V|kg|Acero B-500 S de LE 5000kg/cm2 en redondos corrugados colocado. |142|040400|0|
+~T|02015V|Acero B-500 S de LE 5000kg/cm2 en redondos corrugados colocado. |
+~D|02015V|SINDESCO\1\142\|
+~C|02018V|ud|Soporte para sujecci¢n de tuber°a de fundici¢n d£ctil de di†metro 500 mm a estructura del puente, seg£n definici¢n de planos, formada por chapa de acero en perfiles A-42b de 8 y 5mm de espesor, anclado a estructura del puente mediante 4 pernos de di†metro 12 B-500N embebidos 20 cm en el hormig¢n realizado mediante perforaci¢n a rotaci¢n y percusi¢n y soplado posterior de aire con di†metro 20 mm, relleno de resina de poliester con resistencia a compresi¢n de 900 kp/cm2 incluso soldaduras, tornilleria, banda de caucho aislante de la tuber°a, colocado y probado. |12132|040400|0|
+~T|02018V|Soporte para sujecci¢n de tuber°a de fundici¢n d£ctil de di†metro 500 mm a estructura del puente, seg£n definici¢n de planos, formada por chapa de acero en perfiles A-42b de 8 y 5mm de espesor, anclado a estructura del puente mediante 4 pernos de di†metro 12 B-500N embebidos 20 cm en el hormig¢n realizado mediante perforaci¢n a rotaci¢n y percusi¢n y soplado posterior de aire con di†metro 20 mm, relleno de resina de poliester con resistencia a compresi¢n de 900 kp/cm2 incluso soldaduras, tornilleria, banda de caucho aislante de la tuber°a, colocado y probado. |
+~D|02018V|SINDESCO\1\12132\|
+~C|02024V|m3|Hormig¢n para armar HA-30, en pilares y vigas, incluso transporte, colocaci¢n y vibrado. |15407|040400|0|
+~T|02024V|Hormig¢n para armar HA-30, en pilares y vigas, incluso transporte, colocaci¢n y vibrado. |
+~D|02024V|SINDESCO\1\15407\|
+~C|02025V|m3|Hormig¢n celulara en rellenos para formaci¢n de pendientes, incluso transporte y colocaci¢n. |11729|040400|0|
+~T|02025V|Hormig¢n celulara en rellenos para formaci¢n de pendientes, incluso transporte y colocaci¢n. |
+~D|02025V|SINDESCO\1\11729\|
+~C|02026V|dm3|Neopreno zunchado en apoyos anclados |4059|040400|0|
+~T|02026V|Neopreno zunchado en apoyos anclados |
+~D|02026V|SINDESCO\1\4059\|
+~C|02027V|m|Tubo dren de polietileno de 150 mm de di†metro, incluso cama de arena sil°cea, completamente instalado |1021|040400|0|
+~T|02027V|Tubo dren de polietileno de 150 mm de di†metro, incluso cama de arena sil°cea, completamente instalado |
+~D|02027V|SINDESCO\1\1021\|
+~C|02028V|m|Escalera met†lica formada por dos largueros de UPN 100 y pelda§os de malla de 30x30 mm con pletina portante de 25x2 mm de 1,50 m de ancho, soldada con barandillas, pintado al esmalte y colocada |5750|040400|0|
+~T|02028V|Escalera met†lica formada por dos largueros de UPN 100 y pelda§os de malla de 30x30 mm con pletina portante de 25x2 mm de 1,50 m de ancho, soldada con barandillas, pintado al esmalte y colocada |
+~D|02028V|SINDESCO\1\5750\|
+~C|02029V|ud|Sumidero de cubierta formado por tuber°a de PVC r°gido extruido de 80 mm de di†metro, incluso codo, alcachofa y dem†s accesorios |4500|040400|0|
+~T|02029V|Sumidero de cubierta formado por tuber°a de PVC r°gido extruido de 80 mm de di†metro, incluso codo, alcachofa y dem†s accesorios |
+~D|02029V|SINDESCO\1\4500\|
+~C|02030V|m2|F†brica de ladrillo macizo de un pie de espesor, una cara vista y enfoscda con mortero de cemento la otra, incluyendo los materiales y su colocaci¢n |8325|040400|0|
+~T|02030V|F†brica de ladrillo macizo de un pie de espesor, una cara vista y enfoscda con mortero de cemento la otra, incluyendo los materiales y su colocaci¢n |
+~D|02030V|SINDESCO\1\8325\|
+~C|02031V|m|Albardilla de piedra artificial totalmente colocada |1475|040400|0|
+~T|02031V|Albardilla de piedra artificial totalmente colocada |
+~D|02031V|SINDESCO\1\1475\|
+~C|02032V|m2|Carpinter°a met†lica en ventanas, incluso acristalamiento, colocaci¢n, pintado y acabado |15250|040400|0|
+~T|02032V|Carpinter°a met†lica en ventanas, incluso acristalamiento, colocaci¢n, pintado y acabado |
+~D|02032V|SINDESCO\1\15250\|
+~C|02033V|m|Vierteaguas de piedra artificial recibido con mortero de cemento, totalmente colocado |1760|040400|0|
+~T|02033V|Vierteaguas de piedra artificial recibido con mortero de cemento, totalmente colocado |
+~D|02033V|SINDESCO\1\1760\|
+~C|02035V|m3|Mortero de cemento, dosificaci¢n 1/3, incluso parte proporcional de extendido, rasanteo, nivelaci¢n y enlucido |11360|040400|0|
+~T|02035V|Mortero de cemento, dosificaci¢n 1/3, incluso parte proporcional de extendido, rasanteo, nivelaci¢n y enlucido |
+~D|02035V|SINDESCO\1\11360\|
+~C|03032V|ud|T enchufe-enchufe derivaci¢n brida de fundici¢n d£ctil DN500/500/150mm, tornillos para bridas, p.p. de junta, anclaje de hormig¢n, colocada y probada. |616320|040400|0|
+~T|03032V|T enchufe-enchufe derivaci¢n brida de fundici¢n d£ctil DN500/500/150mm, tornillos para bridas, p.p. de junta, anclaje de hormig¢n, colocada y probada. |
+~D|03032V|SINDESCO\1\616320\|
+~C|03038V|ud|T enchufe-enchufe derivaci¢n brida de fundici¢n d£ctil DN 800/800/150 mm, tornillos para bridas, p.p. de junta, anclaje de hormig¢n, colocada y probada. |579795|040400|0|
+~T|03038V|T enchufe-enchufe derivaci¢n brida de fundici¢n d£ctil DN 800/800/150 mm, tornillos para bridas, p.p. de junta, anclaje de hormig¢n, colocada y probada. |
+~D|03038V|SINDESCO\1\579795\|
+~C|03039V|ud|T enchufe-enchufe derivaci¢n brida de fundici¢n d£ctil DN 300/300/80 mm, tornillos para bridas, p.p. de junta, anclaje de hormig¢n, colocada y probada. |375479|040400|0|
+~T|03039V|T enchufe-enchufe derivaci¢n brida de fundici¢n d£ctil DN 300/300/80 mm, tornillos para bridas, p.p. de junta, anclaje de hormig¢n, colocada y probada. |
+~D|03039V|SINDESCO\1\375479\|
+~C|03040V|ud|T enchufe-enchufe derivaci¢n brida de fundici¢n d£ctil DN800/800/800mm, tornillos para bridas, p.p. de junta, anclaje de hormig¢n, colocada y probada. |1254764|040400|0|
+~T|03040V|T enchufe-enchufe derivaci¢n brida de fundici¢n d£ctil DN800/800/800mm, tornillos para bridas, p.p. de junta, anclaje de hormig¢n, colocada y probada. |
+~D|03040V|SINDESCO\1\1254764\|
+~C|03041V|ud|T enchufe-enchufe derivaci¢n brida de fundici¢n d£ctil DN 800/800/500 mm, tornillos para bridas, p.p. de junta, anclaje de hormig¢n, colocada y probada. |1205410|040400|0|
+~T|03041V|T enchufe-enchufe derivaci¢n brida de fundici¢n d£ctil DN 800/800/500 mm, tornillos para bridas, p.p. de junta, anclaje de hormig¢n, colocada y probada. |
+~D|03041V|SINDESCO\1\1205410\|
+~C|03048V|ud|Codo de 90ß en fundici¢n d£ctil PN 16 atm DN 800 mm, incluso p.p. de juntas, colocacion y pruebas. |724711|040400|0|
+~T|03048V|Codo de 90ß en fundici¢n d£ctil PN 16 atm DN 800 mm, incluso p.p. de juntas, colocacion y pruebas. |
+~D|03048V|SINDESCO\1\724711\|
+~C|03051V|ud|Codo de 45ß en fundici¢n d£ctil PN 16 atm, DN 800 mm, incluso p.p. de juntas, colocacion y pruebas. |501415|040400|0|
+~T|03051V|Codo de 45ß en fundici¢n d£ctil PN 16 atm, DN 800 mm, incluso p.p. de juntas, colocacion y pruebas. |
+~D|03051V|SINDESCO\1\501415\|
+~C|03052V|ud|Codo de 45ß en fundici¢n d£ctil PN 16 atm, DN 500mm, incluso p.p. de juntas, colocacion y pruebas. |218706|040400|0|
+~T|03052V|Codo de 45ß en fundici¢n d£ctil PN 16 atm, DN 500mm, incluso p.p. de juntas, colocacion y pruebas. |
+~D|03052V|SINDESCO\1\218706\|
+~C|03053V|ud|Codo de 45ß en fundici¢n d£ctil PN 16 atm, DN 300 mm, incluso p.p. de juntas, colocacion y pruebas. |107227|040400|0|
+~T|03053V|Codo de 45ß en fundici¢n d£ctil PN 16 atm, DN 300 mm, incluso p.p. de juntas, colocacion y pruebas. |
+~D|03053V|SINDESCO\1\107227\|
+~C|03064V|ud|Empalme brida-liso de fundici¢n d£ctil, PN 16 atm. DN 800 mm, incluida p.p. junta y demas elementos necesarios, colocado y probado. |221563|040400|0|
+~T|03064V|Empalme brida-liso de fundici¢n d£ctil, PN 16 atm. DN 800 mm, incluida p.p. junta y demas elementos necesarios, colocado y probado. |
+~D|03064V|SINDESCO\1\221563\|
+~C|03065V|ud|Empalme brida-liso de fundici¢n d£ctil, PN 16 atm. DN 500 mm, incluida p.p. junta y demas elementos necesarios, colocado y probado. |43597|040400|0|
+~T|03065V|Empalme brida-liso de fundici¢n d£ctil, PN 16 atm. DN 500 mm, incluida p.p. junta y demas elementos necesarios, colocado y probado. |
+~D|03065V|SINDESCO\1\43597\|
+~C|03072V|ud|Cono de reducci¢n de fundici¢n d£ctil PN 16 atm, DN 800/500 mm, completo incluso anclaje de hormig¢n, colocado y probado. |830889|040400|0|
+~T|03072V|Cono de reducci¢n de fundici¢n d£ctil PN 16 atm, DN 800/500 mm, completo incluso anclaje de hormig¢n, colocado y probado. |
+~D|03072V|SINDESCO\1\830889\|
+~C|03073V|ud|Cono de reducci¢n de fundici¢n d£ctil PN 16 atm DN 500/300 mm, completo incluso anclaje de hormig¢n, colocado y probado. |234120|040400|0|
+~T|03073V|Cono de reducci¢n de fundici¢n d£ctil PN 16 atm DN 500/300 mm, completo incluso anclaje de hormig¢n, colocado y probado. |
+~D|03073V|SINDESCO\1\234120\|
+~C|pa001|pa$|Partida alzada a justificar para reposici¢n en zona urbana. |9500000|040400|0|
+~T|pa001|Partida alzada a justificar para reposici¢n en zona urbana. |
+~D|pa001|SINDESCO\1\9500000\|
+~C|PR##||Prueba|1091449442.077|040400|0|
+~D|PR##|1\1\1\2\1\1\3\1\1\4\1\1\5\1\1\6\1\1\|
+~C|1#||CONDUCCION BY-PASS DE ROYO FRIO.|702441684.8577|040400|0|
+~D|1|1_1\1\1\1_2\1\1\1_3\1\1\1_4\1\1\1_5\1\1\1_6\1\1\1_7\1\1\1_8\1\1\|
+~C|1_1||OBRAS DE CONEXION CON TUBERIA EXISTENTE.|6391752|040400|0|
+~Y|1_1|003011\1\2\003085\1\2\003106\1\2\003107\1\2\003108\1\2\005036\1\2\03064V\1\2\|
+~M|1_1\003011|1\1\1\|2|\\0\2\0\0\|
+~M|1_1\003085|1\1\2\|2|\\0\2\0\0\|
+~M|1_1\003106|1\1\3\|2|\\0\2\0\0\|
+~M|1_1\003107|1\1\4\|2|\\0\2\0\0\|
+~M|1_1\003108|1\1\5\|2|\\0\2\0\0\|
+~M|1_1\005036|1\1\6\|2|\\0\2\0\0\|
+~M|1_1\03064V|1\1\7\|2|\\0\2\0\0\|
+~C|1_2||VALVULERIA Y PIEZAS ESPECIALES CONTROL BY-PASS.|16038040|040400|0|
+~Y|1_2|003005\1\4\003011\1\4\03064V\1\4\003085\1\1\003086\1\4\003087\1\3\003106\1\1\003109\1\1\007008\1\1\|
+~M|1_2\003005|1\2\1\|4|\En tuber°a\0\0\0\0\\existente\2\0\0\0\\nueva\2\0\0\0\\\0\0\0\0\|
+~M|1_2\003011|1\2\2\|4|\En tuber°a\0\0\0\0\\existente\2\0\0\0\\nueva\2\0\0\0\\\0\0\0\0\|
+~M|1_2\03064V|1\2\3\|4|\\0\4\0\0\|
+~M|1_2\003085|1\2\4\|1|\\0\1\0\0\|
+~M|1_2\003086|1\2\5\|4|\En tuber°a\0\0\0\0\\existente\2\0\0\0\\nueva\2\0\0\0\\\0\0\0\0\|
+~M|1_2\003087|1\2\6\|3|\En tuber°a\0\0\0\0\\existente\1\0\0\0\\nueva\2\0\0\0\|
+~M|1_2\003106|1\2\7\|1|\nueva\0\1\0\0\|
+~M|1_2\003109|1\2\8\|1|\nueva\0\1\0\0\|
+~M|1_2\007008|1\2\9\|1|\nueva\0\1\0\0\|
+~C|1_3||CONDUCCION BY-PASS. MVTO DE TIERRAS Y TUBERIAS.|615089705.6913|040400|0|
+~Y|1_3|001001\1\24118.3\001003\1\30369.2\001006\1\11025.7\001010\1\1747.95\001013\1\11653\001016\1\11653\001019\1\3270.59\001027\1\639.14\001028\1\593.132\02002V\1\1956.47\03051V\1\3\003074\1\9361.53\01120V\1\12228.6\01220V\1\28861.4\|
+~M|1_3\001001|1\3\1\|24118.3|\nueva\0\24118.3\0\0\|
+~M|1_3\001003|1\3\2\|30369.2|\Se parte de las\0\0\0\0\\del P.Base in-\0\0\0\0\\troduciendo las\0\0\0\0\\modificaciones\0\0\0\0\\de taludes\0\0\0\0\\p-1 a p-40\0.8\1184.41\1.4\2.41\\talud 1/3\0.8\1184.41\0.803\2.41\\p-40 a p-56\1\506.77\1.4\2.38\\talud 1/3\1\506.77\0.793\2.38\\p-56 a p-64\1\425.34\1.4\2.3\\talud 1/3\1\425.34\0.767\2.3\\p-64 a p-73\1\601.3\1.4\2.38\\talud 1/3\1\601.3\0.793\2.38\\p-73 a p-106\0.8\1231.22\1.4\2.27\\talud 1/5\0.8\1231.22\0.454\2.27\\p-106 a p-158\1\2976.54\1.4\2.38\\talud 1/5\1\2976.54\0.476\2.38\|
+~M|1_3\001006|1\3\3\|11025.7|\Se sigue el cri\0\0\0\0\\terio del P.Ba-\0\0\0\0\\se corregido\0\0\0\0\\por talud\0\0\0\0\\p-1 a p-40\0.2\1184.41\1.4\2.41\\talud 1/10\0.2\1184.41\0.241\2.41\\p-73 a p-106\0.2\1231.22\1.4\2.38\\talud 1/10\0.2\1231.22\0.238\2.38\\p-158 a p-180\0\542.45\1.4\2.33\\talud 1/10\0\542.45\0.233\2.33\\p-188 a p-245\0\1794.96\1.4\2.4\\talud 1/10\0\1794.96\0.24\2.4\|
+~M|1_3\001010|1\3\4\|1747.95|\Se tiene en\0\0\0\0\\cuenta el mayor\0\0\0\0\\ancho de las\0\0\0\0\\zanjas\0\0\0\0\\p-1 a p-40\0\1184.41\1.4\0.15\\talud 1/3\0.8\1184\1.6\0.15\\talud 1/10\0.2\1184\0.48\0.15\\p-56 a p-64\0\425.34\1.4\0.15\\talud 1/3\0\425.34\1.53\0.15\\p-73 a p-106\0\1231.22\1.4\0.15\\talud 1/5\0.8\1231.22\0.91\0.15\\talud 1/10\0.2\1231.22\0.45\0.15\\p-158 a p-180\0\542.25\1.4\0.15\\talud 1/10\0\542.25\0.47\0.15\\p-188 a p-245\0\1794.96\1.4\0.15\\talud 1/10\0\1794.96\0.48\0.15\|
+~M|1_3\001013|1\3\5\|11653|\Se deduce de la\0\0\0\0\\medici¢n de \0\0\0\0\\zahorra natural\0\11653\0\0\|
+~M|1_3\001016|1\3\6\|11653|\Igual medici¢n\0\0\0\0\\que rotura\0\11653\0\0\|
+~M|1_3\001019|1\3\7\|3270.59|\Seg£n secci¢n\0\0\0\0\\tipo\1\9344.53\1.4\0.25\|
+~M|1_3\001027|1\3\8\|639.14|\tipo\0\639.14\0\0\|
+~M|1_3\001028|1\3\9\|593.132|\Aß Bonilla\0\0\0\0\\p-180 a p-188\0\98.54\1.4\2.64\\talud 1/3\0\98.54\0.88\2.64\|
+~M|1_3\02002V|1\3\10\|1956.47|\En reposici¢n\0\0\0\0\\de pavimento\0\0\0\0\\p-1 a p-40\0\1184.41\1.4\0.15\\talud 1/3\0.8\276.56\0\0\\talud 1/10\0.2\82.9679\0\0\\p-56 a p-64\0\425.34\1.4\0.15\\talud 1/3\0\94.6381\0\0\\p-73 a p-106\0\1231.22\1.4\0.15\\talud 1/5\0.8\162.152\0\0\\talud 1/10\0.2\81.0758\0\0\\p-158 a p-180\0\542.45\1.4\0.15\\talud 1/10\0\36.6967\0\0\\p-188 a p-245\0\1794.96\1.4\0.15\\talud 1/10\0\125.198\0\0\\En pasos de \0\0\0\0\\arroyos\0\0\0\0\\p-180 a p-188\0\98.54\1.4\1.312\\talud 1/3\0\98.54\0.437\1.312\\a deducir tubo\-1\8.79895\0\0\|
+~M|1_3\03051V|1\3\11\|3|\a deducir tubo\0\3\0\0\|
+~M|1_3\003074|1\3\12\|9361.53|\a deducir tubo\0\9361.53\0\0\|
+~M|1_3\01120V|1\3\13\|12228.6|\Seg£n secci¢n\0\0\0\0\\tipo su altura\0\0\0\0\\desde el fondo\0\0\0\0\\de la zanja es\0\0\0\0\\DN + e + 0,50\0\0\0\0\\siendo e=0,012\0\0\0\0\\y DN=0,800\0\0\0\0\\p-1 a p-40\0\1184.41\1.4\1.312\\talud 1/3\0.8\1184.41\0.437\1.312\\talud 1/10\0.2\1184.41\0.131\1.312\\a deducir tubo\-1\613.033\0\0\\p-40 a p-56\0\506.77\1.4\1.312\\talud 1/3\0\506.77\0.437\1.312\\a deducir tubo\-1\262.297\0\0\\p-56 a p-64\0\425.34\1.4\1.312\\talud 1/3\0\425.34\0.437\1.312\\a deducir tubo\-1\220.15\0\0\\p-64 a p-73\0\601.3\1.4\1.312\\talud 1/3\0\601.3\0.437\1.312\\a deducir tubo\-1\311.224\0\0\\p-73 a p-106\0\1231.22\1.4\1.312\\talud 1/5\0.8\1231.22\0.264\1.312\\talud 1/10\0.2\1231.22\0.131\1.312\\a deducir tubo\-1\637.261\0\0\\p-106 a p-158\0\2976.54\1.4\1.312\\talud 1/5\0\2976.54\0.264\1.312\\a deducir tubo\-1\1540.61\0\0\\p-158 a p-180\0\542.45\1.4\1.312\\talud 1/10\0\542.45\0.131\1.312\\a deducir tubo\-1\280.764\0\0\\p-188 a p-245\0\1794.96\1.4\1.312\\talud 1/10\0\1794.96\0.131\1.312\\a deducir tubo\-1\929.044\0\0\\A deducir cama\-1\3270.59\0\0\|
+~M|1_3\01220V|1\3\14\|28861.4|\Excavaciones\0\0\0\0\\No roca\1\30369.2\0\0\\Roca\1\11025.7\0\0\\Cauces\1\593.132\0\0\\A deducir\0\0\0\0\\cama\-1\3270.59\0\0\\relleno selecc\-1\1228.63\0\0\\zahorra natura\-1\1825.62\0\0\\HM-15\-1\1956.47\0\0\\tuber°a\-1\4845.39\0\0\|
+~C|1_4||VALVULERIA Y PIEZAS ESPECIALES EN CONDUCCION.|45918833|040400|0|
+~D|1_4|1_4_1\1\1\1_4_2\1\1\1_4_3\1\1\|
+~C|1_4_1||EN DESAGöES.|15673941|040400|0|
+~Y|1_4_1|003043\1\9\003054\1\9\03064V\1\18\003086\1\9\003087\1\9\003090\1\9\003102\1\9\003104\1\9\|
+~M|1_4_1\003043|1\4\1\1\|9|\tuber°a\0\9\0\0\|
+~M|1_4_1\003054|1\4\1\2\|9|\tuber°a\0\9\0\0\|
+~M|1_4_1\03064V|1\4\1\3\|18|\tuber°a\0\18\0\0\|
+~M|1_4_1\003086|1\4\1\4\|9|\tuber°a\0\9\0\0\|
+~M|1_4_1\003087|1\4\1\5\|9|\tuber°a\0\9\0\0\|
+~M|1_4_1\003090|1\4\1\6\|9|\tuber°a\0\9\0\0\|
+~M|1_4_1\003102|1\4\1\7\|9|\tuber°a\0\9\0\0\|
+~M|1_4_1\003104|1\4\1\8\|9|\tuber°a\0\9\0\0\|
+~C|1_4_2||EN VALVULAS DE CORTE Y DESAGöE CONJUNTAS.|12485696|040400|0|
+~Y|1_4_2|003011\1\4\003043\1\4\003054\1\4\03064V\1\8\003086\1\4\003087\1\4\003090\1\4\003102\1\4\003104\1\4\003105\1\4\|
+~M|1_4_2\003011|1\4\2\1\|4|\tuber°a\0\4\0\0\|
+~M|1_4_2\003043|1\4\2\2\|4|\tuber°a\0\4\0\0\|
+~M|1_4_2\003054|1\4\2\3\|4|\tuber°a\0\4\0\0\|
+~M|1_4_2\03064V|1\4\2\4\|8|\tuber°a\0\8\0\0\|
+~M|1_4_2\003086|1\4\2\5\|4|\tuber°a\0\4\0\0\|
+~M|1_4_2\003087|1\4\2\6\|4|\tuber°a\0\4\0\0\|
+~M|1_4_2\003090|1\4\2\7\|4|\tuber°a\0\4\0\0\|
+~M|1_4_2\003102|1\4\2\8\|4|\tuber°a\0\4\0\0\|
+~M|1_4_2\003104|1\4\2\9\|4|\tuber°a\0\4\0\0\|
+~M|1_4_2\003105|1\4\2\10\|4|\tuber°a\0\4\0\0\|
+~C|1_4_3||EN VENTOSAS.|17759196|040400|0|
+~Y|1_4_3|003022\1\13\03064V\1\26\003087\1\26\003089\1\13\|
+~M|1_4_3\003022|1\4\3\1\|13|\tuber°a\0\13\0\0\|
+~M|1_4_3\03064V|1\4\3\2\|26|\tuber°a\0\26\0\0\|
+~M|1_4_3\003087|1\4\3\3\|26|\tuber°a\0\26\0\0\|
+~M|1_4_3\003089|1\4\3\4\|13|\tuber°a\0\13\0\0\|
+~C|1_5||ARQUETAS DE VALVULAS.|15594603.98|040400|0|
+~D|1_5|1_5_1\1\1\1_5_2\1\1\1_5_3\1\1\1_5_4\1\1\1_5_5\1\1\1_5_6\1\1\|
+~C|1_5_1||EN DESAGöES SIN CASETA.|2835488.99|040400|0|
+~Y|1_5_1|001004\1\210.85\001013\1\65.28\02003V\1\55.54\002005\1\294.32\002006\1\16.2\002009\1\60\02015V\1\3927.55\005002\1\6\|
+~M|1_5_1\001004|1\5\1\1\|210.85|\tuber°a\0\210.85\0\0\|
+~M|1_5_1\001013|1\5\1\2\|65.28|\tuber°a\0\65.28\0\0\|
+~M|1_5_1\02003V|1\5\1\3\|55.54|\tuber°a\0\55.54\0\0\|
+~M|1_5_1\002005|1\5\1\4\|294.32|\tuber°a\0\294.32\0\0\|
+~M|1_5_1\002006|1\5\1\5\|16.2|\tuber°a\0\16.2\0\0\|
+~M|1_5_1\002009|1\5\1\6\|60|\tuber°a\0\60\0\0\|
+~M|1_5_1\02015V|1\5\1\7\|3927.55|\tuber°a\0\3927.55\0\0\|
+~M|1_5_1\005002|1\5\1\8\|6|\tuber°a\0\6\0\0\|
+~C|1_5_2||EN DESAGöES CON CASETA.|1236336.35|040400|0|
+~Y|1_5_2|001004\1\68.33\02003V\1\17.67\002005\1\101.98\02008V\1\114.05\002009\1\18\02015V\1\1146.1\004002\1\32.63\004010\1\10\004011\1\71.97\004013\1\38.96\005037\1\5.28\005038\1\13.44\|
+~M|1_5_2\001004|1\5\2\1\|68.33|\tuber°a\0\68.33\0\0\|
+~M|1_5_2\02003V|1\5\2\2\|17.67|\tuber°a\0\17.67\0\0\|
+~M|1_5_2\002005|1\5\2\3\|101.98|\tuber°a\0\101.98\0\0\|
+~M|1_5_2\02008V|1\5\2\4\|114.05|\tuber°a\0\114.05\0\0\|
+~M|1_5_2\002009|1\5\2\5\|18|\tuber°a\0\18\0\0\|
+~M|1_5_2\02015V|1\5\2\6\|1146.1|\tuber°a\0\1146.1\0\0\|
+~M|1_5_2\004002|1\5\2\7\|32.63|\tuber°a\0\32.63\0\0\|
+~M|1_5_2\004010|1\5\2\8\|10|\tuber°a\0\10\0\0\|
+~M|1_5_2\004011|1\5\2\9\|71.97|\tuber°a\0\71.97\0\0\|
+~M|1_5_2\004013|1\5\2\10\|38.96|\tuber°a\0\38.96\0\0\|
+~M|1_5_2\005037|1\5\2\11\|5.28|\tuber°a\0\5.28\0\0\|
+~M|1_5_2\005038|1\5\2\12\|13.44|\tuber°a\0\13.44\0\0\|
+~C|1_5_3||EN VALVULAS DE CORTE Y DESAGöES.|4234055.4|040400|0|
+~Y|1_5_3|001004\1\256\002003\1\78.96\002005\1\375\002008\1\732.82\002009\1\32\002015\1\3114.18\004002\1\107.2\004010\1\20\004011\1\210.24\004013\1\116.32\005037\1\10.56\005038\1\38.44\|
+~M|1_5_3\001004|1\5\3\1\|256|\tuber°a\0\256\0\0\|
+~M|1_5_3\002003|1\5\3\2\|78.96|\tuber°a\0\78.96\0\0\|
+~M|1_5_3\002005|1\5\3\3\|375|\tuber°a\0\375\0\0\|
+~M|1_5_3\002008|1\5\3\4\|732.82|\tuber°a\0\732.82\0\0\|
+~M|1_5_3\002009|1\5\3\5\|32|\tuber°a\0\32\0\0\|
+~M|1_5_3\002015|1\5\3\6\|3114.18|\tuber°a\0\3114.18\0\0\|
+~M|1_5_3\004002|1\5\3\7\|107.2|\tuber°a\0\107.2\0\0\|
+~M|1_5_3\004010|1\5\3\8\|20|\tuber°a\0\20\0\0\|
+~M|1_5_3\004011|1\5\3\9\|210.24|\tuber°a\0\210.24\0\0\|
+~M|1_5_3\004013|1\5\3\10\|116.32|\tuber°a\0\116.32\0\0\|
+~M|1_5_3\005037|1\5\3\11\|10.56|\tuber°a\0\10.56\0\0\|
+~M|1_5_3\005038|1\5\3\12\|38.44|\tuber°a\0\38.44\0\0\|
+~C|1_5_4||EN VALVULAS MOTORIZADAS.|2502713.15|040400|0|
+~Y|1_5_4|001004\1\127.76\002003\1\52.84\002005\1\194.34\002008\1\514.91\002009\1\24\002015\1\1664.85\004002\1\62.62\004010\1\15\004011\1\128.79\004013\1\68.86\005037\1\7.92\005038\1\23.4\|
+~M|1_5_4\001004|1\5\4\1\|127.76|\tuber°a\0\127.76\0\0\|
+~M|1_5_4\002003|1\5\4\2\|52.84|\tuber°a\0\52.84\0\0\|
+~M|1_5_4\002005|1\5\4\3\|194.34|\tuber°a\0\194.34\0\0\|
+~M|1_5_4\002008|1\5\4\4\|514.91|\tuber°a\0\514.91\0\0\|
+~M|1_5_4\002009|1\5\4\5\|24|\tuber°a\0\24\0\0\|
+~M|1_5_4\002015|1\5\4\6\|1664.85|\tuber°a\0\1664.85\0\0\|
+~M|1_5_4\004002|1\5\4\7\|62.62|\tuber°a\0\62.62\0\0\|
+~M|1_5_4\004010|1\5\4\8\|15|\tuber°a\0\15\0\0\|
+~M|1_5_4\004011|1\5\4\9\|128.79|\tuber°a\0\128.79\0\0\|
+~M|1_5_4\004013|1\5\4\10\|68.86|\tuber°a\0\68.86\0\0\|
+~M|1_5_4\005037|1\5\4\11\|7.92|\tuber°a\0\7.92\0\0\|
+~M|1_5_4\005038|1\5\4\12\|23.4|\tuber°a\0\23.4\0\0\|
+~C|1_5_5||EN VENTOSAS CON CASETA.|1701531.21|040400|0|
+~Y|1_5_5|001004\1\109.62\002003\1\27.38\002005\1\77.16\002008\1\199.58\002009\1\32\002015\1\1286.06\004002\1\70.72\004010\1\20\004011\1\143.93\004013\1\77.92\005037\1\10.56\005038\1\23.52\|
+~M|1_5_5\001004|1\5\5\1\|109.62|\tuber°a\0\109.62\0\0\|
+~M|1_5_5\002003|1\5\5\2\|27.38|\tuber°a\0\27.38\0\0\|
+~M|1_5_5\002005|1\5\5\3\|77.16|\tuber°a\0\77.16\0\0\|
+~M|1_5_5\002008|1\5\5\4\|199.58|\tuber°a\0\199.58\0\0\|
+~M|1_5_5\002009|1\5\5\5\|32|\tuber°a\0\32\0\0\|
+~M|1_5_5\002015|1\5\5\6\|1286.06|\tuber°a\0\1286.06\0\0\|
+~M|1_5_5\004002|1\5\5\7\|70.72|\tuber°a\0\70.72\0\0\|
+~M|1_5_5\004010|1\5\5\8\|20|\tuber°a\0\20\0\0\|
+~M|1_5_5\004011|1\5\5\9\|143.93|\tuber°a\0\143.93\0\0\|
+~M|1_5_5\004013|1\5\5\10\|77.92|\tuber°a\0\77.92\0\0\|
+~M|1_5_5\005037|1\5\5\11\|10.56|\tuber°a\0\10.56\0\0\|
+~M|1_5_5\005038|1\5\5\12\|23.52|\tuber°a\0\23.52\0\0\|
+~C|1_5_6||EN VENTOSAS SIN CASETA.|3084478.88|040400|0|
+~Y|1_5_6|001004\1\246.64\001013\1\94.86\002003\1\63.52\002005\1\347.22\002006\1\24.3\002009\1\72\002015\1\3009.18\005002\1\9\|
+~M|1_5_6\001004|1\5\6\1\|246.64|\tuber°a\0\246.64\0\0\|
+~M|1_5_6\001013|1\5\6\2\|94.86|\tuber°a\0\94.86\0\0\|
+~M|1_5_6\002003|1\5\6\3\|63.52|\tuber°a\0\63.52\0\0\|
+~M|1_5_6\002005|1\5\6\4\|347.22|\tuber°a\0\347.22\0\0\|
+~M|1_5_6\002006|1\5\6\5\|24.3|\tuber°a\0\24.3\0\0\|
+~M|1_5_6\002009|1\5\6\6\|72|\tuber°a\0\72\0\0\|
+~M|1_5_6\002015|1\5\6\7\|3009.18|\tuber°a\0\3009.18\0\0\|
+~M|1_5_6\005002|1\5\6\8\|9|\tuber°a\0\9\0\0\|
+~C|1_6||TUBERIAS DE DESAGöE.|2444311.70635|040400|0|
+~Y|1_6|001003\1\701.212\001010\1\3.59137\001013\1\23.94\001016\1\23.94\001019\1\33.9255\01120V\1\149.911\01220V\1\485.306\02002V\1\17.205\003101\1\359\|
+~M|1_6\001003|1\6\1\|701.212|\p-12\0\50\0.6\1.7\\talud 1/3\0\50\0.567\1.7\\p-34\0\17\0.6\1.95\\talud 1/3\0\17\0.65\1.95\\p-49\0\65\0.6\1.6\\talud 1/3\0\65\0.533\1.6\\p-73\0\42\0.6\1.73\\talud 1/5\0\42\0.346\1.73\\p-83, 91, 98,\0\0\0\0\\106 y 140\5\10\0.6\2.6\\talud 1/5\5\10\0.52\2.6\\p-146\0\105\0.6\1.53\\talud 1/5\0\105\0.306\1.53\\p-183\0\10\0.6\2.6\\talud 1/3\0\10\0.867\2.6\\p-213 y 233\2\10\0.6\2.6\\talud 1/10\2\10\0.26\2.6\|
+~M|1_6\001010|1\6\2\|3.59137|\p-12, 34, 83,\0\0\0\0\\91, 98, 213\0\0\0\0\\y 233\7\2.5\0.6\0.15\\Taludes\0\0\0\0\\p-12  1/3\1\2.5\0.542\0.15\\p-34  1/3\1\2.5\0.625\0.15\\p-83, 91 y\0\0\0\0\\98   1/5\3\2.5\0.842\0.15\\p-213 y 233\0\0\0\0\\talud 1/10\2\2.5\0.842\0.15\|
+~M|1_6\001013|1\6\3\|23.94|\Deducida de la\0\0\0\0\\medici¢n de\0\0\0\0\\zahorra natural\1\23.94\0\0\|
+~M|1_6\001016|1\6\4\|23.94|\Igual medici¢n\0\0\0\0\\que rotura\1\23.94\0\0\|
+~M|1_6\001019|1\6\5\|33.9255|\En la longitud\0\0\0\0\\de excavaci¢n\1\359\0.6\0.15\\taludes 1/5\1\359\0.03\0.15\|
+~M|1_6\01120V|1\6\6\|149.911|\p-12 a p-233\1\359\0.6\0.6\\taludes 1/3\0\0\0\0\\p-12, 34, 49\1\132\0.2\0.6\\p-183\1\10\0.2\0.6\\taludes 1/5\0\0\0\0\\p-73,83,91,98,\0\0\0\0\\106,140,146\1\197\0.12\0.6\\taludes 1/10\0\0\0\0\\p-213, 233\1\20\0.06\0.6\\A deducir \0\0\0\0\\tubo DN 200\-1\11.2726\0\0\|
+~M|1_6\01220V|1\6\7\|485.306|\Excavaci¢n\1\701.212\0\0\\A deducir:\0\0\0\0\\cama\-1\33.926\0\0\\relleno selecc\-1\149.911\0\0\\HM-15\-1\17.205\0\0\\zahorra natura\-1\3.591\0\0\\tuber°a\-1\11.2726\0\0\|
+~M|1_6\02002V|1\6\8\|17.205|\En reposici¢n\0\0\0\0\\de pavimento\0\0\0\0\\parte recta\1\17.5\0.6\0.15\\taludes 1/3\0\0\0\0\\p-12\1\1.21875\0\0\\p-34\1\1.40625\0\0\\taludes 1/15\0\0\0\0\\p-83,91,98\3\1.89375\0\0\\taludes 1/10\0\0\0\0\\p-213, 233\2\1.89375\0\0\\En anclaje\13\0.7\0.7\0.6\\a deducir tubo\-13\0.02198\0\0\|
+~M|1_6\003101|1\6\9\|359|\a deducir tubo\0\359\0\0\|
+~C|1_7||INSTALACION DE ENERGIA SOLAR.|663760|040400|0|
+~Y|1_7|005013\1\1\|
+~M|1_7\005013|1\7\1\|1|\a deducir tubo\0\1\0\0\|
+~C|1_8||INSTALACION ELECTRICA.|300678.48|040400|0|
+~Y|1_8|001003\1\21.84\001020\1\21.84\006012\1\5\006021\1\299\006022\1\1\|
+~M|1_8\001003|1\8\1\|21.84|\a deducir tubo\0\21.84\0\0\|
+~M|1_8\001020|1\8\2\|21.84|\a deducir tubo\0\21.84\0\0\|
+~M|1_8\006012|1\8\3\|5|\a deducir tubo\0\5\0\0\|
+~M|1_8\006021|1\8\4\|299|\a deducir tubo\0\299\0\0\|
+~M|1_8\006022|1\8\5\|1|\a deducir tubo\0\1\0\0\|
+~C|2#||CONDUCC. DESDE LAS GRAJAS A DEPOSITO CEMENTERIO.|233205961.2584|040400|0|
+~D|2|2_1\1\1\2_2\1\1\2_3\1\1\2_4\1\1\|
+~C|2_1||PRIMER TRAMO.LAS GRAJAS AL PUENTE LOS DESCALZOS.|114459568.7511|040400|0|
+~D|2_1|2_1_1\1\1\2_1_2\1\1\2_1_3\1\1\2_1_4\1\1\2_1_5\1\1\|
+~C|2_1_1||OBRAS DE CONEXION CON TUBERIA EXISTENTE.|556569|040400|0|
+~Y|2_1_1|03065V\1\1\003110\1\1\003112\1\1\005039\1\1\|
+~M|2_1_1\03065V|2\1\1\1\|1|\a deducir tubo\0\1\0\0\|
+~M|2_1_1\003110|2\1\1\2\|1|\a deducir tubo\0\1\0\0\|
+~M|2_1_1\003112|2\1\1\3\|1|\a deducir tubo\0\1\0\0\|
+~M|2_1_1\005039|2\1\1\4\|1|\a deducir tubo\0\1\0\0\|
+~C|2_1_2||CONDUCCION. MOVIMIENTO DE TIERRAS Y TUBERIAS.|97367847.8753|040400|0|
+~Y|2_1_2|001001\1\1836.2\001003\1\3888.95\001006\1\2746.87\001010\1\251.878\001013\1\1718.4\001016\1\1718.4\001019\1\810.88\01120V\1\596.197\01220V\1\6473.32\001027\1\133\001028\1\2348.94\02002V\1\257.76\03052V\1\2\003002\1\2823.5\|
+~M|2_1_2\001001|2\1\2\1\|1836.2|\p-1 a p-10\1\367.24\5\0\|
+~M|2_1_2\001003|2\1\2\2\|3888.95|\p-1 a p-9\0.2\173.86\1.1\2.158\\p-9 a p-13\1\326.38\1.1\2.015\\p-17 a p-33\1\609.51\1\2.369\\p-33 a p-61\0.2\1089.25\1\2.065\\Talud 1/3\0\0\0\0\\p-1 a p-9\0.2\173.86\0.719\2.158\\Talud 1/5\0\0\0\0\\p-9 a p-13\1\326.38\0.403\2.015\\p-17 a p-33\1\609.51\0.474\2.369\\p-33 a p-61\0.2\1089.25\0.413\2.065\|
+~M|2_1_2\001006|2\1\2\3\|2746.87|\p-1 a p-9\0.8\173.86\1.1\2.158\\p-33 a p-61\0.8\1089.25\1.1\2.065\\Taludes 1/10\0\0\0\0\\p-1 a p-9\0.8\173.86\0.216\2.158\\p-33 a p-61\0.8\1089.25\0.207\2.065\|
+~M|2_1_2\001010|2\1\2\4\|251.878|\p-33 a p-61\1\1089.25\1.1\0.15\\taludes 1/5\0.2\1089.25\0.736\0.15\\taludes 1/10\0.8\1089.25\0.368\0.15\|
+~M|2_1_2\001013|2\1\2\5\|1718.4|\Deducido de la\0\0\0\0\\medici¢n de\0\0\0\0\\HM-17,5\1\1718.4\0\0\|
+~M|2_1_2\001016|2\1\2\6\|1718.4|\Igual medici¢n\0\0\0\0\\que rotura\1\1718.4\0\0\|
+~M|2_1_2\001019|2\1\2\7\|810.88|\Asiento tubos\1\2823.5\1.1\0.25\\taludes 1/3\0\0\0\0\\p-1 a p-9\0.2\173.86\0.083\0.25\\p-13 a p-17\1\448\0.083\0.25\\p-61 a p-70\1\176.5\0.083\0.25\\taludes 1/5\0\0\0\0\\p-9 a p-13\1\326.38\0.05\0.25\\p-17 a p-33\1\609.51\0.05\0.25\\p-33 a p-61\0.2\1089.25\0.05\0.25\\taludes 1/10\0\0\0\0\\p-1 a p-9\0.8\173.86\0.025\0.25\\p-33 a p-61\0.8\1089.25\0.025\0.25\|
+~M|2_1_2\01120V|2\1\2\8\|596.197|\Parte rectan\1\2823.5\1.1\1.09\\a deducir tubo\-1\2633.36\0\0\\cama\-1\810.88\0\0\\Taludes 1/3\0\0\0\0\\p-1 a p-9\0.2\173.86\0.363\1.09\\p-13 a p-17\1\448\0.363\1.09\\p-61 a p-70\1\176.5\0.363\1.09\\Taludes 1/5\0\0\0\0\\p-9 a p-13\1\326.38\0.218\1.09\\p-17 a p-33\1\609.51\0.218\1.09\\p-33 a p-61\0.2\1089.25\0.218\1.09\\Taludes 1/10\0\0\0\0\\p-1 a p-9\0.8\173.86\0.109\1.09\\p-33 a p-61\0.8\1089.25\0.109\1.09\|
+~M|2_1_2\01220V|2\1\2\9\|6473.32|\Excavaciones:\0\0\0\0\\terreno\1\3888.95\0\0\\roca\1\2746.87\0\0\\retroexc.\1\2348.94\0\0\\A deducir\0\0\0\0\\cama\-1\810.88\0\0\\tubo\-1\594.726\0\0\\rell. selecc.\-1\596.198\0\0\\ZN\-1\251.878\0\0\\HM-15\-1\257.76\0\0\|
+~M|2_1_2\001027|2\1\2\10\|133|\p-10 a p-13\1\133\0\0\|
+~M|2_1_2\001028|2\1\2\11\|2348.94|\p-13 a p-17\1\448\1.1\2.15\\p-61 a p-70\1\176.5\1.1\1.942\\Taludes 1/3\0\0\0\0\\p-13 a p-17\1\448\0.717\2.15\\p-61 a p-70\1\176.5\0.647\1.942\|
+~M|2_1_2\02002V|2\1\2\12\|257.76|\En reposici¢n\0\0\0\0\\de pavimento\0\0\0\0\\p-33 a p-61\1\1089.25\1.1\0.15\\taludes 1/5\0.2\1089.25\0.796\0.15\\taludes 1/10\0.8\1089.25\0.398\0.15\|
+~M|2_1_2\03052V|2\1\2\13\|2|\taludes 1/10\0\2\0\0\|
+~M|2_1_2\003002|2\1\2\14\|2823.5|\p-1 a p-70\1\2823.5\0\0\|
+~C|2_1_3||VALVULERIA Y PIEZAS ESPECIALES.|10780129|040400|0|
+~D|2_1_3|2_1_3_1\1\1\2_1_3_2\1\1\2_1_3_3\1\1\|
+~C|2_1_3_1||EN DESAGöES.|3482440|040400|0|
+~Y|2_1_3_1|003026\1\5\003031\1\5\003045\1\5\003055\1\5\03065V\1\10\003103\1\5\003111\1\5\003114\1\5\|
+~M|2_1_3_1\003026|2\1\3\1\1\|5|\p-1 a p-70\0\5\0\0\|
+~M|2_1_3_1\003031|2\1\3\1\2\|5|\p-1 a p-70\0\5\0\0\|
+~M|2_1_3_1\003045|2\1\3\1\3\|5|\p-1 a p-70\0\5\0\0\|
+~M|2_1_3_1\003055|2\1\3\1\4\|5|\p-1 a p-70\0\5\0\0\|
+~M|2_1_3_1\03065V|2\1\3\1\5\|10|\p-1 a p-70\0\10\0\0\|
+~M|2_1_3_1\003103|2\1\3\1\6\|5|\p-1 a p-70\0\5\0\0\|
+~M|2_1_3_1\003111|2\1\3\1\7\|5|\p-1 a p-70\0\5\0\0\|
+~M|2_1_3_1\003114|2\1\3\1\8\|5|\p-1 a p-70\0\5\0\0\|
+~C|2_1_3_2||EN VENTOSAS.|4244605|040400|0|
+~Y|2_1_3_2|003021\1\5\003035\1\5\03065V\1\10\003111\1\10\|
+~M|2_1_3_2\003021|2\1\3\2\1\|5|\p-1 a p-70\0\5\0\0\|
+~M|2_1_3_2\003035|2\1\3\2\2\|5|\p-1 a p-70\0\5\0\0\|
+~M|2_1_3_2\03065V|2\1\3\2\3\|10|\p-1 a p-70\0\10\0\0\|
+~M|2_1_3_2\003111|2\1\3\2\4\|10|\p-1 a p-70\0\10\0\0\|
+~C|2_1_3_3||EN VALVULAS DE CORTE.|3053084|040400|0|
+~Y|2_1_3_3|003006\1\1\003008\1\1\003026\1\1\03065V\1\2\003115\1\1\|
+~M|2_1_3_3\003006|2\1\3\3\1\|1|\p-1 a p-70\0\1\0\0\|
+~M|2_1_3_3\003008|2\1\3\3\2\|1|\p-1 a p-70\0\1\0\0\|
+~M|2_1_3_3\003026|2\1\3\3\3\|1|\p-1 a p-70\0\1\0\0\|
+~M|2_1_3_3\03065V|2\1\3\3\4\|2|\p-1 a p-70\0\2\0\0\|
+~M|2_1_3_3\003115|2\1\3\3\5\|1|\p-1 a p-70\0\1\0\0\|
+~C|2_1_4||ARQUETAS DE VALVULAS.|4123146.83|040400|0|
+~D|2_1_4|2_1_4_1\1\1\2_1_4_2\1\1\2_1_4_3\1\1\2_1_4_4\1\1\|
+~C|2_1_4_1||DE DESAGöE CON CASETA.|1447709.16|040400|0|
+~Y|2_1_4_1|001004\1\79.9\001013\1\27.84\02003V\1\20.79\002005\1\122.29\02008V\1\135.43\002009\1\27\02015V\1\841.04\004002\1\42.1\004010\1\15\004011\1\88.61\004013\1\46.54\005037\1\7.92\005038\1\14.04\|
+~M|2_1_4_1\001004|2\1\4\1\1\|79.9|\p-1 a p-70\0\79.9\0\0\|
+~M|2_1_4_1\001013|2\1\4\1\2\|27.84|\p-1 a p-70\0\27.84\0\0\|
+~M|2_1_4_1\02003V|2\1\4\1\3\|20.79|\p-1 a p-70\0\20.79\0\0\|
+~M|2_1_4_1\002005|2\1\4\1\4\|122.29|\p-1 a p-70\0\122.29\0\0\|
+~M|2_1_4_1\02008V|2\1\4\1\5\|135.43|\p-1 a p-70\0\135.43\0\0\|
+~M|2_1_4_1\002009|2\1\4\1\6\|27|\p-1 a p-70\0\27\0\0\|
+~M|2_1_4_1\02015V|2\1\4\1\7\|841.04|\p-1 a p-70\0\841.04\0\0\|
+~M|2_1_4_1\004002|2\1\4\1\8\|42.1|\p-1 a p-70\0\42.1\0\0\|
+~M|2_1_4_1\004010|2\1\4\1\9\|15|\p-1 a p-70\0\15\0\0\|
+~M|2_1_4_1\004011|2\1\4\1\10\|88.61|\p-1 a p-70\0\88.61\0\0\|
+~M|2_1_4_1\004013|2\1\4\1\11\|46.54|\p-1 a p-70\0\46.54\0\0\|
+~M|2_1_4_1\005037|2\1\4\1\12\|7.92|\p-1 a p-70\0\7.92\0\0\|
+~M|2_1_4_1\005038|2\1\4\1\13\|14.04|\p-1 a p-70\0\14.04\0\0\|
+~C|2_1_4_2||DE DESAGöE SIN CASETA.|686213.71|040400|0|
+~Y|2_1_4_2|001004\1\53.27\001013\1\18.56\02003V\1\14.04\002005\1\75.86\002006\1\3.84\002009\1\18\02015V\1\663.33\005002\1\2\|
+~M|2_1_4_2\001004|2\1\4\2\1\|53.27|\p-1 a p-70\0\53.27\0\0\|
+~M|2_1_4_2\001013|2\1\4\2\2\|18.56|\p-1 a p-70\0\18.56\0\0\|
+~M|2_1_4_2\02003V|2\1\4\2\3\|14.04|\p-1 a p-70\0\14.04\0\0\|
+~M|2_1_4_2\002005|2\1\4\2\4\|75.86|\p-1 a p-70\0\75.86\0\0\|
+~M|2_1_4_2\002006|2\1\4\2\5\|3.84|\p-1 a p-70\0\3.84\0\0\|
+~M|2_1_4_2\002009|2\1\4\2\6\|18|\p-1 a p-70\0\18\0\0\|
+~M|2_1_4_2\02015V|2\1\4\2\7\|663.33|\p-1 a p-70\0\663.33\0\0\|
+~M|2_1_4_2\005002|2\1\4\2\8\|2|\p-1 a p-70\0\2\0\0\|
+~C|2_1_4_3||DE VENTOSA SIN CASETA.|1413664.46|040400|0|
+~Y|2_1_4_3|001004\1\99.82\001013\1\17.36\02003V\1\25.38\002005\1\143.7\002006\1\9\002009\1\35\02015V\1\2049.35\005002\1\5\|
+~M|2_1_4_3\001004|2\1\4\3\1\|99.82|\p-1 a p-70\0\99.82\0\0\|
+~M|2_1_4_3\001013|2\1\4\3\2\|17.36|\p-1 a p-70\0\17.36\0\0\|
+~M|2_1_4_3\02003V|2\1\4\3\3\|25.38|\p-1 a p-70\0\25.38\0\0\|
+~M|2_1_4_3\002005|2\1\4\3\4\|143.7|\p-1 a p-70\0\143.7\0\0\|
+~M|2_1_4_3\002006|2\1\4\3\5\|9|\p-1 a p-70\0\9\0\0\|
+~M|2_1_4_3\002009|2\1\4\3\6\|35|\p-1 a p-70\0\35\0\0\|
+~M|2_1_4_3\02015V|2\1\4\3\7\|2049.35|\p-1 a p-70\0\2049.35\0\0\|
+~M|2_1_4_3\005002|2\1\4\3\8\|5|\p-1 a p-70\0\5\0\0\|
+~C|2_1_4_4||DE VALVULAS DE MARIPOSA CON CASETA.|575559.5|040400|0|
+~Y|2_1_4_4|001004\1\29.17\02003V\1\8.63\002005\1\42.88\02008V\1\111.55\002009\1\8\02015V\1\507.95\004002\1\15.86\004010\1\5\004011\1\35\004013\1\18.99\005037\1\2.52\005038\1\5.67\|
+~M|2_1_4_4\001004|2\1\4\4\1\|29.17|\p-1 a p-70\0\29.17\0\0\|
+~M|2_1_4_4\02003V|2\1\4\4\2\|8.63|\p-1 a p-70\0\8.63\0\0\|
+~M|2_1_4_4\002005|2\1\4\4\3\|42.88|\p-1 a p-70\0\42.88\0\0\|
+~M|2_1_4_4\02008V|2\1\4\4\4\|111.55|\p-1 a p-70\0\111.55\0\0\|
+~M|2_1_4_4\002009|2\1\4\4\5\|8|\p-1 a p-70\0\8\0\0\|
+~M|2_1_4_4\02015V|2\1\4\4\6\|507.95|\p-1 a p-70\0\507.95\0\0\|
+~M|2_1_4_4\004002|2\1\4\4\7\|15.86|\p-1 a p-70\0\15.86\0\0\|
+~M|2_1_4_4\004010|2\1\4\4\8\|5|\p-1 a p-70\0\5\0\0\|
+~M|2_1_4_4\004011|2\1\4\4\9\|35|\p-1 a p-70\0\35\0\0\|
+~M|2_1_4_4\004013|2\1\4\4\10\|18.99|\p-1 a p-70\0\18.99\0\0\|
+~M|2_1_4_4\005037|2\1\4\4\11\|2.52|\p-1 a p-70\0\2.52\0\0\|
+~M|2_1_4_4\005038|2\1\4\4\12\|5.67|\p-1 a p-70\0\5.67\0\0\|
+~C|2_1_5||TUBERIAS DE DESAGöE.|1631876.0458|040400|0|
+~Y|2_1_5|001003\1\283.229\001006\1\154.982\001010\1\0.75\001013\1\5\001016\1\5\001019\1\24.948\01120V\1\66.9312\01220V\1\335.506\02002V\1\2.16312\003113\1\252\|
+~M|2_1_5\001003|2\1\5\1\|283.229|\p-7\0.2\90\0.6\1.7\\p-15\1\40\0.6\1.95\\p-24\1\60\0.6\1.6\\p-36\0.2\30\0.6\1.9\\p-54\0.2\22\0.6\1.8\\p-70\1\10\0.6\2.8\\Taludes 1/3\0\0\0\0\\p-7\0.2\90\0.567\1.7\\p-15\1\40\0.65\1.95\\p-70\1\10\0.933\2.8\\Taludes 1/5\0\0\0\0\\p-24\1\60\0.32\1.6\\p-36\0.2\30\0.38\1.9\\p-54\0.2\22\0.36\1.8\|
+~M|2_1_5\001006|2\1\5\2\|154.982|\p-7\0.8\90\0.6\1.7\\p-36\0.8\30\0.6\1.9\\p-54\0.8\22\0.6\1.8\\Taludes 1/10\0\0\0\0\\p-7\0.8\90\0.17\1.7\\p-36\0.8\30\0.19\1.9\\p-54\0.8\22\0.18\1.8\|
+~M|2_1_5\001010|2\1\5\3\|0.75|\p-36 y 54\2\2.5\0.6\0.15\\taludes\2\2.5\0.4\0.15\|
+~M|2_1_5\001013|2\1\5\4\|5|\p-36\1\2.5\0.6\0\\\2\2.5\0.2\0\\p-54\1\2.5\0.6\0\\\2\2.5\0.2\0\|
+~M|2_1_5\001016|2\1\5\5\|5|\Igual medici¢n\0\0\0\0\\que rotura\1\5\0\0\|
+~M|2_1_5\001019|2\1\5\6\|24.948|\En asiento\1\252\0.6\0.15\\\2\252\0.03\0.15\|
+~M|2_1_5\01120V|2\1\5\7\|66.9312|\Parte rectang.\1\252\0.6\0.6\\taludes 1/10\1\252\0.06\0.6\\A deducir:\0\0\0\0\\cama\-1\24.948\0\0\\tubo\-1\7.9128\0\0\|
+~M|2_1_5\01220V|2\1\5\8\|335.506|\Excavaciones\0\0\0\0\\Terreno\1\283.229\0\0\\roca\1\154.982\0\0\\A deducir:\0\0\0\0\\cama\-1\24.948\0\0\\tubo\-1\7.9128\0\0\\relleno protec\-1\66.931\0\0\\ZN\-1\0.75\0\0\\HM-15\-1\2.163\0\0\|
+~M|2_1_5\02002V|2\1\5\9\|2.16312|\En anclajes\6\0.7\0.7\0.5\\a deducir tubo\-6\0.02198\0\0\\En reposici¢n\0\0\0\0\\de pavimento\2\2.5\0.7\0.15\\taludes 1/10\2\2.5\0.4\0.15\|
+~M|2_1_5\003113|2\1\5\10\|252|\taludes 1/10\0\252\0\0\|
+~C|2_2||SEGUNDO TRAMO. CRUCE DEL RIO.|8068296.169134|040400|0|
+~D|2_2|2_2_1\1\1\2_2_2\1\1\2_2_3\1\1\|
+~C|2_2_1||CONDUCCION. MOVIMIENTO DE TIERRAS Y TUBERIAS.|3746636.209134|040400|0|
+~Y|2_2_1|001028\1\201.715\001033\1\561\001034\1\34\001035\1\595\02002V\1\50.2984\003002\1\34\|
+~M|2_2_1\001028|2\2\1\1\|201.715|\p-70 a p-76\1\34\1.1\2.88\\taludes 1/3\1\34\0.96\2.88\|
+~M|2_2_1\001033|2\2\1\2\|561|\p-70 a p-76\1\34\11\1.5\|
+~M|2_2_1\001034|2\2\1\3\|34|\p-70 a p-76\1\34\2\0.5\|
+~M|2_2_1\001035|2\2\1\4\|595|\p70 a p-76\1\34\11\1.5\\\1\34\2\0.5\|
+~M|2_2_1\02002V|2\2\1\5\|50.2984|\p-70 a p-76\1\34\1.3\1.3\\a deducir tubo\-1\7.16157\0\0\|
+~M|2_2_1\003002|2\2\1\6\|34|\p-70 a p-76\34\0\0\0\|
+~C|2_2_2||VALVULAS Y PIEZAS ESPECIALES.|3162668|040400|0|
+~Y|2_2_2|003008\1\2\003017\1\1\003026\1\2\003031\1\1\003045\1\1\003055\1\1\03065V\1\1\003092\1\2\003095\1\2\003103\1\1\003111\1\2\003112\1\2\003114\1\1\|
+~M|2_2_2\003008|2\2\2\1\|2|\p-70 a p-76\0\2\0\0\|
+~M|2_2_2\003017|2\2\2\2\|1|\p-70 a p-76\0\1\0\0\|
+~M|2_2_2\003026|2\2\2\3\|2|\p-70 a p-76\0\2\0\0\|
+~M|2_2_2\003031|2\2\2\4\|1|\p-70 a p-76\0\1\0\0\|
+~M|2_2_2\003045|2\2\2\5\|1|\p-70 a p-76\0\1\0\0\|
+~M|2_2_2\003055|2\2\2\6\|1|\p-70 a p-76\0\1\0\0\|
+~M|2_2_2\03065V|2\2\2\7\|1|\p-70 a p-76\0\1\0\0\|
+~M|2_2_2\003092|2\2\2\8\|2|\p-70 a p-76\0\2\0\0\|
+~M|2_2_2\003095|2\2\2\9\|2|\p-70 a p-76\0\2\0\0\|
+~M|2_2_2\003103|2\2\2\10\|1|\p-70 a p-76\0\1\0\0\|
+~M|2_2_2\003111|2\2\2\11\|2|\p-70 a p-76\0\2\0\0\|
+~M|2_2_2\003112|2\2\2\12\|2|\p-70 a p-76\0\2\0\0\|
+~M|2_2_2\003114|2\2\2\13\|1|\p-70 a p-76\0\1\0\0\|
+~C|2_2_3||ARQUETAS.|1158991.96|040400|0|
+~D|2_2_3|2_2_3_1\1\1\2_2_3_2\1\1\|
+~C|2_2_3_1||DE VALVULAS SIN CASETA.|563774.72|040400|0|
+~Y|2_2_3_1|001004\1\39.16\02003V\1\11.45\002005\1\53.66\002006\1\2.55\002009\1\10\02015V\1\729.46\004014\1\18.55\005002\1\1\|
+~M|2_2_3_1\001004|2\2\3\1\1\|39.16|\p-70 a p-76\0\39.16\0\0\|
+~M|2_2_3_1\02003V|2\2\3\1\2\|11.45|\p-70 a p-76\0\11.45\0\0\|
+~M|2_2_3_1\002005|2\2\3\1\3\|53.66|\p-70 a p-76\0\53.66\0\0\|
+~M|2_2_3_1\002006|2\2\3\1\4\|2.55|\p-70 a p-76\0\2.55\0\0\|
+~M|2_2_3_1\002009|2\2\3\1\5\|10|\p-70 a p-76\0\10\0\0\|
+~M|2_2_3_1\02015V|2\2\3\1\6\|729.46|\p-70 a p-76\0\729.46\0\0\|
+~M|2_2_3_1\004014|2\2\3\1\7\|18.55|\p-70 a p-76\0\18.55\0\0\|
+~M|2_2_3_1\005002|2\2\3\1\8\|1|\p-70 a p-76\0\1\0\0\|
+~C|2_2_3_2||DE VALVULAS Y DESAGöE SIN CASETA.|595217.24|040400|0|
+~Y|2_2_3_2|001004\1\41.18\02003V\1\11.97\002005\1\56.36\002006\1\3.2\002009\1\10\02015V\1\759.36\004014\1\21.2\005002\1\1\|
+~M|2_2_3_2\001004|2\2\3\2\1\|41.18|\p-70 a p-76\0\41.18\0\0\|
+~M|2_2_3_2\02003V|2\2\3\2\2\|11.97|\p-70 a p-76\0\11.97\0\0\|
+~M|2_2_3_2\002005|2\2\3\2\3\|56.36|\p-70 a p-76\0\56.36\0\0\|
+~M|2_2_3_2\002006|2\2\3\2\4\|3.2|\p-70 a p-76\0\3.2\0\0\|
+~M|2_2_3_2\002009|2\2\3\2\5\|10|\p-70 a p-76\0\10\0\0\|
+~M|2_2_3_2\02015V|2\2\3\2\6\|759.36|\p-70 a p-76\0\759.36\0\0\|
+~M|2_2_3_2\004014|2\2\3\2\7\|21.2|\p-70 a p-76\0\21.2\0\0\|
+~M|2_2_3_2\005002|2\2\3\2\8\|1|\p-70 a p-76\0\1\0\0\|
+~C|2_3||TERCER TRAMO. RIO A DEPOSITO.|101178096.3381|040400|0|
+~D|2_3|2_3_1\1\1\2_3_2\1\1\2_3_3\1\1\|
+~C|2_3_1||CONDUCCION. MOVIMIENTO DE TIERRAS Y TUBERIAS.|96567979.50813|040400|0|
+~Y|2_3_1|001003\1\5644.6\001005\1\1271.05\001006\1\1046.1\001010\1\342.901\001013\1\2389.65\001016\1\2389.65\001019\1\753.638\01120V\1\2603.27\01220V\1\3331.54\02002V\1\353.171\003002\1\2740.5\003017\1\1\003092\1\1\003112\1\1\003121\1\3\|
+~M|2_3_1\001003|2\3\1\1\|5644.6|\p-85 a p-127\0.7\1342.5\1.1\1.998\\p-130 a p-158\1\1102\1.1\1.974\\taludes 1/5\0.7\1342.5\0.4\1.998\\\1\1102\0.395\0\|
+~M|2_3_1\001005|2\3\1\2\|1271.05|\p-76 a p-85\1\296\1.1\2.3\\talud 1/3\1\296\0.767\2.3\|
+~M|2_3_1\001006|2\3\1\3\|1046.1|\p-85 a p-127\0.3\1342.5\1.1\1.998\\talud 1/10\0.3\1342.5\0.2\1.998\|
+~M|2_3_1\001010|2\3\1\4\|342.901|\p-85 a p-127\1\1342.5\1.1\0.15\\taludes 1/5\0.7\1342.5\0.709\0.15\\taludes 1/10\0.3\1342.5\0.355\0.15\|
+~M|2_3_1\001013|2\3\1\5\|2389.65|\p-85 a p-127\1\1342.5\1.1\0\\talud 1/5\0.7\1342.5\0.8\0\\talud 1/10\0.3\1342.5\0.4\0\|
+~M|2_3_1\001016|2\3\1\6\|2389.65|\Igual medici¢n\0\0\0\0\\que rotura\1\2389.65\0\0\|
+~M|2_3_1\001019|2\3\1\7\|753.638|\Bajo tuber°a\1\2740.5\1.1\0.25\|
+~M|2_3_1\01120V|2\3\1\8\|2603.27|\Parte rectang.\1\2740.5\1.1\1.09\\a deducir tubo\-1\579.082\0\0\\cama\-1\753.638\0\0\\Taludes 1/3\0\0\0\0\\p-76 a p-85\1\296\0.363\1.09\\Taludes 1/5\0\0\0\0\\p-85 a p-187\0.7\1342.5\0.218\1.09\\p-127 a p-158\1\1102\0.218\1.09\\Taludes 1/10\0\0\0\0\\p-85 a p-187\0.3\1342.5\0.109\1.09\|
+~M|2_3_1\01220V|2\3\1\9\|3331.54|\Excavaciones\1\5644.6\0\0\\\1\1046.1\0\0\\\1\1271.05\0\0\\A deducir:\0\0\0\0\\cama\-1\753.638\0\0\\tuber°a\-1\577.243\0\0\\rell. selecc.\-1\2603.27\0\0\\ZN\-1\342.901\0\0\\HM-15\-1\353.172\0\0\|
+~M|2_3_1\02002V|2\3\1\10\|353.171|\En reposici¢n\0\0\0\0\\de pavimentos\0\0\0\0\\p-85 a p-127\1\1342.5\1.1\0.15\\taludes 1/5\0.7\1342.5\0.769\0.15\\taludes 1/10\0.3\1342.5\0.385\0.15\|
+~M|2_3_1\003002|2\3\1\11\|2740.5|\p-76 a p-158\1\2740.5\0\0\|
+~M|2_3_1\003017|2\3\1\12\|1|\p-76 a p-158\0\1\0\0\|
+~M|2_3_1\003092|2\3\1\13\|1|\p-76 a p-158\0\1\0\0\|
+~M|2_3_1\003112|2\3\1\14\|1|\p-76 a p-158\0\1\0\0\|
+~M|2_3_1\003121|2\3\1\15\|3|\p-76 a p-158\0\3\0\0\|
+~C|2_3_2||VALVULAS Y PIEZAS ESPECIALES.|3325435.16|040400|0|
+~D|2_3_2|2_3_2_1\1\1\2_3_2_2\1\1\|
+~C|2_3_2_1||EN DESAGöES. (INCLUYE CONEXION ALCANTARILLADO).|1551657.16|040400|0|
+~Y|2_3_2_1|001003\1\13.68\001010\1\1.26\001013\1\8.4\001016\1\8.4\001019\1\2.88\01120V\1\10.8\02002V\1\1.26\003017\1\2\003026\1\2\003031\1\2\003045\1\2\003055\1\2\003092\1\2\003103\1\2\003111\1\2\003113\1\12\003114\1\2\|
+~M|2_3_2_1\001003|2\3\2\1\1\|13.68|\p-76 a p-158\0\13.68\0\0\|
+~M|2_3_2_1\001010|2\3\2\1\2\|1.26|\p-76 a p-158\0\1.26\0\0\|
+~M|2_3_2_1\001013|2\3\2\1\3\|8.4|\p-76 a p-158\0\8.4\0\0\|
+~M|2_3_2_1\001016|2\3\2\1\4\|8.4|\p-76 a p-158\0\8.4\0\0\|
+~M|2_3_2_1\001019|2\3\2\1\5\|2.88|\p-76 a p-158\0\2.88\0\0\|
+~M|2_3_2_1\01120V|2\3\2\1\6\|10.8|\p-76 a p-158\0\10.8\0\0\|
+~M|2_3_2_1\02002V|2\3\2\1\7\|1.26|\p-76 a p-158\0\1.26\0\0\|
+~M|2_3_2_1\003017|2\3\2\1\8\|2|\p-76 a p-158\0\2\0\0\|
+~M|2_3_2_1\003026|2\3\2\1\9\|2|\p-76 a p-158\0\2\0\0\|
+~M|2_3_2_1\003031|2\3\2\1\10\|2|\p-76 a p-158\0\2\0\0\|
+~M|2_3_2_1\003045|2\3\2\1\11\|2|\p-76 a p-158\0\2\0\0\|
+~M|2_3_2_1\003055|2\3\2\1\12\|2|\p-76 a p-158\0\2\0\0\|
+~M|2_3_2_1\003092|2\3\2\1\13\|2|\p-76 a p-158\0\2\0\0\|
+~M|2_3_2_1\003103|2\3\2\1\14\|2|\p-76 a p-158\0\2\0\0\|
+~M|2_3_2_1\003111|2\3\2\1\15\|2|\p-76 a p-158\0\2\0\0\|
+~M|2_3_2_1\003113|2\3\2\1\16\|12|\p-76 a p-158\0\12\0\0\|
+~M|2_3_2_1\003114|2\3\2\1\17\|2|\p-76 a p-158\0\2\0\0\|
+~C|2_3_2_2||EN VENTOSAS.|1773778|040400|0|
+~Y|2_3_2_2|003017\1\2\003021\1\2\003035\1\2\003092\1\2\003111\1\4\|
+~M|2_3_2_2\003017|2\3\2\2\1\|2|\p-76 a p-158\0\2\0\0\|
+~M|2_3_2_2\003021|2\3\2\2\2\|2|\p-76 a p-158\0\2\0\0\|
+~M|2_3_2_2\003035|2\3\2\2\3\|2|\p-76 a p-158\0\2\0\0\|
+~M|2_3_2_2\003092|2\3\2\2\4\|2|\p-76 a p-158\0\2\0\0\|
+~M|2_3_2_2\003111|2\3\2\2\5\|4|\p-76 a p-158\0\4\0\0\|
+~C|2_3_3||ARQUETAS.|1284681.67|040400|0|
+~D|2_3_3|2_3_3_1\1\1\2_3_3_2\1\1\|
+~C|2_3_3_1||DE DESAGöE SIN CASETA.|712110.7|040400|0|
+~Y|2_3_3_1|001004\1\52.9\001013\1\18.56\02003V\1\15.19\002005\1\78.72\002006\1\3.84\002009\1\18\02015V\1\660.27\005002\1\2\|
+~M|2_3_3_1\001004|2\3\3\1\1\|52.9|\p-76 a p-158\0\52.9\0\0\|
+~M|2_3_3_1\001013|2\3\3\1\2\|18.56|\p-76 a p-158\0\18.56\0\0\|
+~M|2_3_3_1\02003V|2\3\3\1\3\|15.19|\p-76 a p-158\0\15.19\0\0\|
+~M|2_3_3_1\002005|2\3\3\1\4\|78.72|\p-76 a p-158\0\78.72\0\0\|
+~M|2_3_3_1\002006|2\3\3\1\5\|3.84|\p-76 a p-158\0\3.84\0\0\|
+~M|2_3_3_1\002009|2\3\3\1\6\|18|\p-76 a p-158\0\18\0\0\|
+~M|2_3_3_1\02015V|2\3\3\1\7\|660.27|\p-76 a p-158\0\660.27\0\0\|
+~M|2_3_3_1\005002|2\3\3\1\8\|2|\p-76 a p-158\0\2\0\0\|
+~C|2_3_3_2||DE VENTOSA SIN CASETA.|572570.97|040400|0|
+~Y|2_3_3_2|001004\1\39.93\001013\1\17.36\02003V\1\10.16\002005\1\57.48\002006\1\3.6\002009\1\14\02015V\1\819.74\005002\1\2\|
+~M|2_3_3_2\001004|2\3\3\2\1\|39.93|\p-76 a p-158\0\39.93\0\0\|
+~M|2_3_3_2\001013|2\3\3\2\2\|17.36|\p-76 a p-158\0\17.36\0\0\|
+~M|2_3_3_2\02003V|2\3\3\2\3\|10.16|\p-76 a p-158\0\10.16\0\0\|
+~M|2_3_3_2\002005|2\3\3\2\4\|57.48|\p-76 a p-158\0\57.48\0\0\|
+~M|2_3_3_2\002006|2\3\3\2\5\|3.6|\p-76 a p-158\0\3.6\0\0\|
+~M|2_3_3_2\002009|2\3\3\2\6\|14|\p-76 a p-158\0\14\0\0\|
+~M|2_3_3_2\02015V|2\3\3\2\7\|819.74|\p-76 a p-158\0\819.74\0\0\|
+~M|2_3_3_2\005002|2\3\3\2\8\|2|\p-76 a p-158\0\2\0\0\|
+~C|2_4||PARTIDA ALZADA A JUSTIFICAR PARA REPOSICIONES.|9500000|040400|0|
+~Y|2_4|pa001\1\1\|
+~M|2_4\pa001|2\4\1\|1|\p-76 a p-158\0\1\0\0\|
+~C|3#||CONDUCCION DESDE DEPOSITO CEMENTERIO A CIUDAD.|38724007.70549|040400|0|
+~Y|3|001003\1\3713.28\001010\1\46.2726\001013\1\323.874\001016\1\323.874\001019\1\365.988\01120V\1\1194.69\01220V\1\1790.38\02002V\1\47.8116\003002\1\1273\003121\1\1\003127\1\1\|
+~M|3\001003|3\1\|3713.28|\p-1 a p-32\1\1102\1.1\1.952\\p-32 a p-38\1\171\1.1\1.985\\taludes 1/5\0\0\0\0\\p-1 a p-32\1\1102\0.39\1.952\\p-32 a p-38\1\171\0.397\1.985\|
+~M|3\001010|3\2\|46.2726|\p-32 a p-38\1\171\1.1\0.15\\taludes 1/5\2\171\0.352\0.15\|
+~M|3\001013|3\3\|323.874|\p-32 a p-38\1\171\1.1\0\\taludes 1/5\2\171\0.397\0\|
+~M|3\001016|3\4\|323.874|\Igual medici¢n\0\0\0\0\\que rotura\1\323.874\0\0\|
+~M|3\001019|3\5\|365.988|\Bajo tuber°a\1\1273\1.1\0.25\\taludes\1\1273\0.05\0.25\|
+~M|3\01120V|3\6\|1194.69|\p-1 a p-32\1\1102\1.1\1.09\\p-32 a p-38\1\171\1.1\1.09\\taludes 1/5\1\1273\0.218\1.09\\A deducir:\0\0\0\0\\cama\-1\365.988\0\0\\tuber°a\-1\268.138\0\0\|
+~M|3\01220V|3\7\|1790.38|\Excavaci¢n\1\3713.28\0\0\\A deducir:\0\0\0\0\\cama\-1\365.988\0\0\\tuber°a\-1\268.138\0\0\\rell. selecc.\-1\1194.69\0\0\\ZN\-1\46.273\0\0\\HM-15\-1\47.812\0\0\|
+~M|3\02002V|3\8\|47.8116|\p-32 a p-38\1\171\1.1\0.15\\taludes 1/5\2\171\0.382\0.15\|
+~M|3\003002|3\9\|1273|\taludes 1/5\0\1273\0\0\|
+~M|3\003121|3\10\|1|\taludes 1/5\0\1\0\0\|
+~M|3\003127|3\11\|1|\taludes 1/5\0\1\0\0\|
+~C|4#||DEPOSITO DE CABECERA.|89672278.9155|040400|0|
+~D|4|4_1\1\1\4_2\1\1\4_3\1\1\4_4\1\1\4_5\1\1\4_6\1\1\|
+~C|4_1||URBANIZACION.|3706070.425|040400|0|
+~Y|4_1|001001\1\298.125\001002\1\5721.67\001008\1\149.062\001009\1\67\001017\1\297.5\001022\1\19.3375\001031\1\32\02001V\1\3.4\02002V\1\7.5\004004\1\42\004008\1\34\005012\1\4\005019\1\2.5\005020\1\25\005021\1\5\005035\1\215\005047\1\1\006004\1\36\006005\1\16\006007\1\2\006008\1\2\006009\1\2\006010\1\2\006011\1\2\006012\1\2\006013\1\1\006014\1\1\006020\1\1\006024\1\1\|
+~M|4_1\001001|4\1\1\|298.125|\Zona fachada\0\0\0\0\\principal\1\20\7.5\0\\\1\19.75\7.5\0\|
+~M|4_1\001002|4\1\2\|5721.67|\Dep¢sito\1\59.5\34\2.45\\taludes\1\59.5\2.45\2.45\\\2\34\2.45\2.45\|
+~M|4_1\001008|4\1\3\|149.062|\Explanada junto\0\0\0\0\\caseta\1\20\7.5\0.5\\\1\19.75\7.5\0.5\|
+~M|4_1\001009|4\1\4\|67|\Aparcamientos\4\5\2.5\0.15\\Explanada \1\59.5\5\0.2\|
+~M|4_1\001017|4\1\5\|297.5|\Vial frontal\1\59.5\5\0\|
+~M|4_1\001022|4\1\6\|19.3375|\Vial frontal\1.3\297.5\0.05\0\|
+~M|4_1\001031|4\1\7\|32|\Vial frontal\0\32\0\0\|
+~M|4_1\02001V|4\1\8\|3.4|\Aceras aparca-\0\0\0\0\\miento\2\7\1\0.1\\\4\5\1\0.1\|
+~M|4_1\02002V|4\1\9\|7.5|\Aparcamientos\4\5\2.5\0.15\|
+~M|4_1\004004|4\1\10\|42|\Delimitaci¢n de\0\0\0\0\\acera\6\5\0\0\\\2\6\0\0\|
+~M|4_1\004008|4\1\11\|34|\Aceras\2\7\1\0\\\4\5\1\0\|
+~M|4_1\005012|4\1\12\|4|\\0\4\0\0\|
+~M|4_1\005019|4\1\13\|2.5|\\0\2.5\0\0\|
+~M|4_1\005020|4\1\14\|25|\\0\25\0\0\|
+~M|4_1\005021|4\1\15\|5|\\0\5\0\0\|
+~M|4_1\005035|4\1\16\|215|\Perimetral\1\215\0\0\|
+~M|4_1\005047|4\1\17\|1|\Perimetral\0\1\0\0\|
+~M|4_1\006004|4\1\18\|36|\Perimetral\0\36\0\0\|
+~M|4_1\006005|4\1\19\|16|\Perimetral\0\16\0\0\|
+~M|4_1\006007|4\1\20\|2|\Perimetral\0\2\0\0\|
+~M|4_1\006008|4\1\21\|2|\Perimetral\0\2\0\0\|
+~M|4_1\006009|4\1\22\|2|\Perimetral\0\2\0\0\|
+~M|4_1\006010|4\1\23\|2|\Perimetral\0\2\0\0\|
+~M|4_1\006011|4\1\24\|2|\Perimetral\0\2\0\0\|
+~M|4_1\006012|4\1\25\|2|\Perimetral\0\2\0\0\|
+~M|4_1\006013|4\1\26\|1|\Perimetral\0\1\0\0\|
+~M|4_1\006014|4\1\27\|1|\Perimetral\0\1\0\0\|
+~M|4_1\006020|4\1\28\|1|\Perimetral\0\1\0\0\|
+~M|4_1\006024|4\1\29\|1|\Perimetral\0\1\0\0\|
+~C|4_2||DEPOSITO.|69392159.4635|040400|0|
+~Y|4_2|001001\1\1785\001002\1\5721.67\01014V\1\535.6\001029\1\65.025\02001V\1\133.9\02004V\1\1343.07\02024V\1\82.3005\002005\1\2328.94\002006\1\263.16\002009\1\38\002010\1\144.55\002012\1\144.55\02014V\1\1339\02015V\1\97962.6\02025V\1\66.95\02026V\1\43.2\02027V\1\103.5\02028V\1\9\02029V\1\4\02030V\1\53.9\02031V\1\154\02035V\1\26.78\005014\1\2678\005046\1\2\005048\1\1.08\|
+~M|4_2\001001|4\2\1\|1785|\Se considera\0\0\0\0\\un sobreancho\0\0\0\0\\de 4 m en 3\0\0\0\0\\de los lados\1\59.5\30\0\|
+~M|4_2\001002|4\2\2\|5721.67|\Emplazamiento\1\59.5\34\2.45\\taludes desmont\1\59.5\2.45\2.45\\\2\34\2.45\2.45\|
+~M|4_2\01014V|4\2\3\|535.6|\Bajo soleras\0\0\0\0\\dep¢sito\1\51.5\26\0.4\|
+~M|4_2\001029|4\2\4\|65.025|\En cubierta\2\25.5\25.5\0.05\|
+~M|4_2\02001V|4\2\5\|133.9|\Bajo solera\1\51.5\26\0.1\|
+~M|4_2\02004V|4\2\6\|1343.07|\Solera\1\51.5\26\0.6\\Muros\2\51.5\0.5\6.15\\\2\26\0.5\6.15\\\1\26\0.5\4.85\|
+~M|4_2\02024V|4\2\7\|82.3005|\Dep¢sito\0\0\0\0\\pilares\18\0.5\0.5\5.45\\\18\0.65\0.5\0.35\\vigas\24\6.45\0.5\0.6\\\24\6.45\0.3\0.2\|
+~M|4_2\002005|4\2\8\|2328.94|\Muros exteriore\2\26\0\6.15\\\2\25\0\6.15\\\2\51.5\0\6.15\\\4\25\0\6.15\\Muro central\2\25\0\4.85\\Pilares\18\0\2\5.45\\\18\0\2.3\0.35\|
+~M|4_2\002006|4\2\9\|263.16|\Vigas\24\6.45\0.5\0\\\48\6.45\0\0.6\|
+~M|4_2\002009|4\2\10\|38|\\0\38\0\0\|
+~M|4_2\002010|4\2\11\|144.55|\En solera\2\25\0\0\\\1\51.5\0\0\\En muros\6\6.15\0\0\\\1\6.15\0\0\|
+~M|4_2\002012|4\2\12\|144.55|\Igual medici¢n\0\0\0\0\\juntas\1\144.55\0\0\|
+~M|4_2\02014V|4\2\13\|1339|\Cubierta\1\51.5\26\0\|
+~M|4_2\02015V|4\2\14\|97962.6|\Se mide seg£n\0\0\0\0\\las cuant°as\0\0\0\0\\que se indican\0\0\0\0\\Solera\1\803.4\65\0\\Muros\1\539.675\70\0\\Pilares\1\26.573\90\0\\Vigas\1\55.728\100\0\|
+~M|4_2\02025V|4\2\15\|66.95|\Formaci¢n de\0\0\0\0\\pendientes en\0\0\0\0\\cubierta\1\51.5\26\0.05\|
+~M|4_2\02026V|4\2\16\|43.2|\Apoyo vigas\24\2\3\0.3\|
+~M|4_2\02027V|4\2\17\|103.5|\Drenaje cimen-\0\0\0\0\\taci¢n\1\51.5\0\0\\\2\26\0\0\|
+~M|4_2\02028V|4\2\18\|9|\En acceso a\0\0\0\0\\cubierta\1\9\0\0\|
+~M|4_2\02029V|4\2\19\|4|\En fachadas\0\0\0\0\\laterales\4\0\0\0\|
+~M|4_2\02030V|4\2\20\|53.9|\En murete de \0\0\0\0\\cubierta\2\51.5\0\0.35\\\2\25.5\0\0.35\|
+~M|4_2\02031V|4\2\21\|154|\En coronaci¢n\0\0\0\0\\murete de\0\0\0\0\\cubierta\2\51.5\0\0\\\2\25.5\0\0\|
+~M|4_2\02035V|4\2\22\|26.78|\En protecci¢n\0\0\0\0\\de la impermea-\0\0\0\0\\bilizaci¢n\1\51.5\26\0.02\|
+~M|4_2\005014|4\2\23\|2678|\Doble l†mina\0\0\0\0\\en cubierta\2\51.5\26\0\|
+~M|4_2\005046|4\2\24\|2|\En cada mitad\0\0\0\0\\del dep¢sito\2\0\0\0\|
+~M|4_2\005048|4\2\25\|1.08|\del dep¢sito\0\1.08\0\0\|
+~C|4_3||CAMARA DE LLAVES.|3400886.857|040400|0|
+~Y|4_3|001004\1\164.835\01014V\1\30.496\001029\1\2.9\02001V\1\7.624\02004V\1\57.592\002005\1\161.68\02015V\1\3201.08\002014\1\58\02025V\1\2.9\02029V\1\1\02030V\1\7.77\02031V\1\22.2\02032V\1\7.2\02033V\1\4.2\02035V\1\1.16\004012\1\58\004015\1\3.52\005014\1\116\005045\1\1\005046\1\1\|
+~M|4_3\001004|4\3\1\|164.835|\\1\6.6\11.1\2.25\|
+~M|4_3\01014V|4\3\2\|30.496|\Bajo solera\2\6.1\0.8\0.4\\\1\10.6\0.8\0.4\\\1\10\5.8\0.4\|
+~M|4_3\001029|4\3\3\|2.9|\En cubierta\1\10\5.8\0.05\|
+~M|4_3\02001V|4\3\4\|7.624|\Sobre grava\2\6.1\0.8\0.1\\\1\10.6\0.8\0.1\\\1\10\5.8\0.1\|
+~M|4_3\02004V|4\3\5\|57.592|\Cimentaci¢n\2\6.1\0.8\0.6\\\1\10.6\0.8\0.6\\Solera\1\10\5.8\0.25\\Muros\2\6.1\0.3\4.7\\\1\10.6\0.3\4.7\|
+~M|4_3\002005|4\3\6\|161.68|\Muros\2\6.1\0\4.7\\\1\10.6\0\4.7\\\2\5.8\0\4.7\|
+~M|4_3\02015V|4\3\7\|3201.08|\Seg£n cuant°as\0\0\0\0\\que se indican\0\0\0\0\\Cimentaci¢n\1\10.944\50\0\\Solera\1\14.5\50\0\\Muros\1\32.148\60\0\|
+~M|4_3\002014|4\3\8\|58|\\1\10\5.8\0\|
+~M|4_3\02025V|4\3\9\|2.9|\Formaci¢n de\0\0\0\0\\pendientes\1\10\5.8\0.05\|
+~M|4_3\02029V|4\3\10\|1|\Drenaje\1\0\0\0\|
+~M|4_3\02030V|4\3\11\|7.77|\Perimetral en\0\0\0\0\\cubierta\1\10.6\0\0.35\\\2\5.8\0\0.35\|
+~M|4_3\02031V|4\3\12\|22.2|\Cubierta\1\10.6\0\0\\\2\5.8\0\0\|
+~M|4_3\02032V|4\3\13\|7.2|\\3\2\0\1.2\|
+~M|4_3\02033V|4\3\14\|4.2|\En ventanas\2\2.1\0\0\|
+~M|4_3\02035V|4\3\15\|1.16|\En protecci¢n\0\0\0\0\\de la imper-\0\0\0\0\\meabilizaci¢n\1\10\5.8\0.02\|
+~M|4_3\004012|4\3\16\|58|\Sobre foejado\1\10\5.8\0\|
+~M|4_3\004015|4\3\17\|3.52|\Sobre foejado\0\3.52\0\0\|
+~M|4_3\005014|4\3\18\|116|\Doble en\0\0\0\0\\cubierta\2\10\5.8\0\|
+~M|4_3\005045|4\3\19\|1|\cubierta\0\1\0\0\|
+~M|4_3\005046|4\3\20\|1|\cubierta\0\1\0\0\|
+~C|4_4||TUBERIAS, VALVULAS Y ACCESORIOS.|9314851.36|040400|0|
+~D|4_4|4_4_1\1\1\4_4_2\1\1\4_4_3\1\1\4_4_4\1\1\4_4_5\1\1\|
+~C|4_4_1||TUBERIAS, VALVULAS Y ACCESORIOS.|43409.36|040400|0|
+~Y|4_4_1|001003\1\22.68\001019\1\6.52\001020\1\14.18\|
+~M|4_4_1\001003|4\4\1\1\|22.68|\cubierta\0\22.68\0\0\|
+~M|4_4_1\001019|4\4\1\2\|6.52|\cubierta\0\6.52\0\0\|
+~M|4_4_1\001020|4\4\1\3\|14.18|\cubierta\0\14.18\0\0\|
+~C|4_4_2||ENTRADA A DEPOSITO.|3187182|040400|0|
+~Y|4_4_2|003008\1\1\003012\1\1\003014\1\1\003017\1\1\003023\1\2\003025\1\3\003030\1\1\003094\1\1\003095\1\1\003096\1\1\003116\1\2\003133\1\2\|
+~M|4_4_2\003008|4\4\2\1\|1|\cubierta\0\1\0\0\|
+~M|4_4_2\003012|4\4\2\2\|1|\cubierta\0\1\0\0\|
+~M|4_4_2\003014|4\4\2\3\|1|\cubierta\0\1\0\0\|
+~M|4_4_2\003017|4\4\2\4\|1|\cubierta\0\1\0\0\|
+~M|4_4_2\003023|4\4\2\5\|2|\cubierta\0\2\0\0\|
+~M|4_4_2\003025|4\4\2\6\|3|\cubierta\0\3\0\0\|
+~M|4_4_2\003030|4\4\2\7\|1|\cubierta\0\1\0\0\|
+~M|4_4_2\003094|4\4\2\8\|1|\cubierta\0\1\0\0\|
+~M|4_4_2\003095|4\4\2\9\|1|\cubierta\0\1\0\0\|
+~M|4_4_2\003096|4\4\2\10\|1|\cubierta\0\1\0\0\|
+~M|4_4_2\003116|4\4\2\11\|2|\cubierta\0\2\0\0\|
+~M|4_4_2\003133|4\4\2\12\|2|\cubierta\0\2\0\0\|
+~C|4_4_3||SALIDA DE DEPOSITO.|2677848|040400|0|
+~Y|4_4_3|003012\1\2\003014\1\1\003023\1\2\003024\1\2\003025\1\7\003030\1\1\003092\1\1\003094\1\1\003096\1\2\003133\1\1\|
+~M|4_4_3\003012|4\4\3\1\|2|\cubierta\0\2\0\0\|
+~M|4_4_3\003014|4\4\3\2\|1|\cubierta\0\1\0\0\|
+~M|4_4_3\003023|4\4\3\3\|2|\cubierta\0\2\0\0\|
+~M|4_4_3\003024|4\4\3\4\|2|\cubierta\0\2\0\0\|
+~M|4_4_3\003025|4\4\3\5\|7|\cubierta\0\7\0\0\|
+~M|4_4_3\003030|4\4\3\6\|1|\cubierta\0\1\0\0\|
+~M|4_4_3\003092|4\4\3\7\|1|\cubierta\0\1\0\0\|
+~M|4_4_3\003094|4\4\3\8\|1|\cubierta\0\1\0\0\|
+~M|4_4_3\003096|4\4\3\9\|2|\cubierta\0\2\0\0\|
+~M|4_4_3\003133|4\4\3\10\|1|\cubierta\0\1\0\0\|
+~C|4_4_4||DESAGöE DE FONDO.|2827046|040400|0|
+~Y|4_4_4|003012\1\2\003023\1\2\003024\1\2\003025\1\7\003096\1\2\003097\1\2\003129\1\2\003131\1\4\003134\1\1\|
+~M|4_4_4\003012|4\4\4\1\|2|\cubierta\0\2\0\0\|
+~M|4_4_4\003023|4\4\4\2\|2|\cubierta\0\2\0\0\|
+~M|4_4_4\003024|4\4\4\3\|2|\cubierta\0\2\0\0\|
+~M|4_4_4\003025|4\4\4\4\|7|\cubierta\0\7\0\0\|
+~M|4_4_4\003096|4\4\4\5\|2|\cubierta\0\2\0\0\|
+~M|4_4_4\003097|4\4\4\6\|2|\cubierta\0\2\0\0\|
+~M|4_4_4\003129|4\4\4\7\|2|\cubierta\0\2\0\0\|
+~M|4_4_4\003131|4\4\4\8\|4|\cubierta\0\4\0\0\|
+~M|4_4_4\003134|4\4\4\9\|1|\cubierta\0\1\0\0\|
+~C|4_4_5||ALIVIADERO.|579366|040400|0|
+~Y|4_4_5|003025\1\3\003132\1\1\003134\1\2\|
+~M|4_4_5\003025|4\4\5\1\|3|\cubierta\0\3\0\0\|
+~M|4_4_5\003132|4\4\5\2\|1|\cubierta\0\1\0\0\|
+~M|4_4_5\003134|4\4\5\3\|2|\cubierta\0\2\0\0\|
+~C|4_5||COLECTOR, ALIVIADERO DEL DEPOSITO.|2076061.01|040400|0|
+~D|4_5|4_5_1\1\1\4_5_2\1\1\|
+~C|4_5_1||COLECTOR, ALIVIADERO DEL DEPOSITO.|1409201.28|040400|0|
+~Y|4_5_1|001003\1\250.66\001009\1\1.44\001013\1\7.2\001016\1\7.2\001019\1\18.11\001020\1\215.84\02002V\1\5\003067\1\186.5\|
+~M|4_5_1\001003|4\5\1\1\|250.66|\cubierta\0\250.66\0\0\|
+~M|4_5_1\001009|4\5\1\2\|1.44|\cubierta\0\1.44\0\0\|
+~M|4_5_1\001013|4\5\1\3\|7.2|\cubierta\0\7.2\0\0\|
+~M|4_5_1\001016|4\5\1\4\|7.2|\cubierta\0\7.2\0\0\|
+~M|4_5_1\001019|4\5\1\5\|18.11|\cubierta\0\18.11\0\0\|
+~M|4_5_1\001020|4\5\1\6\|215.84|\cubierta\0\215.84\0\0\|
+~M|4_5_1\02002V|4\5\1\7\|5|\cubierta\0\5\0\0\|
+~M|4_5_1\003067|4\5\1\8\|186.5|\cubierta\0\186.5\0\0\|
+~C|4_5_2||POZO REGISTRO ALTURA MEDIA 1.92M|666859.73|040400|0|
+~Y|4_5_2|001004\1\60.81\002002\1\9.75\002005\1\99.5\002009\1\35\004003\1\2.3\005009\1\7\|
+~M|4_5_2\001004|4\5\2\1\|60.81|\cubierta\0\60.81\0\0\|
+~M|4_5_2\002002|4\5\2\2\|9.75|\cubierta\0\9.75\0\0\|
+~M|4_5_2\002005|4\5\2\3\|99.5|\cubierta\0\99.5\0\0\|
+~M|4_5_2\002009|4\5\2\4\|35|\cubierta\0\35\0\0\|
+~M|4_5_2\004003|4\5\2\5\|2.3|\cubierta\0\2.3\0\0\|
+~M|4_5_2\005009|4\5\2\6\|7|\cubierta\0\7\0\0\|
+~C|4_6||CAMINO DE ACCESO.|1782249.8|040400|0|
+~Y|4_6|001001\1\1176\001002\1\40.65\001008\1\1434.4\001009\1\171.36\001017\1\856.8\001022\1\54.6\|
+~M|4_6\001001|4\6\1\|1176|\cubierta\0\1176\0\0\|
+~M|4_6\001002|4\6\2\|40.65|\cubierta\0\40.65\0\0\|
+~M|4_6\001008|4\6\3\|1434.4|\cubierta\0\1434.4\0\0\|
+~M|4_6\001009|4\6\4\|171.36|\cubierta\0\171.36\0\0\|
+~M|4_6\001017|4\6\5\|856.8|\cubierta\0\856.8\0\0\|
+~M|4_6\001022|4\6\6\|54.6|\cubierta\0\54.6\0\0\|
+~C|5#||SISTEMA DE AUTOMATIZACION.|10347599|040400|0|
+~Y|5|003029\1\4\003030\1\1\005024\1\7\005025\1\3\005026\1\1\005027\1\1\005028\1\3\005029\1\1\005030\1\7\005031\1\3\005032\1\6\005033\1\3\005040\1\1\005041\1\1\005042\1\1\005043\1\1\006023\1\1\007009\1\1\|
+~M|5\003029|5\1\|4|\cubierta\0\4\0\0\|
+~M|5\003030|5\2\|1|\cubierta\0\1\0\0\|
+~M|5\005024|5\3\|7|\cubierta\0\7\0\0\|
+~M|5\005025|5\4\|3|\cubierta\0\3\0\0\|
+~M|5\005026|5\5\|1|\cubierta\0\1\0\0\|
+~M|5\005027|5\6\|1|\cubierta\0\1\0\0\|
+~M|5\005028|5\7\|3|\cubierta\0\3\0\0\|
+~M|5\005029|5\8\|1|\cubierta\0\1\0\0\|
+~M|5\005030|5\9\|7|\cubierta\0\7\0\0\|
+~M|5\005031|5\10\|3|\cubierta\0\3\0\0\|
+~M|5\005032|5\11\|6|\cubierta\0\6\0\0\|
+~M|5\005033|5\12\|3|\cubierta\0\3\0\0\|
+~M|5\005040|5\13\|1|\cubierta\0\1\0\0\|
+~M|5\005041|5\14\|1|\cubierta\0\1\0\0\|
+~M|5\005042|5\15\|1|\cubierta\0\1\0\0\|
+~M|5\005043|5\16\|1|\cubierta\0\1\0\0\|
+~M|5\006023|5\17\|1|\cubierta\0\1\0\0\|
+~M|5\007009|5\18\|1|\cubierta\0\1\0\0\|
+~C|6#||ESTACION DE TRATAMIENTO.|17057910.34|040400|0|
+~D|6|6_1\1\1\6_2\1\1\|
+~C|6_1||TOMA DEL RIO|1078622.74|040400|0|
+~Y|6_1|001004\1\18.27\001016\1\6.3\001020\1\6.8\001023\1\6.3\001030\1\4.88\02002V\1\3.94\02003V\1\7.97\002005\1\39.14\002009\1\8\02015V\1\443.4\002016\1\1\003074\1\4.2\005001\1\1.68\005010\1\1\005035\1\3.75\|
+~M|6_1\001004|6\1\1\|18.27|\cubierta\0\18.27\0\0\|
+~M|6_1\001016|6\1\2\|6.3|\cubierta\0\6.3\0\0\|
+~M|6_1\001020|6\1\3\|6.8|\cubierta\0\6.8\0\0\|
+~M|6_1\001023|6\1\4\|6.3|\cubierta\0\6.3\0\0\|
+~M|6_1\001030|6\1\5\|4.88|\cubierta\0\4.88\0\0\|
+~M|6_1\02002V|6\1\6\|3.94|\cubierta\0\3.94\0\0\|
+~M|6_1\02003V|6\1\7\|7.97|\cubierta\0\7.97\0\0\|
+~M|6_1\002005|6\1\8\|39.14|\cubierta\0\39.14\0\0\|
+~M|6_1\002009|6\1\9\|8|\cubierta\0\8\0\0\|
+~M|6_1\02015V|6\1\10\|443.4|\cubierta\0\443.4\0\0\|
+~M|6_1\002016|6\1\11\|1|\cubierta\0\1\0\0\|
+~M|6_1\003074|6\1\12\|4.2|\cubierta\0\4.2\0\0\|
+~M|6_1\005001|6\1\13\|1.68|\cubierta\0\1.68\0\0\|
+~M|6_1\005010|6\1\14\|1|\cubierta\0\1\0\0\|
+~M|6_1\005035|6\1\15\|3.75|\cubierta\0\3.75\0\0\|
+~C|6_2||ACCIONAMIENTO.|15979287.6|040400|0|
+~Y|6_2|003012\1\20\003077\1\5\003078\1\5\003079\1\5\003080\1\10\003081\1\1\003082\1\1\003083\1\1\003084\1\1\003096\1\20\005015\1\345.4\005016\1\345.4\007001\1\1\007002\1\1\007003\1\1\007004\1\1\007005\1\1\007006\1\1\007007\1\1\|
+~M|6_2\003012|6\2\1\|20|\cubierta\0\20\0\0\|
+~M|6_2\003077|6\2\2\|5|\cubierta\0\5\0\0\|
+~M|6_2\003078|6\2\3\|5|\cubierta\0\5\0\0\|
+~M|6_2\003079|6\2\4\|5|\cubierta\0\5\0\0\|
+~M|6_2\003080|6\2\5\|10|\cubierta\0\10\0\0\|
+~M|6_2\003081|6\2\6\|1|\cubierta\0\1\0\0\|
+~M|6_2\003082|6\2\7\|1|\cubierta\0\1\0\0\|
+~M|6_2\003083|6\2\8\|1|\cubierta\0\1\0\0\|
+~M|6_2\003084|6\2\9\|1|\cubierta\0\1\0\0\|
+~M|6_2\003096|6\2\10\|20|\cubierta\0\20\0\0\|
+~M|6_2\005015|6\2\11\|345.4|\cubierta\0\345.4\0\0\|
+~M|6_2\005016|6\2\12\|345.4|\cubierta\0\345.4\0\0\|
+~M|6_2\007001|6\2\13\|1|\cubierta\0\1\0\0\|
+~M|6_2\007002|6\2\14\|1|\cubierta\0\1\0\0\|
+~M|6_2\007003|6\2\15\|1|\cubierta\0\1\0\0\|
+~M|6_2\007004|6\2\16\|1|\cubierta\0\1\0\0\|
+~M|6_2\007005|6\2\17\|1|\cubierta\0\1\0\0\|
+~M|6_2\007006|6\2\18\|1|\cubierta\0\1\0\0\|
+~M|6_2\007007|6\2\19\|1|\cubierta\0\1\0\0\|

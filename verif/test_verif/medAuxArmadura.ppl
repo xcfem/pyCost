@@ -1,0 +1,28 @@
+\med_uobra
+  {
+    \ref{"02.02.12"}
+    \lineas_medicion
+      {
+        \medicion_vol { \comentario{"Pos. C/1, D=16, L=2.89"} \unidades{92} \largo{2.89} \alto{1.58}}
+        \medicion_vol { \comentario{"Pos. C/2, D=20, L=6.28"} \unidades{92} \largo{6.28} \alto{2.47}}
+        \medicion_vol { \comentario{"Pos. C/3, D=12, L=3"} \unidades{92} \largo{3} \alto{0.89}}
+        \medicion_vol { \comentario{"Pos. C/4, D=12, L=18.43"} \unidades{25} \largo{18.43} \alto{0.89}}
+        \medicion_vol { \comentario{"Pos. C/4, D=12, L=18.43"} \unidades{29} \largo{18.43} \alto{0.89}}
+        \medicion_vol { \comentario{"Pos. C/5, D=12, L=1.24"} \unidades{92} \largo{1.24} \alto{0.89}}
+        \medicion_vol { \comentario{"Pos. C/5, D=12, L=1.24"} \unidades{92} \largo{1.24} \alto{0.89}}
+        \medicion_vol { \comentario{"Pos. D/1, D=25, L=6.37"} \unidades{92} \largo{6.37} \alto{3.85}}
+        \medicion_vol { \comentario{"Pos. D/2, D=12, L=3"} \unidades{92} \largo{3} \alto{0.89}}
+        \medicion_vol { \comentario{"Pos. D/3, D=12, L=18.43"} \unidades{25} \largo{18.43} \alto{0.89}}
+        \medicion_vol { \comentario{"Pos. D/4, D=10, L=18.68"} \unidades{29} \largo{18.68} \alto{0.62}}
+        \medicion_vol { \comentario{"Pos. H/1, D=16, L=5.04"} \unidades{92} \largo{5.04} \alto{1.58}}
+        \medicion_vol { \comentario{"Pos. H/2, D=12, L=3.13"} \unidades{92} \largo{3.13} \alto{0.89}}
+        \medicion_vol { \comentario{"Pos. H/2, D=12, L=3.13"} \unidades{92} \largo{3.13} \alto{0.89}}
+        \medicion_vol { \comentario{"Pos. H/3, D=12, L=18.43"} \unidades{12} \largo{18.43} \alto{0.89}}
+        \medicion_vol { \comentario{"Pos. H/3, D=12, L=18.43"} \unidades{17} \largo{18.43} \alto{0.89}}
+        \medicion_vol { \comentario{"Pos. R/1, D=12, L=1.1"} \unidades{12} \largo{1.1} \alto{0.89}}
+        \medicion_vol { \comentario{"Pos. R/2, D=12, L=6.26"} \unidades{3} \largo{6.26} \alto{0.89}}
+        \medicion_vol { \comentario{"Pos. R/3, D=12, L=6.06"} \unidades{4} \largo{6.06} \alto{0.89}}
+        \medicion_vol { \comentario{"Pos. R/4, D=12, L=2.54"} \unidades{28} \largo{2.54} \alto{0.89}}
+        \medicion_vol { \comentario{"Pos. R/5, D=12, L=1.23"} \unidades{28} \largo{1.23} \alto{0.89}}
+      }
+  }

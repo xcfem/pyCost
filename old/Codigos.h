@@ -1,0 +1,147 @@
+//Codigos.h
+
+#ifndef CODIGOS_H
+#define CODIGOS_H
+
+#include "bibXCBasica/src/texto/StrTok.h"
+#include "bibXCBasica/src/texto/tab_cod.h"
+#include "RegBC3.h"
+#include <map>
+#include <set>
+
+template<class T>
+class reg_T
+{
+    std::string cod; //Codigo.
+    T datos; //chicha.
+public:
+    reg_T(const std::string &c,const T &d)
+        : cod(c),datos(d) {}
+    const std::string &Codigo(void) const
+    {
+        return cod;
+    }
+    const T &Datos(void) const
+    {
+        return datos;
+    }
+    const std::string CodigoUnidad(void) const
+    {
+        StrTok strtk(cod);
+        return *strtk.campos('\\').rbegin();
+    }
+    const std::string CodigoCapitulo(void) const
+    {
+        StrTok strtk(cod);
+        return *strtk.campos('\\').begin();
+    }
+    virtual void Escribe(std::ostream &os) const
+    {
+        os << cod << std::endl;
+        datos.Escribe(os);
+    }
+    virtual ~reg_T(void) {}
+};
+
+class Codigos: public std::map<std::string,RegBC3>
+{
+public:
+    typedef std::map<std::string,RegBC3> mapa;
+    typedef reg_T<regBC3_elemento> reg_elemento;
+    typedef reg_T<regBC3_udobra> reg_udobra;
+    typedef reg_T<regBC3_capitulo> reg_capitulo;
+    typedef reg_T<regBC3_medicion> reg_medicion;
+
+private:
+    friend class CodigosObra;
+
+    void InsertaReg(const std::string &str_reg,const int &verborrea,const int &cont_mediciones);
+    void InsertaCods(const Codigos &cods);
+
+    //Clasificación
+    inline static bool EsCapituloUObra(mapa::const_iterator &i)
+    {
+        if(EsMedicion(i)) //Las mediciones llevan el código del capítulo al que pertenecen.
+            return false;
+        else
+            return es_codigo_capitulo_u_obra((*i).first);
+    }
+    inline static bool EsCapitulo(mapa::const_iterator &i)
+    {
+        if(EsCapituloUObra(i))
+            return !EsObra(i);
+        else
+            return false;
+    }
+    inline static bool EsObra(mapa::const_iterator &i)
+    {
+        return es_codigo_obra((*i).first);
+    }
+    inline static bool EsElemento(mapa::const_iterator &i)
+    {
+        return ((*i).second.EsElemento());
+    }
+    static bool EsMedicion(mapa::const_iterator &i);
+    inline static bool EsDescompuesto(mapa::const_iterator &i)
+    {
+        if(EsMedicion(i)) return false;
+        if(EsElemento(i)) return false;
+        if(EsCapituloUObra(i)) return false;
+        return true;
+    }
+    static TipoConcepto GetTipoConcepto(mapa::const_iterator &i);
+    static std::string StrTipoConcepto(mapa::const_iterator &i);
+    Codigos GetObra(void) const;
+    Codigos GetCapitulos(void) const;
+    Codigos GetElementos(void) const;
+    Codigos GetMediciones(void) const;
+    Codigos GetDescompuestos(void) const;
+
+
+//     Codigos GetCapsPpales(const Codigos &obra) const
+//       //Devuelve los subcapítulos de la obra.
+//       {
+//         Codigos retval(GetSubCaps((*obra.begin()).second));
+//         return retval;
+//       }
+    Codigos GetSubCaps(const RegBC3 &ppal) const;
+    Codigos GetSubCapitulos(const Codigos &cods) const;
+//     Codigos GetSubCapitulos(const std::string &s) const
+//       {
+//         Codigos retval;
+//         if(s.length()<1) return retval;
+//         StrTok str(s);
+//         std::string scap= str.get_token('\\');
+//         while(scap.length()>0)
+//           {
+//             str.get_token('\\'); //Ignoramos factor
+//             str.get_token('\\'); //Ignoramos cantidad
+//             mapa::const_iterator i= find(scap);
+//             if(i!=end()) retval[(*i).first]= (*i).second;
+//             scap= str.get_token('\\');
+//           }
+//         return retval;
+//       }
+    Codigos GetSubElementos(const RegBC3 &ppal,const Codigos &elementos) const;
+    Codigos GetSubDescompuestos(const RegBC3 &ppal,const Codigos &descompuestos) const;
+public:
+    Codigos &operator+=(const Codigos &cods)
+    {
+        InsertaCods(cods);
+        return (*this);
+    }
+    const_iterator BuscaCapitulo(const std::string &cod) const;
+    void Borra(const Codigos &cods);
+    Codigos GetUdsObra(const Codigos &udsobra) const;
+
+    reg_elemento GetDatosElemento(const mapa::const_iterator &i) const;
+    reg_udobra GetDatosUdObra(const mapa::const_iterator &i) const;
+    reg_capitulo GetDatosCapitulo(const mapa::const_iterator &i) const;
+    reg_medicion GetDatosMedicion(const mapa::const_iterator &i) const;
+
+    std::set<std::string> GetCodigos(void) const;
+
+    friend std::ostream &operator<<(std::ostream &os,const Codigos &cds);
+};
+
+#endif

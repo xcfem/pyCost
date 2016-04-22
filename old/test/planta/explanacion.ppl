@@ -1,0 +1,58 @@
+              \capitulo
+                 {
+                   \codigo{1}
+                   \titulo{Explanación}
+                   \fr { \factor{1} \rendimiento{1.0000000000000} }
+                   \mediciones
+                     {
+                     \med_uobra
+                       {
+                       \ref{020.001}
+                       \lineas_medicion
+                           {
+                           \medicion_vol { \comentario{} \unidades{1} \largo{9800} \ancho{0} \alto{0} }
+                           }
+                       }
+                     \med_uobra
+                       {
+                       \ref{020.002}
+                       \lineas_medicion
+                         {
+                         \medicion_vol { \comentario{} \unidades{1} \largo{6961.6} \ancho{0} \alto{0} }
+                         }
+                       }
+                     \med_uobra
+                       {
+                       \ref{020.005}
+                       \lineas_medicion
+                         {
+                         \medicion_vol { \comentario{} \unidades{1} \largo{6961.6} \ancho{0} \alto{0} }
+                         }
+                       }
+                     \med_uobra
+                       {
+                       \ref{020.009}
+                       \lineas_medicion
+                          {
+                          \medicion_vol { \comentario{} \unidades{1} \largo{4685.1} \ancho{0} \alto{0} }
+                          }
+                        }
+                     \med_uobra
+                       {
+                       \ref{020.010}
+                       \lineas_medicion
+                          {
+                          \medicion_vol { \comentario{} \unidades{1} \largo{4685.1} \ancho{0} \alto{0} }
+                          }
+                        }
+                     \med_uobra
+                       {
+                       \ref{020.011}
+                       \lineas_medicion
+                          {
+                          \medicion_vol { \comentario{} \unidades{1} \largo{6328.727} \ancho{0} \alto{0} }
+                          }
+                        }
+                     }
+                   \subcapitulos{}
+                 }

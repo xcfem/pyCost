@@ -1,0 +1,2434 @@
+  \precios
+     {
+  \elementales
+    {
+    \elemento
+      {
+        \codigo{SINDESCO}
+        \desc{Unidad sin descompuesto}
+        \ud{***}
+        \precio{1}
+        \tipo{1}
+      }
+    }\c{fin elementales}
+  \descompuestos
+    {
+\c{Demoliciones}
+    \ud_obra
+      {
+        \codigo{010.001}
+        \ud{PA}
+        \desc{Demolición de hangar.}
+        \textolargo{Demolición de hangar.}
+        \descomp
+            {
+            \componente
+               {
+                 \ref{SINDESCO}
+                 \factor{1}
+                 \rendimiento{300000.0}
+               }
+            }
+      }
+    \ud_obra
+      {
+        \codigo{010.002}
+        \ud{m2}
+        \desc{Demolición de hormigón en losas.}
+        \textolargo{Demolición de hormigón en losas.}
+        \descomp
+            {
+            \componente
+               {
+                 \ref{SINDESCO}
+                 \factor{1}
+                 \rendimiento{2200.0}
+               }
+            }
+      }
+    \ud_obra
+      {
+        \codigo{010.003}
+        \ud{ud}
+        \desc{Demolición de zapatas.}
+        \textolargo{Demolición de zapatas.}
+        \descomp
+            {
+            \componente
+               {
+                 \ref{SINDESCO}
+                 \factor{1}
+                 \rendimiento{10000.0}
+               }
+            }
+      }
+\c{Movimiento de tierras}
+    \ud_obra
+      {
+        \codigo{020.001}
+        \ud{m2}
+        \desc{Desbroce y limpieza del terreno por medios mecánicos.}
+        \textolargo{Desbroce y limpieza del terreno por medios mecánicos.}
+        \descomp
+            {
+            \componente
+               {
+                 \ref{SINDESCO}
+                 \factor{1}
+                 \rendimiento{100.0}
+               }
+            }
+      }
+    \ud_obra
+      {
+        \codigo{020.002}
+        \ud{m3}
+        \desc{Excavación a cielo abierto en terreno de consistencia media, con excavadora de 2 M3 de capacidad de cuchara, en vaciado según NTE/ADV, medido sobre perfil, sin transporte.}
+        \textolargo{Excavación a cielo abierto en terreno de consistencia media, con excavadora de 2 M3 de capacidad de cuchara, en vaciado según NTE/ADV, medido sobre perfil, sin transporte.}
+        \descomp
+            {
+            \componente
+               {
+                 \ref{SINDESCO}
+                 \factor{1}
+                 \rendimiento{400.0}
+               }
+            }
+      }
+    \ud_obra
+      {
+        \codigo{020.003}
+        \ud{m3}
+        \desc{Excavación con retroexcavadora, en terreno de consistencia media en apertura de zanjas, hasta 1,5 m de profundidad, con extracción de tierras a los bordes.}
+        \textolargo{Excavación con retroexcavadora, en terreno de consistencia media en apertura de zanjas, hasta 1,5 m de profundidad, con extracción de tierras a los bordes.}
+        \descomp
+            {
+            \componente
+               {
+                 \ref{SINDESCO}
+                 \factor{1}
+                 \rendimiento{600}
+               }
+            }
+      }
+    \ud_obra
+      {
+        \codigo{020.004}
+        \ud{m3}
+        \desc{Excavación de zanjas en cimientos y pozos en tierras, incluso carga y transporte del material sobrante a vertedero.}
+        \textolargo{Excavación de zanjas en cimientos y pozos en tierras, incluso carga y transporte del material sobrante a vertedero.}
+        \descomp
+            {
+            \componente
+               {
+                 \ref{SINDESCO}
+                 \factor{1}
+                 \rendimiento{758}
+               }
+            }
+      }
+    \ud_obra
+      {
+        \codigo{020.005}
+        \ud{m3}
+        \desc{Transporte de tierras procedentes de excavación, a vertedero a una distancia entre 5 y 10 km, con camión volquete de 8 t y con carga por medios mecánicos, i/p.p. de canon de vertido, medido sobre perfil.}
+        \textolargo{Transporte de tierras procedentes de excavación, a vertedero a una distancia entre 5 y 10 km, con camión volquete de 8 t y con carga por medios mecánicos, i/p.p. de canon de vertido, medido sobre perfil.}
+        \descomp
+            {
+            \componente
+               {
+                 \ref{SINDESCO}
+                 \factor{1}
+                 \rendimiento{450}
+               }
+            }
+      }
+    \ud_obra
+      {
+        \codigo{020.006}
+        \ud{m3}
+        \desc{Relleno, extendido y compactación de tierras, en zanjas de canalizaciones, por medios manuales, con apisonadora manual tipo rana, en tongadas de 30 cm de espesor, i/regado de las mismas, con material de la propia excavación.}
+        \textolargo{Relleno, extendido y compactación de tierras, en zanjas de canalizaciones, por medios manuales, con apisonadora manual tipo rana, en tongadas de 30 cm de espesor, i/regado de las mismas, con material de la propia excavación.}
+        \descomp
+            {
+            \componente
+               {
+                 \ref{SINDESCO}
+                 \factor{1}
+                 \rendimiento{300}
+               }
+            }
+      }
+    \ud_obra
+      {
+        \codigo{020.007}
+        \ud{m3}
+        \desc{Relleno y compactación del trasdós de muros con materiales procedentes de excavación, con bandeja vibratoria.}
+        \textolargo{Relleno y compactación del trasdós de muros con materiales procedentes de excavación, con bandeja vibratoria.}
+        \descomp
+            {
+            \componente
+               {
+                 \ref{SINDESCO}
+                 \factor{1}
+                 \rendimiento{1800}
+               }
+            }
+      }
+    \ud_obra
+      {
+        \codigo{020.008}
+        \ud{m3}
+        \desc{Relleno extendido y apisonado con tierras de préstamo a cielo abierto, por medios mecánicos, en tongadas de 30 cm., de espesor, hasta conseguir un grado de compactación del 95% del proctor normal, con aporte de tierras, incluso regado de las mismas y refino de taludes, y con p.p. de medios auxiliares.}
+        \textolargo{Relleno extendido y apisonado con tierras de préstamo a cielo abierto, por medios mecánicos, en tongadas de 30 cm., de espesor, hasta conseguir un grado de compactación del 95% del proctor normal, con aporte de tierras, incluso regado de las mismas y refino de taludes, y con p.p. de medios auxiliares.}
+        \descomp
+            {
+            \componente
+               {
+                 \ref{SINDESCO}
+                 \factor{1}
+                 \rendimiento{2000}
+               }
+            }
+      }
+    \ud_obra
+      {
+        \codigo{020.009}
+        \ud{m2}
+        \desc{Lámina de polietileno de 2 milímetros de espesor incluso colocación y anclaje.}
+        \textolargo{Lámina de polietileno de 2 milímetros de espesor incluso colocación y anclaje.}
+        \descomp
+            {
+            \componente
+               {
+                 \ref{SINDESCO}
+                 \factor{1}
+                 \rendimiento{650}
+               }
+            }
+      }
+    \ud_obra
+      {
+        \codigo{020.010}
+        \ud{m2}
+        \desc{Extendido y compactación de capa de arcilla de 10 cm de espesor.}
+        \textolargo{Extendido y compactación de capa de arcilla de 10 cm de espesor.}
+        \descomp
+            {
+            \componente
+               {
+                 \ref{SINDESCO}
+                 \factor{1}
+                 \rendimiento{220}
+               }
+            }
+      }
+    \ud_obra
+      {
+        \codigo{020.011}
+        \ud{m2}
+        \desc{Refino y compactación del terreno natural}
+        \textolargo{Refino y compactación del terreno natural.}
+        \descomp
+            {
+            \componente
+               {
+                 \ref{SINDESCO}
+                 \factor{1}
+                 \rendimiento{220}
+               }
+            }
+      }
+    \ud_obra
+      {
+        \codigo{020.012}
+        \ud{m3}
+        \desc{Arena de río (0-5 mm) en formación de cama de arena en zanjas}
+        \textolargo{Arena de río (0-5 mm) en formación de cama de arena en zanjas}
+        \descomp
+            {
+            \componente
+               {
+                 \ref{SINDESCO}
+                 \factor{1}
+                 \rendimiento{2100}
+               }
+            }
+      }
+\c{Cimentaciones}
+    \ud_obra
+      {
+        \codigo{030.001}
+        \ud{m3}
+        \desc{Hormigón en masa H-100 kp/cm2. Tmáx. árido 40 mm elaborado en obra para limpieza y nivelado de fondos de cimentación, incluso vertido por medios manuales y colocación.}
+        \textolargo{Hormigón en masa H-100 kp/cm2. Tmáx. árido 40 mm elaborado en obra para limpieza y nivelado de fondos de cimentación, incluso vertido por medios manuales y colocación.}
+        \descomp
+            {
+            \componente
+               {
+                 \ref{SINDESCO}
+                 \factor{1}
+                 \rendimiento{8000}
+               }
+            }
+      }
+    \ud_obra
+      {
+        \codigo{030.002}
+        \ud{m3}
+        \desc{Hormigón H-150 kg/cm2, Tmáx. árido 40 mm, elaborado en central en formación de pendientes y capa impermeabilizadora.}
+        \textolargo{Hormigón H-150 kg/cm2, Tmáx. árido 40 mm, elaborado en central en formación de pendientes y capa impermeabilizadora.}
+        \descomp
+            {
+            \componente
+               {
+                 \ref{SINDESCO}
+                 \factor{1}
+                 \rendimiento{9000}
+               }
+            }
+      }
+    \ud_obra
+      {
+        \codigo{030.003}
+        \ud{m3}
+        \desc{Hormigón H-250 kg/cm2 con Tmáx. árido 20 mm, elaborado en central para relleno de zanjas, incluso armadura AEH-500S, encofrado y desencofrado, vertido por medio de camión bomba, vibrado y colocado.}
+        \textolargo{Hormigón H-250 kg/cm2 con Tmáx. árido 20 mm, elaborado en central para relleno de zanjas, incluso armadura AEH-500S, encofrado y desencofrado, vertido por medio de camión bomba, vibrado y colocado.}
+        \descomp
+            {
+            \componente
+               {
+                 \ref{SINDESCO}
+                 \factor{1}
+                 \rendimiento{16000}
+               }
+            }
+      }
+    \ud_obra
+      {
+        \codigo{030.003.1}
+        \ud{m3}
+        \desc{Hormigón HA-25 con Tmáx. árido 20 mm, elaborado en central.}
+        \textolargo{Hormigón HA-25 con Tmáx. árido 20 mm, elaborado en central.}
+        \descomp
+            {
+            \componente
+               {
+                 \ref{SINDESCO}
+                 \factor{1}
+                 \rendimiento{16000}
+               }
+            }
+      }
+    \ud_obra
+      {
+        \codigo{030.004}
+        \ud{m3}
+        \desc{Hormigón H-250 kg/cm2 con Tmáx. árido 20 mm, elaborado en central para relleno de zanjas, incluso armadura AEH-500S, encofrado y desencofrado, vertido por medio de camión bomba, vibrado y colocado, en zapatas corridas e individuales.}
+        \textolargo{Hormigón H-250 kg/cm2 con Tmáx. árido 20 mm, elaborado en central para relleno de zanjas, incluso armadura AEH-500S, encofrado y desencofrado, vertido por medio de camión bomba, vibrado y colocado, en zapatas corridas e individuales.}
+        \descomp
+            {
+            \componente
+               {
+                 \ref{SINDESCO}
+                 \factor{1}
+                 \rendimiento{34000}
+               }
+            }
+      }
+    \ud_obra
+      {
+        \codigo{030.004.1}
+        \ud{m3}
+        \desc{Hormigón H-250 kg/cm2 con Tmáx. árido 20 mm, elaborado en central para relleno de muros, incluso armadura AEH-500S, encofrado y desencofrado, vertido por medio de camión bomba, vibrado y colocado.}
+        \textolargo{Hormigón H-250 kg/cm2 con Tmáx. árido 20 mm, elaborado en central para relleno de muros, incluso armadura AEH-500S, encofrado y desencofrado, vertido por medio de camión bomba, vibrado y colocado.}
+        \descomp
+            {
+            \componente
+               {
+                 \ref{SINDESCO}
+                 \factor{1}
+                 \rendimiento{}
+               }
+            }
+      }
+    \ud_obra
+      {
+        \codigo{030.004.2}
+        \ud{m2}
+        \desc{Hormigón H-250 kg/cm2 con Tmáx. árido 20 mm, elaborado en central para relleno de muros, incluso armadura AEH-400S, encofrado y desencofrado, vertido por medio de camión bomba, vibrado y colocado.}
+        \textolargo{Hormigón H-250 kg/cm2 con Tmáx. árido 20 mm, elaborado en central para relleno de muros, incluso armadura AEH-400S, encofrado y desencofrado, vertido por medio de camión bomba, vibrado y colocado.}
+        \descomp
+            {
+            \componente
+               {
+                 \ref{SINDESCO}
+                 \factor{1}
+                 \rendimiento{34000}
+               }
+            }
+      }
+    \ud_obra
+      {
+        \codigo{030.007}
+        \ud{Ud}
+        \desc{Dado de cimentación para poste de iluminación de 0,65x0,65 m de base y 0,8 m de profundidad construido en hormigón H-150 kg/cm2 incluso pernos de anclaje de acero y tubos de PVC flexible para paso de cables, incluso p.p. De excavación, mano de obra y medios auxiliares.}
+        \textolargo{Dado de cimentación para poste de iluminación de 0,65x0,65 m de base y 0,8 m de profundidad construido en hormigón H-150 kg/cm2 incluso pernos de anclaje de acero y tubos de PVC flexible para paso de cables, incluso p.p. De excavación, mano de obra y medios auxiliares.}
+        \descomp
+            {
+            \componente
+               {
+                 \ref{SINDESCO}
+                 \factor{1}
+                 \rendimiento{5000}
+               }
+            }
+      }
+    \ud_obra
+      {
+        \codigo{030.008}
+        \ud{Kg}
+        \desc{Acero corrugado B500S, doblado, armado y colocado en obra, incluso parte proporcional de despuntes. Según EHE}
+        \textolargo{Acero corrugado B500S, doblado, armado y colocado en obra, incluso parte proporcional de despuntes. Según EHE}
+        \descomp
+            {
+            \componente
+               {
+                 \ref{SINDESCO}
+                 \factor{1}
+                 \rendimiento{195}
+               }
+            }
+      }
+    \ud_obra
+      {
+        \codigo{030.009}
+        \ud{m2}
+        \desc{Encofrado y desencofrado con madera suelta en zanjas y vigas considerando 4 posturas. Según NTE-EME}
+        \textolargo{Encofrado y desencofrado con madera suelta en zanjas y vigas considerando 4 posturas. Según NTE-EME}
+        \descomp
+            {
+            \componente
+               {
+                 \ref{SINDESCO}
+                 \factor{1}
+                 \rendimiento{4500}
+               }
+            }
+      }
+    \ud_obra
+      {
+        \codigo{030.009}
+        \ud{m2}
+        \desc{Encofrado y desencofrado con madera suelta en zanjas y vigas considerando 4 posturas. Según NTE-EME}
+        \textolargo{Encofrado y desencofrado con madera suelta en zanjas y vigas considerando 4 posturas. Según NTE-EME}
+        \descomp
+            {
+            \componente
+               {
+                 \ref{SINDESCO}
+                 \factor{1}
+                 \rendimiento{4500}
+               }
+            }
+      }
+    \ud_obra
+      {
+        \codigo{038.227}
+        \ud{m3}
+        \desc{Zahorra natural, incluso extensión y compactación en formación subbase cimentaciones}
+        \textolargo{Zahorra natural, incluso extensión y compactación en formación subbase cimentaciones}
+        \descomp
+            {
+            \componente
+               {
+                 \ref{SINDESCO}
+                 \factor{1}
+                 \rendimiento{776}
+               }
+            }
+      }
+
+\c{Estructuras}
+    \ud_obra
+      {
+        \codigo{040.001}
+        \ud{Kg}
+        \desc{Estructura metálica electrosoldada formada por pilares, vigas, correas y cerchas a base de perfiles de acero laminado A-42b incluso parte proporcional De despuntes, 2 manos de imprimación con pintura de minio de plomo y una de esmalte graso, totalmente montado S/NTE-EAS/EAV.}
+        \textolargo{Estructura metálica electrosoldada formada por pilares, vigas, correas y cerchas a base de perfiles de acero laminado A-42b incluso parte proporcional De despuntes, 2 manos de imprimación con pintura de minio de plomo y una de esmalte graso, totalmente montado S/NTE-EAS/EAV.}
+        \descomp
+            {
+            \componente
+               {
+                 \ref{SINDESCO}
+                 \factor{1}
+                 \rendimiento{260}
+               }
+            }
+      }
+
+\c{Cerramientos}
+    \ud_obra
+      {
+        \codigo{060.001}
+        \ud{m2}
+        \desc{Cubierta completa formada por chapa de acero de 0,6 mm de espesor con perfil tipo PERFRISA o similar, prelacada, anclada a la estructura incluso parte proporcional de remates de montaje, piezas especiales de cualquier tipo y medios auxiliares y medios de seguridad utilizados, según NTE/QTG-7.}
+        \textolargo{Cubierta completa formada por chapa de acero de 0,6 mm de espesor con perfil tipo PERFRISA o similar, prelacada, anclada a la estructura incluso parte proporcional de remates de montaje, piezas especiales de cualquier tipo y medios auxiliares y medios de seguridad utilizados, según NTE/QTG-7.}
+        \descomp
+            {
+            \componente
+               {
+                 \ref{SINDESCO}
+                 \factor{1}
+                 \rendimiento{2700}
+               }
+            }
+      }
+    \ud_obra
+      {
+        \codigo{070.001}
+        \ud{m2}
+        \desc{Cerramiento exterior de 2 m de altura, formado por base de obra de hormigón sobre cimiento corrido de hormigón de sección 0,4x0,4 m, fábrica de bloques huecos decorativos de hormigón Split, en color crema de 40x20x15 cm, colocado a una cara vista, recibido con mortero de cemento blanco y arena de río 2/6, incluso formación de dinteles, zunchos, jambas, ejecución de encuentros y piezas especiales, rejuntado limpieza y medios auxiliares, deduciendo huecos mayores a 3 m2 según NTE-FFB-6, reja en emparrillado construida por malla de 62x132 mm de cruces con perfil vertical en pletina de 30x4 mm y horizontal en redondo de 6 mm de diámetro, con un peso aproximado de 22,8 kg/m2, garras de 12 cm elanorada en taller y esmaltada en blanco, así como montaje en obra.}
+        \textolargo{Cerramiento exterior de 2 m de altura, formado por base de obra de hormigón sobre cimiento corrido de hormigón de sección 0,4x0,4 m, fábrica de bloques huecos decorativos de hormigón Split, en color crema de 40x20x15 cm, colocado a una cara vista, recibido con mortero de cemento blanco y arena de río 2/6, incluso formación de dinteles, zunchos, jambas, ejecución de encuentros y piezas especiales, rejuntado limpieza y medios auxiliares, deduciendo huecos mayores a 3 m2 según NTE-FFB-6, reja en emparrillado construida por malla de 62x132 mm de cruces con perfil vertical en pletina de 30x4 mm y horizontal en redondo de 6 mm de diámetro, con un peso aproximado de 22,8 kg/m2, garras de 12 cm elanorada en taller y esmaltada en blanco, así como montaje en obra.}
+        \descomp
+            {
+            \componente
+               {
+                 \ref{SINDESCO}
+                 \factor{1}
+                 \rendimiento{6000}
+               }
+            }
+      }
+    \ud_obra
+      {
+        \codigo{070.003}
+        \ud{m2}
+        \desc{Tabicón de ladrillo hueco doble de 25x12x8 cm recibido con mortero de cemento II-Z/35A y arena de rio 1/6, i/p.p. de replanteo, aplomado y recibido de cercos roturas, humedecido de las piezas, limpieza y medios auxiliares, s/NTE-PTL y NBE-FL-90, medido deduciendo huecos superiores a 2 m2.}
+        \textolargo{Tabicón de ladrillo hueco doble de 25x12x8 cm recibido con mortero de cemento II-Z/35A y arena de rio 1/6, i/p.p. de replanteo, aplomado y recibido de cercos roturas, humedecido de las piezas, limpieza y medios auxiliares, s/NTE-PTL y NBE-FL-90, medido deduciendo huecos superiores a 2 m2.}
+        \descomp
+            {
+            \componente
+               {
+                 \ref{SINDESCO}
+                 \factor{1}
+                 \rendimiento{1957}
+               }
+            }
+      }
+    \ud_obra
+      {
+        \codigo{070.002}
+        \ud{m}
+        \desc{Cerramiento exterior de 2 m de altura formado por zapatas de hormigón H-175 kg/cm2 (incluso excavación por medios mecánicos) y enrejado metálico galvanizado de malla simple torsión, trama 40/14 y postes de tubo de acero galvanizado por inmersión de 48 mm y tornapuntas de 32 mm, totalmente montada, incluso replanteo y recibido, tensores, grupillas y accesorios.}
+        \textolargo{Cerramiento exterior de 2 m de altura formado por zapatas de hormigón H-175 kg/cm2 (incluso excavación por medios mecánicos) y enrejado metálico galvanizado de malla simple torsión, trama 40/14 y postes de tubo de acero galvanizado por inmersión de 48 mm y tornapuntas de 32 mm, totalmente montada, incluso replanteo y recibido, tensores, grupillas y accesorios.}
+        \descomp
+            {
+            \componente
+               {
+                 \ref{SINDESCO}
+                 \factor{1}
+                 \rendimiento{3500}
+               }
+            }
+      }
+    \ud_obra
+      {
+        \codigo{070.005}
+        \ud{m2}
+        \desc{Cerramiento de fachada formado por fábrica de 1/2 pie de espesor de ladrillo hueco doble de 25x12x9 cm, sentada con mortero de cemento (II-Z/35A) y arena de rio 1:6 (M-40), enfoscado interiormente con mortero de cemento y arena de río 1:4, cámara de aire de 5 cm y tabique de ladrillo hueco sencillo, recibido con mortero de cemento (II-Z/35A)  y arena de rio 1:6 (M-40), i/p.p. aplomado, nivelación, roturas, remates y piezas especiales, s/NTE-FFL, PTL y MV-201}
+        \textolargo{Cerramiento de fachada formado por fábrica de 1/2 pie de espesor de ladrillo hueco doble de 25x12x9 cm, sentada con mortero de cemento (II-Z/35A) y arena de rio 1:6 (M-40), enfoscado interiormente con mortero de cemento y arena de río 1:4, cámara de aire de 5 cm y tabique de ladrillo hueco sencillo, recibido con mortero de cemento (II-Z/35A)  y arena de rio 1:6 (M-40), i/p.p. aplomado, nivelación, roturas, remates y piezas especiales, s/NTE-FFL, PTL y MV-201}
+        \descomp
+            {
+            \componente
+               {
+                 \ref{SINDESCO}
+                 \factor{1}
+                 \rendimiento{4572}
+               }
+            }
+      }
+    \ud_obra
+      {
+        \codigo{070.006}
+        \ud{m2}
+        \desc{Tabique de ladrillo hueco sencillo 25x12x4 cm recibido con mortero de cemento (II-Z/35A) y arena de rio 1:6 (M-40), i/p.p. replanteo, roturas, humedecido de las piezas y limpieza}
+        \textolargo{Tabique de ladrillo hueco sencillo 25x12x4 cm recibido con mortero de cemento (II-Z/35A) y arena de rio 1:6 (M-40), i/p.p. replanteo, roturas, humedecido de las piezas y limpieza}
+        \descomp
+            {
+            \componente
+               {
+                 \ref{SINDESCO}
+                 \factor{1}
+                 \rendimiento{1700}
+               }
+            }
+      }
+    \ud_obra
+      {
+        \codigo{070.007}
+        \ud{m2}
+        \desc{Fábrica de bloques de hormigón color gris de medidas 40x20x15 cm, para terminación posterior, i/relleno de hormigón HM-15 y armadura en zona según normativa y recibido con mortero de cemento y arena de río 1/6, i/p.p. de piezas especiales, roturas, aplomados, nivelado y limpieza de todo ello según NTE-FFB-6}
+        \textolargo{Fábrica de bloques de hormigón color gris de medidas 40x20x15 cm, para terminación posterior, i/relleno de hormigón HM-15 y armadura en zona según normativa y recibido con mortero de cemento y arena de río 1/6, i/p.p. de piezas especiales, roturas, aplomados, nivelado y limpieza de todo ello según NTE-FFB-6}
+        \descomp
+            {
+            \componente
+               {
+                 \ref{SINDESCO}
+                 \factor{1}
+                 \rendimiento{3676}
+               }
+            }
+      }
+    \ud_obra
+      {
+        \codigo{080.001}
+        \ud{m}
+        \desc{Bordillo de hormigón prefabricado tipo 3 de 12x25 cm para tramos rectos sobre solera de hormigón H-50 kg/cm2, de 10 cm de espesor, Tmáx. árido 40 mm, incluso excavación necesaria, replanteo y totalmente colocado.}
+        \textolargo{Bordillo de hormigón prefabricado tipo 3 de 12x25 cm para tramos rectos sobre solera de hormigón H-50 kg/cm2, de 10 cm de espesor, Tmáx. árido 40 mm, incluso excavación necesaria, replanteo y totalmente colocado.}
+        \descomp
+            {
+            \componente
+               {
+                 \ref{SINDESCO}
+                 \factor{1}
+                 \rendimiento{2000}
+               }
+            }
+      }
+    \ud_obra
+      {
+        \codigo{080.002}
+        \ud{m}
+        \desc{Bordillo de hormigón prefabricado tipo 2 montable de 20x22 cm para tramos rectos sobre solera de hormigón H-50 kg/cm2, de 10 cm de espesor, Tmáx. árido 40 mm, incluso excavación necesaria, replanteo y totalmente colocado.}
+        \textolargo{Bordillo de hormigón prefabricado tipo 2 montable de 20x22 cm para tramos rectos sobre solera de hormigón H-50 kg/cm2, de 10 cm de espesor, Tmáx. árido 40 mm, incluso excavación necesaria, replanteo y totalmente colocado.}
+        \descomp
+            {
+            \componente
+               {
+                 \ref{SINDESCO}
+                 \factor{1}
+                 \rendimiento{2800}
+               }
+            }
+      }
+    \ud_obra
+      {
+        \codigo{080.003}
+        \ud{m}
+        \desc{Señal cuadrada incluso parte proporcional de poste galvanizado,
+tornillería, cimentación y anclaje totalmente colocada}
+        \textolargo{Señal cuadrada incluso parte proporcional de poste galvanizado,
+tornillería, cimentación y anclaje totalmente colocada}
+        \descomp
+            {
+            \componente
+               {
+                 \ref{SINDESCO}
+                 \factor{1}
+                 \rendimiento{33400}
+               }
+            }
+      }
+    \ud_obra
+      {
+        \codigo{090.001}
+        \ud{m2}
+        \desc{Recibido y aplomado de cercos metálicos o de madera, en muros exteriores y tabiques interiores, con mortero de cemento II-Z/35A y arena de río 1/8 (m-20), incluso parte proporcional, de caballetes, limas, medios auxiliares y elementos de seguridad, S/NTE-QTT-12, medida en verdadera magnitud}
+        \textolargo{Recibido y aplomado de cercos metálicos o de madera, en muros exteriores y tabiques interiores, con mortero de cemento II-Z/35A y arena de río 1/8 (m-20), incluso parte proporcional, de caballetes, limas, medios auxiliares y elementos de seguridad, S/NTE-QTT-12, medida en verdadera magnitud}
+        \descomp
+            {
+            \componente
+               {
+                 \ref{SINDESCO}
+                 \factor{1}
+                 \rendimiento{2215}
+               }
+            }
+      }
+    \ud_obra
+      {
+        \codigo{090.002}
+        \ud{m2}
+        \desc{Recibido y aplomado de cercos metálicos o de madera en muros exteriores y tabiques interiores, con mortero de cemento II-Z/35A y arena de río 1/4.}
+        \textolargo{Recibido y aplomado de cercos metálicos o de madera en muros exteriores y tabiques interiores, con mortero de cemento II-Z/35A y arena de río 1/4.}
+        \descomp
+            {
+            \componente
+               {
+                 \ref{SINDESCO}
+                 \factor{1}
+                 \rendimiento{1675}
+               }
+            }
+      }
+    \ud_obra
+      {
+        \codigo{100.001}
+        \ud{m2}
+        \desc{Guarnecido maestreado con yeso negro y enlucido con yeso blanco en parámetros verticales y horizontales de 15 mm de espesor, con maestras cada 3 m , incluso formación de rincones, guarniciones de huecos, remates con pavimento, parte proporcional de guardavivos de plástico y metal y colocación de andamios, s/NTE-RPG, medido deduciendo huecos superiores a 2 m2.}
+        \textolargo{Guarnecido maestreado con yeso negro y enlucido con yeso blanco en parámetros verticales y horizontales de 15 mm de espesor, con maestras cada 3 m , incluso formación de rincones, guarniciones de huecos, remates con pavimento, parte proporcional de guardavivos de plástico y metal y colocación de andamios, s/NTE-RPG, medido deduciendo huecos superiores a 2 m2.}
+        \descomp
+            {
+            \componente
+               {
+                 \ref{SINDESCO}
+                 \factor{1}
+                 \rendimiento{1025}
+               }
+            }
+      }
+    \ud_obra
+      {
+        \codigo{100.002}
+        \ud{m2}
+        \desc{Enfoscado maestrado y fratasado de 20 mm de espesor en superficies verticales con mortero de cal y arena 1/4, con cualquier tipo de remate final, i/p.p. de medios auxiliares con empleo, en su caso, de pequeño andamiaje, así como distribución de material en tajo, s/NTE/RPE-5}
+        \textolargo{Enfoscado maestrado y fratasado de 20 mm de espesor en superficies verticales con mortero de cal y arena 1/4, con cualquier tipo de remate final, i/p.p. de medios auxiliares con empleo, en su caso, de pequeño andamiaje, así como distribución de material en tajo, s/NTE/RPE-5}
+        \descomp
+            {
+            \componente
+               {
+                 \ref{SINDESCO}
+                 \factor{1}
+                 \rendimiento{1686}
+               }
+            }
+      }
+    \ud_obra
+      {
+        \codigo{110.001}
+        \ud{M2}
+        \desc{Falso techo modular desmontable de escayola aligerada “Fonotec” o similar fisurado en placas de 120x60 cm., suspendido de perfilería vista lacada en blanco de 24 mm de ancho, incluso parte proporcional de accesorios de fijación, montaje y desmontaje de andamios, instalado s/NTE-RTP-17, medido deduciendo huecos superiores a 2 m2.}
+        \textolargo{Falso techo modular desmontable de escayola aligerada “Fonotec” o similar fisurado en placas de 120x60 cm., suspendido de perfilería vista lacada en blanco de 24 mm de ancho, incluso parte proporcional de accesorios de fijación, montaje y desmontaje de andamios, instalado s/NTE-RTP-17, medido deduciendo huecos superiores a 2 m2.}
+        \descomp
+            {
+            \componente
+               {
+                 \ref{SINDESCO}
+                 \factor{1}
+                 \rendimiento{1495}
+               }
+            }
+      }
+    \ud_obra
+      {
+        \codigo{120.001}
+        \ud{m2}
+        \desc{Aislamiento de suelos por barrera de vapor realizada con lámina de polietileno de 1 mm de espesor, totalmente instalada, incluso medios auxilizares y costes indirectos}
+        \textolargo{Aislamiento de suelos por barrera de vapor realizada con lámina de polietileno de 1 mm de espesor, totalmente instalada, incluso medios auxilizares y costes indirectos }
+        \descomp
+            {
+            \componente
+               {
+                 \ref{SINDESCO}
+                 \factor{1}
+                 \rendimiento{1650}
+               }
+            }
+      }
+    \ud_obra
+      {
+        \codigo{120.002}
+        \ud{m2}
+        \desc{Aislamiento con planchas de poliestireno de 30 mm de espesor y 20 kg/m3 de densidad, autoextinguible, tipo IV-F-20 en cámaras de aire, incluso parte proporcional de elementos de fijación, corte y colocación, medido deduciendo huecos superiores a 1 m2 en pilares y solera}
+        \textolargo{Aislamiento con planchas de poliestireno de 30 mm de espesor y 20 kg/m3 de densidad, autoextinguible, tipo IV-F-20 en cámaras de aire, incluso parte proporcional de elementos de fijación, corte y colocación, medido deduciendo huecos superiores a 1 m2 en pilares y solera}
+        \descomp
+            {
+            \componente
+               {
+                 \ref{SINDESCO}
+                 \factor{1}
+                 \rendimiento{722}
+               }
+            }
+      }
+    \ud_obra
+      {
+        \codigo{120.003}
+        \ud{m2}
+        \desc{Aislamiento térmico mediante espuma rígida de poliuretano fabricada “in situ” realizado por proyección sobre la cara interior del cerramiento de fachada, con una densidad mínima de 30 kg/m3 y 3 cm de espesor medio, previo al tabique, incluso maquinaria auxiliar y medios auxiliares, medido a cinta corrida, descontando huecos superiores a 2 m2.}
+        \textolargo{Aislamiento térmico mediante espuma rígida de poliuretano fabricada “in situ” realizado por proyección sobre la cara interior del cerramiento de fachada, con una densidad mínima de 30 kg/m3 y 3 cm de espesor medio, previo al tabique, incluso maquinaria auxiliar y medios auxiliares, medido a cinta corrida, descontando huecos superiores a 2 m2.}
+        \descomp
+            {
+            \componente
+               {
+                 \ref{SINDESCO}
+                 \factor{1}
+                 \rendimiento{894}
+               }
+            }
+      }
+    \ud_obra
+      {
+        \codigo{130.001}
+        \ud{m2}
+        \desc{Impermeabilización con copolímeros acrílicos en emulsión con 1,5 kg/cm2 sobre superficies de hormigón, totalmente aplicado y terminado.}
+        \textolargo{Impermeabilización con copolímeros acrílicos en emulsión con 1,5 kg/cm2 sobre superficies de hormigón, totalmente aplicado y terminado.}
+        \descomp
+            {
+            \componente
+               {
+                 \ref{SINDESCO}
+                 \factor{1}
+                 \rendimiento{1200}
+               }
+            }
+      }
+    \ud_obra
+      {
+        \codigo{130.002}
+        \ud{m2}
+        \desc{Suministro y colocación de lámina de geotextil para formación y regularización de superficie de hormigón de limpieza H-125 kg/cm2, de 60 km/m tipo Lotrak o similar.}
+        \textolargo{Suministro y colocación de lámina de geotextil para formación y regularización de superficie de hormigón de limpieza H-125 kg/cm2, de 60 km/m tipo Lotrak o similar.}
+        \descomp
+            {
+            \componente
+               {
+                 \ref{SINDESCO}
+                 \factor{1}
+                 \rendimiento{500}
+               }
+            }
+      }
+    \ud_obra
+      {
+        \codigo{140.001}
+        \ud{m2}
+        \desc{Gneiss irregular 3-4 cm para chapado exterior del edificio en franja inferior, excepto escalera y rampa.}
+        \textolargo{Gneiss irregular 3-4 cm para chapado exterior del edificio en franja inferior, excepto escalera y rampa.}
+        \descomp
+            {
+            \componente
+               {
+                 \ref{SINDESCO}
+                 \factor{1}
+                 \rendimiento{3330}
+               }
+            }
+      }
+    \ud_obra
+      {
+        \codigo{140.002}
+        \ud{m2}
+        \desc{Solado de terrazo 30x30 cm microgramo, pulido en fábrica, recibido con mortero de cemento II-Z/35A y arena de miga 1/6, incluso cama de arena de 2 cm de espesor, rejuntado con lechada de cemento blanco V-B/20 y limpieza, s/NTE-RSR-6 y NTE-RSR-26, medido en superficie realmente ejecutada.}
+        \textolargo{Solado de terrazo 30x30 cm microgramo, pulido en fábrica, recibido con mortero de cemento II-Z/35A y arena de miga 1/6, incluso cama de arena de 2 cm de espesor, rejuntado con lechada de cemento blanco V-B/20 y limpieza, s/NTE-RSR-6 y NTE-RSR-26, medido en superficie realmente ejecutada.}
+        \descomp
+            {
+            \componente
+               {
+                 \ref{SINDESCO}
+                 \factor{1}
+                 \rendimiento{2590}
+               }
+            }
+      }
+    \ud_obra
+      {
+        \codigo{140.003}
+        \ud{m2}
+        \desc{Alicatado con azulejo blanco 15x15 cm tipo único, recibido con mortero de cemento II-Z/35A y arena de miga 1/6, incluso parte proporcional de cortes, ingleses, piezas especiales, rejuntado con lechada de cemento blanco V-B/20 y limpieza, s/NTE-RPA-3, medido deduciendo huecos superiores a 1 m2.}
+        \textolargo{Alicatado con azulejo blanco 15x15 cm tipo único, recibido con mortero de cemento II-Z/35A y arena de miga 1/6, incluso parte proporcional de cortes, ingleses, piezas especiales, rejuntado con lechada de cemento blanco V-B/20 y limpieza, s/NTE-RPA-3, medido deduciendo huecos superiores a 1 m2.}
+        \descomp
+            {
+            \componente
+               {
+                 \ref{SINDESCO}
+                 \factor{1}
+                 \rendimiento{3211}
+               }
+            }
+      }
+    \ud_obra
+      {
+        \codigo{150.001}
+        \ud{t}
+        \desc{Mezcla bituminosa en caliente con incorporación de árido de Tmax. 5 mm, para impermeabilización de superficie, incluso mezcla, mano de obra y medios auxiliares, totalmente aplicado y terminado.}
+        \textolargo{Mezcla bituminosa en caliente con incorporación de árido de Tmax. 5 mm, para impermeabilización de superficie, incluso mezcla, mano de obra y medios auxiliares, totalmente aplicado y terminado.}
+        \descomp
+            {
+            \componente
+               {
+                 \ref{SINDESCO}
+                 \factor{1}
+                 \rendimiento{7000}
+               }
+            }
+      }
+    \ud_obra
+      {
+        \codigo{150.002}
+        \ud{m3}
+        \desc{Base de zahorra artificial clasificada Z-1, incluso transporte a pie de obra, extendido, regado y compactado con pisón mecánico, incluso nivelación para formación de pendientes.}
+        \textolargo{Base de zahorra artificial clasificada Z-1, incluso transporte a pie de obra, extendido, regado y compactado con pisón mecánico, incluso nivelación para formación de pendientes.}
+        \descomp
+            {
+            \componente
+               {
+                 \ref{SINDESCO}
+                 \factor{1}
+                 \rendimiento{3800}
+               }
+            }
+      }
+    \ud_obra
+      {
+        \codigo{150.003}
+        \ud{m2}
+        \desc{Pavimento de hormigón H-250 kg/cm2 Tmax. árido 20 mm, de 25 cm de espesor sobre  base de 20 cm de zahorra artificial clase Z-1 (previamente transportada a pie de obra, extendida, regada, compactada y nivelada para formación de pendientes) sobre sub-base de terreno  compactado, incluso suministro y colocado y armadura de acero corrugado AEH-400N con una cuantía (13 kg/cm2), parte proporcional de juntas, aserrado de las mismas y fratasado.}
+        \textolargo{Pavimento de hormigón H-250 kg/cm2 Tmax. árido 20 mm, de 25 cm de espesor sobre  base de 20 cm de zahorra artificial clase Z-1 (previamente transportada a pie de obra, extendida, regada, compactada y nivelada para formación de pendientes) sobre sub-base de terreno  compactado, incluso suministro y colocado y armadura de acero corrugado AEH-400N con una cuantía (13 kg/cm2), parte proporcional de juntas, aserrado de las mismas y fratasado.}
+        \descomp
+            {
+            \componente
+               {
+                 \ref{SINDESCO}
+                 \factor{1}
+                 \rendimiento{7000}
+               }
+            }
+      }
+    \ud_obra
+      {
+        \codigo{150.004}
+        \ud{m2}
+        \desc{Recubrimiento monolítico coloreado a base de agregados minerales para pavimentos de hormigón MASTERTOP 100 de HALESA MBT.}
+        \textolargo{Recubrimiento monolítico coloreado a base de agregados minerales para pavimentos de hormigón MASTERTOP 100 de HALESA MBT.}
+        \descomp
+            {
+            \componente
+               {
+                 \ref{SINDESCO}
+                 \factor{1}
+                 \rendimiento{1115}
+               }
+            }
+      }
+    \ud_obra
+      {
+        \codigo{150.003.1}
+        \ud{m3}
+        \desc{Hormigón vibrado HP-40 según PG3 incluso juntas.}
+        \textolargo{Hormigón vibrado HP-40 según PG3 incluso juntas.}
+        \descomp
+            {
+            \componente
+               {
+                 \ref{SINDESCO}
+                 \factor{1}
+                 \rendimiento{20000}
+               }
+            }
+      }
+    \ud_obra
+      {
+        \codigo{160.001}
+        \ud{m2}
+        \desc{Puerta de paso ciega normalizada, serie económica, lisa hueca (CLH) de sapelly para barnizar, con cerco directo de sapelly macizo 70x50 mm, tapajuntas lisos de DM rechapados de sapelly 70x10 mm en ambas caras y herrajes de colgar y de cierre latonados, totalmente montada, incluso parte proporcional de medios auxiliares.}
+        \textolargo{Puerta de paso ciega normalizada, serie económica, lisa hueca (CLH) de sapelly para barnizar, con cerco directo de sapelly macizo 70x50 mm, tapajuntas lisos de DM rechapados de sapelly 70x10 mm en ambas caras y herrajes de colgar y de cierre latonados, totalmente montada, incluso parte proporcional de medios auxiliares.}
+        \descomp
+            {
+            \componente
+               {
+                 \ref{SINDESCO}
+                 \factor{1}
+                 \rendimiento{11970}
+               }
+            }
+      }
+    \ud_obra
+      {
+        \codigo{170.001}
+        \ud{m2}
+        \desc{Carpintería de aluminio anodizado en color natural de 15 micras, en ventanas correderas de 3 hojas mayores de 2 m2 y menores de 3 m2 y menores de 3 m2 de superficie total, compuesta por cerco, hojas y herrajes de deslizamiento y de seguridad, totalmente instalada sobre precerco de aluminio, sellado de juntas y limpieza, incluso con parte proporcional de medios auxiliares, s/NTE-FCL-5.}
+        \textolargo{Carpintería de aluminio anodizado en color natural de 15 micras, en ventanas correderas de 3 hojas mayores de 2 m2 y menores de 3 m2 y menores de 3 m2 de superficie total, compuesta por cerco, hojas y herrajes de deslizamiento y de seguridad, totalmente instalada sobre precerco de aluminio, sellado de juntas y limpieza, incluso con parte proporcional de medios auxiliares, s/NTE-FCL-5.}
+        \descomp
+            {
+            \componente
+               {
+                 \ref{SINDESCO}
+                 \factor{1}
+                 \rendimiento{9780}
+               }
+            }
+      }
+    \ud_obra
+      {
+        \codigo{170.002}
+        \ud{m2}
+        \desc{Puerta basculante plegable accionada manualmente y compensada por muelles helicoidales de acero, hoja ciega con bastidor y refuerzos de hoja formados por tubos huecos rectangulares de acero laminado en frío y chapa tipo Pegaso; con cerco de angular metálico, provisto de garras para anclaje a obra, guías, cierre, cerradura y demás accesorios, totalmente instalada, incluso acabado de capa de pintura epoxi polimerizada al horno (sin incluir recibido de albañilería).}
+        \textolargo{Puerta basculante plegable accionada manualmente y compensada por muelles helicoidales de acero, hoja ciega con bastidor y refuerzos de hoja formados por tubos huecos rectangulares de acero laminado en frío y chapa tipo Pegaso; con cerco de angular metálico, provisto de garras para anclaje a obra, guías, cierre, cerradura y demás accesorios, totalmente instalada, incluso acabado de capa de pintura epoxi polimerizada al horno (sin incluir recibido de albañilería).}
+        \descomp
+            {
+            \componente
+               {
+                 \ref{SINDESCO}
+                 \factor{1}
+                 \rendimiento{10745}
+               }
+            }
+      }
+    \ud_obra
+      {
+        \codigo{170.003}
+        \ud{m2}
+        \desc{Persianas de aluminio térmico con lamas de 44 mm.}
+        \textolargo{Persianas de aluminio térmico con lamas de 44 mm.}
+        \descomp
+            {
+            \componente
+               {
+                 \ref{SINDESCO}
+                 \factor{1}
+                 \rendimiento{4639}
+               }
+            }
+      }
+    \ud_obra
+      {
+        \codigo{170.004}
+        \ud{m2}
+        \desc{Puerta de chapa lisa de acero de 1 mm de espesor, engatillada, realizada en dos bandejas, con rigidizadores de tubo rectangular, i/patillas para recibir en fábricas, y herrajes de colgar y de seguridad.}
+        \textolargo{Puerta de chapa lisa de acero de 1 mm de espesor, engatillada, realizada en dos bandejas, con rigidizadores de tubo rectangular, i/patillas para recibir en fábricas, y herrajes de colgar y de seguridad.}
+        \descomp
+            {
+            \componente
+               {
+                 \ref{SINDESCO}
+                 \factor{1}
+                 \rendimiento{9054}
+               }
+            }
+      }
+    \ud_obra
+      {
+        \codigo{170.005}
+        \ud{m2}
+        \desc{Ventanal fijo de aluminio anodizado en su color de 13 micras, perfil 50x40 mm. y 1.5 mm de espesor, con junquillos para fijación de vidrio}
+        \textolargo{Ventanal fijo de aluminio anodizado en su color de 13 micras, perfil 50x40 mm. y 1.5 mm de espesor, con junquillos para fijación de vidrio}
+        \descomp
+            {
+            \componente
+               {
+                 \ref{SINDESCO}
+                 \factor{1}
+                 \rendimiento{7800}
+               }
+            }
+      }
+    \ud_obra
+      {
+        \codigo{180.001}
+        \ud{m2}
+        \desc{Acristalamiento doble tipo Climalit formado por dos lunas de 5 mm y cámara de aire deshidratada de 6, 8 o 12 mm., con perfil separador de aluminio y doble sellado perimetral (junta plástica), fijación sobre carpintería con acuñado mediante calzos perimetales y laterales y sellado en frío con silicona incolora, incluso colocación de junquillos, según NTE-FVP.}
+        \textolargo{Acristalamiento doble tipo Climalit formado por dos lunas de 5 mm y cámara de aire deshidratada de 6, 8 o 12 mm., con perfil separador de aluminio y doble sellado perimetral (junta plástica), fijación sobre carpintería con acuñado mediante calzos perimetales y laterales y sellado en frío con silicona incolora, incluso colocación de junquillos, según NTE-FVP.}
+        \descomp
+            {
+            \componente
+               {
+                 \ref{SINDESCO}
+                 \factor{1}
+                 \rendimiento{6316}
+               }
+            }
+      }
+    \ud_obra
+      {
+        \codigo{180.002}
+        \ud{ud}
+        \desc{Claraboya parabólica monovalva, fabricada en polimetacrilato de metilo (PMMA), de dimensiones 60x60 cm, con zócalo de poliéster de h=15 cm, para sistema de colocación fijo, i/recibido y remates de la misma a elementos de cubierta.}
+        \textolargo{Claraboya parabólica monovalva, fabricada en polimetacrilato de metilo (PMMA), de dimensiones 60x60 cm, con zócalo de poliéster de h=15 cm, para sistema de colocación fijo, i/recibido y remates de la misma a elementos de cubierta.}
+        \descomp
+            {
+            \componente
+               {
+                 \ref{SINDESCO}
+                 \factor{1}
+                 \rendimiento{25407}
+               }
+            }
+      }
+    \ud_obra
+      {
+        \codigo{190.001}
+        \ud{m2}
+        \desc{Lavamanos de porcelana blanco, mural, de 44x31 cm., colocado mediante anclajes de fijación a la pared con grifo de repisa, con rompechorros, incluso válvula de desagüe de 32 mm., llaves de escuadra de media pulgada cromadas, y latiguillos flexibles de 20 cm y de media pulgada, totalmente instalado y funcionando}
+        \textolargo{Lavamanos de porcelana blanco, mural, de 44x31 cm., colocado mediante anclajes de fijación a la pared con grifo de repisa, con rompechorros, incluso válvula de desagüe de 32 mm., llaves de escuadra de media pulgada cromadas, y latiguillos flexibles de 20 cm y de media pulgada, totalmente instalado y funcionando}
+        \descomp
+            {
+            \componente
+               {
+                 \ref{SINDESCO}
+                 \factor{1}
+                 \rendimiento{6395}
+               }
+            }
+      }
+    \ud_obra
+      {
+        \codigo{190.002}
+        \ud{Ud}
+        \desc{Inodoro de porcelana vitrificada blanco de tanque alto, colocado mediante tacos y tornillos al solado, incluso sellado con silicona y compuesto por: taza, tanque alto de plástico con mecanismos, tubo y curva de PVC de 32 mm., para bajada de agua desde el tanque, y asiento con tapa de plástico, con bisagras de nylon, totalmente instalado, incluso con llave de escuadra de media pulgada cromada y latiguillo flexible de 20 cm y de media pulgada, funcionando. (El manguetón está incluido en las instalaciones de desagüe).}
+        \textolargo{Inodoro de porcelana vitrificada blanco de tanque alto, colocado mediante tacos y tornillos al solado, incluso sellado con silicona y compuesto por: taza, tanque alto de plástico con mecanismos, tubo y curva de PVC de 32 mm., para bajada de agua desde el tanque, y asiento con tapa de plástico, con bisagras de nylon, totalmente instalado, incluso con llave de escuadra de media pulgada cromada y latiguillo flexible de 20 cm y de media pulgada, funcionando. (El manguetón está incluido en las instalaciones de desagüe).}
+        \descomp
+            {
+            \componente
+               {
+                 \ref{SINDESCO}
+                 \factor{1}
+                 \rendimiento{12585}
+               }
+            }
+      }
+    \ud_obra
+      {
+        \codigo{190.003}
+        \ud{Ud}
+        \desc{Urito mural de porcelana vitrificada blanco, colocado mediante anclajes de fijación a la pared, instalado con grifo temporizador, modelo Tempostop de RS para urinarios, incluso enlace de media pulgada y llave de escuadra de media pulgada, funcionando. (El sifón está incluido en las instalaciones de desagüe).}
+        \textolargo{Urito mural de porcelana vitrificada blanco, colocado mediante anclajes de fijación a la pared, instalado con grifo temporizador, modelo Tempostop de RS para urinarios, incluso enlace de media pulgada y llave de escuadra de media pulgada, funcionando. (El sifón está incluido en las instalaciones de desagüe).}
+        \descomp
+            {
+            \componente
+               {
+                 \ref{SINDESCO}
+                 \factor{1}
+                 \rendimiento{9820}
+               }
+            }
+      }
+    \ud_obra
+      {
+        \codigo{190.004}
+        \ud{Ud}
+        \desc{Plato de ducha de porcelana de 70x70 cm., blanco, con grifería mezcladora exterior monobloc, con ducha teléfono, flexible de 150 cm y soporte articulado, incluso válvula de desagüe sifónica, con salida horizontal de 40 mm., totalmente instalada y funcionando.}
+        \textolargo{Plato de ducha de porcelana de 70x70 cm., blanco, con grifería mezcladora exterior monobloc, con ducha teléfono, flexible de 150 cm y soporte articulado, incluso válvula de desagüe sifónica, con salida horizontal de 40 mm., totalmente instalada y funcionando.}
+        \descomp
+            {
+            \componente
+               {
+                 \ref{SINDESCO}
+                 \factor{1}
+                 \rendimiento{16025}
+               }
+            }
+      }
+    \ud_obra
+      {
+        \codigo{190.005}
+        \ud{Ud}
+        \desc{Termo eléctrico con capacidad para 50 litros de agua, de marca reconocida, colocado mediante anclajes de fijación a la pared, con termostato indicador de temperatura, luz piloto de control y demás elementos de seguridad, instalado con llaves de corte de esfera de media pulgada y latiguillos flexibles de 20 cm y de media pulgada, tanto en la entrada de agua, como en la salida , sin incluir la toma eléctrica, funcionando.}
+        \textolargo{Termo eléctrico con capacidad para 50 litros de agua, de marca reconocida, colocado mediante anclajes de fijación a la pared, con termostato indicador de temperatura, luz piloto de control y demás elementos de seguridad, instalado con llaves de corte de esfera de media pulgada y latiguillos flexibles de 20 cm y de media pulgada, tanto en la entrada de agua, como en la salida , sin incluir la toma eléctrica, funcionando.}
+        \descomp
+            {
+            \componente
+               {
+                 \ref{SINDESCO}
+                 \factor{1}
+                 \rendimiento{28505}
+               }
+            }
+      }
+    \ud_obra
+      {
+        \codigo{190.006}
+        \ud{Ud}
+        \desc{Suministro y colocación de espejo para baño, con los bordes biselados, totalmente colocado}
+        \textolargo{Suministro y colocación de espejo para baño, con los bordes biselados, totalmente colocado}
+        \descomp
+            {
+            \componente
+               {
+                 \ref{SINDESCO}
+                 \factor{1}
+                 \rendimiento{16080}
+               }
+            }
+      }
+    \ud_obra
+      {
+        \codigo{200.001}
+        \ud{m2}
+        \desc{Pintura al temple liso blanco, en parámetros verticales y horizontales, dos manos, incluso aparejado, plastecido, lijado y dos manos}
+        \textolargo{Pintura al temple liso blanco, en parámetros verticales y horizontales, dos manos, incluso aparejado, plastecido, lijado y dos manos}
+        \descomp
+            {
+            \componente
+               {
+                 \ref{SINDESCO}
+                 \factor{1}
+                 \rendimiento{220}
+               }
+            }
+      }
+    \ud_obra
+      {
+        \codigo{200.002}
+        \ud{m2}
+        \desc{Pintura pétrea Juno-red o similar a base de resinas de polimerización acrílica, aplicada con rodillo sobre paramentos verticales y horizontales de fachada, dos manos color}
+        \textolargo{Pintura pétrea Juno-red o similar a base de resinas de polimerización acrílica, aplicada con rodillo sobre paramentos verticales y horizontales de fachada, dos manos color}
+        \descomp
+            {
+            \componente
+               {
+                 \ref{SINDESCO}
+                 \factor{1}
+                 \rendimiento{1217}
+               }
+            }
+      }
+    \ud_obra
+      {
+        \codigo{210.001}
+        \ud{Ud}
+        \desc{Suministro, apertura de hoyo, plantación y primer riego de Platanus Orientalis de 14 a 16 cm de perímetro a 1 m del suelo (3 a 3,5 m de altura) con cepellón en container.}
+        \textolargo{Suministro, apertura de hoyo, plantación y primer riego de Platanus Orientalis de 14 a 16 cm de perímetro a 1 m del suelo (3 a 3,5 m de altura) con cepellón en container.}
+        \descomp
+            {
+            \componente
+               {
+                 \ref{SINDESCO}
+                 \factor{1}
+                 \rendimiento{5000}
+               }
+            }
+      }
+    \ud_obra
+      {
+        \codigo{210.002}
+        \ud{m}
+        \desc{Suministro, apertura de zanja, plantación y primer riego de Ligustrum Japonicum de 1,0 a 1,2 m de altura con cepellón en container (4 Ud/m).}
+        \textolargo{Suministro, apertura de zanja, plantación y primer riego de Ligustrum Japonicum de 1,0 a 1,2 m de altura con cepellón en container (4 Ud/m).}
+        \descomp
+            {
+            \componente
+               {
+                 \ref{SINDESCO}
+                 \factor{1}
+                 \rendimiento{3000}
+               }
+            }
+      }
+    \ud_obra
+      {
+        \codigo{220.001}
+        \ud{Ml}
+        \desc{Tubería PVC para evacuación y desagüe en canalizaciones subterráneas tipo SAENGER serie KE, de 200 mm de diámetro y 4,9 mm de espesor, unión por junta elástica, colocada sobre solera de hormigón H-125 Kg/cm2, incluso p.p de piezas especiales.}
+        \textolargo{Tubería PVC para evacuación y desagüe en canalizaciones subterráneas tipo SAENGER serie KE, de 200 mm de diámetro y 4,9 mm de espesor, unión por junta elástica, colocada sobre solera de hormigón H-125 Kg/cm2, incluso p.p de piezas especiales.}
+        \descomp
+            {
+            \componente
+               {
+                 \ref{SINDESCO}
+                 \factor{1}
+                 \rendimiento{3900}
+               }
+            }
+      }
+    \ud_obra
+      {
+        \codigo{220.002}
+        \ud{Ud}
+        \desc{Arqueta de registro de 51x51x80 cm realizada con fábrica de ladrillo macizo de medio pie de espesor recibido con mortero de cemento 1/6, enfoscada y bruñida en su interior incluso solera de hormigón H-175 kg/cm2 y tapa de hormigón, S/NTE-ISS-51} 
+        \textolargo{Arqueta de registro de 51x51x80 cm realizada con fábrica de ladrillo macizo de medio pie de espesor recibido con mortero de cemento 1/6, enfoscada y bruñida en su interior incluso solera de hormigón H-175 kg/cm2 y tapa de hormigón, S/NTE-ISS-51}
+        \descomp
+            {
+            \componente
+               {
+                 \ref{SINDESCO}
+                 \factor{1}
+                 \rendimiento{55000}
+               }
+            }
+      }
+    \ud_obra
+      {
+        \codigo{220.003}
+        \ud{Ud}
+        \desc{Arqueta de registro de 51x51x80 cm realizada con fábrica de ladrillo macizo de medio pie de espesor recibido con mortero de cemento 1/6, enfoscada y bruñida en su interior incluso solera de hormigón H-175 kg/cm2 y tapa de hormigón, incluso válvula de cierre manual, S/NTE-ISS-18-51}
+        \textolargo{Arqueta de registro de 51x51x80 cm realizada con fábrica de ladrillo macizo de ½ pie de espesor recibido con mortero de cemento 1/6, enfoscada y bruñida en su interior incluso solera de hormigón H-175 kg/cm2 y tapa de hormigón, incluso válvula de cierre manual, S/NTE-ISS-18-51}
+        \descomp
+            {
+            \componente
+               {
+                 \ref{SINDESCO}
+                 \factor{1}
+                 \rendimiento{55000}
+               }
+            }
+      }
+    \ud_obra
+      {
+        \codigo{220.004}
+        \ud{Ud}
+        \desc{Arqueta sumidero sifónico de 20x50 cm realizada con fábrica de ladrillo macizo de medio pie de espesor, enfoscada y bruñida en su interior incluso solera de hormigón H-125 kg/cm2 de 10 cm de espesor y rejilla plana desmontable de hierro fundido con cerco, S/NTE-ISS-53.}
+        \textolargo{Arqueta sumidero sifónico de 20x50 cm realizada con fábrica de ladrillo macizo de medio pie de espesor, enfoscada y bruñida en su interior incluso solera de hormigón H-125 kg/cm2 de 10 cm de espesor y rejilla plana desmontable de hierro fundido con cerco, S/NTE-ISS-53.}
+        \descomp
+            {
+            \componente
+               {
+                 \ref{SINDESCO}
+                 \factor{1}
+                 \rendimiento{35000}
+               }
+            }
+      }
+    \ud_obra
+      {
+        \codigo{220.005}
+        \ud{Ud}
+        \desc{Arqueta sifónica de 38x38x50 cm realizada con fábrica de ladrillo macizo de medio pie de espesor, recibido con mortero de cemento 1/6, enfoscada y bruñida en su interior incluso solera de hormigón H-100 kg/cm2, tapa de hormigón armado y sifón de PVC,  según NTE-ISS-52.}
+        \textolargo{Arqueta sifónica de 38x38x50 cm realizada con fábrica de ladrillo macizo de medio pie de espesor, recibido con mortero de cemento 1/6, enfoscada y bruñida en su interior incluso solera de hormigón H-100 kg/cm2, tapa de hormigón armado y sifón de PVC,  según NTE-ISS-52.}
+        \descomp
+            {
+            \componente
+               {
+                 \ref{SINDESCO}
+                 \factor{1}
+                 \rendimiento{33000}
+               }
+            }
+      }
+    \ud_obra
+      {
+        \codigo{220.006}
+        \ud{Ud}
+        \desc{Sumidero sifónico de salida vertical en latón con espesor de 3 mm de 20x20 cm, totalmente instalado según NTE-ISS-13}
+        \textolargo{Sumidero sifónico de salida vertical en latón con espesor de 3 mm de 20x20 cm, totalmente instalado según NTE-ISS-13}
+        \descomp
+            {
+            \componente
+               {
+                 \ref{SINDESCO}
+                 \factor{1}
+                 \rendimiento{45000}
+               }
+            }
+      }
+    \ud_obra
+      {
+        \codigo{220.007}
+        \ud{Ud}
+        \desc{Imbornal 90x50x50 cm de hormigón prefabricado, recibido con mortero de cemento y arena de río 1&6 totalmente instalado.}
+        \textolargo{Imbornal 90x50x50 cm de hormigón prefabricado, recibido con mortero de cemento y arena de río 1&6 totalmente instalado.}
+        \descomp
+            {
+            \componente
+               {
+                 \ref{SINDESCO}
+                 \factor{1}
+                 \rendimiento{54000}
+               }
+            }
+      }
+    \ud_obra
+      {
+        \codigo{220.008}
+        \ud{Ud}
+        \desc{Separador de grasas de 100x80x150 cm realizado con muros de ladrillo macizo de 1 pie de espesor, enfoscado y bruñido en su interior, sobre solera de hormigón H-125 kg/cm2.}
+        \textolargo{Separador de grasas de 100x80x150 cm realizado con muros de ladrillo macizo de 1 pie de espesor, enfoscado y bruñido en su interior, sobre solera de hormigón H-125 kg/cm2.}
+        \descomp
+            {
+            \componente
+               {
+                 \ref{SINDESCO}
+                 \factor{1}
+                 \rendimiento{155000}
+               }
+            }
+      }
+    \ud_obra
+      {
+        \codigo{220.009}
+        \ud{m}
+        \desc{Canaleta de hormigón polímero para recogida de aguas de 300 mm de altura ALFA-DRAIN, para cargas ligeras y medias con rejilla de fundición dúctil, i/solera de hormigón y medios auxiliares para la correcta ejecución de los trabajos}
+        \textolargo{Canaleta de hormigón polímero para recogida de aguas de 300 mm de altura ALFA-DRAIN, para cargas ligeras y medias con rejilla de fundición dúctil, i/solera de hormigón y medios auxiliares para la correcta ejecución de los trabajos}
+        \descomp
+            {
+            \componente
+               {
+                 \ref{SINDESCO}
+                 \factor{1}
+                 \rendimiento{7200}
+               }
+            }
+      }
+    \ud_obra
+      {
+        \codigo{230.001}
+        \ud{Ml}
+        \desc{Tubería de polietileno de alta densidad, flexible, diámetro interior de 38 mm, para 10 Atm. Serie Hersalit de Saenger en color negro, UNE 53.131-ISO 161/1, incluso parte proporcional De piezas especiales, totalmente instalada.}
+        \textolargo{Tubería de polietileno de alta densidad, flexible, diámetro interior de 38 mm, para 10 Atm. Serie Hersalit de Saenger en color negro, UNE 53.131-ISO 161/1, incluso parte proporcional De piezas especiales, totalmente instalada.}
+        \descomp
+            {
+            \componente
+               {
+                 \ref{SINDESCO}
+                 \factor{1}
+                 \rendimiento{2000}
+               }
+            }
+      }
+    \ud_obra
+      {
+        \codigo{230.001.2}
+        \ud{Ml}
+        \desc{Tubería de polietileno de alta densidad, flexible, diámetro nominal de 120 mm, para 10 Atm.}
+        \textolargo{Tubería de polietileno de alta densidad, flexible, diámetro nominal de 120 mm, para 10 Atm.}
+        \descomp
+            {
+            \componente
+               {
+                 \ref{SINDESCO}
+                 \factor{1}
+                 \rendimiento{7800}
+               }
+            }
+      }
+    \ud_obra
+      {
+        \codigo{230.001.3}
+        \ud{Ml}
+        \desc{Tubería de polietileno de alta densidad, flexible, diámetro nominal de 25 mm, para 10 Atm.}
+        \textolargo{Tubería de polietileno de alta densidad, flexible, diámetro nominal de 25 mm, para 10 Atm.}
+        \descomp
+            {
+            \componente
+               {
+                 \ref{SINDESCO}
+                 \factor{1}
+                 \rendimiento{1200}
+               }
+            }
+      }
+    \ud_obra
+      {
+        \codigo{230.001.4}
+        \ud{Ml}
+        \desc{Tubería de polietileno de alta densidad, flexible, diámetro nominal de 80 mm, para 10 Atm.}
+        \textolargo{Tubería de polietileno de alta densidad, flexible, diámetro nominal de 80 mm, para 10 Atm.}
+        \descomp
+            {
+            \componente
+               {
+                 \ref{SINDESCO}
+                 \factor{1}
+                 \rendimiento{3500}
+               }
+            }
+      }
+    \ud_obra
+      {
+        \codigo{230.002}
+        \ud{Ud}
+        \desc{Llave de esfera de pulgada y media   de latón especial S/DIN 17660.}
+        \textolargo{Llave de esfera de pulgada y media   de latón especial S/DIN 17660.}
+        \descomp
+            {
+            \componente
+               {
+                 \ref{SINDESCO}
+                 \factor{1}
+                 \rendimiento{15000}
+               }
+            }
+      }
+    \ud_obra
+      {
+        \codigo{230.003}
+        \ud{Ud}
+        \desc{Grifo de latón boca roscada de 3/4  , totalmente instalado.}
+        \textolargo{Grifo de latón boca roscada de 3/4  , totalmente instalado.}
+        \descomp
+            {
+            \componente
+               {
+                 \ref{SINDESCO}
+                 \factor{1}
+                 \rendimiento{28000}
+               }
+            }
+      }
+    \ud_obra
+      {
+        \codigo{230.004}
+        \ud{Ud}
+        \desc{Arqueta de registro de 38x26x50 cm, realizada con fábrica de ladrillo macizo de medio pie de espesor recibido con mortero de cemento 1/6, enfoscada y bruñida en su interior, incluso solera de hormigón H-175 Kg/cm2 y tapa de hormigón armado, S/NTE-ISS-51; y llave de esfera de  pulgada y media de latón especial S/DIN 17660.}
+        \textolargo{Arqueta de registro de 38x26x50 cm, realizada con fábrica de ladrillo macizo de medio pie de espesor recibido con mortero de cemento 1/6, enfoscada y bruñida en su interior, incluso solera de hormigón H-175 Kg/cm2 y tapa de hormigón armado, S/NTE-ISS-51; y llave de esfera de  pulgada y media de latón especial S/DIN 17660.}
+        \descomp
+            {
+            \componente
+               {
+                 \ref{SINDESCO}
+                 \factor{1}
+                 \rendimiento{50000}
+               }
+            }
+      }
+    \ud_obra
+      {
+        \codigo{230.005}
+        \ud{Ml}
+        \desc{Tubería de cobre UNE 22 mm incluso codos, manguitos y demás accesorios, colocados y parte proporcional de tubo corrugado de d=23 mm, totalmente instalada según normativa vigente.}
+        \textolargo{Tubería de cobre UNE 22 mm incluso codos, manguitos y demás accesorios, colocados y parte proporcional de tubo corrugado de d=23 mm, totalmente instalada según normativa vigente.}
+        \descomp
+            {
+            \componente
+               {
+                 \ref{SINDESCO}
+                 \factor{1}
+                 \rendimiento{2500}
+               }
+            }
+      }
+    \ud_obra
+      {
+        \codigo{230.006}
+        \ud{Ud}
+        \desc{Distribuidor de latón o fundición para 4 salidas de agua, incluso parte proporcional de piezas especiales, totalmente instalado.}
+        \textolargo{Distribuidor de latón o fundición para 4 salidas de agua, incluso parte proporcional de piezas especiales, totalmente instalado.}
+        \descomp
+            {
+            \componente
+               {
+                 \ref{SINDESCO}
+                 \factor{1}
+                 \rendimiento{50000}
+               }
+            }
+      }
+    \ud_obra
+      {
+        \codigo{230.007}
+        \ud{m}
+        \desc{Canalón visto de chapa galvanizada de 33 cm de desarrollo, fijado con abrazaderas al tejado cada 50 cm, i/p.p. de soldadura y piezas especiales de conexión a la bajante}
+        \textolargo{Canalón visto de chapa galvanizada de 33 cm de desarrollo, fijado con abrazaderas al tejado cada 50 cm, i/p.p. de soldadura y piezas especiales de conexión a la bajante}
+        \descomp
+            {
+            \componente
+               {
+                 \ref{SINDESCO}
+                 \factor{1}
+                 \rendimiento{2493}
+               }
+            }
+      }
+    \ud_obra
+      {
+        \codigo{230.008}
+        \ud{m}
+        \desc{Bajante de aluminio prelacado en color, de 120 mm de diámetro, para evacuación de aguas pluviales, fijada con abrazaderas a la pared, i/codos y piezas especiales, medios auxiliares y de seguridad, totalmente colocada}
+        \textolargo{Bajante de aluminio prelacado en color, de 120 mm de diámetro, para evacuación de aguas pluviales, fijada con abrazaderas a la pared, i/codos y piezas especiales, medios auxiliares y de seguridad, totalmente colocada}
+        \descomp
+            {
+            \componente
+               {
+                 \ref{SINDESCO}
+                 \factor{1}
+                 \rendimiento{2657}
+               }
+            }
+      }
+    \ud_obra
+      {
+        \codigo{240.001}
+        \ud{m2}
+        \desc{Arqueta de instalación eléctrica de dimensiones interiores de 0,60x0,6x0,95 m con solera de hormigón H-150 kg/cm2 con paredes de fábrica de ladrillo de 1/2 pie enfoscado interiormente con mortero de cemento 1/6, coronación en hormigón y tapa de chapa de acero nervada y galvanizada, incluso base de 10 cm de grava sobre solera y parte proporcional de excavación, mano de obra y mediciones auxiliares, totalmente terminadas.}
+        \textolargo{Arqueta de instalación eléctrica de dimensiones interiores de 0,60x0,6x0,95 m con solera de hormigón H-150 kg/cm2 con paredes de fábrica de ladrillo de 1/2 pie enfoscado interiormente con mortero de cemento 1/6, coronación en hormigón y tapa de chapa de acero nervada y galvanizada, incluso base de 10 cm de grava sobre solera y parte proporcional de excavación, mano de obra y mediciones auxiliares, totalmente terminadas.}
+        \descomp
+            {
+            \componente
+               {
+                 \ref{SINDESCO}
+                 \factor{1}
+                 \rendimiento{35000}
+               }
+            }
+      }
+    \ud_obra
+      {
+        \codigo{240.002}
+        \ud{Ml}
+        \desc{Canalización (Tipo 1) reforzada para alojamiento de líneas eléctricas de 0,6 x 0,85 m de sección con 2 tubos de d=15 cm de PVC, capa inferior de 25 cm de hormigón  H-125 kg/cm2 para protección y anclaje de las canalizaciones y relleno superior de tierra compactada, incluso cobertura de aviso presencia de cables, alojamiento de cable de acero para trazado de líneas eléctricas, p.p de excavación, mano de obra, materiales y medios auxiliares.}
+        \textolargo{Canalización (Tipo 1) reforzada para alojamiento de líneas eléctricas de 0,6 x 0,85 m de sección con 2 tubos de d=15 cm de PVC, capa inferior de 25 cm de hormigón  H-125 kg/cm2 para protección y anclaje de las canalizaciones y relleno superior de tierra compactada, incluso cobertura de aviso presencia de cables, alojamiento de cable de acero para trazado de líneas eléctricas, p.p de excavación, mano de obra, materiales y medios auxiliares.}
+        \descomp
+            {
+            \componente
+               {
+                 \ref{SINDESCO}
+                 \factor{1}
+                 \rendimiento{3800}
+               }
+            }
+      } 
+    \ud_obra
+      {
+        \codigo{240.003}
+        \ud{Ml}
+        \desc{Canalización (Tipo 2) reforzada para alojamiento de líneas eléctricas de 0,6 x 0,85 m de sección con 2 tubos de d=15 cm de PVC, capa inferior de 25 cm de hormigón  H-125 kg/cm2 para protección y anclaje de las canalizaciones y relleno superior de tierra compactada, incluso cobertura de aviso presencia de cables, alojamiento de cable de acero para trazado de líneas eléctricas, p.p de excavación, mano de obra, materiales y medios auxiliares.}
+        \textolargo{Canalización (Tipo 2) reforzada para alojamiento de líneas eléctricas de 0,6 x 0,85 m de sección con 2 tubos de d=15 cm de PVC, capa inferior de 25 cm de hormigón  H-125 kg/cm2 para protección y anclaje de las canalizaciones y relleno superior de tierra compactada, incluso cobertura de aviso presencia de cables, alojamiento de cable de acero para trazado de líneas eléctricas, p.p de excavación, mano de obra, materiales y medios auxiliares.}
+        \descomp
+            {
+            \componente
+               {
+                 \ref{SINDESCO}
+                 \factor{1}
+                 \rendimiento{3800}
+               }
+            }
+      } 
+    \ud_obra
+      {
+        \codigo{240.004}
+        \ud{Ml}
+        \desc{Canalización para alojamiento de línea de alumbrado de 0,6x0,35 m de reacción con 1 tubo de d=15 cm de PVC y relleno con tierra compactada, incluso  cobertura de aviso de presencia de cables, acoplamiento con dados de cimentación, poste de luz y parte proporcional De excavación, mano de obra, materiales y medios auxiliares.}
+        \textolargo{Canalización para alojamiento de línea de alumbrado de 0,6x0,35 m de reacción con 1 tubo de d=15 cm de PVC y relleno con tierra compactada, incluso  cobertura de aviso de presencia de cables, acoplamiento con dados de cimentación, poste de luz y parte proporcional De excavación, mano de obra, materiales y medios auxiliares.}
+        \descomp
+            {
+            \componente
+               {
+                 \ref{SINDESCO}
+                 \factor{1}
+                 \rendimiento{2500}
+               }
+            }
+      }
+    \ud_obra
+      {
+        \codigo{240.005}
+        \ud{Ud}
+        \desc{Cuadro General de Baja Tensión en chapa de acero de 2.5 mm2 de espesor, acabado mediante desengrasado, imprimación y pintura en polvo epoxi-poliester de 60 micras de espesor mínimo, conteniendo en su interior debidamente montado y cableado el aparellaje que a continuación se especifica: 1,00 Ud Interruptor tetrap. 40 A, 4,00 Ud Interruptor tetrap., hasta 32 A, 11,00 Ud Interruptor bipolar hasta 32 A, 1,00 Ud Interr. Dif. Tetra 40 A 30 mA, 2.00 Ud Interr. Dif. Tetra 25 A 300 mA, 1,00 Ud Interr. Dif. Tetra 25 A 30 mA, 1,00 PA Cuadro, mano de obra y cableado.}
+        \textolargo{Cuadro General de Baja Tensión en chapa de acero de 2.5 mm2 de espesor, acabado mediante desengrasado, imprimación y pintura en polvo epoxi-poliester de 60 micras de espesor mínimo, conteniendo en su interior debidamente montado y cableado el aparellaje que a continuación se especifica:1,00 Ud Interruptor tetrap. 40 A, 4,00 Ud Interruptor tetrap., hasta 32 A, 11,00 Ud Interruptor bipolar hasta 32 A, 1,00 Ud Interr. Dif. Tetra 40 A 30 mA, 2.00 Ud Interr. Dif. Tetra 25 A 300 mA, 1,00 Ud Interr. Dif. Tetra 25 A 30 mA, 1,00 PA Cuadro, mano de obra y cableado.} 
+        \descomp
+            {
+            \componente
+               {
+                 \ref{SINDESCO}
+                 \factor{1}
+                 \rendimiento{336355}
+               }
+            }
+      }
+
+    \ud_obra
+      {
+        \codigo{240.006}
+        \ud{Ud}
+        \desc{Luminaria empotrable para falsos techos perfil visto, serie IET de Indalux o similar, para lámparas fluorescentes 4x18 W, incluso estas, reflector y lamas de acero en blanco, unidad totalmente montada y conexionada.}
+        \textolargo{Luminaria empotrable para falsos techos perfil visto, serie IET de Indalux o similar, para lámparas fluorescentes 4x18 W, incluso estas, reflector y lamas de acero en blanco, unidad totalmente montada y conexionada.}
+        \descomp
+            {
+            \componente
+               {
+                 \ref{SINDESCO}
+                 \factor{1}
+                 \rendimiento{15200}
+               }
+            }
+      }
+    \ud_obra
+      {
+        \codigo{240.007}
+        \ud{Ud}
+        \desc{Luminaria de señalización y emergencia estanca IP-55, tipo hércules de Zemper o similar con lámpara fluorescentes de 9 W y baterías para una autonomía de 1 h.}
+        \textolargo{Luminaria de señalización y emergencia estanca IP-55, tipo hércules de Zemper o similar con lámpara fluorescentes de 9 W y baterías para una autonomía de 1 h.}
+        \descomp
+            {
+            \componente
+               {
+                 \ref{SINDESCO}
+                 \factor{1}
+                 \rendimiento{17500}
+               }
+            }
+      } 
+    \ud_obra
+      {
+        \codigo{240.008}
+        \ud{Ud}
+        \desc{Luminaria para exterior IP-55 tipo bañador de pared, adosada, de cuerpo en plástico y reflector de aluminio abrillantado y oxidado y difusor de cristal templado para lámpara de VSAP de 70 W, en fachada de edificio, incluso parte proporcional de conductor y caja de derivación, unidad totalmente montada y conexionada.}
+        \textolargo{Luminaria para exterior IP-55 tipo bañador de pared, adosada, de cuerpo en plástico y reflector de aluminio abrillantado y oxidado y difusor de cristal templado para lámpara de VSAP de 70 W, en fachada de edificio, incluso parte proporcional de conductor y caja de derivación, unidad totalmente montada y conexionada.}
+        \descomp
+            {
+            \componente
+               {
+                 \ref{SINDESCO}
+                 \factor{1}
+                 \rendimiento{18450}
+               }
+            }
+      }
+    \ud_obra
+      {
+        \codigo{240.009}
+        \ud{Ud}
+        \desc{Regleta fluorescente estanca, tipo NLW-500 de Philips o similar, para 1 tubo fluorescente de 36 W, incluso estos, unidad totalmente montada y conexionada.}
+        \textolargo{Regleta fluorescente estanca, tipo NLW-500 de Philips o similar, para 1 tubo fluorescente de 36 W, incluso estos, unidad totalmente montada y conexionada.}
+        \descomp
+            {
+            \componente
+               {
+                 \ref{SINDESCO}
+                 \factor{1}
+                 \rendimiento{8850}
+               }
+            }
+      }
+    \ud_obra
+      {
+        \codigo{240.010}
+        \ud{Ud}
+        \desc{Regleta fluorescente estanca, tipo NLW-500 de Philips o similar, para 2 tubos fluorescentes de 36 W, incluso estos, unidad totalmente montada y conexionada.}
+        \textolargo{Regleta fluorescente estanca, tipo NLW-500 de Philips o similar, para 2 tubos fluorescentes de 36 W, incluso estos, unidad totalmente montada y conexionada.}
+        \descomp
+            {
+            \componente
+               {
+                 \ref{SINDESCO}
+                 \factor{1}
+                 \rendimiento{21040}
+               }
+            }
+      }
+    \ud_obra
+      {
+        \codigo{240.011}
+        \ud{Ud}
+        \desc{Interruptor unipolar simple para mando alumbrado, incluso parte proporcional de conductor, montado y conexionado.}
+        \textolargo{Interruptor unipolar simple para mando alumbrado, incluso parte proporcional de conductor, montado y conexionado.}
+        \descomp
+            {
+            \componente
+               {
+                 \ref{SINDESCO}
+                 \factor{1}
+                 \rendimiento{4100}
+               }
+            }
+      }
+    \ud_obra
+      {
+        \codigo{240.012}
+        \ud{Ud}
+        \desc{Interruptor unipolar simple estanco para mando alumbrado, incluso parte proporcional de conductor, montado y conexionado}
+        \textolargo{Interruptor unipolar simple estanco para mando alumbrado, incluso parte proporcional de conductor, montado y conexionado}
+        \descomp
+            {
+            \componente
+               {
+                 \ref{SINDESCO}
+                 \factor{1}
+                 \rendimiento{5400}
+               }
+            }
+      }
+    \ud_obra
+      {
+        \codigo{240.013}
+        \ud{Ud}
+        \desc{Toma de corriente trifásica con tierra de 16 A, con caja y parte proporcional de línea de alimentación}
+        \textolargo{Toma de corriente trifásica con tierra de 16 A, con caja y parte proporcional de línea de alimentación}
+        \descomp
+            {
+            \componente
+               {
+                 \ref{SINDESCO}
+                 \factor{1}
+                 \rendimiento{5300}
+               }
+            }
+      } 
+    \ud_obra
+      {
+        \codigo{240.014}
+        \ud{Ud}
+        \desc{Toma de corriente trifásica con tierra de 32 A, con caja y parte proporcional de línea de alimentación}
+        \textolargo{Toma de corriente trifásica con tierra de 32 A, con caja y parte proporcional de línea de alimentación}
+        \descomp
+            {
+            \componente
+               {
+                 \ref{SINDESCO}
+                 \factor{1}
+                 \rendimiento{7900}
+               }
+            }
+      } 
+    \ud_obra
+      {
+        \codigo{240.015}
+        \ud{Ud}
+        \desc{Arqueta de puesta a tierra registrable para pica de 2 m, según planos, terminada.}
+        \textolargo{Arqueta de puesta a tierra registrable para pica de 2 m, según planos, terminada.}
+        \descomp
+            {
+            \componente
+               {
+                 \ref{SINDESCO}
+                 \factor{1}
+                 \rendimiento{36200}
+               }
+            }
+      }
+    \ud_obra
+      {
+        \codigo{240.016}
+        \ud{Ud}
+        \desc{Pica de Acero cobrizado de 2 m de longitud y 14 mm de diámetro, incluyendo colocación, para puesta a tierra}
+        \textolargo{Pica de Acero cobrizado de 2 m de longitud y 14 mm de diámetro, incluyendo colocación, para puesta a tierra}
+        \descomp
+            {
+            \componente
+               {
+                 \ref{SINDESCO}
+                 \factor{1}
+                 \rendimiento{8900}
+               }
+            }
+      }
+    \ud_obra
+      {
+        \codigo{240.017}
+        \ud{Ud}
+        \desc{Cable de Cu desnudo enterrado de 50 mm2}
+        \textolargo{Cable de Cu desnudo enterrado de 50 mm2}
+        \descomp
+            {
+            \componente
+               {
+                 \ref{SINDESCO}
+                 \factor{1}
+                 \rendimiento{1630}
+               }
+            }
+      } 
+    \ud_obra
+      {
+        \codigo{240.018}
+        \ud{m}
+        \desc{Cable de Cu RV 0.6/1 kV de xx1.5 mm2 + T tendido en tubo o bandeja}
+        \textolargo{Cable de Cu RV 0.6/1 kV de xx1.5 mm2 + T tendido en tubo o bandeja}
+        \descomp
+            {
+            \componente
+               {
+                 \ref{SINDESCO}
+                 \factor{1}
+                 \rendimiento{195}
+               }
+            }
+      } 
+    \ud_obra
+      {
+        \codigo{240.019}
+        \ud{m}
+        \desc{Cable de Cu H07V-K 750 V de 2x1.5 mm2 + T tendido en tubo o bandeja}
+        \textolargo{Cable de Cu H07V-K 750 V de 2x1.5 mm2 + T tendido en tubo o bandeja}
+        \descomp
+            {
+            \componente
+               {
+                 \ref{SINDESCO}
+                 \factor{1}
+                 \rendimiento{160}
+               }
+            }
+      }
+    \ud_obra
+      {
+        \codigo{240.020}
+        \ud{m}
+        \desc{Cable de Cu H07V-K de 2x2.5mm2 +T, tendido en tubo o bandeja}
+        \textolargo{Cable de Cu H07V-K de 2x2.5mm2 +T, tendido en tubo o bandeja}
+        \descomp
+            {
+            \componente
+               {
+                 \ref{SINDESCO}
+                 \factor{1}
+                 \rendimiento{210}
+               }
+            }
+      } 
+    \ud_obra
+      {
+        \codigo{240.021}
+        \ud{m}
+        \desc{Cable de Cu RV 0.6/1 kV de 2x4 mm2 + T, tendido en tubo o bandeja}
+        \textolargo{Cable de Cu RV 0.6/1 kV de 2x4 mm2 + T, tendido en tubo o bandeja}
+        \descomp
+            {
+            \componente
+               {
+                 \ref{SINDESCO}
+                 \factor{1}
+                 \rendimiento{240}
+               }
+            }
+      } 
+    \ud_obra
+      {
+        \codigo{240.022}
+        \ud{m}
+        \desc{Cable de Cu RV 0.6/1 kV de 4x10 mm2, tendido en tubo o bandeja, Ac CGBT}
+        \textolargo{Cable de Cu RV 0.6/1 kV de 4x10 mm2, tendido en tubo o bandeja, Ac CGBT}
+        \descomp
+            {
+            \componente
+               {
+                 \ref{SINDESCO}
+                 \factor{1}
+                 \rendimiento{520}
+               }
+            }
+      }
+    \ud_obra
+      {
+        \codigo{250.001}
+        \ud{PA}
+        \desc{Suministro e Instalación de riego automatizado por goteo y/o microdifusores, para hilera de 20 árboles en una longitud de 120 m y para 50 m de seto, incluso regulador de presión, electroválvula, cable eléctrico antihumedad, programador electrónico de 4 zonas, llaves de paso, zanjas y arquetas necesarias.}
+        \textolargo{Suministro e Instalación de riego automatizado por goteo y/o microdifusores, para hilera de 20 árboles en una longitud de 120 m y para 50 m de seto, incluso regulador de presión, electroválvula, cable eléctrico antihumedad, programador electrónico de 4 zonas, llaves de paso, zanjas y arquetas necesarias.}
+        \descomp
+            {
+            \componente
+               {
+                 \ref{SINDESCO}
+                 \factor{1}
+                 \rendimiento{250000}
+               }
+            }
+      }
+    \ud_obra
+      {
+        \codigo{250.002}
+        \ud{Ud}
+        \desc{Suministro e instalación de boca de riego de acople rápido de ¾” con cuerpo y tapa de bronce, totalmente terminado.}
+        \textolargo{Suministro e instalación de boca de riego de acople rápido de ¾” con cuerpo y tapa de bronce, totalmente terminado.}
+        \descomp
+            {
+            \componente
+               {
+                 \ref{SINDESCO}
+                 \factor{1}
+                 \rendimiento{39000}
+               }
+            }
+      }
+    \ud_obra
+      {
+        \codigo{260.002}
+        \ud{PA}
+        \desc{Levantamiento topográfico de los terrenos}
+        \textolargo{Levantamiento topográfico de los terrenos}
+        \descomp
+            {
+            \componente
+               {
+                 \ref{SINDESCO}
+                 \factor{1}
+                 \rendimiento{250000}
+               }
+            }
+      }
+    \ud_obra
+      {
+        \codigo{260.001}
+        \ud{PA}
+        \desc{Realización proyecto de construcción y de Seguridad y Salud, a partir del proyecto técnico suministrado, incluyendo la realización de los ensayos geotécnicos y demás que se consideron necesarios.}
+        \textolargo{Realización proyecto de construcción y de Seguridad y Salud, a partir del proyecto técnico suministrado, incluyendo la realización de los ensayos geotécnicos y demás que se consideron necesarios.}
+        \descomp
+            {
+            \componente
+               {
+                 \ref{SINDESCO}
+                 \factor{1}
+                 \rendimiento{4000000}
+               }
+            }
+      }
+    \ud_obra
+      {
+        \codigo{270.001}
+        \ud{Ud}
+        \desc{Extractor helicoidal para su instalación en cerramiento del taller de diámetro 214 mm. Caudal extractor 400 m3/h, potencia 32 W y tensión de alimentación 220 V, totalmente instalado.}
+        \textolargo{Extractor helicoidal para su instalación en cerramiento del taller de diámetro 214 mm. Caudal extractor 400 m3/h, potencia 32 W y tensión de alimentación 220 V, totalmente instalado.}
+        \descomp
+            {
+            \componente
+               {
+                 \ref{SINDESCO}
+                 \factor{1}
+                 \rendimiento{4200}
+               }
+            }
+      }
+    \ud_obra
+      {
+        \codigo{270.002}
+        \ud{Ud}
+        \desc{Extractor helicocentrífugo para instalar en zona de aseos, para conducto sobre techo, fi 100 x 215 mm, de caudal 160 m3/h 35 W de potencia y tensión 220 V.}
+        \textolargo{Extractor helicocentrífugo para instalar en zona de aseos, para conducto sobre techo, fi 100 x 215 mm, de caudal 160 m3/h 35 W de potencia y tensión 220 V.}
+        \descomp
+            {
+            \componente
+               {
+                 \ref{SINDESCO}
+                 \factor{1}
+                 \rendimiento{6870}
+               }
+            }
+      }
+    \ud_obra
+      {
+        \codigo{270.003}
+        \ud{Ud}
+        \desc{Bocas de aspiración instaladas sobre falso techo de aseos de diámetros 100 mm.}
+        \textolargo{Bocas de aspiración instaladas sobre falso techo de aseos de diámetros 100 mm.}
+        \descomp
+            {
+            \componente
+               {
+                 \ref{SINDESCO}
+                 \factor{1}
+                 \rendimiento{2000}
+               }
+            }
+      }
+    \ud_obra
+      {
+        \codigo{270.004}
+        \ud{Ud}
+        \desc{Rejilla de aluminio para instalación a muro de dimensiones 130 x 130mm.}
+        \textolargo{Rejilla de aluminio para instalación a muro de dimensiones 130 x 130mm.}
+        \descomp
+            {
+            \componente
+               {
+                 \ref{SINDESCO}
+                 \factor{1}
+                 \rendimiento{300}
+               }
+            }
+      }
+  \ud_obra
+      {
+        \codigo{280.001}
+        \desc{Sumini., apert. hoyo, plantación y primer riego de Pinus pinea}
+        \ud{Ud}
+        \textolargo{Suministro, apertura de hoyo, plantación y primer riego de Pinus pinea (Pino) de 1.5 a 2.0 m de altura con cepellón escayolado}
+        \descomp
+            {
+            \componente
+               {
+                 \ref{SINDESCO}
+                 \factor{1}
+                 \rendimiento{19725}
+               }
+            }
+      }
+ \ud_obra
+      {
+        \codigo{280.002}
+        \desc{Sumini., apert. hoyo, plantación y primer riego de Olea europaea}
+        \ud{Ud}
+        \textolargo{Suministro, apertura de hoyo, plantación y primer riego de Olea europaea (Olivo) ejemplar centenario con cepellón}
+        \descomp
+            {
+            \componente
+               {
+                 \ref{SINDESCO}
+                 \factor{1}
+                 \rendimiento{86439}
+               }
+            }
+      }
+ \ud_obra
+      {
+        \codigo{280.003}
+        \desc{Sumini., apert. hoyo, plantación y primer riego de Acacia dealbata}
+        \ud{Ud}
+        \textolargo{Suministro, apertura de hoyo, plantación y primer riego de Acacia dealbata (Mimosa) de 14 16 cm de circunferencia a 1 m del suelo con cepellón en container}
+        \descomp
+            {
+            \componente
+               {
+                 \ref{SINDESCO}
+                 \factor{1}
+                 \rendimiento{5951}
+               }
+            }
+      }
+ \ud_obra
+      {
+        \codigo{280.004}
+        \desc{Sumini., apert. hoyo, plantación y primer riego de Arbutus unedo}
+        \ud{Ud}
+        \textolargo{Suministro, apertura de hoyo, plantación y primer riego de Arbutus unedo (Madroño) de 0.8 a 1.0 m de altura con cepellón en conatiner.}
+        \descomp
+            {
+            \componente
+               {
+                 \ref{SINDESCO}
+                 \factor{1}
+                 \rendimiento{2115}
+               }
+            }
+      }
+\ud_obra
+      {
+        \codigo{280.005}
+        \desc{Sumini., apert. hoyo, plantación y primer riego de Prunus dulcis}
+        \ud{Ud}
+        \textolargo{Suministro, apertura de hoyo, plantación y primer riego de Prunus dulcis (Almendro) de 2.0 a 2.5 m de altura con cepellón en container.}
+        \descomp
+            {
+            \componente
+               {
+                 \ref{SINDESCO}
+                 \factor{1}
+                 \rendimiento{5703}
+               }
+            }
+      }
+
+
+ \ud_obra
+      {
+        \codigo{280.006}
+        \desc{Sumini., apert. hoyo, plantación y primer riego de Rosa spp.}
+        \ud{Ud}
+        \textolargo{Suministro, apertura de hoyo, plantación y primer riego de Rosa spp. (Rosa) de pie bajo de 0.3 a 0.4 m de altura con cepellón en conatiner.}
+        \descomp
+            {
+            \componente
+               {
+                 \ref{SINDESCO}
+                 \factor{1}
+                 \rendimiento{1923}
+               }
+            }
+      }
+ \ud_obra
+      {
+        \codigo{280.007}
+        \desc{Sumini., apert. hoyo, plantación y primer riego de Syringa vulgaris}
+        \ud{Ud}
+        \textolargo{Suministro, apertura de hoyo, plantación y primer riego de Syringa vulgaris (Lilo) de 0.6 a 0.8 m de altura con cepellón en conatiner.}
+        \descomp
+            {
+            \componente
+               {
+                 \ref{SINDESCO}
+                 \factor{1}
+                 \rendimiento{2721}
+               }
+            }
+      }
+
+ \ud_obra
+      {
+        \codigo{280.008}
+        \desc{Sumini., apert. hoyo, plantación y primer riego de Cytissus scoparius}
+        \ud{Ud}
+        \textolargo{Suministro, apertura de hoyo, plantación y primer riego de Cytissus scoparius (Retama) de 0.6 a 0.8 m de altura con cepellón en conatiner.}
+        \descomp
+            {
+            \componente
+               {
+                 \ref{SINDESCO}
+                 \factor{1}
+                 \rendimiento{1711}
+               }
+            }
+      }
+ \ud_obra
+      {
+        \codigo{280.009}
+        \desc{Sumini., apert. hoyo, plantación y primer riego de Cytissus multiflorus}
+        \ud{Ud}
+        \textolargo{Suministro, apertura de hoyo, plantación y primer riego de Cytissus multiflorus (Escoba blanca) de 0.6 a 0.8 m de altura con cepellón en conatiner.}
+        \descomp
+            {
+            \componente
+               {
+                 \ref{SINDESCO}
+                 \factor{1}
+                 \rendimiento{1711}
+               }
+            }
+      }
+\ud_obra
+      {
+        \codigo{280.010}
+        \desc{Sumini., apert. hoyo, plantación y primer riego de Ulex europaeus}
+        \ud{Ud}
+        \textolargo{Suministro, apertura de hoyo, plantación y primer riego de Ulex europaeus (Tojo) de 0.6 a 0.8 m de altura con cepellón en container.}
+        \descomp
+            {
+            \componente
+               {
+                 \ref{SINDESCO}
+                 \factor{1}
+                 \rendimiento{1822}
+               }
+            }
+      }
+ \ud_obra
+      {
+        \codigo{280.011}
+        \desc{Sumini., apert. zanja, plantación y primer riego de Cupressus arizonica}
+        \ud{m}
+        \textolargo{Suministro, apertura de zanja, plantación y primer riego de Cupressus arizonica (Arizónica) de 0.6 a 0.8 m de altura con cepellón en conatiner (3 Ud/m).}
+        \descomp
+            {
+            \componente
+               {
+                 \ref{SINDESCO}
+                 \factor{1}
+                 \rendimiento{3351}
+               }
+            }
+      }
+ \ud_obra
+      {
+        \codigo{280.012}
+        \desc{Sumini., apert. hoyo, plantación y primer riego de Lavandula stoechas}
+        \ud{Ud}
+        \textolargo{Suministro, apertura de hoyo, plantación y primer riego de Lavandula stoechas (Lavanda) de 0.1 a 0.2 m de altura con cepellón en maceta.}
+        \descomp
+            {
+            \componente
+               {
+                 \ref{SINDESCO}
+                 \factor{1}
+                 \rendimiento{436}
+               }
+            }
+      }
+
+ \ud_obra
+      {
+        \codigo{280.013}
+        \desc{Sumini., apert. hoyo, plantación y primer riego de Rosmarinus officinalis}
+        \ud{Ud}
+        \textolargo{Suministro, apertura de hoyo, plantación y primer riego de Rosmarinus officinalis (Romero) de 0.2 a 0.3 m de altura con cepellón en maceta.}
+        \descomp
+            {
+            \componente
+               {
+                 \ref{SINDESCO}
+                 \factor{1}
+                 \rendimiento{436}
+               }
+            }
+      }
+ \ud_obra
+      {
+        \codigo{280.014}
+        \desc{Sumini., apert. hoyo, plantación y primer riego de bulbosas gran flora.}
+        \ud{Ud}
+        \textolargo{Suministro, apertura de hoyo, plantación y primer riego de plantas bulbosas de gran floración con cepellón en maceta.}
+        \descomp
+            {
+            \componente
+               {
+                 \ref{SINDESCO}
+                 \factor{1}
+                 \rendimiento{327}
+               }
+            }
+      }
+
+
+\ud_obra
+      {
+        \codigo{280.015}
+        \desc{Sumini. y coloca. de papelera de madera}
+        \ud{Ud}
+        \textolargo{Suministro y colocación de papelera de madera, 30 l de capacidad, con pie, incluida cimentación.}
+        \descomp
+            {
+            \componente
+               {
+                 \ref{SINDESCO}
+                 \factor{1} 
+                 \rendimiento{18830}
+               }
+            }
+      }
+\ud_obra
+      {
+        \codigo{280.016}
+        \desc{Sumini. y extendido de gravilla de e=3cm}
+        \ud{m2}
+        \textolargo{Suministro y extendido a mano de gravilla con un espesor de 3 cm.}
+        \descomp
+            {
+            \componente
+               {
+                 \ref{SINDESCO}
+                 \factor{1} 
+                 \rendimiento{400}
+               }
+            }
+      }
+\ud_obra
+      {
+        \codigo{280.017}
+        \desc{Solado de losetas de hormigón}
+        \ud{m2}
+        \textolargo{Solado de losetas de hormigón envejecido, recibidas con mortero cemento y arena de río, rejuntado y limpieza de superficie.}
+        \descomp
+            {
+            \componente
+               {
+                 \ref{SINDESCO}
+                 \factor{1} 
+                 \rendimiento{3830}
+               }
+            }
+      }
+\ud_obra
+      {
+        \codigo{280.018}
+        \desc{Sumini. coloca. y puesta en ejec. de tubería goteros}
+        \ud{m}
+        \textolargo{Suministro, colocación y puesta en ejecución de tubería goteros interlinea con distancia entre ellos de 0.5 m, i/p.p. de piezas especiales..}
+        \descomp
+            {
+            \componente
+               {
+                 \ref{SINDESCO}
+                 \factor{1} 
+                 \rendimiento{180}
+               }
+            }
+      }
+\ud_obra
+      {
+        \codigo{290.001}
+        \desc{Cuneta revestida (profundidad 0.4 m)}
+        \ud{m}
+        \textolargo{Cuneta revestida (profundidad 0.4 m)}
+        \descomp
+            {
+            \componente
+               {
+                 \ref{SINDESCO}
+                 \factor{1} 
+                 \rendimiento{4800}
+               }
+            }
+      }
+\ud_obra
+      {
+        \codigo{290.002}
+        \desc{Colector PVC de 30 cm de diámetro incluso excavación, colocación y relleno}
+        \ud{m}
+        \textolargo{Colector PVC de 30 cm de diámetro incluso excavación, colocación y relleno}
+        \descomp
+            {
+            \componente
+               {
+                 \ref{SINDESCO}
+                 \factor{1} 
+                 \rendimiento{3700}
+               }
+            }
+      }
+\ud_obra
+      {
+        \codigo{290.003}
+        \desc{Colector PVC de 40 cm de diámetro incluso excavación, colocación y relleno}
+        \ud{m}
+        \textolargo{Colector PVC de 40 cm de diámetro incluso excavación, colocación y relleno}
+        \descomp
+            {
+            \componente
+               {
+                 \ref{SINDESCO}
+                 \factor{1} 
+                 \rendimiento{5600}
+               }
+            }
+      }
+\ud_obra
+      {
+        \codigo{290.004}
+        \desc{Pozo de registro (altura máxima 3m)}
+        \ud{ud}
+        \textolargo{Pozo de registro (altura máxima 3m)}
+        \descomp
+            {
+            \componente
+               {
+                 \ref{SINDESCO}
+                 \factor{1} 
+                 \rendimiento{90000}
+               }
+            }
+      }
+\ud_obra
+      {
+        \codigo{300.001}
+        \desc{Panel rígido para la protección contraincendios, de 1.20x1.20 m, con RF-120, compuesto por vermiculita y silicato de calcio}
+        \ud{m2}
+        \textolargo{Panel rígido para la protección contraincendios, de 1.20x1.20 m, con RF-120, compuesto por vermiculita y silicato de calcio}
+        \descomp
+            {
+            \componente
+               {
+                 \ref{SINDESCO}
+                 \factor{1} 
+                 \rendimiento{9000}
+               }
+            }
+      }
+\ud_obra
+      {
+        \codigo{310.001}
+        \desc{Botiquín instalado}
+        \ud{ud}
+        \textolargo{Botiquín instalado}
+        \descomp
+            {
+            \componente
+               {
+                 \ref{SINDESCO}
+                 \factor{1} 
+                 \rendimiento{9500}
+               }
+            }
+      }
+\ud_obra
+      {
+        \codigo{310.002}
+        \desc{Banco vestuario realizado con tres tablones de madera de pino pintados de 7x4 cm atornillados a escuadra realizado con tubo 60x40 recibidas a la pared i/perchero realizado con tabla 15x3 cm, atornillados a la pared con ganchos para cualgue de ropa, totalmente terminado y montado}
+        \ud{m}
+        \textolargo{Banco vestuario realizado con tres tablones de madera de pino pintados de 7x4 cm atornillados a escuadra realizado con tubo 60x40 recibidas a la pared i/perchero realizado con tabla 15x3 cm, atornillados a la pared con ganchos para cualgue de ropa, totalmente terminado y montado}
+        \descomp
+            {
+            \componente
+               {
+                 \ref{SINDESCO}
+                 \factor{1} 
+                 \rendimiento{9242}
+               }
+            }
+      }
+\ud_obra
+      {
+        \codigo{310.003}
+        \desc{Taquilla metálica para dos personas "Mecalux" color, medidas 1.80x0.50x0.25 m, totalmente montada e instalada en vestuarios}
+        \ud{ud}
+        \textolargo{Taquilla metálica para dos personas "Mecalux" color, medidas 1.80x0.50x0.25 m, totalmente montada e instalada en vestuarios}
+        \descomp
+            {
+            \componente
+               {
+                 \ref{SINDESCO}
+                 \factor{1} 
+                 \rendimiento{15359}
+               }
+            }
+      }
+    }\c{fin descompuestos}
+     
+  }\c{fin precios}

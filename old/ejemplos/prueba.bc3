@@ -1,0 +1,19 @@
+~V|Iturribizia, S.L.|FIEBDC-3/95|ppl 0.1|
+~C|SINDESCO|***|Unidad sin descompuesto|1|040400|1|
+~T|SINDESCO|Unidad sin descompuesto|
+~C|001001|m2|Desbroce y limpieza de terreno por medios mec nicos hasta 30 cm de espesor, incluido el transporte a vertedero. |99|040400|0|
+~T|001001|Desbroce y limpieza de terreno por medios mec nicos hasta 30 cm de espesor, incluido el transporte a vertedero. |
+~D|001001|SINDESCO\1\99\|
+~C|001002|m3|Excavaci¢n mec nica de desmonte y transporte a lugar de empleo o vertedero de terrenos de cualquier naturaleza o consistencia. |352|040400|0|
+~T|001002|Excavaci¢n mec nica de desmonte y transporte a lugar de empleo o vertedero de terrenos de cualquier naturaleza o consistencia. |
+~D|001002|SINDESCO\1\352\|
+~C|001003|m3|Excavaci¢n mec nica en zanja, con retroexcavadora, incluso apeos, entibaciones y transporte de material sobrante, en cualquier clase de terreno excluidos los de roca. |750|040400|0|
+~T|001003|Excavaci¢n mec nica en zanja, con retroexcavadora, incluso apeos, entibaciones y transporte de material sobrante, en cualquier clase de terreno excluidos los de roca. |
+~D|001003|SINDESCO\1\750\|
+~M|1_1\003011|1\1\1\|2|\\0\2\0\0\|
+~M|1_1\003085|1\1\2\|2|\\0\2\0\0\|
+~M|1_1\003106|1\1\3\|2|\\0\2\0\0\|
+~M|1_1\003107|1\1\4\|2|\\0\2\0\0\|
+~M|1_1\003108|1\1\5\|2|\\0\2\0\0\|
+~M|1_1\005036|1\1\6\|2|\\0\2\0\0\|
+~M|1_1\03064V|1\1\7\|2|\\0\2\0\0\|

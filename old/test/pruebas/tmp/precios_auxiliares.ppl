@@ -1,0 +1,31 @@
+\nverborrea{0}
+\descompuestos
+   {
+     \ud_obra
+        {
+          \codigo{00.001}
+          \desc{ordenador incluso sistema operativo y mantenimiento}
+          \ud{h}
+          \textolargo{ordenador incluso sistema operativo y mantenimiento}
+          \descomp
+            {
+              \componente{ \ref{CMPTR} \factor{1} \rendimiento{1.0} }
+              \componente{ \ref{S_OP} \factor{1} \rendimiento{1.0} }
+            }
+        }
+     \ud_obra
+        {
+          \codigo{00.003}
+          \desc{Equipamiento informático básico}
+          \ud{h}
+          \textolargo{Equipamiento informático básico: servidor, trazador, impresoras y hardware de red}
+          \descomp
+            {
+              \componente{ \ref{PLOTR} \factor{1} \rendimiento{1.0} }
+              \componente{ \ref{ILSR} \factor{1} \rendimiento{2.0} }
+              \componente{ \ref{IRED} \factor{1} \rendimiento{1.0} }
+              \componente{ \ref{00.001} \factor{1} \rendimiento{1.0} }
+            }
+        }
+  }
+\nverborrea{0}

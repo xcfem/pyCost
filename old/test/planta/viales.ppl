@@ -1,0 +1,52 @@
+              \capitulo
+                 {
+                   \codigo{2}
+                   \titulo{Viales}
+                   \fr { \factor{1} \rendimiento{1.0000000000000} }
+                   \mediciones
+                     {
+                     \med_uobra
+                       {
+                       \ref{150.003.1}
+                       \lineas_medicion
+                          {
+                          \medicion_vol { \comentario{} \unidades{1} \largo{3508} \ancho{0} \alto{0.21} }
+                          }
+                        }
+                     \med_uobra
+                       {
+                       \ref{150.002}
+                       \lineas_medicion
+                          {
+                          \medicion_vol { \comentario{} \unidades{1} \largo{3508} \ancho{0.2} \alto{0} }
+                          }
+                        }
+                     \med_uobra
+                       {
+                       \ref{020.008}
+                       \lineas_medicion
+                          {
+                          \medicion_vol { \comentario{} \unidades{1} \largo{3508} \ancho{0.7} \alto{0} }
+                          }
+                        }
+                     \med_uobra
+                       {
+                       \ref{080.001}
+                       \lineas_medicion
+                          {
+                          \medicion_vol { \comentario{} \unidades{1} \largo{253.09} \ancho{0} \alto{0} }
+                          \medicion_vol { \comentario{} \unidades{2} \largo{15.0} \ancho{0} \alto{0} }
+                          \medicion_vol { \comentario{} \unidades{1} \largo{32.0} \ancho{0} \alto{0} }
+                          }
+                        }
+                     \med_uobra
+                       {
+                       \ref{080.003}
+                       \lineas_medicion
+                          {
+                          \medicion_vol { \comentario{} \unidades{4} \largo{1} \ancho{1} \alto{1} }
+                          }
+                        }
+                     }
+                   \subcapitulos{}
+                 } \c{fin capitulo Viales}

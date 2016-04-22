@@ -1,0 +1,98 @@
+              \capitulo
+                 {
+                   \codigo{31}
+                   \titulo{Saneamiento}
+                   \fr { \factor{1} \rendimiento{1.0000000000000} }
+                   \mediciones
+                     {
+                     \med_uobra
+                       {
+                       \ref{290.001}
+                       \lineas_medicion
+                          {
+                          \medicion_vol { \comentario{} \unidades{1} \largo{170} \ancho{0} \alto{0} }
+                          }
+                        }
+                     \med_uobra
+                       {
+                       \ref{290.002}
+                       \lineas_medicion
+                          {
+                          \medicion_vol { \comentario{} \unidades{1} \largo{292.8} \ancho{0} \alto{0} }
+                          }
+                        }
+                     \med_uobra
+                       {
+                       \ref{290.003}
+                       \lineas_medicion
+                          {
+                          \medicion_vol { \comentario{} \unidades{1} \largo{190} \ancho{0} \alto{0} }
+                          }
+                        }
+                     \med_uobra
+                       {
+                       \ref{220.007}
+                       \lineas_medicion
+                          {
+                          \medicion_vol { \comentario{} \unidades{15} \largo{1} \ancho{0} \alto{0} }
+                          }
+                        }
+                     \med_uobra
+                       {
+                       \ref{220.004}
+                       \lineas_medicion
+                          {
+                          \medicion_vol { \comentario{} \unidades{12} \largo{1} \ancho{0} \alto{0} }
+                          }
+                        }
+                     \med_uobra
+                       {
+                       \ref{220.002}
+                       \lineas_medicion
+                          {
+                          \medicion_vol { \comentario{} \unidades{2} \largo{0} \ancho{0} \alto{0} }
+                          }
+                        }
+                     \med_uobra
+                       {
+                       \ref{290.004}
+                       \lineas_medicion
+                          {
+                          \medicion_vol { \comentario{} \unidades{3} \largo{1} \ancho{0} \alto{0} }
+                          }
+                        }
+                     \med_uobra
+                       {
+                       \ref{220.008}
+                       \lineas_medicion
+                          {
+                          \medicion_vol { \comentario{} \unidades{1} \largo{0} \ancho{0} \alto{0} }
+                          }
+                        }
+                     \med_uobra
+                       {
+                       \ref{220.008}
+                       \lineas_medicion
+                          {
+                          \medicion_vol { \comentario{} \unidades{1} \largo{0} \ancho{0} \alto{0} }
+                          }
+                        }
+                      \med_uobra
+                       {
+                       \ref{020.012}
+                       \lineas_medicion
+                          {
+                          \medicion_vol { \comentario{} \unidades{1} \largo{13.2} \ancho{0} \alto{0} }
+                          }
+                        }
+                     \med_uobra
+                       {
+                       \ref{020.006}
+                       \lineas_medicion
+                          {
+                          \medicion_vol { \comentario{} \unidades{1} \largo{917.3} \ancho{0} \alto{0} }
+                          }
+                        }
+                     }
+                   \subcapitulos{}
+                 } \c{ fin capitulo saneamiento}
