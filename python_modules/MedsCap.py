@@ -1,8 +1,8 @@
-#MedsCap.h
+#MedsCap.py
 #Mediciones de un capítulo.
 
-#ifndef MEDSCAP_H
-#define MEDSCAP_H
+
+
 
 import Partida
 import InformeMediciones
@@ -30,7 +30,7 @@ public:
     InformeMediciones GetInformeMediciones(void)
 
 
-#endif
+
 #MedsCap.cxx
 
 import MedsCap

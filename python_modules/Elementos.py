@@ -1,7 +1,7 @@
-#Elementos.h
+#Elementos.py
 
-#ifndef ELEMENTOS_H
-#define ELEMENTOS_H
+
+
 
 import Elemento
 import bibXCBasica/src/texto/cadena_carac
@@ -9,7 +9,7 @@ import bibXCBasica/src/texto/cadena_carac
 import MapaConceptos
 import ComptesBC3
 import Codigos
-#include "bibXCLcmd/src/base/Buscadores.hxx"
+#include "bibXCLcmd/src/base/Buscadores.pyxx"
 
 class BuscadorElementos
 
@@ -48,7 +48,7 @@ public:
 
 
 
-#endif
+
 #Elementos.cxx
 
 import Elementos

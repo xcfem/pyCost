@@ -1,7 +1,7 @@
-#MapaConceptos.h
+#MapaConceptos.py
 
-#ifndef MAPACONCEPTOS_H
-#define MAPACONCEPTOS_H
+
+
 
 #include <map>
 import EntPyCost
@@ -74,4 +74,4 @@ void MapaConceptos<T>.Escribe(std.ostream &os)
     for(i= MapaConceptos<T>.begin(); i!=MapaConceptos<T>.end(); i++)
         (*i).second.Escribe(os)
 
-#endif
+

@@ -1,7 +1,7 @@
-#EntFR.h
+#EntFR.py
 
-#ifndef ENTFR_H
-#define ENTFR_H
+
+
 
 import EntPyCost
 import Tipos
@@ -35,7 +35,7 @@ public:
     void EscribeBC3(std.ostream &os)
 
 
-#endif
+
 #EntFR.cxx
 
 import EntFR

@@ -1,21 +1,21 @@
-#InformeMediciones.h
+#InformeMediciones.py
 
-#ifndef INFORME_MEDICIONES_H
-#define INFORME_MEDICIONES_H
 
-import Medible
+
+
+import Measurable
 #include <map>
 
 class InformeUdObra
 
-class InformeMediciones(std.map<Medible  *, double>):
+class InformeMediciones(std.map<Measurable  *, double>):
 public:
     void Inserta( InformeUdObra &iu)
     void Merge( InformeMediciones &otro)
     void ImprLtx(std.ostream &os)
 
 
-#endif
+
 #InformeMediciones.cxx
 
 import InformeMediciones

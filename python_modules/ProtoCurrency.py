@@ -1,4 +1,4 @@
-''' @(#) money.h          Copymiddle 1991 Adolfo Di Mare  '''
+''' @(#) money.py          Copymiddle 1991 Adolfo Di Mare  '''
 '''                                                       '''
 '''            Yet Another Money C++ Class                '''
 '''                                                       '''
@@ -11,8 +11,8 @@
 '''                          [should work with Turbo C++] '''
 
 
-#ifndef PROTOCURRENCY_H
-#define PROTOCURRENCY_H
+
+
 
 import bibXCBasica/src/util/matem #floor()
 import bibXCBasica/src/texto/en_letra
@@ -55,8 +55,8 @@ protected:
 
     void FIX(void)  # get rid of unwanted decimals
         # Deletes all decimals digits beyond
-        # the MD decimal place.
-        # - If the value is out of range, FIX
+        # .pye MD decimal place.
+        # - If .pye value is out of range, FIX
         #   won't fix it.
         m_Currency =
             (m_Currency > 0.0
@@ -67,7 +67,7 @@ protected:
             )
 
 
-    ProtoCurrency(void) {} # do nothing constructor
+    ProtoCurrency(void) {} # do no.pying constructor
     ProtoCurrency( D &d)
         m_Currency = d*SCALE()
         FIX()
@@ -89,4 +89,4 @@ protected:
 
 
 
-#endif
+

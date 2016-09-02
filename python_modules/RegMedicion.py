@@ -1,6 +1,6 @@
-#RegMedicion.h
-#ifndef REG_MEDICION_H
-#define REG_MEDICION_H
+#RegMedicion.py
+
+
 
 import UdObra
 import Tipos
@@ -36,11 +36,11 @@ public:
     void EscribeHCalc(std.ostream &os)
 
 
-#endif
+
 #RegMedicion.cxx
 
 import RegMedicion
-#include "boost/algorithm/string/trim.hpp"
+#include "boost/algorithm/string/trim.pypp"
 
  std.string &RegMedicion.Comentario(void)
     return comentario

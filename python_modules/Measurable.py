@@ -1,18 +1,18 @@
-#Medible.h
+#Measurable.py
 
-#ifndef MEDIBLE_H
-#define MEDIBLE_H
+
+
 
 #include <string>
 import EntBC3
 import Codigos
 
-#not  @brief Cosa que se mide (en m,kg,h,m2,m3,...)
-class Medible(EntBC3):
+# Thing that you can measure (en m,kg.py,m2,m3,...)
+class Measurable(EntBC3):
     std.string unidad
     std.string txt_largo
 public:
-    Medible( std.string &cod, &tit, &ud)
+    Measurable( std.string &cod, &tit, &ud)
     virtual  std.string &TextoLargo(void)
     std.string &TextoLargo(void)
     virtual  std.string &Unidad(void)
@@ -28,24 +28,23 @@ def LeeBC3(self, &r):
     txt_largo= protege_signos(r.Datos().Texto())
 
 
-#endif
-#Medible.cxx
 
-import Medible
+#Measurable.cxx
+
 
 #not  @brief Constructor.
-Medible.Medible( std.string &cod, &tit, &ud)
+Measurable.Measurable( std.string &cod, &tit, &ud)
     : EntBC3(cod,tit), unidad(ud), txt_largo("") {
 
- std.string &Medible.TextoLargo(void)
+ std.string &Measurable.TextoLargo(void)
     return txt_largo
 
 
-std.string &Medible.TextoLargo(void)
+std.string &Measurable.TextoLargo(void)
     return txt_largo
 
 
- std.string &Medible.Unidad(void)
+ std.string &Measurable.Unidad(void)
     return unidad
 
 

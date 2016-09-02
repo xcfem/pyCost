@@ -1,6 +1,6 @@
-#Partida.h
-#ifndef MED_UD_OBRA_H
-#define MED_UD_OBRA_H
+#Partida.py
+
+
 
 import ProtoPartida
 import Mediciones
@@ -10,7 +10,7 @@ class Partida (ProtoPartida):
     Mediciones meds
 public:
     Partida(void): ProtoPartida() {
-    Partida( Medible &u):ProtoPartida(u) {
+    Partida( Measurable &u):ProtoPartida(u) {
     virtual ProtoPartida *Copia(void)
         return Partida(*self)
 
@@ -29,7 +29,7 @@ public:
 
 
 
-#endif
+
 #Partida.cxx
 
 import Partida

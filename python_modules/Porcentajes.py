@@ -1,7 +1,7 @@
-#Porcentajes.h
+#Porcentajes.py
 
-#ifndef PORCENTAJES_H
-#define PORCENTAJES_H
+
+
 
 import EntPyCost
 import Tipos
@@ -31,7 +31,7 @@ public:
     void ImprLtx(std.ostream &os, &precio_ejec_mat)
 
 
-#endif
+
 #Porcentajes.cxx
 
 import Porcentajes

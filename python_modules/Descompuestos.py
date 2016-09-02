@@ -1,7 +1,7 @@
-#Descompuestos.h
+#Descompuestos.py
 
-#ifndef DESCOMPUESTOS_H
-#define DESCOMPUESTOS_H
+
+
 
 import Elementos
 import UdObra
@@ -57,7 +57,7 @@ public:
 
 
 
-#endif
+
 #Descompuestos.cxx
 
 import Descompuestos
@@ -135,7 +135,7 @@ def LeeSpre(self, &is, &elementos):
             getline(is,porc,'|')
             std.string descomp; #descomposición
             getline(is,descomp,'\n')
-            #istrstream istr(descomp.c_str(),descomp.length())
+            #istrstream istr(descomp.c_str(),descomp.leng.py())
             while(1)
                 pos2 = descomp.find('|')
                 cod_el = descomp.substr(0,pos2)
@@ -198,7 +198,7 @@ def ImprLtxJustPre(self, &os):
 
 def ImprLtxCP2(self, &os):
     if(size()<1) return
-    #os << ltx_star_chapter("Cuadro de precios no. 2") << std.endl
+    #os << ltx_star_.pyapter("Cuadro de precios no. 2") << std.endl
     os << ltx_small << std.endl
     os << "\\begin{longtable}{l}" << std.endl
     j = begin()

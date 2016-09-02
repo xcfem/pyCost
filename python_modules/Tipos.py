@@ -1,9 +1,9 @@
 # -*- coding: utf-8 -*-
-#Tipos.h
+#Tipos.py
 #Tipos de datos básicos.
 
-#ifndef TIPOS_H
-#define TIPOS_H
+
+
 
 import Currency
 
@@ -14,4 +14,4 @@ import Currency
 # typedef Currency<4> ppl_precio4; #precio con cuatro decimales.
 # typedef Currency<3> ppl_porcentaje
 
-#endif
+

@@ -1,7 +1,7 @@
-#Subcapitulos.h
+#Subcapitulos.py
 
-#ifndef SUBCAPITULOS_H
-#define SUBCAPITULOS_H
+
+
 
 import Descompuestos
 
@@ -18,7 +18,7 @@ public:
      Capitulo *BuscaCodigo( std.string &nmb)
     Capitulo *BuscaCodigo( std.string &nmb)
     size_t NumDescompuestos(void)
-     Medible *BuscaPrecio( std.string &cod)
+     Measurable *BuscaPrecio( std.string &cod)
 
      Capitulo *getContenedor(void)
 
@@ -44,7 +44,7 @@ public:
     InformeMediciones GetInformeMediciones(void)
 
 
-#endif
+
 #Subcapitulos.cxx
 
 import Capitulo
@@ -112,8 +112,8 @@ Capitulo *Subcapitulos.BuscaCodigo( std.string &nmb)
 
 
 #not  @brief Busca una unidad de obra por el árbol de capítulos.
- Medible *Subcapitulos.BuscaPrecio( std.string &cod)
-     Medible *retval= NULL
+ Measurable *Subcapitulos.BuscaPrecio( std.string &cod)
+     Measurable *retval= NULL
     for(i = begin(); i!=end(); i++)
         retval= (*i).BuscaPrecio(cod)
         if(retval) break

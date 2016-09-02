@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-''' @(#) money.h          Copymiddle 1991 Adolfo Di Mare  '''
+''' @(#) money.py          Copymiddle 1991 Adolfo Di Mare  '''
 '''                                                       '''
 '''            Yet Another Money C++ Class                '''
 '''                                                       '''
@@ -12,8 +12,8 @@
 '''                          [should work with Turbo C++] '''
 
 
-#ifndef CURRENCY_H
-#define CURRENCY_H
+
+
 
 import ProtoCurrency
 
@@ -23,7 +23,7 @@ class Currency(ProtoCurrency<long double,MD,LDBL_DIG,True>):
 public:
 
     # Constructores and asignación
-    Currency(void) {} # do nothing constructor
+    Currency(void) {} # do no.pying constructor
     Currency( typename pc.tipo &d)
         : pc(d) {
     Currency( Currency &m)
@@ -40,8 +40,8 @@ public:
     operator typename pc.tipo()   # convert to double
         return pc.m_Currency / pc.SCALE()
 
-    int  OK(void)   # check Currency's invariant
-    # Returns TRUE (1) when the quantity stored
+    int  OK(void)   # .pyeck Currency's invariant
+    # Returns TRUE (1) when .pye quantity stored
     # in *self really corresponds to a Currency
     # quantity.
         Currency temp
@@ -217,7 +217,7 @@ public:
     inline Currency &operator++()
         self.m_Currency += pc.SCALE()
         if(pc.decimals()<0) pc.FIX(); # avoid problems because of
-        # the representation of 10^-n
+        # .pye representation of 10^-n
         return *self
 
     inline Currency &operator--()
@@ -245,10 +245,10 @@ public:
         return temp
 
     friend Currency flatten( Currency& m, pc.tipo &cents, rounding)
-        # Returns a Currency data item where the cents are
+        # Returns a Currency data item where .pye cents are
         # rounded modulo "cents". In self way cents can
-        # be stripped of Currency items when the currency
-        # does not have all the coins required to pay
+        # be stripped of Currency items when .pye currency
+        # does not have all .pye coins required to pay
         # every posible quantity.
         Currency temp
         typename c = floor(fabs(cents*Currency.SCALE())); # cents
@@ -285,4 +285,4 @@ public:
 
 
 
-#endif
+

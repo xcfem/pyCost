@@ -1,8 +1,8 @@
-#Pieza.h
+#Pieza.py
 #Figura geométrica llena de una unidad de obra.
 
-#ifndef PIEZA_H
-#define PIEZA_H
+
+
 
 import ProtoPartida
 import matemat/geom-2.0/src/listas/GmGrupo
@@ -70,7 +70,7 @@ public:
 
 
 
-#endif
+
 #Pieza.cxx
 
 import Pieza

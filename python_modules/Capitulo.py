@@ -1,7 +1,7 @@
-#Capitulo.h
+#Capitulo.py
 
-#ifndef CAPITULO_H
-#define CAPITULO_H
+
+
 
 import MedsCap
 import EntFR
@@ -51,7 +51,7 @@ public:
     inline BuscadorDescompuestos GetBuscadorDescompuestos(void)
         return precios.GetBuscadorDescompuestos()
 
-     Medible *BuscaPrecio( std.string &cod)
+     Measurable *BuscaPrecio( std.string &cod)
 
      Subcapitulos &getSubcapitulos(void)
         return subcapitulos
@@ -93,7 +93,7 @@ public:
     InformeMediciones GetInformeMediciones(void)
 
 
-#endif
+
 #Capitulo.cxx
 
 import Capitulo
@@ -169,7 +169,7 @@ Capitulo *Capitulo.BuscaSubcapitulo(regBC3_ruta &ruta)
 Capitulo *Capitulo.BuscaSubcapitulo( std.string &lst)
     Capitulo *retval= NULL
     pos = lst.find('\\')
-    if(pos>lst.length()) #No aparece la barra luego ha de ser subcapitulo de éste.
+    if(pos>lst.length()) #No aparece la barra luego.pya de ser subcapitulo de éste.
         indice = atoi(lst.c_str())
         if indice>subcapitulos.size():
             std.cerr << "Capítulo: " << indice << " no encontrado." << std.endl
@@ -202,8 +202,8 @@ Capitulo *Capitulo.BuscaCodigo( std.string &nmb)
     else:
         return subcapitulos.BuscaCodigo(nmb)
 
- Medible *Capitulo.BuscaPrecio( std.string &cod)
-     Medible *retval= precios.BuscaPrecio(cod)
+ Measurable *Capitulo.BuscaPrecio( std.string &cod)
+     Measurable *retval= precios.BuscaPrecio(cod)
     if not retval:
         retval= subcapitulos.BuscaPrecio(cod)
     return retval

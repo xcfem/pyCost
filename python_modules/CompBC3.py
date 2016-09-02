@@ -1,7 +1,7 @@
-#CompBC3.h
+#CompBC3.py
 
-#ifndef COMPBC3_H
-#define COMPBC3_H
+
+
 
 import EntFR
 import EntBC3
@@ -32,11 +32,11 @@ public:
     ppl_precio3 ImprLtxCP2(std.ostream &os, &sobre= 0.0)
 
 
-#endif
+
 #CompBC3.cxx
 
 import CompBC3
-#include "bibXCLcmd/src/base/Buscadores.hxx"
+#include "bibXCLcmd/src/base/Buscadores.pyxx"
 import bibXCBasica/src/texto/StrTok
 import bibXCBasica/src/texto/latex
 import just_pre/RegJustPre

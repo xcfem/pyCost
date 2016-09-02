@@ -1,12 +1,12 @@
-#EntBC3.h
+#EntBC3.py
 #Precio elemental.
 
-#ifndef ENTBC3_H
-#define ENTBC3_H
+
+
 
 #include <string>
 #include <iostream>
-import bibXCBasica/src/texto/en_letra
+#import bibXCBasica/src/texto/en_letra
 import Codigos
 import EntPyCost
 import Tipos
@@ -75,7 +75,7 @@ def LeeBC3(self, &r):
 
 std.ostream &operator<<(std.ostream &os, &e)
 
-#endif
+
 #EntBC3.cxx
 
 import EntBC3

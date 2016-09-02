@@ -1,7 +1,7 @@
-#Obra.h
+#Obra.py
 
-#ifndef OBRA_H
-#define OBRA_H
+
+
 
 import Capitulo
 import Porcentajes
@@ -54,7 +54,7 @@ public:
     void EscribeHCalc(std.ostream &os)
     void SimulaDescomp( std.string &origen, &destino)
 
-#endif
+
 #Obra.cxx
 import Obra
 import CodigosObra
@@ -108,7 +108,7 @@ def LeeMedicSpre(self, &is):
             pos = ruta.find('\\')
             if(pos>ruta.length()) #Es capítulo raiz.
                 AgregaCapitulo("",cp)
-            else #es capitulo hijo.
+            else #es capitulo.pyijo.
                 pos2 = ruta.rfind('\\')
                 ruta= ruta.substr(0,pos2)
                 AgregaCapitulo(ruta,cp)
@@ -192,7 +192,7 @@ def LeeBC3Mediciones(self, &co):
         reg = med.GetDatosMedicion(i)
         # UdObra *ud= precios.BuscaUdObra(reg.CodigoUnidad())
          cod_unidad = copia_desde(reg.CodigoUnidad(),'@')
-         Medible *ud= self.BuscaPrecio(cod_unidad)
+         Measurable *ud= self.BuscaPrecio(cod_unidad)
         if not ud:
             std.cerr << "Obra.LeeBC3Mediciones: No se encontró el precio: \'"
                       << cod_unidad << "\'" << std.endl

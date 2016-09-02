@@ -1,7 +1,7 @@
-#RegJustPre.hxx
+#RegJustPre.pyxx
 
-#ifndef REGJUSTPRE_HXX
-#define REGJUSTPRE_HXX
+
+
 
 import ../Tipos
 import bibXCLcmd/src/nucleo/EntCmd
@@ -31,7 +31,7 @@ public:
     void ImprLtxCP2(std.ostream &os)
 
 
-#endif
+
 #RegJustPre.cxx
 
 import RegJustPre

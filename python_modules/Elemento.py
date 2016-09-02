@@ -1,13 +1,13 @@
-#Elemento.h
+#Elemento.py
 
-#ifndef ELEMENTO_H
-#define ELEMENTO_H
 
-import Medible
+
+
+import Measurable
 import bibXCBasica/src/texto/latex
 
 
-class Elemento(Medible):
+class Elemento(Measurable):
     long double precio
     tipo_concepto tipo
 protected:
@@ -22,14 +22,14 @@ public:
     void ImprLtx(std.ostream &os)
 
 
-#endif
+
 #Elemento.cxx
 
 import Elemento
 
 Elemento.Elemento( std.string &cod, &tit,
                     std.string &ud, double &p, &tp)
-    : Medible(cod,tit,ud), precio(p), tipo(tp) {
+    : Measurable(cod,tit,ud), precio(p), tipo(tp) {
 
 def check_tipo(self, void):
     if not Codigo().empty():
@@ -45,7 +45,7 @@ long double Elemento.Precio(void)
     return precio
 
 def LeeBC3(self, &r):
-    Medible.LeeBC3(r)
+    Measurable.LeeBC3(r)
     precio= r.Datos().Precio()
     tipo= sint2tipo_concepto(r.Datos().Tipo())
 

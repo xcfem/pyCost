@@ -1,6 +1,6 @@
-#Mediciones.h
-#ifndef MEDICIONES_H
-#define MEDICIONES_H
+#Mediciones.py
+
+
 
 import RegMedicion
 
@@ -24,7 +24,7 @@ public:
     void EscribeHCalc(std.ostream &os)
 
 
-#endif
+
 #Mediciones.cxx
 
 import Mediciones
@@ -47,7 +47,7 @@ def TotalLargo(self, void):
     return t
 
 
-#not  @brief Devuelve el total del ancho de la medición.
+#not  @brief Devuelve el total del an.pyo de la medición.
 def TotalAncho(self, void):
     t = 0.0
     dq_reg_med.const_iterator i

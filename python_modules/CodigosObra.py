@@ -1,7 +1,7 @@
-#CodigosObra.h
+#CodigosObra.py
 
-#ifndef CODIGOSOBRA_H
-#define CODIGOSOBRA_H
+
+
 
 import Codigos
 
@@ -38,7 +38,7 @@ public:
     friend std.ostream &operator<<(std.ostream &os, &co)
 
 
-#endif
+
 #CodigosObra.cxx
 
 import CodigosObra

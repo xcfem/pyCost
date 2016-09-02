@@ -1,7 +1,7 @@
-#ListaJustPre.hxx
+#ListaJustPre.pyxx
 
-#ifndef LISTAJUSTPRE_HXX
-#define LISTAJUSTPRE_HXX
+
+
 
 import ListaRegJustPre
 import ../Tipos
@@ -28,7 +28,7 @@ public:
     void ImprLtxCP2(std.ostream &os)
 
 
-#endif
+
 #ListaJustPre.cc
 
 import ListaJustPre

@@ -1,7 +1,7 @@
-#ComptesBC3.h
+#ComptesBC3.py
 
-#ifndef COMPTESBC3_H
-#define COMPTESBC3_H
+
+
 
 import CompBC3
 #include <deque>
@@ -35,7 +35,7 @@ public:
     void ImprLtxCP1(std.ostream &os, &pa, &genero)
 
 
-#endif
+
 #ComptesBC3.cxx
 
 import ComptesBC3

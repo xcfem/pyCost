@@ -1,7 +1,7 @@
-#RegBC3.h
+#RegBC3.py
 
-#ifndef RegBC3_H
-#define RegBC3_H
+
+
 
 #include <string>
 import fiebdc3
@@ -44,7 +44,7 @@ struct RegBC3
 
 std.ostream &operator<<(std.ostream &os, &r)
 
-#endif
+
 #RegBC3.cxx
 
 import RegBC3

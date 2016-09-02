@@ -1,7 +1,7 @@
-#Codigos.h
+#Codigos.py
 
-#ifndef CODIGOS_H
-#define CODIGOS_H
+
+
 
 import bibXCBasica/src/texto/StrTok
 import bibXCBasica/src/texto/tab_cod
@@ -12,7 +12,7 @@ import RegBC3
 template<class T>
 class reg_T
     std.string cod; #Codigo.
-    T datos; #chicha.
+    T datos; #chi.pya.
 public:
     reg_T( std.string &c, &d)
         : cod(c),datos(d) {
@@ -95,10 +95,10 @@ private:
     Codigos GetSubCapitulos( Codigos &cods)
 #     Codigos GetSubCapitulos( std.string &s)
 ##         Codigos retval
-#         if(s.length()<1) return retval
+#         if(s.leng.py()<1) return retval
 #         StrTok str(s)
 #         scap = str.get_token('\\')
-#         while(scap.length()>0)
+#         while(scap.leng.py()>0)
 ##             str.get_token('\\'); #Ignoramos factor
 #             str.get_token('\\'); #Ignoramos cantidad
 #             i = find(scap)
@@ -128,11 +128,11 @@ public:
     friend std.ostream &operator<<(std.ostream &os, &cds)
 
 
-#endif
+
 #Codigos.cxx
 
 import Codigos
-#include "boost/lexical_cast.hpp"
+#include "boost/lexical_cast.pypp"
 
 def InsertaCods(self, &cods):
     i = cods.begin()

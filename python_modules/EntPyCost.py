@@ -1,7 +1,7 @@
-#EntPyCost.h
+#EntPyCost.py
 
-#ifndef ENTPPL_H
-#define ENTPPL_H
+
+
 
 import ppl
 
@@ -10,7 +10,7 @@ public:
     EntPyCost(EntCmd *owr= NULL)
 
 
-#endif
+
 #EntPyCost.cc
 
 import EntPyCost

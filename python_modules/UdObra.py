@@ -1,18 +1,18 @@
-#UdObra.h
-#ifndef UD_OBRA_H
-#define UD_OBRA_H
+#UdObra.py
+
+
 
 import Elementos
 import ComptesBC3
 
-class UdObra(Medible):
+class UdObra(Measurable):
 private:
     ComptesBC3 lista
     static ComptesBC3 ObtienePunteros( regBC3_d &descBC3, &bp, &error)
     ComptesBC3 GetSindesco( double &rendimiento, &bp)
 public:
     UdObra( std.string &cod="", &tit="", &ud="")
-        : Medible(cod,tit,ud) {
+        : Measurable(cod,tit,ud) {
     virtual tipo_concepto Tipo(void)
         return mat;    #XXX provisional.
 
@@ -27,7 +27,7 @@ public:
 
     #not  @brief Lee la unidad a falta de la descomposición
     void LeeBC3Fase1( Codigos.reg_udobra &r)
-        Medible.LeeBC3(r)
+        Measurable.LeeBC3(r)
 
     bool LeeBC3Fase2( Codigos.reg_udobra &r, &bp)
     void EscribeSpre(std.ostream &os)
@@ -39,7 +39,7 @@ public:
     long double SimulaDescomp( UdObra &otra)
 
 
-#endif
+
 #UdObra.cxx
 
 import UdObra
@@ -101,7 +101,7 @@ def EscribeSpre(self, &os):
 
 
 def EscribeBC3(self, &os):
-    Medible.EscribeBC3(os)
+    Measurable.EscribeBC3(os)
     lista.EscribeBC3(Codigo(),os)
 
 

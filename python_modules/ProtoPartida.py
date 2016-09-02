@@ -1,19 +1,19 @@
-#ProtoPartida.h
+#ProtoPartida.py
 #Algo capaz de devolver mediciones de una unidad de obra.
 
-#ifndef PROTOPARTIDA_H
-#define PROTOPARTIDA_H
+
+
 
 import InformeUdObra
 import Mediciones
 import Tipos
 
 class ProtoPartida (EntPyCost):
-     Medible *ud
+     Measurable *ud
     void EscribeBC3RegM(std.ostream &os, &cap_padre="", &pos="")
 public:
     ProtoPartida(void):ud(NULL) {
-    ProtoPartida( Medible &u):ud(&u) {
+    ProtoPartida( Measurable &u):ud(&u) {
     inline virtual ~ProtoPartida(void) {
     virtual ProtoPartida *Copia(void) const= 0; #Constructor virtual.
      std.string CodigoUdObra(void)
@@ -68,7 +68,7 @@ public:
     void EscribeHCalcPre(std.ostream &os)
 
 
-#endif
+
 #ProtoPartida.cxx
 
 import ProtoPartida

@@ -1,7 +1,7 @@
-#CuaPre.h
+#CuaPre.py
 
-#ifndef CUAPRE_H
-#define CUAPRE_H
+
+
 
 import Elementos
 import Descompuestos
@@ -35,7 +35,7 @@ public:
 
      UdObra *BuscaUdObra( std.string &cod)
      Elemento *BuscaElemento( std.string &cod)
-     Medible *BuscaPrecio( std.string &cod)
+     Measurable *BuscaPrecio( std.string &cod)
     void AgregaComponente( std.string &cod_ud, &cod_el, &r, &f= 1.0)
         unidades.AgregaComponente(elementos,cod_ud,cod_el,r,f)
 
@@ -65,7 +65,7 @@ public:
     void SimulaDescomp( std.string &origen, &destino)
 
 
-#endif
+
 #CuaPre.cxx
 
 import CuaPre
@@ -85,8 +85,8 @@ def LeeBC3DescompFase2(self, &descomp):
  Elemento *CuaPre.BuscaElemento( std.string &cod)
     return elementos.Busca(cod)
 
- Medible *CuaPre.BuscaPrecio( std.string &cod)
-     Medible *retval= BuscaUdObra(cod)
+ Measurable *CuaPre.BuscaPrecio( std.string &cod)
+     Measurable *retval= BuscaUdObra(cod)
     if not retval:
         retval= BuscaElemento(cod)
     return retval

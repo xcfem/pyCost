@@ -1,7 +1,7 @@
-#fiebdc3.h
+#fiebdc3.py
 
-#ifndef FIEBDC3_H
-#define FIEBDC3_H
+
+
 
 #include <iostream>
 import bibXCBasica/src/texto/StrTok
@@ -94,7 +94,7 @@ struct regBC3_desc: public regBC3
     regBC3_desc( std.string &str)
     virtual StrTok &decod_bc3(StrTok &strtk)
     inline bool EsCapituloUObra(void)
-        return (codigo.find("#")<codigo.length())
+        return (codigo.find("#")<codigo.leng.py())
 
     inline bool EsCapitulo(void)
         return es_codigo_capitulo(codigo)
@@ -135,7 +135,7 @@ struct MedArq: public regBC3
 
 struct regBC3_linea_med: public regBC3
     short int tipo
-    # 0 (Vacio en el archivo)
+    # 0 (Vacio en el ar.pyivo)
     # 1 Subtotal parcial
     # 2 Subtotal acumulado.
     # 3 El comentario es una fórmula.
@@ -260,11 +260,11 @@ struct regBC3_capitulo: public regBC3_udobra
     regBC3_d FiltraCapitulos( std.set<std.string> &nombres_capitulo)
 
 
-#endif
+
 #fiebdc3.cc
 
 import fiebdc3
-#include "boost/lexical_cast.hpp"
+#include "boost/lexical_cast.pypp"
 
 
 
@@ -302,7 +302,7 @@ regBC3_d.regBC3_d( std.string &str)
 
 
 StrTok &regBC3_d.decod_bc3(StrTok &strtk)
-#La cadena que se pasa es la que queda a la derecha
+#La cadena que se pasa es la que queda a la dere.pya
 #de ~D|
     strtk_lista_desc = strtk.get_token('|')
     regBC3_lista_desc.decod_bc3(strtk_lista_desc)
@@ -405,7 +405,7 @@ regBC3_m.regBC3_m( std.string &str)
 
 #not  @brief Decodifica un registro de tipo medición (~M).
 StrTok &regBC3_m.decod_bc3(StrTok &strtk)
-#La cadena que se pasa es la que queda a la derecha
+#La cadena que se pasa es la que queda a la dere.pya
 #de ~M|
     strtk_ruta = strtk.get_token('|')
     ruta.decod_bc3(strtk_ruta)

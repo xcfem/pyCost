@@ -1,7 +1,7 @@
-#ListaRegJustPre.hxx
+#ListaRegJustPre.pyxx
 
-#ifndef LISTAREGJUSTPRE_HXX
-#define LISTAREGJUSTPRE_HXX
+
+
 
 import RegJustPre
 #include <deque>
@@ -32,7 +32,7 @@ public:
     void ImprLtxCP2Porc(std.ostream &os)
 
 
-#endif
+
 #ListaRegJustPre.cc
 
 import ListaRegJustPre
