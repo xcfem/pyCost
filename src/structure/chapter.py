@@ -4,11 +4,11 @@
 
 
 
-import MedsCap
-import EntFR
+import measurement_container
+import fr_entity
 import Subcapitulos
 import price_table
-import Descompuestos
+import unit_price_table
 
 
 class Capitulo(EntBC3):

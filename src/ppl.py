@@ -4,6 +4,5 @@
 
 
 
-import bibXCLcmd/src/nucleo/EntCmd
 
 

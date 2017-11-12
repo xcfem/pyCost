@@ -4,8 +4,8 @@
 
 
 
-import Elementos
-import Descompuestos
+import elementary_price_container
+import unit_price_table
 import codigos_obra
 
 class CuaPre(EntPyCost):

@@ -4,7 +4,7 @@
 
 
 #include <string>
-import EntBC3 as eBC3
+import bc3_entity as eBC3
 import codes
 
 class Measurable(eBC3.EntBC3):

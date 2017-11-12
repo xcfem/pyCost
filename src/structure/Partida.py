@@ -4,7 +4,7 @@
 
 
 import ProtoPartida as ptp
-import Mediciones as m
+import measurement_detail as m
 
 class Partida(ptp.ProtoPartida):
     '''Partida del presupuesto correspondiente a una unidad de obra.'''

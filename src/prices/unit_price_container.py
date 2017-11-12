@@ -4,8 +4,8 @@
 
 
 
-import Elementos
-import UdObra
+import elementary_price_container
+import unit_price
 import MapaConceptos
 
 class Descompuestos(MapaConceptos):

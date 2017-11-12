@@ -3,7 +3,7 @@
 
 
 
-import UdObra
+import unit_price
 import basic_types
 
 class RegMedicion(EntPyCost):

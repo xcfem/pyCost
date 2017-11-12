@@ -4,8 +4,8 @@
 
 
 
-import InformeUdObra
-import Mediciones
+import unit_price_report
+import measurement_detail
 import basic_types
 import Obra
 
