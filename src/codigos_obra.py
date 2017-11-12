@@ -4,7 +4,7 @@
 
 
 
-import Codigos
+import codes
 
 class CodigosObra(object):
     def __init__(self):

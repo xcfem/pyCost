@@ -7,7 +7,7 @@
 import MedsCap
 import EntFR
 import Subcapitulos
-import CuaPre
+import price_table
 import Descompuestos
 
 

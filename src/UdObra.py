@@ -4,13 +4,13 @@
 
 import Measurable as ms
 import Elementos
-import ComptesBC3
+import component_list
 
 class UdObra(ms.Measurable):
 
     def __init__(self, cod="", tit="", ud=""):
         super(UdObra,self).__init__(cod,tit,ud)
-        self.lista= comptes_bc3.ComptesBC3()
+        self.lista= component_list.ComponentList()
     def Tipo(self):
         return self.mat;    #XXX provisional.
 
@@ -43,7 +43,7 @@ class UdObra(ms.Measurable):
     def GetSindesco(self, rendimiento, bp):
         '''Para unidades de obra sin descomposición de las que
            sólo se conoce el precio.'''
-        retval= ComptesBC3()
+        retval= ComponentList()
         be= bp["elementos"]
         ent= be.Busca("SINDESCO")
         retval.append(CompBC3(ent,1.0,rendimiento))
@@ -52,7 +52,7 @@ class UdObra(ms.Measurable):
     @staticmethod
     def ObtienePunteros(self, descBC3, bp, error):
         '''Obtiene los punteros a los precios de la descomposición.'''
-        retval= ComptesBC3()
+        retval= ComponentList()
         be= bp["elementos"]
         bd= bp["ud_obra"]
         ent= None

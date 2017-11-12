@@ -6,7 +6,7 @@
 
 import Descompuestos
 import chapter
-import CodigosObra
+import codigos_obra
 
 class Subcapitulos(list, EntPyCost):
 

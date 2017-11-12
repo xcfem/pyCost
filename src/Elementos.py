@@ -6,8 +6,8 @@
 
 import Elemento
 import MapaConceptos
-import ComptesBC3
-import Codigos
+import ComponentList
+import codes
 
 #not  @brief Tabla de precios elementales.
 class Elementos(MapaConceptos):

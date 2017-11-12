@@ -7,7 +7,7 @@
 #include <string>
 #include <iostream>
 #import bibXCBasica/src/texto/en_letra
-import Codigos
+import codes
 import EntPyCost
 import basic_types
 

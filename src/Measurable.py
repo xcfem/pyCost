@@ -5,7 +5,7 @@
 
 #include <string>
 import EntBC3 as eBC3
-import Codigos
+import codes
 
 class Measurable(eBC3.EntBC3):
     '''Thing that you can measure (en m,kg.py,m2,m3,...)'''

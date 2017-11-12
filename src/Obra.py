@@ -3,7 +3,7 @@
 
 import chapter as cp
 import Porcentajes as pc
-import CodigosObra as cod
+import codigos_obra as cod
 
 class Obra(cp.Capitulo):
 

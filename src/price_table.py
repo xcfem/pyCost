@@ -6,7 +6,7 @@
 
 import Elementos
 import Descompuestos
-import CodigosObra
+import codigos_obra
 
 class CuaPre(EntPyCost):
     def __init__(self):

@@ -1,15 +1,9 @@
 # -*- coding: utf-8 -*-
-#ComptesBC3.py
+#ComponentList.py
 
 
-
-
-import CompBC3
-
-
-#not  @brief Componentes de un precio descompuesto.
-class ComptesBC3(list, EntPyCost):
-
+class ComponentList(list, EntPyCost):
+    '''Componentes de un precio descompuesto.'''
     def Precio(self):
         return self.PrecioR()
 
