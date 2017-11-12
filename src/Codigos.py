@@ -1,421 +1,329 @@
+# -*- coding: utf-8 -*-
 #Codigos.py
 
 
-import bibXCBasica/src/texto/StrTok
-import bibXCBasica/src/texto/tab_cod
 import RegBC3
-#include <map>
-#include <set>
 
-template<class T>
-class reg_T
-    cod= '' #Codigo.
-    T datos; #chi.pya.
-public:
-    reg_T( c, &d)
-        : cod(c),datos(d) {
-     Codigo()
-        return cod
+class reg_T(object):
+    def __init__(self,c= '',d= None):
+        self.cod= c #Codigo.
+        self.datos= d
 
-     T &Datos()
-        return datos
+    def Codigo(self):
+        return self.cod
 
-     std.string CodigoUnidad()
-        StrTok strtk(cod)
-        return *strtk.campos('\\').rbegin()
+    def Datos(self):
+        return self.datos
 
-     std.string CodigoCapitulo()
-        StrTok strtk(cod)
-        return *strtk.campos('\\').begin()
+    def CodigoUnidad(self):
+        strtk= StrTok(cod)
+        return strtk.campos('\\').rbegin()
+
+    def CodigoCapitulo(self):
+        strtk= StrTok(cod)
+        return strtk.campos('\\').begin()
 
     def Write(os):
-        os.write(cod + '\n'
+        os.write(cod + '\n')
         datos.Write(os)
 
-    virtual ~reg_T() {
 
-
-class Codigos(std.map<std.string,RegBC3>):
-public:
-    typedef std.map<std.string, mapa
-    typedef reg_T<regBC3_elemento> reg_elemento
-    typedef reg_T<regBC3_udobra> reg_udobra
-    typedef reg_T<regBC3_capitulo> reg_capitulo
-    typedef reg_T<regBC3_medicion> reg_medicion
-
-private:
-    friend class CodigosObra
-
-     InsertaReg( str_reg, &verborrea, &cont_mediciones)
-     InsertaCods( Codigos &cods)
+class Codigos(dict):
 
     #Clasificación
-    def static bool EsCapituloUObra(mapa.const_iterator &i):
-        if(EsMedicion(i)) #Las mediciones llevan el código del capítulo al que pertenecen.
+    @staticmethod
+    def EsCapituloUObra(i):
+        if(EsMedicion(i)): #Las mediciones llevan el código del capítulo al que pertenecen.
             return False
         else:
-            return es_codigo_capitulo_u_obra((*i).first)
+            return es_codigo_capitulo_u_obra((i).first)
 
-    def static bool EsCapitulo(mapa.const_iterator &i):
+    @staticmethod
+    def EsCapitulo(i):
         if EsCapituloUObra(i):
             return not EsObra(i)
         else:
             return False
 
-    def static bool EsObra(mapa.const_iterator &i):
-        return es_codigo_obra((*i).first)
+    @staticmethod
+    def EsObra(i):
+        return es_codigo_obra((i).first)
 
-    def static bool EsElemento(mapa.const_iterator &i):
-        return ((*i).second.EsElemento())
+    @staticmethod
+    def EsElemento(i):
+        return ((i).second.EsElemento())
 
-    static bool EsMedicion(mapa.const_iterator &i)
-    def static bool EsDescompuesto(mapa.const_iterator &i):
-        if(EsMedicion(i)) return False
-        if(EsElemento(i)) return False
-        if(EsCapituloUObra(i)) return False
+    @staticmethod
+    def EsMedicion(self, i):
+        '''Devuelve verdadero si el registro corresponde a una medición.'''
+        return ((i).second.EsMedicion())
+
+    @staticmethod
+    def EsDescompuesto(i):
+        if(EsMedicion(i)): return False
+        if(EsElemento(i)): return False
+        if(EsCapituloUObra(i)): return False
         return True
 
-    static TipoConcepto GetTipoConcepto(mapa.const_iterator &i)
-    static std.string StrTipoConcepto(mapa.const_iterator &i)
-    Codigos GetObra()
-    Codigos GetCapitulos()
-    Codigos GetElementos()
-    Codigos GetMediciones()
-    Codigos GetDescompuestos()
-
-
-#     Codigos GetCapsPpales( Codigos &obra)
-#       #Devuelve los subcapítulos de la obra.
-##         Codigos retval(GetSubCaps((*obra.begin()).second))
-#         return retval
-#
-    Codigos GetSubCaps( RegBC3 &ppal)
-    Codigos GetSubCapitulos( Codigos &cods)
-#     Codigos GetSubCapitulos( s)
-##         Codigos retval
-#         if(s.leng.py()<1) return retval
-#         StrTok Str(s)
-#         scap = Str.get_token('\\')
-#         while(scap.leng.py()>0)
-##             Str.get_token('\\'); #Ignoramos factor
-#             Str.get_token('\\'); #Ignoramos cantidad
-#             i = find(scap)
-#             if(i!=end()) retval[(*i).first]= (*i).second
-#             scap= Str.get_token('\\')
-#
-#         return retval
-#
-    Codigos GetSubElementos( RegBC3 &ppal, &elementos)
-    Codigos GetSubDescompuestos( RegBC3 &ppal, &descompuestos)
-public:
-    Codigos &operator+=( Codigos &cods)
+    def __iadd__(cods):
         InsertaCods(cods)
-        return (*self)
+        return self
 
-    const_iterator BuscaCapitulo( cod)
-     Borra( Codigos &cods)
-    Codigos GetUdsObra( Codigos &udsobra)
 
-    reg_elemento GetDatosElemento( mapa.const_iterator &i)
-    reg_udobra GetDatosUdObra( mapa.const_iterator &i)
-    reg_capitulo GetDatosCapitulo( mapa.const_iterator &i)
-    reg_medicion GetDatosMedicion( mapa.const_iterator &i)
-
-    std.set<std.string> GetCodigos()
-
-    friend operator<<(os, &cds)
+    def InsertaCods(self, cods):
+        for i in cods:
+            (self)[(i).first]= (i).second
 
 
 
-#Codigos.cxx
+    #not  @brief Devuelve los subcapítulos del capitulo que se pasa como parámetro.
+    def GetSubCaps(self, ppal):
+        retval= None
+        desc = ppal.GetDesc(); #Obtiene la descomposición
+        for i in desc:
+            cod = (i).codigo
+            if(es_codigo_capitulo(cod)): #Es un capítulo.
+                j = BuscaCapitulo(cod)
+                if j:
+                    retval[(j).first]= (j).second
+                else:
+                    lmsg.error("Codigos.GetSubCaps; No se encontró el subcapítulo: " + cod + '\n')
 
-import Codigos
-#include "boost/lexical_cast.pypp"
+            #else: #partidas del capítulo
+            #lmsg.error("subcapítulo raro: " + cod + '\n')
 
-def InsertaCods(self, &cods):
-    i = cods.begin()
-    for(; i!=cods.end(); i++)
-        (*self)[(*i).first]= (*i).second
+        return retval
+
+    def GetSubCapitulos(self, cods):
+        retval= None
+        for i in cods:
+            retval.InsertaCods(GetSubCaps((i).second))
+        return retval
+
+    def GetSubElementos(self, ppal, elementos):
+    #Devuelve los precios elementales del capitulo que se pasa como parámetro.
+        retval= None
+        desc = ppal.GetDesc(); #Obtiene la descomposición
+        for i in desc:
+            cod = (i).codigo
+            if(not es_codigo_capitulo(cod)): #No es un capítulo.
+                j = elementos.find(cod)
+                if j!=end():
+                    retval[(j).first]= (j).second
 
 
+        return retval
 
-#not  @brief Devuelve los subcapítulos del capitulo que se pasa como parámetro.
-def GetSubCaps(self, &ppal):
-    Codigos retval
-    desc = ppal.GetDesc(); #Obtiene la descomposición
-    for(regBC3_d.const_iterator i=desc.begin(); i!=desc.end(); i++)
-        cod = (*i).codigo
-        if(es_codigo_capitulo(cod)) #Es un capítulo.
-            j = BuscaCapitulo(cod)
-            if j!=end():
-                retval[(*j).first]= (*j).second
+    def GetSubDescompuestos(self, ppal, descompuestos):
+    #Devuelve los descompuestos del capitulo que se pasa como parámetro.
+        retval= None
+        desc = ppal.GetDesc(); #Obtiene la descomposición
+        for i in desc:
+            cod = (i).codigo
+            if(not es_codigo_capitulo(cod)): #No es un capítulo.
+                j = descompuestos.find(cod)
+                if j!=end():
+                    retval[(j).first]= (j).second
+
+
+        return retval
+
+
+    def InsertaReg(self, str_reg, verborrea, cont_mediciones):
+        strtk= StrTok(str_reg)
+        tipo = (strtk.get_token('|'))[0]
+        cod = strtk.get_token('|')
+        cod= q_car_d(cod,'\\'); #Quitamos la barra si está al final.
+
+        if(tipo=='V' or tipo=='K' or tipo=='L' or
+                tipo=='A' or tipo=='G' or tipo=='E'):
+            if verborrea > 0:
+                logging.info("Se ignora el registro de tipo " + tipo + ".\n")
+            return
+
+        if(len(cod)<1): return
+        resto = strtk.resto()
+        i = find(cod)
+        if(not i):
+            i= find(cod+'#')
+            if(not i): #El registro no es de capítulo.
+                i= find(cod+"##")
+                if(not i): #El registro tampoco es de obra luego es nuevo.
+                    if(tipo == 'M'): #El registro corresponde a una medición.
+                        if(has_char(cod,'\\')): #A veces el registro ~M es de la forma: ~M|13.3.1#\01.009|1....
+                            cod= copia_desde(cod,'\\') #aquí le quitamod la parte 13.3.1#\ al código.
+                        cod= str(cont_mediciones) + '@' + cod
+
+                    (self)[cod]= RegBC3(); #Lo damos de alta.
+                    i= find(cod)
+
+        if(tipo=='C'):
+            (i).second.c= pc8TOlatin1(resto)
+        elif(tipo=='D'):
+            if len(resto)<2:
+                if(verborrea>4): #No tiene porqué ser un error.
+                    lmsg.error("Descomposición vacía en concepto: \'" + cod
+                              + "\' se ignora la descomposición." + '\n')
+
             else:
-                std.cerr + "Codigos.GetSubCaps; No se encontró el subcapítulo: " + cod + '\n'
-
-        #else #partidas del capítulo
-        #std.cerr + "subcapítulo raro: " + cod + '\n'
-
-    return retval
-
-def GetSubCapitulos(self, &cods):
-    Codigos retval
-    i = cods.begin()
-    for(; i!=cods.end(); i++)
-        retval.InsertaCods(GetSubCaps((*i).second))
-    return retval
-
-def GetSubElementos(self, &ppal, &elementos):
-#Devuelve los precios elementales del capitulo que se pasa como parámetro.
-    Codigos retval
-    desc = ppal.GetDesc(); #Obtiene la descomposición
-    for(regBC3_d.const_iterator i=desc.begin(); i!=desc.end(); i++)
-        cod = (*i).codigo
-        if(not es_codigo_capitulo(cod)) #No es un capítulo.
-            j = elementos.find(cod)
-            if j!=end():
-                retval[(*j).first]= (*j).second
-
-
-    return retval
-
-def GetSubDescompuestos(self, &ppal, &descompuestos):
-#Devuelve los descompuestos del capitulo que se pasa como parámetro.
-    Codigos retval
-    desc = ppal.GetDesc(); #Obtiene la descomposición
-    for(regBC3_d.const_iterator i=desc.begin(); i!=desc.end(); i++)
-        cod = (*i).codigo
-        if(not es_codigo_capitulo(cod)) #No es un capítulo.
-            j = descompuestos.find(cod)
-            if j!=end():
-                retval[(*j).first]= (*j).second
-
-
-    return retval
-
-
-def InsertaReg(self, &str_reg, &verborrea, &cont_mediciones):
-    StrTok strtk(str_reg)
-    tipo = (strtk.get_token('|'))[0]
-    cod = strtk.get_token('|')
-    cod= q_car_d(cod,'\\'); #Quitamos la barra si está al final.
-
-    if(tipo=='V' or tipo=='K' or tipo=='L' or
-            tipo=='A' or tipo=='G' or tipo=='E')
-        if verborrea > 0:
-            std.clog + "Se ignora el registro de tipo " + tipo + ".\n"
-        return
-
-    if(len(cod)<1) return
-     resto = strtk.resto()
-    i = find(cod)
-    if i==end():
-        i= find(cod+'#')
-        if(i==end()) #El registro no es de capítulo.
-            i= find(cod+"##")
-            if(i==end()) #El registro tampoco es de obra luego es nuevo.
-                if(tipo == 'M') #El registro corresponde a una medición.
-                    if(has_char(cod,'\\')) #A veces el registro ~M es de la forma: ~M|13.3.1#\01.009|1....
-                        cod= copia_desde(cod,'\\'); #aquí le quitamod la parte 13.3.1#\ al código.
-                    cod= boost.lexical_cast<std.string>(cont_mediciones) + '@' + cod
-
-                (*self)[cod]= RegBC3(); #Lo damos de alta.
-                i= find(cod)
-
-
-
-    switch(tipo)
-    case 'C':
-        (*i).second.c= pc8TOlatin1(resto)
-        break
-    case 'D':
-        if len(resto)<2:
-            if(verborrea>4) #No tiene porqué ser un error.
-                std.cerr + "Descomposición vacía en concepto: \'" + cod
-                          + "\' se ignora la descomposición." + '\n'
-
+                (i).second.d= resto
+        elif(tipo=='T'):
+            (i).second.t= pc8TOlatin1(resto)
+        elif(tipo=='M'):
+            (i).second.m= pc8TOlatin1(resto)
+        elif(tipo=='Y'):
+            (i).second.y= resto
         else:
-            (*i).second.d= resto
-        break
-    case 'T':
-        (*i).second.t= pc8TOlatin1(resto)
-        break
-    case 'M':
-        (*i).second.m= pc8TOlatin1(resto)
-        break
-    case 'Y':
-        (*i).second.y= resto
-        break
-    default:
-        std.cerr + "Registro de tipo: " + tipo + " desconocido." + '\n'
-        break
+            lmsg.error("Registro de tipo: " + tipo + " desconocido." + '\n')
+
+    #not  @brief Devuelve el registro que corresponde a la obra.
+    def GetObra(self):
+        retval= None
+        for i in self:
+            if EsObra(i):
+                retval[(i).first]= (i).second
+        if not retval.size():
+            lmsg.error("No se encontró el capítulo raíz." + '\n')
+        return retval
 
 
+    #not  @brief Devuelve un iterador al capítulo con el código que se pasa como parámetro.
+    def BuscaCapitulo(self, cod):
+        retval = find(cod); #Código
+        if retval==end():
+            retval= find(cod+'#')
+        return retval
 
-#not  @brief Devuelve el registro que corresponde a la obra.
-def GetObra(self, ):
-    Codigos retval
-    i = begin()
-    for(; i!=end(); i++)
+
+    #not  @brief Devuelve el tipo de concepto al que corresponde el registro.
+    def GetTipoConcepto(self, i):
         if EsObra(i):
-            retval[(*i).first]= (*i).second
-    if not retval.size():
-        std.cerr + "No se encontró el capítulo raíz." + '\n'
-    return retval
-
-
-#not  @brief Devuelve un iterador al capítulo con el código que se pasa como parámetro.
-def BuscaCapitulo(self, &cod):
-    retval = find(cod); #Código
-    if retval==end():
-        retval= find(cod+'#')
-    return retval
-
-
-#not  @brief Devuelve verdadero si el registro corresponde a una medición.
-def EsMedicion(self, &i):
-    return ((*i).second.EsMedicion())
-
-
-#not  @brief Devuelve el tipo de concepto al que corresponde el registro.
-def GetTipoConcepto(self, &i):
-    if EsObra(i):
-        return obra
-    elif EsElemento(i):
-        return elemento
-    elif EsMedicion(i):
-        return medicion
-    elif EsDescompuesto(i):
-        return descompuesto
-    elif EsCapitulo(i):
-        return capitulo
-    else:
-        std.cerr + "No se encontró el tipo del concepto: '" + (*i).first + "'\n"
-        return sin_tipo
-
-
-
-#not  @brief Devuelve una cadena de caracteres que identifica el
-#not  tipo de concepto al que corresponde el registro.
-def StrTipoConcepto(self, &i):
-     tipo = GetTipoConcepto(i)
-    switch(tipo)
-    case obra:
-        return "obra"
-    case elemento:
-        return "elemento"
-    case medicion:
-        return "medicion"
-    case descompuesto:
-        return "descompuesto"
-    case capitulo:
-        return "capitulo"
-    case sin_tipo :
-    default:
-        return "sin_tipo"
-
-
-
-
-#not  @brief Extrae las entidades que corresponden a capitulos
-def GetCapitulos(self, ):
-    Codigos retval
-    i = begin()
-    for(; i!=end(); i++)
-        if EsCapitulo(i):
-            retval[(*i).first]= (*i).second
-    std.clog + "  leídos " + retval.size() + " capítulos." + '\n'
-    return retval
-
-
-#not  @brief Devuelve los códigos de los objetos del contenedor
-def GetCodigos(self, ):
-    std.set<std.string> retval
-    i = begin()
-    for(; i!=end(); i++)
-        retval.insert((*i).first)
-    return retval
-
-
-#not  @brief Extrae las entidades que corresponden a elementos
-def GetElementos(self, ):
-    Codigos retval
-    i = begin()
-    for(; i!=end(); i++)
-        if EsElemento(i):
-            retval[(*i).first]= (*i).second
-    std.clog + "  leídos " + retval.size() + " precios elementales." + '\n'
-    return retval
-
-
-#not  @brief Extrae las entidades que corresponden a mediciones
-def GetMediciones(self, ):
-    Codigos retval
-    i = begin()
-    for(; i!=end(); i++)
-        if EsMedicion(i):
-            retval[(*i).first]= (*i).second
-    std.clog + "  leídas " + retval.size() + " mediciones." + '\n'
-    return retval
-
-
-#not  @brief Extrae las entidades que corresponden a descompuestos
-def GetDescompuestos(self, ):
-    Codigos retval
-    i = begin()
-    for(; i!=end(); i++)
-        if EsDescompuesto(i):
-            retval[(*i).first]= (*i).second
-    std.clog + " leídos " + retval.size() + " precios descompuestos." + '\n'
-    return retval
-
-
-#not  @brief Borra los elementos de self que estan en cods.
-def Borra(self, &cods):
-    i = cods.begin()
-    for(; i!=cods.end(); i++)
-        j = find((*i).first)
-        if j!=end()) erase(j:
-
-
-
-#not  @brief Extrae las entidades que corresponden a unidades de obra
-def GetUdsObra(self, &udsobra):
-    Codigos retval
-    i = udsobra.begin()
-    for(; i!=udsobra.end(); i++)
-        StrTok Str((*i).first)
-        scap = Str.get_token('\\')
-        codud = Str.resto()
-        j = find(codud)
-        if j!=end():
-            retval[(*j).first]= (*j).second
+            return obra
+        elif EsElemento(i):
+            return elemento
+        elif EsMedicion(i):
+            return medicion
+        elif EsDescompuesto(i):
+            return descompuesto
+        elif EsCapitulo(i):
+            return capitulo
         else:
-            std.cerr + "GetUdsObra: No se encontro la unidad: \'" + codud
-                      + "\' de la medición: " + scap + '\n'
-
-    return retval
+            lmsg.error("No se encontró el tipo del concepto: '" + (i).first + "'\n")
+            return sin_tipo
 
 
-def GetDatosElemento(self, &i):
-    return reg_elemento((*i).first,(*i).second.GetDatosElemento())
+
+    #not  @brief Devuelve una cadena de caracteres que identifica el
+    #not  tipo de concepto al que corresponde el registro.
+    def StrTipoConcepto(self, i):
+        retval= "sin_tipo"
+        tipo = GetTipoConcepto(i)
+        if(tipo==obra):
+            retval= "obra"
+        elif(tipo==elemento):
+            retval= "elemento"
+        elif(tipo==medicion):
+            retval= "medicion"
+        elif(tipo==descompuesto):
+            retval= "descompuesto"
+        elif(tipo==capitulo):
+            retval= "capitulo"
+        return retval
 
 
-def GetDatosUdObra(self, &i):
-    return reg_udobra((*i).first,(*i).second.GetDatosUdObra())
 
 
-def GetDatosCapitulo(self, &i):
-    return reg_capitulo((*i).first,(*i).second.GetDatosCapitulo())
+    #not  @brief Extrae las entidades que corresponden a capitulos
+    def GetCapitulos(self):
+        retval= None
+        for i in self:
+            if EsCapitulo(i):
+                retval[(i).first]= (i).second
+        logging.info("  leídos " + retval.size() + " capítulos." + '\n')
+        return retval
 
 
-def GetDatosMedicion(self, &i):
-    return reg_medicion((*i).first,(*i).second.GetDatosMedicion())
+    #not  @brief Devuelve los códigos de los objetos del contenedor
+    def GetCodigos(self):
+        retval= set()
+        for i in self:
+            retval.insert((i).first)
+        return retval
 
 
-operator<<(os, &cds)
-    i = cds.begin()
-    for(; i!=cds.end(); i++)
-        os.write("Código: " + (*i).first + '\n'
-           + (*i).second + '\n'
-    return os
+    #not  @brief Extrae las entidades que corresponden a elementos
+    def GetElementos(self):
+        retval= None
+        for i in self:
+            if EsElemento(i):
+                retval[(i).first]= (i).second
+        logging.info("  leídos " + retval.size() + " precios elementales." + '\n')
+        return retval
+
+
+    #not  @brief Extrae las entidades que corresponden a mediciones
+    def GetMediciones(self):
+        retval= None
+        for i in self:
+            if EsMedicion(i):
+                retval[(i).first]= (i).second
+        logging.info("  leídas " + retval.size() + " mediciones." + '\n')
+        return retval
+
+
+    #not  @brief Extrae las entidades que corresponden a descompuestos
+    def GetDescompuestos(self):
+        retval= None
+        for i in self:
+            if EsDescompuesto(i):
+                retval[(i).first]= (i).second
+        logging.info(" leídos " + retval.size() + " precios descompuestos." + '\n')
+        return retval
+
+
+    #not  @brief Borra los elementos de self que estan en cods.
+    def Borra(self, cods):
+        for i in cods:
+            j = find((i).first)
+            if j: erase(j)
+
+
+
+    #not  @brief Extrae las entidades que corresponden a unidades de obra
+    def GetUdsObra(self, udsobra):
+        retval= None
+        for i in udsobra:
+            Str= StrTok((i).first)
+            scap = Str.get_token('\\')
+            codud = Str.resto()
+            j = find(codud)
+            if j:
+                retval[(j).first]= (j).second
+            else:
+                lmsg.error("GetUdsObra: No se encontro la unidad: \'" + codud
+                          + "\' de la medición: " + scap + '\n')
+
+        return retval
+
+
+    def GetDatosElemento(self, i):
+        return reg_elemento((i).first,(i).second.GetDatosElemento())
+
+
+    def GetDatosUdObra(self, i):
+        return reg_udobra((i).first,(i).second.GetDatosUdObra())
+
+
+    def GetDatosCapitulo(self, i):
+        return reg_capitulo((i).first,(i).second.GetDatosCapitulo())
+
+
+    def GetDatosMedicion(self, i):
+        return reg_medicion((i).first,(i).second.GetDatosMedicion())
+
+
+    def Print(self,os):
+        for i in self:
+            os.write("Código: " + (i).first + '\n'+ (i).second + '\n')
+        return os
 

@@ -14,7 +14,7 @@ class ListaJustPre(EntCmd):
     ListaRegJustPre otros
     ListaRegJustPre porcentajes
 public:
-    ListaJustPre( bool &pa, &mano, &mater, &maqui, &otr, &porc)
+    ListaJustPre( bool &pa, mano, mater, maqui, otr, porc)
     ppl_precio3 Base()
     ppl_precio3 Total()
     ppl_precio3 Redondeo()
@@ -24,7 +24,7 @@ public:
     std.string StrPrecioEnLetra( bool &genero)
     size_t size()
      ImprLtxJustPre(os)
-     ImprLtxCP1(os, &genero)
+     ImprLtxCP1(os, genero)
      ImprLtxCP2(os)
 
 
@@ -34,7 +34,7 @@ public:
 import ListaJustPre
 import bibXCBasica/src/texto/latex
 
-ListaJustPre.ListaJustPre( bool &pa, &mano, &mater, &maqui, &otr, &porc)
+ListaJustPre.ListaJustPre( bool &pa, mano, mater, maqui, otr, porc)
     : porcentajes_acumulados(pa),mano_de_obra(mano), materiales(mater), maquinaria(maqui), otros(otr), porcentajes(porc)
     ppl_precio3 base(Base())
     if porcentajes_acumulados:
@@ -43,7 +43,7 @@ ListaJustPre.ListaJustPre( bool &pa, &mano, &mater, &maqui, &otr, &porc)
         porcentajes.SetBase(base)
 
 
-def Base(self, ):
+def Base(self):
     ppl_precio3 retval(mano_de_obra.Total())
     retval+= materiales.Total()
     retval+= maquinaria.Total()
@@ -51,12 +51,12 @@ def Base(self, ):
     return retval
 
 
-def Total(self, ):
+def Total(self):
     ppl_precio3 retval(Base())
     retval+= porcentajes.Total()
     return retval
 
-def Redondeo(self, ):
+def Redondeo(self):
     #return -Total().Redondeo()
     #XXX Redondeo para 2 decimales.
     tmp = Total()
@@ -65,23 +65,23 @@ def Redondeo(self, ):
     rnd/=100
     return rnd
 
-def TotalRnd(self, ):
+def TotalRnd(self):
     return Total() + Redondeo()
 
-def TotalCP1(self, ):
+def TotalCP1(self):
     return ppl_precio2(double(TotalRnd()))
 
-def StrPrecioLtx(self, ):
+def StrPrecioLtx(self):
     return TotalCP1().EnHumano()
 
-def StrPrecioEnLetra(self, &genero):
+def StrPrecioEnLetra(self, genero):
     return TotalCP1().EnLetra(genero)
 
-def size(self, ):
+def size(self):
     return mano_de_obra.size()+materiales.size()+maquinaria.size()+otros.size()+porcentajes.size()
 
 
-def ImprLtxJustPre(self, &os):
+def ImprLtxJustPre(self, os):
     total = Total()
     rnd = Redondeo()
     total_rnd = TotalRnd()
@@ -114,7 +114,7 @@ def ImprLtxJustPre(self, &os):
            + ltx_fin_reg + '\n'
 
 
-def ImprLtxCP2(self, &os):
+def ImprLtxCP2(self, os):
     total = Total()
     rnd = Redondeo()
     total_rnd = TotalRnd()
@@ -147,7 +147,7 @@ def ImprLtxCP2(self, &os):
 
 
 
-def ImprLtxCP1(self, &os, &genero):
+def ImprLtxCP1(self, os, genero):
     os.write(StrPrecioEnLetra(genero) + " & "
        + StrPrecioLtx()
 

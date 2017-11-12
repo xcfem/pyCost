@@ -7,7 +7,7 @@ import ppl
 
 class EntPyCost(EntCmd):
 public:
-    EntPyCost(EntCmd *owr= NULL)
+    EntPyCost(EntCmd *owr= None)
 
 
 

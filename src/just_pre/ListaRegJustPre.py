@@ -39,45 +39,45 @@ import ListaRegJustPre
 import bibXCBasica/src/texto/latex
 
 
-def SetBase(self, &b):
+def SetBase(self, b):
     if(size()<1) return
     iterator i
-    for(i=begin(); i!=end(); i++)
-        (*i).SetBase(b)
+    for(i=begin(); i!=end(); i+= 1)
+        (i).SetBase(b)
 
-def SetBaseAcum(self, &b):
+def SetBaseAcum(self, b):
     if(size()<1) return
     ppl_precio3 base(b)
     iterator i
-    for(i=begin(); i!=end(); i++)
-        (*i).SetBase(base)
-        base+= (*i).Total()
+    for(i=begin(); i!=end(); i+= 1)
+        (i).SetBase(base)
+        base+= (i).Total()
 
 
-def ImprLtxJust(self, &os):
+def ImprLtxJust(self, os):
     if(size()<1) return
     const_iterator i
-    for(i=begin(); i!=end(); i++)
-        (*i).ImprLtxJustPre(os)
+    for(i=begin(); i!=end(); i+= 1)
+        (i).ImprLtxJustPre(os)
     os.write(ltx_multicolumn(ltx_datos_multicolumn("4","r","Total "+StrTipo()))
        + " & & " + Total().EnHumano() + ltx_fin_reg + '\n' + ltx_fin_reg + '\n'
 
-def ImprLtxCP2(self, &os):
+def ImprLtxCP2(self, os):
     total = Total()
     if total>ppl_precio3(0.0):
         os.write(" & & " + StrTipo()
            + " & " + total.EnHumano() + ltx_fin_reg + '\n'
 
-def ImprLtxCP2Porc(self, &os):
+def ImprLtxCP2Porc(self, os):
     if(size()<1) return
     const_iterator i
-    for(i=begin(); i!=end(); i++)
-        (*i).ImprLtxCP2(os)
+    for(i=begin(); i!=end(); i+= 1)
+        (i).ImprLtxCP2(os)
 
-def Total(self, ):
+def Total(self):
     ppl_precio3 retval(0.0)
-    for(const_iterator i=begin(); i!=end(); i++)
-        retval+= (*i).Total()
+    for(const_iterator i=begin(); i!=end(); i+= 1)
+        retval+= (i).Total()
     return retval
 
 

@@ -10,7 +10,8 @@ class Porcentajes(EntPyCost):
     float gg; #Gastos generales.
     float bi; #Beneficio industrial.
     float iva; #Impuesto sobre el valor añadido.
-    def static ppl_precio AplicaPorcentaje( ppl_precio &p, &pc):
+    @staticmethod
+    def ppl_precio AplicaPorcentaje( ppl_precio &p, pc):
          ppl_porcentaje temp2(pc)
         ppl_precio temp3(p)
         temp3*=temp2
@@ -26,9 +27,9 @@ class Porcentajes(EntPyCost):
         return AplicaPorcentaje(p,iva)
 
 public:
-    Porcentajes( float &g= .17, &b=.06, i=.16)
+    Porcentajes( g= .17, b=.06, i=.16)
         : gg(g), bi(b), iva(i) {
-     ImprLtx(os, &precio_ejec_mat)
+     ImprLtx(os, precio_ejec_mat)
 
 
 
@@ -36,7 +37,7 @@ public:
 
 import Porcentajes
 
-def ImprLtx(self, &os, &precio_ejec_mat):
+def ImprLtx(self, os, precio_ejec_mat):
     os.write("\\begin{itemize}" + '\n'
     os.write("\\item Total presupuesto de ejecución material \\dotfill\\ "
        + precio_ejec_mat.EnHumano() + '\n'

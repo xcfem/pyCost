@@ -12,7 +12,7 @@ public:
     Partida(): ProtoPartida() {
     Partida( Measurable &u):ProtoPartida(u) {
     def ProtoPartida *Copia():
-        return Partida(*self)
+        return Partida(self)
 
      Agrega( RegMedicion &med)
         meds.append(med)
@@ -34,7 +34,7 @@ public:
 
 import Partida
 
-def LeeBC3(self, &m):
+def LeeBC3(self, m):
     if m.med.lista_med.empty():
         RegMedicion rm("",m.med.med_total)
         meds.append(rm)

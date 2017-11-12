@@ -26,7 +26,7 @@ public:
 import InformeUdObra
 import bibXCBasica/src/texto/latex
 
-def ImprLtx(self, &os):
+def ImprLtx(self, os):
     if ud:
         os.write(ud.Codigo() + " & "
            + ascii2latex(ud.TextoLargo()) + " & "

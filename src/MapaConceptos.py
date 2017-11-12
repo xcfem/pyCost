@@ -27,7 +27,7 @@ protected:
 public:
 
      Agrega( T &u)
-        claves[u.Codigo()]= &((*self)[u.Codigo()]= u)
+        claves[u.Codigo()]= &((self)[u.Codigo()]= u)
 
     T *Busca( cod)
      T *Busca( cod)
@@ -41,7 +41,7 @@ MapaClaves<T> MapaConceptos<T>.claves
 
 template<class T>
  MapaConceptos<T>.err_no_encontrado( cod)
-    std.cerr + "Concepto: " + cod
+    lmsg.error("Concepto: " + cod)
               + " no encontrado" + '\n'
 
 template<class T>
@@ -49,29 +49,29 @@ T *MapaConceptos<T>.Busca( cod)
     i = claves.find(cod)
     if i==claves.end():
         #err_no_encontrado(cod)
-        return NULL
+        return None
 
-    return ((*i).second)
+    return ((i).second)
 
 template<class T>
  T *MapaConceptos<T>.Busca( cod)
     i = claves.find(cod)
     if i==claves.end():
         #err_no_encontrado(cod)
-        return NULL
+        return None
 
-    return ((*i).second)
+    return ((i).second)
 
 template<class T>
  MapaConceptos<T>.WriteBC3(os)
     j = MapaConceptos<T>.begin()
-    for(; j!=MapaConceptos<T>.end(); j++)
-        (*j).second.WriteBC3(os)
+    for(; j!=MapaConceptos<T>.end(); j+= 1)
+        (j).second.WriteBC3(os)
 
 template<class T>
  MapaConceptos<T>.Write(os)
     const_iterator i
-    for(i= MapaConceptos<T>.begin(); i!=MapaConceptos<T>.end(); i++)
-        (*i).second.Write(os)
+    for(i= MapaConceptos<T>.begin(); i!=MapaConceptos<T>.end(); i+= 1)
+        (i).second.Write(os)
 
 

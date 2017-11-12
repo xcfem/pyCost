@@ -39,55 +39,55 @@ class RegBC3
     regBC3_medicion GetDatosMedicion()
         return regBC3_medicion(GetConcepto(),GetTexto(),GetMed())
 
-    friend operator<<(os, &r)
+    friend operator<<(os, r)
 
 
-operator<<(os, &r)
+operator<<(os, r)
 
 
 #RegBC3.cxx
 
 import RegBC3
 
-    def GetConcepto(self, ):
+    def GetConcepto(self):
         return regBC3_c(c)
 
 
-    def GetTexto(self, ):
+    def GetTexto(self):
         return regBC3_t(t)
 
 
-    def GetDesc(self, ):
+    def GetDesc(self):
         return regBC3_d(d+y)
 
 
-    def GetMed(self, ):
+    def GetMed(self):
         return regBC3_m(m)
 
 
-    def EsElemento(self, ):
+    def EsElemento(self):
         return ((len(d)==0) and (len(y)== 0) and (len(m)==0))
 
 
-    def EsMedicion(self, ):
+    def EsMedicion(self):
         return (m.size()!=0)
 
 
     #not  @brief Devuelve verdadero si el concepto corresponde a una obra.
-    def EsObra(self, ):
+    def EsObra(self):
         return es_codigo_obra(c)
 
 
     #not  @brief Devuelve verdadero si el concepto corresponde a un capitulo.
-    def EsCapitulo(self, ):
+    def EsCapitulo(self):
         return es_codigo_capitulo(c)
 
 
-    def GetDatosCapitulo(self, ):
+    def GetDatosCapitulo(self):
         return regBC3_capitulo(GetConcepto(),GetTexto(),GetDesc())
 
 
-    operator<<(os, &r)
+    operator<<(os, r)
         os.write("C: " + r.c + ' ' + r.c.size() + '\n'
            + "D: " + r.d + ' ' + r.d.size() + '\n'
            + "M: " + r.m + ' ' + r.m.size() + '\n'

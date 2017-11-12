@@ -6,14 +6,14 @@ import UdObra
 import basic_types
 
 class RegMedicion(EntPyCost):
-    std.string comentario
+    comentario= ''
     double unidades
     double largo
     double ancho
     double alto
 public:
-    RegMedicion(  c= "", &uds= 0.0,
-                  double &l= 0.0, &an= 0.0,
+    RegMedicion(  c= "", uds= 0.0,
+                  double &l= 0.0, an= 0.0,
                   double &al= 0.0)
         :comentario(c),unidades(uds),largo(l),ancho(an),alto(al) {
 
@@ -57,16 +57,16 @@ import RegMedicion
  double &RegMedicion.Alto()
     return alto
 
-def UnidadesR(self, ):
+def UnidadesR(self):
     return ppl_dimension(unidades)
 
-def LargoR(self, ):
+def LargoR(self):
     return ppl_dimension(largo)
 
-def AnchoR(self, ):
+def AnchoR(self):
     return ppl_dimension(ancho)
 
-def AltoR(self, ):
+def AltoR(self):
     return ppl_dimension(alto)
 
 
@@ -83,7 +83,7 @@ long double RegMedicion.Total()
     return retval
 
 
-def TotalR(self, ):
+def TotalR(self):
     if  (unidades==0.0) and (largo==0.0:
             and (ancho==0.0) and (alto==0.0))
         return ppl_dimension(0.0)
@@ -100,7 +100,7 @@ def TotalR(self, ):
     return retval
 
 
-def LeeBC3(self, &m):
+def LeeBC3(self, m):
     comentario= m.med.comentario
     unidades= m.med.unidades
     largo= m.med.largo
@@ -108,7 +108,7 @@ def LeeBC3(self, &m):
     alto= m.med.alto
 
 
-def WriteBC3(self, &os):
+def WriteBC3(self, os):
     os.write('\\' + comentario + '\\'
        + unidades + '\\'
        + largo + '\\'
@@ -116,14 +116,14 @@ def WriteBC3(self, &os):
        + alto + '\\'
 
 
-def Write(self, &os):
+def Write(self, os):
     os.write(comentario + ','
        + unidades + ','
        + largo + ',' + ancho + ',' + alto + '\n'
 
 
 #not  @brief Imprime la medición en Latex.
-def ImprLtx(self, &os, ancho):
+def ImprLtx(self, os, ancho):
     std.string str_u,str_l,str_a,str_alt,str_t
 
     os.write(ltx_multicolumn(ltx_datos_multicolumn("1",ancho,ascii2latex(comentario))) + ltx_ampsnd
@@ -139,7 +139,7 @@ def ImprLtx(self, &os, ancho):
        + str_t
 
 
-def WriteHCalc(self, &os):
+def WriteHCalc(self, os):
     os.write('"' + comentario + '"' + tab
     if(unidades!=0.0) os.write(unidades
     os.write(tab

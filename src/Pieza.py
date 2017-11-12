@@ -30,24 +30,24 @@ class Pieza (ProtoPartida):
     metodo_medida MetodoMedida()
         switch(fm)
         case unidad:
-            return NULL
+            return None
         case longitud:
         case peso_l:
-            return &GeomObj.Longitud
+            return GeomObj.Longitud
         case area:
         case peso_a:
-            return &GeomObj.Area
+            return GeomObj.Area
         case volumen:
         case peso_v:
-            return &GeomObj.Volumen
+            return GeomObj.Volumen
 
-        return NULL
+        return None
 
 public:
     Pieza():ProtoPartida(), fm(unidad) {
-    Pieza( UdObra &u, &f): ProtoPartida(u), fm(f) {
+    Pieza( UdObra &u, f): ProtoPartida(u), fm(f) {
     def ProtoPartida *Copia():
-        return Pieza(*self)
+        return Pieza(self)
 
     long double Total()
         return Meds().Total()
@@ -61,8 +61,8 @@ public:
         mm = MetodoMedida()
         if mm:
             i = geom.begin()
-            for(; i!=geom.end(); i++)
-                retval.append(RegMedicion("",1.0,((*(*i)).*mm)()))
+            for(; i!=geom.end(); i+= 1)
+                retval.append(RegMedicion("",1.0,((*(i)).*mm)()))
 
         else:
             retval.append(RegMedicion("",geom.size()))

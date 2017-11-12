@@ -10,9 +10,9 @@ import basic_types
 
 class ProtoPartida (EntPyCost):
      Measurable *ud
-     WriteBC3RegM(os, &cap_padre="", &pos="")
+     WriteBC3RegM(os, cap_padre="", pos="")
 public:
-    ProtoPartida():ud(NULL) {
+    ProtoPartida():ud(None) {
     ProtoPartida( Measurable &u):ud(&u) {
     inline virtual ~ProtoPartida() {
     virtual ProtoPartida *Copia() const= 0; #Constructor virtual.
@@ -52,16 +52,16 @@ public:
         return PrecioR().EnHumano()
 
     virtual Mediciones Meds() const= 0
-    def WriteBC3(os, &cap_padre="", &pos=""):
+    def WriteBC3(os, cap_padre="", pos=""):
     #Latex.
-     ImprLtxCabecera(os, &totalr, ancho)
+     ImprLtxCabecera(os, totalr, ancho)
     static  ImprLtxLeyenda(os)
-    static  ImprLtxPie(os, &totalr)
-     ImprCompLtxMed(os, &otra)
+    static  ImprLtxPie(os, totalr)
+     ImprCompLtxMed(os, otra)
      ImprCompLtxMed(os)
      ImprLtxMed(os)
-     ImprLtxCabeceraPre(os, &totalr, ancho)
-     ImprCompLtxPre(os, &otra)
+     ImprLtxCabeceraPre(os, totalr, ancho)
+     ImprCompLtxPre(os, otra)
      ImprCompLtxPre(os)
      ImprLtxPre(os)
      WriteHCalcMed(os)
@@ -75,14 +75,14 @@ import ProtoPartida
 import Obra
 
 #not  @brief Imprime la cabecera para la partida.
-def ImprLtxCabecera(self, &os, &totalr, ancho):
+def ImprLtxCabecera(self, os, totalr, ancho):
     os.write(ascii2latex(CodigoUdObra()) + ltx_ampsnd
        + totalr + ' ' + ascii2latex(UnidadMedida()) + ltx_ampsnd
        + ltx_multicolumn(ltx_datos_multicolumn("4",ancho,ascii2latex(TextoLUdObra())))
 
 
 #not  @brief Imprime la partida.
-def ImprCompLtxMed(self, &os, &otra):
+def ImprCompLtxMed(self, os, otra):
      linea_en_blanco = ltx_ampsnd+ltx_ampsnd+ltx_ampsnd+
                                        ltx_ampsnd+ltx_ampsnd+ltx_ampsnd+
                                        ltx_ampsnd+ltx_ampsnd+ltx_ampsnd+
@@ -109,7 +109,7 @@ def ImprCompLtxMed(self, &os, &otra):
 
 
 #not  @brief Imprime la partida.
-def ImprCompLtxMed(self, &os):
+def ImprCompLtxMed(self, os):
      linea_en_blanco = ltx_ampsnd+ltx_ampsnd+ltx_ampsnd+
                                        ltx_ampsnd+ltx_ampsnd+ltx_ampsnd+
                                        ltx_ampsnd+ltx_ampsnd+ltx_ampsnd+
@@ -135,12 +135,12 @@ def ImprCompLtxMed(self, &os):
     os.write(linea_en_blanco + '\n'
 
 
-def ImprLtxCabeceraPre(self, &os, &totalr, ancho):
+def ImprLtxCabeceraPre(self, os, totalr, ancho):
     os.write(ascii2latex(CodigoUdObra()) + ltx_ampsnd
        + totalr + " " + ascii2latex(UnidadMedida()) + ltx_ampsnd
        + ltx_multicolumn(ltx_datos_multicolumn("1",ancho,ascii2latex(TextoLUdObra())))
 
-def ImprCompLtxPre(self, &os, &otra):
+def ImprCompLtxPre(self, os, otra):
      linea_en_blanco = ltx_ampsnd+ltx_ampsnd+ltx_ampsnd+
                                        ltx_ampsnd+ltx_ampsnd+
                                        ltx_ampsnd+ltx_ampsnd+
@@ -158,7 +158,7 @@ def ImprCompLtxPre(self, &os, &otra):
        + StrPrecioLtx() + ltx_fin_reg + '\n'
     os.write(linea_en_blanco + '\n'
 
-def ImprCompLtxPre(self, &os):
+def ImprCompLtxPre(self, os):
      linea_en_blanco = ltx_ampsnd+ltx_ampsnd+ltx_ampsnd+
                                        ltx_ampsnd+ltx_ampsnd+
                                        ltx_ampsnd+ltx_ampsnd+
@@ -174,7 +174,7 @@ def ImprCompLtxPre(self, &os):
        + StrPrecioLtx() + ltx_fin_reg + '\n'
     os.write(linea_en_blanco + '\n'
 
-def ImprLtxPre(self, &os):
+def ImprLtxPre(self, os):
      linea_en_blanco = ltx_ampsnd+ltx_ampsnd+ltx_ampsnd+ltx_ampsnd+ltx_fin_reg
      totalr_med = TotalR().EnHumano()
     ImprLtxCabeceraPre(os,totalr_med,"p{5cm}")
@@ -184,7 +184,7 @@ def ImprLtxPre(self, &os):
     os.write(linea_en_blanco + '\n'
 
 #HCalc
-def WriteHCalcMed(self, &os):
+def WriteHCalcMed(self, os):
     os.write(CodigoUdObra() + tab
        + en_humano(Total(),3) + tab + ascii2latex(UnidadMedida()) + tab
        + '"' + ascii2latex(TextoLUdObra()) + '"' + '\n'
@@ -196,26 +196,26 @@ def WriteHCalcMed(self, &os):
        + "Parcial" + '\n'
     Meds().WriteHCalc(os)
 
-def WriteHCalcPre(self, &os):
+def WriteHCalcPre(self, os):
     os.write(CodigoUdObra() + tab
        + Total() + tab + UnidadMedida() + tab + TextoLUdObra() + tab
        + StrPrecioUd() + tab
        + Precio() + '\n'
 
 
-def WriteBC3RegM(self, &os, &cap_padre, &pos):
+def WriteBC3RegM(self, os, cap_padre, pos):
     os.write("~M|" + cap_padre + '\\' + CodigoUdObra() + '|'
        + pos.write('|'
        + Total() + '|'
 
 
-def WriteBC3(self, &os, &cap_padre, &pos):
+def WriteBC3(self, os, cap_padre, pos):
     WriteBC3RegM(os,cap_padre,pos)
     Meds().WriteBC3(os)
     os.write('|' + endl_msdos
 
 
-def ImprLtxLeyenda(self, &os):
+def ImprLtxLeyenda(self, os):
     os.write("Texto" + ltx_ampsnd
        + "Unidades" + ltx_ampsnd
        + "Largo" + ltx_ampsnd
@@ -224,12 +224,12 @@ def ImprLtxLeyenda(self, &os):
        + "Parcial"
 
 
-def ImprLtxPie(self, &os, &totalr):
+def ImprLtxPie(self, os, totalr):
     os.write(ltx_multicolumn(ltx_datos_multicolumn("5","r","Suma "+ ltx_ldots)) + ltx_ampsnd
        + ltx_textbf(totalr)
 
 
-def ImprLtxMed(self, &os):
+def ImprLtxMed(self, os):
      linea_en_blanco = ltx_ampsnd+ltx_ampsnd+ltx_ampsnd+ltx_ampsnd+ltx_ampsnd+ltx_fin_reg
     os.write(linea_en_blanco + '\n'
      totalr = TotalR().EnHumano()

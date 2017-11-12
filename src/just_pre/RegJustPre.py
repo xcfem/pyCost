@@ -24,7 +24,7 @@ class RegJustPre(EntCmd):
 
 public:
     RegJustPre()
-    RegJustPre(  cod, &rd, &ud, &tit, &esporc, &unit, &b)
+    RegJustPre(  cod, rd, ud, tit, esporc, unit, b)
      SetBase( ppl_precio3 &b)
     ppl_precio3 Total()
      ImprLtxJustPre(os)
@@ -40,18 +40,18 @@ import bibXCBasica/src/texto/latex
 RegJustPre.RegJustPre()
     : codigo(""),rdto(0.0),unidad(""),titulo(""),es_porcentaje(False),unitario(0.0),sobre(0.0) {
 
-RegJustPre.RegJustPre(  cod, &rd, &ud, &tit, &esporc, &unit, &b)
+RegJustPre.RegJustPre(  cod, rd, ud, tit, esporc, unit, b)
     : codigo(cod),rdto(rd),unidad(ud),titulo(tit),es_porcentaje(esporc),unitario(unit),sobre(b) {
 
-def SetBase(self, &b):
+def SetBase(self, b):
     sobre= b
 
-def Total(self, ):
+def Total(self):
     ppl_precio3 retval(base())
     retval*= rdto
     return retval
 
-def ImprLtxJustPre(self, &os):
+def ImprLtxJustPre(self, os):
     os.write(ascii2latex(codigo) + " & "
        + rdto.EnHumano() + " & " #Write el rendimiento
        + ascii2latex(unidad) + " & "
@@ -63,7 +63,7 @@ def ImprLtxJustPre(self, &os):
     os.write(" & " + Total().EnHumano() + ltx_fin_reg + '\n'
 
 
-def ImprLtxCP2(self, &os):
+def ImprLtxCP2(self, os):
     os.write(" & & " + ascii2latex(titulo) + " & "
     if(es_porcentaje) os.write(Total().EnHumano(); #Total.
     os.write(ltx_fin_reg + '\n'

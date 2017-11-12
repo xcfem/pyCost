@@ -8,10 +8,10 @@ import ComptesBC3
 class UdObra(Measurable):
 private:
     ComptesBC3 lista
-    static ComptesBC3 ObtienePunteros( regBC3_d &descBC3, &bp, &error)
-    ComptesBC3 GetSindesco( double &rendimiento, &bp)
+    static ComptesBC3 ObtienePunteros( regBC3_d &descBC3, bp, error)
+    ComptesBC3 GetSindesco( double &rendimiento, bp)
 public:
-    UdObra( cod="", &tit="", &ud="")
+    UdObra( cod="", tit="", ud="")
         : Measurable(cod,tit,ud) {
     def tipo_concepto Tipo():
         return mat;    #XXX provisional.
@@ -19,17 +19,17 @@ public:
     def Precio():
         return lista.Precio()
 
-     AsignaFactor( float &f)
+     AsignaFactor( f)
         lista.AsignaFactor(f)
 
-     Agrega( Elemento &e, &f, &r)
+     Agrega( Elemento &e, f, r)
         lista.append(CompBC3(e,f,r))
 
     #not  @brief Lee la unidad a falta de la descomposición
      LeeBC3Fase1( Codigos.reg_udobra &r)
         Measurable.LeeBC3(r)
 
-    bool LeeBC3Fase2( Codigos.reg_udobra &r, &bp)
+    bool LeeBC3Fase2( Codigos.reg_udobra &r, bp)
      WriteSpre(os)
      WriteBC3(os)
      ImprLtxJustPre(os)
@@ -47,7 +47,7 @@ import bibXCBasica/src/texto/en_letra
 
 #not  @brief Para unidades de obra sin descomposición de las que
 #not  sólo se conoce el precio.
-def GetSindesco(self, &rendimiento, &bp):
+def GetSindesco(self, rendimiento, bp):
     ComptesBC3 retval
     BuscadorPtros *be= bp["elementos"]
      EntBC3 &ent= *( Elemento *)be.Busca("SINDESCO")
@@ -56,51 +56,51 @@ def GetSindesco(self, &rendimiento, &bp):
 
 
 #not  @brief Obtiene los punteros a los precios de la descomposición.
-def ObtienePunteros(self, &descBC3, &bp, &error):
+def ObtienePunteros(self, descBC3, bp, error):
     ComptesBC3 retval
     BuscadorPtros *be= bp["elementos"]
     BuscadorPtros *bd= bp["ud_obra"]
-     EntBC3 *ent= NULL
+     EntBC3 *ent= None
     i = descBC3.begin()
-    for(; i!=descBC3.end(); i++)
-        ent= static_cast< EntBC3 *>(be.Busca((*i).codigo))
+    for(; i!=descBC3.end(); i+= 1)
+        ent= static_cast< EntBC3 *>(be.Busca((i).codigo))
         if not ent:
-            ent= static_cast< EntBC3 *>(bd.Busca((*i).codigo))
+            ent= static_cast< EntBC3 *>(bd.Busca((i).codigo))
         if not ent:
             if(verborrea>6) #Puede no ser un error.
-                std.cerr + "UdObra.ObtienePunteros; No se encontró la componente: " + (*i).codigo + '\n'
+                lmsg.error("UdObra.ObtienePunteros; No se encontró la componente: " + (i).codigo + '\n')
             error= True
             continue
 
         else:
-            retval.append(CompBC3(*ent,(*i).factor,(*i).rendimiento))
+            retval.append(CompBC3(*ent,(i).factor,(i).rendimiento))
             error= False
 
 
     return retval
 
-def LeeBC3Fase2(self, &r, &bp):
+def LeeBC3Fase2(self, r, bp):
     error = False
     if r.Datos().desc.size():
         tmp = ObtienePunteros(r.Datos().desc,bp,error)
         if not error:
             lista= tmp
         else:
-            std.cerr + "Error al leer descomposición de la unidad: " + Codigo() + '\n'
+            lmsg.error("Error al leer descomposición de la unidad: " + Codigo() + '\n')
 
     else:
         lista= GetSindesco(r.Datos().Precio(),bp)
     return error
 
 
-def WriteSpre(self, &os):
+def WriteSpre(self, os):
     os.write(Codigo() + '|'
        + Unidad() + '|'
        + Titulo() + '|'
     lista.WriteSpre(os)
 
 
-def WriteBC3(self, &os):
+def WriteBC3(self, os):
     Measurable.WriteBC3(os)
     lista.WriteBC3(Codigo(),os)
 
@@ -113,7 +113,7 @@ long double UdObra.SimulaDescomp( UdObra &otra)
     return lista.FuerzaPrecio(objetivo)
 
 
-def ImprLtxJustPre(self, &os):
+def ImprLtxJustPre(self, os):
     os.write("\\begin{tabular}{l r l p{4cm} r r}" + '\n'
     #Cabecera
     os.write(ascii2latex(Codigo()) + " & "
@@ -125,14 +125,14 @@ def ImprLtxJustPre(self, &os):
     lista.ImprLtxJustPre(os,True); #XXX Aqui porcentajes acumulados.
     os.write("\\end{tabular}" + '\n'
 
-def ImprLtxCP1(self, &os):
+def ImprLtxCP1(self, os):
     os.write(ascii2latex(Codigo()) + " & "
        + ascii2latex(Unidad()) + " & "
        + ascii2latex(TextoLargo()) + " & "
     lista.ImprLtxCP1(os,True,False); #XXX Aqui género.
     os.write("\\\\" + '\n'
 
-def ImprLtxCP2(self, &os):
+def ImprLtxCP2(self, os):
     os.write("\\begin{tabular}{l r p{5.5cm} r}" + '\n'
     #Cabecera
     os.write("Código & Ud. & Descripción & Importe"
@@ -144,7 +144,7 @@ def ImprLtxCP2(self, &os):
     lista.ImprLtxCP2(os,True); #XXX Aqui porcentajes acumulados.
     os.write("\\end{tabular}" + '\n'
 
-def WriteHCalc(self, &os):
+def WriteHCalc(self, os):
     os.write(Codigo() + tab
        + ascii2latex(Unidad()) + tab
        + '"' + ascii2latex(TextoLargo()) + '"' + tab

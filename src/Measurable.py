@@ -9,10 +9,10 @@ import Codigos
 
 # Thing that you can measure (en m,kg.py,m2,m3,...)
 class Measurable(EntBC3):
-    std.string unidad
+    unidad= ''
     std.string txt_largo
 public:
-    Measurable( cod, &tit, &ud)
+    Measurable( cod, tit, ud)
     def TextoLargo():
     TextoLargo()
     def Unidad():
@@ -22,7 +22,7 @@ public:
 
 
 template<class T>
-def LeeBC3(self, &r):
+def LeeBC3(self, r):
     EntBC3.LeeBC3(r)
     unidad= r.Datos().Unidad()
     txt_largo= protege_signos(r.Datos().Texto())
@@ -33,7 +33,7 @@ def LeeBC3(self, &r):
 
 
 #not  @brief Constructor.
-Measurable.Measurable( cod, &tit, &ud)
+Measurable.Measurable( cod, tit, ud)
     : EntBC3(cod,tit), unidad(ud), txt_largo("") {
 
  Measurable.TextoLargo()
@@ -48,7 +48,7 @@ Measurable.TextoLargo()
     return unidad
 
 
-def WriteBC3(self, &os):
+def WriteBC3(self, os):
     WriteConceptoBC3(os)
     if len(TextoLargo())>0:
         os.write("~T|" + Codigo() + '|' + latin1TOpc850ML(TextoLargo()) + '|' + endl_msdos

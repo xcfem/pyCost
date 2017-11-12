@@ -4,53 +4,31 @@
 import EntPyCost
 import basic_types
 
-def std.string rdto2str(d):
+def rdto2str(d):
     return num2str(d,13)
 
 
 class EntFR(EntPyCost):
-#Entidad que tiene factor y rendimiento.
-private:
-    float factor
-    double rendimiento
-public:
-    EntFR( float &f= 1.0, &r=0.0)
-     float &Factor()
-        return factor
+    '''Entidad que tiene factor y rendimiento.'''
+    def __init__(f= 1.0, r=0.0):
+        self.factor= f
+        self.rendimiento= r
+    def Factor(self):
+        return self.factor
 
-    float &Factor()
-        return factor
+    def Rendimiento(self):
+        return self.rendimiento
 
-     double &Rendimiento()
-        return rendimiento
+    def Producto(self):
+        return factor*rendimiento
 
-    double &Rendimiento()
-        return rendimiento
+    def ProductoR(self):
+        return ppl_precio4(factor*rendimiento)
 
-    double Producto()
-    double ProductoR()
-     WriteSpre(os)
-     WriteBC3(os)
+    def WriteSpre(self, os):
+        os.write(rdto2str(Producto()) + '|')
 
-
-
-#EntFR.cxx
-
-import EntFR
-
-EntFR.EntFR( float &f, &r)
-    :factor(f),rendimiento(r) {
-
-def Producto(self, ):
-    return factor*rendimiento
-
-def ProductoR(self, ):
-    return ppl_precio4(factor*rendimiento)
-
-def WriteSpre(self, &os):
-    os.write(rdto2str(Producto()) + '|'
-
-def WriteBC3(self, &os):
-    os.write(factor + '\\' + rdto2str(rendimiento) + '\\'
+    def WriteBC3(self, os):
+        os.write(factor + '\\' + rdto2str(rendimiento) + '\\')
 
 

@@ -24,18 +24,18 @@ def std.string precio2str( long double &d):
 
 typedef enum {sin_clasif=0,mdo=1,maq=2,mat=3} tipo_concepto
 
-def str2tipo_concepto(self, &str):
+def str2tipo_concepto(self, str):
 def sint2tipo_concepto(self, int &si):
-def tipo_concepto2str(self, &):
+def tipo_concepto2str(self):
 
 class EntBC3(EntPyCost):
 private:
-    std.string codigo
-    std.string titulo
+    codigo= ''
+    titulo= ''
     static  std.string txtud
-    static  std.string txtl
+    static  std.string texto_largo
 public:
-    EntBC3( cod, &tit)
+    EntBC3( cod, tit)
 
     def Codigo():
     Codigo()
@@ -60,20 +60,20 @@ public:
     template<class T>
      LeeBC3( T &r)
      WriteSpre(os)
-     WriteConceptoBC3(os, &primero= False)
+     WriteConceptoBC3(os, primero= False)
      Write(os)
     virtual ~EntBC3() {
 
 
 template<class T>
-def LeeBC3(self, &r):
+def LeeBC3(self, r):
     if verborrea>4:
-        std.clog + "Cargando concepto: '" + r.Codigo() + "'\n"
+        logging.info("Cargando concepto: '" + r.Codigo() + "'\n")
     codigo= r.Codigo()
     titulo= protege_signos(r.Datos().Titulo())
 
 
-operator<<(os, &e)
+operator<<(os, e)
 
 
 #EntBC3.cxx
@@ -81,9 +81,9 @@ operator<<(os, &e)
 import EntBC3
 
  std.string EntBC3.txtud= ""
- std.string EntBC3.txtl= ""
+ std.string EntBC3.texto_largo= ""
 
-EntBC3.EntBC3( cod, &tit)
+EntBC3.EntBC3( cod, tit)
     : codigo(cod), titulo(tit) {
  EntBC3.Codigo()
     return codigo
@@ -91,7 +91,7 @@ EntBC3.EntBC3( cod, &tit)
 EntBC3.Codigo()
     return codigo
 
-def CodigoBC3(self, ):
+def CodigoBC3(self):
     return Codigo()
 
  EntBC3.Unidad()
@@ -103,32 +103,32 @@ def CodigoBC3(self, ):
 EntBC3.Titulo()
     return titulo
 
-def StrPrecio(self, ):
+def StrPrecio(self):
     return precio2str(Precio())
 
-def StrPrecioLtx(self, ):
+def StrPrecioLtx(self):
     return PrecioR().EnHumano()
 
-def StrPrecioEnLetra(self, &genero):
+def StrPrecioEnLetra(self, genero):
     return PrecioR().EnLetra(genero)
 
 long double EntBC3.Precio()
     return 0.0
 
-def PrecioR(self, ):
+def PrecioR(self):
     return ppl_precio(Precio())
 
-def Fecha(self, ):
+def Fecha(self):
     return "040400";    # xxx
 
-def Tipo(self, ):
+def Tipo(self):
     return sin_clasif
 
  EntBC3.TextoLargo()
-    return txtl
+    return texto_largo
 
 
-def str2tipo_concepto(self, &Str):
+def str2tipo_concepto(self, Str):
     if(len(Str)<1) return sin_clasif
     if(Str[0]=='0') return sin_clasif
     if(Str[0]=='1') return mdo
@@ -152,7 +152,7 @@ def sint2tipo_concepto(self, int &si):
 
 
 
-def tipo_concepto2str(self, &t):
+def tipo_concepto2str(self, t):
     switch(t)
     case 0:
         return "sin_clasif"
@@ -168,7 +168,7 @@ def tipo_concepto2str(self, &t):
     return "sin_clasif"
 
 
-def ChrTipo(self, ):
+def ChrTipo(self):
     switch(Tipo())
     case sin_clasif:
         return '0'
@@ -182,20 +182,20 @@ def ChrTipo(self, ):
         return '0'
 
 
-def EsPorcentaje(self, ):
+def EsPorcentaje(self):
     if codigo.find('%')<len(codigo):
         return True
     else:
         return False
 
 
-def WriteSpre(self, &os):
+def WriteSpre(self, os):
     os.write(Codigo() + '|'
        + Unidad() + '|'
        + Titulo() + '|'
        + StrPrecio() + '|' + endl_msdos
 
-def WriteConceptoBC3(self, &os, &primero):
+def WriteConceptoBC3(self, os, primero):
     os.write("~C" + '|'
        + CodigoBC3()
     #if(primero) os.write('#'
@@ -206,7 +206,7 @@ def WriteConceptoBC3(self, &os, &primero):
        + Fecha() + '|'
        + ChrTipo() + '|' + endl_msdos
 
-def Write(self, &os):
+def Write(self, os):
     os.write("Codigo: " + Codigo() + '\n'
        + "Unidad: " + Unidad() + '\n'
        + "Titulo: " + Titulo() + '\n'
@@ -216,7 +216,7 @@ def Write(self, &os):
        + "Texto largo: " + TextoLargo() + '\n'
 
 
-operator<<(os, &e)
+operator<<(os, e)
     e.Write(os)
     return os
 
