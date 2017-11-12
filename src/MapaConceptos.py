@@ -1,77 +1,43 @@
+# -*- coding: utf-8 -*-
 #MapaConceptos.py
 
 
 
 
-#include <map>
-import EntPyCost
 
-template<class T>
-class MapaClaves(std.map<std.string, *>):
+import EntPyCost as epy
+
+class MapaClaves(dict):
+    def __init__(self):
+        super(MapaClaves,self).__init__()
 
 
-template<class T>
-class MapaConceptos(std.map<std.string,T>, EntPyCost):
-public:
-    typedef std.map<std.string, map_ccpto
-    typedef MapaClaves<T> map_claves
+class MapaConceptos(epy.EntPyCost):
+    claves= MapaClaves()
+    def __init__(self):
+        super(MapaConceptos,self).__init__()
+        self.map= dict()
+    def Agrega(u):
+        claves[u.Codigo()]= u
+        self.map[u.Codigo()]= u
 
-    typedef typename map_ccpto.iterator iterator
-    typedef typename map_ccpto.const_iterator const_iterator
-    typedef typename MapaClaves<T>.iterator claves_iterator
-    typedef typename MapaClaves<T>.const_iterator claves_const_iterator
-private:
-    static map_claves claves
-protected:
     def err_no_encontrado( cod):
-public:
+        lmsg.error("Concepto: " + cod + " no encontrado" + '\n')
 
-     Agrega( T &u)
-        claves[u.Codigo()]= &((self)[u.Codigo()]= u)
+    def Busca(self,cod):
+        i = self.claves.find(cod)
+        if not i:
+            #err_no_encontrado(cod)
+            return None
+        else:
+          return self.claves[i]
 
-    T *Busca( cod)
-     T *Busca( cod)
-     WriteBC3(os)
-     Write(os)
-    virtual ~MapaConceptos() {
+    def WriteBC3(os):
+        for j in self.keys:
+           map[j].WriteBC3(os)
 
-
-template<class T>
-MapaClaves<T> MapaConceptos<T>.claves
-
-template<class T>
- MapaConceptos<T>.err_no_encontrado( cod)
-    lmsg.error("Concepto: " + cod)
-              + " no encontrado" + '\n'
-
-template<class T>
-T *MapaConceptos<T>.Busca( cod)
-    i = claves.find(cod)
-    if i==claves.end():
-        #err_no_encontrado(cod)
-        return None
-
-    return ((i).second)
-
-template<class T>
- T *MapaConceptos<T>.Busca( cod)
-    i = claves.find(cod)
-    if i==claves.end():
-        #err_no_encontrado(cod)
-        return None
-
-    return ((i).second)
-
-template<class T>
- MapaConceptos<T>.WriteBC3(os)
-    j = MapaConceptos<T>.begin()
-    for(; j!=MapaConceptos<T>.end(); j+= 1)
-        (j).second.WriteBC3(os)
-
-template<class T>
- MapaConceptos<T>.Write(os)
-    const_iterator i
-    for(i= MapaConceptos<T>.begin(); i!=MapaConceptos<T>.end(); i+= 1)
-        (i).second.Write(os)
+    def Write(os):
+        for j in self.keys:
+           map[j].Write(os)
 
 

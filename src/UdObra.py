@@ -13,7 +13,7 @@ private:
 public:
     UdObra( cod="", tit="", ud="")
         : Measurable(cod,tit,ud) {
-    def tipo_concepto Tipo():
+    def TipoConcepto Tipo():
         return mat;    #XXX provisional.
 
     def Precio():

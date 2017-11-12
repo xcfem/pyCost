@@ -1,14 +1,12 @@
+# -*- coding: utf-8 -*-
 #InformeMediciones.py
 
 
 
 
 import Measurable
-#include <map>
 
-class InformeUdObra
-
-class InformeMediciones(std.map<Measurable  *, double>):
+class InformeMediciones(.map<Measurable  *, double>):
 public:
      Inserta( InformeUdObra &iu)
      Merge( InformeMediciones &otro)

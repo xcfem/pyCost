@@ -1,19 +1,8 @@
+# -*- coding: utf-8 -*-
 #EntPyCost.py
 
 
+class EntPyCost(object):
+    def __init__(self,owner= None):
+        self.owner(owner)
 
-
-import ppl
-
-class EntPyCost(EntCmd):
-public:
-    EntPyCost(EntCmd *owr= None)
-
-
-
-#EntPyCost.cc
-
-import EntPyCost
-
-EntPyCost.EntPyCost(EntCmd *owr)
-    : EntCmd(owr) {

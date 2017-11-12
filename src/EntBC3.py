@@ -13,7 +13,7 @@ import basic_types
 
 tab = char(9)
 
-def std.string precio2str( long double &d):
+def precio2str(d):
     return num2str(d,13)
 
 
@@ -22,201 +22,140 @@ def std.string precio2str( long double &d):
 
 ''' 0 (Sin clasificar) 1 (Mano de obra), 2 (Maquinaria y medios aux.), 3 (Materiales). '''
 
-typedef enum {sin_clasif=0,mdo=1,maq=2,mat=3} tipo_concepto
-
-def str2tipo_concepto(self, str):
-def sint2tipo_concepto(self, int &si):
-def tipo_concepto2str(self):
-
-class EntBC3(EntPyCost):
-private:
-    codigo= ''
-    titulo= ''
-    static  std.string txtud
-    static  std.string texto_largo
-public:
-    EntBC3( cod, tit)
-
-    def Codigo():
-    Codigo()
-    def std.string CodigoBC3():
-
-    def Unidad():
-     Titulo()
-    Titulo()
-
-    def std.string StrPrecio():
-    std.string StrPrecioLtx()
-    std.string StrPrecioEnLetra( bool &genero)
-    def Precio():
-    def ppl_precio PrecioR():
-
-    def std.string Fecha():
-    def tipo_concepto Tipo():
-    def TextoLargo():
-    def char ChrTipo():
-    bool EsPorcentaje()
-
-    template<class T>
-     LeeBC3( T &r)
-     WriteSpre(os)
-     WriteConceptoBC3(os, primero= False)
-     Write(os)
-    virtual ~EntBC3() {
-
-
-template<class T>
-def LeeBC3(self, r):
-    if verborrea>4:
-        logging.info("Cargando concepto: '" + r.Codigo() + "'\n")
-    codigo= r.Codigo()
-    titulo= protege_signos(r.Datos().Titulo())
-
-
-operator<<(os, e)
-
-
-#EntBC3.cxx
-
-import EntBC3
-
- std.string EntBC3.txtud= ""
- std.string EntBC3.texto_largo= ""
-
-EntBC3.EntBC3( cod, tit)
-    : codigo(cod), titulo(tit) {
- EntBC3.Codigo()
-    return codigo
-
-EntBC3.Codigo()
-    return codigo
-
-def CodigoBC3(self):
-    return Codigo()
-
- EntBC3.Unidad()
-    return txtud
-
- EntBC3.Titulo()
-    return titulo
-
-EntBC3.Titulo()
-    return titulo
-
-def StrPrecio(self):
-    return precio2str(Precio())
-
-def StrPrecioLtx(self):
-    return PrecioR().EnHumano()
-
-def StrPrecioEnLetra(self, genero):
-    return PrecioR().EnLetra(genero)
-
-long double EntBC3.Precio()
-    return 0.0
-
-def PrecioR(self):
-    return ppl_precio(Precio())
-
-def Fecha(self):
-    return "040400";    # xxx
-
-def Tipo(self):
-    return sin_clasif
-
- EntBC3.TextoLargo()
-    return texto_largo
-
+sin_clasif, mdo, maq, mat= range(0, 4)
 
 def str2tipo_concepto(self, Str):
-    if(len(Str)<1) return sin_clasif
-    if(Str[0]=='0') return sin_clasif
-    if(Str[0]=='1') return mdo
-    if(Str[0]=='2') return maq
-    if(Str[0]=='3') return mat
-    return sin_clasif
-
-
-def sint2tipo_concepto(self, int &si):
-    switch(si)
-    case 0:
+    if(len(Str)<1):
         return sin_clasif
-    case 1:
+    elif(Str[0]=='0'):
+        return sin_clasif
+    elif(Str[0]=='1'):
         return mdo
-    case 2:
+    elif(Str[0]=='2'):
         return maq
-    case 3:
+    elif(Str[0]=='3'):
         return mat
-    default:
+    else:
         return sin_clasif
 
-
+def sint2tipo_concepto(self, si):
+    if(si==0):
+        return sin_clasif
+    elif(si==1):
+        return mdo
+    elif(si==2):
+        return maq
+    elif(si==3):
+        return mat
+    else:
+        return sin_clasif
 
 def tipo_concepto2str(self, t):
-    switch(t)
-    case 0:
+    if(t==0):
         return "sin_clasif"
-    case 1:
+    elif(t==1):
         return "mdo"
-    case 2:
+    elif(t==2):
         return "maq"
-    case 3:
+    elif(t==3):
         return "mat"
-    default:
+    else:
         return "sin_clasif"
-
     return "sin_clasif"
 
+class EntBC3(EntPyCost):
+    static_txtud= ''
+    static_texto_largo= ''
+    def __init__(self, cod, tit):
+      super(EntBC3,self).__init__()
+      self.codigo= cod
+      self.titulo= tit
 
-def ChrTipo(self):
-    switch(Tipo())
-    case sin_clasif:
-        return '0'
-    case mdo:
-        return '1'
-    case maq:
-        return '2'
-    case mat:
-        return '3'
-    default:
-        return '0'
+    def LeeBC3(self, r):
+        if verborrea>4:
+            logging.info("Cargando concepto: '" + r.Codigo() + "'\n")
+        codigo= r.Codigo()
+        titulo= protege_signos(r.Datos().Titulo())
+
+    def Codigo(self):
+        return self.codigo
+
+    def CodigoBC3(self):
+        return self.Codigo()
+
+    def Unidad(self):
+        return self.static_txtud
+
+    def Titulo(self):
+        return titulo
+
+    def StrPrecio(self):
+        return precio2str(Precio())
+
+    def StrPrecioLtx(self):
+        return PrecioR().EnHumano()
+
+    def StrPrecioEnLetra(self, genero):
+        return PrecioR().EnLetra(genero)
+
+    def Precio(self):
+        return 0.0
+
+    def PrecioR(self):
+        return ppl_precio(Precio())
+
+    def Fecha(self):
+        return "040400";    # xxx
+
+    def Tipo(self):
+        return sin_clasif
+
+    def TextoLargo(self):
+        return self.static_texto_largo
 
 
-def EsPorcentaje(self):
-    if codigo.find('%')<len(codigo):
-        return True
-    else:
-        return False
+    def ChrTipo(self):
+        tp= self.Tipo()
+        if(tp==sin_clasif):
+            return '0'
+        elif(tp==mdo):
+            return '1'
+        elif(tp==maq):
+            return '2'
+        elif(tp==mat):
+            return '3'
+        else:
+            return '0'
 
 
-def WriteSpre(self, os):
-    os.write(Codigo() + '|'
-       + Unidad() + '|'
-       + Titulo() + '|'
-       + StrPrecio() + '|' + endl_msdos
+    def EsPorcentaje(self):
+        return codigo.find('%')<len(codigo)
 
-def WriteConceptoBC3(self, os, primero):
-    os.write("~C" + '|'
-       + CodigoBC3()
-    #if(primero) os.write('#'
-    os.write('|'
-       + Unidad() + '|'
-       + latin1TOpc850ML(Titulo()) + '|'
-       + StrPrecio() + '|'
-       + Fecha() + '|'
-       + ChrTipo() + '|' + endl_msdos
+    def WriteSpre(self, os):
+        os.write(Codigo() + '|'
+           + Unidad() + '|'
+           + Titulo() + '|'
+           + StrPrecio() + '|' + endl_msdos)
 
-def Write(self, os):
-    os.write("Codigo: " + Codigo() + '\n'
-       + "Unidad: " + Unidad() + '\n'
-       + "Titulo: " + Titulo() + '\n'
-       + "Precio: " + StrPrecio() + '\n'
-       + "Fecha: "  + Fecha() + '\n'
-       + "Tipo: " + ChrTipo() + '\n'
-       + "Texto largo: " + TextoLargo() + '\n'
+    def WriteConceptoBC3(self, os, primero):
+        os.write("~C" + '|' + CodigoBC3())
+        #if(primero) os.write('#'
+        os.write('|' + Unidad() + '|'
+           + latin1TOpc850ML(Titulo()) + '|'
+           + StrPrecio() + '|'
+           + Fecha() + '|'
+           + ChrTipo() + '|' + endl_msdos)
 
+    def Write(self, os):
+        os.write("Codigo: " + Codigo() + '\n'
+           + "Unidad: " + Unidad() + '\n'
+           + "Titulo: " + Titulo() + '\n'
+           + "Precio: " + StrPrecio() + '\n'
+           + "Fecha: "  + Fecha() + '\n'
+           + "Tipo: " + ChrTipo() + '\n'
+           + "Texto largo: " + TextoLargo() + '\n')
 
-operator<<(os, e)
-    e.Write(os)
-    return os
+    def Print(self,os):
+        self.Write(os)
+        return os
 

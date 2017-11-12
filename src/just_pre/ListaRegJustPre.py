@@ -8,9 +8,9 @@ import RegJustPre
 import ../EntBC3
 
 class ListaRegJustPre(std.deque<RegJustPre>, EntCmd):
-    tipo_concepto tipo
+    TipoConcepto tipo
 public:
-    ListaRegJustPre( tipo_concepto &tp)
+    ListaRegJustPre( TipoConcepto &tp)
         : tipo(tp) {
      SetBase( ppl_precio3 &b)
      SetBaseAcum( ppl_precio3 &b)
@@ -23,7 +23,7 @@ public:
             return "materiales"
         case maq:
             return "maquinaria"
-        default:
+        else:
             return "porcentajes"
 
 

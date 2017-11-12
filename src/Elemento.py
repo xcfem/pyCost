@@ -26,7 +26,7 @@ class Elemento(Measurable):
     def LeeBC3(self, r):
         Measurable.LeeBC3(r)
         precio= r.Datos().Precio()
-        tipo= sint2tipo_concepto(r.Datos().Tipo())
+        tipo= sint2TipoConcepto(r.Datos().Tipo())
 
 
     def ImprLtx(self, os):
