@@ -21,7 +21,8 @@ class MapaConceptos(epy.EntPyCost):
         claves[u.Codigo()]= u
         self.map[u.Codigo()]= u
 
-    def err_no_encontrado( cod):
+    @staticmethod
+    def err_no_encontrado(cod):
         lmsg.error("Concepto: " + cod + " no encontrado" + '\n')
 
     def Busca(self,cod):
