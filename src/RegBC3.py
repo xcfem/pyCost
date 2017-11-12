@@ -1,53 +1,27 @@
+# -*- coding: utf-8 -*-
 #RegBC3.py
 
 
-
-
-#include <string>
 import fiebdc3
 
-enum TipoConcepto {elemento, descompuesto, medicion, obra, capitulo, sin_tipo
+elemento, descompuesto, medicion, obra, capitulo, sin_tipo= range(0,6)
 
-class RegBC3
-    c= '' #not  <Concepto
-    d= '' #not  <Descomposición.
-    m= '' #not  <Medicion
-    t= '' #not  <Texto
-    y= '' #not  <Descomposición.
+class RegBC3(object):
+    def __init__(self):
+        self.c= '' #Concepto
+        self.d= '' #Descomposición.
+        self.m= '' #Medicion
+        self.t= '' #Texto
+        self.y= '' #Descomposición.
 
-    class campos_reg
-        StrTok.dq_campos campos_c
-        StrTok.dq_campos campos_d
-        StrTok.dq_campos campos_m
-        StrTok.dq_campos campos_t
+    def GetDatosElemento(self):
+        return regBC3_elemento(self.GetConcepto(),self.GetTexto())
 
-    regBC3_c GetConcepto()
-    regBC3_t GetTexto()
-    regBC3_d GetDesc()
-    regBC3_m GetMed()
-    bool EsElemento()
-    bool EsMedicion()
-    bool EsObra()
-    bool EsCapitulo()
-    regBC3_elemento GetDatosElemento()
-        return regBC3_elemento(GetConcepto(),GetTexto())
+    def GetDatosUdObra(self):
+        return regBC3_udobra(self.GetConcepto(),self.GetTexto(),self.GetDesc())
 
-    regBC3_udobra GetDatosUdObra()
-        return regBC3_udobra(GetConcepto(),GetTexto(),GetDesc())
-
-    regBC3_capitulo GetDatosCapitulo()
-    regBC3_medicion GetDatosMedicion()
-        return regBC3_medicion(GetConcepto(),GetTexto(),GetMed())
-
-    friend operator<<(os, r)
-
-
-operator<<(os, r)
-
-
-#RegBC3.cxx
-
-import RegBC3
+    def GetDatosMedicion(self):
+        return regBC3_medicion(self.GetConcepto(),self.GetTexto(),self.GetMed())
 
     def GetConcepto(self):
         return regBC3_c(c)
@@ -87,11 +61,11 @@ import RegBC3
         return regBC3_capitulo(GetConcepto(),GetTexto(),GetDesc())
 
 
-    operator<<(os, r)
-        os.write("C: " + r.c + ' ' + r.c.size() + '\n'
-           + "D: " + r.d + ' ' + r.d.size() + '\n'
-           + "M: " + r.m + ' ' + r.m.size() + '\n'
-           + "T: " + r.t + ' ' + r.t.size() + '\n'
-           + "Y: " + r.y + ' ' + r.y.size() + '\n'
+    def Print(self,os):
+        os.write("C: " + self.c + ' ' + self.c.size() + '\n'
+           + "D: " + self.d + ' ' + self.d.size() + '\n'
+           + "M: " + self.m + ' ' + self.m.size() + '\n'
+           + "T: " + self.t + ' ' + self.t.size() + '\n'
+           + "Y: " + self.y + ' ' + self.y.size() + '\n')
         return os
 

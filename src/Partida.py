@@ -1,44 +1,37 @@
+# -*- coding: utf-8 -*-
 #Partida.py
 
 
 
-import ProtoPartida
-import Mediciones
+import ProtoPartida as ptp
+import Mediciones as m
 
-class Partida (ProtoPartida):
-#Partida del presupuesto correspondiente a una unidad de obra.
-    Mediciones meds
-public:
-    Partida(): ProtoPartida() {
-    Partida( Measurable &u):ProtoPartida(u) {
-    def ProtoPartida *Copia():
+class Partida(ptp.ProtoPartida):
+    '''Partida del presupuesto correspondiente a una unidad de obra.'''
+
+    def __init__(self, u= None):
+        super(Partida,self).__init__(u)
+        meds= m.Mediciones()
+
+    def Copia(self):
         return Partida(self)
 
-     Agrega( RegMedicion &med)
+    def Agrega(self,med):
         meds.append(med)
 
-    def Total():
-        return meds.Total()
+    def Total(self):
+        return self.meds.Total()
 
-    def ppl_dimension TotalR():
-        return meds.TotalR()
+    def TotalR(self):
+        return self.meds.TotalR()
 
-     LeeBC3( regBC3_medicion &m)
-    Mediciones Meds()
-        return meds
+    def Meds(self):
+        return self.meds
 
-
-
-
-#Partida.cxx
-
-import Partida
-
-def LeeBC3(self, m):
-    if m.med.lista_med.empty():
-        RegMedicion rm("",m.med.med_total)
-        meds.append(rm)
-
-    else:
-        meds.LeeBC3(m.med.lista_med)
+    def LeeBC3(self, m):
+        if m.med.lista_med.empty():
+            rm= RegMedicion("",m.med.med_total)
+            meds.append(rm)
+        else:
+            meds.LeeBC3(m.med.lista_med)
 

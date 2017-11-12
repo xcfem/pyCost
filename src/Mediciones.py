@@ -15,14 +15,12 @@ class Mediciones(list, epy.EntPyCost):
             t+=(i).Unidades()
         return t
 
-
     #not  @brief Devuelve el total del largo de la medición.
     def TotalLargo(self):
         t = 0.0
         for i in self:
             t+=(i).Unidades()*(i).Largo()
         return t
-
 
     #not  @brief Devuelve el total del an.pyo de la medición.
     def TotalAncho(self):
@@ -39,7 +37,6 @@ class Mediciones(list, epy.EntPyCost):
             t+=(i).Unidades()*(i).Ancho()
         return t
 
-
     def Total(self):
         t = 0.0
         for i in self:
@@ -52,15 +49,12 @@ class Mediciones(list, epy.EntPyCost):
             t+=(i).TotalR()
         return t
 
-
     #| @brief Lee la lista de mediciones.
     def LeeBC3(self, m):
         rm= RegMedicion()
         for i in m:
             rm.LeeBC3(i)
             append(rm)
-
-
 
     def WriteBC3(self, os):
         for i in self:

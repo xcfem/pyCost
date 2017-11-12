@@ -11,8 +11,6 @@ import Codigos
 import EntPyCost
 import basic_types
 
-tab = char(9)
-
 def precio2str(d):
     return num2str(d,13)
 
