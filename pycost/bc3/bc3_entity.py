@@ -126,7 +126,7 @@ class EntBC3(epc.EntPyCost):
             return '0'
 
 
-    def EsPorcentaje(self):
+    def IsPercentage(self):
         return codigo.find('%')<len(codigo)
 
     def WriteSpre(self, os):

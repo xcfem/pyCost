@@ -17,9 +17,10 @@ class MapaConceptos(epy.EntPyCost):
     def __init__(self):
         super(MapaConceptos,self).__init__()
         self.map= dict()
-    def Agrega(self,u):
+    def Append(self,u):
         self.claves[u.Codigo()]= u
         self.map[u.Codigo()]= u
+        return u
 
     @staticmethod
     def err_no_encontrado(cod):

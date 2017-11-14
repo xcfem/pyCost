@@ -19,7 +19,7 @@ class Descompuestos(concept_dict.MapaConceptos):
                       + " no encontrado en unidad de obra: " + cod_ud + '\n')
             exit(1)
 
-        i.Agrega(j,f,r)
+        i.Append(j,f,r)
 
 
     def GetBuscador(self):
@@ -32,7 +32,7 @@ class Descompuestos(concept_dict.MapaConceptos):
         for i in cds:
             reg = cds.GetDatosUdObra(i)
             ud.LeeBC3Fase1(reg)
-            Agrega(ud)
+            Append(ud)
 
 
     def LeeBC3Fase2(self, cds, bp):
@@ -71,9 +71,9 @@ class Descompuestos(concept_dict.MapaConceptos):
                 getline(iS,tit,'|')
                 unidad= UdObra(cod,tit,ud)
                 unidad.texto_largo= tit
-                Agrega(unidad)
-                porc= '' #porcentaje
-                getline(iS,porc,'|')
+                Append(unidad)
+                perc= '' #percentage
+                getline(iS,perc,'|')
                 descomp= '' #descomposición
                 getline(iS,descomp,'\n')
                 #istrstream istr(descomp.c_str(),descomp.leng.py())
@@ -89,7 +89,7 @@ class Descompuestos(concept_dict.MapaConceptos):
 
                     else:
                         cantidad= descomp.substr(0,len(descomp)-1)
-                    if(elementos.find("%" + cod_el)!=elementos.end()): #Corresponde a un porcentaje.
+                    if(elementos.find("%" + cod_el)!=elementos.end()): #Corresponds to a percentage.
                         cod_el = "%"+cod_el
                     AgregaComponente(elementos,cod,cod_el,atof(cantidad.c_str()))
                     if(pos3>len(descomp)): break

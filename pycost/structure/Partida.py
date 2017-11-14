@@ -16,8 +16,9 @@ class Partida(ptp.ProtoPartida):
     def Copia(self):
         return Partida(self)
 
-    def Agrega(self,med):
+    def Append(self,med):
         meds.append(med)
+        return med
 
     def Total(self):
         return self.meds.Total()

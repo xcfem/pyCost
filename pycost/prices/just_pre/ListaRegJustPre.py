@@ -4,80 +4,50 @@
 
 
 import RegJustPre
-#include <deque>
-import ../EntBC3
+from pycost.utils import basic_types
 
-class ListaRegJustPre(std.deque<RegJustPre>, EntCmd):
-    TipoConcepto tipo
-public:
-    ListaRegJustPre( TipoConcepto &tp)
-        : tipo(tp) {
-     SetBase( ppl_precio3 &b)
-     SetBaseAcum( ppl_precio3 &b)
-    ppl_precio3 Total()
-    std.string StrTipo()
-        switch(tipo)
-        case mdo:
-            return "mano de obra"
-        case mat:
-            return "materiales"
-        case maq:
-            return "maquinaria"
-        else:
-            return "porcentajes"
+class ListaRegJustPre(list):
+    def __init__(self,tp):
+        self.tipo= tp
 
+    def StrTipo(self):
+        return basic_types.str_tipo(self.tipo)
 
-     ImprLtxJust(os)
-     ImprLtxCP2(os)
-     ImprLtxCP2Porc(os)
+    def SetBase(self, b):
+        if(size()<1): return
+        for i in self:
+            (i).SetBase(b)
+
+    def SetBaseAcum(self, b):
+        if(size()<1): return
+        base= ppl_precio(b,3)
+        for i in self:
+            (i).SetBase(base)
+            base+= (i).Total()
 
 
+    def ImprLtxJust(self, os):
+        if(size()<1): return
+        for i in self:
+            (i).ImprLtxJustPre(os)
+        os.write(ltx_multicolumn(ltx_datos_multicolumn("4","r","Total "+StrTipo()))
+           + " & & " + Total().EnHumano() + ltx_fin_reg + '\n' + ltx_fin_reg + '\n')
 
-#ListaRegJustPre.cc
+    def ImprLtxCP2(self, os):
+        total= self.Total()
+        if total>ppl_precio3(0.0):
+            os.write(" & & " + StrTipo()
+               + " & " + total.EnHumano() + ltx_fin_reg + '\n')
 
-import ListaRegJustPre
-import bibXCBasica/src/texto/latex
+    def ImprLtxCP2Porc(self, os):
+        if(size()<1): return
+        for i in self:
+            (i).ImprLtxCP2(os)
 
-
-def SetBase(self, b):
-    if(size()<1) return
-    iterator i
-    for(i=begin(); i!=end(); i+= 1)
-        (i).SetBase(b)
-
-def SetBaseAcum(self, b):
-    if(size()<1) return
-    ppl_precio3 base(b)
-    iterator i
-    for(i=begin(); i!=end(); i+= 1)
-        (i).SetBase(base)
-        base+= (i).Total()
-
-
-def ImprLtxJust(self, os):
-    if(size()<1) return
-    const_iterator i
-    for(i=begin(); i!=end(); i+= 1)
-        (i).ImprLtxJustPre(os)
-    os.write(ltx_multicolumn(ltx_datos_multicolumn("4","r","Total "+StrTipo()))
-       + " & & " + Total().EnHumano() + ltx_fin_reg + '\n' + ltx_fin_reg + '\n'
-
-def ImprLtxCP2(self, os):
-    total = Total()
-    if total>ppl_precio3(0.0):
-        os.write(" & & " + StrTipo()
-           + " & " + total.EnHumano() + ltx_fin_reg + '\n'
-
-def ImprLtxCP2Porc(self, os):
-    if(size()<1) return
-    const_iterator i
-    for(i=begin(); i!=end(); i+= 1)
-        (i).ImprLtxCP2(os)
-
-def Total(self):
-    ppl_precio3 retval(0.0)
-    for(const_iterator i=begin(); i!=end(); i+= 1)
-        retval+= (i).Total()
-    return retval
+    def Total(self):
+        retval= ppl_precio(0.0,3)
+        for i in self:
+            retval+= (i).Total()
+        return retval
 
 

@@ -28,7 +28,7 @@ class ComponentList(list, epc.EntPyCost):
 
 
     def PrecioR(self):
-        lista= ListaJustPre(GetListaJustPre(True))#XXX Aqui porcentajes acumulados.
+        lista= ListaJustPre(GetListaJustPre(True))#XXX Here cumulated percentages.
         return ppl_precio(float(lista.TotalRnd()))
 
 
@@ -36,28 +36,28 @@ class ComponentList(list, epc.EntPyCost):
     def Precio(self, tipo):
         ptipo= ppl_precio3(0.0) #Precio total.
         for i in self:
-            if (i).Tipo()==tipo and not (i).EsPorcentaje():
+            if (i).Tipo()==tipo and not (i).IsPercentage():
                 ptipo+= (i).PrecioR()
         return ptipo
 
-    #not  @brief Calcula los porcentajes sobre un tipo.
     def PrecioSobre(self, tipo, sobre):
+        '''Computes percentages over a type.'''
         ptipo= ppl_precio3(0.0); #Precio total.
-        for i in self: #Porcentajes.
-            if (i).Tipo()==tipo and (i).EsPorcentaje():
+        for i in self: #Percentages.
+            if (i).Tipo()==tipo and (i).IsPercentage():
                 ptipo+= (i).PrecioSobre(sobre)
         return ptipo
 
-    def SumaPorcentajes(self, tipo):
-        porc= 0.0; #Porcentaje total.
-        for i in self: #Porcentajes.
-            if (i).Tipo()==tipo and (i).EsPorcentaje():
+    def SumPercentages(self, tipo):
+        porc= 0.0; #Total percentage.
+        for i in self: #Percentages.
+            if (i).Tipo()==tipo and (i).IsPercentage():
                 porc+= (i).Producto()
         return porc
 
 
     def CalculaLambda(self, objetivo):
-        sum_porc = SumaPorcentajes(sin_clasif)
+        sum_porc = SumPercentages(sin_clasif)
         sum_pi = Precio(mdo)+Precio(maq)
         pmat = Precio(mat)
         numerador = objetivo/(1.0+sum_porc)-pmat
@@ -66,31 +66,31 @@ class ComponentList(list, epc.EntPyCost):
 
     def FuerzaPrecio(self, objetivo):
         Lambda = CalculaLambda(objetivo)
-        for i in self: #Porcentajes.
-            if(((i).Tipo()!=mat) and not ((i).EsPorcentaje())):
+        for i in self: #Percentages.
+            if(((i).Tipo()!=mat) and not ((i).IsPercentage())):
                 i.rendimiento*= Lambda
         if Lambda<0.0:
             lmsg.error("lambda = " + Lambda + " negativo" + '\n')
 
         return Lambda
 
-    def GetElementosTipo(self, tipo):
+    def getElementaryPricesOfType(self, tipo):
         lista= ListaRegJustPre(tipo)
         for i in self:
-            if (i).Tipo()==tipo and not (i).EsPorcentaje():
+            if (i).Tipo()==tipo and not (i).IsPercentage():
                 lista.append((i).GetRegJustPre(0.0))
         return lista
 
-    def GetPorcentajesTipo(self, tipo):
+    def GetPorcentagesForType(self, tipo):
         lista= ListaRegJustPre(tipo)
         for i in self:
-            if (i).Tipo()==tipo and (i).EsPorcentaje():
+            if (i).Tipo()==tipo and (i).IsPercentage():
                 lista.append((i).GetRegJustPre(0.0))
         return lista
 
 
     def GetListaJustPre(self, pa):
-        return ListaJustPre(pa,GetElementosTipo(mdo),GetElementosTipo(mat),GetElementosTipo(maq),GetElementosTipo(sin_clasif),GetPorcentajesTipo(sin_clasif))
+        return ListaJustPre(pa,getElementaryPricesOfType(mdo),getElementaryPricesOfType(mat),getElementaryPricesOfType(maq),getElementaryPricesOfType(sin_clasif),GetPorcentagesForType(sin_clasif))
 
 
     def ImprLtxJustPre(self, os, pa):

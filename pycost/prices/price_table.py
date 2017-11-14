@@ -11,7 +11,7 @@ from pycost.utils import EntPyCost as epc
 
 class CuaPre(epc.EntPyCost):
     def __init__(self):
-        self.elementos= elementary_price_container.Elementos() #Precios elementales.
+        self.elementos= elementary_price_container.ElementaryPrices() #Precios elementales.
         self.unidades= unit_price_container.Descompuestos() #Unidades de obra.
 
     def Elementales(self):
@@ -50,13 +50,13 @@ class CuaPre(epc.EntPyCost):
     def BuscaUdObra(self, cod):
         return self.unidades.Busca(cod)
 
-    def BuscaElemento(self, cod):
+    def BuscaElementaryPrice(self, cod):
         return self.elementos.Busca(cod)
 
     def BuscaPrecio(self, cod):
         retval= BuscaUdObra(cod)
         if not retval:
-            retval= BuscaElemento(cod)
+            retval= BuscaElementaryPrice(cod)
         return retval
 
 

@@ -1,71 +1,46 @@
 #RegJustPre.pyxx
 
 
-
-
-import basic_types
-import bibXCLcmd/src/nucleo/EntCmd
-
-
 class RegJustPre(EntCmd):
-    codigo= '' #Codigo del precio elemental.
-    ppl_precio4 rdto; #Rendimiento.
-    unidad= '' #Unidad de medida.
-    titulo= '' #Descripción del precio elemental.
-    bool es_porcentaje; #Verdadero si corresponde a un porcentaje.
-    ppl_precio unitario; #Precio unitario o tanto por ciento si es porcentaje.
-    ppl_precio3 sobre; #Base sobre la que se aplica el porcentaje.
 
-    ppl_precio3 base()
-        if es_porcentaje:
-            return sobre
+    def __init__(self, cod= '', rd= 0.0, ud= '', tit= '', isperc= False, unit= 0.0, b= 0.0):
+        self.codigo= cod #Codigo del precio elemental.
+        self.rdto= rd #Rendimiento.
+        self.unidad= ud #Unidad de medida.
+        self.titulo= tit #Descripción del precio elemental.
+        self.is_percentage= isperc #True if it's a percentage.
+        self.unitario= unit #Unit price (or percentage if is_percentage==True).
+        self.sobre= b #Base to apply percentage over.
+
+    def base(self):
+        if self.is_percentage:
+            return self.sobre
         else:
-            return ppl_precio3(unitario)
+            return ppl_precio(self.unitario,3)
 
-public:
-    RegJustPre()
-    RegJustPre(  cod, rd, ud, tit, esporc, unit, b)
-     SetBase( ppl_precio3 &b)
-    ppl_precio3 Total()
-     ImprLtxJustPre(os)
-     ImprLtxCP2(os)
+    def SetBase(self, b):
+        sobre= b
 
+    def Total(self):
+        retval= ppl_precio(self.base(),3)
+        retval*= rdto
+        return retval
 
-
-#RegJustPre.cxx
-
-import RegJustPre
-import bibXCBasica/src/texto/latex
-
-RegJustPre.RegJustPre()
-    : codigo(""),rdto(0.0),unidad(""),titulo(""),es_porcentaje(False),unitario(0.0),sobre(0.0) {
-
-RegJustPre.RegJustPre(  cod, rd, ud, tit, esporc, unit, b)
-    : codigo(cod),rdto(rd),unidad(ud),titulo(tit),es_porcentaje(esporc),unitario(unit),sobre(b) {
-
-def SetBase(self, b):
-    sobre= b
-
-def Total(self):
-    ppl_precio3 retval(base())
-    retval*= rdto
-    return retval
-
-def ImprLtxJustPre(self, os):
-    os.write(ascii2latex(codigo) + " & "
-       + rdto.EnHumano() + " & " #Write el rendimiento
-       + ascii2latex(unidad) + " & "
-       + ascii2latex(titulo) + " & "
-    if es_porcentaje:
-        os.write(unitario.EnHumano() + ltx_porciento; #Porcentaje
-    else:
-        os.write(unitario.EnHumano(); #Precio unitario
-    os.write(" & " + Total().EnHumano() + ltx_fin_reg + '\n'
+    def ImprLtxJustPre(self, os):
+        os.write(ascii2latex(codigo) + " & "
+           + rdto.EnHumano() + " & " #Write el rendimiento
+           + ascii2latex(unidad) + " & "
+           + ascii2latex(titulo) + " & ")
+        if self.is_percentage:
+            os.write(unitario.EnHumano() + ltx_porciento); #Percentage
+        else:
+            os.write(unitario.EnHumano()) #Precio unitario
+        os.write(" & " + Total().EnHumano() + ltx_fin_reg + '\n')
 
 
-def ImprLtxCP2(self, os):
-    os.write(" & & " + ascii2latex(titulo) + " & "
-    if(es_porcentaje) os.write(Total().EnHumano(); #Total.
-    os.write(ltx_fin_reg + '\n'
+    def ImprLtxCP2(self, os):
+        os.write(" & & " + ascii2latex(titulo) + " & ")
+        if(self.is_percentage): os.write(Total().EnHumano()) #Total.
+        os.write(ltx_fin_reg + '\n')
 
 

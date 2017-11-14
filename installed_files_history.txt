@@ -80,6 +80,14 @@
 /usr/local/lib/python2.7/dist-packages/pycost/prices/elementary_price.pyc
 /usr/local/lib/python2.7/dist-packages/pycost/prices/__init__.py
 /usr/local/lib/python2.7/dist-packages/pycost/prices/__init__.pyc
+/usr/local/lib/python2.7/dist-packages/pycost/prices/just_pre/__init__.py
+/usr/local/lib/python2.7/dist-packages/pycost/prices/just_pre/__init__.pyc
+/usr/local/lib/python2.7/dist-packages/pycost/prices/just_pre/ListaJustPre.py
+/usr/local/lib/python2.7/dist-packages/pycost/prices/just_pre/ListaJustPre.pyc
+/usr/local/lib/python2.7/dist-packages/pycost/prices/just_pre/ListaRegJustPre.py
+/usr/local/lib/python2.7/dist-packages/pycost/prices/just_pre/ListaRegJustPre.pyc
+/usr/local/lib/python2.7/dist-packages/pycost/prices/just_pre/RegJustPre.py
+/usr/local/lib/python2.7/dist-packages/pycost/prices/just_pre/RegJustPre.pyc
 /usr/local/lib/python2.7/dist-packages/pycost/prices/price_table.py
 /usr/local/lib/python2.7/dist-packages/pycost/prices/price_table.pyc
 /usr/local/lib/python2.7/dist-packages/pycost/prices/unit_price_container.py

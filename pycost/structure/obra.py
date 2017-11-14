@@ -19,21 +19,21 @@ class Obra(cp.Capitulo):
 
     def __init__(self, cod="ObraSinCod", tit="ObraSinTit"):
         super(Obra,self).__init__(cod,tit,1,1)
-        elem= elementary_price.Elemento("SINDESCO","Sin descomposición","",1.0,bc3_entity.mat)
-        self.precios.Elementales().Agrega(elem)
-        self.porcentajes= pc.Percentages()
+        elem= elementary_price.ElementaryPrice("SINDESCO","Sin descomposición","",1.0,bc3_entity.mat)
+        self.precios.Elementales().Append(elem)
+        self.percentages= pc.Percentages()
 
     def CodigoBC3(self):
         return Capitulo.CodigoBC3() + "#"
 
-    def AgregaCapitulo(self, cap_padre, cap):
+    def newChapter(self, cap_padre, cap):
         ''' Agrega el capítulo que se pasa como
             parámetro al subcapítulo que indica la
             cadena de la forma 1\2\1\4.'''
         if(cap_padre==""): #Es un capítulo raíz
-            subcapitulos.AgregaCapitulo(cap)
+            subcapitulos.newChapter(cap)
         else:
-            self.BuscaSubcapitulo(cap_padre).getSubcapitulos().AgregaCapitulo(cap)
+            self.BuscaSubcapitulo(cap_padre).getSubcapitulos().newChapter(cap)
 
     def AgregaPartida(self, cap_padre, m):
         ''' Agrega la partida que se pasa como
@@ -62,11 +62,11 @@ class Obra(cp.Capitulo):
                 ruta = replace(lista,'/','\\')
                 pos = ruta.find('\\')
                 if(pos>len(ruta)): #Es capítulo raiz.
-                    AgregaCapitulo("",cp)
+                    newChapter("",cp)
                 else: #es capitulo.pyijo.
                     pos2 = ruta.rfind('\\')
                     ruta= ruta.substr(0,pos2)
-                    AgregaCapitulo(ruta,cp)
+                    newChapter(ruta,cp)
 
                 cdg= lista
             else: #Medicion
@@ -103,14 +103,14 @@ class Obra(cp.Capitulo):
                         pos= contenido.find('\n')
                         alt= contenido.substr(0,pos-1)
                         rm= RegMedicion(comentario,float(uds),float(lng),float(lat),float(alt))
-                        muo.Agrega(rm)
+                        muo.Append(rm)
                         break
 
                     else:
                         alt= contenido.substr(0,pos)
                         contenido= contenido.substr(pos+1,len(contenido))
                         rm= RegMedicion(comentario,float(uds),float(lng),float(lat),float(alt))
-                        muo.Agrega(rm)
+                        muo.Append(rm)
 
 
                 AgregaPartida(cod,muo)
@@ -134,7 +134,7 @@ class Obra(cp.Capitulo):
         reg = obra.GetDatosCapitulo(obra.begin())
         self.codigo= reg.Codigo(); #Código
         self.titulo= reg.Datos().Titulo(); #Título
-        subcapitulos.AgregaCapitulos(reg.Datos().desc)
+        subcapitulos.newChapters(reg.Datos().desc)
 
     def LeeBC3Mediciones(self, co):
         med= co.GetDatosMeds()
@@ -238,7 +238,7 @@ class Obra(cp.Capitulo):
         os.write("\\Large \\textbf{Presupuesto de Ejecución por Contrata} \\large" + '\n')
         os.write("\\end{center}" + '\n')
         os.write("\\vspace{2cm}" + '\n')
-        porcentajes.ImprLtx(os,PrecioR())
+        percentages.ImprLtx(os,PrecioR())
         os.write("\\input{firmas}" + '\n')
 
 

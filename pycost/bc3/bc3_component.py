@@ -26,15 +26,15 @@ class CompBC3(EntFR):
         return PrecioR().EnHumano()
 
 
-    #Para porcentajes.
     def PrecioSobre(self, sobre):
+        '''For percentages.'''
         d= ppl_precio3(sobre)
         d*= Producto()
         return d
 
 
-    #Para porcentajes.
     def StrPrecioSobreLtx(self, sobre):
+        '''For percentages.'''
         return PrecioSobre(sobre).EnHumano()
 
 
@@ -46,8 +46,8 @@ class CompBC3(EntFR):
         return Entidad().Codigo()
 
 
-    def EsPorcentaje(self):
-        return Entidad().EsPorcentaje()
+    def IsPercentage(self):
+        return Entidad().IsPercentage()
 
 
     def WriteSpre(self, os):
@@ -67,7 +67,7 @@ class CompBC3(EntFR):
             exit(1)
 
     def GetRegJustPre(self, sobre):
-        if EsPorcentaje():
+        if IsPercentage():
             return RegJustPre(CodigoEntidad(),ppl_precio4(Producto()),Entidad().Unidad(),Entidad().Titulo(),True,ppl_precio(Producto()*100.0),sobre)
         else:
             return RegJustPre(Entidad().Codigo(),ppl_precio4(Producto()),Entidad().Unidad(),Entidad().Titulo(),False,Entidad().PrecioR(),0.0)

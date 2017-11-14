@@ -67,20 +67,21 @@ class Subcapitulos(list, epc.EntPyCost):
             if(retval): break
         return retval
 
-    def AgregaCapitulo(self, c):
+    def newChapter(self, c):
         self.append(c)
+        return c
 
 
-    #not  @brief Agrega un capitulo.
-    def AgregaCapitulo(self, r):
-        self.AgregaCapitulo(Capitulo(r.codigo,"",r.factor,r.rendimiento))
+    def newChapterFromRecord(self, r):
+        '''Appends a chapter.'''
+        return self.newChapter(Capitulo(r.codigo,"",r.factor,r.rendimiento))
 
 
-    #not  @brief Agrega los capítulos que se pasan como parámetro.
-    def AgregaCapitulos(self, descomp):
+    def newChapters(self, descomp):
+        '''Append the chapters from the records on the container.'''
         sz = descomp.size()
         for i in self:
-            self.AgregaCapitulo(descomp[i])
+            self.newChapter(descomp[i])
 
 
     #not  @brief Carga los datos de los subcapítulos de (self).
@@ -111,7 +112,7 @@ class Subcapitulos(list, epc.EntPyCost):
                         logging.info("  Quedan " + co.GetDatosElementos().size() + " precios elementales." + '\n')
 
                     #Lee los subcapítulos.
-                    i.subcapitulos.AgregaCapitulos(reg.Datos().FiltraCapitulos(nombres_capitulos))
+                    i.subcapitulos.newChapters(reg.Datos().FiltraCapitulos(nombres_capitulos))
                     i.subcapitulos.LeeBC3Caps(co); #Carga los subcapitulos.
 
 

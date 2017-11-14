@@ -13,20 +13,20 @@ class Percentages(epc.EntPyCost):
         self.bi= profit #Beneficio industrial.
         self.iva= vat #Impuesto sobre el valor añadido.
     @staticmethod
-    def AplicaPorcentaje(self, p, pc):
-        temp2= basic_types.ppl_porcentaje(pc)
+    def ApplyPercentage(self, p, pc):
+        temp2= basic_types.ppl_percentage(pc)
         temp3= basic_types.ppl_precio(p)
         temp3*=temp2
         return temp3
 
     def GGenerales(self, p):
-        return AplicaPorcentaje(p,gg)
+        return ApplyPercentage(p,gg)
 
     def BIndustrial(self, p):
-        return AplicaPorcentaje(p,bi)
+        return ApplyPercentage(p,bi)
 
     def IVA(self, p):
-        return AplicaPorcentaje(p,iva)
+        return ApplyPercentage(p,iva)
 
     def ImprLtx(self, os, precio_ejec_mat):
         os.write("\\begin{itemize}" + '\n')

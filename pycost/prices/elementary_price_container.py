@@ -1,34 +1,27 @@
 # -*- coding: utf-8 -*-
-#Elementos.py
+#ElementaryPrices.py
 
 
 
 
 import elementary_price
 from pycost.utils import concept_dict
+from pycost.utils import basic_types
 from pycost.prices import component_list
 from pycost.bc3 import codes
 
 #not  @brief Tabla de precios elementales.
-class Elementos(concept_dict.MapaConceptos):
+class ElementaryPrices(concept_dict.MapaConceptos):
 
     def WriteHCalc(os):
-        lmsg.error("Elementos.WriteHCalc no implementada." + '\n')
+        lmsg.error("ElementaryPrices.WriteHCalc no implementada." + '\n')
 
     def __init__(self):
-        super(Elementos,self).__init__()
+        super(ElementaryPrices,self).__init__()
         
     @staticmethod
     def ImprLtxCabecera(self, tipo, os):
-        str_tipo = ""
-        if(tipo==mdo):
-            str_tipo= "mano de obra"
-        elif(tipo==maq):
-            str_tipo= "maquinaria"
-        elif(tipo==mat):
-            str_tipo= "materiales"
-        else:
-            str_tipo= "sin clasificar"
+        str_tipo= basic_types.str_tipo(tipo)
 
         os.write(ltx_begin("center") + '\n')
         os.write(ltx_large + " Precios elementales de " + str_tipo + ' '
@@ -68,9 +61,9 @@ class Elementos(concept_dict.MapaConceptos):
                     pre= precios.substr(0,pos)
                 else:
                     pre= precios.substr(0,len(precios)-1)
-                elem= elementary_price.Elemento(cod,tit,ud,atof(pre.c_str()),mdo)
+                elem= elementary_price.ElementaryPrice(cod,tit,ud,atof(pre.c_str()),mdo)
                 elem.texto_largo= tit
-                Agrega(elem)
+                Append(elem)
                 if(iS.peek() == 26): break
 
         resto= ''
@@ -97,9 +90,9 @@ class Elementos(concept_dict.MapaConceptos):
                     pre= precios.substr(0,pos)
                 else:
                     pre= precios.substr(0,len(precios)-1)
-                elem= elementary_price.Elemento(cod,tit,ud,atof(pre.c_str()),maq)
+                elem= elementary_price.ElementaryPrice(cod,tit,ud,atof(pre.c_str()),maq)
                 elem.texto_largo= tit
-                Agrega(elem)
+                Append(elem)
                 if(iS.peek() == 26): break
 
         resto= ''
@@ -126,9 +119,9 @@ class Elementos(concept_dict.MapaConceptos):
                     pre= precios.substr(0,pos)
                 else:
                     pre= precios.substr(0,len(precios)-1)
-                elem= elementary_price.Elemento(cod,tit,ud,atof(pre.c_str()),mat)
+                elem= elementary_price.ElementaryPrice(cod,tit,ud,atof(pre.c_str()),mat)
                 elem.texto_largo= tit
-                Agrega(elem)
+                Append(elem)
                 if(iS.peek() == 26): break
 
         resto= ''
@@ -173,10 +166,10 @@ class Elementos(concept_dict.MapaConceptos):
             if verborrea>2:
                 logging.info("Cargando precios elementales." + '\n')
             sz_inicial= len(self)
-            el= elementary_price.Elemento()
+            el= elementary_price.ElementaryPrice()
             for i in self:
-                el.LeeBC3(els.GetDatosElemento(i))
-                Agrega(el)
+                el.LeeBC3(els.GetDatosElementaryPrice(i))
+                Append(el)
 
             num_agregados = len(self)-sz_inicial
             if num_agregados != els.size():

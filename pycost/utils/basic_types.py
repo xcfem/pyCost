@@ -18,6 +18,17 @@ def ppl_percentage(dim, prec= 3):
     getcontext().prec= prec
     return Decimal(dim)
 
+def str_tipo(tipo):
+    retval = ''
+    if(tipo==mdo):
+        retval= 'mano de obra'
+    elif(tipo==maq):
+        retval= 'maquinaria'
+    elif(tipo==mat):
+        retval= 'materiales'
+    else:
+        retval= 'sin clasificar'
+    return retval
 
 
 # import Currency
@@ -26,6 +37,6 @@ def ppl_percentage(dim, prec= 3):
 # typedef Currency<2> ppl_precio2; #precio con dos decimales.
 # typedef Currency<3> ppl_precio3; #precio con tres decimales.
 # typedef Currency<4> ppl_precio4; #precio con cuatro decimales.
-# typedef Currency<3> ppl_porcentaje
+# typedef Currency<3> ppl_percentage
 
 

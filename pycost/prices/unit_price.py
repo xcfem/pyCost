@@ -20,8 +20,10 @@ class UdObra(ms.Measurable):
     def AsignaFactor(self, f):
         self.lista.AsignaFactor(f)
 
-    def Agrega(self,e, f, r):
-        self.lista.append(CompBC3(e,f,r))
+    def Append(self,e, f, r):
+        tmp= CompBC3(e,f,r)
+        self.lista.append(tmp)
+        return tmp
 
     def LeeBC3Fase1(self,r):
         '''Lee la unidad a falta de la descomposición.'''
@@ -104,7 +106,7 @@ class UdObra(ms.Measurable):
         os.write("Código & Rdto. & Ud. & Descripción & Unit. & Total"
            + ltx_fin_reg + '\n' + ltx_hline + '\n')
         #Descomposición
-        lista.ImprLtxJustPre(os,True); #XXX Aqui porcentajes acumulados.
+        lista.ImprLtxJustPre(os,True); #XXX Here cumulated percentages.
         os.write("\\end{tabular}" + '\n')
 
     def ImprLtxCP1(self, os):
@@ -123,7 +125,7 @@ class UdObra(ms.Measurable):
            + ascii2latex(Unidad()) + " & "
            + ascii2latex(TextoLargo()) + " & " + ltx_fin_reg + '\n' + ltx_fin_reg + '\n')
         #Descomposición
-        lista.ImprLtxCP2(os,True); #XXX Aqui porcentajes acumulados.
+        lista.ImprLtxCP2(os,True); #XXX Here cumulated percentages.
         os.write("\\end{tabular}" + '\n')
 
     def WriteHCalc(self, os):
