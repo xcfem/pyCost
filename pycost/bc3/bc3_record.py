@@ -17,7 +17,7 @@ class RegBC3(object):
     def GetDatosElemento(self):
         return regBC3_elemento(self.GetConcepto(),self.GetTexto())
 
-    def GetDatosUdObra(self):
+    def getUnitPriceData(self):
         return regBC3_udobra(self.GetConcepto(),self.GetTexto(),self.GetDesc())
 
     def GetDatosMedicion(self):

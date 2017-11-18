@@ -51,7 +51,7 @@ class Mediciones(list, epy.EntPyCost):
 
     #| @brief Lee la lista de mediciones.
     def LeeBC3(self, m):
-        rm= RegMedicion()
+        rm= MeasurementRecord()
         for i in m:
             rm.LeeBC3(i)
             append(rm)

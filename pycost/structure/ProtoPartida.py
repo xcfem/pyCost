@@ -15,14 +15,11 @@ class ProtoPartida(epc.EntPyCost):
         super(ProtoPartida,self).__init__()
         self.ud= u
 
-    def CodigoUdObra(self):
+    def getUnitPriceCode(self):
         return self.ud.Codigo()
 
     def UnidadMedida(self):
         return self.ud.Unidad()
-
-    def TextoLUdObra(self):
-        return self.ud.TextoLargo()
 
     def PrecioUd(self):
         return self.ud.Precio()
@@ -31,7 +28,7 @@ class ProtoPartida(epc.EntPyCost):
         return self.ud.PrecioR()
 
     def Informe(self):
-        return self.InformeUdObra(ud,Total())
+        return self.UnitPriceReport(ud,Total())
 
     def StrPrecioUd(self):
         return self.ud.StrPrecio()
@@ -40,7 +37,7 @@ class ProtoPartida(epc.EntPyCost):
         return self.ud.StrPrecioLtx()
 
     def Precio(self):
-        return self.Total()*PrecioUd()
+        return self.Total()*ud.Precio()
 
     def PrecioR(self):
         return ppl_precio(float(self.TotalR())*float(self.PrecioRUd()))
@@ -50,9 +47,9 @@ class ProtoPartida(epc.EntPyCost):
 
     def ImprLtxCabecera(self, os, totalr, ancho):
         '''Imprime la cabecera para la partida.'''
-        os.write(ascii2latex(CodigoUdObra()) + ltx_ampsnd
+        os.write(ascii2latex(getUnitPriceCode()) + ltx_ampsnd
            + totalr + ' ' + ascii2latex(UnidadMedida()) + ltx_ampsnd
-           + ltx_multicolumn(ltx_datos_multicolumn("4",ancho,ascii2latex(TextoLUdObra()))))
+           + ltx_multicolumn(ltx_datos_multicolumn("4",ancho,ascii2latex(self.ud.getLongDescription()()))))
 
 
     def ImprCompLtxMed(self, os, otra):
@@ -101,9 +98,9 @@ class ProtoPartida(epc.EntPyCost):
 
 
     def ImprLtxCabeceraPre(self, os, totalr, ancho):
-        os.write(ascii2latex(CodigoUdObra()) + ltx_ampsnd
+        os.write(ascii2latex(getUnitPriceCode()) + ltx_ampsnd
            + totalr + " " + ascii2latex(UnidadMedida()) + ltx_ampsnd
-           + ltx_multicolumn(ltx_datos_multicolumn("1",ancho,ascii2latex(TextoLUdObra()))))
+           + ltx_multicolumn(ltx_datos_multicolumn("1",ancho,ascii2latex(self.ud.getLongDescription()()))))
 
     def ImprCompLtxPre(self, os, otra):
         linea_en_blanco = ltx_ampsnd+ltx_ampsnd+ltx_ampsnd+ltx_ampsnd+ltx_ampsnd+ltx_ampsnd+ltx_ampsnd+ltx_ampsnd+ltx_ampsnd+ltx_fin_reg
@@ -143,9 +140,9 @@ class ProtoPartida(epc.EntPyCost):
 
     #HCalc
     def WriteHCalcMed(self, os):
-        os.write(CodigoUdObra() + tab
+        os.write(getUnitPriceCode() + tab
            + en_humano(Total(),3) + tab + ascii2latex(UnidadMedida()) + tab
-           + '"' + ascii2latex(TextoLUdObra()) + '"' + '\n'
+           + '"' + ascii2latex(self.ud.getLongDescription()()) + '"' + '\n'
            + "Texto" + tab
            + "Unidades" + tab
            + "Largo" + tab
@@ -155,13 +152,13 @@ class ProtoPartida(epc.EntPyCost):
         Meds().WriteHCalc(os)
 
     def WriteHCalcPre(self, os):
-        os.write(CodigoUdObra() + tab
-           + Total() + tab + UnidadMedida() + tab + TextoLUdObra() + tab
+        os.write(getUnitPriceCode() + tab
+           + Total() + tab + UnidadMedida() + tab + self.ud.getLongDescription()() + tab
            + StrPrecioUd() + tab
            + Precio() + '\n')
 
     def WriteBC3RegM(self, os, cap_padre, pos):
-        os.write("~M|" + cap_padre + '\\' + CodigoUdObra() + '|'
+        os.write("~M|" + cap_padre + '\\' + getUnitPriceCode() + '|'
            + pos.write('|'
            + Total() + '|'))
 

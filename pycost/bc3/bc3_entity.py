@@ -108,7 +108,7 @@ class EntBC3(epc.EntPyCost):
     def Tipo(self):
         return sin_clasif
 
-    def TextoLargo(self):
+    def getLongDescription(self):
         return self.static_texto_largo
 
 
@@ -151,7 +151,7 @@ class EntBC3(epc.EntPyCost):
            + "Precio: " + StrPrecio() + '\n'
            + "Fecha: "  + Fecha() + '\n'
            + "Tipo: " + ChrTipo() + '\n'
-           + "Texto largo: " + TextoLargo() + '\n')
+           + "Texto largo: " + self.getLongDescription() + '\n')
 
     def Print(self,os):
         self.Write(os)

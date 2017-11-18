@@ -39,9 +39,9 @@ class Capitulo(bc3_entity.EntBC3):
         return precios
     def AgregaPartida(self, m):
         mediciones.append(m)
-    def GetCompBC3(self):
+    def GetBC3Component(self):
         '''Return this chapter as a component.'''
-        return CompBC3(self,fr)
+        return BC3Component(self,fr)
     def LeeBC3Elementales(self, elementos):
         '''Appends the elementary prices from argument.'''
         self.precios.LeeBC3Elementales(elementos)

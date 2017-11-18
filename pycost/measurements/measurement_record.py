@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-#RegMedicion.py
+#MeasurementRecord.py
 
 
 
@@ -7,10 +7,10 @@ from pycost.prices import unit_price
 from pycost.utils import basic_types
 from pycost.utils import EntPyCost as epc
 
-class RegMedicion(epc.EntPyCost):
+class MeasurementRecord(epc.EntPyCost):
 
     def __init__(self,c= "", uds= 0.0,l= 0.0,an= 0.0,al= 0.0):
-        super(RegMedicion,self).__init__()
+        super(MeasurementRecord,self).__init__()
         self.comentario= c
         self.unidades= uds
         self.largo= l

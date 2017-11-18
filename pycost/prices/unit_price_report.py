@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
-#InformeUdObra.py
+#UnitPriceReport.py
 
 
-class InformeUdObra(object):
+class UnitPriceReport(object):
     def __init__(self,u,mt):
         self.ud= u
         self.med_total= mt
@@ -13,7 +13,7 @@ class InformeUdObra(object):
     def ImprLtx(self, os):
         if ud:
             os.write(ud.Codigo() + " & "
-               + ascii2latex(ud.TextoLargo()) + " & "
+               + ascii2latex(ud.getLongDescription()) + " & "
                + en_humano(med_total,0) + " & "
                + en_humano(med_total*ud.Precio(),0))
 

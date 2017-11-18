@@ -1,21 +1,18 @@
 # -*- coding: utf-8 -*-
-#MapaConceptos.py
-
-
-
+#ConceptDict.py
 
 
 import EntPyCost as epy
 
-class MapaClaves(dict):
+class KeyMap(dict):
     def __init__(self):
-        super(MapaClaves,self).__init__()
+        super(KeyMap,self).__init__()
 
 
-class MapaConceptos(epy.EntPyCost):
-    claves= MapaClaves()
+class ConceptDict(epy.EntPyCost):
+    claves= KeyMap()
     def __init__(self):
-        super(MapaConceptos,self).__init__()
+        super(ConceptDict,self).__init__()
         self.map= dict()
     def Append(self,u):
         self.claves[u.Codigo()]= u
@@ -43,3 +40,5 @@ class MapaConceptos(epy.EntPyCost):
            map[j].Write(os)
 
 
+def find_concept(conceptName):
+    return ConceptDict.claves[conceptName]

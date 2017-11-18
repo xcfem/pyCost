@@ -42,7 +42,7 @@ class MedsCap(list, epc.EntPyCost):
             os.write("~D" + '|' #Antes estaba con ~Y (daba problemas)
              + cod + '|')
             for i in self:
-                os.write((i).CodigoUdObra() + "\\1\\" #factor 1
+                os.write((i).getUnitPriceCode() + "\\1\\" #factor 1
                    + (i).Total() + '\\')
             os.write('|' + endl_msdos)
 
@@ -58,9 +58,9 @@ class MedsCap(list, epc.EntPyCost):
                + ltx_endfoot + '\n'
                + ltx_endlastfoot + '\n')
             for i in self:
-                 cod = (i).CodigoUdObra()
+                 cod = (i).getUnitPriceCode()
                  for j in otra:
-                    if(cod == (j).CodigoUdObra()): break
+                    if(cod == (j).getUnitPriceCode()): break
                     if(j!=otra.end()): #Found it!
                         (i).ImprCompLtxMed(os,*(j))
                     else:
@@ -95,9 +95,9 @@ class MedsCap(list, epc.EntPyCost):
                + ltx_endfoot + '\n'
                + ltx_endlastfoot + '\n')
             for i in self:
-                 cod = (i).CodigoUdObra()
+                 cod = (i).getUnitPriceCode()
                  for j in otra:
-                     if(cod == (j).CodigoUdObra()): break
+                     if(cod == (j).getUnitPriceCode()): break
                  if(j!=otra.end()): #Found it!
                      (i).ImprCompLtxPre(os,*(j))
                  else:

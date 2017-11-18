@@ -128,7 +128,7 @@ class Subcapitulos(list, epc.EntPyCost):
         os.write("~D" + '|'
            + cod + '|')
         for i in self:
-            (i).GetCompBC3().WriteBC3(os)
+            (i).GetBC3Component().WriteBC3(os)
         os.write('|' + endl_msdos)
 
 

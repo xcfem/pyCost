@@ -15,7 +15,7 @@ class InformeMediciones(dict):
 
     def Merge(self, otro):
         for i in otro:
-            Inserta(InformeUdObra((i).first,(i).second))
+            Inserta(UnitPriceReport((i).first,(i).second))
 
     def ImprLtx(self, os):
         if(size()<1): return
@@ -30,7 +30,7 @@ class InformeMediciones(dict):
            + "\\hline" + '\n'
            + "\\endlastfoot" + '\n')
         for i in self:
-            iu= iuo.InformeUdObra((i).first,(i).second)
+            iu= iuo.UnitPriceReport((i).first,(i).second)
             iu.ImprLtx(os)
             os.write( "\\\\" + '\n')
 

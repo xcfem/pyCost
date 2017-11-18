@@ -8,7 +8,7 @@ import elementary_price_container
 import unit_price
 from pycost.utils import concept_dict
 
-class Descompuestos(concept_dict.MapaConceptos):
+class Descompuestos(concept_dict.ConceptDict):
     '''Unidades de obra.'''
 
     def AgregaComponente(self, el, cod_ud, cod_el, r, f):
@@ -28,9 +28,9 @@ class Descompuestos(concept_dict.MapaConceptos):
 
     def LeeBC3Fase1(self, cds):
         '''Lee las unidades de obra a falta de la descomposición.'''
-        ud= UdObra()
+        ud= UnitPrice()
         for i in cds:
-            reg = cds.GetDatosUdObra(i)
+            reg = cds.getUnitPriceData(i)
             ud.LeeBC3Fase1(reg)
             Append(ud)
 
@@ -41,7 +41,7 @@ class Descompuestos(concept_dict.MapaConceptos):
         error= False
         retval= set_pendientes
         for i in cds:
-            reg = cds.GetDatosUdObra(i)
+            reg = cds.getUnitPriceData(i)
             ud= Busca(reg.Codigo())
             error= ud.LeeBC3Fase2(reg,bp)
             if error:
@@ -69,7 +69,7 @@ class Descompuestos(concept_dict.MapaConceptos):
 
                 tit= ''
                 getline(iS,tit,'|')
-                unidad= UdObra(cod,tit,ud)
+                unidad= UnitPrice(cod,tit,ud)
                 unidad.texto_largo= tit
                 Append(unidad)
                 perc= '' #percentage

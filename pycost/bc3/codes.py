@@ -310,8 +310,8 @@ class Codigos(dict):
         return reg_elemento((i).first,(i).second.GetDatosElemento())
 
 
-    def GetDatosUdObra(self, i):
-        return reg_udobra((i).first,(i).second.GetDatosUdObra())
+    def GetDatosUnitPrice(self, i):
+        return reg_udobra((i).first,(i).second.GetDatosUnitPrice())
 
 
     def GetDatosCapitulo(self, i):

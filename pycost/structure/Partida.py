@@ -31,7 +31,7 @@ class Partida(ptp.ProtoPartida):
 
     def LeeBC3(self, m):
         if m.med.lista_med.empty():
-            rm= RegMedicion("",m.med.med_total)
+            rm= MeasurementRecord("",m.med.med_total)
             meds.append(rm)
         else:
             meds.LeeBC3(m.med.lista_med)

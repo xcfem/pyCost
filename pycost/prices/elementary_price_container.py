@@ -11,7 +11,7 @@ from pycost.prices import component_list
 from pycost.bc3 import codes
 
 #not  @brief Tabla de precios elementales.
-class ElementaryPrices(concept_dict.MapaConceptos):
+class ElementaryPrices(concept_dict.ConceptDict):
 
     def WriteHCalc(os):
         lmsg.error("ElementaryPrices.WriteHCalc no implementada." + '\n')

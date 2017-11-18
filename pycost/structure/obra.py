@@ -76,7 +76,7 @@ class Obra(cp.Capitulo):
                 pos = contenido.find('|')
                 cod_ud_obra = contenido.substr(0,pos)
                 contenido= contenido.substr(pos+1,len(contenido))
-                udo= precios.BuscaUdObra(cod_ud_obra)
+                udo= precios.searchForUnitPrice(cod_ud_obra)
                 if not udo:
                     lmsg.error("Unidad de obra: " + cod_ud_obra
                               + " no encontrada" + '\n')
@@ -102,14 +102,14 @@ class Obra(cp.Capitulo):
                     if pos>len(contenido):
                         pos= contenido.find('\n')
                         alt= contenido.substr(0,pos-1)
-                        rm= RegMedicion(comentario,float(uds),float(lng),float(lat),float(alt))
+                        rm= MeasurementRecord(comentario,float(uds),float(lng),float(lat),float(alt))
                         muo.Append(rm)
                         break
 
                     else:
                         alt= contenido.substr(0,pos)
                         contenido= contenido.substr(pos+1,len(contenido))
-                        rm= RegMedicion(comentario,float(uds),float(lng),float(lat),float(alt))
+                        rm= MeasurementRecord(comentario,float(uds),float(lng),float(lat),float(alt))
                         muo.Append(rm)
 
 
@@ -142,7 +142,7 @@ class Obra(cp.Capitulo):
             lmsg.error("No se encontraron mediciones." + '\n')
         for i in med:
             reg = med.GetDatosMedicion(i)
-            # UdObra *ud= precios.BuscaUdObra(reg.CodigoUnidad())
+            # UnitPrice *ud= precios.searchForUnitPrice(reg.CodigoUnidad())
             cod_unidad = copia_desde(reg.CodigoUnidad(),'@')
             ud= self.BuscaPrecio(cod_unidad)
             if not ud:

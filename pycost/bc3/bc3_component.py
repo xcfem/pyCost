@@ -1,24 +1,21 @@
-#CompBC3.py
-
-
-
+#BC3Component.py
 
 import fr_entity
 import bc3_entity
 
 
-class CompBC3(EntFR):
+class BC3Component(fr_entity.EntFR):
     '''Component of a price decomposition.'''
 
     def __init__(self, e= None, f=1.0, r= 1.0):
-        super(CombBC3,self).__init__(f,r)
+        super(BC3Component,self).__init__(f,r)
         self.ent= e
 
     def Precio(self):
-        return self.Entidad().Precio()*Producto()
+        return self.ent.Precio()*Producto()
 
     def PrecioR(self):
-        retval= ppl_precio3(Entidad().PrecioR())
+        retval= ppl_precio3(ent.PrecioR())
         retval*= ProductoR()
         return retval
 
@@ -39,25 +36,25 @@ class CompBC3(EntFR):
 
 
     def Tipo(self):
-        return Entidad().Tipo()
+        return ent.Tipo()
 
 
     def CodigoEntidad(self):
-        return Entidad().Codigo()
+        return ent.Codigo()
 
 
     def IsPercentage(self):
-        return Entidad().IsPercentage()
+        return ent.IsPercentage()
 
 
     def WriteSpre(self, os):
         if not ((CodigoEntidad()).find('%')):
             os.write(0 + '|' + CodigoEntidad() + '|')
-        super(CombBC3,self).WriteSpre(os)
+        super(BC3Component,self).WriteSpre(os)
 
     def WriteBC3(self, os):
-        os.write(Entidad().CodigoBC3() + '\\')
-        super(CompBC3,self).WriteBC3(os)
+        os.write(ent.CodigoBC3() + '\\')
+        super(BC3Component,self).WriteBC3(os)
 
     def Entidad(self):
         if self.ent:
@@ -68,9 +65,9 @@ class CompBC3(EntFR):
 
     def GetRegJustPre(self, sobre):
         if IsPercentage():
-            return RegJustPre(CodigoEntidad(),ppl_precio4(Producto()),Entidad().Unidad(),Entidad().Titulo(),True,ppl_precio(Producto()*100.0),sobre)
+            return RegJustPre(CodigoEntidad(),ppl_precio4(Producto()),ent.Unidad(),ent.Titulo(),True,ppl_precio(Producto()*100.0),sobre)
         else:
-            return RegJustPre(Entidad().Codigo(),ppl_precio4(Producto()),Entidad().Unidad(),Entidad().Titulo(),False,Entidad().PrecioR(),0.0)
+            return RegJustPre(ent.Codigo(),ppl_precio4(Producto()),ent.Unidad(),ent.Titulo(),False,ent.PrecioR(),0.0)
 
 
     def ImprLtxJustPre(self, os, sobre):
