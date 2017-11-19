@@ -74,7 +74,7 @@ class Subcapitulos(list, epc.EntPyCost):
 
     def newChapterFromRecord(self, r):
         '''Appends a chapter.'''
-        return self.newChapter(Capitulo(r.codigo,"",r.factor,r.productionRate))
+        return self.newChapter(Chapter(r.codigo,"",r.factor,r.productionRate))
 
 
     def newChapters(self, descomp):
@@ -90,12 +90,12 @@ class Subcapitulos(list, epc.EntPyCost):
         if len(sc)<1:
             lmsg.error("No se encontraron subcapitulos." + '\n')
 
-        nombres_capitulos= co.GetCodigosCapitulos()
+        nombres_capitulos= co.getChapterCodes()
 
         for i in self:
-            j= sc.BuscaCapitulo(i.Codigo()); #sc.find(i.Codigo()); #Código
+            j= sc.findChapter(i.Codigo()); #sc.find(i.Codigo()); #Código
             if j:
-                reg = sc.GetDatosCapitulo(j)
+                reg = sc.getChapterData(j)
                 if i:
                     if verborrea>4:
                         logging.info("Cargando el subcapítulo: '" + reg.Datos().Titulo() + "'\n")
@@ -112,7 +112,7 @@ class Subcapitulos(list, epc.EntPyCost):
                         logging.info("  Quedan " + co.GetDatosElementos().size() + " precios elementales." + '\n')
 
                     #Lee los subcapítulos.
-                    i.subcapitulos.newChapters(reg.Datos().FiltraCapitulos(nombres_capitulos))
+                    i.subcapitulos.newChapters(reg.Datos().filterChapters(nombres_capitulos))
                     i.subcapitulos.LeeBC3Caps(co); #Carga los subcapitulos.
 
 

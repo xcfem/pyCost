@@ -19,7 +19,7 @@ class reg_T(object):
         strtk= StrTok(cod)
         return strtk.campos('\\').rbegin()
 
-    def CodigoCapitulo(self):
+    def getChapterCode(self):
         strtk= StrTok(cod)
         return strtk.campos('\\').begin()
 
@@ -32,15 +32,15 @@ class Codigos(dict):
 
     #Clasificación
     @staticmethod
-    def EsCapituloUObra(i):
+    def isChapterOrObra(i):
         if(EsMedicion(i)): #Quantities have the code of their chapter.
             return False
         else:
             return es_codigo_capitulo_u_obra((i).first)
 
     @staticmethod
-    def EsCapitulo(i):
-        if EsCapituloUObra(i):
+    def isChapter(i):
+        if isChapterOrObra(i):
             return not EsObra(i)
         else:
             return False
@@ -62,7 +62,7 @@ class Codigos(dict):
     def EsDescompuesto(i):
         if(EsMedicion(i)): return False
         if(EsElemento(i)): return False
-        if(EsCapituloUObra(i)): return False
+        if(isChapterOrObra(i)): return False
         return True
 
     def __iadd__(cods):
@@ -83,7 +83,7 @@ class Codigos(dict):
         for i in desc:
             cod = (i).codigo
             if(es_codigo_capitulo(cod)): #Es un capítulo.
-                j = BuscaCapitulo(cod)
+                j = findChapter(cod)
                 if j:
                     retval[(j).first]= (j).second
                 else:
@@ -94,7 +94,7 @@ class Codigos(dict):
 
         return retval
 
-    def GetSubCapitulos(self, cods):
+    def GetSubChapters(self, cods):
         retval= None
         for i in cods:
             retval.InsertaCods(GetSubCaps((i).second))
@@ -188,7 +188,7 @@ class Codigos(dict):
 
 
     #not  @brief Devuelve un iterador al capítulo con el código que se pasa como parámetro.
-    def BuscaCapitulo(self, cod):
+    def findChapter(self, cod):
         retval = find(cod); #Código
         if retval==end():
             retval= find(cod+'#')
@@ -205,7 +205,7 @@ class Codigos(dict):
             return medicion
         elif EsDescompuesto(i):
             return descompuesto
-        elif EsCapitulo(i):
+        elif isChapter(i):
             return capitulo
         else:
             lmsg.error("No se encontró el tipo del concepto: '" + (i).first + "'\n")
@@ -234,10 +234,10 @@ class Codigos(dict):
 
 
     #not  @brief Extrae las entidades que corresponden a capitulos
-    def GetCapitulos(self):
+    def GetChapters(self):
         retval= None
         for i in self:
-            if EsCapitulo(i):
+            if isChapter(i):
                 retval[(i).first]= (i).second
         logging.info("  leídos " + retval.size() + " capítulos." + '\n')
         return retval
@@ -314,8 +314,8 @@ class Codigos(dict):
         return reg_udobra((i).first,(i).second.GetDatosUnitPrice())
 
 
-    def GetDatosCapitulo(self, i):
-        return reg_capitulo((i).first,(i).second.GetDatosCapitulo())
+    def getChapterData(self, i):
+        return reg_capitulo((i).first,(i).second.getChapterData())
 
 
     def GetDatosMedicion(self, i):

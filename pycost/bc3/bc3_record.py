@@ -53,11 +53,11 @@ class RegBC3(object):
 
 
     #not  @brief Devuelve verdadero si el concepto corresponde a un capitulo.
-    def EsCapitulo(self):
+    def isChapter(self):
         return es_codigo_capitulo(c)
 
 
-    def GetDatosCapitulo(self):
+    def getChapterData(self):
         return regBC3_capitulo(GetConcepto(),GetTexto(),GetDesc())
 
 

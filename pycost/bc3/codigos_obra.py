@@ -36,7 +36,7 @@ class CodigosObra(object):
 
 
     #not  @brief Devuelve los códigos de los capítulos de la obra.
-    def GetCodigosCapitulos(self):
+    def getChapterCodes(self):
         return codigos_capitulos
 
     def ExisteConcepto(self, cod):
@@ -83,7 +83,7 @@ class CodigosObra(object):
         obra = resto.GetObra(); #Obtiene los registros que corresponden a la obra.
         caps.InsertaCods(obra)
         #resto.Borra(obra)
-        caps+= resto.GetCapitulos()
+        caps+= resto.GetChapters()
         resto.Borra(caps)
         elementos= resto.GetElementos()
         resto.Borra(elementos)
@@ -99,8 +99,8 @@ class CodigosObra(object):
 
 
     #@ brief Devuelve los datos del capítulo al que apunta el iterador.
-    def GetDatosCapitulo(self, i):
-        return caps.GetDatosCapitulo(i)
+    def getChapterData(self, i):
+        return caps.getChapterData(i)
 
 
     #not  @brief Carga las líneas de BC3 "resto" y después llama a la rutina "Trocea"

@@ -90,10 +90,10 @@ class regBC3_desc(regBC3):
             productionRate= float(tmp)
         return strtk
 
-    def EsCapituloUObra(self):
+    def isChapterOrObra(self):
         return (self.codigo.find("#")<self.codigo.leng.py())
 
-    def EsCapitulo(self):
+    def isChapter(self):
         return es_codigo_capitulo(codigo)
 
     def EsObra(self):
@@ -115,17 +115,17 @@ class regBC3_d(regBC3_lista_reg):
         strtk_lista_desc= strtk.get_token('|')
         regBC3_lista_reg.decod_bc3(strtk_lista_desc)
         return strtk
-    def EsCapitulo(r, nombres_capitulo):
+    def isChapter(r, nombres_capitulo):
         '''Return true if the records is a chapter.'''
-        retval = r.EsCapitulo()
+        retval = r.isChapter()
         if not retval:
             retval= (nombres_capitulo.find(r.codigo+'#')!= nombres_capitulo.end())
         return retval
-    def FiltraCapitulos(nombres_capitulo):
+    def filterChapters(nombres_capitulo):
         '''Devuelve los elementos de la descomposición que son capítulos.'''
         retval= regBC3_d()
         for i in self:
-            if EsCapitulo(i,nombres_capitulo):
+            if isChapter(i,nombres_capitulo):
                 retval.append(i)
         return retval
     def FiltraPrecios(nombres_capitulo):
@@ -133,7 +133,7 @@ class regBC3_d(regBC3_lista_reg):
            son precios elementales o descompuestos.'''
         retval= regBC3_d()
         for i in self:
-            if not EsCapitulo(i,nombres_capitulo):
+            if not isChapter(i,nombres_capitulo):
                 retval.append(i)
         return retval
 
@@ -206,15 +206,15 @@ class regBC3_ruta(list,regBC3):
         StrTok.dq_campos.operator=(strtk.campos('\\'))
         return strtk
         
-    def Capitulos():
+    def Chapters():
         return size()-1
 
     def Posicion(self):
         return self[-1]
 
     def Write(self,os):
-        Str= "Capitulo: "
-        for i in range(0,Capitulos()):
+        Str= "Chapter: "
+        for i in range(0,Chapters()):
             os.write(Str + self[i] + '\n')
             Str= "Sub" + Str
         os.write("Posición: " + Posicion())
@@ -337,6 +337,6 @@ class regBC3_medicion(regBC3_elemento):
 class regBC3_capitulo(regBC3_udobra):
     def __init__(self,c,t,d):
         super(regBC3_capitulo,self).__init__(c,t,d)
-    def FiltraCapitulos(self,nombres_capitulo):
-        return self.desc.FiltraCapitulos(nombres_capitulo)
+    def filterChapters(self,nombres_capitulo):
+        return self.desc.filterChapters(nombres_capitulo)
 

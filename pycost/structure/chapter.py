@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-#Capitulo.py
+#Chapter.py
 
 from pycost.measurements import measurement_container
 from pycost.bc3 import fr_entity
@@ -9,9 +9,9 @@ from pycost.prices import price_table
 from pycost.prices import unit_price_container
 
 
-class Capitulo(bc3_entity.EntBC3):
+class Chapter(bc3_entity.EntBC3):
     def __init__(self, cod= "CapSinCod", tit= "CapSinTit", factor= 1.0, productionRate= 1.0):
-      super(Capitulo,self).__init__(cod,tit)
+      super(Chapter,self).__init__(cod,tit)
       self.fr= fr_entity.EntFR(factor,productionRate)
       self.subcapitulos= chapter_container.Subcapitulos(self)
       self.quantities= measurement_container.ChapterQuantities()
@@ -31,7 +31,7 @@ class Capitulo(bc3_entity.EntBC3):
         return self.quantities
     def WriteQuantities(os, pos=""):
         self.quantities.Write(os,CodigoBC3(),pos)
-    def WriteSubCapitulos(os, primero= "False", pos=""):
+    def WriteSubChapters(os, primero= "False", pos=""):
         self.subcapitulos.WriteBC3(os,primero,pos)
     def CodigoBC3(self):
         return EntBC3.CodigoBC3() + "#"
@@ -54,7 +54,7 @@ class Capitulo(bc3_entity.EntBC3):
         if ruta:
             retval= subcapitulos.Busca(ruta)
             if not retval:
-                lmsg.error("Capitulo.BuscaSubcapitulo: no se encontró el subcapítulo: " + ruta[1]
+                lmsg.error("Chapter.BuscaSubcapitulo: no se encontró el subcapítulo: " + ruta[1]
                           + " en el capítulo: " + Codigo() + " (" + Titulo()
                           + ") (ruta: " + ruta + ')' + '\n')
                 #Si no encuentra el capítulo devuelve este mismo
@@ -111,7 +111,7 @@ class Capitulo(bc3_entity.EntBC3):
         WriteConceptoBC3(os,primero)
         WriteDescompBC3(os)
         WriteQuantities(os,pos)
-        WriteSubCapitulos(os,False,pos)
+        WriteSubChapters(os,False,pos)
     def Precio(self):
         return (subcapitulos.Precio() + self.quantities.Precio()) * fr.Producto()
     def PrecioR(self):

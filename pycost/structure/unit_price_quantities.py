@@ -16,10 +16,6 @@ class UnitPriceQuantities(ptp.UnitPriceQuantitiesBase):
     def Copia(self):
         return UnitPriceQuantities(self)
 
-    def Append(self,med):
-        quantities.append(med)
-        return med
-
     def Total(self):
         return self.quantities.Total()
 

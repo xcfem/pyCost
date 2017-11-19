@@ -7,7 +7,7 @@ from pycost.bc3 import codigos_obra as cod
 from pycost.bc3 import bc3_entity
 from pycost.prices import elementary_price
 
-class Obra(cp.Capitulo):
+class Obra(cp.Chapter):
 
     def nombre_clase(self):
         return "Obra"
@@ -24,7 +24,7 @@ class Obra(cp.Capitulo):
         self.percentages= pc.Percentages()
 
     def CodigoBC3(self):
-        return Capitulo.CodigoBC3() + "#"
+        return Chapter.CodigoBC3() + "#"
 
     def newChapter(self, cap_padre, cap):
         ''' Agrega el capítulo que se pasa como
@@ -58,7 +58,7 @@ class Obra(cp.Capitulo):
                 getline(iS,tit,'\n')
                 tit= q_blancos(tit.substr(0,len(tit)-1))
                 lmsg.error("Cargando capítulo: " + cod + ' ' + tit + '*' + '\n')
-                cp = Capitulo(cod,tit)
+                cp = Chapter(cod,tit)
                 ruta = replace(lista,'/','\\')
                 pos = ruta.find('\\')
                 if(pos>len(ruta)): #Es capítulo raiz.
@@ -123,7 +123,7 @@ class Obra(cp.Capitulo):
             LeeMedicSpre(iS)
 
 
-    def BuscaCapituloMedicion(self,ruta):
+    def findChapterMedicion(self,ruta):
         ruta.pop_back(); #Eliminamos el último elemento que es la posición.
         return self.BuscaSubcapitulo(ruta)
 
@@ -131,7 +131,7 @@ class Obra(cp.Capitulo):
     def LeeBC3DatosObra(self, obra):
         if obra.size()<1:
             lmsg.error("No se encontró la obra." + '\n')
-        reg = obra.GetDatosCapitulo(obra.begin())
+        reg = obra.getChapterData(obra.begin())
         self.codigo= reg.Codigo(); #Código
         self.titulo= reg.Datos().Titulo(); #Título
         subcapitulos.newChapters(reg.Datos().desc)
@@ -160,13 +160,13 @@ class Obra(cp.Capitulo):
                 m= UnitPriceQuantities(ud)
                 m.LeeBC3(reg.Datos())
                 r=reg.Datos().Ruta()
-                c= BuscaCapituloMedicion(r)
+                c= findChapterMedicion(r)
                 if not c:
-                    c= BuscaCodigo(reg.CodigoCapitulo())
+                    c= BuscaCodigo(reg.getChapterCode())
                 if c:
                     c.AppendUnitPriceQuantities(m)
                 else:
-                    lmsg.error("No se encontró el capítulo: " + reg.CodigoCapitulo() + '\n')
+                    lmsg.error("No se encontró el capítulo: " + reg.getChapterCode() + '\n')
 
 
 
@@ -248,7 +248,7 @@ class Obra(cp.Capitulo):
         WriteConceptoBC3(os)
         WriteDescompBC3(os)
         WriteQuantities(os,pos)
-        WriteSubCapitulos(os,True,pos)
+        WriteSubChapters(os,True,pos)
 
 
     def ImprLtxPresGen(self, os):
@@ -259,31 +259,31 @@ class Obra(cp.Capitulo):
     def ImprLtxMed(self, os):
         os.write(ltx_part(basic_types.quantitesCaption) + '\n')
         os.write(ltx_parttoc + '\n')
-        Capitulo.ImprLtxMed(os,"raiz")
+        Chapter.ImprLtxMed(os,"raiz")
 
     def ImprCompLtxMed(self, otra, os):
         os.write(ltx_part(basic_types.quantitesCaption) + '\n')
         os.write(ltx_parttoc + '\n')
         os.write(ltx_begin("landscape") + '\n')
-        Capitulo.ImprCompLtxMed(os,"raiz",otra)
+        Chapter.ImprCompLtxMed(os,"raiz",otra)
         os.write(ltx_end("landscape") + '\n')
 
     def ImprLtxCP1(self, os):
         os.write(ltx_part("Cuadro de precios no. 1") + '\n')
         os.write(ltx_parttoc + '\n')
         os.write("\\setcounter{chapter}{0}" + '\n')
-        Capitulo.ImprLtxCP1(os,"raiz")
+        Chapter.ImprLtxCP1(os,"raiz")
         os.write("\\input{firmas}" + '\n')
 
     def ImprLtxCP2(self, os):
         os.write(ltx_part("Cuadro de precios no. 2") + '\n')
         os.write(ltx_parttoc + '\n')
         os.write("\\setcounter{chapter}{0}" + '\n')
-        Capitulo.ImprLtxCP2(os,"raiz")
+        Chapter.ImprLtxCP2(os,"raiz")
         os.write("\\input{firmas}" + '\n')
 
     def ImprLtxJustPre(self, os):
-        Capitulo.ImprLtxJustPre(os,"raiz")
+        Chapter.ImprLtxJustPre(os,"raiz")
         os.write("\\input{firmas}" + '\n')
 
     def ImprLtxCP(self, os):
@@ -294,20 +294,20 @@ class Obra(cp.Capitulo):
         os.write(ltx_part("Presupuestos parciales") + '\n')
         os.write(ltx_parttoc + '\n')
         os.write("\\setcounter{chapter}{0}" + '\n')
-        Capitulo.ImprLtxPre(os,"raiz")
+        Chapter.ImprLtxPre(os,"raiz")
 
     def ImprCompLtxPreParc(self, otra, os):
         os.write(ltx_part("Presupuestos parciales") + '\n')
         os.write(ltx_parttoc + '\n')
         os.write("\\setcounter{chapter}{0}" + '\n')
         os.write(ltx_begin("landscape") + '\n')
-        Capitulo.ImprCompLtxPre(os,"raiz",otra)
+        Chapter.ImprCompLtxPre(os,"raiz",otra)
         os.write(ltx_end("landscape") + '\n')
 
     def ImprLtxResumen(self, os):
         os.write(ltx_part("Resumen de los presupuestos parciales") + '\n'
            + ltx_star_chapter("Resumen") + '\n')
-        Capitulo.ImprLtxResumen(os,"raiz")
+        Chapter.ImprLtxResumen(os,"raiz")
 
     def ImprCompLtx(self, otra, os):
     #Imprime el comparativo con otra obra.
@@ -333,11 +333,11 @@ class Obra(cp.Capitulo):
     def WriteHCalc(self, os):
     #Imprime la obra en LaTex.
         os.write(basic_types.quantitesCaption + '\n')
-        Capitulo.WriteHCalcMed(os,"raiz")
+        Chapter.WriteHCalcMed(os,"raiz")
         os.write("Cuadros de precios" + '\n')
         precios.WriteHCalc(os)
         os.write("Presupuestos parciales" + '\n')
-        Capitulo.WriteHCalcPre(os,"raiz")
+        Chapter.WriteHCalcPre(os,"raiz")
 
     def SimulaDescomp(self, origen, destino):
         precios.SimulaDescomp(origen,destino)
