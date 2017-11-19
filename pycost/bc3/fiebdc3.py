@@ -71,12 +71,12 @@ class regBC3_desc(regBC3):
 
     :ivar codigo: Entity code
     :ivar factor: Entity factor
-    :ivar rendimiento: Entity output
+    :ivar productionRate: Entity output
     '''
     def __init__(self, Str):
         self.codigo= ''
         self.factor= 1.0
-        self.rendimiento= 0.0
+        self.productionRate= 0.0
         self.decod_str_bc3(limpia_str(Str))
     def decod_bc3(self, strtk):
         ''' decode tokens.'''
@@ -87,7 +87,7 @@ class regBC3_desc(regBC3):
         if(factor==0.0): factor= 1.0 #As default factor=1.0
         tmp= strtk.get_token('\\')
         if tmp:
-            rendimiento= float(tmp)
+            productionRate= float(tmp)
         return strtk
 
     def EsCapituloUObra(self):
@@ -102,7 +102,7 @@ class regBC3_desc(regBC3):
     def Write(self, os):
         os.write("Código: " + codigo + '\n'
            + "Factor: " + Str(factor) + '\n'
-           + "Rendimiento: " + str(rendimiento) + '\n')
+           + "Production rate: " + str(productionRate) + '\n')
 
 
 class regBC3_d(regBC3_lista_reg):

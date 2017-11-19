@@ -110,6 +110,10 @@
 /usr/local/lib/python2.7/dist-packages/pycost/structure/Partida.pyc
 /usr/local/lib/python2.7/dist-packages/pycost/structure/ProtoPartida.py
 /usr/local/lib/python2.7/dist-packages/pycost/structure/ProtoPartida.pyc
+/usr/local/lib/python2.7/dist-packages/pycost/structure/unit_price_quantities_base.py
+/usr/local/lib/python2.7/dist-packages/pycost/structure/unit_price_quantities_base.pyc
+/usr/local/lib/python2.7/dist-packages/pycost/structure/unit_price_quantities.py
+/usr/local/lib/python2.7/dist-packages/pycost/structure/unit_price_quantities.pyc
 /usr/local/lib/python2.7/dist-packages/pycost/utils/basic_types.py
 /usr/local/lib/python2.7/dist-packages/pycost/utils/basic_types.pyc
 /usr/local/lib/python2.7/dist-packages/pycost/utils/concept_dict.py

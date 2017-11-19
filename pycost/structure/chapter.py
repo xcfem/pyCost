@@ -10,11 +10,11 @@ from pycost.prices import unit_price_container
 
 
 class Capitulo(bc3_entity.EntBC3):
-    def __init__(self, cod= "CapSinCod", tit= "CapSinTit", factor= 1.0, rendimiento= 1.0):
+    def __init__(self, cod= "CapSinCod", tit= "CapSinTit", factor= 1.0, productionRate= 1.0):
       super(Capitulo,self).__init__(cod,tit)
-      self.fr= fr_entity.EntFR(factor,rendimiento)
+      self.fr= fr_entity.EntFR(factor,productionRate)
       self.subcapitulos= chapter_container.Subcapitulos(self)
-      self.mediciones= measurement_container.MedsCap()
+      self.quantities= measurement_container.ChapterQuantities()
       self.precios= price_table.CuaPre() #Para precios elementales y
                              #descompuestos clasificados por capítulos.
     def TieneElementales():
@@ -27,18 +27,18 @@ class Capitulo(bc3_entity.EntBC3):
         return self.precios.GetBuscadorDescompuestos()
     def getSubcapitulos(self):
         return self.subcapitulos
-    def getMediciones(self):
-        return self.mediciones
-    def WriteMediciones(os, pos=""):
-        self.mediciones.Write(os,CodigoBC3(),pos)
+    def getQuantities(self):
+        return self.quantities
+    def WriteQuantities(os, pos=""):
+        self.quantities.Write(os,CodigoBC3(),pos)
     def WriteSubCapitulos(os, primero= "False", pos=""):
         self.subcapitulos.WriteBC3(os,primero,pos)
     def CodigoBC3(self):
         return EntBC3.CodigoBC3() + "#"
     def CuadroPrecios(self):
         return precios
-    def AgregaPartida(self, m):
-        mediciones.append(m)
+    def AppendUnitPriceQuantities(self, m):
+        self.quantities.append(m)
     def GetBC3Component(self):
         '''Return this chapter as a component.'''
         return BC3Component(self,fr)
@@ -106,16 +106,16 @@ class Capitulo(bc3_entity.EntBC3):
         subcapitulos.WritePreciosBC3(os)
     def WriteDescompBC3(self, os):
         subcapitulos.WriteDescompBC3(os,CodigoBC3())
-        mediciones.WriteDescompBC3(os,CodigoBC3())
+        self.quantities.WriteDescompBC3(os,CodigoBC3())
     def WriteBC3(self, os, primero, pos):
         WriteConceptoBC3(os,primero)
         WriteDescompBC3(os)
-        WriteMediciones(os,pos)
+        WriteQuantities(os,pos)
         WriteSubCapitulos(os,False,pos)
     def Precio(self):
-        return (subcapitulos.Precio() + mediciones.Precio()) * fr.Producto()
+        return (subcapitulos.Precio() + self.quantities.Precio()) * fr.Producto()
     def PrecioR(self):
-        retval = subcapitulos.PrecioR() + mediciones.PrecioR()
+        retval = subcapitulos.PrecioR() + self.quantities.PrecioR()
         retval*= fr.Producto()
         return retval
     def SectionLtx(self, sect):
@@ -137,15 +137,15 @@ class Capitulo(bc3_entity.EntBC3):
     def ImprCompLtxMed(self, os, sect, otro):
         if sect!="raiz":
             os.write('\\' + sect + '{' + Titulo() + '}' + '\n')
-        self.mediciones.ImprCompLtxMed(os, otro.mediciones)
+        self.quantities.ImprCompLtxMed(os, otro.quantities)
         lmsg.error("aqui 1: " + Titulo() + ' ' + subcapitulos.size() + " subcapítulos" + '\n')
         lmsg.error("aqui 2: " + otro.Titulo() + ' ' + otro.subcapitulos.size() + " subcapítulos" + '\n')
         subcapitulos.ImprCompLtxMed(os,SectionLtx(sect), otro.subcapitulos)
     def ImprLtxMed(self, os, sect):
         if sect!="raiz":
             os.write('\\' + sect + '{' + Titulo() + '}' + '\n')
-        self.mediciones.ImprLtxMed(os)
-        if self.mediciones.size():
+        self.quantities.ImprLtxMed(os)
+        if self.quantities.size():
             os.write("\\newpage" + '\n')
         self.subcapitulos.ImprLtxMed(os,SectionLtx(sect))
     def ImprLtxCP1(self, os, sect):
@@ -179,7 +179,7 @@ class Capitulo(bc3_entity.EntBC3):
     def ImprCompLtxPre(self, os, sect, otro):
         if sect!="raiz":
             os.write('\\' + sect + '{' + Titulo() + '}' + '\n')
-        self.mediciones.ImprCompLtxPre(os, Titulo(),otro.mediciones,otro.Titulo())
+        self.quantities.ImprCompLtxPre(os, Titulo(),otro.quantities,otro.Titulo())
         self.subcapitulos.ImprCompLtxPre(os,SectionLtx(sect), otro.subcapitulos)
         if self.subcapitulos:
             os.write(ltx_beg_itemize + '\n')
@@ -192,13 +192,13 @@ class Capitulo(bc3_entity.EntBC3):
             os.write(ltx_end_itemize + '\n')
             os.write("\\clearpage" + '\n')
 
-        if self.mediciones:
+        if self.quantities:
             os.write("\\newpage" + '\n')
     def ImprLtxPre(self, os, sect):
         '''Imprime presupuestos parciales.'''
         if sect!="raiz":
             os.write('\\' + sect + '{' + Titulo() + '}' + '\n')
-        self.mediciones.ImprLtxPre(os,Titulo())
+        self.quantities.ImprLtxPre(os,Titulo())
         self.subcapitulos.ImprLtxPre(os,SectionLtx(sect))
         if self.subcapitulos:
             os.write("\\noindent \\large \\textbf{Total: " + Titulo() + "} \\dotfill \\textbf{" + StrPrecioLtx() + "} \\\\ \\normalsize" + '\n')
@@ -206,18 +206,18 @@ class Capitulo(bc3_entity.EntBC3):
     def WriteHCalcMed(self, os, sect):
         if sect!="raiz":
             os.write(Titulo() + '\n')
-        mediciones.WriteHCalcMed(os)
+        self.quantities.WriteHCalcMed(os)
         subcapitulos.WriteHCalcMed(os,sect)
 
     def WriteHCalcPre(self, os, sect):
         if sect!="raiz":
             os.write(Titulo() + '\n')
-        mediciones.WriteHCalcPre(os)
+        self.quantities.WriteHCalcPre(os)
         os.write(tab + tab + tab + tab + "Total: " + tab + Titulo() + tab + StrPrecio() + '\n')
         subcapitulos.WriteHCalcPre(os,sect)
 
-    def GetInformeMediciones(self):
-        retval = mediciones.GetInformeMediciones()
-        retval.Merge(subcapitulos.GetInformeMediciones())
+    def getQuantitiesReport(self):
+        retval = self.quantities.getQuantitiesReport()
+        retval.Merge(subcapitulos.getQuantitiesReport())
         return retval
 

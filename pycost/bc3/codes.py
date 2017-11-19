@@ -33,7 +33,7 @@ class Codigos(dict):
     #Clasificación
     @staticmethod
     def EsCapituloUObra(i):
-        if(EsMedicion(i)): #Las mediciones llevan el código del capítulo al que pertenecen.
+        if(EsMedicion(i)): #Quantities have the code of their chapter.
             return False
         else:
             return es_codigo_capitulo_u_obra((i).first)
@@ -129,7 +129,7 @@ class Codigos(dict):
         return retval
 
 
-    def InsertaReg(self, str_reg, verborrea, cont_mediciones):
+    def InsertaReg(self, str_reg, verborrea, quantities_counter):
         strtk= StrTok(str_reg)
         tipo = (strtk.get_token('|'))[0]
         cod = strtk.get_token('|')
@@ -152,7 +152,7 @@ class Codigos(dict):
                     if(tipo == 'M'): #El registro corresponde a una medición.
                         if(has_char(cod,'\\')): #A veces el registro ~M es de la forma: ~M|13.3.1#\01.009|1....
                             cod= copia_desde(cod,'\\') #aquí le quitamod la parte 13.3.1#\ al código.
-                        cod= str(cont_mediciones) + '@' + cod
+                        cod= str(quantities_counter) + '@' + cod
 
                     (self)[cod]= RegBC3(); #Lo damos de alta.
                     i= find(cod)
@@ -261,13 +261,13 @@ class Codigos(dict):
         return retval
 
 
-    #not  @brief Extrae las entidades que corresponden a mediciones
-    def GetMediciones(self):
+    #not  @brief Extract quantity entities
+    def getQuantities(self):
         retval= None
         for i in self:
             if EsMedicion(i):
                 retval[(i).first]= (i).second
-        logging.info("  leídas " + retval.size() + " mediciones." + '\n')
+        logging.info(retval.size() + " quantities read." + '\n')
         return retval
 
 

@@ -1,12 +1,12 @@
 # -*- coding: utf-8 -*-
-#Mediciones.py
+#Quantities.py
 
 
 from pycost.utils import EntPyCost as epy
 from pycost.measurements import measurement_record
 
-class Mediciones(list, epy.EntPyCost):
-    '''Mediciones de una unidad de obra.'''
+class Quantities(list, epy.EntPyCost):
+    '''Quantities de una unidad de obra.'''
 
     #not  @brief Devuelve el total de unidades de la medición.
     def TotalUnidades(self):
@@ -49,7 +49,7 @@ class Mediciones(list, epy.EntPyCost):
             t+=(i).TotalR()
         return t
 
-    #| @brief Lee la lista de mediciones.
+    #| @brief Read quantities list.
     def LeeBC3(self, m):
         rm= MeasurementRecord()
         for i in m:

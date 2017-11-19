@@ -74,7 +74,7 @@ class Subcapitulos(list, epc.EntPyCost):
 
     def newChapterFromRecord(self, r):
         '''Appends a chapter.'''
-        return self.newChapter(Capitulo(r.codigo,"",r.factor,r.rendimiento))
+        return self.newChapter(Capitulo(r.codigo,"",r.factor,r.productionRate))
 
 
     def newChapters(self, descomp):
@@ -202,9 +202,9 @@ class Subcapitulos(list, epc.EntPyCost):
             (j).WriteHCalcPre(os,sect)
 
 
-    def GetInformeMediciones(self):
-        retval= InformeMediciones()
+    def getQuantitiesReport(self):
+        retval= QuantitiesReport()
         for j in self:
-            retval.Merge((j).GetInformeMediciones())
+            retval.Merge((j).getQuantitiesReport())
         return retval
 

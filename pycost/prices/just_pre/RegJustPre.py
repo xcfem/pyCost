@@ -5,7 +5,7 @@ class RegJustPre(EntCmd):
 
     def __init__(self, cod= '', rd= 0.0, ud= '', tit= '', isperc= False, unit= 0.0, b= 0.0):
         self.codigo= cod #Codigo del precio elemental.
-        self.rdto= rd #Rendimiento.
+        self.rdto= rd #Production rate.
         self.unidad= ud #Unidad de medida.
         self.titulo= tit #Descripción del precio elemental.
         self.is_percentage= isperc #True if it's a percentage.
@@ -28,7 +28,7 @@ class RegJustPre(EntCmd):
 
     def ImprLtxJustPre(self, os):
         os.write(ascii2latex(codigo) + " & "
-           + rdto.EnHumano() + " & " #Write el rendimiento
+           + rdto.EnHumano() + " & " #Write el production rate
            + ascii2latex(unidad) + " & "
            + ascii2latex(titulo) + " & ")
         if self.is_percentage:

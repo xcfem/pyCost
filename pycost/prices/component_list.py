@@ -68,7 +68,7 @@ class ComponentList(list, epc.EntPyCost):
         Lambda = CalculaLambda(objetivo)
         for i in self: #Percentages.
             if(((i).Tipo()!=mat) and not ((i).IsPercentage())):
-                i.rendimiento*= Lambda
+                i.productionRate*= Lambda
         if Lambda<0.0:
             lmsg.error("lambda = " + Lambda + " negativo" + '\n')
 

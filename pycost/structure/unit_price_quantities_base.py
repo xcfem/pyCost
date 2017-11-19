@@ -1,18 +1,15 @@
-#ProtoPartida.py
-#Algo capaz de devolver mediciones de una unidad de obra.
-
-
-
+#UnitPriceQuantitiesBase.py
+'''Something that can return the quantities for a unit price.'''
 
 from pycost.prices import unit_price_report
 from pycost.measurements import measurement_detail
 from pycost.utils import basic_types
 from pycost.utils import EntPyCost as epc
 
-class ProtoPartida(epc.EntPyCost):
+class UnitPriceQuantitiesBase(epc.EntPyCost):
 
     def __init__(self,u):
-        super(ProtoPartida,self).__init__()
+        super(UnitPriceQuantitiesBase,self).__init__()
         self.ud= u
 
     def getUnitPriceCode(self):
@@ -66,7 +63,7 @@ class ProtoPartida(epc.EntPyCost):
         os.write(ltx_ampsnd)
         ImprLtxLeyenda(os)
         os.write(ltx_fin_reg + '\n' + ltx_hline + '\n')
-        Meds().ImprCompLtx(os,otra.Meds())
+        quantities.ImprCompLtx(os,otra.quantities)
         ImprLtxPie(os,totalr_otra)
         os.write(ltx_ampsnd)
         ImprLtxPie(os,totalr_esta)
@@ -89,7 +86,7 @@ class ProtoPartida(epc.EntPyCost):
         os.write(media_linea_en_blanco)
         ImprLtxLeyenda(os)
         os.write(ltx_fin_reg + '\n' + ltx_hline + '\n')
-        Meds().ImprCompLtx(os)
+        quantities.ImprCompLtx(os)
         os.write(media_linea_en_blanco)
         ImprLtxPie(os,totalr)
         os.write(ltx_fin_reg + '\n')
@@ -149,7 +146,7 @@ class ProtoPartida(epc.EntPyCost):
            + "Ancho" + tab
            + "Alto" + tab
            + "Parcial" + '\n')
-        Meds().WriteHCalc(os)
+        quantities.WriteHCalc(os)
 
     def WriteHCalcPre(self, os):
         os.write(getUnitPriceCode() + tab
@@ -164,7 +161,7 @@ class ProtoPartida(epc.EntPyCost):
 
     def WriteBC3(self, os, cap_padre, pos):
         WriteBC3RegM(os,cap_padre,pos)
-        Meds().WriteBC3(os)
+        quantities.WriteBC3(os)
         os.write('|' + endl_msdos)
 
     @staticmethod
@@ -191,7 +188,7 @@ class ProtoPartida(epc.EntPyCost):
         os.write(ltx_fin_reg + '\n')
         ImprLtxLeyenda(os)
         os.write(ltx_fin_reg + '\n'+ ltx_hline + '\n')
-        Meds().ImprLtx(os)
+        quantities.ImprLtx(os)
         ImprLtxPie(os,totalr)
         os.write(ltx_fin_reg + '\n')
         os.write(ltx_hline + '\n')

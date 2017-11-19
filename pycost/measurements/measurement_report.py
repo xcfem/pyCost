@@ -1,10 +1,10 @@
 # -*- coding: utf-8 -*-
-#InformeMediciones.py
+#QuantitiesReport.py
 
 
 from pycost.prices import unit_price_report as iuo
 
-class InformeMediciones(dict):
+class QuantitiesReport(dict):
 
     def Inserta(self, iu):
         i = find(iu.Unidad())

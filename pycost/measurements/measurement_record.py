@@ -44,8 +44,6 @@ class MeasurementRecord(epc.EntPyCost):
     def AltoR(self):
         return ppl_dimension(alto)
 
-
-
     def Total(self):
         if(unidades==0.0) and (largo==0.0) and (ancho==0.0) and (alto==0.0):
             return 0.0

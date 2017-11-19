@@ -10,10 +10,10 @@ class CodigosObra(object):
     def __init__(self):
         self.caps= Codigos() #capitulos.
         self.elementos= Codigos()
-        self.mediciones= Codigos()
+        self.quantities= Codigos()
         self.udsobr= Codigos()
         self.resto= Codigos()
-        self.containers= [self.caps,self.elementos,self.mediciones,self.udsobr,self.resto]
+        self.containers= [self.caps,self.elementos,self.quantities,self.udsobr,self.resto]
         self.codigos_capitulos= set()
 
 
@@ -53,15 +53,15 @@ class CodigosObra(object):
     #not  @brief Devuelve una cadena de caracteres que identifica la
     #not  tabla en la que esta guardado el concepto.
     def StrTablaConcepto(self, cod):
-        if caps.find(cod) != caps.end():
+        if self.caps.find(cod) != caps.end():
             return "capitulo"
-        elif elementos.find(cod) != elementos.end():
+        elif self.elementos.find(cod) != elementos.end():
             return "elementos"
-        elif mediciones.find(cod) != mediciones.end():
-            return "mediciones"
-        elif udsobr.find(cod) != udsobr.end():
+        elif self.quantities.find(cod) != self.quantities.end():
+            return "quantities"
+        elif self.udsobr.find(cod) != udsobr.end():
             return "descompuestos"
-        elif resto.find(cod) != resto.end():
+        elif self.resto.find(cod) != resto.end():
             return "resto"
         else:
             return "ninguna"
@@ -78,7 +78,7 @@ class CodigosObra(object):
         return retval
 
 
-    #@ brief Separa los registros según sean capítulos, mediciones, descompuestos, etc.
+    #@ brief Separa los registros según sean capítulos, quantities, descompuestos, etc.
     def Trocea(self, verborrea):
         obra = resto.GetObra(); #Obtiene los registros que corresponden a la obra.
         caps.InsertaCods(obra)
@@ -116,13 +116,13 @@ class CodigosObra(object):
             reg= elimina_car(reg,'\n')
             if len(reg)>2:
                 tipo = reg[0]
-                if(tipo == 'M'): #Las mediciones las insertamos directamente.
-                    mediciones.InsertaReg(reg,verborrea,count)
+                if(tipo == 'M'): # Quantities are directly inserted.
+                    quantities.InsertaReg(reg,verborrea,count)
                 else:
                     resto.InsertaReg(reg,verborrea,count)
 
 
-        logging.info("  leídas " + mediciones.size() + " mediciones." + '\n')
+        logging.info("  " + self.quantities.size() + " quantities read." + '\n')
         Trocea(verborrea)
 
 
@@ -150,9 +150,9 @@ class CodigosObra(object):
         return retval
 
 
-    #not  @brief Devuelve los registros correspondientes a mediciones.
-    def GetDatosMeds(self):
-        return mediciones
+    #not  @brief Returns the quantities records.
+    def getQuantityData(self):
+        return self.quantities
 
 
     def BorraElementales(self, els):
@@ -168,7 +168,7 @@ class CodigosObra(object):
            + "Capítulos: " + '\n' + self.caps + '\n'
            + "Elementos:" + '\n' + '\n'
            + "Descompuestos:" + '\n' + self.udsobr + '\n'
-           + "Mediciones:" + '\n' + self.mediciones + '\n'
+           + basic_types.quantitiesCaption + ':\n' + self.quantities + '\n'
            + "Quedan: " + '\n' + self.resto + '\n')
         return os
 

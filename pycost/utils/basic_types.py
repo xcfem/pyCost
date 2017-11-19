@@ -30,6 +30,7 @@ def str_tipo(tipo):
         retval= 'sin clasificar'
     return retval
 
+quantitiesCaption= 'Mediciones'
 
 # import Currency
 # typedef Currency<3> ppl_dimension

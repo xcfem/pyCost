@@ -35,11 +35,11 @@ class Obra(cp.Capitulo):
         else:
             self.BuscaSubcapitulo(cap_padre).getSubcapitulos().newChapter(cap)
 
-    def AgregaPartida(self, cap_padre, m):
+    def AppendUnitPriceQuantities(self, cap_padre, m):
         ''' Agrega la partida que se pasa como
             parámetro al subcapítulo que indica la
             cadena de la forma 1\2\1\4.'''
-        BuscaSubcapitulo(cap_padre).AgregaPartida(m)
+        BuscaSubcapitulo(cap_padre).AppendUnitPriceQuantities(m)
 
     def LeeMedicSpre(self, iS):
         cdg= ""
@@ -82,7 +82,7 @@ class Obra(cp.Capitulo):
                               + " no encontrada" + '\n')
                     return
 
-                muo= Partida(udo)
+                muo= UnitPriceQuantities(udo)
                 while(True):
                     pos= contenido.find('|')
                     comentario = contenido.substr(0,pos)
@@ -113,7 +113,7 @@ class Obra(cp.Capitulo):
                         muo.Append(rm)
 
 
-                AgregaPartida(cod,muo)
+                AppendUnitPriceQuantities(cod,muo)
 
     def LeeSpre(self, iS):
         str= ''
@@ -136,17 +136,17 @@ class Obra(cp.Capitulo):
         self.titulo= reg.Datos().Titulo(); #Título
         subcapitulos.newChapters(reg.Datos().desc)
 
-    def LeeBC3Mediciones(self, co):
-        med= co.GetDatosMeds()
+    def readQuantitiesFromBC3(self, co):
+        med= co.getQuantityData()
         if med.size()<1:
-            lmsg.error("No se encontraron mediciones." + '\n')
+            lmsg.error("Quantities not found." + '\n')
         for i in med:
             reg = med.GetDatosMedicion(i)
             # UnitPrice *ud= precios.searchForUnitPrice(reg.CodigoUnidad())
             cod_unidad = copia_desde(reg.CodigoUnidad(),'@')
             ud= self.BuscaPrecio(cod_unidad)
             if not ud:
-                lmsg.error("Obra.LeeBC3Mediciones: No se encontró el precio: \'"
+                lmsg.error("Obra.readQuantitiesFromBC3: No se encontró el precio: \'"
                           + cod_unidad + "\'" + '\n')
                 lmsg.error("  El concepto de código: \'" + cod_unidad + "\'")
                 if not co.ExisteConcepto(cod_unidad):
@@ -157,14 +157,14 @@ class Obra(cp.Capitulo):
 
 
             else:
-                m= Partida(ud)
+                m= UnitPriceQuantities(ud)
                 m.LeeBC3(reg.Datos())
                 r=reg.Datos().Ruta()
                 c= BuscaCapituloMedicion(r)
                 if not c:
                     c= BuscaCodigo(reg.CodigoCapitulo())
                 if c:
-                    c.AgregaPartida(m)
+                    c.AppendUnitPriceQuantities(m)
                 else:
                     lmsg.error("No se encontró el capítulo: " + reg.CodigoCapitulo() + '\n')
 
@@ -210,9 +210,9 @@ class Obra(cp.Capitulo):
             pendientes.insert(tmp.begin(),tmp.end())
             logging.info("hecho." + '\n')
 
-        logging.info("Leyendo mediciones...")
+        logging.info("Reading quantities...")
 
-        LeeBC3Mediciones(co)
+        readQuantitiesFromBC3(co)
         logging.info("hecho." + '\n')
 
     def ImprLtxPresEjecMat(self, os):
@@ -247,7 +247,7 @@ class Obra(cp.Capitulo):
         WritePreciosBC3(os)
         WriteConceptoBC3(os)
         WriteDescompBC3(os)
-        WriteMediciones(os,pos)
+        WriteQuantities(os,pos)
         WriteSubCapitulos(os,True,pos)
 
 
@@ -257,12 +257,12 @@ class Obra(cp.Capitulo):
         ImprLtxPresContrata(os)
 
     def ImprLtxMed(self, os):
-        os.write(ltx_part("Mediciones") + '\n')
+        os.write(ltx_part(basic_types.quantitesCaption) + '\n')
         os.write(ltx_parttoc + '\n')
         Capitulo.ImprLtxMed(os,"raiz")
 
     def ImprCompLtxMed(self, otra, os):
-        os.write(ltx_part("Mediciones") + '\n')
+        os.write(ltx_part(basic_types.quantitesCaption) + '\n')
         os.write(ltx_parttoc + '\n')
         os.write(ltx_begin("landscape") + '\n')
         Capitulo.ImprCompLtxMed(os,"raiz",otra)
@@ -319,7 +319,7 @@ class Obra(cp.Capitulo):
 
     def ImprLtx(self, os):
     #Imprime la obra en LaTex.
-        ImprLtxMed(os); #Mediciones.
+        ImprLtxMed(os); #Quantities.
         ImprLtxCP(os); #Cuadros de precios.
         ImprLtxPreParc(os); #Presupuestos parciales.
         ImprLtxResumen(os); #Resument presup. parciales.
@@ -327,12 +327,12 @@ class Obra(cp.Capitulo):
 
     def ImprLtxInformeObra(self, os):
     #Imprime en LaTeX el informe de obra.
-        im = GetInformeMediciones()
+        im = getQuantitiesReport()
         im.ImprLtx(os)
 
     def WriteHCalc(self, os):
     #Imprime la obra en LaTex.
-        os.write("Mediciones" + '\n')
+        os.write(basic_types.quantitesCaption + '\n')
         Capitulo.WriteHCalcMed(os,"raiz")
         os.write("Cuadros de precios" + '\n')
         precios.WriteHCalc(os)

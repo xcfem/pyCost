@@ -9,26 +9,27 @@ def rdto2str(d):
 
 
 class EntFR(epc.EntPyCost):
-    '''Entidad que tiene factor y rendimiento.'''
+    '''Entity that has a factor and production rate.'''
     def __init__(self, f= 1.0, r=0.0):
         self.factor= f
-        self.rendimiento= r
-    def Factor(self):
+        self.productionRate= r
+        
+    def getFactor(self):
         return self.factor
 
-    def Rendimiento(self):
-        return self.rendimiento
+    def getProductionRate(self):
+        return self.productionRate
 
     def Producto(self):
-        return factor*rendimiento
+        return self.factor*self.productionRate
 
     def ProductoR(self):
-        return ppl_precio4(factor*rendimiento)
+        return ppl_precio4(self.factor*self.productionRate)
 
     def WriteSpre(self, os):
         os.write(rdto2str(Producto()) + '|')
 
     def WriteBC3(self, os):
-        os.write(factor + '\\' + rdto2str(rendimiento) + '\\')
+        os.write(factor + '\\' + rdto2str(productionRate) + '\\')
 
 

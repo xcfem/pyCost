@@ -42,13 +42,13 @@ class UnitPrice(ms.Measurable):
             components= GetSindesco(r.Datos().Precio(),bp)
         return error
 
-    def GetSindesco(self, rendimiento, bp):
+    def GetSindesco(self, productionRate, bp):
         '''Para unidades de obra sin descomposición de las que
            sólo se conoce el precio.'''
         retval= ComponentList()
         be= bp["elementos"]
         ent= be.Busca("SINDESCO")
-        retval.append(BC3Component(ent,1.0,rendimiento))
+        retval.append(BC3Component(ent,1.0,productionRate))
         return retval
 
     @staticmethod
@@ -69,7 +69,7 @@ class UnitPrice(ms.Measurable):
                 continue
 
             else:
-                retval.append(BC3Component(ent,(i).factor,(i).rendimiento))
+                retval.append(BC3Component(ent,(i).factor,(i).productionRate))
                 error= False
 
 

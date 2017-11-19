@@ -1,17 +1,17 @@
 # -*- coding: utf-8 -*-
-#MedsCap.py
-#Mediciones de un capítulo.
+#ChapterQuantities.py
+#Quantities de un capítulo.
 
 
 
 
-from pycost.structure import Partida
+from pycost.structure import unit_price_quantities
 from pycost.measurements import measurement_report
 #import Pieza
 from pycost.utils import EntPyCost as epc
 
 
-class MedsCap(list, epc.EntPyCost):
+class ChapterQuantities(list, epc.EntPyCost):
 
     def StrPrecioLtx(self):
         return self.PrecioR().EnHumano()
@@ -136,8 +136,8 @@ class MedsCap(list, epc.EntPyCost):
         for i in self:
             (i).WriteHCalcPre(os)
 
-    def GetInformeMediciones(self):
-        retval= InformeMediciones()
+    def getQuantitiesReport(self):
+        retval= QuantitiesReport()
         for i in self:
             retval.Inserta((i).Informe())
         return retval
