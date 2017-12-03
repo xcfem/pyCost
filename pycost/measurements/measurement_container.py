@@ -43,7 +43,7 @@ class ChapterQuantities(list, epc.EntPyCost):
              + cod + '|')
             for i in self:
                 os.write((i).getUnitPriceCode() + "\\1\\" #factor 1
-                   + (i).Total() + '\\')
+                   + (i).getTotal() + '\\')
             os.write('|' + endl_msdos)
 
     def ImprCompLtxMed(self, os, otra):

@@ -319,11 +319,11 @@ class Obra(cp.Chapter):
 
     def ImprLtx(self, os):
     #Imprime la obra en LaTex.
-        ImprLtxMed(os); #Quantities.
-        ImprLtxCP(os); #Cuadros de precios.
-        ImprLtxPreParc(os); #Presupuestos parciales.
-        ImprLtxResumen(os); #Resument presup. parciales.
-        ImprLtxPresGen(os); #Presupuestos generales.
+        self.ImprLtxMed(os); #Quantities.
+        self.ImprLtxCP(os); #Cuadros de precios.
+        self.ImprLtxPreParc(os); #Presupuestos parciales.
+        self.ImprLtxResumen(os); #Resument presup. parciales.
+        self.ImprLtxPresGen(os); #Presupuestos generales.
 
     def ImprLtxInformeObra(self, os):
     #Imprime en LaTeX el informe de obra.

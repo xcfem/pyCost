@@ -7,46 +7,44 @@ from pycost.measurements import measurement_record
 
 class Quantities(list, epy.EntPyCost):
     '''Quantities de una unidad de obra.'''
-
-    #not  @brief Devuelve el total de unidades de la medición.
-    def TotalUnidades(self):
+    def getTotalUnits(self):
+        '''Return the total number of units.'''
         t = 0.0
         for i in self:
             t+=(i).Unidades()
         return t
 
-    #not  @brief Devuelve el total del largo de la medición.
-    def TotalLargo(self):
+    def getTotalLength(self):
+        '''Return the total length.'''
         t = 0.0
         for i in self:
             t+=(i).Unidades()*(i).Largo()
         return t
 
-    #not  @brief Devuelve el total del an.pyo de la medición.
-    def TotalAncho(self):
+    def getTotalWidth(self):
+        '''Return the total width.'''
         t = 0.0
         for i in self:
             t+=(i).Unidades()*(i).Ancho()
         return t
 
-
-    #not  @brief Devuelve el total del alto de la medición.
-    def TotalAlto(self):
+    def getTotalHeight(self):
+        '''Return the total height.'''
         t = 0.0
         for i in self:
             t+=(i).Unidades()*(i).Ancho()
         return t
 
-    def Total(self):
+    def getTotal(self):
         t = 0.0
         for i in self:
-            t+=(i).Total()
+            t+=(i).getTotal()
         return t
 
-    def TotalR(self):
+    def getTotalR(self):
         t = 0.0
         for i in self:
-            t+=(i).TotalR()
+            t+=(i).getTotalR()
         return t
 
     #| @brief Read quantities list.

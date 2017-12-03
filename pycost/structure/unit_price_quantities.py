@@ -7,19 +7,20 @@ import unit_price_quantities_base as ptp
 from pycost.measurements import measurement_detail as m
 
 class UnitPriceQuantities(ptp.UnitPriceQuantitiesBase):
-    '''UnitPriceQuantities del presupuesto correspondiente a una unidad de obra.'''
+    '''UnitPriceQuantities del presupuesto correspondiente 
+       a una unidad de obra.'''
 
     def __init__(self, u= None):
         super(UnitPriceQuantities,self).__init__(u)
-        quantities= m.Quantities()
+        self.quantities= m.Quantities()
 
     def Copia(self):
         return UnitPriceQuantities(self)
 
-    def Total(self):
-        return self.quantities.Total()
+    def getTotal(self):
+        return self.quantities.getTotal()
 
-    def TotalR(self):
+    def getTotalR(self):
         return self.quantities.TotalR()
 
     def LeeBC3(self, m):

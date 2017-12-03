@@ -23,7 +23,7 @@ class ListaRegJustPre(list):
         base= ppl_precio(b,3)
         for i in self:
             (i).SetBase(base)
-            base+= (i).Total()
+            base+= (i).getTotal()
 
 
     def ImprLtxJust(self, os):
@@ -34,7 +34,7 @@ class ListaRegJustPre(list):
            + " & & " + Total().EnHumano() + ltx_fin_reg + '\n' + ltx_fin_reg + '\n')
 
     def ImprLtxCP2(self, os):
-        total= self.Total()
+        total= self.getTotal()
         if total>ppl_precio3(0.0):
             os.write(" & & " + StrTipo()
                + " & " + total.EnHumano() + ltx_fin_reg + '\n')
@@ -44,10 +44,10 @@ class ListaRegJustPre(list):
         for i in self:
             (i).ImprLtxCP2(os)
 
-    def Total(self):
+    def getTotal(self):
         retval= ppl_precio(0.0,3)
         for i in self:
-            retval+= (i).Total()
+            retval+= (i).getTotal()
         return retval
 
 

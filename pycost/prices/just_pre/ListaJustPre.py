@@ -22,46 +22,46 @@ class ListaJustPre(object):
         percentages.SetBase(base)
     
     def Base(self):
-        retval= ppl_precio(mano_de_obra.Total(),3)
-        retval+= materiales.Total()
-        retval+= maquinaria.Total()
-        retval+= otros.Total()
+        retval= ppl_precio(mano_de_obra.getTotal(),3)
+        retval+= materiales.getTotal()
+        retval+= maquinaria.getTotal()
+        retval+= otros.getTotal()
         return retval
 
-    def Total(self):
+    def getTotal(self):
         retval= ppl_precio(Base(),3)
-        retval+= percentages.Total()
+        retval+= percentages.getTotal()
         return retval
 
     def Redondeo(self):
-        #return -Total().Redondeo()
+        #return -self.getTotal().Redondeo()
         #XXX Redondeo para 2 decimales.
-        tmp = Total()
+        tmp= self.getTotal()
         tmp*= 100.0
         rnd= ppl_precio(tmp.Redondeo(),3)
         rnd/=100
         return rnd
 
-    def TotalRnd(self):
-        return Total() + Redondeo()
+    def getTotalRnd(self):
+        return self.getTotal() + Redondeo()
 
-    def TotalCP1(self):
-        return ppl_precio2(double(TotalRnd()))
+    def getTotalCP1(self):
+        return ppl_precio2(double(self.getTotalRnd()))
 
     def StrPrecioLtx(self):
-        return TotalCP1().EnHumano()
+        return self.getTotalCP1().EnHumano()
 
     def StrPrecioEnLetra(self, genero):
-        return TotalCP1().EnLetra(genero)
+        return self.getTotalCP1().EnLetra(genero)
 
     def size(self):
         return mano_de_obra.size()+materiales.size()+maquinaria.size()+otros.size()+percentages.size()
 
 
     def ImprLtxJustPre(self, os):
-        total = Total()
-        rnd = Redondeo()
-        total_rnd = TotalRnd()
+        total= self.getTotal()
+        rnd= self.Redondeo()
+        total_rnd= self.getTotalRnd()
         if size()<2:
             os.write(ltx_multicolumn(ltx_datos_multicolumn("4","r","Sin descomposición"))
                + " & & " + ltx_fin_reg + '\n' + ltx_fin_reg + '\n')
@@ -92,9 +92,9 @@ class ListaJustPre(object):
 
 
     def ImprLtxCP2(self, os):
-        total = Total()
-        rnd = Redondeo()
-        total_rnd = TotalRnd()
+        total= self.getTotal()
+        rnd= Redondeo()
+        total_rnd= self.getTotalRnd()
         if size()<2:
             os.write(" & & " + "Sin descomposición"
                + " & " + ltx_fin_reg + '\n')

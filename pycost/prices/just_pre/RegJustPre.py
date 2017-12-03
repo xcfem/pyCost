@@ -21,7 +21,7 @@ class RegJustPre(EntCmd):
     def SetBase(self, b):
         sobre= b
 
-    def Total(self):
+    def getTotal(self):
         retval= ppl_precio(self.base(),3)
         retval*= rdto
         return retval
@@ -35,12 +35,12 @@ class RegJustPre(EntCmd):
             os.write(unitario.EnHumano() + ltx_porciento); #Percentage
         else:
             os.write(unitario.EnHumano()) #Precio unitario
-        os.write(" & " + Total().EnHumano() + ltx_fin_reg + '\n')
+        os.write(" & " + self.getTotal().EnHumano() + ltx_fin_reg + '\n')
 
 
     def ImprLtxCP2(self, os):
         os.write(" & & " + ascii2latex(titulo) + " & ")
-        if(self.is_percentage): os.write(Total().EnHumano()) #Total.
+        if(self.is_percentage): os.write(self.getTotal().EnHumano()) #Total.
         os.write(ltx_fin_reg + '\n')
 
 

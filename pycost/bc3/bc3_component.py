@@ -73,12 +73,12 @@ class BC3Component(fr_entity.EntFR):
     def ImprLtxJustPre(self, os, sobre):
         r= RegJustPre(GetRegJustPre(sobre))
         r.ImprLtxJustPre(os)
-        return r.Total()
+        return r.getTotal()
 
 
     def ImprLtxCP2(self, os, sobre):
         r= RegJustPre(GetRegJustPre(sobre))
         r.ImprLtxCP2(os)
-        return r.Total()
+        return r.getTotal()
 
 

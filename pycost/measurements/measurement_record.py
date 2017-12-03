@@ -36,27 +36,27 @@ class MeasurementRecord(epc.EntPyCost):
         return ppl_dimension(unidades)
 
     def LargoR(self):
-        return ppl_dimension(largo)
+        return ppl_dimension(self.largo)
 
     def AnchoR(self):
-        return ppl_dimension(ancho)
+        return ppl_dimension(self.ancho)
 
     def AltoR(self):
-        return ppl_dimension(alto)
+        return ppl_dimension(self.alto)
 
-    def Total(self):
-        if(unidades==0.0) and (largo==0.0) and (ancho==0.0) and (alto==0.0):
+    def getTotal(self):
+        if(self.unidades==0.0) and (self.largo==0.0) and (self.ancho==0.0) and (self.alto==0.0):
             return 0.0
         retval = 1.0
-        if(unidades!=0.0): retval*= unidades
-        if(largo!=0.0): retval*= largo
-        if(ancho!=0): retval*= ancho
-        if(alto!=0): retval*= alto
+        if(self.unidades!=0.0): retval*= self.unidades
+        if(self.largo!=0.0): retval*= self.largo
+        if(self.ancho!=0): retval*= self.ancho
+        if(self.alto!=0): retval*= self.alto
         return retval
 
 
-    def TotalR(self):
-        if(unidades==0.0) and (largo==0.0) and (ancho==0.0) and (alto==0.0):
+    def getTotalR(self):
+        if(self.unidades==0.0) and (self.largo==0.0) and (self.ancho==0.0) and (self.alto==0.0):
             return ppl_dimension(0.0)
         retval= ppl_dimension(1.0)
         u = self.UnidadesR()
@@ -71,30 +71,30 @@ class MeasurementRecord(epc.EntPyCost):
         return retval
 
     def LeeBC3(self, m):
-        comentario= m.med.comentario
-        unidades= m.med.unidades
-        largo= m.med.largo
-        ancho= m.med.ancho
-        alto= m.med.alto
+        self.comentario= m.med.comentario
+        self.unidades= m.med.unidades
+        self.largo= m.med.largo
+        self.ancho= m.med.ancho
+        self.alto= m.med.alto
 
     def WriteBC3(self, os):
-        os.write('\\' + comentario + '\\'
-           + unidades + '\\'
-           + largo + '\\'
-           + ancho + '\\'
-           + alto + '\\')
+        os.write('\\' + self.comentario + '\\'
+           + self.unidades + '\\'
+           + self.largo + '\\'
+           + self.ancho + '\\'
+           + self.alto + '\\')
 
 
     def Write(self, os):
-        os.write(comentario + ','
-           + unidades + ','
-           + largo + ',' + ancho + ',' + alto + '\n')
+        os.write(self.comentario + ','
+           + self.unidades + ','
+           + self.largo + ',' + self.ancho + ',' + self.alto + '\n')
 
 
     #not  @brief Imprime la medición en Latex.
     def ImprLtx(self, os, ancho):
 
-        os.write(ltx_multicolumn(ltx_datos_multicolumn("1",ancho,ascii2latex(comentario))) + ltx_ampsnd)
+        os.write(ltx_multicolumn(ltx_datos_multicolumn("1",ancho,ascii2latex(self.comentario))) + ltx_ampsnd)
         zero= ppl_dimension(0.0);
         if (self.UnidadesR()!=zero): str_u= UnidadesR().EnHumano()
         if (self.LargoR()!=zero): str_l= LargoR().EnHumano()
@@ -108,16 +108,16 @@ class MeasurementRecord(epc.EntPyCost):
 
 
     def WriteHCalc(self, os):
-        os.write('"' + comentario + '"' + tab)
-        if(unidades!=0.0): os.write(unidades)
+        os.write('"' + self.comentario + '"' + tab)
+        if(self.unidades!=0.0): os.write(self.unidades)
         os.write(tab)
-        if(largo!=0.0): os.write(largo)
+        if(self.largo!=0.0): os.write(self.largo)
         os.write(tab)
-        if(ancho!=0.0): os.write(ancho)
+        if(self.ancho!=0.0): os.write(self.ancho)
         os.write(tab)
-        if(alto!=0.0): os.write(alto)
+        if(self.alto!=0.0): os.write(self.alto)
         os.write(tab)
-        total= self.Total()
+        total= self.getTotal()
         if(total!=0.0): os.write(total)
         os.write('\n')
 

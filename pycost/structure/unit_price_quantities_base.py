@@ -34,7 +34,7 @@ class UnitPriceQuantitiesBase(epc.EntPyCost):
         return self.ud.StrPrecioLtx()
 
     def Precio(self):
-        return self.Total()*ud.Precio()
+        return self.getTotal()*ud.Precio()
 
     def PrecioR(self):
         return ppl_precio(float(self.TotalR())*float(self.PrecioRUd()))
