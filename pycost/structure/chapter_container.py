@@ -18,20 +18,20 @@ class Subcapitulos(list, epc.EntPyCost):
         return self
 
     def NumDescompuestos(self):
-        nd = 0
+        nd= 0
         for j in self:
             nd+= (j).NumDescompuestos()
         return nd
 
     def Precio(self):
-        p = 0.0
+        p= 0.0
         for j in self:
             p+= (j).Precio()
         return p
 
 
     def PrecioR(self):
-        p = 0.0
+        p= 0.0
         for j in self:
             p+= (j).PrecioR()
         return p
@@ -79,7 +79,7 @@ class Subcapitulos(list, epc.EntPyCost):
 
     def newChapters(self, descomp):
         '''Append the chapters from the records on the container.'''
-        sz = descomp.size()
+        sz= descomp.size()
         for i in self:
             self.newChapter(descomp[i])
 
@@ -95,14 +95,14 @@ class Subcapitulos(list, epc.EntPyCost):
         for i in self:
             j= sc.findChapter(i.Codigo()); #sc.find(i.Codigo()); #Código
             if j:
-                reg = sc.getChapterData(j)
+                reg= sc.getChapterData(j)
                 if i:
                     if verborrea>4:
-                        logging.info("Cargando el subcapítulo: '" + reg.Datos().Titulo() + "'\n")
-                    i.titulo= reg.Datos().Titulo(); #Título
+                        logging.info("Cargando el subcapítulo: '" + reg.Datos().getTitle() + "'\n")
+                    i.titulo= reg.Datos().getTitle(); #Título
 
                     #Lee los elementales del capítulo.
-                    elementos_capitulo = co.FiltraElementales(reg.Datos().desc)
+                    elementos_capitulo= co.FiltraElementales(reg.Datos().desc)
                     i.LeeBC3Elementales(elementos_capitulo)
                     if verborrea>4:
                         logging.info("  Cargados " + elementos_capitulo.size()
@@ -138,9 +138,9 @@ class Subcapitulos(list, epc.EntPyCost):
 
 
     def WriteBC3(self, os, primero, pos):
-        conta = 1
+        conta= 1
         for i in self:
-            nueva_pos = pos+num2str(conta,0)+'\\'
+            nueva_pos= pos+num2str(conta,0)+'\\'
             (i).WriteBC3(os,primero,nueva_pos)
             conta+=1
 
@@ -153,9 +153,9 @@ class Subcapitulos(list, epc.EntPyCost):
             j= otro[k]
             i.ImprCompLtxMed(os,sect,j)
 
-    def ImprLtxMed(self, os, sect):
+    def writeQuantitiesIntoLatexDocument(self, doc, sect):
         for j in self:
-            (j).ImprLtxMed(os,sect)
+            (j).writeQuantitiesIntoLatexDocument(doc,sect)
 
     def ImprLtxCP1(self, os, sect):
         for j in self:
@@ -172,10 +172,10 @@ class Subcapitulos(list, epc.EntPyCost):
 
     def ImprLtxResumen(self, os, sect, recurre):
         if len(self):
-            os.write("\\begin{itemize}" + '\n')
+            doc.append("\\begin{itemize}" + '\n')
             for j in self:
                 (j).ImprLtxResumen(os,sect,recurre)
-            os.write("\\end{itemize}" + '\n')
+            doc.append("\\end{itemize}" + '\n')
 
     def ImprCompLtxPre(self, os, sect, otro):
         '''Suponemos que ambos capítulos tienen el 

@@ -14,8 +14,8 @@ def es_codigo_obra(c):
 
 def es_codigo_capitulo(c):
     '''Returns true if c is a chapter code.'''
-    retval = False
-    sz = len(c)
+    retval= False
+    sz= len(c)
     if es_codigo_capitulo_u_obra(c):
         if sz<2:
             retval= True; #Chapter without name.
@@ -81,7 +81,7 @@ class regBC3_desc(regBC3):
     def decod_bc3(self, strtk):
         ''' decode tokens.'''
         codigo= strtk.get_token('\\')
-        tmp = strtk.get_token('\\')
+        tmp= strtk.get_token('\\')
         if tmp:
             factor= boost.lexical_cast<float>(tmp)
         if(factor==0.0): factor= 1.0 #As default factor=1.0
@@ -117,7 +117,7 @@ class regBC3_d(regBC3_lista_reg):
         return strtk
     def isChapter(r, nombres_capitulo):
         '''Return true if the records is a chapter.'''
-        retval = r.isChapter()
+        retval= r.isChapter()
         if not retval:
             retval= (nombres_capitulo.find(r.codigo+'#')!= nombres_capitulo.end())
         return retval
@@ -155,7 +155,7 @@ class MedArq(regBC3):
         self.ancho= 1
         self.alto= 1
         self.comentario= strtk.get_token('\\')
-        tmp = strtk.get_token('\\')
+        tmp= strtk.get_token('\\')
         if not tmp.empty():
             unidades= float(tmp)
         tmp= strtk.get_token('\\')
@@ -191,7 +191,7 @@ class regBC3_linea_med(regBC3):
         self.med= MedArq()
         self.decod_str_bc3(limpia_str(Str))
     def decod_bc3(strtk):
-        tmp = strtk.get_token('\\')
+        tmp= strtk.get_token('\\')
         if tmp:
             tipo= int(tmp)
         return med.decod_bc3(strtk)
@@ -236,12 +236,12 @@ class regBC3_m(regBC3):
            La cadena que se pasa es la que queda a la derecha
            de ~M|
         '''
-        strtk_ruta = strtk.get_token('|')
+        strtk_ruta= strtk.get_token('|')
         ruta.decod_bc3(strtk_ruta)
-        tmp = strtk.get_token('|')
+        tmp= strtk.get_token('|')
         if tmp:
             med_total= float(tmp)
-        strtk_lista_med = strtk.get_token('|')
+        strtk_lista_med= strtk.get_token('|')
         lista_med.decod_bc3(strtk_lista_med)
         return strtk
     def Write(self,os):
@@ -262,7 +262,7 @@ class regBC3_c(regBC3):
         '''Decodifica la cadena Str'''
         self.unidad= strtk.get_token('|')
         self.resumen= strtk.get_token('|')
-        self.tmp = strtk.get_token('|')
+        self.tmp= strtk.get_token('|')
         if tmp:
             self.precio= float(tmp)
         self.fecha= strtk.get_token('|')
@@ -296,7 +296,7 @@ class regBC3_elemento(object):
       self.ccpto= c #Concepto.
       self.txt= t #Texto.
 
-    def Titulo(self):
+    def getTitle(self):
         return self.ccpto.resumen
 
     def Unidad(self):

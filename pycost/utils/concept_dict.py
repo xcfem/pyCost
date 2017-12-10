@@ -24,12 +24,10 @@ class ConceptDict(epy.EntPyCost):
         lmsg.error("Concepto: " + cod + " no encontrado" + '\n')
 
     def Busca(self,cod):
-        i = self.claves.find(cod)
-        if not i:
-            #err_no_encontrado(cod)
-            return None
-        else:
-          return self.claves[i]
+        retval= None
+        if cod in self.claves:
+          retval= self.claves[cod]
+        return retval
 
     def WriteBC3(os):
         for j in self.keys:

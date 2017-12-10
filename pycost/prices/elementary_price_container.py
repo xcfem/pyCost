@@ -20,24 +20,24 @@ class ElementaryPrices(concept_dict.ConceptDict):
         super(ElementaryPrices,self).__init__()
         
     @staticmethod
-    def ImprLtxCabecera(self, tipo, os):
+    def printLatexHeader(self, tipo, os):
         str_tipo= basic_types.str_tipo(tipo)
 
-        os.write(ltx_begin("center") + '\n')
-        os.write(ltx_large + " Precios elementales de " + str_tipo + ' '
-           + ltx_normalsize + '\n')
-        os.write(ltx_end("center") + '\n')
-        os.write(ltx_small + '\n')
-        os.write("\\begin{longtable}{|l|l|p{4cm}|r|}" + '\n'
-           + ltx_hline + '\n'
+        doc.append(pylatex_utils.ltx_begin("center") + '\n')
+        doc.append(pylatex_utils.ltx_large + " Precios elementales de " + str_tipo + ' '
+           + pylatex_utils.ltx_normalsize + '\n')
+        doc.append(pylatex_utils.ltx_end("center") + '\n')
+        doc.append(pylatex_utils.SmallCommand())
+        doc.append("\\begin{longtable}{|l|l|p{4cm}|r|}" + '\n'
+           + pylatex_utils.ltx_hline + '\n'
            + "Código & Ud. & Denominación & Precio\\\\" + '\n'
-           + ltx_hline + '\n'
-           + ltx_endhead + '\n'
-           + ltx_hline + '\n'
+           + pylatex_utils.ltx_hline + '\n'
+           + pylatex_utils.ltx_endhead + '\n'
+           + pylatex_utils.ltx_hline + '\n'
            + "\\multicolumn{" + 4 + "}{|r|}{../..}\\\\\\hline" + '\n'
-           + ltx_endfoot + '\n'
-           + ltx_hline + '\n'
-           + ltx_endlastfoot + '\n')
+           + pylatex_utils.ltx_endfoot + '\n'
+           + pylatex_utils.ltx_hline + '\n'
+           + pylatex_utils.ltx_endlastfoot + '\n')
 
 
     def LeeMdoSpre(self, iS):
@@ -56,7 +56,7 @@ class ElementaryPrices(concept_dict.ConceptDict):
                 precios= ''
                 getline(iS,precios,'\n')
                 pre= ''
-                pos = precios.find('|')
+                pos= precios.find('|')
                 if pos<len(precios):
                     pre= precios.substr(0,pos)
                 else:
@@ -85,7 +85,7 @@ class ElementaryPrices(concept_dict.ConceptDict):
                 precios= ''
                 getline(iS,precios,'\n')
                 pre= ''
-                pos = precios.find('|')
+                pos= precios.find('|')
                 if pos<1000:
                     pre= precios.substr(0,pos)
                 else:
@@ -114,7 +114,7 @@ class ElementaryPrices(concept_dict.ConceptDict):
                 precios= ''
                 getline(iS,precios,'\n')
                 pre= ''
-                pos = precios.find('|')
+                pos= precios.find('|')
                 if pos<1000:
                     pre= precios.substr(0,pos)
                 else:
@@ -171,7 +171,7 @@ class ElementaryPrices(concept_dict.ConceptDict):
                 el.LeeBC3(els.GetDatosElementaryPrice(i))
                 Append(el)
 
-            num_agregados = len(self)-sz_inicial
+            num_agregados= len(self)-sz_inicial
             if num_agregados != els.size():
                 lmsg.error("¡Errornot , pasaron: " + els.size()
                           + " precios elementales y se cargaron "
@@ -181,20 +181,20 @@ class ElementaryPrices(concept_dict.ConceptDict):
 
 
     def ImprLtxTipo(self, tipo, os):
-        ImprLtxCabecera(tipo,os)
+        printLatexHeader(tipo,os)
         el= None
         for i in self:
             el= ((i).second)
             if el.Tipo() == tipo:
                 el.ImprLtx(os)
 
-        os.write("\\end{longtable}" + '\n')
-        os.write(ltx_normalsize + '\n')
+        doc.append("\\end{longtable}" + '\n')
+        doc.append(pylatex_utils.ltx_normalsize + '\n')
 
     def ImprLtx(self, os):
         ImprLtxTipo(mdo,os)
-        os.write(ltx_newpage + '\n')
+        doc.append(pylatex_utils.ltx_newpage + '\n')
         ImprLtxTipo(maq,os)
-        os.write(ltx_newpage + '\n')
+        doc.append(pylatex_utils.ltx_newpage + '\n')
         ImprLtxTipo(mat,os)
 

@@ -7,6 +7,10 @@ from pycost.bc3 import codigos_obra as cod
 from pycost.bc3 import bc3_entity
 from pycost.prices import elementary_price
 
+import pylatex
+from pycost.utils import pylatex_utils
+from pycost.utils import basic_types
+
 class Obra(cp.Chapter):
 
     def nombre_clase(self):
@@ -22,6 +26,12 @@ class Obra(cp.Chapter):
         elem= elementary_price.ElementaryPrice("SINDESCO","Sin descomposición","",1.0,bc3_entity.mat)
         self.precios.Elementales().Append(elem)
         self.percentages= pc.Percentages()
+
+    def BuscaPrecio(self, cod):
+        retval= super(Obra,self).BuscaPrecio(cod)
+        if not retval:
+            print 'unit price: '+ cod + ' not found.'
+        return retval
 
     def CodigoBC3(self):
         return Chapter.CodigoBC3() + "#"
@@ -53,28 +63,28 @@ class Obra(cp.Chapter):
             getline(iS,lista,'|')
             if(lista==""): break
             if(lista!=cdg): #capitulo nuevo
-                cod = replace(lista,'/','_')
+                cod= replace(lista,'/','_')
                 tit= ''
                 getline(iS,tit,'\n')
                 tit= q_blancos(tit.substr(0,len(tit)-1))
                 lmsg.error("Cargando capítulo: " + cod + ' ' + tit + '*' + '\n')
-                cp = Chapter(cod,tit)
-                ruta = replace(lista,'/','\\')
-                pos = ruta.find('\\')
+                cp= Chapter(cod,tit)
+                ruta= replace(lista,'/','\\')
+                pos= ruta.find('\\')
                 if(pos>len(ruta)): #Es capítulo raiz.
                     newChapter("",cp)
                 else: #es capitulo.pyijo.
-                    pos2 = ruta.rfind('\\')
+                    pos2= ruta.rfind('\\')
                     ruta= ruta.substr(0,pos2)
                     newChapter(ruta,cp)
 
                 cdg= lista
             else: #Medicion
-                cod = replace(lista,'/','\\')
+                cod= replace(lista,'/','\\')
                 contenido= ''
                 getline(iS,contenido,'\n')
-                pos = contenido.find('|')
-                cod_ud_obra = contenido.substr(0,pos)
+                pos= contenido.find('|')
+                cod_ud_obra= contenido.substr(0,pos)
                 contenido= contenido.substr(pos+1,len(contenido))
                 udo= precios.searchForUnitPrice(cod_ud_obra)
                 if not udo:
@@ -85,20 +95,20 @@ class Obra(cp.Chapter):
                 muo= UnitPriceQuantities(udo)
                 while(True):
                     pos= contenido.find('|')
-                    comentario = contenido.substr(0,pos)
+                    comentario= contenido.substr(0,pos)
                     contenido= contenido.substr(pos+1,len(contenido))
                     pos= contenido.find('|')
-                    uds = contenido.substr(0,pos)
+                    uds= contenido.substr(0,pos)
                     contenido= contenido.substr(pos+1,len(contenido))
                     pos= contenido.find('|')
-                    lng = contenido.substr(0,pos)
+                    lng= contenido.substr(0,pos)
                     contenido= contenido.substr(pos+1,len(contenido))
                     pos= contenido.find('|')
-                    lat = contenido.substr(0,pos)
+                    lat= contenido.substr(0,pos)
                     contenido= contenido.substr(pos+1,len(contenido))
 
                     pos= contenido.find('|')
-                    alt = ""
+                    alt= ""
                     if pos>len(contenido):
                         pos= contenido.find('\n')
                         alt= contenido.substr(0,pos-1)
@@ -131,9 +141,9 @@ class Obra(cp.Chapter):
     def LeeBC3DatosObra(self, obra):
         if obra.size()<1:
             lmsg.error("No se encontró la obra." + '\n')
-        reg = obra.getChapterData(obra.begin())
+        reg= obra.getChapterData(obra.begin())
         self.codigo= reg.Codigo(); #Código
-        self.titulo= reg.Datos().Titulo(); #Título
+        self.titulo= reg.Datos().getTitle(); #Título
         subcapitulos.newChapters(reg.Datos().desc)
 
     def readQuantitiesFromBC3(self, co):
@@ -141,9 +151,9 @@ class Obra(cp.Chapter):
         if med.size()<1:
             lmsg.error("Quantities not found." + '\n')
         for i in med:
-            reg = med.GetDatosMedicion(i)
+            reg= med.GetDatosMedicion(i)
             # UnitPrice *ud= precios.searchForUnitPrice(reg.CodigoUnidad())
-            cod_unidad = copia_desde(reg.CodigoUnidad(),'@')
+            cod_unidad= copia_desde(reg.CodigoUnidad(),'@')
             ud= self.BuscaPrecio(cod_unidad)
             if not ud:
                 lmsg.error("Obra.readQuantitiesFromBC3: No se encontró el precio: \'"
@@ -216,30 +226,30 @@ class Obra(cp.Chapter):
         logging.info("hecho." + '\n')
 
     def ImprLtxPresEjecMat(self, os):
-        os.write("\\subportadilla{Presupuestos Generales}{Presupuesto de ejecución material}" + '\n')
-        os.write("\\addcontentsline{toc}{starchapter}{Presupuesto de ejecución material}" + '\n')
-        os.write("\\cleardoublepage" + '\n')
-        os.write("\\begin{center}" + '\n')
-        os.write("\\Large \\textbf{Presupuesto de Ejecución Material} \\large" + '\n')
-        os.write("\\end{center}" + '\n')
-        os.write("\\vspace{2cm}" + '\n')
+        doc.append("\\subportadilla{Presupuestos Generales}{Presupuesto de ejecución material}" + '\n')
+        doc.append("\\addcontentsline{toc}{starchapter}{Presupuesto de ejecución material}" + '\n')
+        doc.append("\\cleardoublepage" + '\n')
+        doc.append("\\begin{center}" + '\n')
+        doc.append("\\Large \\textbf{Presupuesto de Ejecución Material} \\large" + '\n')
+        doc.append("\\end{center}" + '\n')
+        doc.append("\\vspace{2cm}" + '\n')
         subcapitulos.ImprLtxResumen(os,"",False)
-        os.write("\\textbf{Presupuesto de ejecución material:} \\dotfill\\ \\textbf{" + StrPrecioLtx() + '}' + '\n' + '\n' + '\n')
-        os.write("\\vspace{0.5cm}" + '\n')
-        os.write("Asciende el presente presupuesto de ejecución material a la expresada cantidad de: \\textsc{")
-        os.write(PrecioR().EnLetra(False) + " euros}." + '\n')
-        os.write("\\input{firmas}" + '\n')
+        doc.append("\\textbf{Presupuesto de ejecución material:} \\dotfill\\ \\textbf{" + StrPrecioLtx() + '}' + '\n' + '\n' + '\n')
+        doc.append("\\vspace{0.5cm}" + '\n')
+        doc.append("Asciende el presente presupuesto de ejecución material a la expresada cantidad de: \\textsc{")
+        doc.append(PrecioR().EnLetra(False) + " euros}." + '\n')
+        doc.append("\\input{firmas}" + '\n')
 
     def ImprLtxPresContrata(self, os):
-        os.write("\\subportadilla{Presupuestos Generales}{Presupuesto de ejecución por contrata}" + '\n')
-        os.write("\\addcontentsline{toc}{starchapter}{Presupuesto de ejecución por contrata}" + '\n')
-        os.write("\\cleardoublepage" + '\n')
-        os.write("\\begin{center}" + '\n')
-        os.write("\\Large \\textbf{Presupuesto de Ejecución por Contrata} \\large" + '\n')
-        os.write("\\end{center}" + '\n')
-        os.write("\\vspace{2cm}" + '\n')
+        doc.append("\\subportadilla{Presupuestos Generales}{Presupuesto de ejecución por contrata}" + '\n')
+        doc.append("\\addcontentsline{toc}{starchapter}{Presupuesto de ejecución por contrata}" + '\n')
+        doc.append("\\cleardoublepage" + '\n')
+        doc.append("\\begin{center}" + '\n')
+        doc.append("\\Large \\textbf{Presupuesto de Ejecución por Contrata} \\large" + '\n')
+        doc.append("\\end{center}" + '\n')
+        doc.append("\\vspace{2cm}" + '\n')
         percentages.ImprLtx(os,PrecioR())
-        os.write("\\input{firmas}" + '\n')
+        doc.append("\\input{firmas}" + '\n')
 
 
     def WriteBC3(self, os, pos):
@@ -252,62 +262,62 @@ class Obra(cp.Chapter):
 
 
     def ImprLtxPresGen(self, os):
-        os.write("\\part{Presupuestos Generales}" + '\n')
+        doc.append("\\part{Presupuestos Generales}" + '\n')
         ImprLtxPresEjecMat(os)
         ImprLtxPresContrata(os)
 
-    def ImprLtxMed(self, os):
-        os.write(ltx_part(basic_types.quantitesCaption) + '\n')
-        os.write(ltx_parttoc + '\n')
-        Chapter.ImprLtxMed(os,"raiz")
+    def writeQuantitiesIntoLatexDocument(self, doc):
+        doc.create(pylatex_utils.Part(basic_types.quantitiesCaption) + '\n')
+        #doc.create(pylatex_utils.ltx_parttoc + '\n')
+        super(Obra,self).writeQuantitiesIntoLatexDocument(doc,'root')
 
     def ImprCompLtxMed(self, otra, os):
-        os.write(ltx_part(basic_types.quantitesCaption) + '\n')
-        os.write(ltx_parttoc + '\n')
-        os.write(ltx_begin("landscape") + '\n')
-        Chapter.ImprCompLtxMed(os,"raiz",otra)
-        os.write(ltx_end("landscape") + '\n')
+        doc.create(pylatex_utils.ltx_part(basic_types.quantitesCaption) + '\n')
+        doc.create(pylatex_utils.ltx_parttoc + '\n')
+        doc.create(pylatex_utils.ltx_begin("landscape") + '\n')
+        Chapter.ImprCompLtxMed(os,'root',otra)
+        doc.create(pylatex_utils.ltx_end("landscape") + '\n')
 
     def ImprLtxCP1(self, os):
-        os.write(ltx_part("Cuadro de precios no. 1") + '\n')
-        os.write(ltx_parttoc + '\n')
-        os.write("\\setcounter{chapter}{0}" + '\n')
-        Chapter.ImprLtxCP1(os,"raiz")
-        os.write("\\input{firmas}" + '\n')
+        doc.create(pylatex_utils.ltx_part("Cuadro de precios no. 1") + '\n')
+        doc.create(pylatex_utils.ltx_parttoc + '\n')
+        doc.create("\\setcounter{chapter}{0}" + '\n')
+        Chapter.ImprLtxCP1(os,'root')
+        doc.create("\\input{firmas}" + '\n')
 
     def ImprLtxCP2(self, os):
-        os.write(ltx_part("Cuadro de precios no. 2") + '\n')
-        os.write(ltx_parttoc + '\n')
-        os.write("\\setcounter{chapter}{0}" + '\n')
-        Chapter.ImprLtxCP2(os,"raiz")
-        os.write("\\input{firmas}" + '\n')
+        doc.create(pylatex_utils.ltx_part("Cuadro de precios no. 2") + '\n')
+        doc.create(pylatex_utils.ltx_parttoc + '\n')
+        doc.create("\\setcounter{chapter}{0}" + '\n')
+        Chapter.ImprLtxCP2(os,'root')
+        doc.create("\\input{firmas}" + '\n')
 
     def ImprLtxJustPre(self, os):
-        Chapter.ImprLtxJustPre(os,"raiz")
-        os.write("\\input{firmas}" + '\n')
+        Chapter.ImprLtxJustPre(os,'root')
+        doc.create("\\input{firmas}" + '\n')
 
     def ImprLtxCP(self, os):
         self.ImprLtxCP1(os)
         self.ImprLtxCP2(os)
 
     def ImprLtxPreParc(self, os):
-        os.write(ltx_part("Presupuestos parciales") + '\n')
-        os.write(ltx_parttoc + '\n')
-        os.write("\\setcounter{chapter}{0}" + '\n')
-        Chapter.ImprLtxPre(os,"raiz")
+        doc.create(pylatex_utils.ltx_part("Presupuestos parciales") + '\n')
+        doc.create(pylatex_utils.ltx_parttoc + '\n')
+        doc.create("\\setcounter{chapter}{0}" + '\n')
+        Chapter.ImprLtxPre(os,'root')
 
     def ImprCompLtxPreParc(self, otra, os):
-        os.write(ltx_part("Presupuestos parciales") + '\n')
-        os.write(ltx_parttoc + '\n')
-        os.write("\\setcounter{chapter}{0}" + '\n')
-        os.write(ltx_begin("landscape") + '\n')
-        Chapter.ImprCompLtxPre(os,"raiz",otra)
-        os.write(ltx_end("landscape") + '\n')
+        doc.create(pylatex_utils.ltx_part("Presupuestos parciales") + '\n')
+        doc.create(pylatex_utils.ltx_parttoc + '\n')
+        doc.create("\\setcounter{chapter}{0}" + '\n')
+        doc.create(pylatex_utils.ltx_begin("landscape") + '\n')
+        Chapter.ImprCompLtxPre(os,'root',otra)
+        doc.create(pylatex_utils.ltx_end("landscape") + '\n')
 
     def ImprLtxResumen(self, os):
-        os.write(ltx_part("Resumen de los presupuestos parciales") + '\n'
-           + ltx_star_chapter("Resumen") + '\n')
-        Chapter.ImprLtxResumen(os,"raiz")
+        doc.create(pylatex_utils.ltx_part("Resumen de los presupuestos parciales") + '\n'
+           + pylatex_utils.ltx_star_chapter("Resumen") + '\n')
+        Chapter.ImprLtxResumen(os,'root')
 
     def ImprCompLtx(self, otra, os):
     #Imprime el comparativo con otra obra.
@@ -317,27 +327,29 @@ class Obra(cp.Chapter):
         ImprCompLtxPreParc(otra,os)
         #ImprLtxResumen(os)
 
-    def ImprLtx(self, os):
-    #Imprime la obra en LaTex.
-        self.ImprLtxMed(os); #Quantities.
-        self.ImprLtxCP(os); #Cuadros de precios.
-        self.ImprLtxPreParc(os); #Presupuestos parciales.
-        self.ImprLtxResumen(os); #Resument presup. parciales.
-        self.ImprLtxPresGen(os); #Presupuestos generales.
+    def getLatexDocument(self):
+        '''get the construction budget in LaTeX format.'''
+        retval= pylatex.Document()
+        self.writeQuantitiesIntoLatexDocument(retval) #Quantities.
+        # self.ImprLtxCP(os) #Cuadros de precios.
+        # self.ImprLtxPreParc(os) #Presupuestos parciales.
+        # self.ImprLtxResumen(os) #Resument presup. parciales.
+        # self.ImprLtxPresGen(os) #Presupuestos generales.
+        return retval
 
     def ImprLtxInformeObra(self, os):
     #Imprime en LaTeX el informe de obra.
-        im = getQuantitiesReport()
+        im= getQuantitiesReport()
         im.ImprLtx(os)
 
     def WriteHCalc(self, os):
     #Imprime la obra en LaTex.
-        os.write(basic_types.quantitesCaption + '\n')
-        Chapter.WriteHCalcMed(os,"raiz")
-        os.write("Cuadros de precios" + '\n')
-        precios.WriteHCalc(os)
-        os.write("Presupuestos parciales" + '\n')
-        Chapter.WriteHCalcPre(os,"raiz")
+        doc.create(basic_types.quantitesCaption + '\n')
+        Chapter.WriteHCalcMed(os,'root')
+        doc.create("Cuadros de precios" + '\n')
+        precidoc.createHCalc(os)
+        doc.create("Presupuestos parciales" + '\n')
+        Chapter.WriteHCalcPre(os,'root')
 
     def SimulaDescomp(self, origen, destino):
         precios.SimulaDescomp(origen,destino)

@@ -20,7 +20,7 @@ class ListaRegJustPre(list):
 
     def SetBaseAcum(self, b):
         if(size()<1): return
-        base= ppl_precio(b,3)
+        base= basic_types.ppl_precio(b,3)
         for i in self:
             (i).SetBase(base)
             base+= (i).getTotal()
@@ -30,14 +30,14 @@ class ListaRegJustPre(list):
         if(size()<1): return
         for i in self:
             (i).ImprLtxJustPre(os)
-        os.write(ltx_multicolumn(ltx_datos_multicolumn("4","r","Total "+StrTipo()))
-           + " & & " + Total().EnHumano() + ltx_fin_reg + '\n' + ltx_fin_reg + '\n')
+        doc.append(pylatex_utils.ltx_multicolumn(pylatex_utils.ltx_datos_multicolumn("4","r","Total "+StrTipo()))
+           + " & & " + Total().EnHumano() + pylatex_utils.ltx_fin_reg + '\n' + pylatex_utils.ltx_fin_reg + '\n')
 
     def ImprLtxCP2(self, os):
         total= self.getTotal()
         if total>ppl_precio3(0.0):
-            os.write(" & & " + StrTipo()
-               + " & " + total.EnHumano() + ltx_fin_reg + '\n')
+            doc.append(" & & " + StrTipo()
+               + " & " + total.EnHumano() + pylatex_utils.ltx_fin_reg + '\n')
 
     def ImprLtxCP2Porc(self, os):
         if(size()<1): return
@@ -45,7 +45,7 @@ class ListaRegJustPre(list):
             (i).ImprLtxCP2(os)
 
     def getTotal(self):
-        retval= ppl_precio(0.0,3)
+        retval= basic_types.ppl_precio(0.0,3)
         for i in self:
             retval+= (i).getTotal()
         return retval

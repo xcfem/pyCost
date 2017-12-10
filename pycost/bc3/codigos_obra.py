@@ -80,7 +80,7 @@ class CodigosObra(object):
 
     #@ brief Separa los registros según sean capítulos, quantities, descompuestos, etc.
     def Trocea(self, verborrea):
-        obra = resto.GetObra(); #Obtiene los registros que corresponden a la obra.
+        obra= resto.GetObra(); #Obtiene los registros que corresponden a la obra.
         caps.InsertaCods(obra)
         #resto.Borra(obra)
         caps+= resto.GetChapters()
@@ -105,8 +105,8 @@ class CodigosObra(object):
 
     #not  @brief Carga las líneas de BC3 "resto" y después llama a la rutina "Trocea"
     def LeeBC3(self, inputS, verborrea):
-        reg = ""
-        count = 0
+        reg= ""
+        count= 0
         while(inputS):
             getline(inputS,reg,'~')
             count+= 1
@@ -115,7 +115,7 @@ class CodigosObra(object):
             reg= elimina_car(reg,char(13))
             reg= elimina_car(reg,'\n')
             if len(reg)>2:
-                tipo = reg[0]
+                tipo= reg[0]
                 if(tipo == 'M'): # Quantities are directly inserted.
                     quantities.InsertaReg(reg,verborrea,count)
                 else:
@@ -143,7 +143,7 @@ class CodigosObra(object):
     def FiltraPrecios(self, descomp, precios):
         retval= None
         for d in descomp:
-            p = precios.find(d.codigo)
+            p= precios.find(d.codigo)
             if(p): #Encontró el precio
                 retval[p.first]= p.second
 

@@ -29,12 +29,12 @@ class ComponentList(list, epc.EntPyCost):
 
     def PrecioR(self):
         lista= ListaJustPre(GetListaJustPre(True))#XXX Here cumulated percentages.
-        return ppl_precio(float(lista.TotalRnd()))
+        return basic_types.ppl_precio(float(lista.TotalRnd()))
 
 
     #not  @brief Suma de los precios de un tipo (mdo, maq, mat,...)
     def Precio(self, tipo):
-        ptipo= ppl_precio3(0.0) #Precio total.
+        ptipo= basic_types.ppl_precio3(0.0) #Precio total.
         for i in self:
             if (i).Tipo()==tipo and not (i).IsPercentage():
                 ptipo+= (i).PrecioR()
@@ -42,7 +42,7 @@ class ComponentList(list, epc.EntPyCost):
 
     def PrecioSobre(self, tipo, sobre):
         '''Computes percentages over a type.'''
-        ptipo= ppl_precio3(0.0); #Precio total.
+        ptipo= basic_types.ppl_precio3(0.0); #Precio total.
         for i in self: #Percentages.
             if (i).Tipo()==tipo and (i).IsPercentage():
                 ptipo+= (i).PrecioSobre(sobre)
@@ -57,20 +57,20 @@ class ComponentList(list, epc.EntPyCost):
 
 
     def CalculaLambda(self, objetivo):
-        sum_porc = SumPercentages(sin_clasif)
-        sum_pi = Precio(mdo)+Precio(maq)
-        pmat = Precio(mat)
-        numerador = objetivo/(1.0+sum_porc)-pmat
+        sum_porc= SumPercentages(sin_clasif)
+        sum_pi= Precio(mdo)+Precio(maq)
+        pmat= Precio(mat)
+        numerador= objetivo/(1.0+sum_porc)-pmat
         return (numerador/sum_pi)
 
 
     def FuerzaPrecio(self, objetivo):
-        Lambda = CalculaLambda(objetivo)
+        Lambda= CalculaLambda(objetivo)
         for i in self: #Percentages.
             if(((i).Tipo()!=mat) and not ((i).IsPercentage())):
                 i.productionRate*= Lambda
         if Lambda<0.0:
-            lmsg.error("lambda = " + Lambda + " negativo" + '\n')
+            lmsg.error("lambda= " + Lambda + " negativo" + '\n')
 
         return Lambda
 

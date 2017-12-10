@@ -6,12 +6,14 @@
 from pycost.prices import unit_price
 from pycost.utils import basic_types
 from pycost.utils import EntPyCost as epc
+import pylatex
+from pycost.utils import pylatex_utils
 
 class MeasurementRecord(epc.EntPyCost):
 
     def __init__(self,c= "", uds= 0.0,l= 0.0,an= 0.0,al= 0.0):
         super(MeasurementRecord,self).__init__()
-        self.comentario= c
+        self.comentario= unicode(c,encoding='utf-8')
         self.unidades= uds
         self.largo= l
         self.ancho= an
@@ -33,21 +35,21 @@ class MeasurementRecord(epc.EntPyCost):
         return self.alto
 
     def UnidadesR(self):
-        return ppl_dimension(unidades)
+        return basic_types.ppl_dimension(self.unidades)
 
     def LargoR(self):
-        return ppl_dimension(self.largo)
+        return basic_types.ppl_dimension(self.largo)
 
     def AnchoR(self):
-        return ppl_dimension(self.ancho)
+        return basic_types.ppl_dimension(self.ancho)
 
     def AltoR(self):
-        return ppl_dimension(self.alto)
+        return basic_types.ppl_dimension(self.alto)
 
     def getTotal(self):
         if(self.unidades==0.0) and (self.largo==0.0) and (self.ancho==0.0) and (self.alto==0.0):
             return 0.0
-        retval = 1.0
+        retval= 1.0
         if(self.unidades!=0.0): retval*= self.unidades
         if(self.largo!=0.0): retval*= self.largo
         if(self.ancho!=0): retval*= self.ancho
@@ -57,13 +59,13 @@ class MeasurementRecord(epc.EntPyCost):
 
     def getTotalR(self):
         if(self.unidades==0.0) and (self.largo==0.0) and (self.ancho==0.0) and (self.alto==0.0):
-            return ppl_dimension(0.0)
-        retval= ppl_dimension(1.0)
-        u = self.UnidadesR()
-        l = self.LargoR()
-        a = self.AnchoR()
-        h = self.AltoR()
-        zero= ppl_dimension(0.0)
+            return basic_types.ppl_dimension(0.0)
+        retval= basic_types.ppl_dimension(1.0)
+        u= self.UnidadesR()
+        l= self.LargoR()
+        a= self.AnchoR()
+        h= self.AltoR()
+        zero= basic_types.ppl_dimension(0.0)
         if(u!=zero): retval*= u
         if(l!=zero): retval*= l
         if(a!=zero): retval*= a
@@ -92,19 +94,23 @@ class MeasurementRecord(epc.EntPyCost):
 
 
     #not  @brief Imprime la medición en Latex.
-    def ImprLtx(self, os, ancho):
+    def ImprLtx(self, doc, ancho):
 
-        os.write(ltx_multicolumn(ltx_datos_multicolumn("1",ancho,ascii2latex(self.comentario))) + ltx_ampsnd)
-        zero= ppl_dimension(0.0);
-        if (self.UnidadesR()!=zero): str_u= UnidadesR().EnHumano()
-        if (self.LargoR()!=zero): str_l= LargoR().EnHumano()
-        if (self.AnchoR()!=zero): str_a= AnchoR().EnHumano()
-        if (self.AltoR()!=zero): str_alt= AltoR().EnHumano()
-        total= self.TotalR()
-        if(total!=zero): str_t= total.EnHumano()
-        os.write(str_u + ltx_ampsnd
-           + str_l + ltx_ampsnd + str_a + ltx_ampsnd + str_alt + ltx_ampsnd
-           + str_t)
+        doc.append(pylatex_utils.ltx_multicolumn(pylatex_utils.ltx_datos_multicolumn("1",ancho,pylatex_utils.ascii2latex(self.comentario))) + pylatex_utils.ltx_ampsnd)
+        zero= basic_types.ppl_dimension(0.0);
+        str_u= ''
+        if (self.UnidadesR()!=zero): str_u= basic_types.EnHumano(self.UnidadesR())
+        str_l= ''
+        if (self.LargoR()!=zero): str_l= basic_types.EnHumano(self.LargoR())
+        str_a= ''
+        if (self.AnchoR()!=zero): str_a= basic_types.EnHumano(self.AnchoR())
+        str_alt= ''
+        if (self.AltoR()!=zero): str_alt= basic_types.EnHumano(self.AltoR())
+        total= self.getTotalR()
+        if(total!=zero): str_t= basic_types.EnHumano(total)
+        doc.append(str_u + pylatex_utils.ltx_ampsnd
+           + str_l + pylatex_utils.ltx_ampsnd + str_a + pylatex_utils.ltx_ampsnd + str_alt + pylatex_utils.ltx_ampsnd
+                   + str_t)
 
 
     def WriteHCalc(self, os):

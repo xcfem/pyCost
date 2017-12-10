@@ -7,7 +7,7 @@ from pycost.prices import unit_price_report as iuo
 class QuantitiesReport(dict):
 
     def Inserta(self, iu):
-        i = find(iu.Unidad())
+        i= find(iu.Unidad())
         if i!=end():
             (i).second+= iu.Medicion()
         else:
@@ -19,7 +19,7 @@ class QuantitiesReport(dict):
 
     def ImprLtx(self, os):
         if(size()<1): return
-        os.write("\\begin{longtable}{|l|p{4cm}|r|r|}" + '\n'
+        doc.append("\\begin{longtable}{|l|p{4cm}|r|r|}" + '\n'
            + "\\hline" + '\n'
            + "Código & Descripción & Medición & Precio \\\\"
            + "\\hline" + '\n'
@@ -32,7 +32,7 @@ class QuantitiesReport(dict):
         for i in self:
             iu= iuo.UnitPriceReport((i).first,(i).second)
             iu.ImprLtx(os)
-            os.write( "\\\\" + '\n')
+            doc.append( "\\\\" + '\n')
 
-        os.write("\\end{longtable}" + '\n')
+        doc.append("\\end{longtable}" + '\n')
 

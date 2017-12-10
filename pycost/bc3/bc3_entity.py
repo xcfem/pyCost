@@ -67,13 +67,13 @@ class EntBC3(epc.EntPyCost):
     def __init__(self, cod, tit):
       super(EntBC3,self).__init__()
       self.codigo= cod
-      self.titulo= tit
+      self.title= unicode(tit,encoding='utf-8')
 
     def LeeBC3(self, r):
         if verborrea>4:
             logging.info("Cargando concepto: '" + r.Codigo() + "'\n")
-        codigo= r.Codigo()
-        titulo= protege_signos(r.Datos().Titulo())
+        self.codigo= r.Codigo()
+        self.title= protege_signos(r.Datos().getTitle())
 
     def Codigo(self):
         return self.codigo
@@ -84,8 +84,8 @@ class EntBC3(epc.EntPyCost):
     def Unidad(self):
         return self.static_txtud
 
-    def Titulo(self):
-        return titulo
+    def getTitle(self):
+        return self.title
 
     def StrPrecio(self):
         return precio2str(Precio())
@@ -100,7 +100,7 @@ class EntBC3(epc.EntPyCost):
         return 0.0
 
     def PrecioR(self):
-        return ppl_precio(Precio())
+        return basic_types.ppl_precio(Precio())
 
     def Fecha(self):
         return "040400";    # xxx
@@ -132,14 +132,14 @@ class EntBC3(epc.EntPyCost):
     def WriteSpre(self, os):
         os.write(Codigo() + '|'
            + Unidad() + '|'
-           + Titulo() + '|'
+           + getTitle() + '|'
            + StrPrecio() + '|' + endl_msdos)
 
     def WriteConceptoBC3(self, os, primero):
         os.write("~C" + '|' + CodigoBC3())
         #if(primero) os.write('#'
         os.write('|' + Unidad() + '|'
-           + latin1TOpc850ML(Titulo()) + '|'
+           + latin1TOpc850ML(getTitle()) + '|'
            + StrPrecio() + '|'
            + Fecha() + '|'
            + ChrTipo() + '|' + endl_msdos)
@@ -147,7 +147,7 @@ class EntBC3(epc.EntPyCost):
     def Write(self, os):
         os.write("Codigo: " + Codigo() + '\n'
            + "Unidad: " + Unidad() + '\n'
-           + "Titulo: " + Titulo() + '\n'
+           + "Title: " + getTitle() + '\n'
            + "Precio: " + StrPrecio() + '\n'
            + "Fecha: "  + Fecha() + '\n'
            + "Tipo: " + ChrTipo() + '\n'

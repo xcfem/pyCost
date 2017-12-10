@@ -126,6 +126,8 @@
 /usr/local/lib/python2.7/dist-packages/pycost/utils/measurable.pyc
 /usr/local/lib/python2.7/dist-packages/pycost/utils/percentages.py
 /usr/local/lib/python2.7/dist-packages/pycost/utils/percentages.pyc
+/usr/local/lib/python2.7/dist-packages/pycost/utils/pylatex_utils.py
+/usr/local/lib/python2.7/dist-packages/pycost/utils/pylatex_utils.pyc
 /usr/local/lib/python2.7/dist-packages/structure/chapter_container.py
 /usr/local/lib/python2.7/dist-packages/structure/chapter_container.pyc
 /usr/local/lib/python2.7/dist-packages/structure/chapter.py

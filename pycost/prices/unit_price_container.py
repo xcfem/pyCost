@@ -30,7 +30,7 @@ class Descompuestos(concept_dict.ConceptDict):
         '''Lee las unidades de obra a falta de la descomposición.'''
         ud= UnitPrice()
         for i in cds:
-            reg = cds.getUnitPriceData(i)
+            reg= cds.getUnitPriceData(i)
             ud.LeeBC3Fase1(reg)
             Append(ud)
 
@@ -41,7 +41,7 @@ class Descompuestos(concept_dict.ConceptDict):
         error= False
         retval= set_pendientes
         for i in cds:
-            reg = cds.getUnitPriceData(i)
+            reg= cds.getUnitPriceData(i)
             ud= Busca(reg.Codigo())
             error= ud.LeeBC3Fase2(reg,bp)
             if error:
@@ -78,10 +78,10 @@ class Descompuestos(concept_dict.ConceptDict):
                 getline(iS,descomp,'\n')
                 #istrstream istr(descomp.c_str(),descomp.leng.py())
                 while(True):
-                    pos2 = descomp.find('|')
-                    cod_el = descomp.substr(0,pos2)
+                    pos2= descomp.find('|')
+                    cod_el= descomp.substr(0,pos2)
                     descomp.replace(0,pos2+1,"")
-                    pos3 = descomp.find('|')
+                    pos3= descomp.find('|')
                     cantidad= ''
                     if pos3<1000:
                         cantidad= descomp.substr(0,pos3)
@@ -90,7 +90,7 @@ class Descompuestos(concept_dict.ConceptDict):
                     else:
                         cantidad= descomp.substr(0,len(descomp)-1)
                     if(elementos.find("%" + cod_el)!=elementos.end()): #Corresponds to a percentage.
-                        cod_el = "%"+cod_el
+                        cod_el= "%"+cod_el
                     AgregaComponente(elementos,cod,cod_el,atof(cantidad.c_str()))
                     if(pos3>len(descomp)): break
 
@@ -102,52 +102,52 @@ class Descompuestos(concept_dict.ConceptDict):
 
     def ImprLtxCP1(self, os):
         if(size()<1): return
-        linea_en_blanco = ltx_ampsnd+ltx_ampsnd+ltx_ampsnd+ltx_ampsnd+ltx_fin_reg
-        num_campos = 5
-        os.write(ltx_small + '\n')
-        os.write("\\begin{longtable}{|l|l|p{4cm}|p{3cm}|r|}" + '\n'
-           + ltx_hline + '\n'
+        linea_en_blanco= pylatex_utils.ltx_ampsnd+pylatex_utils.ltx_ampsnd+pylatex_utils.ltx_ampsnd+pylatex_utils.ltx_ampsnd+pylatex_utils.ltx_fin_reg
+        num_campos= 5
+        doc.append(pylatex_utils.SmallCommand())
+        doc.append("\\begin{longtable}{|l|l|p{4cm}|p{3cm}|r|}" + '\n'
+           + pylatex_utils.ltx_hline + '\n'
            + "Código & Ud. & Denominación & \\multicolumn{2}{|c|}{Precio}\\\\"
            + " & & & en letra & en cifra \\\\" + '\n'
-           + ltx_hline + '\n'
-           + ltx_endhead + '\n'
-           + ltx_hline + '\n'
+           + pylatex_utils.ltx_hline + '\n'
+           + pylatex_utils.ltx_endhead + '\n'
+           + pylatex_utils.ltx_hline + '\n'
            + "\\multicolumn{" + num_campos + "}{|r|}{../..}\\\\\\hline" + '\n'
-           + ltx_endfoot + '\n'
-           + ltx_hline + '\n'
-           + ltx_endlastfoot + '\n')
-        j = begin()
+           + pylatex_utils.ltx_endfoot + '\n'
+           + pylatex_utils.ltx_hline + '\n'
+           + pylatex_utils.ltx_endlastfoot + '\n')
+        j= begin()
         for j in self:
-            os.write(linea_en_blanco + '\n')
+            doc.append(linea_en_blanco + '\n')
             (j).second.ImprLtxCP1(os)
-            os.write(linea_en_blanco + '\n')
+            doc.append(linea_en_blanco + '\n')
 
-        os.write("\\end{longtable}" + '\n')
-        os.write(ltx_normalsize + '\n')
+        doc.append("\\end{longtable}" + '\n')
+        doc.append(pylatex_utils.ltx_normalsize + '\n')
 
     def ImprLtxJustPre(self, os):
-        os.write(ltx_small + '\n')
-        os.write("\\begin{longtable}{l}" + '\n')
+        doc.append(pylatex_utils.SmallCommand())
+        doc.append("\\begin{longtable}{l}" + '\n')
         for j in self:
             (j).second.ImprLtxJustPre(os)
-            os.write(ltx_fin_reg + '\n')
-            os.write(ltx_fin_reg + '\n')
+            doc.append(pylatex_utils.ltx_fin_reg + '\n')
+            doc.append(pylatex_utils.ltx_fin_reg + '\n')
 
-        os.write("\\end{longtable}" + '\n')
-        os.write(ltx_normalsize + '\n')
+        doc.append("\\end{longtable}" + '\n')
+        doc.append(pylatex_utils.ltx_normalsize + '\n')
 
     def ImprLtxCP2(self, os):
         if(size()<1): return
-        #os.write(ltx_star_.pyapter("Cuadro de precios no. 2") + '\n'
-        os.write(ltx_small + '\n')
-        os.write("\\begin{longtable}{l}" + '\n')
+        #doc.append(pylatex_utils.ltx_star_.pyapter("Cuadro de precios no. 2") + '\n'
+        doc.append(pylatex_utils.SmallCommand())
+        doc.append("\\begin{longtable}{l}" + '\n')
         for j in self:
             (j).second.ImprLtxCP2(os)
-            os.write(ltx_fin_reg + '\n')
-            os.write(ltx_fin_reg + '\n')
+            doc.append(pylatex_utils.ltx_fin_reg + '\n')
+            doc.append(pylatex_utils.ltx_fin_reg + '\n')
 
-        os.write("\\end{longtable}" + '\n')
-        os.write(ltx_normalsize + '\n')
+        doc.append("\\end{longtable}" + '\n')
+        doc.append(pylatex_utils.ltx_normalsize + '\n')
 
     def WriteHCalc(self, os):
         os.write("Código" + tab

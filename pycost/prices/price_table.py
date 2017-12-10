@@ -41,9 +41,9 @@ class CuaPre(epc.EntPyCost):
 
     def LeeBC3DescompFase2(self, descomp):
         bp= Buscadores()
-        b_elem = elementos.GetBuscador()
+        b_elem= elementos.GetBuscador()
         bp["elementos"]= b_elem
-        b_desc = unidades.GetBuscador()
+        b_desc= unidades.GetBuscador()
         bp["ud_obra"]= b_desc
         return unidades.LeeBC3Fase2(descomp,bp)
 
@@ -54,9 +54,9 @@ class CuaPre(epc.EntPyCost):
         return self.elementos.Busca(cod)
 
     def BuscaPrecio(self, cod):
-        retval= searchForUnitPrice(cod)
+        retval= self.searchForUnitPrice(cod)
         if not retval:
-            retval= BuscaElementaryPrice(cod)
+            retval= self.BuscaElementaryPrice(cod)
         return retval
 
 

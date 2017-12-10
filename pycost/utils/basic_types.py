@@ -19,7 +19,7 @@ def ppl_percentage(dim, prec= 3):
     return Decimal(dim)
 
 def str_tipo(tipo):
-    retval = ''
+    retval= ''
     if(tipo==mdo):
         retval= 'mano de obra'
     elif(tipo==maq):
@@ -31,6 +31,9 @@ def str_tipo(tipo):
     return retval
 
 quantitiesCaption= 'Mediciones'
+
+def EnHumano(obj):
+    return str(obj);
 
 # import Currency
 # typedef Currency<3> ppl_dimension

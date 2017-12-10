@@ -16,31 +16,31 @@ class RegJustPre(EntCmd):
         if self.is_percentage:
             return self.sobre
         else:
-            return ppl_precio(self.unitario,3)
+            return basic_types.ppl_precio(self.unitario,3)
 
     def SetBase(self, b):
         sobre= b
 
     def getTotal(self):
-        retval= ppl_precio(self.base(),3)
+        retval= basic_types.ppl_precio(self.base(),3)
         retval*= rdto
         return retval
 
     def ImprLtxJustPre(self, os):
-        os.write(ascii2latex(codigo) + " & "
+        doc.append(pylatex_utils.ascii2latex(codigo) + " & "
            + rdto.EnHumano() + " & " #Write el production rate
-           + ascii2latex(unidad) + " & "
-           + ascii2latex(titulo) + " & ")
+           + pylatex_utils.ascii2latex(unidad) + " & "
+           + pylatex_utils.ascii2latex(titulo) + " & ")
         if self.is_percentage:
-            os.write(unitario.EnHumano() + ltx_porciento); #Percentage
+            doc.append(unitario.EnHumano() + pylatex_utils.ltx_porciento); #Percentage
         else:
-            os.write(unitario.EnHumano()) #Precio unitario
-        os.write(" & " + self.getTotal().EnHumano() + ltx_fin_reg + '\n')
+            doc.append(unitario.EnHumano()) #Precio unitario
+        doc.append(" & " + self.getTotal().EnHumano() + pylatex_utils.ltx_fin_reg + '\n')
 
 
     def ImprLtxCP2(self, os):
-        os.write(" & & " + ascii2latex(titulo) + " & ")
-        if(self.is_percentage): os.write(self.getTotal().EnHumano()) #Total.
-        os.write(ltx_fin_reg + '\n')
+        doc.append(" & & " + pylatex_utils.ascii2latex(titulo) + " & ")
+        if(self.is_percentage): doc.append(self.getTotal().EnHumano()) #Total.
+        doc.append(pylatex_utils.ltx_fin_reg + '\n')
 
 

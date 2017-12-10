@@ -15,7 +15,7 @@ class BC3Component(fr_entity.EntFR):
         return self.ent.Precio()*Producto()
 
     def PrecioR(self):
-        retval= ppl_precio3(ent.PrecioR())
+        retval= basic_types.ppl_precio3(ent.PrecioR())
         retval*= ProductoR()
         return retval
 
@@ -25,7 +25,7 @@ class BC3Component(fr_entity.EntFR):
 
     def PrecioSobre(self, sobre):
         '''For percentages.'''
-        d= ppl_precio3(sobre)
+        d= basic_types.ppl_precio3(sobre)
         d*= Producto()
         return d
 
@@ -65,9 +65,9 @@ class BC3Component(fr_entity.EntFR):
 
     def GetRegJustPre(self, sobre):
         if IsPercentage():
-            return RegJustPre(CodigoEntidad(),ppl_precio4(Producto()),ent.Unidad(),ent.Titulo(),True,ppl_precio(Producto()*100.0),sobre)
+            return RegJustPre(CodigoEntidad(),ppl_precio4(Producto()),ent.Unidad(),ent.getTitle(),True,basic_types.ppl_precio(Producto()*100.0),sobre)
         else:
-            return RegJustPre(ent.Codigo(),ppl_precio4(Producto()),ent.Unidad(),ent.Titulo(),False,ent.PrecioR(),0.0)
+            return RegJustPre(ent.Codigo(),basic_types.ppl_precio4(Producto()),ent.Unidad(),ent.getTitle(),False,ent.PrecioR(),0.0)
 
 
     def ImprLtxJustPre(self, os, sobre):

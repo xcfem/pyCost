@@ -5,6 +5,8 @@ from pycost.prices import unit_price_report
 from pycost.measurements import measurement_detail
 from pycost.utils import basic_types
 from pycost.utils import EntPyCost as epc
+import pylatex
+from pycost.utils import pylatex_utils
 
 class UnitPriceQuantitiesBase(epc.EntPyCost):
 
@@ -37,109 +39,110 @@ class UnitPriceQuantitiesBase(epc.EntPyCost):
         return self.getTotal()*ud.Precio()
 
     def PrecioR(self):
-        return ppl_precio(float(self.TotalR())*float(self.PrecioRUd()))
+        return basic_types.ppl_precio(float(self.TotalR())*float(self.PrecioRUd()))
 
     def StrPrecioLtx(self):
         return self.PrecioR().EnHumano()
 
-    def ImprLtxCabecera(self, os, totalr, ancho):
+    def printLatexHeader(self, doc, totalr, ancho):
         '''Imprime la cabecera para la partida.'''
-        os.write(ascii2latex(getUnitPriceCode()) + ltx_ampsnd
-           + totalr + ' ' + ascii2latex(UnidadMedida()) + ltx_ampsnd
-           + ltx_multicolumn(ltx_datos_multicolumn("4",ancho,ascii2latex(self.ud.getLongDescription()()))))
+        dmc= pylatex_utils.ltx_datos_multicolumn("4",ancho,pylatex_utils.ascii2latex(self.ud.getLongDescription()))
+        doc.append(pylatex_utils.ascii2latex(self.getUnitPriceCode()) + pylatex_utils.ltx_ampsnd
+           + str(totalr) + ' ' + pylatex_utils.ascii2latex(self.UnidadMedida()) + pylatex_utils.ltx_ampsnd
+           + pylatex_utils.ltx_multicolumn(dmc))
 
 
-    def ImprCompLtxMed(self, os, otra):
+    def ImprCompLtxMed(self, doc, otra):
         '''Imprime la partida.'''
-        linea_en_blanco = ltx_ampsnd+ltx_ampsnd+ltx_ampsnd+ltx_ampsnd+ltx_ampsnd+ltx_ampsnd+ltx_ampsnd+ltx_ampsnd+ltx_ampsnd+ltx_ampsnd+ltx_ampsnd+ltx_fin_reg
-        os.write(linea_en_blanco + '\n')
+        linea_en_blanco= pylatex_utils.ltx_ampsnd+pylatex_utils.ltx_ampsnd+pylatex_utils.ltx_ampsnd+pylatex_utils.ltx_ampsnd+pylatex_utils.ltx_ampsnd+pylatex_utils.ltx_ampsnd+pylatex_utils.ltx_ampsnd+pylatex_utils.ltx_ampsnd+pylatex_utils.ltx_ampsnd+pylatex_utils.ltx_ampsnd+pylatex_utils.ltx_ampsnd+pylatex_utils.ltx_fin_reg
+        doc.append(linea_en_blanco + '\n')
         totalr_otra= otra.TotalR().EnHumano()
-        otra.ImprLtxCabecera(os,totalr_otra,"p{4.5cm}|")
-        os.write(ltx_ampsnd)
-        totalr_esta = TotalR().EnHumano()
-        ImprLtxCabecera(os,totalr_esta,"p{4.5cm}")
-        os.write(ltx_fin_reg + '\n')
-        ImprLtxLeyenda(os)
-        os.write(ltx_ampsnd)
-        ImprLtxLeyenda(os)
-        os.write(ltx_fin_reg + '\n' + ltx_hline + '\n')
+        otra.printLatexHeader(os,totalr_otra,"p{4.5cm}|")
+        doc.append(pylatex_utils.ltx_ampsnd)
+        totalr_esta= TotalR().EnHumano()
+        printLatexHeader(os,totalr_esta,"p{4.5cm}")
+        doc.append(pylatex_utils.ltx_fin_reg + '\n')
+        ImprLtxLeyenda(doc)
+        doc.append(pylatex_utils.ltx_ampsnd)
+        ImprLtxLeyenda(doc)
+        doc.append(pylatex_utils.ltx_fin_reg + '\n' + pylatex_utils.ltx_hline + '\n')
         quantities.ImprCompLtx(os,otra.quantities)
         ImprLtxPie(os,totalr_otra)
-        os.write(ltx_ampsnd)
+        doc.append(pylatex_utils.ltx_ampsnd)
         ImprLtxPie(os,totalr_esta)
-        os.write(ltx_fin_reg + '\n')
-        os.write(ltx_hline + '\n')
-        os.write(linea_en_blanco + '\n')
+        doc.append(pylatex_utils.ltx_fin_reg + '\n')
+        doc.append(pylatex_utils.ltx_hline + '\n')
+        doc.append(linea_en_blanco + '\n')
 
 
     #not  @brief Imprime la partida.
     def ImprCompLtxMed(self, os):
-        linea_en_blanco = ltx_ampsnd+ltx_ampsnd+ltx_ampsnd+ltx_ampsnd+ltx_ampsnd+ltx_ampsnd+ltx_ampsnd+ltx_ampsnd+ltx_ampsnd+ltx_ampsnd+ltx_ampsnd+ltx_fin_reg
-        media_linea_en_blanco = ltx_ampsnd+ltx_ampsnd+ltx_ampsnd+ltx_ampsnd+ltx_ampsnd+ltx_ampsnd
-        os.write(linea_en_blanco + '\n')
-        os.write(media_linea_en_blanco)
+        linea_en_blanco= pylatex_utils.ltx_ampsnd+pylatex_utils.ltx_ampsnd+pylatex_utils.ltx_ampsnd+pylatex_utils.ltx_ampsnd+pylatex_utils.ltx_ampsnd+pylatex_utils.ltx_ampsnd+pylatex_utils.ltx_ampsnd+pylatex_utils.ltx_ampsnd+pylatex_utils.ltx_ampsnd+pylatex_utils.ltx_ampsnd+pylatex_utils.ltx_ampsnd+pylatex_utils.ltx_fin_reg
+        media_linea_en_blanco= pylatex_utils.ltx_ampsnd+pylatex_utils.ltx_ampsnd+pylatex_utils.ltx_ampsnd+pylatex_utils.ltx_ampsnd+pylatex_utils.ltx_ampsnd+pylatex_utils.ltx_ampsnd
+        doc.append(linea_en_blanco + '\n')
+        doc.append(media_linea_en_blanco)
         totalr= self.TotalR().EnHumano()
-        ImprLtxCabecera(os,totalr,"p{4.5cm}")
-        os.write(ltx_fin_reg + '\n')
-        #ImprLtxLeyenda(os)
-        #os.write(ltx_ampsnd
-        os.write(media_linea_en_blanco)
-        ImprLtxLeyenda(os)
-        os.write(ltx_fin_reg + '\n' + ltx_hline + '\n')
+        printLatexHeader(os,totalr,"p{4.5cm}")
+        doc.append(pylatex_utils.ltx_fin_reg + '\n')
+        #ImprLtxLeyenda(doc)
+        #doc.append(pylatex_utils.ltx_ampsnd
+        doc.append(media_linea_en_blanco)
+        ImprLtxLeyenda(doc)
+        doc.append(pylatex_utils.ltx_fin_reg + '\n' + pylatex_utils.ltx_hline + '\n')
         quantities.ImprCompLtx(os)
-        os.write(media_linea_en_blanco)
+        doc.append(media_linea_en_blanco)
         ImprLtxPie(os,totalr)
-        os.write(ltx_fin_reg + '\n')
-        os.write(ltx_hline + '\n')
-        os.write(linea_en_blanco + '\n')
+        doc.append(pylatex_utils.ltx_fin_reg + '\n')
+        doc.append(pylatex_utils.ltx_hline + '\n')
+        doc.append(linea_en_blanco + '\n')
 
 
-    def ImprLtxCabeceraPre(self, os, totalr, ancho):
-        os.write(ascii2latex(getUnitPriceCode()) + ltx_ampsnd
-           + totalr + " " + ascii2latex(UnidadMedida()) + ltx_ampsnd
-           + ltx_multicolumn(ltx_datos_multicolumn("1",ancho,ascii2latex(self.ud.getLongDescription()()))))
+    def printLatexHeaderPre(self, os, totalr, ancho):
+        doc.append(pylatex_utils.ascii2latex(getUnitPriceCode()) + pylatex_utils.ltx_ampsnd
+           + totalr + " " + pylatex_utils.ascii2latex(UnidadMedida()) + pylatex_utils.ltx_ampsnd
+           + pylatex_utils.ltx_multicolumn(pylatex_utils.ltx_datos_multicolumn("1",ancho,pylatex_utils.ascii2latex(self.ud.getLongDescription()()))))
 
     def ImprCompLtxPre(self, os, otra):
-        linea_en_blanco = ltx_ampsnd+ltx_ampsnd+ltx_ampsnd+ltx_ampsnd+ltx_ampsnd+ltx_ampsnd+ltx_ampsnd+ltx_ampsnd+ltx_ampsnd+ltx_fin_reg
-        os.write(linea_en_blanco + '\n')
-        totalr_otra = otra.TotalR().EnHumano()
-        otra.ImprLtxCabeceraPre(os,totalr_otra,"p{2.5cm}")
-        os.write(ltx_ampsnd
-           + otra.StrPrecioLtxUd() + ltx_ampsnd
-           + otra.StrPrecioLtx() + ltx_ampsnd)
-        totalr_esta = TotalR().EnHumano()
-        ImprLtxCabeceraPre(os,totalr_esta,"p{2.5cm}")
-        os.write(ltx_ampsnd
-           + StrPrecioLtxUd() + ltx_ampsnd
-           + StrPrecioLtx() + ltx_fin_reg + '\n')
-        os.write(linea_en_blanco + '\n')
+        linea_en_blanco= pylatex_utils.ltx_ampsnd+pylatex_utils.ltx_ampsnd+pylatex_utils.ltx_ampsnd+pylatex_utils.ltx_ampsnd+pylatex_utils.ltx_ampsnd+pylatex_utils.ltx_ampsnd+pylatex_utils.ltx_ampsnd+pylatex_utils.ltx_ampsnd+pylatex_utils.ltx_ampsnd+pylatex_utils.ltx_fin_reg
+        doc.append(linea_en_blanco + '\n')
+        totalr_otra= otra.TotalR().EnHumano()
+        otra.printLatexHeaderPre(os,totalr_otra,"p{2.5cm}")
+        doc.append(pylatex_utils.ltx_ampsnd
+           + otra.StrPrecioLtxUd() + pylatex_utils.ltx_ampsnd
+           + otra.StrPrecioLtx() + pylatex_utils.ltx_ampsnd)
+        totalr_esta= TotalR().EnHumano()
+        printLatexHeaderPre(os,totalr_esta,"p{2.5cm}")
+        doc.append(pylatex_utils.ltx_ampsnd
+           + StrPrecioLtxUd() + pylatex_utils.ltx_ampsnd
+           + StrPrecioLtx() + pylatex_utils.ltx_fin_reg + '\n')
+        doc.append(linea_en_blanco + '\n')
 
     def ImprCompLtxPre(self, os):
-        linea_en_blanco = ltx_ampsnd+ltx_ampsnd+ltx_ampsnd+ltx_ampsnd+ltx_ampsnd+ltx_ampsnd+ltx_ampsnd+ltx_ampsnd+ltx_ampsnd+ltx_fin_reg
-        media_linea_en_blanco = ltx_ampsnd+ltx_ampsnd+ltx_ampsnd+ltx_ampsnd+ltx_ampsnd
-        os.write(linea_en_blanco + '\n')
-        os.write(media_linea_en_blanco)
+        linea_en_blanco= pylatex_utils.ltx_ampsnd+pylatex_utils.ltx_ampsnd+pylatex_utils.ltx_ampsnd+pylatex_utils.ltx_ampsnd+pylatex_utils.ltx_ampsnd+pylatex_utils.ltx_ampsnd+pylatex_utils.ltx_ampsnd+pylatex_utils.ltx_ampsnd+pylatex_utils.ltx_ampsnd+pylatex_utils.ltx_fin_reg
+        media_linea_en_blanco= pylatex_utils.ltx_ampsnd+pylatex_utils.ltx_ampsnd+pylatex_utils.ltx_ampsnd+pylatex_utils.ltx_ampsnd+pylatex_utils.ltx_ampsnd
+        doc.append(linea_en_blanco + '\n')
+        doc.append(media_linea_en_blanco)
         totalr_med= self.TotalR().EnHumano()
-        ImprLtxCabeceraPre(os,totalr_med,"p{2.5cm}")
-        os.write(ltx_ampsnd
-           + StrPrecioLtxUd() + ltx_ampsnd
-           + StrPrecioLtx() + ltx_fin_reg + '\n')
-        os.write(linea_en_blanco + '\n')
+        printLatexHeaderPre(os,totalr_med,"p{2.5cm}")
+        doc.append(pylatex_utils.ltx_ampsnd
+           + StrPrecioLtxUd() + pylatex_utils.ltx_ampsnd
+           + StrPrecioLtx() + pylatex_utils.ltx_fin_reg + '\n')
+        doc.append(linea_en_blanco + '\n')
 
     def ImprLtxPre(self, os):
-        linea_en_blanco= ltx_ampsnd+ltx_ampsnd+ltx_ampsnd+ltx_ampsnd+ltx_fin_reg
+        linea_en_blanco= pylatex_utils.ltx_ampsnd+pylatex_utils.ltx_ampsnd+pylatex_utils.ltx_ampsnd+pylatex_utils.ltx_ampsnd+pylatex_utils.ltx_fin_reg
         totalr_med= TotalR().EnHumano()
-        ImprLtxCabeceraPre(os,totalr_med,"p{5cm}")
-        os.write(ltx_ampsnd
-           + StrPrecioLtxUd() + ltx_ampsnd
-           + StrPrecioLtx() + ltx_fin_reg + '\n')
-        os.write(linea_en_blanco + '\n')
+        printLatexHeaderPre(os,totalr_med,"p{5cm}")
+        doc.append(pylatex_utils.ltx_ampsnd
+           + StrPrecioLtxUd() + pylatex_utils.ltx_ampsnd
+           + StrPrecioLtx() + pylatex_utils.ltx_fin_reg + '\n')
+        doc.append(linea_en_blanco + '\n')
 
     #HCalc
     def WriteHCalcMed(self, os):
         os.write(getUnitPriceCode() + tab
-           + en_humano(Total(),3) + tab + ascii2latex(UnidadMedida()) + tab
-           + '"' + ascii2latex(self.ud.getLongDescription()()) + '"' + '\n'
+           + en_humano(Total(),3) + tab + pylatex_utils.ascii2latex(UnidadMedida()) + tab
+           + '"' + pylatex_utils.ascii2latex(self.ud.getLongDescription()()) + '"' + '\n'
            + "Texto" + tab
            + "Unidades" + tab
            + "Largo" + tab
@@ -165,33 +168,33 @@ class UnitPriceQuantitiesBase(epc.EntPyCost):
         os.write('|' + endl_msdos)
 
     @staticmethod
-    def ImprLtxLeyenda(self, os):
-        os.write("Texto" + ltx_ampsnd
-           + "Unidades" + ltx_ampsnd
-           + "Largo" + ltx_ampsnd
-           + "Ancho" + ltx_ampsnd
-           + "Alto" + ltx_ampsnd
+    def ImprLtxLeyenda(doc):
+        doc.append("Texto" + pylatex_utils.ltx_ampsnd
+           + "Unidades" + pylatex_utils.ltx_ampsnd
+           + "Largo" + pylatex_utils.ltx_ampsnd
+           + "Ancho" + pylatex_utils.ltx_ampsnd
+           + "Alto" + pylatex_utils.ltx_ampsnd
            + "Parcial")
 
 
     @staticmethod
-    def ImprLtxPie(self, os, totalr):
-        os.write(ltx_multicolumn(ltx_datos_multicolumn("5","r","Suma "+ ltx_ldots)) + ltx_ampsnd
-           + ltx_textbf(totalr))
+    def ImprLtxPie(doc, totalr):
+        doc.append(pylatex_utils.ltx_multicolumn(pylatex_utils.ltx_datos_multicolumn("5","r","Suma "+ pylatex_utils.ltx_ldots)) + pylatex_utils.ltx_ampsnd
+           + pylatex_utils.ltx_textbf(totalr))
 
 
-    def ImprLtxMed(self, os):
-        linea_en_blanco = ltx_ampsnd+ltx_ampsnd+ltx_ampsnd+ltx_ampsnd+ltx_ampsnd+ltx_fin_reg
-        os.write(linea_en_blanco + '\n')
-        totalr = TotalR().EnHumano()
-        ImprLtxCabecera(os,totalr,"p{6cm}")
-        os.write(ltx_fin_reg + '\n')
-        ImprLtxLeyenda(os)
-        os.write(ltx_fin_reg + '\n'+ ltx_hline + '\n')
-        quantities.ImprLtx(os)
-        ImprLtxPie(os,totalr)
-        os.write(ltx_fin_reg + '\n')
-        os.write(ltx_hline + '\n')
-        os.write(linea_en_blanco + '\n')
+    def writeQuantitiesIntoLatexDocument(self, doc):
+        linea_en_blanco= pylatex_utils.ltx_ampsnd+pylatex_utils.ltx_ampsnd+pylatex_utils.ltx_ampsnd+pylatex_utils.ltx_ampsnd+pylatex_utils.ltx_ampsnd+pylatex_utils.ltx_fin_reg
+        doc.append(linea_en_blanco + '\n')
+        totalr= basic_types.EnHumano(self.getTotalR())
+        self.printLatexHeader(doc,totalr,"p{6cm}")
+        doc.append(pylatex_utils.ltx_fin_reg + '\n')
+        self.ImprLtxLeyenda(doc)
+        doc.append(pylatex_utils.ltx_fin_reg + '\n'+ pylatex_utils.ltx_hline + '\n')
+        self.quantities.ImprLtx(doc)
+        self.ImprLtxPie(doc,totalr)
+        doc.append(pylatex_utils.ltx_fin_reg + '\n')
+        doc.append(pylatex_utils.ltx_hline + '\n')
+        doc.append(linea_en_blanco + '\n')
 
 

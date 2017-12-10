@@ -12,8 +12,8 @@ class UnitPriceReport(object):
         return self.med_total
     def ImprLtx(self, os):
         if ud:
-            os.write(ud.Codigo() + " & "
-               + ascii2latex(ud.getLongDescription()) + " & "
+            doc.append(ud.Codigo() + " & "
+               + pylatex_utils.ascii2latex(ud.getLongDescription()) + " & "
                + en_humano(med_total,0) + " & "
                + en_humano(med_total*ud.Precio(),0))
 

@@ -30,8 +30,8 @@ class ElementaryPrice(m.Measurable):
 
 
     def ImprLtx(self, os):
-        os.write(ascii2latex(Codigo()) + " & "
-           + ascii2latex(Unidad()) + " & "
-           + ascii2latex(Titulo()) + " & "
+        doc.append(pylatex_utils.ascii2latex(Codigo()) + " & "
+           + pylatex_utils.ascii2latex(Unidad()) + " & "
+           + pylatex_utils.ascii2latex(getTitle()) + " & "
            + StrPrecioLtx() + "\\\\" + '\n')
 

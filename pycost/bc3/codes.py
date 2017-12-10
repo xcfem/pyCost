@@ -79,11 +79,11 @@ class Codigos(dict):
     #not  @brief Devuelve los subcapítulos del capitulo que se pasa como parámetro.
     def GetSubCaps(self, ppal):
         retval= None
-        desc = ppal.GetDesc(); #Obtiene la descomposición
+        desc= ppal.GetDesc(); #Obtiene la descomposición
         for i in desc:
-            cod = (i).codigo
+            cod= (i).codigo
             if(es_codigo_capitulo(cod)): #Es un capítulo.
-                j = findChapter(cod)
+                j= findChapter(cod)
                 if j:
                     retval[(j).first]= (j).second
                 else:
@@ -103,11 +103,11 @@ class Codigos(dict):
     def GetSubElementos(self, ppal, elementos):
     #Devuelve los precios elementales del capitulo que se pasa como parámetro.
         retval= None
-        desc = ppal.GetDesc(); #Obtiene la descomposición
+        desc= ppal.GetDesc(); #Obtiene la descomposición
         for i in desc:
-            cod = (i).codigo
+            cod= (i).codigo
             if(not es_codigo_capitulo(cod)): #No es un capítulo.
-                j = elementos.find(cod)
+                j= elementos.find(cod)
                 if j!=end():
                     retval[(j).first]= (j).second
 
@@ -117,11 +117,11 @@ class Codigos(dict):
     def GetSubDescompuestos(self, ppal, descompuestos):
     #Devuelve los descompuestos del capitulo que se pasa como parámetro.
         retval= None
-        desc = ppal.GetDesc(); #Obtiene la descomposición
+        desc= ppal.GetDesc(); #Obtiene la descomposición
         for i in desc:
-            cod = (i).codigo
+            cod= (i).codigo
             if(not es_codigo_capitulo(cod)): #No es un capítulo.
-                j = descompuestos.find(cod)
+                j= descompuestos.find(cod)
                 if j!=end():
                     retval[(j).first]= (j).second
 
@@ -131,8 +131,8 @@ class Codigos(dict):
 
     def InsertaReg(self, str_reg, verborrea, quantities_counter):
         strtk= StrTok(str_reg)
-        tipo = (strtk.get_token('|'))[0]
-        cod = strtk.get_token('|')
+        tipo= (strtk.get_token('|'))[0]
+        cod= strtk.get_token('|')
         cod= q_car_d(cod,'\\'); #Quitamos la barra si está al final.
 
         if(tipo=='V' or tipo=='K' or tipo=='L' or
@@ -142,8 +142,8 @@ class Codigos(dict):
             return
 
         if(len(cod)<1): return
-        resto = strtk.resto()
-        i = find(cod)
+        resto= strtk.resto()
+        i= find(cod)
         if(not i):
             i= find(cod+'#')
             if(not i): #El registro no es de capítulo.
@@ -189,7 +189,7 @@ class Codigos(dict):
 
     #not  @brief Devuelve un iterador al capítulo con el código que se pasa como parámetro.
     def findChapter(self, cod):
-        retval = find(cod); #Código
+        retval= find(cod); #Código
         if retval==end():
             retval= find(cod+'#')
         return retval
@@ -217,7 +217,7 @@ class Codigos(dict):
     #not  tipo de concepto al que corresponde el registro.
     def StrTipoConcepto(self, i):
         retval= "sin_tipo"
-        tipo = GetTipoConcepto(i)
+        tipo= GetTipoConcepto(i)
         if(tipo==obra):
             retval= "obra"
         elif(tipo==elemento):
@@ -284,7 +284,7 @@ class Codigos(dict):
     #not  @brief Borra los elementos de self que estan en cods.
     def Borra(self, cods):
         for i in cods:
-            j = find((i).first)
+            j= find((i).first)
             if j: erase(j)
 
 
@@ -294,9 +294,9 @@ class Codigos(dict):
         retval= None
         for i in udsobra:
             Str= StrTok((i).first)
-            scap = Str.get_token('\\')
-            codud = Str.resto()
-            j = find(codud)
+            scap= Str.get_token('\\')
+            codud= Str.resto()
+            j= find(codud)
             if j:
                 retval[(j).first]= (j).second
             else:

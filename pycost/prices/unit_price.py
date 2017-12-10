@@ -30,9 +30,9 @@ class UnitPrice(ms.Measurable):
         super(UnitPrice,self).LeeBC3(r)
 
     def LeeBC3Fase2(self, r, bp):
-        error = False
+        error= False
         if r.Datos().desc.size():
-            tmp = ObtienePunteros(r.Datos().desc,bp,error)
+            tmp= ObtienePunteros(r.Datos().desc,bp,error)
             if not error:
                 components= tmp
             else:
@@ -80,7 +80,7 @@ class UnitPrice(ms.Measurable):
     def WriteSpre(self, os):
         os.write(Codigo() + '|'
            + Unidad() + '|'
-           + Titulo() + '|')
+           + getTitle() + '|')
         components.WriteSpre(os)
 
 
@@ -98,40 +98,40 @@ class UnitPrice(ms.Measurable):
 
 
     def ImprLtxJustPre(self, os):
-        os.write("\\begin{tabular}{l r l p{4cm} r r}" + '\n')
+        doc.append("\\begin{tabular}{l r l p{4cm} r r}" + '\n')
         #Cabecera
-        os.write(ascii2latex(Codigo()) + " & "
-           + ascii2latex(Unidad()) + " & "
-           + ltx_multicolumn(ltx_datos_multicolumn("4","p{7cm}",ascii2latex(self.getLongDescription()))) + ltx_fin_reg + '\n')
-        os.write("Código & Rdto. & Ud. & Descripción & Unit. & Total"
-           + ltx_fin_reg + '\n' + ltx_hline + '\n')
+        doc.append(pylatex_utils.ascii2latex(Codigo()) + " & "
+           + pylatex_utils.ascii2latex(Unidad()) + " & "
+           + pylatex_utils.ltx_multicolumn(pylatex_utils.ltx_datos_multicolumn("4","p{7cm}",pylatex_utils.ascii2latex(self.getLongDescription()))) + pylatex_utils.ltx_fin_reg + '\n')
+        doc.append("Código & Rdto. & Ud. & Descripción & Unit. & Total"
+           + pylatex_utils.ltx_fin_reg + '\n' + pylatex_utils.ltx_hline + '\n')
         #Descomposición
         components.ImprLtxJustPre(os,True); #XXX Here cumulated percentages.
-        os.write("\\end{tabular}" + '\n')
+        doc.append("\\end{tabular}" + '\n')
 
     def ImprLtxCP1(self, os):
-        os.write(ascii2latex(Codigo()) + " & "
-           + ascii2latex(Unidad()) + " & "
-           + ascii2latex(self.getLongDescription()) + " & ")
+        doc.append(pylatex_utils.ascii2latex(Codigo()) + " & "
+           + pylatex_utils.ascii2latex(Unidad()) + " & "
+           + pylatex_utils.ascii2latex(self.getLongDescription()) + " & ")
         components.ImprLtxCP1(os,True,False); #XXX Aqui género.
-        os.write("\\\\" + '\n')
+        doc.append("\\\\" + '\n')
 
     def ImprLtxCP2(self, os):
-        os.write("\\begin{tabular}{l r p{5.5cm} r}" + '\n')
+        doc.append("\\begin{tabular}{l r p{5.5cm} r}" + '\n')
         #Cabecera
-        os.write("Código & Ud. & Descripción & Importe"
-           + ltx_fin_reg + '\n' + ltx_hline + '\n')
-        os.write(ascii2latex(Codigo()) + " & "
-           + ascii2latex(Unidad()) + " & "
-           + ascii2latex(self.getLongDescription()) + " & " + ltx_fin_reg + '\n' + ltx_fin_reg + '\n')
+        doc.append("Código & Ud. & Descripción & Importe"
+           + pylatex_utils.ltx_fin_reg + '\n' + pylatex_utils.ltx_hline + '\n')
+        doc.append(pylatex_utils.ascii2latex(Codigo()) + " & "
+           + pylatex_utils.ascii2latex(Unidad()) + " & "
+           + pylatex_utils.ascii2latex(self.getLongDescription()) + " & " + pylatex_utils.ltx_fin_reg + '\n' + pylatex_utils.ltx_fin_reg + '\n')
         #Descomposición
         components.ImprLtxCP2(os,True); #XXX Here cumulated percentages.
-        os.write("\\end{tabular}" + '\n')
+        doc.append("\\end{tabular}" + '\n')
 
     def WriteHCalc(self, os):
         os.write(Codigo() + tab
-           + ascii2latex(Unidad()) + tab
-           + '"' + ascii2latex(self.getLongDescription()) + '"' + tab
+           + pylatex_utils.ascii2latex(Unidad()) + tab
+           + '"' + pylatex_utils.ascii2latex(self.getLongDescription()) + '"' + tab
            + '"' + StrPrecioEnLetra(True) + '"' + tab
            + StrPrecio() + '\n')
 
