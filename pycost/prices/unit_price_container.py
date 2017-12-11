@@ -102,28 +102,32 @@ class Descompuestos(concept_dict.ConceptDict):
 
     def ImprLtxCP1(self, os):
         if(size()<1): return
-        linea_en_blanco= pylatex_utils.ltx_ampsnd+pylatex_utils.ltx_ampsnd+pylatex_utils.ltx_ampsnd+pylatex_utils.ltx_ampsnd+pylatex_utils.ltx_fin_reg
+        linea_en_blanco= ['','','','','']
         num_campos= 5
         doc.append(pylatex_utils.SmallCommand())
-        doc.append("\\begin{longtable}{|l|l|p{4cm}|p{3cm}|r|}" + '\n'
-           + pylatex_utils.ltx_hline + '\n'
-           + "Código & Ud. & Denominación & \\multicolumn{2}{|c|}{Precio}\\\\"
-           + " & & & en letra & en cifra \\\\" + '\n'
-           + pylatex_utils.ltx_hline + '\n'
-           + pylatex_utils.ltx_endhead + '\n'
-           + pylatex_utils.ltx_hline + '\n'
-           + "\\multicolumn{" + num_campos + "}{|r|}{../..}\\\\\\hline" + '\n'
-           + pylatex_utils.ltx_endfoot + '\n'
-           + pylatex_utils.ltx_hline + '\n'
-           + pylatex_utils.ltx_endlastfoot + '\n')
+        longTableStr= '|l|l|p{4cm}|p{3cm}|r|'
+        headerRow1= ["Código","Ud.","Denominación",(pylatex.Multicolumn(2,align='|c|',data= 'Precio'))]
+        headerRow2= ['','','','en letra', 'en cifra']
+        with doc.create(pylatex.table.LongTable(longTableStr)) as data_table:
+            data_table.add_hline()
+            data_table.add_row(headerRow1)
+            data_table.add_row(headerRow2)
+            data_table.add_hline()
+            data_table.end_table_header()
+            data_table.add_hline()
+            data_table.add_row((MultiColumn(num_campos, align='|r|',
+                                data='../..'),))
+            data_table.add_hline()
+            data_table.end_table_footer()
+            data_table.add_hline()
+            data_table.end_table_last_footer()
         j= begin()
         for j in self:
-            doc.append(linea_en_blanco + '\n')
-            (j).second.ImprLtxCP1(os)
-            doc.append(linea_en_blanco + '\n')
+            data_table.add_row(linea_en_blanco)
+            (j).second.ImprLtxCP1(data_table)
+            data_table.add_row(linea_en_blanco)
 
-        doc.append("\\end{longtable}" + '\n')
-        doc.append(pylatex_utils.ltx_normalsize + '\n')
+        doc.append(pylatex_utils.NormalSizeCommand())
 
     def ImprLtxJustPre(self, os):
         doc.append(pylatex_utils.SmallCommand())

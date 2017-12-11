@@ -19,6 +19,35 @@ class SmallCommand(pylatex.base_classes.CommandBase):
 
     _latex_name = 'small'
 
+class LongTable(pylatex.table.LongTable):
+    """A class with the methods that are not yet implemented
+       in the stable version of PyLatex."""
+    foot = False
+    lastFoot = False
+
+    def end_table_footer(self):
+        r"""End the table foot which will appear on every page."""
+
+        if self.foot:
+            msg = "Table already has a foot"
+            raise TableError(msg)
+
+        self.foot = True
+
+        self.append(pylatex.Command('endfoot'))
+
+    def end_table_last_footer(self):
+        r"""End the table foot which will appear on the last page."""
+
+        if self.lastFoot:
+            msg = "Table already has a last foot"
+            raise TableError(msg)
+
+        self.lastFoot = True
+
+        self.append(pylatex.Command('endlastfoot'))
+
+
 def getLatexSection(parentSection):
     ''' Returns the section to use from this of its ancestor.'''
     if(parentSection == 'root'):

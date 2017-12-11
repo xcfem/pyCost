@@ -18,21 +18,23 @@ class QuantitiesReport(dict):
             Inserta(UnitPriceReport((i).first,(i).second))
 
     def ImprLtx(self, os):
-        if(size()<1): return
-        doc.append("\\begin{longtable}{|l|p{4cm}|r|r|}" + '\n'
-           + "\\hline" + '\n'
-           + "Código & Descripción & Medición & Precio \\\\"
-           + "\\hline" + '\n'
-           + "\\endhead" + '\n'
-           + "\\hline" + '\n'
-           + "\\multicolumn{" + 4 + "}{|r|}{../..}\\\\\\hline" + '\n'
-           + "\\endfoot" + '\n'
-           + "\\hline" + '\n'
-           + "\\endlastfoot" + '\n')
-        for i in self:
-            iu= iuo.UnitPriceReport((i).first,(i).second)
-            iu.ImprLtx(os)
-            doc.append( "\\\\" + '\n')
+        if(size()>0):
+            longTableStr= '|l|p{4cm}|r|r|'
+            headerRow1= ["Código","Descripción.","Medición",'Precio']
+            with doc.create(pylatex.table.LongTable(longTableStr)) as data_table:
+                data_table.add_hline()
+                data_table.add_row(headerRow1)
+                data_table.add_hline()
+                data_table.end_table_header()
+                data_table.add_hline()
+                data_table.add_row((MultiColumn(num_campos, align='|r|',
+                                    data='../..'),))
+                data_table.add_hline()
+                data_table.end_table_footer()
+                data_table.add_hline()
+                data_table.end_table_last_footer()
 
-        doc.append("\\end{longtable}" + '\n')
+                for i in self:
+                    iu= iuo.UnitPriceReport((i).first,(i).second)
+                    iu.ImprLtx(data_table)
 

@@ -72,16 +72,14 @@ class ChapterQuantities(list, epc.EntPyCost):
 
     def writeQuantitiesIntoLatexDocument(self, doc):
         if len(self):
-            doc.append(pylatex_utils.SmallCommand())
-            doc.append("\\begin{longtable}{lrrrrr}" + '\n'
-               + "\\multicolumn{6}{r}{../..}\\\\" + '\n'
-               + "\\endfoot" + '\n'
-               + "\\endlastfoot" + '\n')
-            for i in self:
-                (i).writeQuantitiesIntoLatexDocument(doc)
-            doc.append("\\end{longtable}" + '\n')
-            doc.append(pylatex_utils.ltx_normalsize + '\n')
-
+            num_campos= 6
+            longTableStr= 'lrrrrr'
+            with doc.create(pylatex_utils.LongTable(longTableStr)) as data_table:
+                data_table.add_row((pylatex.table.MultiColumn(num_campos, align='r',data='../..'),))
+                data_table.end_table_footer()
+                data_table.end_table_last_footer()
+                for i in self:
+                    (i).writeQuantitiesIntoLatexDocument(data_table)
 
     def ImprCompLtxPre(self, os, tit, otra, tit_otra):
         if size():

@@ -44,13 +44,14 @@ class UnitPriceQuantitiesBase(epc.EntPyCost):
     def StrPrecioLtx(self):
         return self.PrecioR().EnHumano()
 
-    def printLatexHeader(self, doc, totalr, ancho):
+    def printLatexHeader(self, data_table, totalr, ancho):
         '''Imprime la cabecera para la partida.'''
-        dmc= pylatex_utils.ltx_datos_multicolumn("4",ancho,pylatex_utils.ascii2latex(self.ud.getLongDescription()))
-        doc.append(pylatex_utils.ascii2latex(self.getUnitPriceCode()) + pylatex_utils.ltx_ampsnd
-           + str(totalr) + ' ' + pylatex_utils.ascii2latex(self.UnidadMedida()) + pylatex_utils.ltx_ampsnd
-           + pylatex_utils.ltx_multicolumn(dmc))
-
+        row= [pylatex_utils.ascii2latex(self.getUnitPriceCode())]
+        row.append(str(totalr))
+        row.append(' ' + pylatex_utils.ascii2latex(self.UnidadMedida()))
+        print '******* ancho= ', ancho
+        row.append((pylatex.table.MultiColumn(3,align= ancho,data= pylatex_utils.ascii2latex(self.ud.getLongDescription()))))
+        data_table.add_row(row)
 
     def ImprCompLtxMed(self, doc, otra):
         '''Imprime la partida.'''
@@ -183,18 +184,17 @@ class UnitPriceQuantitiesBase(epc.EntPyCost):
            + pylatex_utils.ltx_textbf(totalr))
 
 
-    def writeQuantitiesIntoLatexDocument(self, doc):
-        linea_en_blanco= pylatex_utils.ltx_ampsnd+pylatex_utils.ltx_ampsnd+pylatex_utils.ltx_ampsnd+pylatex_utils.ltx_ampsnd+pylatex_utils.ltx_ampsnd+pylatex_utils.ltx_fin_reg
-        doc.append(linea_en_blanco + '\n')
+    def writeQuantitiesIntoLatexDocument(self, data_table):
+        linea_en_blanco= ['','','','','','']
+        data_table.add_row(linea_en_blanco)
         totalr= basic_types.EnHumano(self.getTotalR())
-        self.printLatexHeader(doc,totalr,"p{6cm}")
-        doc.append(pylatex_utils.ltx_fin_reg + '\n')
-        self.ImprLtxLeyenda(doc)
-        doc.append(pylatex_utils.ltx_fin_reg + '\n'+ pylatex_utils.ltx_hline + '\n')
-        self.quantities.ImprLtx(doc)
-        self.ImprLtxPie(doc,totalr)
-        doc.append(pylatex_utils.ltx_fin_reg + '\n')
-        doc.append(pylatex_utils.ltx_hline + '\n')
-        doc.append(linea_en_blanco + '\n')
+        self.printLatexHeader(data_table,totalr,'p 6cm')
+        data_table.append(pylatex_utils.ltx_fin_reg + '\n')
+        self.ImprLtxLeyenda(data_table)
+        data_table.add_hline()
+        self.quantities.ImprLtx(data_table)
+        self.ImprLtxPie(data_table,totalr)
+        data_table.add_hline()
+        data_table.add_row(linea_en_blanco)
 
 
