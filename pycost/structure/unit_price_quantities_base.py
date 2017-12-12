@@ -49,8 +49,7 @@ class UnitPriceQuantitiesBase(epc.EntPyCost):
         row= [pylatex_utils.ascii2latex(self.getUnitPriceCode())]
         row.append(str(totalr))
         row.append(' ' + pylatex_utils.ascii2latex(self.UnidadMedida()))
-        print '******* ancho= ', ancho
-        row.append((pylatex.table.MultiColumn(3,align= ancho,data= pylatex_utils.ascii2latex(self.ud.getLongDescription()))))
+        row.append((pylatex.table.MultiColumn(3,align= pylatex.utils.NoEscape(ancho),data= pylatex_utils.ascii2latex(self.ud.getLongDescription()))))
         data_table.add_row(row)
 
     def ImprCompLtxMed(self, doc, otra):
@@ -188,7 +187,7 @@ class UnitPriceQuantitiesBase(epc.EntPyCost):
         linea_en_blanco= ['','','','','','']
         data_table.add_row(linea_en_blanco)
         totalr= basic_types.EnHumano(self.getTotalR())
-        self.printLatexHeader(data_table,totalr,'p 6cm')
+        self.printLatexHeader(data_table,totalr,'p{6cm}')
         data_table.append(pylatex_utils.ltx_fin_reg + '\n')
         self.ImprLtxLeyenda(data_table)
         data_table.add_hline()
