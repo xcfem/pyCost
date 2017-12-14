@@ -17,7 +17,7 @@ class QuantitiesReport(dict):
         for i in otro:
             Inserta(UnitPriceReport((i).first,(i).second))
 
-    def ImprLtx(self, os):
+    def printLtx(self, os):
         if(size()>0):
             longTableStr= '|l|p{4cm}|r|r|'
             headerRow1= ["Código","Descripción.","Medición",'Precio']
@@ -36,5 +36,5 @@ class QuantitiesReport(dict):
 
                 for i in self:
                     iu= iuo.UnitPriceReport((i).first,(i).second)
-                    iu.ImprLtx(data_table)
+                    iu.printLtx(data_table)
 

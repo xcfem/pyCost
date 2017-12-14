@@ -10,7 +10,7 @@ class UnitPriceReport(object):
         return self.ud
     def Medicion(self):
         return self.med_total
-    def ImprLtx(self, os):
+    def printLtx(self, os):
         if ud:
             doc.append(ud.Codigo() + " & "
                + pylatex_utils.ascii2latex(ud.getLongDescription()) + " & "

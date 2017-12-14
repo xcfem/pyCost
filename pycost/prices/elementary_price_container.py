@@ -186,12 +186,12 @@ class ElementaryPrices(concept_dict.ConceptDict):
         for i in self:
             el= ((i).second)
             if el.Tipo() == tipo:
-                el.ImprLtx(os)
+                el.printLtx(os)
 
         doc.append("\\end{longtable}" + '\n')
         doc.append(pylatex_utils.ltx_normalsize + '\n')
 
-    def ImprLtx(self, os):
+    def printLtx(self, os):
         ImprLtxTipo(mdo,os)
         doc.append(pylatex_utils.ltx_newpage + '\n')
         ImprLtxTipo(maq,os)

@@ -33,7 +33,7 @@ def str_tipo(tipo):
 quantitiesCaption= 'Mediciones'
 
 def EnHumano(obj):
-    return str(obj);
+    return "{0:.2f}".format(obj)#str(obj);
 
 # import Currency
 # typedef Currency<3> ppl_dimension

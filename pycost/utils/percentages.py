@@ -28,7 +28,7 @@ class Percentages(epc.EntPyCost):
     def IVA(self, p):
         return ApplyPercentage(p,iva)
 
-    def ImprLtx(self, os, precio_ejec_mat):
+    def printLtx(self, os, precio_ejec_mat):
         doc.append("\\begin{itemize}" + '\n')
         doc.append("\\item Total presupuesto de ejecución material \\dotfill\\ "
            + precio_ejec_mat.EnHumano() + '\n')

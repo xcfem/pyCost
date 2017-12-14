@@ -248,7 +248,7 @@ class Obra(cp.Chapter):
         doc.append("\\Large \\textbf{Presupuesto de Ejecución por Contrata} \\large" + '\n')
         doc.append("\\end{center}" + '\n')
         doc.append("\\vspace{2cm}" + '\n')
-        percentages.ImprLtx(os,PrecioR())
+        percentages.printLtx(os,PrecioR())
         doc.append("\\input{firmas}" + '\n')
 
 
@@ -340,7 +340,7 @@ class Obra(cp.Chapter):
     def ImprLtxInformeObra(self, os):
     #Imprime en LaTeX el informe de obra.
         im= getQuantitiesReport()
-        im.ImprLtx(os)
+        im.printLtx(os)
 
     def WriteHCalc(self, os):
     #Imprime la obra en LaTex.

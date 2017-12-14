@@ -102,7 +102,7 @@ class Descompuestos(concept_dict.ConceptDict):
 
     def ImprLtxCP1(self, os):
         if(size()<1): return
-        linea_en_blanco= ['','','','','']
+        empty_line= ['','','','','']
         num_campos= 5
         doc.append(pylatex_utils.SmallCommand())
         longTableStr= '|l|l|p{4cm}|p{3cm}|r|'
@@ -123,9 +123,9 @@ class Descompuestos(concept_dict.ConceptDict):
             data_table.end_table_last_footer()
         j= begin()
         for j in self:
-            data_table.add_row(linea_en_blanco)
+            data_table.add_row(empty_line)
             (j).second.ImprLtxCP1(data_table)
-            data_table.add_row(linea_en_blanco)
+            data_table.add_row(empty_line)
 
         doc.append(pylatex_utils.NormalSizeCommand())
 

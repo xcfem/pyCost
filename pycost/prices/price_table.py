@@ -80,7 +80,7 @@ class CuaPre(epc.EntPyCost):
 
     #not  @brief Write los precios elementales.
     def ImprLtxElementales(self, os):
-        self.elementos.ImprLtx(os)
+        self.elementos.printLtx(os)
 
 
     #not  @brief Write la justificación de precios.
