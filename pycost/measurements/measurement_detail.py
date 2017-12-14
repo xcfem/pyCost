@@ -62,46 +62,45 @@ class Quantities(list, epy.EntPyCost):
             (i).WriteBC3(os)
 
     def ImprCompLtx(self, os, otra):
-        linea_en_blanco= pylatex_utils.ltx_ampsnd+pylatex_utils.ltx_ampsnd+pylatex_utils.ltx_ampsnd+pylatex_utils.ltx_ampsnd+pylatex_utils.ltx_ampsnd+pylatex_utils.ltx_ampsnd+pylatex_utils.ltx_ampsnd+pylatex_utils.ltx_ampsnd+pylatex_utils.ltx_ampsnd+pylatex_utils.ltx_ampsnd+pylatex_utils.ltx_ampsnd+pylatex_utils.ltx_fin_reg
-        media_linea_en_blanco= pylatex_utils.ltx_ampsnd+pylatex_utils.ltx_ampsnd+pylatex_utils.ltx_ampsnd+pylatex_utils.ltx_ampsnd+pylatex_utils.ltx_ampsnd
+        empty_line= pylatex_utils.ltx_ampsnd+pylatex_utils.ltx_ampsnd+pylatex_utils.ltx_ampsnd+pylatex_utils.ltx_ampsnd+pylatex_utils.ltx_ampsnd+pylatex_utils.ltx_ampsnd+pylatex_utils.ltx_ampsnd+pylatex_utils.ltx_ampsnd+pylatex_utils.ltx_ampsnd+pylatex_utils.ltx_ampsnd+pylatex_utils.ltx_ampsnd+pylatex_utils.ltx_fin_reg
+        media_empty_line= pylatex_utils.ltx_ampsnd+pylatex_utils.ltx_ampsnd+pylatex_utils.ltx_ampsnd+pylatex_utils.ltx_ampsnd+pylatex_utils.ltx_ampsnd
         for i in self:
           for j in otra:
-            (j).ImprLtx(os,"p{1.5cm}")
+            (j).printLtx(os,"p{1.5cm}")
             doc.append(pylatex_utils.ltx_ampsnd)
-            (i).ImprLtx(os,"p{1.5cm}")
+            (i).printLtx(os,"p{1.5cm}")
             doc.append(pylatex_utils.ltx_fin_reg + '\n')
 
         # if i:
         #     for(; i!=end(); i+= 1)
-        #         doc.append(media_linea_en_blanco
+        #         doc.append(media_empty_line
         #         doc.append(pylatex_utils.ltx_ampsnd)
-        #         (i).ImprLtx(os,"p{1.5cm}")
+        #         (i).printLtx(os,"p{1.5cm}")
         #         doc.append(pylatex_utils.ltx_fin_reg + '\n')
 
         # elif j!=end():
         #     for(; j!=otra.end(); j+= 1)
-        #         (j).ImprLtx(os,"p{1.5cm}")
-        #         doc.append(media_linea_en_blanco + pylatex_utils.ltx_fin_reg + '\n'
+        #         (j).printLtx(os,"p{1.5cm}")
+        #         doc.append(media_empty_line + pylatex_utils.ltx_fin_reg + '\n'
 
-        doc.append(linea_en_blanco + '\n')
+        doc.append(empty_line + '\n')
 
     def ImprCompLtx(self, os):
-        linea_en_blanco= pylatex_utils.ltx_ampsnd+pylatex_utils.ltx_ampsnd+pylatex_utils.ltx_ampsnd+pylatex_utils.ltx_ampsnd+pylatex_utils.ltx_ampsnd+pylatex_utils.ltx_ampsnd+pylatex_utils.ltx_ampsnd+pylatex_utils.ltx_ampsnd+pylatex_utils.ltx_ampsnd+pylatex_utils.ltx_ampsnd+pylatex_utils.ltx_ampsnd+pylatex_utils.ltx_fin_reg
-        media_linea_en_blanco= pylatex_utils.ltx_ampsnd+pylatex_utils.ltx_ampsnd+pylatex_utils.ltx_ampsnd+pylatex_utils.ltx_ampsnd+pylatex_utils.ltx_ampsnd+pylatex_utils.ltx_ampsnd
+        empty_line= pylatex_utils.ltx_ampsnd+pylatex_utils.ltx_ampsnd+pylatex_utils.ltx_ampsnd+pylatex_utils.ltx_ampsnd+pylatex_utils.ltx_ampsnd+pylatex_utils.ltx_ampsnd+pylatex_utils.ltx_ampsnd+pylatex_utils.ltx_ampsnd+pylatex_utils.ltx_ampsnd+pylatex_utils.ltx_ampsnd+pylatex_utils.ltx_ampsnd+pylatex_utils.ltx_fin_reg
+        media_empty_line= pylatex_utils.ltx_ampsnd+pylatex_utils.ltx_ampsnd+pylatex_utils.ltx_ampsnd+pylatex_utils.ltx_ampsnd+pylatex_utils.ltx_ampsnd+pylatex_utils.ltx_ampsnd
         for i in self:
-            doc.append(media_linea_en_blanco)
-            (i).ImprLtx(os,"p{1.5cm}")
+            doc.append(media_empty_line)
+            (i).printLtx(os,"p{1.5cm}")
             doc.append(pylatex_utils.ltx_fin_reg + '\n')
 
-        doc.append(linea_en_blanco + '\n')
+        doc.append(empty_line + '\n')
 
-    def ImprLtx(self, doc):
-        linea_en_blanco= pylatex_utils.ltx_ampsnd+pylatex_utils.ltx_ampsnd+pylatex_utils.ltx_ampsnd+pylatex_utils.ltx_ampsnd+pylatex_utils.ltx_ampsnd+pylatex_utils.ltx_fin_reg
+    def printLtx(self, data_table):
+        empty_line= ['', '', '', '', '', '']
         for i in self:
-            (i).ImprLtx(doc,"p{3.5cm}")
-            doc.append(pylatex_utils.ltx_fin_reg + '\n')
+            (i).printLtx(data_table,"p{3.5cm}")
 
-        doc.append(linea_en_blanco + '\n')
+        data_table.add_row(empty_line)
 
     def WriteHCalc(self, os):
         for i in self:

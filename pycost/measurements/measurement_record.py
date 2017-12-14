@@ -94,24 +94,26 @@ class MeasurementRecord(epc.EntPyCost):
 
 
     #not  @brief Imprime la medición en Latex.
-    def ImprLtx(self, doc, ancho):
-
-        doc.append(pylatex_utils.ltx_multicolumn(pylatex_utils.ltx_datos_multicolumn("1",ancho,pylatex_utils.ascii2latex(self.comentario))) + pylatex_utils.ltx_ampsnd)
+    def printLtx(self, data_table, ancho):
+        row= [pylatex.table.MultiColumn(1,align= pylatex.utils.NoEscape(ancho),data= pylatex_utils.ascii2latex(self.comentario))]
         zero= basic_types.ppl_dimension(0.0);
         str_u= ''
-        if (self.UnidadesR()!=zero): str_u= basic_types.EnHumano(self.UnidadesR())
+        if (self.UnidadesR()!=zero):
+            str_u= basic_types.EnHumano(self.UnidadesR())
+        row.append(str_u)
         str_l= ''
         if (self.LargoR()!=zero): str_l= basic_types.EnHumano(self.LargoR())
+        row.append(str_l)
         str_a= ''
         if (self.AnchoR()!=zero): str_a= basic_types.EnHumano(self.AnchoR())
+        row.append(str_a)
         str_alt= ''
         if (self.AltoR()!=zero): str_alt= basic_types.EnHumano(self.AltoR())
+        row.append(str_alt)
         total= self.getTotalR()
         if(total!=zero): str_t= basic_types.EnHumano(total)
-        doc.append(str_u + pylatex_utils.ltx_ampsnd
-           + str_l + pylatex_utils.ltx_ampsnd + str_a + pylatex_utils.ltx_ampsnd + str_alt + pylatex_utils.ltx_ampsnd
-                   + str_t)
-
+        row.append(str_t)
+        data_table.add_row(row)
 
     def WriteHCalc(self, os):
         os.write('"' + self.comentario + '"' + tab)

@@ -54,8 +54,8 @@ class UnitPriceQuantitiesBase(epc.EntPyCost):
 
     def ImprCompLtxMed(self, doc, otra):
         '''Imprime la partida.'''
-        linea_en_blanco= pylatex_utils.ltx_ampsnd+pylatex_utils.ltx_ampsnd+pylatex_utils.ltx_ampsnd+pylatex_utils.ltx_ampsnd+pylatex_utils.ltx_ampsnd+pylatex_utils.ltx_ampsnd+pylatex_utils.ltx_ampsnd+pylatex_utils.ltx_ampsnd+pylatex_utils.ltx_ampsnd+pylatex_utils.ltx_ampsnd+pylatex_utils.ltx_ampsnd+pylatex_utils.ltx_fin_reg
-        doc.append(linea_en_blanco + '\n')
+        empty_line= pylatex_utils.ltx_ampsnd+pylatex_utils.ltx_ampsnd+pylatex_utils.ltx_ampsnd+pylatex_utils.ltx_ampsnd+pylatex_utils.ltx_ampsnd+pylatex_utils.ltx_ampsnd+pylatex_utils.ltx_ampsnd+pylatex_utils.ltx_ampsnd+pylatex_utils.ltx_ampsnd+pylatex_utils.ltx_ampsnd+pylatex_utils.ltx_ampsnd+pylatex_utils.ltx_fin_reg
+        doc.append(empty_line + '\n')
         totalr_otra= otra.TotalR().EnHumano()
         otra.printLatexHeader(os,totalr_otra,"p{4.5cm}|")
         doc.append(pylatex_utils.ltx_ampsnd)
@@ -72,29 +72,29 @@ class UnitPriceQuantitiesBase(epc.EntPyCost):
         ImprLtxPie(os,totalr_esta)
         doc.append(pylatex_utils.ltx_fin_reg + '\n')
         doc.append(pylatex_utils.ltx_hline + '\n')
-        doc.append(linea_en_blanco + '\n')
+        doc.append(empty_line + '\n')
 
 
     #not  @brief Imprime la partida.
     def ImprCompLtxMed(self, os):
-        linea_en_blanco= pylatex_utils.ltx_ampsnd+pylatex_utils.ltx_ampsnd+pylatex_utils.ltx_ampsnd+pylatex_utils.ltx_ampsnd+pylatex_utils.ltx_ampsnd+pylatex_utils.ltx_ampsnd+pylatex_utils.ltx_ampsnd+pylatex_utils.ltx_ampsnd+pylatex_utils.ltx_ampsnd+pylatex_utils.ltx_ampsnd+pylatex_utils.ltx_ampsnd+pylatex_utils.ltx_fin_reg
-        media_linea_en_blanco= pylatex_utils.ltx_ampsnd+pylatex_utils.ltx_ampsnd+pylatex_utils.ltx_ampsnd+pylatex_utils.ltx_ampsnd+pylatex_utils.ltx_ampsnd+pylatex_utils.ltx_ampsnd
-        doc.append(linea_en_blanco + '\n')
-        doc.append(media_linea_en_blanco)
+        empty_line= pylatex_utils.ltx_ampsnd+pylatex_utils.ltx_ampsnd+pylatex_utils.ltx_ampsnd+pylatex_utils.ltx_ampsnd+pylatex_utils.ltx_ampsnd+pylatex_utils.ltx_ampsnd+pylatex_utils.ltx_ampsnd+pylatex_utils.ltx_ampsnd+pylatex_utils.ltx_ampsnd+pylatex_utils.ltx_ampsnd+pylatex_utils.ltx_ampsnd+pylatex_utils.ltx_fin_reg
+        media_empty_line= pylatex_utils.ltx_ampsnd+pylatex_utils.ltx_ampsnd+pylatex_utils.ltx_ampsnd+pylatex_utils.ltx_ampsnd+pylatex_utils.ltx_ampsnd+pylatex_utils.ltx_ampsnd
+        doc.append(empty_line + '\n')
+        doc.append(media_empty_line)
         totalr= self.TotalR().EnHumano()
         printLatexHeader(os,totalr,"p{4.5cm}")
         doc.append(pylatex_utils.ltx_fin_reg + '\n')
         #ImprLtxLeyenda(doc)
         #doc.append(pylatex_utils.ltx_ampsnd
-        doc.append(media_linea_en_blanco)
+        doc.append(media_empty_line)
         ImprLtxLeyenda(doc)
         doc.append(pylatex_utils.ltx_fin_reg + '\n' + pylatex_utils.ltx_hline + '\n')
         quantities.ImprCompLtx(os)
-        doc.append(media_linea_en_blanco)
+        doc.append(media_empty_line)
         ImprLtxPie(os,totalr)
         doc.append(pylatex_utils.ltx_fin_reg + '\n')
         doc.append(pylatex_utils.ltx_hline + '\n')
-        doc.append(linea_en_blanco + '\n')
+        doc.append(empty_line + '\n')
 
 
     def printLatexHeaderPre(self, os, totalr, ancho):
@@ -103,8 +103,8 @@ class UnitPriceQuantitiesBase(epc.EntPyCost):
            + pylatex_utils.ltx_multicolumn(pylatex_utils.ltx_datos_multicolumn("1",ancho,pylatex_utils.ascii2latex(self.ud.getLongDescription()()))))
 
     def ImprCompLtxPre(self, os, otra):
-        linea_en_blanco= pylatex_utils.ltx_ampsnd+pylatex_utils.ltx_ampsnd+pylatex_utils.ltx_ampsnd+pylatex_utils.ltx_ampsnd+pylatex_utils.ltx_ampsnd+pylatex_utils.ltx_ampsnd+pylatex_utils.ltx_ampsnd+pylatex_utils.ltx_ampsnd+pylatex_utils.ltx_ampsnd+pylatex_utils.ltx_fin_reg
-        doc.append(linea_en_blanco + '\n')
+        empty_line= pylatex_utils.ltx_ampsnd+pylatex_utils.ltx_ampsnd+pylatex_utils.ltx_ampsnd+pylatex_utils.ltx_ampsnd+pylatex_utils.ltx_ampsnd+pylatex_utils.ltx_ampsnd+pylatex_utils.ltx_ampsnd+pylatex_utils.ltx_ampsnd+pylatex_utils.ltx_ampsnd+pylatex_utils.ltx_fin_reg
+        doc.append(empty_line + '\n')
         totalr_otra= otra.TotalR().EnHumano()
         otra.printLatexHeaderPre(os,totalr_otra,"p{2.5cm}")
         doc.append(pylatex_utils.ltx_ampsnd
@@ -115,28 +115,28 @@ class UnitPriceQuantitiesBase(epc.EntPyCost):
         doc.append(pylatex_utils.ltx_ampsnd
            + StrPrecioLtxUd() + pylatex_utils.ltx_ampsnd
            + StrPrecioLtx() + pylatex_utils.ltx_fin_reg + '\n')
-        doc.append(linea_en_blanco + '\n')
+        doc.append(empty_line + '\n')
 
     def ImprCompLtxPre(self, os):
-        linea_en_blanco= pylatex_utils.ltx_ampsnd+pylatex_utils.ltx_ampsnd+pylatex_utils.ltx_ampsnd+pylatex_utils.ltx_ampsnd+pylatex_utils.ltx_ampsnd+pylatex_utils.ltx_ampsnd+pylatex_utils.ltx_ampsnd+pylatex_utils.ltx_ampsnd+pylatex_utils.ltx_ampsnd+pylatex_utils.ltx_fin_reg
-        media_linea_en_blanco= pylatex_utils.ltx_ampsnd+pylatex_utils.ltx_ampsnd+pylatex_utils.ltx_ampsnd+pylatex_utils.ltx_ampsnd+pylatex_utils.ltx_ampsnd
-        doc.append(linea_en_blanco + '\n')
-        doc.append(media_linea_en_blanco)
+        empty_line= pylatex_utils.ltx_ampsnd+pylatex_utils.ltx_ampsnd+pylatex_utils.ltx_ampsnd+pylatex_utils.ltx_ampsnd+pylatex_utils.ltx_ampsnd+pylatex_utils.ltx_ampsnd+pylatex_utils.ltx_ampsnd+pylatex_utils.ltx_ampsnd+pylatex_utils.ltx_ampsnd+pylatex_utils.ltx_fin_reg
+        media_empty_line= pylatex_utils.ltx_ampsnd+pylatex_utils.ltx_ampsnd+pylatex_utils.ltx_ampsnd+pylatex_utils.ltx_ampsnd+pylatex_utils.ltx_ampsnd
+        doc.append(empty_line + '\n')
+        doc.append(media_empty_line)
         totalr_med= self.TotalR().EnHumano()
         printLatexHeaderPre(os,totalr_med,"p{2.5cm}")
         doc.append(pylatex_utils.ltx_ampsnd
            + StrPrecioLtxUd() + pylatex_utils.ltx_ampsnd
            + StrPrecioLtx() + pylatex_utils.ltx_fin_reg + '\n')
-        doc.append(linea_en_blanco + '\n')
+        doc.append(empty_line + '\n')
 
-    def ImprLtxPre(self, os):
-        linea_en_blanco= pylatex_utils.ltx_ampsnd+pylatex_utils.ltx_ampsnd+pylatex_utils.ltx_ampsnd+pylatex_utils.ltx_ampsnd+pylatex_utils.ltx_fin_reg
+    def ImprLtxPre(self, doc):
+        empty_line= pylatex_utils.ltx_ampsnd+pylatex_utils.ltx_ampsnd+pylatex_utils.ltx_ampsnd+pylatex_utils.ltx_ampsnd+pylatex_utils.ltx_fin_reg
         totalr_med= TotalR().EnHumano()
         printLatexHeaderPre(os,totalr_med,"p{5cm}")
         doc.append(pylatex_utils.ltx_ampsnd
            + StrPrecioLtxUd() + pylatex_utils.ltx_ampsnd
            + StrPrecioLtx() + pylatex_utils.ltx_fin_reg + '\n')
-        doc.append(linea_en_blanco + '\n')
+        doc.append(empty_line + '\n')
 
     #HCalc
     def WriteHCalcMed(self, os):
@@ -168,14 +168,8 @@ class UnitPriceQuantitiesBase(epc.EntPyCost):
         os.write('|' + endl_msdos)
 
     @staticmethod
-    def ImprLtxLeyenda(doc):
-        doc.append("Texto" + pylatex_utils.ltx_ampsnd
-           + "Unidades" + pylatex_utils.ltx_ampsnd
-           + "Largo" + pylatex_utils.ltx_ampsnd
-           + "Ancho" + pylatex_utils.ltx_ampsnd
-           + "Alto" + pylatex_utils.ltx_ampsnd
-           + "Parcial")
-
+    def printLtxColumnHeaders(data_table):
+        data_table.add_row(["Texto","Unidades", "Largo", "Ancho","Alto","Parcial"])
 
     @staticmethod
     def ImprLtxPie(doc, totalr):
@@ -184,16 +178,16 @@ class UnitPriceQuantitiesBase(epc.EntPyCost):
 
 
     def writeQuantitiesIntoLatexDocument(self, data_table):
-        linea_en_blanco= ['','','','','','']
-        data_table.add_row(linea_en_blanco)
+        empty_line= ['','','','','','']
+        data_table.add_row(empty_line)
         totalr= basic_types.EnHumano(self.getTotalR())
         self.printLatexHeader(data_table,totalr,'p{6cm}')
-        data_table.append(pylatex_utils.ltx_fin_reg + '\n')
-        self.ImprLtxLeyenda(data_table)
+        #data_table.append(pylatex_utils.ltx_fin_reg + '\n')
+        self.printLtxColumnHeaders(data_table)
         data_table.add_hline()
-        self.quantities.ImprLtx(data_table)
+        self.quantities.printLtx(data_table)
         self.ImprLtxPie(data_table,totalr)
         data_table.add_hline()
-        data_table.add_row(linea_en_blanco)
+        data_table.add_row(empty_line)
 
 
