@@ -80,6 +80,7 @@ class ChapterQuantities(list, epc.EntPyCost):
                 data_table.end_table_last_footer()
                 for i in self:
                     (i).writeQuantitiesIntoLatexDocument(data_table)
+            doc.append(pylatex.Command('newpage'))
 
     def ImprCompLtxPre(self, os, tit, otra, tit_otra):
         if size():

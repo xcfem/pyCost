@@ -49,7 +49,7 @@ class UnitPriceQuantitiesBase(epc.EntPyCost):
         row= [pylatex_utils.ascii2latex(self.getUnitPriceCode())]
         row.append(str(totalr))
         row.append(' ' + pylatex_utils.ascii2latex(self.UnidadMedida()))
-        row.append((pylatex.table.MultiColumn(3,align= pylatex.utils.NoEscape(ancho),data= pylatex_utils.ascii2latex(self.ud.getLongDescription()))))
+        row.append((pylatex.table.MultiColumn(3,align= pylatex.utils.NoEscape(ancho),data= pylatex.utils.NoEscape('\\scriptsize '+pylatex_utils.ascii2latex(self.ud.getLongDescription())+ '\\normalsize'))))
         data_table.add_row(row)
 
     def ImprCompLtxMed(self, doc, otra):
@@ -172,9 +172,8 @@ class UnitPriceQuantitiesBase(epc.EntPyCost):
         data_table.add_row(["Texto","Unidades", "Largo", "Ancho","Alto","Parcial"])
 
     @staticmethod
-    def ImprLtxPie(doc, totalr):
-        doc.append(pylatex_utils.ltx_multicolumn(pylatex_utils.ltx_datos_multicolumn("5","r","Suma "+ pylatex_utils.ltx_ldots)) + pylatex_utils.ltx_ampsnd
-           + pylatex_utils.ltx_textbf(totalr))
+    def ImprLtxPie(data_table, totalr):
+        data_table.add_row([pylatex.table.MultiColumn(5,align= 'r',data= pylatex.NoEscape("Suma\\ldots")),pylatex.utils.bold(totalr)])
 
 
     def writeQuantitiesIntoLatexDocument(self, data_table):

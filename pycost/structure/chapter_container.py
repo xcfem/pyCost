@@ -153,9 +153,9 @@ class Subcapitulos(list, epc.EntPyCost):
             j= otro[k]
             i.ImprCompLtxMed(os,sect,j)
 
-    def writeQuantitiesIntoLatexDocument(self, doc, sect):
+    def writeQuantitiesIntoLatexDocument(self, doc, sectName):
         for j in self:
-            (j).writeQuantitiesIntoLatexDocument(doc,sect)
+            (j).writeQuantitiesIntoLatexDocument(doc,sectName)
 
     def ImprLtxCP1(self, os, sect):
         for j in self:

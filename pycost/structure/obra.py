@@ -267,8 +267,6 @@ class Obra(cp.Chapter):
         ImprLtxPresContrata(os)
 
     def writeQuantitiesIntoLatexDocument(self, doc):
-        doc.create(pylatex_utils.Part(basic_types.quantitiesCaption) + '\n')
-        #doc.create(pylatex_utils.ltx_parttoc + '\n')
         super(Obra,self).writeQuantitiesIntoLatexDocument(doc,'root')
 
     def ImprCompLtxMed(self, otra, os):
@@ -329,7 +327,7 @@ class Obra(cp.Chapter):
 
     def getLatexDocument(self):
         '''get the construction budget in LaTeX format.'''
-        retval= pylatex.Document()
+        retval= pylatex.Document(documentclass= 'book')
         self.writeQuantitiesIntoLatexDocument(retval) #Quantities.
         # self.ImprLtxCP(os) #Cuadros de precios.
         # self.ImprLtxPreParc(os) #Presupuestos parciales.

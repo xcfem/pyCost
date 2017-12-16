@@ -10,6 +10,7 @@ from pycost.prices import unit_price_container
 
 import pylatex
 from pycost.utils import pylatex_utils
+from pycost.utils import basic_types
 
 class Chapter(bc3_entity.EntBC3):
     def __init__(self, cod= "CapSinCod", tit= "CapSinTit", factor= 1.0, productionRate= 1.0):
@@ -31,6 +32,16 @@ class Chapter(bc3_entity.EntBC3):
         return self.subcapitulos
     def getQuantities(self):
         return self.quantities
+    def hasQuantities(self):
+        retval= False
+        if(self.quantities):
+            retval= True
+        else:
+            for s in self.subcapitulos:
+                if(s.hasQuantities()):
+                    retval= True
+                    break
+        return retval
     def WriteQuantities(os, pos=""):
         self.quantities.Write(os,CodigoBC3(),pos)
     def WriteSubChapters(os, primero= "False", pos=""):
@@ -127,13 +138,18 @@ class Chapter(bc3_entity.EntBC3):
         lmsg.error("aqui 1: " + getTitle() + ' ' + subcapitulos.size() + " subcapítulos" + '\n')
         lmsg.error("aqui 2: " + otro.getTitle() + ' ' + otro.subcapitulos.size() + " subcapítulos" + '\n')
         subcapitulos.ImprCompLtxMed(os,pylatex_utils.getLatexSection(sect), otro.subcapitulos)
-    def writeQuantitiesIntoLatexDocument(self, doc, sect):
-        if sect!='root':
-            doc.create(pylatex.section.Section(self.getTitle()))
-        self.quantities.writeQuantitiesIntoLatexDocument(doc)
-        if len(self.quantities):
-            doc.append("\\newpage" + '\n')
-        self.subcapitulos.writeQuantitiesIntoLatexDocument(doc,pylatex_utils.getLatexSection(sect))
+    def writeQuantitiesIntoLatexDocument(self, doc, parentSection):
+        if(self.hasQuantities()):
+            sectName= pylatex_utils.getLatexSection(parentSection)
+            caption= basic_types.quantitiesCaption
+            if(sectName!='part'):
+              caption= self.getTitle()
+            print '**** sectName= ', sectName, ' caption= ', caption
+            docPart= pylatex_utils.getPyLatexSection(sectName,caption)
+            self.quantities.writeQuantitiesIntoLatexDocument(docPart)
+            self.subcapitulos.writeQuantitiesIntoLatexDocument(docPart,sectName)
+            doc.append(docPart)
+        
     def ImprLtxCP1(self, os, sect):
         if(TieneDescompuestos()):
             if sect!='root':
