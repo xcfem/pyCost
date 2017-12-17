@@ -6,17 +6,29 @@ from moneyed import Money
 from moneyed.localization import format_money
 from decimal import getcontext, Decimal
 
-def ppl_dimension(dim, prec= 3):
-    getcontext().prec= prec
-    return Decimal(dim)
+dimensionPrecision= 3
+dimensionPlaces= Decimal(10) ** -dimensionPrecision
+dimensionFormatString= '{0:.'+str(dimensionPrecision)+'f}'
 
-def ppl_price(price, prec= 2):
-    getcontext().prec= prec
-    return Decimal(dim)
+def ppl_dimension(dim, prec= dimensionPrecision):
+    txtDim=  dimensionFormatString.format(dim)
+    return Decimal(txtDim)
+
+pricePrecision= 3
+pricePlaces= Decimal(10) ** -pricePrecision
+priceFormatString= '{0:.'+str(pricePrecision)+'f}'
+
+def ppl_price(price, prec= pricePrecision):
+    txtDim=  dimensionFormatString.format(dim)
+    return Decimal(txtDim)
     
-def ppl_percentage(dim, prec= 3):
-    getcontext().prec= prec
-    return Decimal(dim)
+percentagePrecision= 3
+percentagePlaces= Decimal(10) ** -percentagePrecision
+percentageFormatString= '{0:.'+str(percentagePrecision)+'f}'
+
+def ppl_percentage(dim, prec= percentagePrecision):
+    txtDim=  dimensionFormatString.format(dim)
+    return Decimal(txtDim)
 
 def str_tipo(tipo):
     retval= ''
@@ -32,8 +44,9 @@ def str_tipo(tipo):
 
 quantitiesCaption= 'Mediciones'
 
-def EnHumano(obj):
-    return "{0:.2f}".format(obj)#str(obj);
+def EnHumano(obj,decPlaces= 3):
+    formatString= '{0:.'+str(decPlaces)+'f}'
+    return formatString.format(obj)#str(obj);
 
 # import Currency
 # typedef Currency<3> ppl_dimension

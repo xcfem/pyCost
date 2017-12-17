@@ -62,8 +62,8 @@ class Quantities(list, epy.EntPyCost):
             (i).WriteBC3(os)
 
     def ImprCompLtx(self, os, otra):
-        empty_line= pylatex_utils.ltx_ampsnd+pylatex_utils.ltx_ampsnd+pylatex_utils.ltx_ampsnd+pylatex_utils.ltx_ampsnd+pylatex_utils.ltx_ampsnd+pylatex_utils.ltx_ampsnd+pylatex_utils.ltx_ampsnd+pylatex_utils.ltx_ampsnd+pylatex_utils.ltx_ampsnd+pylatex_utils.ltx_ampsnd+pylatex_utils.ltx_ampsnd+pylatex_utils.ltx_fin_reg
-        media_empty_line= pylatex_utils.ltx_ampsnd+pylatex_utils.ltx_ampsnd+pylatex_utils.ltx_ampsnd+pylatex_utils.ltx_ampsnd+pylatex_utils.ltx_ampsnd
+        empty_line= ['','', '', '', '', '', '', '', '', '', '']
+        media_empty_line= ['','', '', '', '']
         for i in self:
           for j in otra:
             (j).printLtx(os,"p{1.5cm}")
@@ -86,8 +86,8 @@ class Quantities(list, epy.EntPyCost):
         doc.append(empty_line + '\n')
 
     def ImprCompLtx(self, os):
-        empty_line= pylatex_utils.ltx_ampsnd+pylatex_utils.ltx_ampsnd+pylatex_utils.ltx_ampsnd+pylatex_utils.ltx_ampsnd+pylatex_utils.ltx_ampsnd+pylatex_utils.ltx_ampsnd+pylatex_utils.ltx_ampsnd+pylatex_utils.ltx_ampsnd+pylatex_utils.ltx_ampsnd+pylatex_utils.ltx_ampsnd+pylatex_utils.ltx_ampsnd+pylatex_utils.ltx_fin_reg
-        media_empty_line= pylatex_utils.ltx_ampsnd+pylatex_utils.ltx_ampsnd+pylatex_utils.ltx_ampsnd+pylatex_utils.ltx_ampsnd+pylatex_utils.ltx_ampsnd+pylatex_utils.ltx_ampsnd
+        empty_line= ['','', '', '', '', '', '', '', '', '', '']
+        media_empty_line= ['','', '', '', '', '']
         for i in self:
             doc.append(media_empty_line)
             (i).printLtx(os,"p{1.5cm}")

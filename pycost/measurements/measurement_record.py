@@ -58,19 +58,19 @@ class MeasurementRecord(epc.EntPyCost):
 
 
     def getTotalR(self):
-        if(self.unidades==0.0) and (self.largo==0.0) and (self.ancho==0.0) and (self.alto==0.0):
-            return basic_types.ppl_dimension(0.0)
-        retval= basic_types.ppl_dimension(1.0)
+        retval= basic_types.ppl_dimension(0.0)
         u= self.UnidadesR()
         l= self.LargoR()
         a= self.AnchoR()
         h= self.AltoR()
         zero= basic_types.ppl_dimension(0.0)
-        if(u!=zero): retval*= u
-        if(l!=zero): retval*= l
-        if(a!=zero): retval*= a
-        if(h!=zero): retval*= h
-        return retval
+        if(u!=zero) or (l!=zero) or (a!=zero) or (h!=zero):
+            retval= basic_types.ppl_dimension(1.0)
+            if(u!=zero): retval*= u
+            if(l!=zero): retval*= l
+            if(a!=zero): retval*= a
+            if(h!=zero): retval*= h
+        return retval.quantize(basic_types.dimensionPlaces)
 
     def LeeBC3(self, m):
         self.comentario= m.med.comentario
