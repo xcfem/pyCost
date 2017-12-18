@@ -120,7 +120,7 @@ def ltx_input(doc, str):
     doc.append('\\input{' + str + '}')
 
 # Estructura
-ltx_parttoc= '\\parttoc'
+ltx_parttoc= pylatex.Command('parttoc')
 
 def ltx_part(doc,  str):
     doc.append('\\part{' + str + '}')

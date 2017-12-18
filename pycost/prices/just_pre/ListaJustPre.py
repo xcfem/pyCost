@@ -91,7 +91,7 @@ class ListaJustPre(object):
                + pylatex_utils.ltx_fin_reg + '\n')
 
 
-    def ImprLtxCP2(self, os):
+    def writePriceTableTwoIntoLatexDocument(self, os):
         total= self.getTotal()
         rnd= Redondeo()
         total_rnd= self.getTotalRnd()
@@ -104,11 +104,11 @@ class ListaJustPre(object):
                + pylatex_utils.ltx_fin_reg + '\n')
 
         else:
-            mano_de_obra.ImprLtxCP2(os)
-            materiales.ImprLtxCP2(os)
-            maquinaria.ImprLtxCP2(os)
-            otros.ImprLtxCP2(os)
-            percentages.ImprLtxCP2Porc(os)
+            mano_de_obra.writePriceTableTwoIntoLatexDocument(os)
+            materiales.writePriceTableTwoIntoLatexDocument(os)
+            maquinaria.writePriceTableTwoIntoLatexDocument(os)
+            otros.writePriceTableTwoIntoLatexDocument(os)
+            percentages.writePriceTableTwoIntoLatexDocumentPorc(os)
             #Suma
             doc.append(pylatex_utils.ltx_fin_reg + '\n')
             doc.append(" & & " + "Suma" + pylatex_utils.ltx_ldots + " & "
@@ -124,7 +124,7 @@ class ListaJustPre(object):
 
 
 
-    def ImprLtxCP1(self, os, genero):
+    def writePriceTableOneIntoLatexDocument(self, os, genero):
         doc.append(StrPrecioEnLetra(genero) + " & "
            + StrPrecioLtx())
 

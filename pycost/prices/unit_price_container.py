@@ -6,7 +6,9 @@
 
 import elementary_price_container
 import unit_price
+import pylatex
 from pycost.utils import concept_dict
+from pycost.utils import pylatex_utils
 
 class Descompuestos(concept_dict.ConceptDict):
     '''Unidades de obra.'''
@@ -49,12 +51,12 @@ class Descompuestos(concept_dict.ConceptDict):
         return retval
 
     def WriteSpre(self, os):
-        for j in self:
-            (j).second.WriteSpre(os)
+        for j in self.map.keys():
+            self.map[j].WriteSpre(os)
 
     def AsignaFactor(self, f):
-        for j in self:
-            (j).second.AsignaFactor(f)
+        for j in self.map.keys():
+            self.map[j].AsignaFactor(f)
 
     def LeeSpre(self, iS, elementos):
         if iS.peek()!= 26:
@@ -100,53 +102,51 @@ class Descompuestos(concept_dict.ConceptDict):
         getline(iS,resto,'\n')
 
 
-    def ImprLtxCP1(self, os):
-        if(size()<1): return
-        empty_line= ['','','','','']
-        num_campos= 5
-        doc.append(pylatex_utils.SmallCommand())
-        longTableStr= '|l|l|p{4cm}|p{3cm}|r|'
-        headerRow1= ["Código","Ud.","Denominación",(pylatex.Multicolumn(2,align='|c|',data= 'Precio'))]
-        headerRow2= ['','','','en letra', 'en cifra']
-        with doc.create(pylatex.table.LongTable(longTableStr)) as data_table:
-            data_table.add_hline()
-            data_table.add_row(headerRow1)
-            data_table.add_row(headerRow2)
-            data_table.add_hline()
-            data_table.end_table_header()
-            data_table.add_hline()
-            data_table.add_row((MultiColumn(num_campos, align='|r|',
-                                data='../..'),))
-            data_table.add_hline()
-            data_table.end_table_footer()
-            data_table.add_hline()
-            data_table.end_table_last_footer()
-        j= begin()
-        for j in self:
-            data_table.add_row(empty_line)
-            (j).second.ImprLtxCP1(data_table)
-            data_table.add_row(empty_line)
+    def writePriceTableOneIntoLatexDocument(self, doc):
+        if(len(self)>=1):
+            empty_line= ['','','','','']
+            num_campos= 5
+            doc.append(pylatex_utils.SmallCommand())
+            longTableStr= '|l|l|p{4cm}|p{3cm}|r|'
+            headerRow1= [u'Código','Ud.',u'Denominación',(pylatex.table.MultiColumn(2,align='|c|',data= 'Precio'))]
+            headerRow2= ['','','','en letra', 'en cifra']
+            with doc.create(pylatex_utils.LongTable(longTableStr)) as data_table:
+                data_table.add_hline()
+                data_table.add_row(headerRow1)
+                data_table.add_row(headerRow2)
+                data_table.add_hline()
+                data_table.end_table_header()
+                data_table.add_hline()
+                data_table.add_row((pylatex.table.MultiColumn(num_campos, align='|r|',data='../..'),))
+                data_table.add_hline()
+                data_table.end_table_footer()
+                data_table.add_hline()
+                data_table.end_table_last_footer()
+            for j in self.map.keys():
+                data_table.add_row(empty_line)
+                self.map[j].writePriceTableOneIntoLatexDocument(data_table)
+                data_table.add_row(empty_line)
 
-        doc.append(pylatex_utils.NormalSizeCommand())
+            doc.append(pylatex_utils.NormalSizeCommand())
 
     def ImprLtxJustPre(self, os):
         doc.append(pylatex_utils.SmallCommand())
         doc.append("\\begin{longtable}{l}" + '\n')
-        for j in self:
-            (j).second.ImprLtxJustPre(os)
+        for j in self.map.keys():
+            self.map[j].ImprLtxJustPre(os)
             doc.append(pylatex_utils.ltx_fin_reg + '\n')
             doc.append(pylatex_utils.ltx_fin_reg + '\n')
 
         doc.append("\\end{longtable}" + '\n')
         doc.append(pylatex_utils.ltx_normalsize + '\n')
 
-    def ImprLtxCP2(self, os):
+    def writePriceTableTwoIntoLatexDocument(self, os):
         if(size()<1): return
         #doc.append(pylatex_utils.ltx_star_.pyapter("Cuadro de precios no. 2") + '\n'
         doc.append(pylatex_utils.SmallCommand())
         doc.append("\\begin{longtable}{l}" + '\n')
-        for j in self:
-            (j).second.ImprLtxCP2(os)
+        for j in self.map.keys():
+            self.map[j].writePriceTableTwoIntoLatexDocument(os)
             doc.append(pylatex_utils.ltx_fin_reg + '\n')
             doc.append(pylatex_utils.ltx_fin_reg + '\n')
 
@@ -159,8 +159,8 @@ class Descompuestos(concept_dict.ConceptDict):
            + "Denominación" + tab
            + "Precio en letra" + tab
            + "Precio en cifra" + '\n')
-        for j in self:
-            (j).second.WriteHCalc(os)
+        for j in self.map.keys():
+            self.map[j].WriteHCalc(os)
 
 
 

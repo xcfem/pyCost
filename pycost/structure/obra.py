@@ -34,7 +34,7 @@ class Obra(cp.Chapter):
         return retval
 
     def CodigoBC3(self):
-        return Chapter.CodigoBC3() + "#"
+        return super(Obra,self).CodigoBC3() + "#"
 
     def newChapter(self, cap_padre, cap):
         ''' Agrega el capítulo que se pasa como
@@ -273,55 +273,57 @@ class Obra(cp.Chapter):
         doc.create(pylatex_utils.ltx_part(basic_types.quantitesCaption) + '\n')
         doc.create(pylatex_utils.ltx_parttoc + '\n')
         doc.create(pylatex_utils.ltx_begin("landscape") + '\n')
-        Chapter.ImprCompLtxMed(os,'root',otra)
+        super(Obra,self).ImprCompLtxMed(os,'root',otra)
         doc.create(pylatex_utils.ltx_end("landscape") + '\n')
 
-    def ImprLtxCP1(self, os):
-        doc.create(pylatex_utils.ltx_part("Cuadro de precios no. 1") + '\n')
-        doc.create(pylatex_utils.ltx_parttoc + '\n')
-        doc.create("\\setcounter{chapter}{0}" + '\n')
-        Chapter.ImprLtxCP1(os,'root')
-        doc.create("\\input{firmas}" + '\n')
+    def writePriceTableOneIntoLatexDocument(self, doc):
+        part= pylatex_utils.Part("Cuadro de precios no. 1")
+        part.append(pylatex_utils.ltx_parttoc)
+        part.append(pylatex.Command('setcounter{chapter}{0}'))
+        super(Obra,self).writePriceTableOneIntoLatexDocument(part,'root')
+        part.append(pylatex.Command('input{firmas}'))
+        doc.append(part)
 
-    def ImprLtxCP2(self, os):
-        doc.create(pylatex_utils.ltx_part("Cuadro de precios no. 2") + '\n')
-        doc.create(pylatex_utils.ltx_parttoc + '\n')
-        doc.create("\\setcounter{chapter}{0}" + '\n')
-        Chapter.ImprLtxCP2(os,'root')
-        doc.create("\\input{firmas}" + '\n')
+    def writePriceTableTwoIntoLatexDocument(self, doc):
+        part= pylatex_utils.Part("Cuadro de precios no. 2")
+        part.append(pylatex_utils.ltx_parttoc)
+        part.append(pylatex.Command('setcounter{chapter}{0}'))
+        super(Obra,self).writePriceTableTwoIntoLatexDocument(part,'root')
+        part.append(pylatex.Command('input{firmas}'))
+        doc.append(part)
 
     def ImprLtxJustPre(self, os):
-        Chapter.ImprLtxJustPre(os,'root')
+        super(Obra,self).ImprLtxJustPre(os,'root')
         doc.create("\\input{firmas}" + '\n')
 
-    def ImprLtxCP(self, os):
-        self.ImprLtxCP1(os)
-        self.ImprLtxCP2(os)
+    def writePriceTablesIntoLatexDocument(self, doc):
+        self.writePriceTableOneIntoLatexDocument(doc)
+        self.writePriceTableTwoIntoLatexDocument(doc)
 
     def ImprLtxPreParc(self, os):
         doc.create(pylatex_utils.ltx_part("Presupuestos parciales") + '\n')
         doc.create(pylatex_utils.ltx_parttoc + '\n')
         doc.create("\\setcounter{chapter}{0}" + '\n')
-        Chapter.ImprLtxPre(os,'root')
+        super(Obra,self).ImprLtxPre(os,'root')
 
     def ImprCompLtxPreParc(self, otra, os):
         doc.create(pylatex_utils.ltx_part("Presupuestos parciales") + '\n')
         doc.create(pylatex_utils.ltx_parttoc + '\n')
         doc.create("\\setcounter{chapter}{0}" + '\n')
         doc.create(pylatex_utils.ltx_begin("landscape") + '\n')
-        Chapter.ImprCompLtxPre(os,'root',otra)
+        super(Obra,self).ImprCompLtxPre(os,'root',otra)
         doc.create(pylatex_utils.ltx_end("landscape") + '\n')
 
     def ImprLtxResumen(self, os):
         doc.create(pylatex_utils.ltx_part("Resumen de los presupuestos parciales") + '\n'
            + pylatex_utils.ltx_star_chapter("Resumen") + '\n')
-        Chapter.ImprLtxResumen(os,'root')
+        super(Obra,self).ImprLtxResumen(os,'root')
 
     def ImprCompLtx(self, otra, os):
-    #Imprime el comparativo con otra obra.
+        ''' Prints the comparison with another project.'''
         #ImprCompLtxMed(otra,os)
         ImprCompLtxMed(otra,os)
-        precios.ImprLtxCP(os); #Cuadros de precios.
+        precios.writePriceTablesIntoLatexDocument(os); #Cuadros de precios.
         ImprCompLtxPreParc(otra,os)
         #ImprLtxResumen(os)
 
@@ -329,7 +331,7 @@ class Obra(cp.Chapter):
         '''get the construction budget in LaTeX format.'''
         retval= pylatex.Document(documentclass= 'book')
         self.writeQuantitiesIntoLatexDocument(retval) #Quantities.
-        # self.ImprLtxCP(os) #Cuadros de precios.
+        self.writePriceTablesIntoLatexDocument(retval) #Price lists.
         # self.ImprLtxPreParc(os) #Presupuestos parciales.
         # self.ImprLtxResumen(os) #Resument presup. parciales.
         # self.ImprLtxPresGen(os) #Presupuestos generales.
@@ -343,11 +345,11 @@ class Obra(cp.Chapter):
     def WriteHCalc(self, os):
     #Imprime la obra en LaTex.
         doc.create(basic_types.quantitesCaption + '\n')
-        Chapter.WriteHCalcMed(os,'root')
+        super(Obra,self).WriteHCalcMed(os,'root')
         doc.create("Cuadros de precios" + '\n')
         precidoc.createHCalc(os)
         doc.create("Presupuestos parciales" + '\n')
-        Chapter.WriteHCalcPre(os,'root')
+        super(Obra,self).WriteHCalcPre(os,'root')
 
     def SimulaDescomp(self, origen, destino):
         precios.SimulaDescomp(origen,destino)

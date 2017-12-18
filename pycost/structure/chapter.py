@@ -20,13 +20,13 @@ class Chapter(bc3_entity.EntBC3):
       self.quantities= measurement_container.ChapterQuantities()
       self.precios= price_table.CuaPre() #Para precios elementales y
                              #descompuestos clasificados por capítulos.
-    def TieneElementales():
-        return precios.TieneElementales()
-    def NumDescompuestos():
-        return precios.NumDescompuestos()+subcapitulos.NumDescompuestos()
-    def TieneDescompuestos():
-        return NumDescompuestos()> 0
-    def GetBuscadorDescompuestos():
+    def TieneElementales(self):
+        return self.precios.TieneElementales()
+    def NumDescompuestos(self):
+        return self.precios.NumDescompuestos()+self.subcapitulos.NumDescompuestos()
+    def TieneDescompuestos(self):
+        return self.NumDescompuestos()> 0
+    def GetBuscadorDescompuestos(self):
         return self.precios.GetBuscadorDescompuestos()
     def getSubcapitulos(self):
         return self.subcapitulos
@@ -150,26 +150,26 @@ class Chapter(bc3_entity.EntBC3):
             self.subcapitulos.writeQuantitiesIntoLatexDocument(docPart,sectName)
             doc.append(docPart)
         
-    def ImprLtxCP1(self, os, sect):
-        if(TieneDescompuestos()):
+    def writePriceTableOneIntoLatexDocument(self, doc, sect):
+        if(self.TieneDescompuestos()):
             if sect!='root':
-                doc.append('\\' + sect + '{' + getTitle() + '}' + '\n')
+                doc.append('\\' + sect + '{' + self.getTitle() + '}' + '\n')
             if self.precios.TieneDescompuestos():
-                self.precios.ImprLtxCP1(os)
-            self.subcapitulos.ImprLtxCP1(os,pylatex_utils.getLatexSection(sect))
-    def ImprLtxCP2(self, os, sect):
+                self.precios.writePriceTableOneIntoLatexDocument(doc)
+            self.subcapitulos.writePriceTableOneIntoLatexDocument(doc,pylatex_utils.getLatexSection(sect))
+    def writePriceTableTwoIntoLatexDocument(self, doc, sect):
         if self.precios.TieneDescompuestos():
             if sect!='root':
                 doc.append('\\' + sect + '{' + getTitle() + '}' + '\n')
-            precios.ImprLtxCP2(os)
-        subcapitulos.ImprLtxCP2(os,pylatex_utils.getLatexSection(sect))
-    def ImprLtxJustPre(self, os, sect):
+            precios.writePriceTableTwoIntoLatexDocument(doc)
+        subcapitulos.writePriceTableTwoIntoLatexDocument(doc,pylatex_utils.getLatexSection(sect))
+    def ImprLtxJustPre(self, doc, sect):
         if(sect!='root'):
             doc.append('\\' + sect + '{' + getTitle() + '}' + '\n')
         if self.precios.TieneDescompuestos():
-            self.precios.ImprLtxJustPre(os)
-        self.subcapitulos.ImprLtxJustPre(os,pylatex_utils.getLatexSection(sect))
-    def ImprLtxResumen(self, os, sect, recurre):
+            self.precios.ImprLtxJustPre(doc)
+        self.subcapitulos.ImprLtxJustPre(doc,pylatex_utils.getLatexSection(sect))
+    def ImprLtxResumen(self, doc, sect, recurre):
         if(sect!='root'):
             doc.append("\\item " + getTitle() + " \\dotfill\\ "
                + StrPrecioLtx() + '\n')
@@ -177,12 +177,12 @@ class Chapter(bc3_entity.EntBC3):
             doc.append("\\Large\\textbf{Total}\\dotfill\\ \\textbf{"
                + StrPrecioLtx() + "} \\normalsize" + '\n')
         if(recurre):
-            self.subcapitulos.ImprLtxResumen(os,pylatex_utils.getLatexSection(sect),recurre)
-    def ImprCompLtxPre(self, os, sect, otro):
+            self.subcapitulos.ImprLtxResumen(doc,pylatex_utils.getLatexSection(sect),recurre)
+    def ImprCompLtxPre(self, doc, sect, otro):
         if sect!='root':
             doc.append('\\' + sect + '{' + getTitle() + '}' + '\n')
-        self.quantities.ImprCompLtxPre(os, getTitle(),otro.quantities,otro.getTitle())
-        self.subcapitulos.ImprCompLtxPre(os,pylatex_utils.getLatexSection(sect), otro.subcapitulos)
+        self.quantities.ImprCompLtxPre(doc, getTitle(),otro.quantities,otro.getTitle())
+        self.subcapitulos.ImprCompLtxPre(doc,pylatex_utils.getLatexSection(sect), otro.subcapitulos)
         if self.subcapitulos:
             doc.append(pylatex_utils.ltx_beg_itemize + '\n')
             doc.append("\\item \\noindent \\textbf{Total " + getTitle()
@@ -196,12 +196,12 @@ class Chapter(bc3_entity.EntBC3):
 
         if self.quantities:
             doc.append("\\newpage" + '\n')
-    def ImprLtxPre(self, os, sect):
+    def ImprLtxPre(self, doc, sect):
         '''Imprime presupuestos parciales.'''
         if sect!='root':
             doc.append('\\' + sect + '{' + getTitle() + '}' + '\n')
-        self.quantities.ImprLtxPre(os,getTitle())
-        self.subcapitulos.ImprLtxPre(os,pylatex_utils.getLatexSection(sect))
+        self.quantities.ImprLtxPre(doc,getTitle())
+        self.subcapitulos.ImprLtxPre(doc,pylatex_utils.getLatexSection(sect))
         if self.subcapitulos:
             doc.append("\\noindent \\large \\textbf{Total: " + getTitle() + "} \\dotfill \\textbf{" + StrPrecioLtx() + "} \\\\ \\normalsize" + '\n')
 

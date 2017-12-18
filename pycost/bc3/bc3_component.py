@@ -76,9 +76,9 @@ class BC3Component(fr_entity.EntFR):
         return r.getTotal()
 
 
-    def ImprLtxCP2(self, os, sobre):
+    def writePriceTableTwoIntoLatexDocument(self, os, sobre):
         r= RegJustPre(GetRegJustPre(sobre))
-        r.ImprLtxCP2(os)
+        r.writePriceTableTwoIntoLatexDocument(os)
         return r.getTotal()
 
 

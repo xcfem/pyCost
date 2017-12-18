@@ -33,16 +33,16 @@ class ListaRegJustPre(list):
         doc.append(pylatex_utils.ltx_multicolumn(pylatex_utils.ltx_datos_multicolumn("4","r","Total "+StrTipo()))
            + " & & " + Total().EnHumano() + pylatex_utils.ltx_fin_reg + '\n' + pylatex_utils.ltx_fin_reg + '\n')
 
-    def ImprLtxCP2(self, os):
+    def writePriceTableTwoIntoLatexDocument(self, os):
         total= self.getTotal()
         if total>ppl_precio3(0.0):
             doc.append(" & & " + StrTipo()
                + " & " + total.EnHumano() + pylatex_utils.ltx_fin_reg + '\n')
 
-    def ImprLtxCP2Porc(self, os):
+    def writePriceTableTwoIntoLatexDocumentPorc(self, os):
         if(size()<1): return
         for i in self:
-            (i).ImprLtxCP2(os)
+            (i).writePriceTableTwoIntoLatexDocument(os)
 
     def getTotal(self):
         retval= basic_types.ppl_precio(0.0,3)

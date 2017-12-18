@@ -38,7 +38,7 @@ class RegJustPre(EntCmd):
         doc.append(" & " + self.getTotal().EnHumano() + pylatex_utils.ltx_fin_reg + '\n')
 
 
-    def ImprLtxCP2(self, os):
+    def writePriceTableTwoIntoLatexDocument(self, os):
         doc.append(" & & " + pylatex_utils.ascii2latex(titulo) + " & ")
         if(self.is_percentage): doc.append(self.getTotal().EnHumano()) #Total.
         doc.append(pylatex_utils.ltx_fin_reg + '\n')

@@ -14,6 +14,8 @@ class ConceptDict(epy.EntPyCost):
     def __init__(self):
         super(ConceptDict,self).__init__()
         self.map= dict()
+    def __len__(self):
+        return len(self.map)
     def Append(self,u):
         self.claves[u.Codigo()]= u
         self.map[u.Codigo()]= u

@@ -97,12 +97,12 @@ class ComponentList(list, epc.EntPyCost):
         lista= ListaRegJustPre(GetListaJustPre(pa))
         lista.ImprLtxJustPre(os)
 
-    def ImprLtxCP2(self, os, pa):
+    def writePriceTableTwoIntoLatexDocument(self, os, pa):
         lista= ListaRegJustPre(GetListaJustPre(pa))
-        lista.ImprLtxCP2(os)
+        lista.writePriceTableTwoIntoLatexDocument(os)
 
-    def ImprLtxCP1(self, os, pa, genero):
+    def writePriceTableOneIntoLatexDocument(self, os, pa, genero):
         lista= ListaRegJustPre(GetListaJustPre(pa))
-        lista.ImprLtxCP1(os,genero)
+        lista.writePriceTableOneIntoLatexDocument(os,genero)
 
 

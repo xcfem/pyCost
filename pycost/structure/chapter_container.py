@@ -157,13 +157,13 @@ class Subcapitulos(list, epc.EntPyCost):
         for j in self:
             (j).writeQuantitiesIntoLatexDocument(doc,sectName)
 
-    def ImprLtxCP1(self, os, sect):
+    def writePriceTableOneIntoLatexDocument(self, os, sect):
         for j in self:
-            (j).ImprLtxCP1(os,sect)
+            (j).writePriceTableOneIntoLatexDocument(os,sect)
 
-    def ImprLtxCP2(self, os, sect):
+    def writePriceTableTwoIntoLatexDocument(self, os, sect):
         for j in self:
-            (j).ImprLtxCP2(os,sect)
+            (j).writePriceTableTwoIntoLatexDocument(os,sect)
 
     def ImprLtxJustPre(self, os, sect):
         for j in self:

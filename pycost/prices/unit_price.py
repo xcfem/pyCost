@@ -5,6 +5,7 @@
 from pycost.utils import measurable as ms
 from pycost.prices import elementary_price_container
 from pycost.prices import component_list
+from pycost.utils import pylatex_utils
 
 class UnitPrice(ms.Measurable):
 
@@ -109,14 +110,14 @@ class UnitPrice(ms.Measurable):
         components.ImprLtxJustPre(os,True); #XXX Here cumulated percentages.
         doc.append("\\end{tabular}" + '\n')
 
-    def ImprLtxCP1(self, os):
-        doc.append(pylatex_utils.ascii2latex(Codigo()) + " & "
-           + pylatex_utils.ascii2latex(Unidad()) + " & "
-           + pylatex_utils.ascii2latex(self.getLongDescription()) + " & ")
-        components.ImprLtxCP1(os,True,False); #XXX Aqui género.
+    def writePriceTableOneIntoLatexDocument(self, data_table):
+        data_table.add_row([pylatex_utils.ascii2latex(self.Codigo()),
+                            pylatex_utils.ascii2latex(self.Unidad()),
+                            pylatex_utils.ascii2latex(self.getLongDescription())])
+        components.writePriceTableOneIntoLatexDocument(data_table,True,False); #XXX Aqui género.
         doc.append("\\\\" + '\n')
 
-    def ImprLtxCP2(self, os):
+    def writePriceTableTwoIntoLatexDocument(self, os):
         doc.append("\\begin{tabular}{l r p{5.5cm} r}" + '\n')
         #Cabecera
         doc.append("Código & Ud. & Descripción & Importe"
@@ -125,7 +126,7 @@ class UnitPrice(ms.Measurable):
            + pylatex_utils.ascii2latex(Unidad()) + " & "
            + pylatex_utils.ascii2latex(self.getLongDescription()) + " & " + pylatex_utils.ltx_fin_reg + '\n' + pylatex_utils.ltx_fin_reg + '\n')
         #Descomposición
-        components.ImprLtxCP2(os,True); #XXX Here cumulated percentages.
+        components.writePriceTableTwoIntoLatexDocument(os,True); #XXX Here cumulated percentages.
         doc.append("\\end{tabular}" + '\n')
 
     def WriteHCalc(self, os):

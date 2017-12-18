@@ -21,13 +21,13 @@ class CuaPre(epc.EntPyCost):
         return self.unidades
 
     def TieneElementales(self):
-        return (self.elementos.size()>0)
+        return (len(self.elementos)>0)
 
     def NumDescompuestos(self):
-        return self.unidades.size()
+        return len(self.unidades)
 
     def TieneDescompuestos(self):
-        return (self.unidades.size()>0)
+        return (self.NumDescompuestos()>0)
 
     def AgregaComponente(self, cod_ud, cod_el, r, f= 1.0):
         self.unidades.AgregaComponente(elementos,cod_ud,cod_el,r,f)
@@ -89,17 +89,17 @@ class CuaPre(epc.EntPyCost):
 
 
     #not  @brief Write el cuadro de precios número 1.
-    def ImprLtxCP1(self, os):
-        self.unidades.ImprLtxCP1(os)
+    def writePriceTableOneIntoLatexDocument(self, os):
+        self.unidades.writePriceTableOneIntoLatexDocument(os)
 
     #not  @brief Write el cuadro de precios número 2.
-    def ImprLtxCP2(self, os):
-        self.unidades.ImprLtxCP2(os)
+    def writePriceTableTwoIntoLatexDocument(self, os):
+        self.unidades.writePriceTableTwoIntoLatexDocument(os)
 
     #not  @brief Write los cuadros de precios números 1 y 2.
-    def ImprLtxCP(self, os):
-        ImprLtxCP1(os)
-        ImprLtxCP2(os)
+    def writePriceTablesIntoLatexDocument(self, os):
+        writePriceTableOneIntoLatexDocument(os)
+        writePriceTableTwoIntoLatexDocument(os)
 
 
     def WriteHCalc(self, os):
