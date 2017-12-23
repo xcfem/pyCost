@@ -29,22 +29,21 @@ class BC3Component(fr_entity.EntFR):
         d*= Producto()
         return d
 
-
     def StrPrecioSobreLtx(self, sobre):
         '''For percentages.'''
         return PrecioSobre(sobre).EnHumano()
 
 
     def Tipo(self):
-        return ent.Tipo()
+        return self.ent.Tipo()
 
 
     def CodigoEntidad(self):
-        return ent.Codigo()
+        return self.ent.Codigo()
 
 
     def IsPercentage(self):
-        return ent.IsPercentage()
+        return self.ent.IsPercentage()
 
 
     def WriteSpre(self, os):
@@ -63,21 +62,21 @@ class BC3Component(fr_entity.EntFR):
             lmsg.error("La componente no se refiere a ninguna entidad" + '\n')
             exit(1)
 
-    def GetRegJustPre(self, sobre):
+    def getPriceJustificationRecord(self, sobre):
         if IsPercentage():
-            return RegJustPre(CodigoEntidad(),ppl_precio4(Producto()),ent.Unidad(),ent.getTitle(),True,basic_types.ppl_precio(Producto()*100.0),sobre)
+            return PriceJustificationRecord(CodigoEntidad(),ppl_precio4(Producto()),ent.Unidad(),ent.getTitle(),True,basic_types.ppl_precio(Producto()*100.0),sobre)
         else:
-            return RegJustPre(ent.Codigo(),basic_types.ppl_precio4(Producto()),ent.Unidad(),ent.getTitle(),False,ent.PrecioR(),0.0)
+            return PriceJustificationRecord(ent.Codigo(),basic_types.ppl_precio4(Producto()),ent.Unidad(),ent.getTitle(),False,ent.PrecioR(),0.0)
 
 
     def ImprLtxJustPre(self, os, sobre):
-        r= RegJustPre(GetRegJustPre(sobre))
+        r= PriceJustificationRecord(getPriceJustificationRecord(sobre))
         r.ImprLtxJustPre(os)
         return r.getTotal()
 
 
     def writePriceTableTwoIntoLatexDocument(self, os, sobre):
-        r= RegJustPre(GetRegJustPre(sobre))
+        r= PriceJustificationRecord(getPriceJustificationRecord(sobre))
         r.writePriceTableTwoIntoLatexDocument(os)
         return r.getTotal()
 

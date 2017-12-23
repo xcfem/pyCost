@@ -1,7 +1,7 @@
-#RegJustPre.pyxx
+#PriceJustificationRecord.pyxx
 
 
-class RegJustPre(EntCmd):
+class PriceJustificationRecord(object):
 
     def __init__(self, cod= '', rd= 0.0, ud= '', tit= '', isperc= False, unit= 0.0, b= 0.0):
         self.codigo= cod #Codigo del precio elemental.

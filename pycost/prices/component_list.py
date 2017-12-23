@@ -2,6 +2,10 @@
 #ComponentList.py
 
 from pycost.utils import EntPyCost as epc
+from pycost.prices.price_justification import PriceJustificationList as pjl
+from pycost.prices.price_justification import PriceJustificationRecordContainer as pjrc
+from pycost.bc3 import bc3_entity
+from pycost.utils import basic_types
 
 class ComponentList(list, epc.EntPyCost):
     '''Componentes de un precio descompuesto.'''
@@ -28,7 +32,7 @@ class ComponentList(list, epc.EntPyCost):
 
 
     def PrecioR(self):
-        lista= ListaJustPre(GetListaJustPre(True))#XXX Here cumulated percentages.
+        lista= self.getPriceJustificationList(True)#XXX Here cumulated percentages.
         return basic_types.ppl_precio(float(lista.TotalRnd()))
 
 
@@ -75,34 +79,34 @@ class ComponentList(list, epc.EntPyCost):
         return Lambda
 
     def getElementaryPricesOfType(self, tipo):
-        lista= ListaRegJustPre(tipo)
+        lista= pjrc.PriceJustificationRecordContainer(tipo)
         for i in self:
             if (i).Tipo()==tipo and not (i).IsPercentage():
-                lista.append((i).GetRegJustPre(0.0))
+                lista.append((i).getPriceJustificationRecord(0.0))
         return lista
 
-    def GetPorcentagesForType(self, tipo):
-        lista= ListaRegJustPre(tipo)
+    def getPourcentagesForType(self, tipo):
+        lista= pjrc.PriceJustificationRecordContainer(tipo)
         for i in self:
             if (i).Tipo()==tipo and (i).IsPercentage():
-                lista.append((i).GetRegJustPre(0.0))
+                lista.append((i).getPriceJustificationRecord(0.0))
         return lista
 
 
-    def GetListaJustPre(self, pa):
-        return ListaJustPre(pa,getElementaryPricesOfType(mdo),getElementaryPricesOfType(mat),getElementaryPricesOfType(maq),getElementaryPricesOfType(sin_clasif),GetPorcentagesForType(sin_clasif))
+    def getPriceJustificationList(self, pa):
+        return pjl.PriceJustificationList(pa,self.getElementaryPricesOfType(bc3_entity.mdo),self.getElementaryPricesOfType(bc3_entity.mat),self.getElementaryPricesOfType(bc3_entity.maq),self.getElementaryPricesOfType(bc3_entity.sin_clasif),self.getPourcentagesForType(bc3_entity.sin_clasif))
 
 
     def ImprLtxJustPre(self, os, pa):
-        lista= ListaRegJustPre(GetListaJustPre(pa))
+        lista= self.getPriceJustificationList(pa)
         lista.ImprLtxJustPre(os)
 
     def writePriceTableTwoIntoLatexDocument(self, os, pa):
-        lista= ListaRegJustPre(GetListaJustPre(pa))
+        lista= self.getPriceJustificationList(pa)
         lista.writePriceTableTwoIntoLatexDocument(os)
 
     def writePriceTableOneIntoLatexDocument(self, os, pa, genero):
-        lista= ListaRegJustPre(GetListaJustPre(pa))
+        lista= self.getPriceJustificationList(pa)
         lista.writePriceTableOneIntoLatexDocument(os,genero)
 
 

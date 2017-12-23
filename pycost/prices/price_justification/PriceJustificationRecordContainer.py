@@ -1,12 +1,12 @@
-#ListaRegJustPre.pyxx
+#PriceJustificationRecordContainer.pyxx
 
 
 
 
-import RegJustPre
+import PriceJustificationRecord
 from pycost.utils import basic_types
 
-class ListaRegJustPre(list):
+class PriceJustificationRecordContainer(list):
     def __init__(self,tp):
         self.tipo= tp
 

@@ -1,12 +1,12 @@
-#ListaJustPre.pyxx
+#PriceJustificationList.pyxx
 
 
 
 
-import ListaRegJustPre
-import basic_types
+import PriceJustificationRecordContainer
+from pycost.utils import basic_types
 
-class ListaJustPre(object):
+class PriceJustificationList(object):
     
     def __init__(self,pa, mano, mater, maqui, otr, porc):
       self.cumulated_percentages= pa

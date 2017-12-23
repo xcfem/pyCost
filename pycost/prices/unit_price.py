@@ -113,9 +113,8 @@ class UnitPrice(ms.Measurable):
     def writePriceTableOneIntoLatexDocument(self, data_table):
         data_table.add_row([pylatex_utils.ascii2latex(self.Codigo()),
                             pylatex_utils.ascii2latex(self.Unidad()),
-                            pylatex_utils.ascii2latex(self.getLongDescription())])
-        components.writePriceTableOneIntoLatexDocument(data_table,True,False); #XXX Aqui género.
-        doc.append("\\\\" + '\n')
+                            pylatex_utils.ascii2latex(self.getLongDescription()),'',''])
+        self.components.writePriceTableOneIntoLatexDocument(data_table,True,False); #XXX Aqui género.
 
     def writePriceTableTwoIntoLatexDocument(self, os):
         doc.append("\\begin{tabular}{l r p{5.5cm} r}" + '\n')

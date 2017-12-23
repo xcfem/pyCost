@@ -122,10 +122,10 @@ class Descompuestos(concept_dict.ConceptDict):
                 data_table.end_table_footer()
                 data_table.add_hline()
                 data_table.end_table_last_footer()
-            for j in self.map.keys():
-                data_table.add_row(empty_line)
-                self.map[j].writePriceTableOneIntoLatexDocument(data_table)
-                data_table.add_row(empty_line)
+                for j in self.map.keys():
+                    data_table.add_row(empty_line)
+                    self.map[j].writePriceTableOneIntoLatexDocument(data_table)
+                    data_table.add_row(empty_line)
 
             doc.append(pylatex_utils.NormalSizeCommand())
 
