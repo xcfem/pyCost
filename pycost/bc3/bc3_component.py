@@ -15,23 +15,23 @@ class BC3Component(fr_entity.EntFR):
         return self.ent.Precio()*Producto()
 
     def PrecioR(self):
-        retval= basic_types.ppl_precio3(ent.PrecioR())
-        retval*= ProductoR()
+        retval= basic_types.ppl_price(ent.PrecioR(),3)
+        retval*= self.ProductoR()
         return retval
 
     def StrPrecioLtx(self):
-        return PrecioR().EnHumano()
+        return basic_types.human_readable(PrecioR())
 
 
     def PrecioSobre(self, sobre):
         '''For percentages.'''
-        d= basic_types.ppl_precio3(sobre)
+        d= basic_types.ppl_price(sobre,3)
         d*= Producto()
         return d
 
     def StrPrecioSobreLtx(self, sobre):
         '''For percentages.'''
-        return PrecioSobre(sobre).EnHumano()
+        return basic_types.human_readable(PrecioSobre(sobre))
 
 
     def Tipo(self):
@@ -64,9 +64,9 @@ class BC3Component(fr_entity.EntFR):
 
     def getPriceJustificationRecord(self, sobre):
         if IsPercentage():
-            return PriceJustificationRecord(CodigoEntidad(),ppl_precio4(Producto()),ent.Unidad(),ent.getTitle(),True,basic_types.ppl_precio(Producto()*100.0),sobre)
+            return PriceJustificationRecord(CodigoEntidad(),ppl_price(self.Producto(),4),ent.Unidad(),ent.getTitle(),True,basic_types.ppl_price(Producto()*100.0),sobre)
         else:
-            return PriceJustificationRecord(ent.Codigo(),basic_types.ppl_precio4(Producto()),ent.Unidad(),ent.getTitle(),False,ent.PrecioR(),0.0)
+            return PriceJustificationRecord(ent.Codigo(),basic_types.ppl_price(self.Producto(),4),ent.Unidad(),ent.getTitle(),False,ent.PrecioR(),0.0)
 
 
     def ImprLtxJustPre(self, os, sobre):

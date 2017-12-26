@@ -237,7 +237,7 @@ class Obra(cp.Chapter):
         doc.append("\\textbf{Presupuesto de ejecución material:} \\dotfill\\ \\textbf{" + StrPrecioLtx() + '}' + '\n' + '\n' + '\n')
         doc.append("\\vspace{0.5cm}" + '\n')
         doc.append("Asciende el presente presupuesto de ejecución material a la expresada cantidad de: \\textsc{")
-        doc.append(PrecioR().EnLetra(False) + " euros}." + '\n')
+        doc.append(basic_types.to_words(PrecioR(),False) + " euros}." + '\n')
         doc.append("\\input{firmas}" + '\n')
 
     def ImprLtxPresContrata(self, os):

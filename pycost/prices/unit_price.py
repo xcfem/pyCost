@@ -132,7 +132,7 @@ class UnitPrice(ms.Measurable):
         os.write(Codigo() + tab
            + pylatex_utils.ascii2latex(Unidad()) + tab
            + '"' + pylatex_utils.ascii2latex(self.getLongDescription()) + '"' + tab
-           + '"' + StrPrecioEnLetra(True) + '"' + tab
+           + '"' + self.StrPriceToWords(True) + '"' + tab
            + StrPrecio() + '\n')
 
 

@@ -24,7 +24,7 @@ class EntFR(epc.EntPyCost):
         return self.factor*self.productionRate
 
     def ProductoR(self):
-        return basic_types.ppl_precio4(self.factor*self.productionRate)
+        return basic_types.ppl_price(self.factor*self.productionRate,4)
 
     def WriteSpre(self, os):
         os.write(rdto2str(Producto()) + '|')

@@ -99,19 +99,19 @@ class MeasurementRecord(epc.EntPyCost):
         zero= basic_types.ppl_dimension(0.0);
         str_u= ''
         if (self.UnidadesR()!=zero):
-            str_u= basic_types.EnHumano(self.UnidadesR())
+            str_u= basic_types.human_readable(self.UnidadesR())
         row.append(str_u)
         str_l= ''
-        if (self.LargoR()!=zero): str_l= basic_types.EnHumano(self.LargoR())
+        if (self.LargoR()!=zero): str_l= basic_types.human_readable(self.LargoR())
         row.append(str_l)
         str_a= ''
-        if (self.AnchoR()!=zero): str_a= basic_types.EnHumano(self.AnchoR())
+        if (self.AnchoR()!=zero): str_a= basic_types.human_readable(self.AnchoR())
         row.append(str_a)
         str_alt= ''
-        if (self.AltoR()!=zero): str_alt= basic_types.EnHumano(self.AltoR())
+        if (self.AltoR()!=zero): str_alt= basic_types.human_readable(self.AltoR())
         row.append(str_alt)
         total= self.getTotalR()
-        if(total!=zero): str_t= basic_types.EnHumano(total)
+        if(total!=zero): str_t= basic_types.human_readable(total)
         row.append(str_t)
         data_table.add_row(row)
 

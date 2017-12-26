@@ -16,31 +16,31 @@ class PriceJustificationRecord(object):
         if self.is_percentage:
             return self.sobre
         else:
-            return basic_types.ppl_precio(self.unitario,3)
+            return basic_types.ppl_price(self.unitario,3)
 
     def SetBase(self, b):
         sobre= b
 
     def getTotal(self):
-        retval= basic_types.ppl_precio(self.base(),3)
+        retval= basic_types.ppl_price(self.base(),3)
         retval*= rdto
         return retval
 
     def ImprLtxJustPre(self, os):
         doc.append(pylatex_utils.ascii2latex(codigo) + " & "
-           + rdto.EnHumano() + " & " #Write el production rate
+           + basic_types.human_readable(rdto) + " & " #Write el production rate
            + pylatex_utils.ascii2latex(unidad) + " & "
            + pylatex_utils.ascii2latex(titulo) + " & ")
         if self.is_percentage:
-            doc.append(unitario.EnHumano() + pylatex_utils.ltx_porciento); #Percentage
+            doc.append(basic_types.human_readable(unitario) + pylatex_utils.ltx_porciento); #Percentage
         else:
-            doc.append(unitario.EnHumano()) #Precio unitario
-        doc.append(" & " + self.getTotal().EnHumano() + pylatex_utils.ltx_fin_reg + '\n')
+            doc.append(basic_types.human_readable(unitario)) #Precio unitario
+        doc.append(" & " + basic_types.human_readable(self.getTotal()) + pylatex_utils.ltx_fin_reg + '\n')
 
 
     def writePriceTableTwoIntoLatexDocument(self, os):
         doc.append(" & & " + pylatex_utils.ascii2latex(titulo) + " & ")
-        if(self.is_percentage): doc.append(self.getTotal().EnHumano()) #Total.
+        if(self.is_percentage): doc.append(basic_types.human_readable(self.getTotal())) #Total.
         doc.append(pylatex_utils.ltx_fin_reg + '\n')
 
 

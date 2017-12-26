@@ -91,16 +91,16 @@ class EntBC3(epc.EntPyCost):
         return precio2str(Precio())
 
     def StrPrecioLtx(self):
-        return PrecioR().EnHumano()
+        return basic_types.human_readable(PrecioR())
 
-    def StrPrecioEnLetra(self, genero):
-        return PrecioR().EnLetra(genero)
+    def StrPriceToWords(self, genero):
+        return basic_types.toWord(self.PrecioR(),genero)
 
     def Precio(self):
         return 0.0
 
     def PrecioR(self):
-        return basic_types.ppl_precio(Precio())
+        return basic_types.ppl_price(Precio())
 
     def Fecha(self):
         return "040400";    # xxx
@@ -127,7 +127,7 @@ class EntBC3(epc.EntPyCost):
 
 
     def IsPercentage(self):
-        return codigo.find('%')<len(codigo)
+        return self.codigo.find('%')<len(self.codigo)
 
     def WriteSpre(self, os):
         os.write(Codigo() + '|'

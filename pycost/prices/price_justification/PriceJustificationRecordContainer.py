@@ -14,38 +14,37 @@ class PriceJustificationRecordContainer(list):
         return basic_types.str_tipo(self.tipo)
 
     def SetBase(self, b):
-        if(size()<1): return
         for i in self:
             (i).SetBase(b)
 
     def SetBaseAcum(self, b):
-        if(size()<1): return
-        base= basic_types.ppl_precio(b,3)
-        for i in self:
-            (i).SetBase(base)
-            base+= (i).getTotal()
+        if(len(self)):
+            base= basic_types.ppl_price(b,3)
+            for i in self:
+                (i).SetBase(base)
+                base+= (i).getTotal()
 
 
     def ImprLtxJust(self, os):
-        if(size()<1): return
-        for i in self:
-            (i).ImprLtxJustPre(os)
-        doc.append(pylatex_utils.ltx_multicolumn(pylatex_utils.ltx_datos_multicolumn("4","r","Total "+StrTipo()))
-           + " & & " + Total().EnHumano() + pylatex_utils.ltx_fin_reg + '\n' + pylatex_utils.ltx_fin_reg + '\n')
+        if(len(self)):
+            for i in self:
+                (i).ImprLtxJustPre(os)
+            doc.append(pylatex_utils.ltx_multicolumn(pylatex_utils.ltx_datos_multicolumn("4","r","Total "+StrTipo()))
+               + " & & " + basic_types.human_readable(Total()) + pylatex_utils.ltx_fin_reg + '\n' + pylatex_utils.ltx_fin_reg + '\n')
 
     def writePriceTableTwoIntoLatexDocument(self, os):
         total= self.getTotal()
-        if total>ppl_precio3(0.0):
+        if total>ppl_price(0.0,3):
             doc.append(" & & " + StrTipo()
-               + " & " + total.EnHumano() + pylatex_utils.ltx_fin_reg + '\n')
+               + " & " + basic_types.human_readable(total) + pylatex_utils.ltx_fin_reg + '\n')
 
     def writePriceTableTwoIntoLatexDocumentPorc(self, os):
-        if(size()<1): return
-        for i in self:
-            (i).writePriceTableTwoIntoLatexDocument(os)
+        if(len(self)):
+            for i in self:
+               (i).writePriceTableTwoIntoLatexDocument(os)
 
     def getTotal(self):
-        retval= basic_types.ppl_precio(0.0,3)
+        retval= basic_types.ppl_price(0.0,3)
         for i in self:
             retval+= (i).getTotal()
         return retval

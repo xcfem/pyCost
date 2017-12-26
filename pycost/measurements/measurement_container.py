@@ -16,7 +16,7 @@ from pycost.utils import pylatex_utils
 class ChapterQuantities(list, epc.EntPyCost):
 
     def StrPrecioLtx(self):
-        return self.PrecioR().EnHumano()
+        return basic_types.human_readable(self.PrecioR())
 
     def Precio(self):
         t= 0.0
@@ -25,7 +25,7 @@ class ChapterQuantities(list, epc.EntPyCost):
         return t
 
     def PrecioR(self):
-        t= basic_types.ppl_precio(0.0)
+        t= basic_types.ppl_price(0.0)
         for i in self:
             t+=(i).PrecioR()
         return t
