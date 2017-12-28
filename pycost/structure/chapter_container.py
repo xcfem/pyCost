@@ -8,6 +8,8 @@ from pycost.prices import price_table
 import chapter
 from pycost.bc3 import codigos_obra
 from pycost.utils import EntPyCost as epc
+from decimal import Decimal
+import pylatex
 
 class Subcapitulos(list, epc.EntPyCost):
 
@@ -31,7 +33,7 @@ class Subcapitulos(list, epc.EntPyCost):
 
 
     def PrecioR(self):
-        p= 0.0
+        p= Decimal('0.0')
         for j in self:
             p+= (j).PrecioR()
         return p
@@ -60,7 +62,7 @@ class Subcapitulos(list, epc.EntPyCost):
         return retval
 
     def BuscaPrecio(self, cod):
-        '''Busca una unidad de obra por el árbol de capítulos.'''
+        '''Search a unit price through the chapter tree.'''
         retval= None
         for i in self:
             retval= (i).BuscaPrecio(cod)
@@ -98,7 +100,7 @@ class Subcapitulos(list, epc.EntPyCost):
                 reg= sc.getChapterData(j)
                 if i:
                     if verborrea>4:
-                        logging.info("Cargando el subcapítulo: '" + reg.Datos().getTitle() + "'\n")
+                        logging.info(u"Cargando el subcapítulo: '" + reg.Datos().getTitle() + "'\n")
                     i.titulo= reg.Datos().getTitle(); #Título
 
                     #Lee los elementales del capítulo.
@@ -106,7 +108,7 @@ class Subcapitulos(list, epc.EntPyCost):
                     i.LeeBC3Elementales(elementos_capitulo)
                     if verborrea>4:
                         logging.info("  Cargados " + elementos_capitulo.size()
-                                  + " precios elementales del capítulo." + '\n')
+                                  + u" precios elementales del capítulo." + '\n')
                     co.BorraElementales(elementos_capitulo); #Borra los ya leídos.
                     if verborrea>4:
                         logging.info("  Quedan " + co.GetDatosElementos().size() + " precios elementales." + '\n')
@@ -117,7 +119,7 @@ class Subcapitulos(list, epc.EntPyCost):
 
 
             else:
-                lmsg.error("LeeBC3Caps; No se encontró el capítulo: " + i.Codigo() + '\n')
+                lmsg.error(u"LeeBC3Caps; No se encontró el capítulo: " + i.Codigo() + '\n')
                 continue
 
 
@@ -170,12 +172,11 @@ class Subcapitulos(list, epc.EntPyCost):
             (j).ImprLtxJustPre(os,sect)
 
 
-    def ImprLtxResumen(self, os, sect, recurre):
+    def ImprLtxResumen(self, doc, sect, recurre):
         if len(self):
-            doc.append("\\begin{itemize}" + '\n')
-            for j in self:
-                (j).ImprLtxResumen(os,sect,recurre)
-            doc.append("\\end{itemize}" + '\n')
+            with doc.create(pylatex.Itemize()) as itemize:
+                for j in self:
+                    (j).ImprLtxResumen(itemize,sect,recurre)
 
     def ImprCompLtxPre(self, os, sect, otro):
         '''Suponemos que ambos capítulos tienen el 

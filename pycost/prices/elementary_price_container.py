@@ -24,13 +24,14 @@ class ElementaryPrices(concept_dict.ConceptDict):
         str_tipo= basic_types.str_tipo(tipo)
 
         doc.append(pylatex_utils.ltx_begin("center") + '\n')
-        doc.append(pylatex_utils.ltx_large + " Precios elementales de " + str_tipo + ' '
-           + pylatex_utils.ltx_normalsize + '\n')
+        doc.append(pylatex_utils.LargeCommand())
+        doc.append(" Precios elementales de " + str_tipo + ' ')
+        doc.append(pylatex_utils.NormalSizeCommand())
         doc.append(pylatex_utils.ltx_end("center") + '\n')
         doc.append(pylatex_utils.SmallCommand())
         doc.append("\\begin{longtable}{|l|l|p{4cm}|r|}" + '\n'
            + pylatex_utils.ltx_hline + '\n'
-           + "Código & Ud. & Denominación & Precio\\\\" + '\n'
+           + u"Código & Ud. & Denominación & Precio\\\\" + '\n'
            + pylatex_utils.ltx_hline + '\n'
            + pylatex_utils.ltx_endhead + '\n'
            + pylatex_utils.ltx_hline + '\n'
@@ -189,7 +190,7 @@ class ElementaryPrices(concept_dict.ConceptDict):
                 el.printLtx(os)
 
         doc.append("\\end{longtable}" + '\n')
-        doc.append(pylatex_utils.ltx_normalsize + '\n')
+        doc.append(pylatex_utils.NormalSizeCommand())
 
     def printLtx(self, os):
         ImprLtxTipo(mdo,os)

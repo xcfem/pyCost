@@ -6,6 +6,7 @@
 import PriceJustificationRecordContainer
 from pycost.utils import basic_types
 from decimal import Decimal
+import pylatex
 
 class PriceJustificationList(object):
     
@@ -55,16 +56,16 @@ class PriceJustificationList(object):
     def StrPriceToWords(self, genero):
         return basic_types.to_words(self.getTotalCP1(),genero)
 
-    def size(self):
-        return self.mano_de_obra.size()+self.materiales.size()+self.maquinaria.size()+self.otros.size()+self.percentages.size()
+    def __len__(self):
+        return len(self.mano_de_obra)+len(self.materiales)+len(self.maquinaria)+len(self.otros)+len(self.percentages)
 
 
     def ImprLtxJustPre(self, os):
         total= self.getTotal()
         rnd= self.Redondeo()
         total_rnd= self.getTotalRnd()
-        if size()<2:
-            doc.append(pylatex_utils.ltx_multicolumn(pylatex_utils.ltx_datos_multicolumn("4","r","Sin descomposición"))
+        if(len(self)<2):
+            doc.append(pylatex_utils.ltx_multicolumn(pylatex_utils.ltx_datos_multicolumn("4","r",basic_types.sin_desc_string))
                + " & & " + pylatex_utils.ltx_fin_reg + '\n' + pylatex_utils.ltx_fin_reg + '\n')
             #Total
             doc.append(pylatex_utils.ltx_multicolumn(pylatex_utils.ltx_datos_multicolumn("4","r","TOTAL")) + " & "
@@ -92,32 +93,30 @@ class PriceJustificationList(object):
                + pylatex_utils.ltx_fin_reg + '\n')
 
 
-    def writePriceTableTwoIntoLatexDocument(self, os):
+    def writePriceTableTwoIntoLatexDocument(self, data_table):
         total= self.getTotal()
-        rnd= Redondeo()
+        rnd= self.Redondeo()
         total_rnd= self.getTotalRnd()
-        if size()<2:
-            doc.append(" & & " + "Sin descomposición"
-               + " & " + pylatex_utils.ltx_fin_reg + '\n')
+        if(len(self)<2):
+            row1= ['','',basic_types.sin_desc_string,'']
+            data_table.add_row(row1)
+            row2= ['','',pylatex.utils.bold('TOTAL'),pylatex.utils.bold(basic_types.human_readable(total))]
             #Total
-            doc.append(" & & " + pylatex_utils.ltx_textbf("TOTAL") + " & "
-               + "\\textbf{"+basic_types.human_readable(total)+"}"
-               + pylatex_utils.ltx_fin_reg + '\n')
-
+            data_table.add_row(row2)
         else:
-            self.mano_de_obra.writePriceTableTwoIntoLatexDocument(os)
-            self.materiales.writePriceTableTwoIntoLatexDocument(os)
-            self.maquinaria.writePriceTableTwoIntoLatexDocument(os)
-            self.otros.writePriceTableTwoIntoLatexDocument(os)
-            self.percentages.writePriceTableTwoIntoLatexDocumentPorc(os)
+            self.mano_de_obra.writePriceTableTwoIntoLatexDocument(data_table)
+            self.materiales.writePriceTableTwoIntoLatexDocument(data_table)
+            self.maquinaria.writePriceTableTwoIntoLatexDocument(data_table)
+            self.otros.writePriceTableTwoIntoLatexDocument(data_table)
+            self.percentages.writePriceTableTwoIntoLatexDocumentPorc(data_table)
             #Suma
-            doc.append(pylatex_utils.ltx_fin_reg + '\n')
-            doc.append(" & & " + "Suma" + pylatex_utils.ltx_ldots + " & "
-               + basic_types.human_readable(total) + pylatex_utils.ltx_fin_reg + '\n')
+            row1= ['','','Suma',Command("ldots"),basic_types.human_readable(total)]
+            data_table.add_row(row1)
             #Redondeo
-            doc.append(" & & " + "Redondeo" + pylatex_utils.ltx_ldots + " & "
-               + basic_types.human_readable(rnd) + pylatex_utils.ltx_fin_reg + '\n')
+            row2= ['','','Redondeo',Command("ldots"),basic_types.human_readable(rnd)]
+            data_table.add_row(row2)
             #Total
+            row2= ['','','Redondeo',Command("ldots"),basic_types.human_readable(rnd)]
             doc.append(pylatex_utils.ltx_cline("4-4") + '\n')
             doc.append(" & & " + pylatex_utils.ltx_textbf("TOTAL") + " & "
                + "\\textbf{"+basic_types.human_readable(total_rnd)+"}"
@@ -126,6 +125,6 @@ class PriceJustificationList(object):
 
 
     def writePriceTableOneIntoLatexDocument(self, data_table, genero):
-        data_table.add_row([self.StrPriceToWords(genero),self.StrPrecioLtx()])
+        data_table.add_row(['','','',self.StrPriceToWords(genero),self.StrPrecioLtx()])
 
 

@@ -12,6 +12,7 @@ from pycost.utils import EntPyCost as epc
 
 import pylatex
 from pycost.utils import pylatex_utils
+from pycost.utils import basic_types
 
 class ChapterQuantities(list, epc.EntPyCost):
 
@@ -68,7 +69,7 @@ class ChapterQuantities(list, epc.EntPyCost):
                     else:
                         (i).ImprCompLtxMed(os)
             doc.append("\\end{longtable}" + '\n')
-            doc.append(pylatex_utils.ltx_normalsize + '\n')
+            doc.append(pylatex_utils.NormalSizeCommand())
 
     def writeQuantitiesIntoLatexDocument(self, doc):
         if len(self):
@@ -109,24 +110,30 @@ class ChapterQuantities(list, epc.EntPyCost):
             doc.append("\\multicolumn{4}{p{8cm}}{\\textbf{Total: "
                + tit + "}} & \\textbf{" + StrPrecioLtx() + "}\\\\" + '\n')
             doc.append("\\end{longtable}" + '\n')
-            doc.append(pylatex_utils.ltx_normalsize + '\n')
+            doc.append(pylatex_utils.NormalSizeCommand())
 
-    def ImprLtxPre(self, os, tit):
+    def ImprLtxPre(self, doc, tit):
         '''Imprime presupuestos parciales.'''
-        if(len(self)):
+        if len(self):
             doc.append(pylatex_utils.SmallCommand())
-            doc.append("\\begin{longtable}{lrlrr}" + '\n'
-               + "Partida & Cantidad & Descripción & \\multicolumn{1}{p{1.5cm}}{Precio unitario} & Importe \\\\" + '\n'
-               + "\\hline" + '\n'
-               + "\\endhead" + '\n'
-               + "\\multicolumn{5}{r}{../..}\\\\" + '\n'
-               + "\\endfoot" + '\n'
-               + "\\endlastfoot" + '\n')
-            for i in self:
-                (i).ImprLtxPre(os)
-            doc.append("\\multicolumn{4}{p{8cm}}{\\textbf{Total: " + tit + "}} & \\textbf{" + StrPrecioLtx() + "}\\\\" + '\n')
-            doc.append("\\end{longtable}" + '\n')
-            doc.append(pylatex_utils.ltx_normalsize + '\n')
+            num_campos= 5
+            longTableStr= 'lrlrr'
+            header_row= ['Partida','Cantidad',u'Descripción']
+            header_row.append(pylatex.table.MultiColumn(1, align=pylatex.utils.NoEscape('p{1.5cm}'),data='Precio unitario'))
+            header_row.append('Importe')
+                                            
+            with doc.create(pylatex_utils.LongTable(longTableStr)) as data_table:
+                data_table.add_row(header_row)
+                data_table.add_hline()
+                data_table.end_table_header()
+                data_table.add_row((pylatex.table.MultiColumn(num_campos, align='r',data='../..'),))
+                data_table.end_table_footer()
+                data_table.end_table_last_footer()
+                for i in self:
+                    (i).ImprLtxPre(data_table)
+                data_table.add_row([pylatex.table.MultiColumn(4, align=pylatex.utils.NoEscape('p{8cm}'),data=pylatex.utils.bold('Total: '+tit)),pylatex.utils.bold(self.StrPrecioLtx())])
+            doc.append(data_table)
+            doc.append(pylatex_utils.NormalSizeCommand())
 
 
     def WriteHCalcMed(self, os):

@@ -62,7 +62,6 @@ class Quantities(list, epy.EntPyCost):
             (i).WriteBC3(os)
 
     def ImprCompLtx(self, os, otra):
-        empty_line= ['','', '', '', '', '', '', '', '', '', '']
         media_empty_line= ['','', '', '', '']
         for i in self:
           for j in otra:
@@ -83,24 +82,20 @@ class Quantities(list, epy.EntPyCost):
         #         (j).printLtx(os,"p{1.5cm}")
         #         doc.append(media_empty_line + pylatex_utils.ltx_fin_reg + '\n'
 
-        doc.append(empty_line + '\n')
+        doc.add_empty_row()
 
     def ImprCompLtx(self, os):
-        empty_line= ['','', '', '', '', '', '', '', '', '', '']
         media_empty_line= ['','', '', '', '', '']
         for i in self:
             doc.append(media_empty_line)
             (i).printLtx(os,"p{1.5cm}")
             doc.append(pylatex_utils.ltx_fin_reg + '\n')
-
-        doc.append(empty_line + '\n')
+        doc.add_empty_row()
 
     def printLtx(self, data_table):
-        empty_line= ['', '', '', '', '', '']
         for i in self:
             (i).printLtx(data_table,"p{3.5cm}")
-
-        data_table.add_row(empty_line)
+        data_table.add_empty_row()
 
     def WriteHCalc(self, os):
         for i in self:

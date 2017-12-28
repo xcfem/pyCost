@@ -90,7 +90,7 @@ class Codigos(dict):
                     lmsg.error("Codigos.GetSubCaps; No se encontró el subcapítulo: " + cod + '\n')
 
             #else: #partidas del capítulo
-            #lmsg.error("subcapítulo raro: " + cod + '\n')
+            #lmsg.error(u"subcapítulo raro: " + cod + '\n')
 
         return retval
 
@@ -162,7 +162,7 @@ class Codigos(dict):
         elif(tipo=='D'):
             if len(resto)<2:
                 if(verborrea>4): #No tiene porqué ser un error.
-                    lmsg.error("Descomposición vacía en concepto: \'" + cod
+                    lmsg.error(u"Descomposición vacía en concepto: \'" + cod
                               + "\' se ignora la descomposición." + '\n')
 
             else:
@@ -324,6 +324,6 @@ class Codigos(dict):
 
     def Print(self,os):
         for i in self:
-            os.write("Código: " + (i).first + '\n'+ (i).second + '\n')
+            os.write(u"Código: " + (i).first + '\n'+ (i).second + '\n')
         return os
 

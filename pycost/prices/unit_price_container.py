@@ -88,7 +88,6 @@ class Descompuestos(concept_dict.ConceptDict):
                     if pos3<1000:
                         cantidad= descomp.substr(0,pos3)
                         descomp.replace(0,pos3+1,"")
-
                     else:
                         cantidad= descomp.substr(0,len(descomp)-1)
                     if(elementos.find("%" + cod_el)!=elementos.end()): #Corresponds to a percentage.
@@ -104,7 +103,6 @@ class Descompuestos(concept_dict.ConceptDict):
 
     def writePriceTableOneIntoLatexDocument(self, doc):
         if(len(self)>=1):
-            empty_line= ['','','','','']
             num_campos= 5
             doc.append(pylatex_utils.SmallCommand())
             longTableStr= '|l|l|p{4cm}|p{3cm}|r|'
@@ -123,40 +121,37 @@ class Descompuestos(concept_dict.ConceptDict):
                 data_table.add_hline()
                 data_table.end_table_last_footer()
                 for j in self.map.keys():
-                    data_table.add_row(empty_line)
+                    data_table.add_empty_row()
                     self.map[j].writePriceTableOneIntoLatexDocument(data_table)
-                    data_table.add_row(empty_line)
+                    data_table.add_empty_row()
 
             doc.append(pylatex_utils.NormalSizeCommand())
 
-    def ImprLtxJustPre(self, os):
+    def ImprLtxJustPre(self, doc):
         doc.append(pylatex_utils.SmallCommand())
         doc.append("\\begin{longtable}{l}" + '\n')
         for j in self.map.keys():
-            self.map[j].ImprLtxJustPre(os)
+            self.map[j].ImprLtxJustPre(doc)
             doc.append(pylatex_utils.ltx_fin_reg + '\n')
             doc.append(pylatex_utils.ltx_fin_reg + '\n')
 
         doc.append("\\end{longtable}" + '\n')
-        doc.append(pylatex_utils.ltx_normalsize + '\n')
+        doc.append(pylatex_utils.NormalSizeCommand())
 
-    def writePriceTableTwoIntoLatexDocument(self, os):
-        if(size()<1): return
-        #doc.append(pylatex_utils.ltx_star_.pyapter("Cuadro de precios no. 2") + '\n'
-        doc.append(pylatex_utils.SmallCommand())
-        doc.append("\\begin{longtable}{l}" + '\n')
-        for j in self.map.keys():
-            self.map[j].writePriceTableTwoIntoLatexDocument(os)
-            doc.append(pylatex_utils.ltx_fin_reg + '\n')
-            doc.append(pylatex_utils.ltx_fin_reg + '\n')
-
-        doc.append("\\end{longtable}" + '\n')
-        doc.append(pylatex_utils.ltx_normalsize + '\n')
+    def writePriceTableTwoIntoLatexDocument(self, doc):
+        if(len(self)>0):
+            #doc.append(pylatex_utils.ltx_star_.chapter("Cuadro de precios no. 2") + '\n'
+            doc.append(pylatex_utils.SmallCommand())
+            longTableStr= 'l'
+            with doc.create(pylatex_utils.LongTable(longTableStr)) as data_table:
+                for j in self.map.keys():
+                    self.map[j].writePriceTableTwoIntoLatexDocument(doc,data_table)
+            doc.append(pylatex_utils.NormalSizeCommand())
 
     def WriteHCalc(self, os):
-        os.write("Código" + tab
+        os.write(u"Código" + tab
            + "Ud." + tab
-           + "Denominación" + tab
+           + u"Denominación" + tab
            + "Precio en letra" + tab
            + "Precio en cifra" + '\n')
         for j in self.map.keys():

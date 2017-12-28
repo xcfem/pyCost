@@ -6,6 +6,8 @@ from pycost.utils import measurable as ms
 from pycost.prices import elementary_price_container
 from pycost.prices import component_list
 from pycost.utils import pylatex_utils
+import pylatex
+from pycost.bc3 import bc3_entity
 
 class UnitPrice(ms.Measurable):
 
@@ -13,8 +15,7 @@ class UnitPrice(ms.Measurable):
         super(UnitPrice,self).__init__(cod,desc,ud,ld)
         self.components= component_list.ComponentList()
     def Tipo(self):
-        return self.mat;    #XXX provisional.
-
+        return bc3_entity.mat; #XXX provisional.
     def Precio(self):
         return self.components.Precio()
 
@@ -37,7 +38,7 @@ class UnitPrice(ms.Measurable):
             if not error:
                 components= tmp
             else:
-                lmsg.error("Error al leer descomposición de la unidad: " + Codigo() + '\n')
+                lmsg.error("Error al leer descomposición de la unidad: " + self.Codigo() + '\n')
 
         else:
             components= GetSindesco(r.Datos().Precio(),bp)
@@ -79,15 +80,15 @@ class UnitPrice(ms.Measurable):
 
 
     def WriteSpre(self, os):
-        os.write(Codigo() + '|'
-           + Unidad() + '|'
+        os.write(self.Codigo() + '|'
+           + self.Unidad() + '|'
            + getTitle() + '|')
         components.WriteSpre(os)
 
 
     def WriteBC3(self, os):
         Measurable.WriteBC3(os)
-        components.WriteBC3(Codigo(),os)
+        components.WriteBC3(self.Codigo(),os)
 
 
     def SimulaDescomp(self,otra):
@@ -101,10 +102,10 @@ class UnitPrice(ms.Measurable):
     def ImprLtxJustPre(self, os):
         doc.append("\\begin{tabular}{l r l p{4cm} r r}" + '\n')
         #Cabecera
-        doc.append(pylatex_utils.ascii2latex(Codigo()) + " & "
-           + pylatex_utils.ascii2latex(Unidad()) + " & "
+        doc.append(pylatex_utils.ascii2latex(self.Codigo()) + " & "
+           + pylatex_utils.ascii2latex(self.Unidad()) + " & "
            + pylatex_utils.ltx_multicolumn(pylatex_utils.ltx_datos_multicolumn("4","p{7cm}",pylatex_utils.ascii2latex(self.getLongDescription()))) + pylatex_utils.ltx_fin_reg + '\n')
-        doc.append("Código & Rdto. & Ud. & Descripción & Unit. & Total"
+        doc.append(u"Código & Rdto. & Ud. & Descripción & Unit. & Total"
            + pylatex_utils.ltx_fin_reg + '\n' + pylatex_utils.ltx_hline + '\n')
         #Descomposición
         components.ImprLtxJustPre(os,True); #XXX Here cumulated percentages.
@@ -116,21 +117,24 @@ class UnitPrice(ms.Measurable):
                             pylatex_utils.ascii2latex(self.getLongDescription()),'',''])
         self.components.writePriceTableOneIntoLatexDocument(data_table,True,False); #XXX Aqui género.
 
-    def writePriceTableTwoIntoLatexDocument(self, os):
-        doc.append("\\begin{tabular}{l r p{5.5cm} r}" + '\n')
-        #Cabecera
-        doc.append("Código & Ud. & Descripción & Importe"
-           + pylatex_utils.ltx_fin_reg + '\n' + pylatex_utils.ltx_hline + '\n')
-        doc.append(pylatex_utils.ascii2latex(Codigo()) + " & "
-           + pylatex_utils.ascii2latex(Unidad()) + " & "
-           + pylatex_utils.ascii2latex(self.getLongDescription()) + " & " + pylatex_utils.ltx_fin_reg + '\n' + pylatex_utils.ltx_fin_reg + '\n')
-        #Descomposición
-        components.writePriceTableTwoIntoLatexDocument(os,True); #XXX Here cumulated percentages.
-        doc.append("\\end{tabular}" + '\n')
+    def writePriceTableTwoIntoLatexDocument(self, doc, data_table):
+        tableStr= 'l r p{5.5cm} r'
+        with doc.create(pylatex.Tabular(tableStr)) as nested_data_table:
+            #Header
+            nested_data_table.add_row([u'Código',u'Ud.',u'Descripción',u'Importe'])
+            nested_data_table.add_hline()
+            row= [pylatex_utils.ascii2latex(self.Codigo())]
+            row.append(pylatex_utils.ascii2latex(self.Unidad()))
+            row.append(pylatex_utils.ascii2latex(self.getLongDescription()))
+            row.append('')
+            nested_data_table.add_row(row)
+            #Descomposición
+            self.components.writePriceTableTwoIntoLatexDocument(nested_data_table,True); #XXX Here cumulated percentages.
+            data_table.add_row([nested_data_table])
 
     def WriteHCalc(self, os):
-        os.write(Codigo() + tab
-           + pylatex_utils.ascii2latex(Unidad()) + tab
+        os.write(self.Codigo() + tab
+           + pylatex_utils.ascii2latex(self.Unidad()) + tab
            + '"' + pylatex_utils.ascii2latex(self.getLongDescription()) + '"' + tab
            + '"' + self.StrPriceToWords(True) + '"' + tab
            + StrPrecio() + '\n')

@@ -20,7 +20,7 @@ class QuantitiesReport(dict):
     def printLtx(self, os):
         if(size()>0):
             longTableStr= '|l|p{4cm}|r|r|'
-            headerRow1= ["Código","Descripción.","Medición",'Precio']
+            headerRow1= [u"Código",u"Descripción.",u"Medición",'Precio']
             with doc.create(pylatex.table.LongTable(longTableStr)) as data_table:
                 data_table.add_hline()
                 data_table.add_row(headerRow1)

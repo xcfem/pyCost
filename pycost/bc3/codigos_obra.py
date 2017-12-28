@@ -165,7 +165,7 @@ class CodigosObra(object):
 
     def Print(os):
         os.write("Obra: " + '\n' + self.GetDatosObra() + '\n'
-           + "Capítulos: " + '\n' + self.caps + '\n'
+           + u"Capítulos: " + '\n' + self.caps + '\n'
            + "Elementos:" + '\n' + '\n'
            + "Descompuestos:" + '\n' + self.udsobr + '\n'
            + basic_types.quantitiesCaption + ':\n' + self.quantities + '\n'

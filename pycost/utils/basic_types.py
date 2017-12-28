@@ -46,11 +46,15 @@ def str_tipo(tipo):
 
 quantitiesCaption= 'Mediciones'
 
+sin_desc_string= u'Sin descomposición'
+
 def to_words(number, genre, lng= 'es'):
     return num2words(number, lang= lng)
 
 def human_readable(number,decPlaces= 3):
-    return locale.format('%d',number, grouping= True)
+    #return locale.format('%d',number, grouping= True)
+    formatString= '{0:.'+str(decPlaces)+'f}'
+    return formatString.format(number, grouping= True)
 
 # import Currency
 # typedef Currency<3> ppl_dimension

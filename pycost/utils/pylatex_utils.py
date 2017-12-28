@@ -25,6 +25,89 @@ class SmallCommand(pylatex.base_classes.CommandBase):
 
     _latex_name = 'small'
 
+class NormalSizeCommand(pylatex.base_classes.CommandBase):
+    '''
+    small LaTeX command.
+    '''
+
+    _latex_name = 'normalsize'
+
+class LargeCommand(pylatex.base_classes.CommandBase):
+    '''
+    Large LaTeX command.
+    '''
+
+    _latex_name = 'Large'
+
+class largeCommand(pylatex.base_classes.CommandBase):
+    '''
+    large LaTeX command.
+    '''
+
+    _latex_name = 'large'
+
+
+def textsc(s, escape=True):
+    r"""Make a string appear textsc in LaTeX formatting.
+
+    textsc() wraps a given string in the LaTeX command \textsc{}.
+
+    Args
+    ----
+    s : str
+        The string to be formatted.
+    escape: bool
+        If true the textsc text will be escaped
+
+    Returns
+    -------
+    NoEscape
+        The formatted string.
+
+    Examples
+    --------
+    >>> textsc("hello")
+    '\\textsc{hello}'
+    >>> print(textsc("hello"))
+    \textsc{hello}
+    """
+
+    if escape:
+        s = pylatex.escape_latex(s)
+
+    return pylatex.NoEscape(r'\textsc{' + s + '}')
+
+
+def input(s, escape=True):
+    r"""Make LaTeX to read from a file.
+
+    input() wraps a given string in the LaTeX command \input{}.
+
+    Args
+    ----
+    s : str
+        The string to be formatted.
+    escape: bool
+        If true the input text will be escaped
+
+    Returns
+    -------
+    NoEscape
+        The formatted string.
+
+    Examples
+    --------
+    >>> input("hello.tex")
+    '\\input{hello.tex}'
+    >>> print(input("hello.tex"))
+    \input{hello.tex}
+    """
+
+    if escape:
+        s = pylatex.escape_latex(s)
+
+    return pylatex.NoEscape(r'\input{' + s + '}')
+
 class LongTable(pylatex.table.LongTable):
     '''A class with the methods that are not yet implemented
        in the stable version of PyLatex.'''
@@ -100,8 +183,6 @@ def ltx_symbol(doc,s):
 # Tipos de letra
 ltx_tiny= '\\scriptsize'
 ltx_scriptsize= '\\scriptsize'
-ltx_small= '\\small'
-ltx_normalsize= '\\normalsize'
 ltx_large= '\\large'
 def ltx_textbf(str):
     return '\\textbf{' + str + '}'
@@ -120,7 +201,6 @@ def ltx_input(doc, str):
     doc.append('\\input{' + str + '}')
 
 # Estructura
-ltx_parttoc= pylatex.Command('parttoc')
 
 def ltx_part(doc,  str):
     doc.append('\\part{' + str + '}')

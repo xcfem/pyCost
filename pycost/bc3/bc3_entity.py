@@ -67,7 +67,10 @@ class EntBC3(epc.EntPyCost):
     def __init__(self, cod, tit):
       super(EntBC3,self).__init__()
       self.codigo= cod
-      self.title= unicode(tit,encoding='utf-8')
+      if(type(tit) == str):
+        self.title= unicode(tit,encoding='utf-8')
+      else:
+        self.title= tit
 
     def LeeBC3(self, r):
         if verborrea>4:
@@ -91,7 +94,7 @@ class EntBC3(epc.EntPyCost):
         return precio2str(Precio())
 
     def StrPrecioLtx(self):
-        return basic_types.human_readable(PrecioR())
+        return basic_types.human_readable(self.PrecioR())
 
     def StrPriceToWords(self, genero):
         return basic_types.toWord(self.PrecioR(),genero)
@@ -100,7 +103,7 @@ class EntBC3(epc.EntPyCost):
         return 0.0
 
     def PrecioR(self):
-        return basic_types.ppl_price(Precio())
+        return basic_types.ppl_price(self.Precio())
 
     def Fecha(self):
         return "040400";    # xxx

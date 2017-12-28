@@ -100,7 +100,7 @@ class regBC3_desc(regBC3):
         return es_codigo_obra(codigo)
 
     def Write(self, os):
-        os.write("Código: " + codigo + '\n'
+        os.write(u"Código: " + codigo + '\n'
            + "Factor: " + Str(factor) + '\n'
            + "Production rate: " + str(productionRate) + '\n')
 
@@ -217,7 +217,7 @@ class regBC3_ruta(list,regBC3):
         for i in range(0,Chapters()):
             os.write(Str + self[i] + '\n')
             Str= "Sub" + Str
-        os.write("Posición: " + Posicion())
+        os.write(u"Posición: " + Posicion())
 
 class regBC3_m(regBC3):
     '''FIEBDC-3 ~M record

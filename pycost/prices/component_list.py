@@ -33,11 +33,11 @@ class ComponentList(list, epc.EntPyCost):
 
     def PrecioR(self):
         lista= self.getPriceJustificationList(True)#XXX Here cumulated percentages.
-        return basic_types.ppl_price(float(lista.TotalRnd()))
+        return basic_types.ppl_price(float(lista.getTotalRnd()))
 
 
     #not  @brief Suma de los precios de un tipo (mdo, maq, mat,...)
-    def Precio(self, tipo):
+    def PrecioPorTipo(self, tipo):
         ptipo= basic_types.ppl_price(0.0,3) #Total price.
         for i in self:
             if (i).Tipo()==tipo and not (i).IsPercentage():
