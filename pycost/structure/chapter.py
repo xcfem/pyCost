@@ -172,11 +172,14 @@ class Chapter(bc3_entity.EntBC3):
     def ImprLtxResumen(self, doc, sect, recurre= True):
         if(self.hasQuantities()):
             if(sect!='root'):
-                doc.append("\\item " + self.getTitle() + " \\dotfill\\ "
-                   + self.StrPrecioLtx() + '\n')
+                doc.add_item(self.getTitle() + pylatex.NoEscape('\dotfill')
+                   + self.StrPrecioLtx())
             else:
-                doc.append("\\Large\\textbf{Total}\\dotfill\\ \\textbf{"
-                   + self.StrPrecioLtx() + "} \\normalsize" + '\n')
+                doc.append(pylatex_utils.LargeCommand())
+                doc.append(pylatex.utils.bold('Total'))
+                doc.append(pylatex.Command('dotfill'))
+                doc.append(pylatex.utils.bold(self.StrPrecioLtx()))
+                doc.append(pylatex_utils.NormalSizeCommand())
             if(recurre):
                 self.subcapitulos.ImprLtxResumen(doc,pylatex_utils.getLatexSection(sect),recurre)
     def ImprCompLtxPre(self, doc, sect, otro):

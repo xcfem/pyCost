@@ -26,18 +26,17 @@ class PriceJustificationRecordContainer(list):
                 base+= (i).getTotal()
 
 
-    def ImprLtxJust(self, os):
+    def ImprLtxJust(self, doc):
         if(len(self)):
             for i in self:
                 (i).ImprLtxJustPre(os)
             doc.append(pylatex_utils.ltx_multicolumn(pylatex_utils.ltx_datos_multicolumn("4","r","Total "+StrTipo()))
                + " & & " + basic_types.human_readable(Total()) + pylatex_utils.ltx_fin_reg + '\n' + pylatex_utils.ltx_fin_reg + '\n')
 
-    def writePriceTableTwoIntoLatexDocument(self, doc):
+    def writePriceTableTwoIntoLatexDocument(self, data_table):
         total= self.getTotal()
         if total>basic_types.ppl_price(0.0,3):
-            doc.append(" & & " + self.StrTipo()
-               + " & " + basic_types.human_readable(total) + pylatex_utils.ltx_fin_reg + '\n')
+            data_table.add_row(['','',self.StrTipo(),basic_types.human_readable(total)])
 
     def writePriceTableTwoIntoLatexDocumentPorc(self, os):
         if(len(self)):

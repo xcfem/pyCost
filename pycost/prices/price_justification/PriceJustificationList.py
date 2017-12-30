@@ -104,20 +104,21 @@ class PriceJustificationList(object):
             #Total
             data_table.add_row(row2)
         else:
+            data_table.add_empty_row()
             self.mano_de_obra.writePriceTableTwoIntoLatexDocument(data_table)
             self.materiales.writePriceTableTwoIntoLatexDocument(data_table)
             self.maquinaria.writePriceTableTwoIntoLatexDocument(data_table)
             self.otros.writePriceTableTwoIntoLatexDocument(data_table)
             self.percentages.writePriceTableTwoIntoLatexDocumentPorc(data_table)
             #Suma
-            row1= ['','Suma',pylatex.Command("ldots"),basic_types.human_readable(total)]
+            row1= ['','',pylatex.NoEscape('Suma \ldots'),basic_types.human_readable(total)]
             data_table.add_row(row1)
             #Redondeo
-            row2= ['','Redondeo',pylatex.Command("ldots"),basic_types.human_readable(rnd)]
+            row2= ['','',pylatex.NoEscape('Redondeo \ldots'),basic_types.human_readable(rnd)]
             data_table.add_row(row2)
             #Total
-            #doc.append(pylatex_utils.ltx_cline("4-4") + '\n')
-            row3= ['','TOTAL',pylatex.Command("ldots"),basic_types.human_readable(total_rnd)]
+            data_table.append(pylatex.Command(pylatex.NoEscape('cline{4-4}')))
+            row3= ['','',pylatex.NoEscape('TOTAL\ldots'),basic_types.human_readable(total_rnd)]
             data_table.add_row(row3)
 
 
