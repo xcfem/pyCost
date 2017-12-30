@@ -258,7 +258,7 @@ class Obra(cp.Chapter):
         doc.append(chapter)
 
     def WriteBC3(self, os, pos= ''):
-        os.write("~V|XC, S.L.|FIEBDC-3/95|pyCost 0.1|\n")
+        os.write("~V|XC, S.L.|FIEBDC-3/2012|pyCost 0.1|\n")
         self.WritePreciosBC3(os)
         self.WriteConceptoBC3(os)
         self.WriteDescompBC3(os)
