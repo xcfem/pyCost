@@ -67,8 +67,8 @@ class CuaPre(epc.EntPyCost):
         ofs_des.close()
 
     def WriteBC3(self, os):
-        elementos.WriteBC3(os)
-        unidades.WriteBC3(os)
+        self.elementos.WriteBC3(os)
+        self.unidades.WriteBC3(os)
 
     def LeeSpre(self, iS):
         self.elementos.LeeSpre(iS)

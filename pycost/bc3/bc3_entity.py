@@ -12,7 +12,7 @@ from pycost.utils import EntPyCost as epc
 from pycost.utils import basic_types
 
 def precio2str(d):
-    return num2str(d,13)
+    return str(d)
 
 
 
@@ -47,7 +47,7 @@ class EntBC3(epc.EntPyCost):
         return self.title
 
     def StrPrecio(self):
-        return precio2str(Precio())
+        return precio2str(self.Precio())
 
     def StrPrecioLtx(self):
         return basic_types.human_readable(self.PrecioR())
@@ -65,43 +65,31 @@ class EntBC3(epc.EntPyCost):
         return "040400";    # xxx
 
     def getType(self):
-        return sin_clasif
+        return basic_types.sin_clasif
 
     def getLongDescription(self):
         return self.static_texto_largo
 
 
     def ChrTipo(self):
-        tp= self.getType()
-        if(tp==sin_clasif):
-            return '0'
-        elif(tp==mdo):
-            return '1'
-        elif(tp==maq):
-            return '2'
-        elif(tp==mat):
-            return '3'
-        else:
-            return '0'
-
+        return basic_types.tipo_concepto2chr(self.getType())
 
     def isPercentage(self):
         return self.codigo.find('%')>0
 
     def WriteSpre(self, os):
-        os.write(Codigo() + '|'
-           + Unidad() + '|'
-           + getTitle() + '|'
-           + StrPrecio() + '|' + endl_msdos)
+        os.write(self.Codigo() + '|'
+           + self.Unidad() + '|'
+           + self.getTitle() + '|'
+           + self.StrPrecio() + '|' + '\n')
 
-    def WriteConceptoBC3(self, os, primero):
-        os.write("~C" + '|' + CodigoBC3())
-        #if(primero) os.write('#'
-        os.write('|' + Unidad() + '|'
-           + latin1TOpc850ML(getTitle()) + '|'
-           + StrPrecio() + '|'
-           + Fecha() + '|'
-           + ChrTipo() + '|' + endl_msdos)
+    def WriteConceptoBC3(self, os):
+        os.write("~C" + '|' + self.CodigoBC3())
+        os.write('|' + self.Unidad() + '|')
+        os.write(self.getTitle().encode('utf8') + '|')
+        os.write(self.StrPrecio() + '|')
+        os.write(self.Fecha() + '|')
+        os.write(self.ChrTipo() + '|\n')
 
     def Write(self, os):
         os.write("Codigo: " + Codigo() + '\n'

@@ -87,16 +87,16 @@ class UnitPrice(ms.Measurable):
 
 
     def WriteBC3(self, os):
-        Measurable.WriteBC3(os)
-        components.WriteBC3(self.Codigo(),os)
+        super(UnitPrice,self).WriteBC3(os)
+        self.components.WriteBC3(self.Codigo(),os)
 
 
     def SimulaDescomp(self,otra):
         '''Toma la descomposición de otra unidad de obra.
            sin alterar el precio de ésta.'''
         objetivo= self.Precio()
-        components= copia(otra.components)
-        return components.FuerzaPrecio(objetivo)
+        self.components= copia(otra.components)
+        return self.components.FuerzaPrecio(objetivo)
 
 
     def ImprLtxJustPre(self, os):

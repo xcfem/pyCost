@@ -10,11 +10,12 @@ class UnitPriceReport(object):
         return self.ud
     def Medicion(self):
         return self.med_total
-    def printLtx(self, os):
+    def printLtx(self, data_table):
         if ud:
-            doc.append(ud.Codigo() + " & "
-               + pylatex_utils.ascii2latex(ud.getLongDescription()) + " & "
-               + en_humano(med_total,0) + " & "
-               + en_humano(med_total*ud.Precio(),0))
+            row= [self.ud.Codigo()]
+            row.append(pylatex_utils.ascii2latex(self.ud.getLongDescription()))
+            row.append(en_humano(med_total,0))
+            row.append(en_humano(med_total*ud.Precio(),0))
+            data_table.add_row(row)
 
 

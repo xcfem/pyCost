@@ -4,6 +4,7 @@
 from pycost.measurements import measurement_container
 from pycost.bc3 import fr_entity
 from pycost.bc3 import bc3_entity
+from pycost.bc3 import bc3_component
 from pycost.structure import chapter_container
 from pycost.prices import price_table
 from pycost.prices import unit_price_container
@@ -42,19 +43,19 @@ class Chapter(bc3_entity.EntBC3):
                     retval= True
                     break
         return retval
-    def WriteQuantities(os, pos=""):
-        self.quantities.Write(os,CodigoBC3(),pos)
-    def WriteSubChapters(os, primero= "False", pos=""):
-        self.subcapitulos.WriteBC3(os,primero,pos)
+    def WriteQuantities(self,os, pos=""):
+        self.quantities.Write(os,self.CodigoBC3(),pos)
+    def WriteSubChapters(self,os, pos=""):
+        self.subcapitulos.WriteBC3(os,pos)
     def CodigoBC3(self):
-        return EntBC3.CodigoBC3() + "#"
+        return super(Chapter,self).CodigoBC3() + "#"
     def CuadroPrecios(self):
         return self.precios
     def AppendUnitPriceQuantities(self, m):
         self.quantities.append(m)
     def GetBC3Component(self):
         '''Return this chapter as a component.'''
-        return BC3Component(self,fr)
+        return bc3_component.BC3Component(self,self.fr)
     def LeeBC3Elementales(self, elementos):
         '''Appends the elementary prices from argument.'''
         self.precios.LeeBC3Elementales(elementos)
@@ -68,7 +69,7 @@ class Chapter(bc3_entity.EntBC3):
             retval= self.subcapitulos.Busca(ruta)
             if not retval:
                 lmsg.error(u"Chapter.BuscaSubcapitulo: no se encontró el subcapítulo: " + ruta[1]
-                          + u" en el capítulo: " + Codigo() + " (" + self.getTitle()
+                          + u" en el capítulo: " + self.Codigo() + " (" + self.getTitle()
                           + ") (ruta: " + ruta + ')' + '\n')
                 #Si no encuentra el capítulo devuelve este mismo
                 retval= self
@@ -96,15 +97,15 @@ class Chapter(bc3_entity.EntBC3):
 
             return self.subcapitulos[indice-1].BuscaSubcapitulo(lst.substr(pos+1,lst.size()-1))
 
-        lmsg.error("sale por aqui (y no debiera) en el capitulo: " + Codigo() + '\n')
+        lmsg.error("sale por aqui (y no debiera) en el capitulo: " + self.Codigo() + '\n')
         return retval
     def BuscaCodigo(self, nmb):
-        if (Codigo()==nmb) or ((Codigo()+'#')==nmb):
+        if (self.Codigo()==nmb) or ((self.Codigo()+'#')==nmb):
             return self
         else:
             return self.subcapitulos.BuscaCodigo(nmb)
     def BuscaCodigo(self, nmb):
-        if Codigo()==nmb:
+        if self.Codigo()==nmb:
             return self
         else:
             return self.subcapitulos.BuscaCodigo(nmb)
@@ -117,13 +118,13 @@ class Chapter(bc3_entity.EntBC3):
         self.precios.WriteBC3(os)
         self.subcapitulos.WritePreciosBC3(os)
     def WriteDescompBC3(self, os):
-        self.subcapitulos.WriteDescompBC3(os,CodigoBC3())
-        self.quantities.WriteDescompBC3(os,CodigoBC3())
-    def WriteBC3(self, os, primero, pos):
-        WriteConceptoBC3(os,primero)
-        WriteDescompBC3(os)
-        WriteQuantities(os,pos)
-        WriteSubChapters(os,False,pos)
+        self.subcapitulos.WriteDescompBC3(os,self.CodigoBC3())
+        self.quantities.WriteDescompBC3(os,self.CodigoBC3())
+    def WriteBC3(self, os, pos):
+        self.WriteConceptoBC3(os)
+        self.WriteDescompBC3(os)
+        self.WriteQuantities(os,pos)
+        self.WriteSubChapters(os,pos)
     def Precio(self):
         return (self.subcapitulos.Precio() + self.quantities.Precio()) * self.fr.Producto()
     def PrecioR(self):
@@ -169,14 +170,15 @@ class Chapter(bc3_entity.EntBC3):
             self.precios.ImprLtxJustPre(doc)
         self.subcapitulos.ImprLtxJustPre(doc,pylatex_utils.getLatexSection(sect))
     def ImprLtxResumen(self, doc, sect, recurre= True):
-        if(sect!='root'):
-            doc.append("\\item " + self.getTitle() + " \\dotfill\\ "
-               + self.StrPrecioLtx() + '\n')
-        else:
-            doc.append("\\Large\\textbf{Total}\\dotfill\\ \\textbf{"
-               + self.StrPrecioLtx() + "} \\normalsize" + '\n')
-        if(recurre):
-            self.subcapitulos.ImprLtxResumen(doc,pylatex_utils.getLatexSection(sect),recurre)
+        if(self.hasQuantities()):
+            if(sect!='root'):
+                doc.append("\\item " + self.getTitle() + " \\dotfill\\ "
+                   + self.StrPrecioLtx() + '\n')
+            else:
+                doc.append("\\Large\\textbf{Total}\\dotfill\\ \\textbf{"
+                   + self.StrPrecioLtx() + "} \\normalsize" + '\n')
+            if(recurre):
+                self.subcapitulos.ImprLtxResumen(doc,pylatex_utils.getLatexSection(sect),recurre)
     def ImprCompLtxPre(self, doc, sect, otro):
         if sect!='root':
             doc.append('\\' + sect + '{' + self.getTitle() + '}' + '\n')
@@ -195,14 +197,22 @@ class Chapter(bc3_entity.EntBC3):
 
         if self.quantities:
             doc.append("\\newpage" + '\n')
+    def hasQuantities(self):
+        '''Returns true if the chapter (or its subchapters) have
+           quantities.'''
+        if(len(self.quantities)):
+            return True
+        else:
+            return self.subcapitulos.hasQuantities()
     def ImprLtxPre(self, doc, sect):
         '''Imprime presupuestos parciales.'''
-        if(sect!='root'):
-            doc.append(pylatex.Section(self.getTitle()))
-        self.quantities.ImprLtxPre(doc,self.getTitle())
-        self.subcapitulos.ImprLtxPre(doc,pylatex_utils.getLatexSection(sect))
-        if self.subcapitulos:
-            doc.append("\\noindent \\large \\textbf{Total: " + self.getTitle() + "} \\dotfill \\textbf{" + self.StrPrecioLtx() + "} \\\\ \\normalsize" + '\n')
+        if(self.hasQuantities()):
+            if(sect!='root'):
+                doc.append(pylatex.Section(self.getTitle()))
+            self.quantities.ImprLtxPre(doc,self.getTitle())
+            self.subcapitulos.ImprLtxPre(doc,pylatex_utils.getLatexSection(sect))
+            if self.subcapitulos:
+                doc.append("\\noindent \\large \\textbf{Total: " + self.getTitle() + "} \\dotfill \\textbf{" + self.StrPrecioLtx() + "} \\\\ \\normalsize" + '\n')
 
     def WriteHCalcMed(self, os, sect):
         if sect!='root':

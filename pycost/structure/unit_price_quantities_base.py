@@ -36,7 +36,7 @@ class UnitPriceQuantitiesBase(epc.EntPyCost):
         return self.ud.StrPrecioLtx()
 
     def Precio(self):
-        return self.getTotal()*ud.Precio()
+        return self.getTotal()*float(self.ud.Precio())
 
     def PrecioR(self):
         return basic_types.ppl_price(float(self.getTotalR())*float(self.PrecioRUd()))
@@ -154,14 +154,14 @@ class UnitPriceQuantitiesBase(epc.EntPyCost):
            + Precio() + '\n')
 
     def WriteBC3RegM(self, os, cap_padre, pos):
-        os.write("~M|" + cap_padre + '\\' + getUnitPriceCode() + '|'
-           + pos.write('|'
-           + self.getTotal() + '|'))
+        os.write("~M|" + cap_padre + '\\' + self.getUnitPriceCode() + '|'
+           + str(pos) + '|'
+           + str(self.getTotal()) + '|')
 
     def WriteBC3(self, os, cap_padre, pos):
-        WriteBC3RegM(os,cap_padre,pos)
-        quantities.WriteBC3(os)
-        os.write('|' + endl_msdos)
+        self.WriteBC3RegM(os,cap_padre,pos)
+        self.quantities.WriteBC3(os)
+        os.write('|' + '\n')
 
     @staticmethod
     def printLtxColumnHeaders(data_table):

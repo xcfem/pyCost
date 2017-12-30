@@ -29,9 +29,10 @@ class ElementaryPrice(m.Measurable):
         tipo= sint2TipoConcepto(r.Datos().getType())
 
 
-    def printLtx(self, os):
-        doc.append(pylatex_utils.ascii2latex(Codigo()) + " & "
-           + pylatex_utils.ascii2latex(Unidad()) + " & "
-           + pylatex_utils.ascii2latex(getTitle()) + " & "
-           + StrPrecioLtx() + "\\\\" + '\n')
+    def printLtx(self, data_table):
+        row= [pylatex_utils.ascii2latex(self.Codigo())]
+        row.append(pylatex_utils.ascii2latex(self.Unidad()))
+        row.append(pylatex_utils.ascii2latex(self.getTitle()))
+        row.append(self.StrPrecioLtx())
+        data_table.add_row(row)
 

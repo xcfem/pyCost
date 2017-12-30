@@ -5,7 +5,7 @@ from pycost.utils import basic_types
 from pycost.utils import EntPyCost as epc
 
 def rdto2str(d):
-    return num2str(d,13)
+    return str(d)
 
 
 class EntFR(epc.EntPyCost):
@@ -30,6 +30,6 @@ class EntFR(epc.EntPyCost):
         os.write(rdto2str(Producto()) + '|')
 
     def WriteBC3(self, os):
-        os.write(factor + '\\' + rdto2str(productionRate) + '\\')
+        os.write(str(self.factor) + '\\' + rdto2str(self.productionRate) + '\\')
 
 

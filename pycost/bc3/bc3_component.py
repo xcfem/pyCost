@@ -65,7 +65,6 @@ class BC3Component(fr_entity.EntFR):
             exit(1)
 
     def getPriceJustificationRecord(self, over):
-        print '  here over= ', over
         if self.isPercentage():
             return pjr.PriceJustificationRecord(CodigoEntidad(),ppl_price(self.Producto(),4),self.ent.Unidad(),self.ent.getTitle(),True,basic_types.ppl_price(Producto()*100.0),over)
         else:

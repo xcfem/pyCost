@@ -20,14 +20,14 @@ class ComponentList(list, epc.EntPyCost):
         if(len(self)):
             for i in self:
                 i.WriteSpre(os)
-            os.write('|' + endl_msdos)
+            os.write('|' + '\n')
 
     def WriteBC3(self, cod, os):
         if(len(self)):
             os.write("~D" + '|' + cod + '|')
             for i in self:
                 i.WriteBC3(os)
-            os.write('|' + endl_msdos)
+            os.write('|' + '\n')
 
 
     def PrecioR(self):
@@ -78,15 +78,11 @@ class ComponentList(list, epc.EntPyCost):
         return Lambda
 
     def getElementaryPricesOfType(self, typo):
-        print 'here typo: ', typo
         lista= pjrc.PriceJustificationRecordContainer(typo)
         for i in self:
             if(i.getType()==typo):
-                print 'i.type= ', i.getType(), 'i.codigo: ', i.CodigoEntidad(), '%:', i.isPercentage()
                 if not i.isPercentage():
-                    print '    here i= ', i
                     lista.append((i).getPriceJustificationRecord(0.0))
-        print ' here len(list)= ', len(lista)
         return lista
 
     def getPourcentagesForType(self, typo):

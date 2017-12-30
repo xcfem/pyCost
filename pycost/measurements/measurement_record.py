@@ -80,11 +80,11 @@ class MeasurementRecord(epc.EntPyCost):
         self.alto= m.med.alto
 
     def WriteBC3(self, os):
-        os.write('\\' + self.comentario + '\\'
-           + self.unidades + '\\'
-           + self.largo + '\\'
-           + self.ancho + '\\'
-           + self.alto + '\\')
+        os.write('\\' + self.comentario.encode('utf8') + '\\'
+           + str(self.unidades) + '\\'
+           + str(self.largo) + '\\'
+           + str(self.ancho) + '\\'
+           + str(self.alto) + '\\')
 
 
     def Write(self, os):

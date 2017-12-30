@@ -31,13 +31,13 @@ class ConceptDict(epy.EntPyCost):
           retval= self.claves[cod]
         return retval
 
-    def WriteBC3(os):
-        for j in self.keys:
-           map[j].WriteBC3(os)
+    def WriteBC3(self,os):
+        for j in self.map.keys():
+           self.map[j].WriteBC3(os)
 
-    def Write(os):
-        for j in self.keys:
-           map[j].Write(os)
+    def Write(self,os):
+        for j in self.map.keys():
+           self.map[j].Write(os)
 
 
 def find_concept(conceptName):

@@ -131,7 +131,7 @@ class Subcapitulos(list, epc.EntPyCost):
            + cod + '|')
         for i in self:
             (i).GetBC3Component().WriteBC3(os)
-        os.write('|' + endl_msdos)
+        os.write('|' + '\n')
 
 
     def WritePreciosBC3(self, os):
@@ -139,11 +139,11 @@ class Subcapitulos(list, epc.EntPyCost):
             (i).WritePreciosBC3(os)
 
 
-    def WriteBC3(self, os, primero, pos):
+    def WriteBC3(self, os, pos):
         conta= 1
         for i in self:
-            nueva_pos= pos+num2str(conta,0)+'\\'
-            (i).WriteBC3(os,primero,nueva_pos)
+            nueva_pos= pos+str(conta)+'\\'
+            (i).WriteBC3(os,nueva_pos)
             conta+=1
 
     def ImprCompLtxMed(self, os, sect, otro):
@@ -202,7 +202,14 @@ class Subcapitulos(list, epc.EntPyCost):
         for j in self:
             (j).WriteHCalcPre(os,sect)
 
-
+    def hasQuantities(self):
+        '''Returns true if al least one of the chapters have quantities.'''
+        retval= False
+        for c in self:
+            if c.hasQuantities():
+                retval= True
+                break
+        return retval
     def getQuantitiesReport(self):
         retval= QuantitiesReport()
         for j in self:

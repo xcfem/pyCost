@@ -34,7 +34,7 @@ class ChapterQuantities(list, epc.EntPyCost):
     def Write(self, os, cod, pos):
         contador= 1
         for i in self:
-            pos_med= pos + num2str(contador,0) + '\\'
+            pos_med= pos + str(contador) + '\\'
             (i).WriteBC3(os,cod,pos_med)
             contador+= 1
 
@@ -46,8 +46,8 @@ class ChapterQuantities(list, epc.EntPyCost):
              + cod + '|')
             for i in self:
                 os.write((i).getUnitPriceCode() + "\\1\\" #factor 1
-                   + (i).getTotal() + '\\')
-            os.write('|' + endl_msdos)
+                   + str((i).getTotal()) + '\\')
+            os.write('|' + '\n')
 
     def ImprCompLtxMed(self, os, otra):
         if len(self):

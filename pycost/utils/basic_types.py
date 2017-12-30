@@ -12,7 +12,7 @@ import locale
 
 sin_clasif, mdo, maq, mat= range(0, 4)
 
-def str2tipo_concepto(self, Str):
+def str2tipo_concepto(Str):
     if(len(Str)<1):
         return sin_clasif
     elif(Str[0]=='0'):
@@ -26,7 +26,7 @@ def str2tipo_concepto(self, Str):
     else:
         return sin_clasif
 
-def sint2tipo_concepto(self, si):
+def sint2tipo_concepto(si):
     if(si==0):
         return sin_clasif
     elif(si==1):
@@ -38,7 +38,7 @@ def sint2tipo_concepto(self, si):
     else:
         return sin_clasif
 
-def tipo_concepto2str(self, t):
+def tipo_concepto2str(t):
     if(t==0):
         return "sin_clasif"
     elif(t==1):
@@ -50,6 +50,18 @@ def tipo_concepto2str(self, t):
     else:
         return "sin_clasif"
     return "sin_clasif"
+
+def tipo_concepto2chr(tp):
+    if(tp==sin_clasif):
+        return '0'
+    elif(tp==mdo):
+        return '1'
+    elif(tp==maq):
+        return '2'
+    elif(tp==mat):
+        return '3'
+    else:
+        return '0'
 
 dimensionPrecision= 3
 dimensionPlaces= Decimal(10) ** -dimensionPrecision

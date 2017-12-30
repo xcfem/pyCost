@@ -29,7 +29,7 @@ class Obra(cp.Chapter):
     def BuscaPrecio(self, cod):
         retval= super(Obra,self).BuscaPrecio(cod)
         if not retval:
-            print 'unit price: '+ cod + ' not found.'
+            lmsg.error('unit price: '+ cod + ' not found.')
         return retval
 
     def CodigoBC3(self):
@@ -257,13 +257,13 @@ class Obra(cp.Chapter):
         chapter.append(pylatex_utils.input('firmas'))
         doc.append(chapter)
 
-    def WriteBC3(self, os, pos):
-        os.write("~V|Iturribizia, S.L.|FIEBDC-3/95|ppl 0.1|" + endl_msdos)
-        WritePreciosBC3(os)
-        WriteConceptoBC3(os)
-        WriteDescompBC3(os)
-        WriteQuantities(os,pos)
-        WriteSubChapters(os,True,pos)
+    def WriteBC3(self, os, pos= ''):
+        os.write("~V|XC, S.L.|FIEBDC-3/95|pyCost 0.1|\n")
+        self.WritePreciosBC3(os)
+        self.WriteConceptoBC3(os)
+        self.WriteDescompBC3(os)
+        self.WriteQuantities(os,pos)
+        self.WriteSubChapters(os,pos)
 
 
     def ImprLtxPresGen(self, doc):

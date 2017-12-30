@@ -21,7 +21,7 @@ class Measurable(eBC3.EntBC3):
         if(ld):
           self.long_description= unicode(ld,encoding='utf-8')
         else:
-          self.long_descritionn= ''
+          self.long_description= ''
 
     def getLongDescription(self):
         return self.long_description
@@ -32,5 +32,5 @@ class Measurable(eBC3.EntBC3):
     def WriteBC3(self, os):
         self.WriteConceptoBC3(os)
         if len(self.getLongDescription())>0:
-            os.write("~T|" + Codigo() + '|' + latin1TOpc850ML(self.getLongDescription()) + '|' + endl_msdos)
+            os.write("~T|" + self.Codigo() + '|' + self.getLongDescription().encode('utf8') + '|' + '\n')
 
