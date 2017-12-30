@@ -4,7 +4,6 @@
 from pycost.structure import chapter as cp
 from pycost.utils import percentages as pc
 from pycost.bc3 import codigos_obra as cod
-from pycost.bc3 import bc3_entity
 from pycost.prices import elementary_price
 
 import pylatex
@@ -23,7 +22,7 @@ class Obra(cp.Chapter):
 
     def __init__(self, cod="ObraSinCod", tit="ObraSinTit"):
         super(Obra,self).__init__(cod,tit,1,1)
-        elem= elementary_price.ElementaryPrice("SINDESCO",basic_types.sin_desc_string,"",1.0,bc3_entity.mat)
+        elem= elementary_price.ElementaryPrice("SINDESCO",basic_types.sin_desc_string,"",1.0,basic_types.mat)
         self.precios.Elementales().Append(elem)
         self.percentages= pc.Percentages()
 

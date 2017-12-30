@@ -110,18 +110,15 @@ class PriceJustificationList(object):
             self.otros.writePriceTableTwoIntoLatexDocument(data_table)
             self.percentages.writePriceTableTwoIntoLatexDocumentPorc(data_table)
             #Suma
-            row1= ['','','Suma',Command("ldots"),basic_types.human_readable(total)]
+            row1= ['','Suma',pylatex.Command("ldots"),basic_types.human_readable(total)]
             data_table.add_row(row1)
             #Redondeo
-            row2= ['','','Redondeo',Command("ldots"),basic_types.human_readable(rnd)]
+            row2= ['','Redondeo',pylatex.Command("ldots"),basic_types.human_readable(rnd)]
             data_table.add_row(row2)
             #Total
-            row2= ['','','Redondeo',Command("ldots"),basic_types.human_readable(rnd)]
-            doc.append(pylatex_utils.ltx_cline("4-4") + '\n')
-            doc.append(" & & " + pylatex_utils.ltx_textbf("TOTAL") + " & "
-               + "\\textbf{"+basic_types.human_readable(total_rnd)+"}"
-               + pylatex_utils.ltx_fin_reg + '\n')
-
+            #doc.append(pylatex_utils.ltx_cline("4-4") + '\n')
+            row3= ['','TOTAL',pylatex.Command("ldots"),basic_types.human_readable(total_rnd)]
+            data_table.add_row(row3)
 
 
     def writePriceTableOneIntoLatexDocument(self, data_table, genero):

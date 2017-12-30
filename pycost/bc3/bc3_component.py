@@ -2,6 +2,8 @@
 
 import fr_entity
 import bc3_entity
+from pycost.prices.price_justification import PriceJustificationRecord as pjr
+from pycost.utils import basic_types
 
 
 class BC3Component(fr_entity.EntFR):
@@ -15,7 +17,7 @@ class BC3Component(fr_entity.EntFR):
         return self.ent.Precio()*Producto()
 
     def PrecioR(self):
-        retval= basic_types.ppl_price(ent.PrecioR(),3)
+        retval= basic_types.ppl_price(self.ent.PrecioR(),3)
         retval*= self.ProductoR()
         return retval
 
@@ -34,16 +36,16 @@ class BC3Component(fr_entity.EntFR):
         return basic_types.human_readable(PrecioSobre(sobre))
 
 
-    def Tipo(self):
-        return self.ent.Tipo()
+    def getType(self):
+        return self.ent.getType()
 
 
     def CodigoEntidad(self):
         return self.ent.Codigo()
 
 
-    def IsPercentage(self):
-        return self.ent.IsPercentage()
+    def isPercentage(self):
+        return self.ent.isPercentage()
 
 
     def WriteSpre(self, os):
@@ -52,7 +54,7 @@ class BC3Component(fr_entity.EntFR):
         super(BC3Component,self).WriteSpre(os)
 
     def WriteBC3(self, os):
-        os.write(ent.CodigoBC3() + '\\')
+        os.write(self.ent.CodigoBC3() + '\\')
         super(BC3Component,self).WriteBC3(os)
 
     def Entidad(self):
@@ -62,22 +64,23 @@ class BC3Component(fr_entity.EntFR):
             lmsg.error("La componente no se refiere a ninguna entidad" + '\n')
             exit(1)
 
-    def getPriceJustificationRecord(self, sobre):
-        if IsPercentage():
-            return PriceJustificationRecord(CodigoEntidad(),ppl_price(self.Producto(),4),ent.Unidad(),ent.getTitle(),True,basic_types.ppl_price(Producto()*100.0),sobre)
+    def getPriceJustificationRecord(self, over):
+        print '  here over= ', over
+        if self.isPercentage():
+            return pjr.PriceJustificationRecord(CodigoEntidad(),ppl_price(self.Producto(),4),self.ent.Unidad(),self.ent.getTitle(),True,basic_types.ppl_price(Producto()*100.0),over)
         else:
-            return PriceJustificationRecord(ent.Codigo(),basic_types.ppl_price(self.Producto(),4),ent.Unidad(),ent.getTitle(),False,ent.PrecioR(),0.0)
+            return pjr.PriceJustificationRecord(self.ent.Codigo(),basic_types.ppl_price(self.Producto(),4),self.ent.Unidad(),self.ent.getTitle(),False,self.ent.PrecioR(),0.0)
 
 
-    def ImprLtxJustPre(self, os, sobre):
-        r= PriceJustificationRecord(getPriceJustificationRecord(sobre))
+    def ImprLtxJustPre(self, os, over):
+        r= self.getPriceJustificationRecord(over)
         r.ImprLtxJustPre(os)
         return r.getTotal()
 
 
-    def writePriceTableTwoIntoLatexDocument(self, os, sobre):
-        r= PriceJustificationRecord(getPriceJustificationRecord(sobre))
-        r.writePriceTableTwoIntoLatexDocument(os)
+    def writePriceTableTwoIntoLatexDocument(self, doc, over):
+        r= self.getPriceJustificationRecord(over)
+        r.writePriceTableTwoIntoLatexDocument(doc)
         return r.getTotal()
 
 

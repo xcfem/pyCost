@@ -5,6 +5,7 @@
 
 import PriceJustificationRecord
 from pycost.utils import basic_types
+from pycost.utils import pylatex_utils
 
 class PriceJustificationRecordContainer(list):
     def __init__(self,tp):
@@ -32,10 +33,10 @@ class PriceJustificationRecordContainer(list):
             doc.append(pylatex_utils.ltx_multicolumn(pylatex_utils.ltx_datos_multicolumn("4","r","Total "+StrTipo()))
                + " & & " + basic_types.human_readable(Total()) + pylatex_utils.ltx_fin_reg + '\n' + pylatex_utils.ltx_fin_reg + '\n')
 
-    def writePriceTableTwoIntoLatexDocument(self, os):
+    def writePriceTableTwoIntoLatexDocument(self, doc):
         total= self.getTotal()
-        if total>ppl_price(0.0,3):
-            doc.append(" & & " + StrTipo()
+        if total>basic_types.ppl_price(0.0,3):
+            doc.append(" & & " + self.StrTipo()
                + " & " + basic_types.human_readable(total) + pylatex_utils.ltx_fin_reg + '\n')
 
     def writePriceTableTwoIntoLatexDocumentPorc(self, os):

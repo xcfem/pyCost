@@ -6,16 +6,16 @@ from pycost.utils import measurable as ms
 from pycost.prices import elementary_price_container
 from pycost.prices import component_list
 from pycost.utils import pylatex_utils
+from pycost.utils import basic_types
 import pylatex
-from pycost.bc3 import bc3_entity
 
 class UnitPrice(ms.Measurable):
 
     def __init__(self, cod="", desc="", ud="", ld= None):
         super(UnitPrice,self).__init__(cod,desc,ud,ld)
         self.components= component_list.ComponentList()
-    def Tipo(self):
-        return bc3_entity.mat; #XXX provisional.
+    def getType(self):
+        return basic_types.mat; #XXX provisional.
     def Precio(self):
         return self.components.Precio()
 

@@ -4,7 +4,6 @@
 from pycost.utils import EntPyCost as epc
 from pycost.prices.price_justification import PriceJustificationList as pjl
 from pycost.prices.price_justification import PriceJustificationRecordContainer as pjrc
-from pycost.bc3 import bc3_entity
 from pycost.utils import basic_types
 
 class ComponentList(list, epc.EntPyCost):
@@ -40,7 +39,7 @@ class ComponentList(list, epc.EntPyCost):
     def PrecioPorTipo(self, tipo):
         ptipo= basic_types.ppl_price(0.0,3) #Total price.
         for i in self:
-            if (i).Tipo()==tipo and not (i).IsPercentage():
+            if (i).getType()==tipo and not (i).isPercentage():
                 ptipo+= (i).PrecioR()
         return ptipo
 
@@ -48,14 +47,14 @@ class ComponentList(list, epc.EntPyCost):
         '''Computes percentages over a type.'''
         ptipo= basic_types.ppl_price(0.0,3); #Precio total.
         for i in self: #Percentages.
-            if (i).Tipo()==tipo and (i).IsPercentage():
+            if (i).getType()==tipo and (i).isPercentage():
                 ptipo+= (i).PrecioSobre(sobre)
         return ptipo
 
     def SumPercentages(self, tipo):
         porc= 0.0; #Total percentage.
         for i in self: #Percentages.
-            if (i).Tipo()==tipo and (i).IsPercentage():
+            if (i).getType()==tipo and (i).isPercentage():
                 porc+= (i).Producto()
         return porc
 
@@ -71,30 +70,35 @@ class ComponentList(list, epc.EntPyCost):
     def FuerzaPrecio(self, objetivo):
         Lambda= CalculaLambda(objetivo)
         for i in self: #Percentages.
-            if(((i).Tipo()!=mat) and not ((i).IsPercentage())):
+            if(((i).getType()!=mat) and not ((i).isPercentage())):
                 i.productionRate*= Lambda
         if Lambda<0.0:
             lmsg.error("lambda= " + Lambda + " negativo" + '\n')
 
         return Lambda
 
-    def getElementaryPricesOfType(self, tipo):
-        lista= pjrc.PriceJustificationRecordContainer(tipo)
+    def getElementaryPricesOfType(self, typo):
+        print 'here typo: ', typo
+        lista= pjrc.PriceJustificationRecordContainer(typo)
         for i in self:
-            if (i).Tipo()==tipo and not (i).IsPercentage():
-                lista.append((i).getPriceJustificationRecord(0.0))
+            if(i.getType()==typo):
+                print 'i.type= ', i.getType(), 'i.codigo: ', i.CodigoEntidad(), '%:', i.isPercentage()
+                if not i.isPercentage():
+                    print '    here i= ', i
+                    lista.append((i).getPriceJustificationRecord(0.0))
+        print ' here len(list)= ', len(lista)
         return lista
 
-    def getPourcentagesForType(self, tipo):
-        lista= pjrc.PriceJustificationRecordContainer(tipo)
+    def getPourcentagesForType(self, typo):
+        lista= pjrc.PriceJustificationRecordContainer(typo)
         for i in self:
-            if (i).Tipo()==tipo and (i).IsPercentage():
+            if (i).getType()==typo and (i).isPercentage():
                 lista.append((i).getPriceJustificationRecord(0.0))
         return lista
 
 
     def getPriceJustificationList(self, pa):
-        return pjl.PriceJustificationList(pa,self.getElementaryPricesOfType(bc3_entity.mdo),self.getElementaryPricesOfType(bc3_entity.mat),self.getElementaryPricesOfType(bc3_entity.maq),self.getElementaryPricesOfType(bc3_entity.sin_clasif),self.getPourcentagesForType(bc3_entity.sin_clasif))
+        return pjl.PriceJustificationList(pa,self.getElementaryPricesOfType(basic_types.mdo),self.getElementaryPricesOfType(basic_types.mat),self.getElementaryPricesOfType(basic_types.maq),self.getElementaryPricesOfType(basic_types.sin_clasif),self.getPourcentagesForType(basic_types.sin_clasif))
 
 
     def ImprLtxJustPre(self, os, pa):

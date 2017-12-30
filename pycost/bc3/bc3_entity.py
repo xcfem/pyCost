@@ -16,50 +16,6 @@ def precio2str(d):
 
 
 
-''' TIPO: Tipo de concepto, se reservan los siguientes tipos: '''
-
-''' 0 (Sin clasificar) 1 (Mano de obra), 2 (Maquinaria y medios aux.), 3 (Materiales). '''
-
-sin_clasif, mdo, maq, mat= range(0, 4)
-
-def str2tipo_concepto(self, Str):
-    if(len(Str)<1):
-        return sin_clasif
-    elif(Str[0]=='0'):
-        return sin_clasif
-    elif(Str[0]=='1'):
-        return mdo
-    elif(Str[0]=='2'):
-        return maq
-    elif(Str[0]=='3'):
-        return mat
-    else:
-        return sin_clasif
-
-def sint2tipo_concepto(self, si):
-    if(si==0):
-        return sin_clasif
-    elif(si==1):
-        return mdo
-    elif(si==2):
-        return maq
-    elif(si==3):
-        return mat
-    else:
-        return sin_clasif
-
-def tipo_concepto2str(self, t):
-    if(t==0):
-        return "sin_clasif"
-    elif(t==1):
-        return "mdo"
-    elif(t==2):
-        return "maq"
-    elif(t==3):
-        return "mat"
-    else:
-        return "sin_clasif"
-    return "sin_clasif"
 
 class EntBC3(epc.EntPyCost):
     static_txtud= ''
@@ -108,7 +64,7 @@ class EntBC3(epc.EntPyCost):
     def Fecha(self):
         return "040400";    # xxx
 
-    def Tipo(self):
+    def getType(self):
         return sin_clasif
 
     def getLongDescription(self):
@@ -116,7 +72,7 @@ class EntBC3(epc.EntPyCost):
 
 
     def ChrTipo(self):
-        tp= self.Tipo()
+        tp= self.getType()
         if(tp==sin_clasif):
             return '0'
         elif(tp==mdo):
@@ -129,8 +85,8 @@ class EntBC3(epc.EntPyCost):
             return '0'
 
 
-    def IsPercentage(self):
-        return self.codigo.find('%')<len(self.codigo)
+    def isPercentage(self):
+        return self.codigo.find('%')>0
 
     def WriteSpre(self, os):
         os.write(Codigo() + '|'

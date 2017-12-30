@@ -305,7 +305,7 @@ class regBC3_elemento(object):
     def Precio(self):
         return self.ccpto.precio
 
-    def Tipo(self):
+    def getType(self):
         return self.ccpto.tipo
 
     def Texto(self):

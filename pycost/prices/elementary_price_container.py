@@ -134,7 +134,7 @@ class ElementaryPrices(concept_dict.ConceptDict):
         ofs_maq= std.ofstream("MAQ001.std",std.ios.out)
         ofs_mat= std.ofstream("MAT001.std",std.ios.out)
         for i in self:
-            tipo= (i).second.Tipo()
+            tipo= (i).second.getType()
             if(tipo==mdo):
                 (i).second.WriteSpre(ofs_mdo)
                 break
@@ -186,7 +186,7 @@ class ElementaryPrices(concept_dict.ConceptDict):
         el= None
         for i in self:
             el= ((i).second)
-            if el.Tipo() == tipo:
+            if el.getType() == tipo:
                 el.printLtx(os)
 
         doc.append("\\end{longtable}" + '\n')
