@@ -172,8 +172,9 @@ class Chapter(bc3_entity.EntBC3):
     def ImprLtxResumen(self, doc, sect, recurre= True):
         if(self.hasQuantities()):
             if(sect!='root'):
-                doc.add_item(self.getTitle() + pylatex.NoEscape('\dotfill')
-                   + self.StrPrecioLtx())
+                doc.add_item(self.getTitle())
+                doc.append(pylatex.Command('dotfill'))
+                doc.append(self.StrPrecioLtx())
             else:
                 doc.append(pylatex_utils.LargeCommand())
                 doc.append(pylatex.utils.bold('Total'))
@@ -215,7 +216,12 @@ class Chapter(bc3_entity.EntBC3):
             self.quantities.ImprLtxPre(doc,self.getTitle())
             self.subcapitulos.ImprLtxPre(doc,pylatex_utils.getLatexSection(sect))
             if self.subcapitulos:
-                doc.append("\\noindent \\large \\textbf{Total: " + self.getTitle() + "} \\dotfill \\textbf{" + self.StrPrecioLtx() + "} \\\\ \\normalsize" + '\n')
+                doc.append(pylatex.Command('noindent'))
+                doc.append(pylatex_utils.largeCommand())
+                doc.append(pylatex.utils.bold('Total: '+self.getTitle()))
+                doc.append(pylatex.Command('dotfill'))
+                doc.append(pylatex.utils.bold(self.StrPrecioLtx()))
+                doc.append(pylatex_utils.NormalSizeCommand())
 
     def WriteHCalcMed(self, os, sect):
         if sect!='root':

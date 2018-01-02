@@ -145,7 +145,7 @@ class Descompuestos(concept_dict.ConceptDict):
             longTableStr= 'l'
             with doc.create(pylatex_utils.LongTable(longTableStr)) as data_table:
                 for j in self.map.keys():
-                    self.map[j].writePriceTableTwoIntoLatexDocument(doc,data_table)
+                    self.map[j].writePriceTableTwoIntoLatexDocument(data_table)
             doc.append(pylatex_utils.NormalSizeCommand())
 
     def WriteHCalc(self, os):

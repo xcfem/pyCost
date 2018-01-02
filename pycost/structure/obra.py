@@ -274,6 +274,7 @@ class Obra(cp.Chapter):
         chapter.append(pylatex.Command('dotfill'))
         chapter.append(pylatex.utils.bold(self.StrPrecioLtx()))
         chapter.append(pylatex.VerticalSpace('0.5cm'))
+        chapter.append(pylatex.NewLine())
         chapter.append(u'Asciende el presente presupuesto de ejecución material a la expresada cantidad de: ')
         chapter.append(pylatex_utils.textsc(basic_types.to_words(self.PrecioR(),False) + ' euros.'))
         chapter.append(pylatex_utils.input('firmas'))

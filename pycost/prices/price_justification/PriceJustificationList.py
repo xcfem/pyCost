@@ -40,7 +40,7 @@ class PriceJustificationList(object):
         #XXX Redondeo para 2 decimales.
         tmp= self.getTotal()
         tmp*= Decimal('100')
-        rnd= basic_types.ppl_price(round(tmp),3)
+        rnd= basic_types.ppl_price(round(tmp),3)-tmp
         rnd/= Decimal('100')
         return rnd
 

@@ -117,9 +117,9 @@ class UnitPrice(ms.Measurable):
                             pylatex_utils.ascii2latex(self.getLongDescription()),'',''])
         self.components.writePriceTableOneIntoLatexDocument(data_table,True,False); #XXX Aqui género.
 
-    def writePriceTableTwoIntoLatexDocument(self, doc, data_table):
+    def writePriceTableTwoIntoLatexDocument(self, data_table):
         tableStr= 'l r p{5.5cm} r'
-        with doc.create(pylatex.Tabular(tableStr)) as nested_data_table:
+        with data_table.create(pylatex.Tabular(tableStr)) as nested_data_table:
             #Header
             nested_data_table.add_row([u'Código',u'Ud.',u'Descripción',u'Importe'])
             nested_data_table.add_hline()
@@ -128,9 +128,8 @@ class UnitPrice(ms.Measurable):
             row.append(pylatex_utils.ascii2latex(self.getLongDescription()))
             row.append('')
             nested_data_table.add_row(row)
-            #Descomposición
+            #Decomposition
             self.components.writePriceTableTwoIntoLatexDocument(nested_data_table,True); #XXX Here cumulated percentages.
-            data_table.add_row([nested_data_table])
 
     def WriteHCalc(self, os):
         os.write(self.Codigo() + tab
