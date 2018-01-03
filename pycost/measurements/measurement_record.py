@@ -11,7 +11,7 @@ from pycost.utils import pylatex_utils
 
 class MeasurementRecord(epc.EntPyCost):
 
-    def __init__(self,c= "", uds= 0.0,l= 0.0,an= 0.0,al= 0.0):
+    def __init__(self,c= "", uds= None,l= None,an= None,al= None):
         super(MeasurementRecord,self).__init__()
         self.comentario= unicode(c,encoding='utf-8')
         self.unidades= uds
@@ -35,42 +35,65 @@ class MeasurementRecord(epc.EntPyCost):
         return self.alto
 
     def UnidadesR(self):
-        return basic_types.ppl_dimension(self.unidades)
+        retval= None
+        if(self.unidades):
+            retval= basic_types.ppl_dimension(self.unidades)
+        return retval
 
     def LargoR(self):
-        return basic_types.ppl_dimension(self.largo)
+        retval= None
+        if(self.largo):
+            retval= basic_types.ppl_dimension(self.largo)
+        return retval
 
     def AnchoR(self):
-        return basic_types.ppl_dimension(self.ancho)
+        retval= None
+        if(self.ancho):
+            retval= basic_types.ppl_dimension(self.ancho)
+        return retval
 
     def AltoR(self):
-        return basic_types.ppl_dimension(self.alto)
+        retval= None
+        if(self.alto):
+            retval= basic_types.ppl_dimension(self.alto)
+        return retval
+
+    def isNull(self):
+        '''Returns true if the measurement result is zero.'''
+        retval= False
+        if(self.unidades==0.0) and (self.largo==0.0) and (self.ancho==0.0) and (self.alto==0.0):
+            retval= True
+        else:
+            if(self.unidades==None) and (self.largo==None) and (self.ancho==None) and (self.alto==None):
+                retval= True
+        return retval
 
     def getTotal(self):
-        if(self.unidades==0.0) and (self.largo==0.0) and (self.ancho==0.0) and (self.alto==0.0):
-            return 0.0
-        retval= 1.0
-        if(self.unidades!=0.0): retval*= self.unidades
-        if(self.largo!=0.0): retval*= self.largo
-        if(self.ancho!=0): retval*= self.ancho
-        if(self.alto!=0): retval*= self.alto
+        retval= 0.0
+        if(not self.isNull()):
+            retval= 1.0
+            if(self.unidades): retval*= self.unidades
+            if(self.largo): retval*= self.largo
+            if(self.ancho): retval*= self.ancho
+            if(self.alto): retval*= self.alto
         return retval
 
 
     def getTotalR(self):
         retval= basic_types.ppl_dimension(0.0)
-        u= self.UnidadesR()
-        l= self.LargoR()
-        a= self.AnchoR()
-        h= self.AltoR()
-        zero= basic_types.ppl_dimension(0.0)
-        if(u!=zero) or (l!=zero) or (a!=zero) or (h!=zero):
-            retval= basic_types.ppl_dimension(1.0)
-            if(u!=zero): retval*= u
-            if(l!=zero): retval*= l
-            if(a!=zero): retval*= a
-            if(h!=zero): retval*= h
-        return retval.quantize(basic_types.dimensionPlaces)
+        if(not self.isNull()):
+            u= self.UnidadesR()
+            l= self.LargoR()
+            a= self.AnchoR()
+            h= self.AltoR()
+            zero= basic_types.ppl_dimension(0.0)
+            tmp= basic_types.ppl_dimension(1.0)
+            if(u): tmp*= u
+            if(l): tmp*= l
+            if(a): tmp*= a
+            if(h): tmp*= h
+            retval= tmp.quantize(basic_types.dimensionPlaces)
+        return retval
 
     def LeeBC3(self, m):
         self.comentario= m.med.comentario
@@ -79,37 +102,40 @@ class MeasurementRecord(epc.EntPyCost):
         self.ancho= m.med.ancho
         self.alto= m.med.alto
 
+    def getComponents(self):
+        '''Return measurement components: 
+           [description,number of units, length, width and height].'''
+        retval= [ self.comentario.encode('utf8'), '','','','']
+        if(self.unidades): retval[1]= basic_types.human_readable(self.UnidadesR())
+        if(self.largo): retval[2]= basic_types.human_readable(self.LargoR())
+        if(self.ancho): retval[3]= basic_types.human_readable(self.AnchoR())
+        if(self.alto): retval[4]= basic_types.human_readable(self.AltoR())
+        return retval
+    
     def WriteBC3(self, os):
-        os.write('\\' + self.comentario.encode('utf8') + '\\'
-           + str(self.unidades) + '\\'
-           + str(self.largo) + '\\'
-           + str(self.ancho) + '\\'
-           + str(self.alto) + '\\')
+        components= self.getComponents()
+        os.write('\\' + components[0] + '\\'
+           + components[1] + '\\'
+           + components[2] + '\\'
+           + components[3] + '\\'
+           + components[4] + '\\')
 
 
     def Write(self, os):
         os.write(self.comentario + ','
            + self.unidades + ','
-           + self.largo + ',' + self.ancho + ',' + self.alto + '\n')
+           + str(self.largo) + ',' + str(self.ancho) + ',' + str(self.alto) + '\n')
 
 
     #not  @brief Imprime la medición en Latex.
     def printLtx(self, data_table, ancho):
         row= [pylatex.table.MultiColumn(1,align= pylatex.utils.NoEscape(ancho),data= pylatex_utils.ascii2latex(self.comentario))]
+        components= self.getComponents()
         zero= basic_types.ppl_dimension(0.0);
-        str_u= ''
-        if (self.UnidadesR()!=zero):
-            str_u= basic_types.human_readable(self.UnidadesR())
-        row.append(str_u)
-        str_l= ''
-        if (self.LargoR()!=zero): str_l= basic_types.human_readable(self.LargoR())
-        row.append(str_l)
-        str_a= ''
-        if (self.AnchoR()!=zero): str_a= basic_types.human_readable(self.AnchoR())
-        row.append(str_a)
-        str_alt= ''
-        if (self.AltoR()!=zero): str_alt= basic_types.human_readable(self.AltoR())
-        row.append(str_alt)
+        row.append(components[1])
+        row.append(components[2])
+        row.append(components[3])
+        row.append(components[4])
         total= self.getTotalR()
         if(total!=zero): str_t= basic_types.human_readable(total)
         row.append(str_t)
