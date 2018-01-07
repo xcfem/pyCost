@@ -20,8 +20,8 @@ class UnitPriceQuantities(ptp.UnitPriceQuantitiesBase):
     def getTotal(self):
         return self.quantities.getTotal()
 
-    def getTotalR(self):
-        return self.quantities.getTotalR()
+    def getRoundedTotal(self):
+        return self.quantities.getRoundedTotal()
 
     def LeeBC3(self, m):
         if m.med.lista_med.empty():

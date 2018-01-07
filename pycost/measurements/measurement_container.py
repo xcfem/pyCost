@@ -16,19 +16,19 @@ from pycost.utils import basic_types
 
 class ChapterQuantities(list, epc.EntPyCost):
 
-    def StrPrecioLtx(self):
-        return basic_types.human_readable(self.PrecioR())
+    def getLtxPriceString(self):
+        return basic_types.human_readable(self.getRoundedPrice())
 
-    def Precio(self):
+    def getPrice(self):
         t= 0.0
         for i in self:
-            t+=(i).Precio()
+            t+=(i).getPrice()
         return t
 
-    def PrecioR(self):
+    def getRoundedPrice(self):
         t= basic_types.ppl_price(0.0)
         for i in self:
-            t+=(i).PrecioR()
+            t+=(i).getRoundedPrice()
         return t
 
     def Write(self, os, cod, pos):
@@ -46,7 +46,7 @@ class ChapterQuantities(list, epc.EntPyCost):
              + cod + '|')
             for i in self:
                 os.write((i).getUnitPriceCode() + "\\1\\" #factor 1
-                   + str((i).getTotal()) + '\\')
+                   + str((i).getRoundedTotal()) + '\\')
             os.write('|' + '\n')
 
     def ImprCompLtxMed(self, os, otra):
@@ -106,9 +106,9 @@ class ChapterQuantities(list, epc.EntPyCost):
                      (i).ImprCompLtxPre(os)
 
             doc.append("\\multicolumn{4}{p{8cm}}{\\textbf{Total: "
-               + tit_otra + "}} & \\textbf{" + otra.StrPrecioLtx() + "} & " + '\n')
+               + tit_otra + "}} & \\textbf{" + otra.getLtxPriceString() + "} & " + '\n')
             doc.append("\\multicolumn{4}{p{8cm}}{\\textbf{Total: "
-               + tit + "}} & \\textbf{" + StrPrecioLtx() + "}\\\\" + '\n')
+               + tit + "}} & \\textbf{" + getLtxPriceString() + "}\\\\" + '\n')
             doc.append("\\end{longtable}" + '\n')
             doc.append(pylatex_utils.NormalSizeCommand())
 
@@ -131,7 +131,7 @@ class ChapterQuantities(list, epc.EntPyCost):
                 data_table.end_table_last_footer()
                 for i in self:
                     (i).ImprLtxPre(data_table)
-                data_table.add_row([pylatex.table.MultiColumn(4, align=pylatex.utils.NoEscape('p{8cm}'),data=pylatex.utils.bold('Total: '+tit)),pylatex.utils.bold(self.StrPrecioLtx())])
+                data_table.add_row([pylatex.table.MultiColumn(4, align=pylatex.utils.NoEscape('p{8cm}'),data=pylatex.utils.bold('Total: '+tit)),pylatex.utils.bold(self.getLtxPriceString())])
             doc.append(data_table)
             doc.append(pylatex_utils.NormalSizeCommand())
 

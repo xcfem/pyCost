@@ -8,8 +8,8 @@ from pycost.utils import basic_types
 
 class ComponentList(list, epc.EntPyCost):
     '''Componentes de un precio descompuesto.'''
-    def Precio(self):
-        return self.PrecioR()
+    def getPrice(self):
+        return self.getRoundedPrice()
 
     def AsignaFactor(self, f):
         '''Asigna el valor f a los factores de toda la descomposición.'''
@@ -30,22 +30,22 @@ class ComponentList(list, epc.EntPyCost):
             os.write('|' + '\n')
 
 
-    def PrecioR(self):
+    def getRoundedPrice(self):
         lista= self.getPriceJustificationList(True)#XXX Here cumulated percentages.
-        return basic_types.ppl_price(float(lista.getTotalRnd()))
+        return basic_types.ppl_price(float(lista.getRoundedTotal()))
 
 
     #not  @brief Suma de los precios de un tipo (mdo, maq, mat,...)
     def PrecioPorTipo(self, tipo):
-        ptipo= basic_types.ppl_price(0.0,3) #Total price.
+        ptipo= basic_types.ppl_price(0.0) #Total price.
         for i in self:
             if (i).getType()==tipo and not (i).isPercentage():
-                ptipo+= (i).PrecioR()
+                ptipo+= (i).getRoundedPrice()
         return ptipo
 
     def PrecioSobre(self, tipo, sobre):
         '''Computes percentages over a type.'''
-        ptipo= basic_types.ppl_price(0.0,3); #Precio total.
+        ptipo= basic_types.ppl_price(0.0); #Precio total.
         for i in self: #Percentages.
             if (i).getType()==tipo and (i).isPercentage():
                 ptipo+= (i).PrecioSobre(sobre)
@@ -55,14 +55,14 @@ class ComponentList(list, epc.EntPyCost):
         porc= 0.0; #Total percentage.
         for i in self: #Percentages.
             if (i).getType()==tipo and (i).isPercentage():
-                porc+= (i).Producto()
+                porc+= (i).getProduct()
         return porc
 
 
     def CalculaLambda(self, objetivo):
         sum_porc= SumPercentages(sin_clasif)
-        sum_pi= Precio(mdo)+Precio(maq)
-        pmat= Precio(mat)
+        sum_pi= getPrice(mdo)+getPrice(maq)
+        pmat= getPrice(mat)
         numerador= objetivo/(1.0+sum_porc)-pmat
         return (numerador/sum_pi)
 

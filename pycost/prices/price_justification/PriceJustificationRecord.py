@@ -17,13 +17,13 @@ class PriceJustificationRecord(object):
         if self.is_percentage:
             return self.sobre
         else:
-            return basic_types.ppl_price(self.unitario,3)
+            return basic_types.ppl_price(self.unitario)
 
     def SetBase(self, b):
         sobre= b
 
     def getTotal(self):
-        retval= basic_types.ppl_price(self.base(),3)
+        retval= basic_types.ppl_price(self.base())
         retval*= self.rdto
         return retval
 

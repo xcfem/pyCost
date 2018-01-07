@@ -53,7 +53,7 @@ class CuaPre(epc.EntPyCost):
     def BuscaElementaryPrice(self, cod):
         return self.elementos.Busca(cod)
 
-    def BuscaPrecio(self, cod):
+    def findPrice(self, cod):
         retval= self.searchForUnitPrice(cod)
         if not retval:
             retval= self.BuscaElementaryPrice(cod)

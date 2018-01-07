@@ -10,28 +10,28 @@ import pylatex
 
 class PriceJustificationList(object):
     
-    def __init__(self,pa, mano, mater, maqui, otr, porc):
+    def __init__(self,pa, mano, mater, maqui, otr, perc):
       self.cumulated_percentages= pa
       self.mano_de_obra= mano
       self.materiales= mater
       self.maquinaria= maqui
       self.otros= otr
-      self.percentages= porc
-      base= basic_types.ppl_price(self.Base(),3)
+      self.percentages= perc
+      base= basic_types.ppl_price(self.Base())
       if self.cumulated_percentages:
         self.percentages.SetBaseAcum(base)
       else:
         self.percentages.SetBase(base)
     
     def Base(self):
-        retval= basic_types.ppl_price(self.mano_de_obra.getTotal(),3)
+        retval= basic_types.ppl_price(self.mano_de_obra.getTotal())
         retval+= self.materiales.getTotal()
         retval+= self.maquinaria.getTotal()
         retval+= self.otros.getTotal()
         return retval
 
     def getTotal(self):
-        retval= basic_types.ppl_price(self.Base(),3)
+        retval= basic_types.ppl_price(self.Base())
         retval+= self.percentages.getTotal()
         return retval
 
@@ -40,17 +40,17 @@ class PriceJustificationList(object):
         #XXX Redondeo para 2 decimales.
         tmp= self.getTotal()
         tmp*= Decimal('100')
-        rnd= basic_types.ppl_price(round(tmp),3)-tmp
+        rnd= basic_types.ppl_price(round(tmp))-tmp
         rnd/= Decimal('100')
         return rnd
 
-    def getTotalRnd(self):
+    def getRoundedTotal(self):
         return self.getTotal() + self.Redondeo()
 
     def getTotalCP1(self):
-        return basic_types.ppl_price(float(self.getTotalRnd()),2)
+        return basic_types.ppl_price(float(self.getRoundedTotal()))
 
-    def StrPrecioLtx(self):
+    def getLtxPriceString(self):
         return basic_types.human_readable(self.getTotalCP1())
 
     def StrPriceToWords(self, genero):
@@ -63,7 +63,7 @@ class PriceJustificationList(object):
     def ImprLtxJustPre(self, os):
         total= self.getTotal()
         rnd= self.Redondeo()
-        total_rnd= self.getTotalRnd()
+        total_rnd= self.getRoundedTotal()
         if(len(self)<2):
             doc.append(pylatex_utils.ltx_multicolumn(pylatex_utils.ltx_datos_multicolumn("4","r",basic_types.sin_desc_string))
                + " & & " + pylatex_utils.ltx_fin_reg + '\n' + pylatex_utils.ltx_fin_reg + '\n')
@@ -96,7 +96,7 @@ class PriceJustificationList(object):
     def writePriceTableTwoIntoLatexDocument(self, data_table):
         total= self.getTotal()
         rnd= self.Redondeo()
-        total_rnd= self.getTotalRnd()
+        total_rnd= self.getRoundedTotal()
         if(len(self)<2):
             row1= ['','',basic_types.sin_desc_string,'']
             data_table.add_row(row1)
@@ -123,6 +123,6 @@ class PriceJustificationList(object):
 
 
     def writePriceTableOneIntoLatexDocument(self, data_table, genero):
-        data_table.add_row(['','','',self.StrPriceToWords(genero),self.StrPrecioLtx()])
+        data_table.add_row(['','','',self.StrPriceToWords(genero),self.getLtxPriceString()])
 
 

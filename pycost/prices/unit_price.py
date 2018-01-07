@@ -7,23 +7,28 @@ from pycost.prices import elementary_price_container
 from pycost.prices import component_list
 from pycost.utils import pylatex_utils
 from pycost.utils import basic_types
+from pycost.bc3 import fr_entity
 import pylatex
+from decimal import Decimal
 
 class UnitPrice(ms.Measurable):
+    precision= 2
+    places= Decimal(10) ** -precision
+    formatString= '{0:.'+str(precision)+'f}'
 
     def __init__(self, cod="", desc="", ud="", ld= None):
         super(UnitPrice,self).__init__(cod,desc,ud,ld)
         self.components= component_list.ComponentList()
     def getType(self):
         return basic_types.mat; #XXX provisional.
-    def Precio(self):
-        return self.components.Precio()
+    def getPrice(self):
+        return self.components.getPrice()
 
     def AsignaFactor(self, f):
         self.components.AsignaFactor(f)
 
-    def Append(self,e, f, r):
-        tmp= BC3Component(e,f,r)
+    def Append(self,entity, f, r):
+        tmp= BC3Component(e= entity,fr= fr_entity.EntFR(f,r))
         self.components.append(tmp)
         return tmp
 
@@ -41,7 +46,7 @@ class UnitPrice(ms.Measurable):
                 lmsg.error("Error al leer descomposición de la unidad: " + self.Codigo() + '\n')
 
         else:
-            components= GetSindesco(r.Datos().Precio(),bp)
+            components= GetSindesco(r.Datos().getPrice(),bp)
         return error
 
     def GetSindesco(self, productionRate, bp):
@@ -50,7 +55,8 @@ class UnitPrice(ms.Measurable):
         retval= ComponentList()
         be= bp["elementos"]
         ent= be.Busca("SINDESCO")
-        retval.append(BC3Component(ent,1.0,productionRate))
+        factorAndRate= fr_entity.EntFR(1.0,productionRate)
+        retval.append(BC3Component(e= ent,fr= factorAndRate))
         return retval
 
     @staticmethod
@@ -71,7 +77,7 @@ class UnitPrice(ms.Measurable):
                 continue
 
             else:
-                retval.append(BC3Component(ent,(i).factor,(i).productionRate))
+                retval.append(fr_entity.BC3Component(ent,i))
                 error= False
 
 
@@ -94,7 +100,7 @@ class UnitPrice(ms.Measurable):
     def SimulaDescomp(self,otra):
         '''Toma la descomposición de otra unidad de obra.
            sin alterar el precio de ésta.'''
-        objetivo= self.Precio()
+        objetivo= self.getPrice()
         self.components= copia(otra.components)
         return self.components.FuerzaPrecio(objetivo)
 
@@ -136,6 +142,6 @@ class UnitPrice(ms.Measurable):
            + pylatex_utils.ascii2latex(self.Unidad()) + tab
            + '"' + pylatex_utils.ascii2latex(self.getLongDescription()) + '"' + tab
            + '"' + self.StrPriceToWords(True) + '"' + tab
-           + StrPrecio() + '\n')
+           + getPriceString() + '\n')
 
 

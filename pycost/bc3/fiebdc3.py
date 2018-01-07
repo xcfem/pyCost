@@ -302,7 +302,7 @@ class regBC3_elemento(object):
     def Unidad(self):
         return self.ccpto.unidad
 
-    def Precio(self):
+    def getPrice(self):
         return self.ccpto.precio
 
     def getType(self):

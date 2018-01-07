@@ -67,7 +67,7 @@ dimensionPrecision= 3
 dimensionPlaces= Decimal(10) ** -dimensionPrecision
 dimensionFormatString= '{0:.'+str(dimensionPrecision)+'f}'
 
-def ppl_dimension(dim, prec= dimensionPrecision):
+def ppl_dimension(dim):
     txtDim=  dimensionFormatString.format(dim)
     return Decimal(txtDim)
 
@@ -75,7 +75,7 @@ pricePrecision= 3
 pricePlaces= Decimal(10) ** -pricePrecision
 priceFormatString= '{0:.'+str(pricePrecision)+'f}'
 
-def ppl_price(price, prec= pricePrecision):
+def ppl_price(price):
     txtPrice=  priceFormatString.format(price)
     return Decimal(txtPrice)
     
@@ -83,7 +83,7 @@ percentagePrecision= 3
 percentagePlaces= Decimal(10) ** -percentagePrecision
 percentageFormatString= '{0:.'+str(percentagePrecision)+'f}'
 
-def ppl_percentage(perc, prec= percentagePrecision):
+def ppl_percentage(perc):
     txtPercentage=  percentageFormatString.format(perc)
     return Decimal(txtPercentage)
 

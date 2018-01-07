@@ -8,12 +8,16 @@ from pycost.bc3 import bc3_component
 from pycost.structure import chapter_container
 from pycost.prices import price_table
 from pycost.prices import unit_price_container
-
 import pylatex
 from pycost.utils import pylatex_utils
 from pycost.utils import basic_types
+from decimal import Decimal
 
 class Chapter(bc3_entity.EntBC3):
+    precision= 2
+    places= Decimal(10) ** -precision
+    formatString= '{0:.'+str(precision)+'f}'
+    
     def __init__(self, cod= "CapSinCod", tit= "CapSinTit", factor= 1.0, productionRate= 1.0):
       super(Chapter,self).__init__(cod,tit)
       self.fr= fr_entity.EntFR(factor,productionRate)
@@ -53,9 +57,9 @@ class Chapter(bc3_entity.EntBC3):
         return self.precios
     def AppendUnitPriceQuantities(self, m):
         self.quantities.append(m)
-    def GetBC3Component(self):
+    def getBC3Component(self):
         '''Return this chapter as a component.'''
-        return bc3_component.BC3Component(self,self.fr)
+        return bc3_component.BC3Component(e= self,fr= self.fr)
     def LeeBC3Elementales(self, elementos):
         '''Appends the elementary prices from argument.'''
         self.precios.LeeBC3Elementales(elementos)
@@ -109,10 +113,10 @@ class Chapter(bc3_entity.EntBC3):
             return self
         else:
             return self.subcapitulos.BuscaCodigo(nmb)
-    def BuscaPrecio(self, cod):
-        retval= self.precios.BuscaPrecio(cod)
+    def findPrice(self, cod):
+        retval= self.precios.findPrice(cod)
         if not retval:
-            retval= self.subcapitulos.BuscaPrecio(cod)
+            retval= self.subcapitulos.findPrice(cod)
         return retval
     def WritePreciosBC3(self, os):
         self.precios.WriteBC3(os)
@@ -125,11 +129,11 @@ class Chapter(bc3_entity.EntBC3):
         self.WriteDescompBC3(os)
         self.WriteQuantities(os,pos)
         self.WriteSubChapters(os,pos)
-    def Precio(self):
-        return (self.subcapitulos.Precio() + self.quantities.Precio()) * self.fr.Producto()
-    def PrecioR(self):
-        retval= self.subcapitulos.PrecioR() + self.quantities.PrecioR()
-        retval*= self.fr.ProductoR()
+    def getPrice(self):
+        return (self.subcapitulos.getPrice() + self.quantities.getPrice()) * self.fr.getProduct()
+    def getRoundedPrice(self):
+        retval= self.subcapitulos.getRoundedPrice() + self.quantities.getRoundedPrice()
+        retval*= self.fr.getRoundedProduct()
         return retval
     def ImprCompLtxMed(self, os, sect, otro):
         if sect!='root':
@@ -174,12 +178,12 @@ class Chapter(bc3_entity.EntBC3):
             if(sect!='root'):
                 doc.add_item(self.getTitle())
                 doc.append(pylatex.Command('dotfill'))
-                doc.append(self.StrPrecioLtx())
+                doc.append(self.getLtxPriceString())
             else:
                 doc.append(pylatex_utils.LargeCommand())
                 doc.append(pylatex.utils.bold('Total'))
                 doc.append(pylatex.Command('dotfill'))
-                doc.append(pylatex.utils.bold(self.StrPrecioLtx()))
+                doc.append(pylatex.utils.bold(self.getLtxPriceString()))
                 doc.append(pylatex_utils.NormalSizeCommand())
             if(recurre):
                 self.subcapitulos.ImprLtxResumen(doc,pylatex_utils.getLatexSection(sect),recurre)
@@ -192,10 +196,10 @@ class Chapter(bc3_entity.EntBC3):
             doc.append(pylatex_utils.ltx_beg_itemize + '\n')
             doc.append("\\item \\noindent \\textbf{Total " + self.getTitle()
                + " (P. de construcción): } \\dotfill \\textbf{"
-               + otro.StrPrecioLtx() + "} " + '\n' + '\n')
+               + otro.getLtxPriceString() + "} " + '\n' + '\n')
             doc.append("\\item \\noindent \\textbf{Total " + self.getTitle()
                + " (P. modificado): }\\dotfill \\textbf{"
-               + self.StrPrecioLtx() + "} " + '\n')
+               + self.getLtxPriceString() + "} " + '\n')
             doc.append(pylatex_utils.ltx_end_itemize + '\n')
             doc.append("\\clearpage" + '\n')
 
@@ -220,7 +224,7 @@ class Chapter(bc3_entity.EntBC3):
                 doc.append(pylatex_utils.largeCommand())
                 doc.append(pylatex.utils.bold('Total: '+self.getTitle()))
                 doc.append(pylatex.Command('dotfill'))
-                doc.append(pylatex.utils.bold(self.StrPrecioLtx()))
+                doc.append(pylatex.utils.bold(self.getLtxPriceString()))
                 doc.append(pylatex_utils.NormalSizeCommand())
 
     def WriteHCalcMed(self, os, sect):
@@ -233,7 +237,7 @@ class Chapter(bc3_entity.EntBC3):
         if sect!='root':
             os.write(self.getTitle() + '\n')
         self.quantities.WriteHCalcPre(os)
-        os.write(tab + tab + tab + tab + "Total: " + tab + self.getTitle() + tab + self.StrPrecio() + '\n')
+        os.write(tab + tab + tab + tab + "Total: " + tab + self.getTitle() + tab + self.getPriceString() + '\n')
         self.subcapitulos.WriteHCalcPre(os,sect)
 
     def getQuantitiesReport(self):

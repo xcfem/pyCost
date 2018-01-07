@@ -15,7 +15,7 @@ class UnitPriceReport(object):
             row= [self.ud.Codigo()]
             row.append(pylatex_utils.ascii2latex(self.ud.getLongDescription()))
             row.append(en_humano(med_total,0))
-            row.append(en_humano(med_total*ud.Precio(),0))
+            row.append(en_humano(med_total*ud.getPrice(),0))
             data_table.add_row(row)
 
 

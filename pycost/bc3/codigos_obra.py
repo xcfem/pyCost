@@ -1,9 +1,6 @@
 # -*- coding: utf-8 -*-
 #CodigosObra.py
 
-
-
-
 import codes
 
 class CodigosObra(object):

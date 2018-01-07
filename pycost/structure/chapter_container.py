@@ -25,17 +25,17 @@ class Subcapitulos(list, epc.EntPyCost):
             nd+= (j).NumDescompuestos()
         return nd
 
-    def Precio(self):
+    def getPrice(self):
         p= 0.0
         for j in self:
-            p+= (j).Precio()
+            p+= (j).getPrice()
         return p
 
 
-    def PrecioR(self):
+    def getRoundedPrice(self):
         p= Decimal('0.0')
         for j in self:
-            p+= (j).PrecioR()
+            p+= (j).getRoundedPrice()
         return p
 
 
@@ -61,11 +61,11 @@ class Subcapitulos(list, epc.EntPyCost):
 
         return retval
 
-    def BuscaPrecio(self, cod):
+    def findPrice(self, cod):
         '''Search a unit price through the chapter tree.'''
         retval= None
         for i in self:
-            retval= (i).BuscaPrecio(cod)
+            retval= (i).findPrice(cod)
             if(retval): break
         return retval
 
@@ -130,7 +130,7 @@ class Subcapitulos(list, epc.EntPyCost):
         os.write("~D" + '|'
            + cod + '|')
         for i in self:
-            (i).GetBC3Component().WriteBC3(os)
+            (i).getBC3Component().WriteBC3(os)
         os.write('|' + '\n')
 
 

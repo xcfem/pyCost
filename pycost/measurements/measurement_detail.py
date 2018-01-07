@@ -44,10 +44,10 @@ class Quantities(list, epy.EntPyCost):
             t+=(i).getTotal()
         return t
 
-    def getTotalR(self):
+    def getRoundedTotal(self):
         t= basic_types.ppl_dimension(0.0)
         for i in self:
-            t+=(i).getTotalR()
+            t+=(i).getRoundedTotal()
         return t
 
     #| @brief Read quantities list.

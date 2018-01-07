@@ -20,7 +20,7 @@ class PriceJustificationRecordContainer(list):
 
     def SetBaseAcum(self, b):
         if(len(self)):
-            base= basic_types.ppl_price(b,3)
+            base= basic_types.ppl_price(b)
             for i in self:
                 (i).SetBase(base)
                 base+= (i).getTotal()
@@ -35,7 +35,7 @@ class PriceJustificationRecordContainer(list):
 
     def writePriceTableTwoIntoLatexDocument(self, data_table):
         total= self.getTotal()
-        if total>basic_types.ppl_price(0.0,3):
+        if total>basic_types.ppl_price(0.0):
             data_table.add_row(['','',self.StrTipo(),basic_types.human_readable(total)])
 
     def writePriceTableTwoIntoLatexDocumentPorc(self, os):
@@ -44,7 +44,7 @@ class PriceJustificationRecordContainer(list):
                (i).writePriceTableTwoIntoLatexDocument(os)
 
     def getTotal(self):
-        retval= basic_types.ppl_price(0.0,3)
+        retval= basic_types.ppl_price(0.0)
         for i in self:
             retval+= (i).getTotal()
         return retval

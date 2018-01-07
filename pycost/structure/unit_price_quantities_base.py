@@ -20,29 +20,31 @@ class UnitPriceQuantitiesBase(epc.EntPyCost):
     def UnidadMedida(self):
         return self.ud.Unidad()
 
-    def PrecioUd(self):
-        return self.ud.Precio()
+    def getUnitPrice(self):
+        return self.ud.getPrice()
 
-    def PrecioRUd(self):
-        return self.ud.PrecioR()
+    def getUnitRoundedPrice(self):
+        return self.ud.getRoundedPrice()
 
     def Informe(self):
         return self.UnitPriceReport(ud,getTotal())
 
-    def StrPrecioUd(self):
-        return self.ud.StrPrecio()
+    def getUnitPriceString(self):
+        return self.ud.getPriceString()
 
-    def StrPrecioLtxUd(self):
-        return self.ud.StrPrecioLtx()
+    def getUnitLtxPriceString(self):
+        return self.ud.getLtxPriceString()
 
-    def Precio(self):
-        return self.getTotal()*float(self.ud.Precio())
+    def getPrice(self):
+        return self.getTotal()*float(self.ud.getPrice())
 
-    def PrecioR(self):
-        return basic_types.ppl_price(float(self.getTotalR())*float(self.PrecioRUd()))
+    def getRoundedPrice(self):
+        retval= self.getRoundedTotal()
+        retval+= self.getUnitRoundedPrice()
+        return retval.quantize(self.ud.places)
 
-    def StrPrecioLtx(self):
-        return basic_types.human_readable(self.PrecioR())
+    def getLtxPriceString(self):
+        return basic_types.human_readable(self.getRoundedPrice())
 
     def printLatexHeader(self, data_table, totalr, ancho):
         '''Prints header in the quantities table.'''
@@ -55,10 +57,10 @@ class UnitPriceQuantitiesBase(epc.EntPyCost):
     def ImprCompLtxMed(self, doc, otra):
         '''Imprime la partida.'''
         doc.add_empty_row()
-        totalr_otra= human_readable(otra.getTotalR())
+        totalr_otra= human_readable(otra.getRoundedTotal())
         otra.printLatexHeader(os,totalr_otra,"p{4.5cm}|")
         doc.append(pylatex_utils.ltx_ampsnd)
-        totalr_esta= basic_types.human_readable(getTotalR())
+        totalr_esta= basic_types.human_readable(getRoundedTotal())
         printLatexHeader(os,totalr_esta,"p{4.5cm}")
         doc.append(pylatex_utils.ltx_fin_reg + '\n')
         ImprLtxLeyenda(doc)
@@ -79,7 +81,7 @@ class UnitPriceQuantitiesBase(epc.EntPyCost):
         media_empty_line= ['','', '', '', '', '']
         doc.add_empty_row()
         doc.append(media_empty_line)
-        totalr= human_readable(self.getTotalR())
+        totalr= human_readable(self.getRoundedTotal())
         printLatexHeader(os,totalr,"p{4.5cm}")
         doc.append(pylatex_utils.ltx_fin_reg + '\n')
         #ImprLtxLeyenda(doc)
@@ -103,16 +105,16 @@ class UnitPriceQuantitiesBase(epc.EntPyCost):
 
     def ImprCompLtxPre(self, os, otra):
         doc.add_empty_row()
-        totalr_otra= human_readable(otra.getTotalR())
+        totalr_otra= human_readable(otra.getRoundedTotal())
         otra.printLatexHeaderPre(os,totalr_otra,'p{2.5cm}')
         doc.append(pylatex_utils.ltx_ampsnd
-           + otra.StrPrecioLtxUd() + pylatex_utils.ltx_ampsnd
-           + otra.StrPrecioLtx() + pylatex_utils.ltx_ampsnd)
-        totalr_esta= basic_types.human_readable(getTotalR())
+           + otra.getUnitLtxPriceString() + pylatex_utils.ltx_ampsnd
+           + otra.getLtxPriceString() + pylatex_utils.ltx_ampsnd)
+        totalr_esta= basic_types.human_readable(getRoundedTotal())
         printLatexHeaderPre(os,totalr_esta,"p{2.5cm}")
         doc.append(pylatex_utils.ltx_ampsnd
-           + StrPrecioLtxUd() + pylatex_utils.ltx_ampsnd
-           + StrPrecioLtx() + pylatex_utils.ltx_fin_reg + '\n')
+           + getUnitLtxPriceString() + pylatex_utils.ltx_ampsnd
+           + getLtxPriceString() + pylatex_utils.ltx_fin_reg + '\n')
         doc.add_empty_row()
 
     def ImprCompLtxPre(self, os):
@@ -120,17 +122,17 @@ class UnitPriceQuantitiesBase(epc.EntPyCost):
         doc.add_empty_row()
         doc.append(empty_line + '\n')
         doc.append(media_empty_line)
-        totalr_med= human_readable(self.getTotalR())
+        totalr_med= human_readable(self.getRoundedTotal())
         printLatexHeaderPre(os,totalr_med,'p{2.5cm}')
         doc.append(pylatex_utils.ltx_ampsnd
-           + StrPrecioLtxUd() + pylatex_utils.ltx_ampsnd
-           + StrPrecioLtx() + pylatex_utils.ltx_fin_reg + '\n')
+           + getUnitLtxPriceString() + pylatex_utils.ltx_ampsnd
+           + getLtxPriceString() + pylatex_utils.ltx_fin_reg + '\n')
         doc.add_empty_row()
 
     def ImprLtxPre(self, data_table):
-        totalr_med=  basic_types.human_readable(self.getTotalR())
+        totalr_med=  basic_types.human_readable(self.getRoundedTotal())
         self.printLatexHeaderPre(data_table,totalr_med,'p{5cm}')
-        row= ['','','',self.StrPrecioLtxUd(),self.StrPrecioLtx()]
+        row= ['','','',self.getUnitLtxPriceString(),self.getLtxPriceString()]
         data_table.add_row(row)
         data_table.add_empty_row()
 
@@ -150,13 +152,13 @@ class UnitPriceQuantitiesBase(epc.EntPyCost):
     def WriteHCalcPre(self, os):
         os.write(getUnitPriceCode() + tab
            + self.getTotal() + tab + UnidadMedida() + tab + self.ud.getLongDescription()() + tab
-           + StrPrecioUd() + tab
-           + Precio() + '\n')
+           + getUnitPriceString() + tab
+           + getPrice() + '\n')
 
     def WriteBC3RegM(self, os, cap_padre, pos):
         os.write("~M|" + cap_padre + '\\' + self.getUnitPriceCode() + '|'
            + str(pos) + '|'
-           + str(self.getTotal()) + '|')
+           + str(self.getRoundedTotal()) + '|')
 
     def WriteBC3(self, os, cap_padre, pos):
         self.WriteBC3RegM(os,cap_padre,pos)
@@ -174,7 +176,7 @@ class UnitPriceQuantitiesBase(epc.EntPyCost):
 
     def writeQuantitiesIntoLatexDocument(self, data_table):
         data_table.add_empty_row()
-        totalr= basic_types.human_readable(self.getTotalR())
+        totalr= basic_types.human_readable(self.getRoundedTotal())
         self.printLatexHeader(data_table,totalr,'p{6cm}')
         #data_table.append(pylatex_utils.ltx_fin_reg + '\n')
         self.printLtxColumnHeaders(data_table)

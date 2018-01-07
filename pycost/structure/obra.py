@@ -62,8 +62,8 @@ class Obra(cp.Chapter):
         self.precios.Elementales().Append(elem)
         self.percentages= pc.Percentages()
 
-    def BuscaPrecio(self, cod):
-        retval= super(Obra,self).BuscaPrecio(cod)
+    def findPrice(self, cod):
+        retval= super(Obra,self).findPrice(cod)
         if not retval:
             lmsg.error('unit price: '+ cod + ' not found.')
         return retval
@@ -188,7 +188,7 @@ class Obra(cp.Chapter):
             reg= med.GetDatosMedicion(i)
             # UnitPrice *ud= precios.searchForUnitPrice(reg.CodigoUnidad())
             cod_unidad= copia_desde(reg.CodigoUnidad(),'@')
-            ud= self.BuscaPrecio(cod_unidad)
+            ud= self.findPrice(cod_unidad)
             if not ud:
                 lmsg.error(u"Obra.readQuantitiesFromBC3: No se encontró el precio: \'"
                           + cod_unidad + "\'" + '\n')
@@ -272,11 +272,11 @@ class Obra(cp.Chapter):
         self.subcapitulos.ImprLtxResumen(chapter,"",False)
         chapter.append(pylatex.utils.bold(u'Presupuesto de Ejecución Material:'))
         chapter.append(pylatex.Command('dotfill'))
-        chapter.append(pylatex.utils.bold(self.StrPrecioLtx()))
+        chapter.append(pylatex.utils.bold(self.getLtxPriceString()))
         chapter.append(pylatex.VerticalSpace('0.5cm'))
         chapter.append(pylatex.NewLine())
         chapter.append(u'Asciende el presente presupuesto de ejecución material a la expresada cantidad de: ')
-        chapter.append(pylatex_utils.textsc(basic_types.to_words(self.PrecioR(),False) + ' euros.'))
+        chapter.append(pylatex_utils.textsc(basic_types.to_words(self.getRoundedPrice(),False) + ' euros.'))
         chapter.append(pylatex_utils.input('firmas'))
         doc.append(chapter)
         
@@ -290,7 +290,7 @@ class Obra(cp.Chapter):
         center.append(pylatex_utils.largeCommand())
         chapter.append(center)
         chapter.append(pylatex.VerticalSpace('2cm'))
-        self.percentages.printLtx(chapter,self.PrecioR())
+        self.percentages.printLtx(chapter,self.getRoundedPrice())
         chapter.append(pylatex_utils.input('firmas'))
         doc.append(chapter)
 

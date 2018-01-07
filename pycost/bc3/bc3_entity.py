@@ -10,12 +10,7 @@
 from pycost.bc3 import codes
 from pycost.utils import EntPyCost as epc
 from pycost.utils import basic_types
-
-def precio2str(d):
-    return str(d)
-
-
-
+from decimal import Decimal
 
 class EntBC3(epc.EntPyCost):
     static_txtud= ''
@@ -46,20 +41,21 @@ class EntBC3(epc.EntPyCost):
     def getTitle(self):
         return self.title
 
-    def StrPrecio(self):
-        return precio2str(self.Precio())
+    def getPriceString(self):
+        '''Return a string that represents the product.'''
+        return self.formatString.format(self.getPrice())
 
-    def StrPrecioLtx(self):
-        return basic_types.human_readable(self.PrecioR())
+    def getLtxPriceString(self):
+        return basic_types.human_readable(self.getRoundedPrice())
 
     def StrPriceToWords(self, genero):
-        return basic_types.toWord(self.PrecioR(),genero)
+        return basic_types.toWord(self.getRoundedPrice(),genero)
 
-    def Precio(self):
+    def getPrice(self):
         return 0.0
 
-    def PrecioR(self):
-        return basic_types.ppl_price(self.Precio())
+    def getRoundedPrice(self):
+        return Decimal(self.getPriceString())
 
     def Fecha(self):
         return "040400";    # xxx
@@ -81,13 +77,13 @@ class EntBC3(epc.EntPyCost):
         os.write(self.Codigo() + '|'
            + self.Unidad() + '|'
            + self.getTitle() + '|'
-           + self.StrPrecio() + '|' + '\n')
+           + self.getPriceString() + '|' + '\n')
 
     def WriteConceptoBC3(self, os):
         os.write("~C" + '|' + self.CodigoBC3())
         os.write('|' + self.Unidad() + '|')
         os.write(self.getTitle().encode('utf8') + '|')
-        os.write(self.StrPrecio() + '|')
+        os.write(self.getPriceString() + '|')
         os.write(self.Fecha() + '|')
         os.write(self.ChrTipo() + '|\n')
 
@@ -95,7 +91,7 @@ class EntBC3(epc.EntPyCost):
         os.write("Codigo: " + Codigo() + '\n'
            + "Unidad: " + Unidad() + '\n'
            + "Title: " + getTitle() + '\n'
-           + "Precio: " + StrPrecio() + '\n'
+           + "Precio: " + getPriceString() + '\n'
            + "Fecha: "  + Fecha() + '\n'
            + "Tipo: " + ChrTipo() + '\n'
            + "Texto largo: " + self.getLongDescription() + '\n')

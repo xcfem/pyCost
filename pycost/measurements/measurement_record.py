@@ -8,8 +8,15 @@ from pycost.utils import basic_types
 from pycost.utils import EntPyCost as epc
 import pylatex
 from pycost.utils import pylatex_utils
+import decimal
 
 class MeasurementRecord(epc.EntPyCost):
+    precision= 3
+    places= decimal.Decimal(10) ** -precision
+    formatString= '{0:.'+str(precision)+'f}'
+
+    def dimension(self,dim):
+        return decimal.Decimal(self.formatString.format(dim))
 
     def __init__(self,c= "", uds= None,l= None,an= None,al= None):
         super(MeasurementRecord,self).__init__()
@@ -33,29 +40,53 @@ class MeasurementRecord(epc.EntPyCost):
 
     def Alto(self):
         return self.alto
+    
+    def getUnitsString(self):
+        retval= ''
+        if(self.unidades):
+            retval= self.formatString.format(self.unidades)
+        return retval
+
+    def getLengthString(self):
+        retval= ''
+        if(self.largo):
+            retval= self.formatString.format(self.largo)
+        return retval
+
+    def getWidthString(self):
+        retval= ''
+        if(self.ancho):
+            retval= self.formatString.format(self.ancho)
+        return retval
+
+    def getHeightString(self):
+        retval= ''
+        if(self.alto):
+            retval= self.formatString.format(self.alto)
+        return retval
 
     def UnidadesR(self):
         retval= None
         if(self.unidades):
-            retval= basic_types.ppl_dimension(self.unidades)
+            retval= decimal.Decimal(self.getUnitsString())
         return retval
 
     def LargoR(self):
         retval= None
         if(self.largo):
-            retval= basic_types.ppl_dimension(self.largo)
+            retval= decimal.Decimal(self.getLengthString())
         return retval
 
     def AnchoR(self):
         retval= None
         if(self.ancho):
-            retval= basic_types.ppl_dimension(self.ancho)
+            retval= decimal.Decimal(self.getWidthString())
         return retval
 
     def AltoR(self):
         retval= None
         if(self.alto):
-            retval= basic_types.ppl_dimension(self.alto)
+            retval= decimal.Decimal(self.getHeightString())
         return retval
 
     def isNull(self):
@@ -79,20 +110,19 @@ class MeasurementRecord(epc.EntPyCost):
         return retval
 
 
-    def getTotalR(self):
-        retval= basic_types.ppl_dimension(0.0)
+    def getRoundedTotal(self):
+        retval= self.dimension(0.0)
         if(not self.isNull()):
             u= self.UnidadesR()
             l= self.LargoR()
             a= self.AnchoR()
             h= self.AltoR()
-            zero= basic_types.ppl_dimension(0.0)
-            tmp= basic_types.ppl_dimension(1.0)
+            tmp= self.dimension(1.0)
             if(u): tmp*= u
             if(l): tmp*= l
             if(a): tmp*= a
             if(h): tmp*= h
-            retval= tmp.quantize(basic_types.dimensionPlaces)
+            retval= tmp.quantize(self.places, rounding=decimal.ROUND_UP)
         return retval
 
     def LeeBC3(self, m):
@@ -106,10 +136,10 @@ class MeasurementRecord(epc.EntPyCost):
         '''Return measurement components: 
            [description,number of units, length, width and height].'''
         retval= [ self.comentario.encode('utf8'), '','','','']
-        if(self.unidades): retval[1]= basic_types.human_readable(self.UnidadesR())
-        if(self.largo): retval[2]= basic_types.human_readable(self.LargoR())
-        if(self.ancho): retval[3]= basic_types.human_readable(self.AnchoR())
-        if(self.alto): retval[4]= basic_types.human_readable(self.AltoR())
+        if(self.unidades): retval[1]= self.getUnitsString()
+        if(self.largo): retval[2]= self.getLengthString()
+        if(self.ancho): retval[3]= self.getWidthString()
+        if(self.alto): retval[4]= self.getHeightString()
         return retval
     
     def WriteBC3(self, os):
@@ -120,23 +150,21 @@ class MeasurementRecord(epc.EntPyCost):
            + components[3] + '\\'
            + components[4] + '\\')
 
-
     def Write(self, os):
         os.write(self.comentario + ','
            + self.unidades + ','
            + str(self.largo) + ',' + str(self.ancho) + ',' + str(self.alto) + '\n')
 
-
     #not  @brief Imprime la medición en Latex.
     def printLtx(self, data_table, ancho):
         row= [pylatex.table.MultiColumn(1,align= pylatex.utils.NoEscape(ancho),data= pylatex_utils.ascii2latex(self.comentario))]
         components= self.getComponents()
-        zero= basic_types.ppl_dimension(0.0);
+        zero= self.dimension(0.0);
         row.append(components[1])
         row.append(components[2])
         row.append(components[3])
         row.append(components[4])
-        total= self.getTotalR()
+        total= self.getRoundedTotal()
         if(total!=zero): str_t= basic_types.human_readable(total)
         row.append(str_t)
         data_table.add_row(row)

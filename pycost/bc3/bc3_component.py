@@ -9,26 +9,26 @@ from pycost.utils import basic_types
 class BC3Component(fr_entity.EntFR):
     '''Component of a price decomposition.'''
 
-    def __init__(self, e= None, f=1.0, r= 1.0):
-        super(BC3Component,self).__init__(f,r)
+    def __init__(self, e= None, fr= fr_entity.EntFR()):
+        super(BC3Component,self).__init__(fr.factor,fr.productionRate)
         self.ent= e
 
-    def Precio(self):
-        return self.ent.Precio()*Producto()
+    def getPrice(self):
+        return self.ent.getPrice()*getProduct()
 
-    def PrecioR(self):
-        retval= basic_types.ppl_price(self.ent.PrecioR(),3)
-        retval*= self.ProductoR()
+    def getRoundedPrice(self):
+        retval= self.ent.getRoundedPrice()
+        retval*= self.getRoundedProduct()
         return retval
 
-    def StrPrecioLtx(self):
-        return basic_types.human_readable(PrecioR())
+    def getLtxPriceString(self):
+        return basic_types.human_readable(getRoundedPrice())
 
 
     def PrecioSobre(self, sobre):
         '''For percentages.'''
-        d= basic_types.ppl_price(sobre,3)
-        d*= Producto()
+        d= basic_types.ppl_price(sobre)
+        d*= getProduct()
         return d
 
     def StrPrecioSobreLtx(self, sobre):
@@ -50,7 +50,7 @@ class BC3Component(fr_entity.EntFR):
 
     def WriteSpre(self, os):
         if not ((CodigoEntidad()).find('%')):
-            os.write(0 + '|' + CodigoEntidad() + '|')
+            os.write(0 + '|' + self.CodigoEntidad() + '|')
         super(BC3Component,self).WriteSpre(os)
 
     def WriteBC3(self, os):
@@ -66,9 +66,9 @@ class BC3Component(fr_entity.EntFR):
 
     def getPriceJustificationRecord(self, over):
         if self.isPercentage():
-            return pjr.PriceJustificationRecord(CodigoEntidad(),ppl_price(self.Producto(),4),self.ent.Unidad(),self.ent.getTitle(),True,basic_types.ppl_price(Producto()*100.0),over)
+            return pjr.PriceJustificationRecord(CodigoEntidad(),self.getRoundedProduct(),self.ent.Unidad(),self.ent.getTitle(),True,self.getRoundedPercentage(),over)
         else:
-            return pjr.PriceJustificationRecord(self.ent.Codigo(),basic_types.ppl_price(self.Producto(),4),self.ent.Unidad(),self.ent.getTitle(),False,self.ent.PrecioR(),0.0)
+            return pjr.PriceJustificationRecord(self.ent.Codigo(),self.getRoundedProduct(),self.ent.Unidad(),self.ent.getTitle(),False,self.ent.getRoundedPrice(),0.0)
 
 
     def ImprLtxJustPre(self, os, over):
