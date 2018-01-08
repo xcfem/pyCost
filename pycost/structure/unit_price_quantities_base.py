@@ -40,7 +40,7 @@ class UnitPriceQuantitiesBase(epc.EntPyCost):
 
     def getRoundedPrice(self):
         retval= self.getRoundedTotal()
-        retval+= self.getUnitRoundedPrice()
+        retval*= self.getUnitRoundedPrice()
         return retval.quantize(self.ud.places)
 
     def getLtxPriceString(self):

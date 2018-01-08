@@ -7,7 +7,7 @@ from decimal import Decimal
 
 class EntFR(epc.EntPyCost):
     '''Entity that has a factor and production rate.'''
-    precision= 2
+    precision= 3
     places= Decimal(10) ** -precision
     formatString= '{0:.'+str(precision)+'f}'
 

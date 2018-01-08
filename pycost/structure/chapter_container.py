@@ -167,9 +167,9 @@ class Subcapitulos(list, epc.EntPyCost):
         for j in self:
             (j).writePriceTableTwoIntoLatexDocument(os,sect)
 
-    def ImprLtxJustPre(self, os, sect):
+    def writePriceJustification(self, data_table, sect):
         for j in self:
-            (j).ImprLtxJustPre(os,sect)
+            (j).writePriceJustification(data_table,sect)
 
 
     def ImprLtxResumen(self, doc, sect, recurre):

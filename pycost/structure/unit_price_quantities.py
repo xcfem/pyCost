@@ -14,9 +14,6 @@ class UnitPriceQuantities(ptp.UnitPriceQuantitiesBase):
         super(UnitPriceQuantities,self).__init__(u)
         self.quantities= m.Quantities()
 
-    def Copia(self):
-        return UnitPriceQuantities(self)
-
     def getTotal(self):
         return self.quantities.getTotal()
 

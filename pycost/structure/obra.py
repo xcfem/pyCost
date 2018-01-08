@@ -299,9 +299,8 @@ class Obra(cp.Chapter):
         self.WritePreciosBC3(os)
         self.WriteConceptoBC3(os)
         self.WriteDescompBC3(os)
-        self.WriteQuantities(os,pos)
-        self.WriteSubChapters(os,pos)
-
+        self.WriteQuantitiesBC3(os,pos)
+        self.WriteSubChaptersBC3(os,pos)
 
     def ImprLtxPresGen(self, doc):
         part= pylatex_utils.Part("Presupuestos Generales")
@@ -334,9 +333,11 @@ class Obra(cp.Chapter):
         part.append(pylatex.Command('input{firmas}'))
         doc.append(part)
 
-    def ImprLtxJustPre(self, doc):
-        super(Obra,self).ImprLtxJustPre(doc,'root')
-        doc.create("\\input{firmas}" + '\n')
+    def getPriceJustification(self):
+        retval= pylatex.Document(documentclass= 'article')
+        super(Obra,self).writePriceJustification(retval,'root')
+        retval.append(pylatex.Command('input{firmas}'))
+        return retval
 
     def writePriceTablesIntoLatexDocument(self, doc):
         self.writePriceTableOneIntoLatexDocument(doc)

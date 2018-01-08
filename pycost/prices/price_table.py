@@ -84,8 +84,8 @@ class CuaPre(epc.EntPyCost):
 
 
     #not  @brief Write la justificación de precios.
-    def ImprLtxJustPre(self, os):
-        self.unidades.ImprLtxJustPre(os)
+    def writePriceJustification(self, doc):
+        self.unidades.writePriceJustification(doc)
 
 
     #not  @brief Write el cuadro de precios número 1.

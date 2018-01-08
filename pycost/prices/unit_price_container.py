@@ -127,16 +127,14 @@ class Descompuestos(concept_dict.ConceptDict):
 
             doc.append(pylatex_utils.NormalSizeCommand())
 
-    def ImprLtxJustPre(self, doc):
-        doc.append(pylatex_utils.SmallCommand())
-        doc.append("\\begin{longtable}{l}" + '\n')
-        for j in self.map.keys():
-            self.map[j].ImprLtxJustPre(doc)
-            doc.append(pylatex_utils.ltx_fin_reg + '\n')
-            doc.append(pylatex_utils.ltx_fin_reg + '\n')
-
-        doc.append("\\end{longtable}" + '\n')
-        doc.append(pylatex_utils.NormalSizeCommand())
+    def writePriceJustification(self, doc):
+        if(len(self)>0):
+            doc.append(pylatex_utils.SmallCommand())
+            longTableStr= 'l'
+            with doc.create(pylatex_utils.LongTable(longTableStr)) as data_table:
+                for j in self.map.keys():
+                    self.map[j].writePriceJustification(data_table)
+            doc.append(pylatex_utils.NormalSizeCommand())
 
     def writePriceTableTwoIntoLatexDocument(self, doc):
         if(len(self)>0):

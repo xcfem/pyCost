@@ -105,17 +105,21 @@ class UnitPrice(ms.Measurable):
         return self.components.FuerzaPrecio(objetivo)
 
 
-    def ImprLtxJustPre(self, os):
-        doc.append("\\begin{tabular}{l r l p{4cm} r r}" + '\n')
-        #Cabecera
-        doc.append(pylatex_utils.ascii2latex(self.Codigo()) + " & "
-           + pylatex_utils.ascii2latex(self.Unidad()) + " & "
-           + pylatex_utils.ltx_multicolumn(pylatex_utils.ltx_datos_multicolumn("4","p{7cm}",pylatex_utils.ascii2latex(self.getLongDescription()))) + pylatex_utils.ltx_fin_reg + '\n')
-        doc.append(u"Código & Rdto. & Ud. & Descripción & Unit. & Total"
-           + pylatex_utils.ltx_fin_reg + '\n' + pylatex_utils.ltx_hline + '\n')
-        #Descomposición
-        components.ImprLtxJustPre(os,True); #XXX Here cumulated percentages.
-        doc.append("\\end{tabular}" + '\n')
+    def writePriceJustification(self, data_table):
+        tableStr= 'l r l p{4cm} r r'
+        nested_data_table= pylatex.Tabular(tableStr)
+        row= [pylatex_utils.ascii2latex(self.Codigo())]
+        row.append(pylatex_utils.ascii2latex(self.Unidad()))
+        row.append(pylatex.table.MultiColumn(4, align=pylatex.utils.NoEscape('p{7cm}'),data=pylatex_utils.ascii2latex(self.getLongDescription())))
+        nested_data_table.add_row(row)
+        #Header
+        headerRow= [u'Código',u'Rdto.',u'Ud.',u'Descripción',u'Unit.',u'Total']
+        nested_data_table.add_row(headerRow)
+        nested_data_table.add_hline()
+        #Decomposition
+        self.components.writePriceJustification(nested_data_table,True); #XXX Here cumulated percentages.
+        data_table.add_row([nested_data_table])
+
     def getLtxCodeUnitDescription(self):
         retval= [pylatex_utils.ascii2latex(self.Codigo())]
         retval.append(pylatex_utils.ascii2latex(self.Unidad()))

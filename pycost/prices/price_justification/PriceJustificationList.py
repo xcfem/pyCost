@@ -60,38 +60,38 @@ class PriceJustificationList(object):
         return len(self.mano_de_obra)+len(self.materiales)+len(self.maquinaria)+len(self.otros)+len(self.percentages)
 
 
-    def ImprLtxJustPre(self, os):
+    def writePriceJustification(self, data_table):
         total= self.getTotal()
         rnd= self.Redondeo()
         total_rnd= self.getRoundedTotal()
         if(len(self)<2):
-            doc.append(pylatex_utils.ltx_multicolumn(pylatex_utils.ltx_datos_multicolumn("4","r",basic_types.sin_desc_string))
-               + " & & " + pylatex_utils.ltx_fin_reg + '\n' + pylatex_utils.ltx_fin_reg + '\n')
+            row= [pylatex.table.MultiColumn(4, align='r',data=basic_types.sin_desc_string)]
+            row.extend(['',''])
+            data_table.add_row(row)
             #Total
-            doc.append(pylatex_utils.ltx_multicolumn(pylatex_utils.ltx_datos_multicolumn("4","r","TOTAL")) + " & "
-               + pylatex_utils.ltx_multicolumn(pylatex_utils.ltx_datos_multicolumn("2","r","\\textbf{"+basic_types.human_readable(total)+"}"))
-               + pylatex_utils.ltx_fin_reg + '\n')
-
+            row= [pylatex.table.MultiColumn(4, align='r',data='Total')]
+            row.append(pylatex.table.MultiColumn(2, align='r',data=pylatex.utils.bold(basic_types.human_readable(total))))
+            data_table.add_row(row)
         else:
-            self.mano_de_obra.ImprLtxJust(os)
-            self.materiales.ImprLtxJust(os)
-            self.maquinaria.ImprLtxJust(os)
-            self.otros.ImprLtxJust(os)
-            self.percentages.ImprLtxJust(os)
+            self.mano_de_obra.writePriceJustification(data_table)
+            self.materiales.writePriceJustification(data_table)
+            self.maquinaria.writePriceJustification(data_table)
+            self.otros.writePriceJustification(data_table)
+            self.percentages.writePriceJustification(data_table)
             #Suma
-            os.write(pylatex_utils.ltx_fin_reg + '\n')
-            doc.append(pylatex_utils.ltx_multicolumn(pylatex_utils.ltx_datos_multicolumn("4","r","Suma"+pylatex_utils.ltx_ldots)) + " & "
-               + pylatex_utils.ltx_multicolumn(pylatex_utils.ltx_datos_multicolumn("2","r",basic_types.human_readable(total)))
-               + pylatex_utils.ltx_fin_reg + '\n')
+            row= [pylatex.table.MultiColumn(4, align='r',data= pylatex.NoEscape("Suma\\ldots"))]
+            row.append(pylatex.table.MultiColumn(2, align='r',data=pylatex.utils.bold(basic_types.human_readable(total))))
+            data_table.add_row(row)
+            
             #Redondeo
-            doc.append(pylatex_utils.ltx_multicolumn(pylatex_utils.ltx_datos_multicolumn("4","r","Redondeo"+pylatex_utils.ltx_ldots)) + " & "
-               + pylatex_utils.ltx_multicolumn(pylatex_utils.ltx_datos_multicolumn("2","r",basic_types.human_readable(rnd)))
-               + pylatex_utils.ltx_fin_reg + '\n')
-            #Total
-            doc.append(pylatex_utils.ltx_multicolumn(pylatex_utils.ltx_datos_multicolumn("4","r","TOTAL")) + " & "
-               + pylatex_utils.ltx_multicolumn(pylatex_utils.ltx_datos_multicolumn("2","r","\\textbf{"+basic_types.human_readable(total_rnd)+"}"))
-               + pylatex_utils.ltx_fin_reg + '\n')
+            row= [pylatex.table.MultiColumn(4, align='r',data= pylatex.NoEscape("Redondeo\\ldots"))]
+            row.append(pylatex.table.MultiColumn(2, align='r',data=pylatex.utils.bold(basic_types.human_readable(rnd))))
+            data_table.add_row(row)
 
+            #Total
+            row= [pylatex.table.MultiColumn(4, align='r',data= pylatex.NoEscape("Total\\ldots"))]
+            row.append(pylatex.table.MultiColumn(2, align='r',data=pylatex.utils.bold(basic_types.human_readable(total_rnd))))
+            data_table.add_row(row)
 
     def writePriceTableTwoIntoLatexDocument(self, data_table):
         total= self.getTotal()

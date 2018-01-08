@@ -97,9 +97,9 @@ class ComponentList(list, epc.EntPyCost):
         return pjl.PriceJustificationList(pa,self.getElementaryPricesOfType(basic_types.mdo),self.getElementaryPricesOfType(basic_types.mat),self.getElementaryPricesOfType(basic_types.maq),self.getElementaryPricesOfType(basic_types.sin_clasif),self.getPourcentagesForType(basic_types.sin_clasif))
 
 
-    def ImprLtxJustPre(self, os, pa):
+    def writePriceJustification(self, data_table, pa):
         lista= self.getPriceJustificationList(pa)
-        lista.ImprLtxJustPre(os)
+        lista.writePriceJustification(data_table)
 
     def writePriceTableTwoIntoLatexDocument(self, os, pa):
         lista= self.getPriceJustificationList(pa)

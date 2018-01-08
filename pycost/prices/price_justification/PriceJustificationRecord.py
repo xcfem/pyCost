@@ -1,6 +1,7 @@
 #PriceJustificationRecord.pyxx
 
 from pycost.utils import basic_types
+from pycost.utils import pylatex_utils
 
 class PriceJustificationRecord(object):
 
@@ -27,16 +28,17 @@ class PriceJustificationRecord(object):
         retval*= self.rdto
         return retval
 
-    def ImprLtxJustPre(self, os):
-        doc.append(pylatex_utils.ascii2latex(self.codigo) + " & "
-           + basic_types.human_readable(self.rdto) + " & " #Write el production rate
-           + pylatex_utils.ascii2latex(self.unidad) + " & "
-           + pylatex_utils.ascii2latex(self.titulo) + " & ")
+    def writePriceJustification(self, data_table):
+        row= [pylatex_utils.ascii2latex(self.codigo)]
+        row.append(basic_types.human_readable(self.rdto))
+        row.append(pylatex_utils.ascii2latex(self.unidad))
+        row.append(pylatex_utils.ascii2latex(self.titulo))
         if self.is_percentage:
-            doc.append(basic_types.human_readable(self.unitario) + pylatex_utils.ltx_porciento); #Percentage
+            row.append(basic_types.human_readable(self.unitario) + pylatex_utils.ltx_porciento); #Percentage
         else:
-            doc.append(basic_types.human_readable(self.unitario)) #Precio unitario
-        doc.append(" & " + basic_types.human_readable(self.getTotal()) + pylatex_utils.ltx_fin_reg + '\n')
+            row.append(basic_types.human_readable(self.unitario)) #Precio unitario
+        row.append(basic_types.human_readable(self.getTotal()))
+        data_table.add_row(row)
 
 
     def writePriceTableTwoIntoLatexDocument(self, os):

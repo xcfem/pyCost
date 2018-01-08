@@ -1,11 +1,9 @@
-#PriceJustificationRecordContainer.pyxx
-
-
-
+#PriceJustificationRecordContainer.py
 
 import PriceJustificationRecord
 from pycost.utils import basic_types
 from pycost.utils import pylatex_utils
+import pylatex
 
 class PriceJustificationRecordContainer(list):
     def __init__(self,tp):
@@ -26,12 +24,14 @@ class PriceJustificationRecordContainer(list):
                 base+= (i).getTotal()
 
 
-    def ImprLtxJust(self, doc):
+    def writePriceJustification(self, data_table):
         if(len(self)):
             for i in self:
-                (i).ImprLtxJustPre(os)
-            doc.append(pylatex_utils.ltx_multicolumn(pylatex_utils.ltx_datos_multicolumn("4","r","Total "+StrTipo()))
-               + " & & " + basic_types.human_readable(Total()) + pylatex_utils.ltx_fin_reg + '\n' + pylatex_utils.ltx_fin_reg + '\n')
+                (i).writePriceJustification(data_table)
+            row= [pylatex.table.MultiColumn(4, align='r',data='Total '+self.StrTipo())]
+            row.append('')
+            row.append(basic_types.human_readable(self.getTotal()))
+            data_table.add_row(row)
 
     def writePriceTableTwoIntoLatexDocument(self, data_table):
         total= self.getTotal()

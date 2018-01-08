@@ -47,9 +47,9 @@ class Chapter(bc3_entity.EntBC3):
                     retval= True
                     break
         return retval
-    def WriteQuantities(self,os, pos=""):
+    def WriteQuantitiesBC3(self,os, pos=""):
         self.quantities.Write(os,self.CodigoBC3(),pos)
-    def WriteSubChapters(self,os, pos=""):
+    def WriteSubChaptersBC3(self,os, pos=""):
         self.subcapitulos.WriteBC3(os,pos)
     def CodigoBC3(self):
         return super(Chapter,self).CodigoBC3() + "#"
@@ -127,8 +127,8 @@ class Chapter(bc3_entity.EntBC3):
     def WriteBC3(self, os, pos):
         self.WriteConceptoBC3(os)
         self.WriteDescompBC3(os)
-        self.WriteQuantities(os,pos)
-        self.WriteSubChapters(os,pos)
+        self.WriteQuantitiesBC3(os,pos)
+        self.WriteSubChaptersBC3(os,pos)
     def getPrice(self):
         return (self.subcapitulos.getPrice() + self.quantities.getPrice()) * self.fr.getProduct()
     def getRoundedPrice(self):
@@ -167,12 +167,12 @@ class Chapter(bc3_entity.EntBC3):
                 doc.append('\\' + sect + '{' + self.getTitle() + '}' + '\n')
             self.precios.writePriceTableTwoIntoLatexDocument(doc)
         self.subcapitulos.writePriceTableTwoIntoLatexDocument(doc,pylatex_utils.getLatexSection(sect))
-    def ImprLtxJustPre(self, doc, sect):
+    def writePriceJustification(self, doc, sect):
         if(sect!='root'):
             doc.append('\\' + sect + '{' + self.getTitle() + '}' + '\n')
         if self.precios.TieneDescompuestos():
-            self.precios.ImprLtxJustPre(doc)
-        self.subcapitulos.ImprLtxJustPre(doc,pylatex_utils.getLatexSection(sect))
+            self.precios.writePriceJustification(doc)
+        self.subcapitulos.writePriceJustification(doc,pylatex_utils.getLatexSection(sect))
     def ImprLtxResumen(self, doc, sect, recurre= True):
         if(self.hasQuantities()):
             if(sect!='root'):
