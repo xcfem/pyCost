@@ -63,14 +63,6 @@ def tipo_concepto2chr(tp):
     else:
         return '0'
 
-dimensionPrecision= 3
-dimensionPlaces= Decimal(10) ** -dimensionPrecision
-dimensionFormatString= '{0:.'+str(dimensionPrecision)+'f}'
-
-def ppl_dimension(dim):
-    txtDim=  dimensionFormatString.format(dim)
-    return Decimal(txtDim)
-
 pricePrecision= 3
 pricePlaces= Decimal(10) ** -pricePrecision
 priceFormatString= '{0:.'+str(pricePrecision)+'f}'
@@ -112,7 +104,6 @@ def human_readable(number,decPlaces= 3):
     return formatString.format(number, grouping= True)
 
 # import Currency
-# typedef Currency<3> ppl_dimension
 # typedef Currency<3> ppl_percentage
 
 

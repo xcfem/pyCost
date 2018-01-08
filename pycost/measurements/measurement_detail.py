@@ -12,28 +12,28 @@ class Quantities(list, epy.EntPyCost):
     '''Quantities de una unidad de obra.'''
     def getTotalUnits(self):
         '''Return the total number of units.'''
-        t= basic_types.ppl_dimension(0.0)
+        t= measurement_record.MeasurementRecord.dimension(0.0)
         for i in self:
             t+=(i).Unidades()
         return t
 
     def getTotalLength(self):
         '''Return the total length.'''
-        t= basic_types.ppl_dimension(0.0)
+        t= measurement_record.MeasurementRecord.dimension(0.0)
         for i in self:
             t+=(i).Unidades()*(i).Largo()
         return t
 
     def getTotalWidth(self):
         '''Return the total width.'''
-        t= basic_types.ppl_dimension(0.0)
+        t= measurement_record.MeasurementRecord.dimension(0.0)
         for i in self:
             t+=(i).Unidades()*(i).Ancho()
         return t
 
     def getTotalHeight(self):
         '''Return the total height.'''
-        t= basic_types.ppl_dimension(0.0)
+        t= measurement_record.MeasurementRecord.dimension(0.0)
         for i in self:
             t+=(i).Unidades()*(i).Ancho()
         return t
@@ -45,7 +45,7 @@ class Quantities(list, epy.EntPyCost):
         return t
 
     def getRoundedTotal(self):
-        t= basic_types.ppl_dimension(0.0)
+        t= measurement_record.MeasurementRecord.dimension(0.0)
         for i in self:
             t+=(i).getRoundedTotal()
         return t

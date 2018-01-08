@@ -15,8 +15,9 @@ class MeasurementRecord(epc.EntPyCost):
     places= decimal.Decimal(10) ** -precision
     formatString= '{0:.'+str(precision)+'f}'
 
-    def dimension(self,dim):
-        return decimal.Decimal(self.formatString.format(dim))
+    @staticmethod
+    def dimension(dim):
+        return decimal.Decimal(MeasurementRecord.formatString.format(dim))
 
     def __init__(self,c= "", uds= None,l= None,an= None,al= None):
         super(MeasurementRecord,self).__init__()
@@ -122,7 +123,7 @@ class MeasurementRecord(epc.EntPyCost):
             if(l): tmp*= l
             if(a): tmp*= a
             if(h): tmp*= h
-            retval= tmp.quantize(self.places, rounding=decimal.ROUND_UP)
+            retval= tmp.quantize(self.places, rounding=decimal.ROUND_HALF_UP)
         return retval
 
     def LeeBC3(self, m):

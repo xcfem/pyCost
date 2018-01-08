@@ -116,26 +116,31 @@ class UnitPrice(ms.Measurable):
         #Descomposición
         components.ImprLtxJustPre(os,True); #XXX Here cumulated percentages.
         doc.append("\\end{tabular}" + '\n')
+    def getLtxCodeUnitDescription(self):
+        retval= [pylatex_utils.ascii2latex(self.Codigo())]
+        retval.append(pylatex_utils.ascii2latex(self.Unidad()))
+        retval.append(pylatex_utils.ascii2latex(self.getLongDescription()))
+        return retval
 
     def writePriceTableOneIntoLatexDocument(self, data_table):
-        data_table.add_row([pylatex_utils.ascii2latex(self.Codigo()),
-                            pylatex_utils.ascii2latex(self.Unidad()),
-                            pylatex_utils.ascii2latex(self.getLongDescription()),'',''])
+        row= self.getLtxCodeUnitDescription()
+        row.extend(['',''])
+        data_table.add_row(row)
         self.components.writePriceTableOneIntoLatexDocument(data_table,True,False); #XXX Aqui género.
 
     def writePriceTableTwoIntoLatexDocument(self, data_table):
         tableStr= 'l r p{5.5cm} r'
-        with data_table.create(pylatex.Tabular(tableStr)) as nested_data_table:
-            #Header
-            nested_data_table.add_row([u'Código',u'Ud.',u'Descripción',u'Importe'])
-            nested_data_table.add_hline()
-            row= [pylatex_utils.ascii2latex(self.Codigo())]
-            row.append(pylatex_utils.ascii2latex(self.Unidad()))
-            row.append(pylatex_utils.ascii2latex(self.getLongDescription()))
-            row.append('')
-            nested_data_table.add_row(row)
-            #Decomposition
-            self.components.writePriceTableTwoIntoLatexDocument(nested_data_table,True); #XXX Here cumulated percentages.
+        headerRow= [u'Código',u'Ud.',u'Descripción',u'Importe']
+        nested_data_table= pylatex.Tabular(tableStr)
+        #Header
+        nested_data_table.add_row(headerRow)
+        nested_data_table.add_hline()
+        row= self.getLtxCodeUnitDescription()
+        row.append('')
+        nested_data_table.add_row(row)
+        #Decomposition
+        self.components.writePriceTableTwoIntoLatexDocument(nested_data_table,True); #XXX Here cumulated percentages.
+        data_table.add_row([nested_data_table])
 
     def WriteHCalc(self, os):
         os.write(self.Codigo() + tab
