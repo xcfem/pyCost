@@ -96,43 +96,26 @@ class UnitPriceQuantitiesBase(epc.EntPyCost):
         doc.append(pylatex_utils.ltx_hline + '\n')
         doc.add_empty_row()
 
-
-    def printLatexHeaderPre(self, data_table, totalr, ancho):
+    def getLtxBudgetRow(self, ancho):
+        totalr=  basic_types.human_readable(self.getRoundedTotal())
         row= [pylatex_utils.ascii2latex(self.getUnitPriceCode())]
         row.append(totalr+ " " + pylatex_utils.ascii2latex(self.UnidadMedida()))
-        row.append(pylatex.table.MultiColumn(3, align=pylatex.utils.NoEscape(ancho),data=self.ud.getLongDescription()))
+        row.append(pylatex.table.MultiColumn(1, align=pylatex.utils.NoEscape(ancho),data=self.ud.getLongDescription()))
+        row.append(self.getUnitLtxPriceString())
+        row.append(self.getLtxPriceString())
+        return row
+
+    def ImprCompLtxPre(self, data_table, otra= None):
+        data_table.add_empty_row()
+        row= ['','', '', '', '']
+        if(otra):
+            row= otra.getLtxBudgetRow('p{2.5cm}')
+        row.extend(self.getLtxBudgetRow("p{2.5cm}"))
         data_table.add_row(row)
-
-    def ImprCompLtxPre(self, os, otra):
-        doc.add_empty_row()
-        totalr_otra= human_readable(otra.getRoundedTotal())
-        otra.printLatexHeaderPre(os,totalr_otra,'p{2.5cm}')
-        doc.append(pylatex_utils.ltx_ampsnd
-           + otra.getUnitLtxPriceString() + pylatex_utils.ltx_ampsnd
-           + otra.getLtxPriceString() + pylatex_utils.ltx_ampsnd)
-        totalr_esta= basic_types.human_readable(getRoundedTotal())
-        printLatexHeaderPre(os,totalr_esta,"p{2.5cm}")
-        doc.append(pylatex_utils.ltx_ampsnd
-           + getUnitLtxPriceString() + pylatex_utils.ltx_ampsnd
-           + getLtxPriceString() + pylatex_utils.ltx_fin_reg + '\n')
-        doc.add_empty_row()
-
-    def ImprCompLtxPre(self, os):
-        media_empty_line= ['','', '', '', '']
-        doc.add_empty_row()
-        doc.append(empty_line + '\n')
-        doc.append(media_empty_line)
-        totalr_med= human_readable(self.getRoundedTotal())
-        printLatexHeaderPre(os,totalr_med,'p{2.5cm}')
-        doc.append(pylatex_utils.ltx_ampsnd
-           + getUnitLtxPriceString() + pylatex_utils.ltx_ampsnd
-           + getLtxPriceString() + pylatex_utils.ltx_fin_reg + '\n')
-        doc.add_empty_row()
+        data_table.add_empty_row()
 
     def ImprLtxPre(self, data_table):
-        totalr_med=  basic_types.human_readable(self.getRoundedTotal())
-        self.printLatexHeaderPre(data_table,totalr_med,'p{5cm}')
-        row= ['','','',self.getUnitLtxPriceString(),self.getLtxPriceString()]
+        row= self.getLtxBudgetRow('p{5cm}')
         data_table.add_row(row)
         data_table.add_empty_row()
 

@@ -148,7 +148,6 @@ class Chapter(bc3_entity.EntBC3):
             caption= basic_types.quantitiesCaption
             if(sectName!='part'):
               caption= self.getTitle()
-            print '**** sectName= ', sectName, ' caption= ', caption
             docPart= pylatex_utils.getPyLatexSection(sectName,caption)
             self.quantities.writeQuantitiesIntoLatexDocument(docPart)
             self.subcapitulos.writeQuantitiesIntoLatexDocument(docPart,sectName)
@@ -222,9 +221,10 @@ class Chapter(bc3_entity.EntBC3):
             if self.subcapitulos:
                 doc.append(pylatex.Command('noindent'))
                 doc.append(pylatex_utils.largeCommand())
-                doc.append(pylatex.utils.bold('Total: '+self.getTitle()))
+                doc.append(pylatex.utils.bold('Total: '+self.getTitle()+' '))
                 doc.append(pylatex.Command('dotfill'))
                 doc.append(pylatex.utils.bold(self.getLtxPriceString()))
+                doc.append(pylatex.NewLine())
                 doc.append(pylatex_utils.NormalSizeCommand())
 
     def WriteHCalcMed(self, os, sect):

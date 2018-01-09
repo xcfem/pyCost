@@ -378,6 +378,7 @@ class Obra(cp.Chapter):
         '''get the construction budget in LaTeX format.'''
         retval= pylatex.Document(documentclass= 'book')
         retval.packages.append(pylatex.Package('minitoc'))
+        retval.append(pylatex.Command('doparttoc'))
         self.writeQuantitiesIntoLatexDocument(retval) #Quantities.
         self.writePriceTablesIntoLatexDocument(retval) #Price lists.
         self.ImprLtxPreParc(retval) #Presupuestos parciales.
