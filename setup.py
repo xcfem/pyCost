@@ -47,7 +47,7 @@ print pth_to_libs
 setup(name='pycost',
       version='0.1.0',
       author='Luis C. Pérez Tato',
-      packages=['pycost','pycost/bc3','pycost/measurements','pycost/prices','pycost/prices/price_justification','pycost/structure','pycost/utils'],
+      packages=['pycost','pycost/bc3','pycost/measurements','pycost/prices','pycost/prices/price_justification','pycost/structure','pycost/utils','pycost/utils/structural_members',],
       install_requires=[
           'decimal','num2words',
       ],
