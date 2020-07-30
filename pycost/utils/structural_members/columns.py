@@ -8,11 +8,11 @@ from pycost.measurements.measurement_record import MeasurementRecord
 
 class ColumnCylind(object):
     '''
-    :textComment: string to comment each measuremt line generated 
-    :nShafts: number of shafts
-    :DiamColumn: diameter
-    :Hcolumn: height of the column
-    :reinfQuant: reinforcement quantity
+    :ivar textComment: string to comment each measuremt line generated 
+    :ivar nShafts: number of shafts
+    :ivar DiamColumn: diameter
+    :ivar Hcolumn: height of the column
+    :ivar reinfQuant: reinforcement quantity
     '''
     def __init__(self,textComment,nShafts,DiamColumn,Hcolumn,reinfQuant):
         self.textComment=textComment
@@ -24,21 +24,20 @@ class ColumnCylind(object):
     def addReinfConcreteQuant(self,price):
         '''Add reinforcing concrete quantities to he price defined as parameter
 
-        :price: instance of object UnitPriceQuantities '''
+        :param price: instance of object UnitPriceQuantities '''
         price.quantities.append(MeasurementRecord(self.textComment,self.nShafts, self.Hcolumn, round(math.pi*self.DiamColumn**2/4.,3), None))
         
     def addFormworkQuant(self,price):
         '''Add formwork quantities to he price defined as parameter
 
-        :price: instance of object UnitPriceQuantities  '''
+        :param price: instance of object UnitPriceQuantities  '''
         price.quantities.append(MeasurementRecord(self.textComment,self.nShafts, self.Hcolumn, round(math.pi*self.DiamColumn,3), None))
         
     def addReinforcementQuant(self,price,percLosses):
         '''Add reinforcement quantities to the price defined as parameter
 
-        :price: instance of object UnitPriceQuantities (if 0-> no quantitie is
-                added)
-        :percLosses: percentage to add for cutting losses (if 0-> no loss)
+        :param price: instance of object UnitPriceQuantities (if 0-> no quantitie is added)
+        :param percLosses: percentage to add for cutting losses (if 0-> no loss)
         '''
         if self.reinfQuant>0:
             price.quantities.append(MeasurementRecord(self.textComment + ' s/med. aux.',1, self.reinfQuant, None, None))
