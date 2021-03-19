@@ -20,7 +20,8 @@
 # See https://github.com/lcpt/pyCost or email : l.pereztato@gmail.com
 #
 
-from distutils.core import setup, sys
+from setuptools import setup
+from distutils.core import sys
 from distutils.sysconfig import get_python_lib
 
 myPrefix = sys.prefix
@@ -48,8 +49,6 @@ setup(name='pycost',
       version='0.1.0',
       author='Luis C. Pérez Tato',
       packages=['pycost','pycost/bc3','pycost/measurements','pycost/prices','pycost/prices/price_justification','pycost/structure','pycost/utils','pycost/utils/structural_members',],
-      install_requires=[
-          'decimal','num2words',
-      ],
+      install_requires=[],
       data_files=[]
      )

@@ -1,4 +1,5 @@
 /usr/local/lib/python3.8/dist-packages/pycost-0.1.0.egg-info
+/usr/local/lib/python3.8/dist-packages/pycost-0.1.0-py3.8.egg
 /usr/local/lib/python3.8/dist-packages/pycost/bc3/bc3_component.py
 /usr/local/lib/python3.8/dist-packages/pycost/bc3/bc3_entity.py
 /usr/local/lib/python3.8/dist-packages/pycost/bc3/bc3_record.py

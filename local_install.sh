@@ -5,6 +5,6 @@ cat installed_files_history.txt installed_files.txt | sort | uniq > tmp.txt
 mv tmp.txt installed_files_history.txt
 sudo rm installed_files.txt
 
-# Install num2words
+# Install required packages
 sudo -H pip3 install num2words
 sudo -H pip3 install pylatex
