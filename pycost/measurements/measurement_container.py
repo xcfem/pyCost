@@ -132,7 +132,6 @@ class ChapterQuantities(list, epc.EntPyCost):
                 for i in self:
                     (i).ImprLtxPre(data_table)
                 data_table.add_row([pylatex.table.MultiColumn(4, align=pylatex.utils.NoEscape('p{8cm}'),data=pylatex.utils.bold('Total: '+tit)),pylatex.utils.bold(self.getLtxPriceString())])
-            doc.append(data_table)
             doc.append(pylatex_utils.NormalSizeCommand())
 
 
