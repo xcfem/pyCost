@@ -2,7 +2,7 @@
 #Codigos.py
 
 
-import bc3_record
+from pycost.bc3 import bc3_record
 
 class reg_T(object):
     def __init__(self,c= '',d= None):

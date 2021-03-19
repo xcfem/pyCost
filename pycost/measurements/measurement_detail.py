@@ -2,10 +2,10 @@
 #Quantities.py
 
 
+import pylatex
 from pycost.utils import EntPyCost as epy
 from pycost.measurements import measurement_record
 from pycost.utils import basic_types
-import pylatex
 from pycost.utils import pylatex_utils
 
 class Quantities(list, epy.EntPyCost):

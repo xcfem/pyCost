@@ -1,6 +1,8 @@
 # -*- coding: utf-8 -*-
 #Chapter.py
 
+import pylatex
+from decimal import Decimal
 from pycost.measurements import measurement_container
 from pycost.bc3 import fr_entity
 from pycost.bc3 import bc3_entity
@@ -8,10 +10,8 @@ from pycost.bc3 import bc3_component
 from pycost.structure import chapter_container
 from pycost.prices import price_table
 from pycost.prices import unit_price_container
-import pylatex
 from pycost.utils import pylatex_utils
 from pycost.utils import basic_types
-from decimal import Decimal
 
 class Chapter(bc3_entity.EntBC3):
     precision= 2

@@ -5,12 +5,12 @@
 
 
 
+import pylatex
 from pycost.structure import unit_price_quantities
 from pycost.measurements import measurement_report
 #import Pieza
 from pycost.utils import EntPyCost as epc
 
-import pylatex
 from pycost.utils import pylatex_utils
 from pycost.utils import basic_types
 

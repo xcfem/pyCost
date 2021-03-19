@@ -1,12 +1,9 @@
 # -*- coding: utf-8 -*-
 #Percentages.py
 
-
-
-
-import EntPyCost as epc
-import basic_types
 import pylatex
+from pycost.utils import EntPyCost as epc
+from pycost.utils import basic_types
 from pycost.utils import pylatex_utils
 
 class Percentages(epc.EntPyCost):

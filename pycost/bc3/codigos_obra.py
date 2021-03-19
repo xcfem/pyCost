@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 #CodigosObra.py
 
-import codes
+from pycost.bc3 import codes
 
 class CodigosObra(object):
     def __init__(self):

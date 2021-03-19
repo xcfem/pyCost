@@ -1,12 +1,11 @@
 # -*- coding: utf-8 -*-
 #Obra.py
 
+import pylatex
 from pycost.structure import chapter as cp
 from pycost.utils import percentages as pc
 from pycost.bc3 import codigos_obra as cod
 from pycost.prices import elementary_price
-
-import pylatex
 from pycost.utils import pylatex_utils
 from pycost.utils import basic_types
 
@@ -38,7 +37,7 @@ def print_tree(current_node, indent="", last='updown'):
     elif down: end_shape = '┐'
     else: end_shape = ''
 
-    print '{0}{1}{2}{3}'.format(indent, start_shape, current_node.Codigo(), end_shape)
+    print('{0}{1}{2}{3}'.format(indent, start_shape, current_node.Codigo(), end_shape))
 
     """ Printing of "down" branch. """
     for child in down:

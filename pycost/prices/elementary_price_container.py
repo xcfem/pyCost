@@ -4,7 +4,7 @@
 
 
 
-import elementary_price
+from pycost.prices import elementary_price
 from pycost.utils import concept_dict
 from pycost.utils import basic_types
 from pycost.prices import component_list

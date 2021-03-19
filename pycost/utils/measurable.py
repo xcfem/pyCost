@@ -19,7 +19,7 @@ class Measurable(eBC3.EntBC3):
         super(Measurable,self).__init__(cod,tit)
         self.unidad= ud
         if(ld):
-          self.long_description= unicode(ld,encoding='utf-8')
+          self.long_description= ld #unicode(ld,encoding='utf-8')
         else:
           self.long_description= ''
 

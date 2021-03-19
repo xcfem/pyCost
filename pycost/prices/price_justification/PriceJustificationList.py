@@ -1,12 +1,9 @@
-#PriceJustificationList.pyxx
+#PriceJustificationList.py
 
-
-
-
-import PriceJustificationRecordContainer
+import pylatex
+from pycost.prices.price_justification import PriceJustificationRecordContainer
 from pycost.utils import basic_types
 from decimal import Decimal
-import pylatex
 
 class PriceJustificationList(object):
     

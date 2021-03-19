@@ -240,16 +240,17 @@ def ltx_multicolumn(str):
 
 def ascii2latex(s):
     '''Return the equivalent latex code.'''
-    if type(s) == str:
-        # Ignore errors even if the string is not proper UTF-8 or has
-        # broken marker bytes.
-        # Python built-in function unicode() can do this.
-        tmp= unicode(s, encoding= 'utf-8', errors='ignore')
-    else:
-        # Assume the value object has proper __unicode__() method
-        tmp= unicode(s)
+    tmp= s
+    # if type(s) == str:
+    #     # Ignore errors even if the string is not proper UTF-8 or has
+    #     # broken marker bytes.
+    #     # Python built-in function unicode() can do this.
+    #     tmp= unicode(s, encoding= 'utf-8', errors='ignore')
+    # else:
+    #     # Assume the value object has proper __unicode__() method
+    #     tmp= unicode(s)
     #tmp= s.encode('ascii',errors='replace') #unicode(s, errors='replace')
-    if(tmp.find('\\')): # Tiene escape.
+    if(tmp.find('\\')): # Has scape characters.
      tmp.replace('\\(','(')
     if(tmp.find('\\')):
      tmp.replace('\\)',')')

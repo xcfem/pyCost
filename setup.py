@@ -42,7 +42,7 @@ if not myPrefix or not len (myPrefix):
     myPrefix = "/usr/local"
 
 pth_to_libs= get_python_lib(1,0,myPrefix)
-print pth_to_libs
+print(pth_to_libs)
 
 setup(name='pycost',
       version='0.1.0',

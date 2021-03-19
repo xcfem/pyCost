@@ -1,14 +1,13 @@
 # -*- coding: utf-8 -*-
 #UnitPrice.py
 
-
+import pylatex
 from pycost.utils import measurable as ms
 from pycost.prices import elementary_price_container
 from pycost.prices import component_list
 from pycost.utils import pylatex_utils
 from pycost.utils import basic_types
 from pycost.bc3 import fr_entity
-import pylatex
 from decimal import Decimal
 
 class UnitPrice(ms.Measurable):

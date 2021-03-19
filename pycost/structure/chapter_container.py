@@ -1,15 +1,12 @@
 # -*- coding: utf-8 -*-
 #Subcapitulos.py
 
-
-
-
-from pycost.prices import price_table
-import chapter
-from pycost.bc3 import codigos_obra
-from pycost.utils import EntPyCost as epc
 from decimal import Decimal
 import pylatex
+from pycost.prices import price_table
+from pycost.structure import chapter
+from pycost.bc3 import codigos_obra
+from pycost.utils import EntPyCost as epc
 
 class Subcapitulos(list, epc.EntPyCost):
 

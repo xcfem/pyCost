@@ -1,7 +1,7 @@
 #BC3Component.py
 
-import fr_entity
-import bc3_entity
+from pycost.bc3 import fr_entity
+from pycost.bc3 import bc3_entity
 from pycost.prices.price_justification import PriceJustificationRecord as pjr
 from pycost.utils import basic_types
 

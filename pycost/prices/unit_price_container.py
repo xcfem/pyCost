@@ -1,12 +1,9 @@
 # -*- coding: utf-8 -*-
 #Descompuestos.py
 
-
-
-
-import elementary_price_container
-import unit_price
 import pylatex
+from pycost.prices import elementary_price_container
+from pycost.prices import unit_price
 from pycost.utils import concept_dict
 from pycost.utils import pylatex_utils
 

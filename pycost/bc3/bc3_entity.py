@@ -1,12 +1,6 @@
 #EntBC3.py
 #Precio elemental.
 
-
-
-
-#include <string>
-#include <iostream>
-#import bibXCBasica/src/texto/en_letra
 from pycost.bc3 import codes
 from pycost.utils import EntPyCost as epc
 from pycost.utils import basic_types
@@ -18,10 +12,11 @@ class EntBC3(epc.EntPyCost):
     def __init__(self, cod, tit):
       super(EntBC3,self).__init__()
       self.codigo= cod
-      if(type(tit) == str):
-        self.title= unicode(tit,encoding='utf-8')
-      else:
-        self.title= tit
+      self.title= tit
+      # if(type(tit) == str):
+      #   self.title= tit.decode(encoding='utf-8')
+      # else:
+      #   self.title= tit
 
     def LeeBC3(self, r):
         if verborrea>4:

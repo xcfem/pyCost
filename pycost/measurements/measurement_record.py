@@ -1,14 +1,12 @@
 # -*- coding: utf-8 -*-
 #MeasurementRecord.py
 
-
-
+import pylatex
+import decimal
 from pycost.prices import unit_price
 from pycost.utils import basic_types
 from pycost.utils import EntPyCost as epc
-import pylatex
 from pycost.utils import pylatex_utils
-import decimal
 
 class MeasurementRecord(epc.EntPyCost):
     precision= 3
@@ -21,7 +19,7 @@ class MeasurementRecord(epc.EntPyCost):
 
     def __init__(self,c= "", uds= None,l= None,an= None,al= None):
         super(MeasurementRecord,self).__init__()
-        self.comentario= unicode(c,encoding='utf-8')
+        self.comentario= c #unicode(c,encoding='utf-8')
         self.unidades= uds
         self.largo= l
         self.ancho= an

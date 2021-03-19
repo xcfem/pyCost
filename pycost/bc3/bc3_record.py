@@ -2,7 +2,7 @@
 #RegBC3.py
 
 
-import fiebdc3
+from pycost.bc3 import fiebdc3
 
 elemento, descompuesto, medicion, obra, capitulo, sin_tipo= range(0,6)
 

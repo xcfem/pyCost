@@ -1,9 +1,9 @@
 #PriceJustificationRecordContainer.py
 
-import PriceJustificationRecord
+import pylatex
+from pycost.prices.price_justification import PriceJustificationRecord
 from pycost.utils import basic_types
 from pycost.utils import pylatex_utils
-import pylatex
 
 class PriceJustificationRecordContainer(list):
     def __init__(self,tp):

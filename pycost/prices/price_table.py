@@ -4,8 +4,8 @@
 
 
 
-import elementary_price_container
-import unit_price_container
+from pycost.prices import elementary_price_container
+from pycost.prices import unit_price_container
 from pycost.bc3 import codigos_obra
 from pycost.utils import EntPyCost as epc
 

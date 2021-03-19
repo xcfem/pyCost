@@ -2,7 +2,7 @@
 #ConceptDict.py
 
 
-import EntPyCost as epy
+from pycost.utils import EntPyCost as epy
 
 class KeyMap(dict):
     def __init__(self):

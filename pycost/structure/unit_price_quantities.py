@@ -1,9 +1,9 @@
 # -*- coding: utf-8 -*-
 #UnitPriceQuantities.py
 
-import unit_price_quantities_base as ptp
-from pycost.measurements import measurement_detail as m
 import pylatex
+from pycost.structure import unit_price_quantities_base as ptp
+from pycost.measurements import measurement_detail as m
 from pycost.utils import pylatex_utils
 
 class UnitPriceQuantities(ptp.UnitPriceQuantitiesBase):

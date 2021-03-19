@@ -1,11 +1,11 @@
 #UnitPriceQuantitiesBase.py
 '''Something that can return the quantities for a unit price.'''
 
+import pylatex
 from pycost.prices import unit_price_report
 from pycost.measurements import measurement_detail
 from pycost.utils import basic_types
 from pycost.utils import EntPyCost as epc
-import pylatex
 from pycost.utils import pylatex_utils
 
 class UnitPriceQuantitiesBase(epc.EntPyCost):
