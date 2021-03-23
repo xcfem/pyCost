@@ -20,7 +20,7 @@ class DeckUnifCrossSect(object):
     :nLateralFormwork: number of lateral sections with formwork (defaults to 0)
      '''
 
-    def __init__(self,textComment,nUnits,LdeckUnifSect,AreaUnifSect,reinfQuant,LexposFormwork,LhiddFormwork=None,nLateralFormwork=0):
+    def __init__(self,textComment,nUnits,LdeckUnifSect,AreaUnifSect,reinfQuant,LexposFormwork,LhiddFormwork= 0.0,nLateralFormwork=0):
         self.textComment=textComment
         self.nUnits=nUnits
         self.LdeckUnifSect=LdeckUnifSect
@@ -58,7 +58,7 @@ class DeckUnifCrossSect(object):
         '''Add hidden-wall formwork quantities to the price defined as parameter
 
         :price: instance of object UnitPriceQuantities '''
-        if self.LhiddFormwork>0:
+        if self.LhiddFormwork>0.0:
             price.quantities.append(MeasurementRecord(self.textComment,self.nUnits,self.LdeckUnifSect,self.LhiddFormwork,None))
         if self.nLateralFormwork>0:
             price.quantities.append(MeasurementRecord(self.textComment,self.nLateralFormwork*self.AreaUnifSect,None,None,None))

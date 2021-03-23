@@ -23,7 +23,7 @@ def print_tree(current_node, indent="", last='updown'):
 
     """ Printing of "up" branch. """
     for child in up:     
-        next_last = 'up' if up.index(child) is 0 else ''
+        next_last = 'up' if up.index(child) == 0 else ''
         next_indent = '{0}{1}{2}'.format(indent, ' ' if 'up' in last else '│', " " * len(current_node.Codigo()))
         print_tree(child, indent=next_indent, last=next_last)
 
