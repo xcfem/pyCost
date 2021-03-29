@@ -77,7 +77,7 @@ class EntBC3(epc.EntPyCost):
     def WriteConceptoBC3(self, os):
         os.write("~C" + '|' + self.CodigoBC3())
         os.write('|' + self.Unidad() + '|')
-        os.write(self.getTitle().encode('utf8') + '|')
+        os.write(self.getTitle() + '|')
         os.write(self.getPriceString() + '|')
         os.write(self.Fecha() + '|')
         os.write(self.ChrTipo() + '|\n')

@@ -134,7 +134,7 @@ class MeasurementRecord(epc.EntPyCost):
     def getComponents(self):
         '''Return measurement components: 
            [description,number of units, length, width and height].'''
-        retval= [ self.comentario.encode('utf8'), '','','','']
+        retval= [ self.comentario, '','','','']
         if(self.unidades): retval[1]= self.getUnitsString()
         if(self.largo): retval[2]= self.getLengthString()
         if(self.ancho): retval[3]= self.getWidthString()

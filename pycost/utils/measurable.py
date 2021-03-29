@@ -32,5 +32,5 @@ class Measurable(eBC3.EntBC3):
     def WriteBC3(self, os):
         self.WriteConceptoBC3(os)
         if len(self.getLongDescription())>0:
-            os.write("~T|" + self.Codigo() + '|' + self.getLongDescription().encode('utf8') + '|' + '\n')
+            os.write("~T|" + self.Codigo() + '|' + self.getLongDescription() + '|' + '\n')
 
