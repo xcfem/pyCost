@@ -66,7 +66,7 @@ class EntBC3(epc.EntPyCost):
         return basic_types.tipo_concepto2chr(self.getType())
 
     def isPercentage(self):
-        return self.codigo.find('%')>0
+        return self.codigo.find('%')>=0
 
     def WriteSpre(self, os):
         os.write(self.Codigo() + '|'
