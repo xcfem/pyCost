@@ -49,7 +49,7 @@ class BC3Component(fr_entity.EntFR):
 
 
     def WriteSpre(self, os):
-        if not ((CodigoEntidad()).find('%')):
+        if not ((self.CodigoEntidad()).find('%')):
             os.write(0 + '|' + self.CodigoEntidad() + '|')
         super(BC3Component,self).WriteSpre(os)
 
@@ -66,7 +66,7 @@ class BC3Component(fr_entity.EntFR):
 
     def getPriceJustificationRecord(self, over):
         if self.isPercentage():
-            return pjr.PriceJustificationRecord(CodigoEntidad(),self.getRoundedProduct(),self.ent.Unidad(),self.ent.getTitle(),True,self.getRoundedPercentage(),over)
+            return pjr.PriceJustificationRecord(self.ent.Codigo(),self.getRoundedProduct(),self.ent.Unidad(),self.ent.getTitle(),True,self.getRoundedPercentage(),over)
         else:
             return pjr.PriceJustificationRecord(self.ent.Codigo(),self.getRoundedProduct(),self.ent.Unidad(),self.ent.getTitle(),False,self.ent.getRoundedPrice(),0.0)
 
