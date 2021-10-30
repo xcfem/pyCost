@@ -4,15 +4,35 @@ from pycost.utils import basic_types
 from pycost.utils import pylatex_utils
 
 class PriceJustificationRecord(object):
+    '''Elemental unit cost
+
+    :ivar codigo: code of the elemental unit
+    :ivar rdto: production rate
+    :ivar unidad: unit of measurement
+    :ivar titulo: description of the elemental unit
+    :ivar is_percentage: True if it's a percentage
+    :ivar unitario: price of the elemental unit (or percentage if isperc==True)
+    :ivar sobre: base cost over which to apply percentage
+    '''
 
     def __init__(self, cod= '', rd= 0.0, ud= '', tit= '', isperc= False, unit= 0.0, b= 0.0):
-        self.codigo= cod #Codigo del precio elemental.
-        self.rdto= rd #Production rate.
-        self.unidad= ud #Unidad de medida.
-        self.titulo= tit #Descripción del precio elemental.
-        self.is_percentage= isperc #True if it's a percentage.
-        self.unitario= unit #Unit price (or percentage if is_percentage==True).
-        self.sobre= b #Base to apply percentage over.
+        '''Elemental unit cost
+
+        :param cod: code of the elemental unit
+        :param rdto: production rate
+        :param ud: unit of measurement
+        :param tit: description of the elemental unit
+        :param isperc: True if it's a percentage
+        :param unit: price of the elemental unit (or percentage if isperc==True)
+        :param b: base cost over which to apply percentage
+        '''
+        self.codigo= cod 
+        self.rdto= rd 
+        self.unidad= ud 
+        self.titulo= tit 
+        self.is_percentage= isperc 
+        self.unitario= unit 
+        self.sobre= b 
 
     def base(self):
         if self.is_percentage:
@@ -21,7 +41,11 @@ class PriceJustificationRecord(object):
             return basic_types.ppl_price(self.unitario)
 
     def SetBase(self, b):
-        sobre= b
+        ''' Sets the base for percentage calculation.
+
+        :param b: base cost over which to apply percentage
+        '''
+        self.sobre= b
 
     def getTotal(self):
         retval= basic_types.ppl_price(self.base())
