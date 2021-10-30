@@ -6,19 +6,37 @@ from pycost.utils import basic_types
 from decimal import Decimal
 
 class PriceJustificationList(object):
+    ''' Price justification list.
+
+    :ivar cumulated_percentages: True if cumulated percentages
+    :ivar mano_de_obra: labor (instance of PriceJustificationRecord class)
+    :ivar materiales: materials (instance of PriceJustificationRecord class)
+    :ivar maquinaria: machinery (instance of PriceJustificationRecord class)
+    :ivar otros: not-classified elemental price (instance of PriceJustificationRecord class)
+    :ivar percentages: percentage (ex: indirect costs) (instance of PriceJustificationRecord class)
+    '''
     
     def __init__(self,pa, mano, mater, maqui, otr, perc):
-      self.cumulated_percentages= pa
-      self.mano_de_obra= mano
-      self.materiales= mater
-      self.maquinaria= maqui
-      self.otros= otr
-      self.percentages= perc
-      base= basic_types.ppl_price(self.Base())
-      if self.cumulated_percentages:
-        self.percentages.SetBaseAcum(base)
-      else:
-        self.percentages.SetBase(base)
+        ''' Constructor.
+
+        :param pa: True if cumulated percentages
+        :param mano: labor (instance of PriceJustificationRecord class)
+        :param mater: materials (instance of PriceJustificationRecord class)
+        :param maqui: machinery (instance of PriceJustificationRecord class)
+        :param otr: not-classified elemental price (instance of PriceJustificationRecord class)
+        :param perc: percentage (ex: indirect costs) (instance of PriceJustificationRecordContainer class)
+        '''
+        self.cumulated_percentages= pa
+        self.mano_de_obra= mano
+        self.materiales= mater
+        self.maquinaria= maqui
+        self.otros= otr
+        self.percentages= perc
+        base= basic_types.ppl_price(self.Base())
+        if self.cumulated_percentages:
+            self.percentages.SetBaseAcum(base)
+        else:
+            self.percentages.SetBase(base)
     
     def Base(self):
         retval= basic_types.ppl_price(self.mano_de_obra.getTotal())
