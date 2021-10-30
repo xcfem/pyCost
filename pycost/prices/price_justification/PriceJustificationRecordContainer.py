@@ -23,7 +23,6 @@ class PriceJustificationRecordContainer(list):
                 (i).SetBase(base)
                 base+= (i).getTotal()
 
-
     def writePriceJustification(self, data_table):
         if(len(self)):
             for i in self:
