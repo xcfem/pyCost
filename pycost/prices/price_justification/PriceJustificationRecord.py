@@ -1,3 +1,5 @@
+# -*- coding: utf-8 -*-
+
 #PriceJustificationRecord.pyxx
 
 from pycost.utils import basic_types
@@ -65,9 +67,12 @@ class PriceJustificationRecord(object):
         data_table.add_row(row)
 
 
-    def writePriceTableTwoIntoLatexDocument(self, os):
-        doc.append(" & & " + pylatex_utils.ascii2latex(self.titulo) + " & ")
-        if(self.is_percentage): doc.append(basic_types.human_readable(self.getTotal())) #Total.
-        doc.append(pylatex_utils.ltx_fin_reg + '\n')
+    def writePriceTableTwoIntoLatexDocument(self, data_table):
+        ''' Write row of a percentage price (e.g. indirect costs) in price table number two'''
+        if(self.is_percentage): data_table.add_row(['','',pylatex_utils.ascii2latex(self.titulo),basic_types.human_readable(self.getTotal())])
+
+    
+ 
+
 
 
