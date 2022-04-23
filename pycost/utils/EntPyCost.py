@@ -3,6 +3,14 @@
 
 
 class EntPyCost(object):
-    def __init__(self,owner= None):
+    ''' Root PyCost class.
+
+    :ivar owner: object to which this object belongs.
+    '''
+    def __init__(self, owner= None):
+        ''' Constructor.
+
+        :param owner: object to which this object belongs.
+        '''
         self.owner= owner
 

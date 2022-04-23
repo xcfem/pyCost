@@ -46,20 +46,24 @@ def print_tree(current_node, indent="", last='updown'):
         print_tree(child, indent=next_indent, last=next_last)
         
 class Obra(cp.Chapter):
+    ''' Construction site class.'''
+    def __init__(self, cod="ObraSinCod", tit="ObraSinTit"):
+        ''' Constructor.
 
+        :param cod: construction site codename.
+        :param tit: constuction site description.
+        '''
+        super(Obra,self).__init__(cod,tit,1,1)
+        elem= elementary_price.ElementaryPrice("SINDESCO",basic_types.sin_desc_string,"",1.0,basic_types.mat)
+        self.precios.Elementales().Append(elem)
+        self.percentages= pc.Percentages()
+        
     def nombre_clase(self):
         return "Obra"
 
     def WriteSpre(self):
         precios.WriteSpre()
         lmsg.error(u"Exportación de capítulos no implementada." + '\n')
-
-
-    def __init__(self, cod="ObraSinCod", tit="ObraSinTit"):
-        super(Obra,self).__init__(cod,tit,1,1)
-        elem= elementary_price.ElementaryPrice("SINDESCO",basic_types.sin_desc_string,"",1.0,basic_types.mat)
-        self.precios.Elementales().Append(elem)
-        self.percentages= pc.Percentages()
 
     def findPrice(self, cod):
         retval= super(Obra,self).findPrice(cod)
@@ -212,51 +216,54 @@ class Obra(cp.Chapter):
                     lmsg.error(u"No se encontró el capítulo: " + reg.getChapterCode() + '\n')
 
 
+    def LeeBC3(self, inputFile):
+        ''' Read data from FIEBDC 3 file.
 
-    def LeeBC3(self, iS):
+        :param inputFile: input file to read from.
+        '''
         co= CodigosObra()
-        logging.info("Leyendo registros FIEBDC 3...")
-        co.LeeBC3(iS,verborrea); #Carga los registros BC3.
-        logging.info("hecho." + '\n')
+        logging.info("Reading FIEBDC 3 records...")
+        co.LeeBC3(inputFile,verborrea); #Reads BC3 records.
+        logging.info("done." + '\n')
         logging.info(u"Leyendo estructura de capítulos...")
         LeeBC3DatosObra(co.GetDatosObra())
         subcapitulos.LeeBC3Caps(co); #Lee capitulos y precios elementales.
-        logging.info("hecho." + '\n')
+        logging.info("done." + '\n')
 
-        logging.info("Leyendo precios...")
+        logging.info("Reading prices...")
         precios.LeeBC3Elementales(co.GetDatosElementos()); #Lee los precios elementales fuera de capítulo.
 
         #LeeBC3DescFase1(co); #Lee descompuestos de capitulos.
         precios.LeeBC3DescompFase1(co.GetDatosUnidades())
 
-        logging.info("hecho." + '\n')
+        logging.info("done." + '\n')
         logging.info("Leyendo descomposiciones...")
 
         #pendientes= LeeBC3DescFase2(co); #Lee descomposiciones.
         pendientes= precios.LeeBC3DescompFase2(co.GetDatosUnidades())
 
-        logging.info("hecho." + '\n')
+        logging.info("done." + '\n')
         logging.info("Leyendo precios globales...")
         precios.LeeBC3DescompFase1(co.GetDatosUnidades())
         tmp= precios.LeeBC3DescompFase2(co.GetDatosUnidades())
         logging.info("num. precios= " + precios.NumDescompuestos() + '\n')
         pendientes.insert(tmp.begin(),tmp.end())
-        logging.info("hecho." + '\n')
+        logging.info("done." + '\n')
         if pendientes.size():
             logging.info("   Leyendo descomposiciones (y 2)...")
             #pendientes= LeeBC3DescFase2(co); #Lee descomposiciones.
             pendientes= precios.LeeBC3DescompFase2(co.GetDatosUnidades()); #Lee descomposiciones.
-            logging.info("hecho." + '\n')
+            logging.info("done." + '\n')
             logging.info("   Leyendo precios globales (y 2)...")
             precios.LeeBC3DescompFase1(co.GetDatosUnidades())
             tmp= precios.LeeBC3DescompFase2(co.GetDatosUnidades())
             pendientes.insert(tmp.begin(),tmp.end())
-            logging.info("hecho." + '\n')
+            logging.info("done." + '\n')
 
         logging.info("Reading quantities...")
 
         readQuantitiesFromBC3(co)
-        logging.info("hecho." + '\n')
+        logging.info("done." + '\n')
 
     def ImprLtxPresEjecMat(self, doc):
         #doc.append(u"\\subportadilla{Presupuestos Generales}{Presupuesto de ejecución material}" + '\n')
@@ -390,14 +397,16 @@ class Obra(cp.Chapter):
         im= getQuantitiesReport()
         im.printLtx(os)
 
-    def WriteHCalc(self, os):
-    #Imprime la obra en LaTex.
+    def WriteHCalc(self, outputFile):
+        ''' Write data using spreadsheet format
+ 
+        '''
         doc.create(basic_types.quantitesCaption + '\n')
-        super(Obra,self).WriteHCalcMed(os,'root')
+        super(Obra,self).WriteHCalcMed(outputFile,'root')
         doc.create("Cuadros de precios" + '\n')
-        precidoc.createHCalc(os)
+        precidoc.createHCalc(outputFile)
         doc.create("Presupuestos parciales" + '\n')
-        super(Obra,self).WriteHCalcPre(os,'root')
+        super(Obra,self).WriteHCalcPre(outputFile,'root')
 
     def SimulaDescomp(self, origen, destino):
         precios.SimulaDescomp(origen,destino)

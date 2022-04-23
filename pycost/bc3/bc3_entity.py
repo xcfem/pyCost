@@ -9,14 +9,15 @@ from decimal import Decimal
 class EntBC3(epc.EntPyCost):
     static_txtud= ''
     static_texto_largo= ''
+    
     def __init__(self, cod, tit):
-      super(EntBC3,self).__init__()
-      self.codigo= cod
-      self.title= tit
-      # if(type(tit) == str):
-      #   self.title= tit.decode(encoding='utf-8')
-      # else:
-      #   self.title= tit
+        super(EntBC3,self).__init__()
+        self.codigo= cod
+        self.title= tit
+        # if(type(tit) == str):
+        #   self.title= tit.decode(encoding='utf-8')
+        # else:
+        #   self.title= tit
 
     def LeeBC3(self, r):
         if verborrea>4:

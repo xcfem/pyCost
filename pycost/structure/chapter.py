@@ -19,24 +19,36 @@ class Chapter(bc3_entity.EntBC3):
     formatString= '{0:.'+str(precision)+'f}'
     
     def __init__(self, cod= "CapSinCod", tit= "CapSinTit", factor= 1.0, productionRate= 1.0):
-      super(Chapter,self).__init__(cod,tit)
-      self.fr= fr_entity.EntFR(factor,productionRate)
-      self.subcapitulos= chapter_container.Subcapitulos(self)
-      self.quantities= measurement_container.ChapterQuantities()
-      self.precios= price_table.CuaPre() #Para precios elementales y
-                             #descompuestos clasificados por capítulos.
+        ''' Constructor.
+
+        :param cod: chaper codename.
+        :param tit: chapter title.
+        :param factor:
+        :param productionRate: production rate.
+        '''
+        super(Chapter,self).__init__(cod,tit)
+        self.fr= fr_entity.EntFR(factor,productionRate)
+        self.subcapitulos= chapter_container.Subcapitulos(self)
+        self.quantities= measurement_container.ChapterQuantities()
+        self.precios= price_table.CuaPre() #Para precios elementales y
+                               #descompuestos clasificados por capítulos.
     def TieneElementales(self):
         return self.precios.TieneElementales()
+    
     def NumDescompuestos(self):
         return self.precios.NumDescompuestos()+self.subcapitulos.NumDescompuestos()
     def TieneDescompuestos(self):
         return self.NumDescompuestos()> 0
+    
     def GetBuscadorDescompuestos(self):
         return self.precios.GetBuscadorDescompuestos()
+    
     def getSubcapitulos(self):
         return self.subcapitulos
+    
     def getQuantities(self):
         return self.quantities
+    
     def hasQuantities(self):
         retval= False
         if(self.quantities):
@@ -47,6 +59,7 @@ class Chapter(bc3_entity.EntBC3):
                     retval= True
                     break
         return retval
+    
     def WriteQuantitiesBC3(self,os, pos=""):
         self.quantities.Write(os,self.CodigoBC3(),pos)
     def WriteSubChaptersBC3(self,os, pos=""):
