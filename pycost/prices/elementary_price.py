@@ -28,8 +28,8 @@ class ElementaryPrice(m.Measurable):
     def getPrice(self):
         return self.precio
 
-    def LeeBC3(self, r):
-        Measurable.LeeBC3(r)
+    def readBC3(self, r):
+        Measurable.readBC3(r)
         precio= r.Datos().getPrice()
         tipo= sint2TipoConcepto(r.Datos().getType())
 

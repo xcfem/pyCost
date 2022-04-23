@@ -10,8 +10,8 @@ from pycost.bc3 import codes
 class Measurable(eBC3.EntBC3):
     '''Thing that you can measure (en m,kg.py,m2,m3,...)'''
 
-    def LeeBC3(self, r):
-        super(Measurable,self).LeeBC3(r)
+    def readBC3(self, r):
+        super(Measurable,self).readBC3(r)
         self.unidad= r.Datos().Unidad()
         self.long_description= protege_signos(r.Datos().Texto())
 

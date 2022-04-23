@@ -1,6 +1,7 @@
 #EntBC3.py
 #Precio elemental.
 
+import logging
 from pycost.bc3 import codes
 from pycost.utils import EntPyCost as epc
 from pycost.utils import basic_types
@@ -19,8 +20,8 @@ class EntBC3(epc.EntPyCost):
         # else:
         #   self.title= tit
 
-    def LeeBC3(self, r):
-        if verborrea>4:
+    def readBC3(self, r):
+        if self.verbosityLevel>4:
             logging.info("Cargando concepto: '" + r.Codigo() + "'\n")
         self.codigo= r.Codigo()
         self.title= protege_signos(r.Datos().getTitle())

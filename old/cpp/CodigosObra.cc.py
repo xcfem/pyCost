@@ -75,7 +75,7 @@ def BuscaConcepto(self, &cod):
 
 
 #@ brief Separa los registros según sean capítulos, mediciones, descompuestos, etc.
-def Trocea(self, &verborrea):
+def Trocea(self):
     obra = resto.GetObra(); #Obtiene los registros que corresponden a la obra.
     caps.InsertaCods(obra)
     #resto.Borra(obra)
@@ -87,7 +87,7 @@ def Trocea(self, &verborrea):
     resto.Borra(udsobr)
     if resto.size()>0:
         std.cerr << "Quedaron " << resto.size() << " conceptos sin importar" << std.endl
-        if verborrea>4:
+        if self.verbosityLevel>4:
             std.cerr << resto << std.endl
 
 
@@ -100,26 +100,26 @@ def GetDatosCapitulo(self, &i):
 
 
 #not  @brief Carga las líneas de BC3 "resto" y después llama a la rutina "Trocea"
-def LeeBC3(self, &is, &verborrea):
+def LeeBC3(self, is):
     reg = ""
     count = 0
     while(not is.eof())
         getline(is,reg,'~')
         count++
-        if verborrea>6:
+        if self.verbosityLevel>6:
             std.clog << "Leyendo registro: " << count << std.endl
         reg= elimina_car(reg,char(13))
         reg= elimina_car(reg,'\n')
         if reg.length()>2:
              tipo = reg[0]
             if(tipo == 'M') #Las mediciones las insertamos directamente.
-                mediciones.InsertaReg(reg,verborrea,count)
+                mediciones.InsertaReg(reg,self.verbosityLevel,count)
             else:
-                resto.InsertaReg(reg,verborrea,count)
+                resto.InsertaReg(reg,self.verbosityLevel,count)
 
 
     std.clog << "  leídas " << mediciones.size() << " mediciones." << std.endl
-    Trocea(verborrea)
+    Trocea(self.verbosityLevel)
 
 
 #not  @brief Devuelve los registros de la descomposicion que corresponden a

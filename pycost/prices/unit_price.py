@@ -33,7 +33,7 @@ class UnitPrice(ms.Measurable):
 
     def LeeBC3Fase1(self,r):
         '''Lee la unidad a falta de la descomposición.'''
-        super(UnitPrice,self).LeeBC3(r)
+        super(UnitPrice,self).readBC3(r)
 
     def LeeBC3Fase2(self, r, bp):
         error= False
@@ -70,7 +70,7 @@ class UnitPrice(ms.Measurable):
             if not ent:
                 ent= bd.Busca((i).codigo)
             if not ent:
-                if(verborrea>6): #Puede no ser un error.
+                if(self.verbosityLevel>6): #Puede no ser un error.
                     lmsg.error("UnitPrice.ObtienePunteros; No se encontró la componente: " + (i).codigo + '\n')
                 error= True
                 continue

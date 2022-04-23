@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 #Subcapitulos.py
 
+import logging
 from decimal import Decimal
 import pylatex
 from pycost.prices import price_table
@@ -96,18 +97,18 @@ class Subcapitulos(list, epc.EntPyCost):
             if j:
                 reg= sc.getChapterData(j)
                 if i:
-                    if verborrea>4:
+                    if self.verbosityLevel>4:
                         logging.info(u"Cargando el subcapítulo: '" + reg.Datos().getTitle() + "'\n")
                     i.titulo= reg.Datos().getTitle(); #Título
 
                     #Lee los elementales del capítulo.
                     elementos_capitulo= co.FiltraElementales(reg.Datos().desc)
                     i.LeeBC3Elementales(elementos_capitulo)
-                    if verborrea>4:
+                    if self.verbosityLevel>4:
                         logging.info("  Cargados " + elementos_capitulo.size()
                                   + u" precios elementales del capítulo." + '\n')
                     co.BorraElementales(elementos_capitulo); #Borra los ya leídos.
-                    if verborrea>4:
+                    if self.verbosityLevel>4:
                         logging.info("  Quedan " + co.GetDatosElementos().size() + " precios elementales." + '\n')
 
                     #Lee los subcapítulos.

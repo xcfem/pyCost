@@ -1,23 +1,22 @@
 # -*- coding: utf-8 -*-
 #ElementaryPrices.py
 
-
-
-
+import logging
 from pycost.prices import elementary_price
 from pycost.utils import concept_dict
 from pycost.utils import basic_types
 from pycost.prices import component_list
 from pycost.bc3 import codes
 
-#not  @brief Tabla de precios elementales.
 class ElementaryPrices(concept_dict.ConceptDict):
-
+    ''' Container for elementary prices.'''
+    
+    def __init__(self):
+        super(ElementaryPrices,self).__init__()
+        
     def WriteHCalc(os):
         lmsg.error("ElementaryPrices.WriteHCalc no implementada." + '\n')
 
-    def __init__(self):
-        super(ElementaryPrices,self).__init__()
         
     @staticmethod
     def printLatexHeader(self, tipo, os):
@@ -162,14 +161,14 @@ class ElementaryPrices(concept_dict.ConceptDict):
         getline(iS,Str,'\n')
         if(Str.find("[MAT]")<len(Str)): LeeMatSpre(iS)
 
-    def LeeBC3(self, els):
+    def readBC3(self, els):
         if not els.empty():
-            if verborrea>2:
+            if self.verbosityLevel>2:
                 logging.info("Cargando precios elementales." + '\n')
             sz_inicial= len(self)
             el= elementary_price.ElementaryPrice()
             for i in self:
-                el.LeeBC3(els.GetDatosElementaryPrice(i))
+                el.readBC3(els.GetDatosElementaryPrice(i))
                 Append(el)
 
             num_agregados= len(self)-sz_inicial
@@ -177,7 +176,7 @@ class ElementaryPrices(concept_dict.ConceptDict):
                 lmsg.error("¡Errornot , pasaron: " + els.size()
                           + " precios elementales y se cargaron "
                           + num_agregados+ '\n')
-            if verborrea>2:
+            if self.verbosityLevel>2:
                 logging.info("Cargados " + els.size() + " precios elementales. " + '\n')
 
 

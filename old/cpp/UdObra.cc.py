@@ -25,7 +25,7 @@ def ObtienePunteros(self, &descBC3, &bp, &error):
         if not ent:
             ent= static_cast< EntBC3 *>(bd.Busca((*i).codigo))
         if not ent:
-            if(verborrea>6) #Puede no ser un error.
+            if(self.verbosityLevel>6) #Puede no ser un error.
                 std.cerr << "UdObra.ObtienePunteros; No se encontró la componente: " << (*i).codigo << std.endl
             error= True
             continue

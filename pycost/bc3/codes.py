@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 #Codigos.py
 
-
+import logging
 from pycost.bc3 import bc3_record
 
 class reg_T(object):
@@ -128,8 +128,7 @@ class Codigos(dict):
 
         return retval
 
-
-    def InsertaReg(self, str_reg, verborrea, quantities_counter):
+    def InsertaReg(self, str_reg, quantities_counter):
         strtk= StrTok(str_reg)
         tipo= (strtk.get_token('|'))[0]
         cod= strtk.get_token('|')
@@ -137,7 +136,7 @@ class Codigos(dict):
 
         if(tipo=='V' or tipo=='K' or tipo=='L' or
                 tipo=='A' or tipo=='G' or tipo=='E'):
-            if verborrea > 0:
+            if self.verbosityLevel > 0:
                 logging.info("Se ignora el registro de tipo " + tipo + ".\n")
             return
 
@@ -161,7 +160,7 @@ class Codigos(dict):
             (i).second.c= pc8TOlatin1(resto)
         elif(tipo=='D'):
             if len(resto)<2:
-                if(verborrea>4): #No tiene porqué ser un error.
+                if(self.verbosityLevel>4): #No tiene porqué ser un error.
                     lmsg.error(u"Descomposición vacía en concepto: \'" + cod
                               + "\' se ignora la descomposición." + '\n')
 

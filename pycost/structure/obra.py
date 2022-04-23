@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 #Obra.py
 
+import logging
 import pylatex
 from pycost.structure import chapter as cp
 from pycost.utils import percentages as pc
@@ -88,21 +89,21 @@ class Obra(cp.Chapter):
             of the form 1\2\1\4.'''
         BuscaSubcapitulo(cap_padre).AppendUnitPriceQuantities(m)
 
-    def LeeMedicSpre(self, iS):
+    def LeeMedicSpre(self, inputFile):
         cdg= ""
-        while(not iS.eof()):
-            if iS.peek()==26:
+        while(not inputFile.eof()):
+            if self.peek(inputFile,1)==26:
                 resto= ''
-                getline(iS,resto,'\n')
+                getline(inputFile,resto,'\n')
                 continue
 
             lista= ''
-            getline(iS,lista,'|')
+            getline(inputFile,lista,'|')
             if(lista==""): break
             if(lista!=cdg): #capitulo nuevo
                 cod= replace(lista,'/','_')
                 tit= ''
-                getline(iS,tit,'\n')
+                getline(inputFile,tit,'\n')
                 tit= q_blancos(tit.substr(0,len(tit)-1))
                 lmsg.error(u"Cargando capítulo: " + cod + ' ' + tit + '*' + '\n')
                 cp= Chapter(cod,tit)
@@ -119,7 +120,7 @@ class Obra(cp.Chapter):
             else: #Medicion
                 cod= replace(lista,'/','\\')
                 contenido= ''
-                getline(iS,contenido,'\n')
+                getline(inputFile,contenido,'\n')
                 pos= contenido.find('|')
                 cod_ud_obra= contenido.substr(0,pos)
                 contenido= contenido.substr(pos+1,len(contenido))
@@ -162,12 +163,12 @@ class Obra(cp.Chapter):
 
                 AppendUnitPriceQuantities(cod,muo)
 
-    def LeeSpre(self, iS):
+    def LeeSpre(self, inputFile):
         str= ''
-        precios.LeeSpre(iS)
-        getline(iS,Str,'\n')
+        precios.LeeSpre(inputFile)
+        getline(inputFile,Str,'\n')
         if Str.find("[MED]")<len(Str):
-            LeeMedicSpre(iS)
+            LeeMedicSpre(inputFile)
 
 
     def findChapterMedicion(self,ruta):
@@ -205,7 +206,7 @@ class Obra(cp.Chapter):
 
             else:
                 m= UnitPriceQuantities(ud)
-                m.LeeBC3(reg.Datos())
+                m.readBC3(reg.Datos())
                 r=reg.Datos().Ruta()
                 c= findChapterMedicion(r)
                 if not c:
@@ -216,14 +217,14 @@ class Obra(cp.Chapter):
                     lmsg.error(u"No se encontró el capítulo: " + reg.getChapterCode() + '\n')
 
 
-    def LeeBC3(self, inputFile):
+    def readBC3(self, inputFile):
         ''' Read data from FIEBDC 3 file.
 
         :param inputFile: input file to read from.
         '''
-        co= CodigosObra()
+        co= cod.CodigosObra()
         logging.info("Reading FIEBDC 3 records...")
-        co.LeeBC3(inputFile,verborrea); #Reads BC3 records.
+        co.readBC3(inputFile) #Reads BC3 records.
         logging.info("done." + '\n')
         logging.info(u"Leyendo estructura de capítulos...")
         LeeBC3DatosObra(co.GetDatosObra())

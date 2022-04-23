@@ -65,10 +65,9 @@ public:
     virtual ~EntBC3(void) {
 
 
-template<class T>
-def LeeBC3(self, &r):
-    if verborrea>4:
-        std.clog << "Cargando concepto: '" << r.Codigo() << "'\n"
+def LeeBC3(self, r):
+    if self.verbosityLevel>4:
+        std.clog << "Loading concept: '" << r.Codigo() << "'\n"
     codigo= r.Codigo()
     titulo= protege_signos(r.Datos().Titulo())
 

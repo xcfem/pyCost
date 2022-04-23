@@ -1,18 +1,21 @@
 # -*- coding: utf-8 -*-
 #CodigosObra.py
 
+import logging
 from pycost.bc3 import codes
+from pycost.utils import EntPyCost as epc
 
-class CodigosObra(object):
+class CodigosObra(epc.EntPyCost):
     def __init__(self):
-        self.caps= Codigos() #capitulos.
-        self.elementos= Codigos()
-        self.quantities= Codigos()
-        self.udsobr= Codigos()
-        self.resto= Codigos()
+        ''' Constructor.'''
+        super(CodigosObra, self).__init__()
+        self.caps= codes.Codigos() #capitulos.
+        self.elementos= codes.Codigos()
+        self.quantities= codes.Codigos()
+        self.udsobr= codes.Codigos()
+        self.resto= codes.Codigos()
         self.containers= [self.caps,self.elementos,self.quantities,self.udsobr,self.resto]
         self.codigos_capitulos= set()
-
 
     def GetDatosElementos(self):
         return elementos
@@ -74,22 +77,23 @@ class CodigosObra(object):
                 break
         return retval
 
-
-    #@ brief Separa los registros según sean capítulos, quantities, descompuestos, etc.
-    def Trocea(self, verborrea):
-        obra= resto.GetObra(); #Obtiene los registros que corresponden a la obra.
+    def Trocea(self):
+        '''Separa los registros según sean capítulos, quantities, 
+           descompuestos, etc.
+        '''
+        obra= self.resto.GetObra(); #Obtiene los registros que corresponden a la obra.
         caps.InsertaCods(obra)
         #resto.Borra(obra)
-        caps+= resto.GetChapters()
+        caps+= self.resto.GetChapters()
         resto.Borra(caps)
-        elementos= resto.GetElementos()
+        elementos= self.resto.GetElementos()
         resto.Borra(elementos)
-        udsobr= resto.GetDescompuestos()
-        resto.Borra(udsobr)
-        if resto.size()>0:
-            lmsg.error("Quedaron " + resto.size() + " conceptos sin importar" + '\n')
-            if verborrea>4:
-                lmsg.error(resto + '\n')
+        udsobr= self.resto.GetDescompuestos()
+        self.resto.Borra(udsobr)
+        if self.resto.size()>0:
+            lmsg.error("Quedaron " + self.resto.size() + " conceptos sin importar" + '\n')
+            if self.verbosityLevel>4:
+                lmsg.error(self.resto + '\n')
 
 
         codigos_capitulos= caps.GetCodigos()
@@ -100,27 +104,34 @@ class CodigosObra(object):
         return caps.getChapterData(i)
 
 
-    #not  @brief Carga las líneas de BC3 "resto" y después llama a la rutina "Trocea"
-    def LeeBC3(self, inputS, verborrea):
+    def readBC3(self, inputFile):
+        ''' Read the remaining lines from BC3 and then calls the "Trocea"
+            routine.
+
+        :param inputFile: file to read from.
+        '''
         reg= ""
         count= 0
-        while(inputS):
-            getline(inputS,reg,'~')
+        while(inputFile):
+            reg= inputFile.readline()
+            if(reg[0]=='~'):
+                reg= reg[1:]
+            print(reg)
             count+= 1
-            if verborrea>6:
+            if self.verbosityLevel>6:
                 logging.info("Leyendo registro: " + count + '\n')
-            reg= elimina_car(reg,char(13))
-            reg= elimina_car(reg,'\n')
+            reg= reg.replace(chr(13),'')
+            reg= reg.replace('\n','')
             if len(reg)>2:
                 tipo= reg[0]
                 if(tipo == 'M'): # Quantities are directly inserted.
-                    quantities.InsertaReg(reg,verborrea,count)
+                    quantities.InsertaReg(reg, count)
                 else:
-                    resto.InsertaReg(reg,verborrea,count)
+                    self.resto.InsertaReg(reg, count)
 
 
         logging.info("  " + self.quantities.size() + " quantities read." + '\n')
-        Trocea(verborrea)
+        Trocea()
 
 
     #not  @brief Devuelve los registros de la descomposicion que corresponden a

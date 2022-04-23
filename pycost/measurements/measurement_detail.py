@@ -51,10 +51,10 @@ class Quantities(list, epy.EntPyCost):
         return t
 
     #| @brief Read quantities list.
-    def LeeBC3(self, m):
+    def readBC3(self, m):
         rm= MeasurementRecord()
         for i in m:
-            rm.LeeBC3(i)
+            rm.readBC3(i)
             append(rm)
 
     def WriteBC3(self, os):

@@ -20,10 +20,10 @@ class UnitPriceQuantities(ptp.UnitPriceQuantitiesBase):
     def getRoundedTotal(self):
         return self.quantities.getRoundedTotal()
 
-    def LeeBC3(self, m):
+    def readBC3(self, m):
         if m.med.lista_med.empty():
             rm= MeasurementRecord("",m.med.med_total)
             quantities.append(rm)
         else:
-            quantities.LeeBC3(m.med.lista_med)
+            quantities.readBC3(m.med.lista_med)
 

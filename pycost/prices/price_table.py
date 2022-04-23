@@ -34,7 +34,7 @@ class CuaPre(epc.EntPyCost):
 
 
     def LeeBC3Elementales(self, elem):
-        self.elementos.LeeBC3(elem)
+        self.elementos.readBC3(elem)
 
     def LeeBC3DescompFase1(self, descomp):
         self.unidades.LeeBC3Fase1(descomp)

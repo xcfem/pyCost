@@ -12,7 +12,7 @@ class CodigosObra
     Codigos udsobr
     Codigos resto
     static std.set<std.string> codigos_capitulos
-    void Trocea( int &verborrea)
+    void Trocea()
 public:
     CodigosObra(void) {
     bool ExisteConcepto( std.string &cod)
@@ -33,7 +33,7 @@ public:
      Codigos &GetDatosMeds(void)
     void BorraElementales( Codigos &els)
     void BorraDescompuestos( Codigos &uds)
-    void LeeBC3(std.istream &is, &verborrea= 0)
+    void LeeBC3(is)
 
     friend std.ostream &operator<<(std.ostream &os, &co)
 

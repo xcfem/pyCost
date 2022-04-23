@@ -48,8 +48,8 @@ public:
 private:
     friend class CodigosObra
 
-    void InsertaReg( std.string &str_reg, &verborrea, &cont_mediciones)
-    void InsertaCods( Codigos &cods)
+    void InsertaReg(str_reg, cont_mediciones)
+    void InsertaCods(cods)
 
     #Clasificación
     inline static bool EsCapituloUObra(mapa.const_iterator &i)

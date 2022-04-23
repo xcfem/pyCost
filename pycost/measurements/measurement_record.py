@@ -124,7 +124,7 @@ class MeasurementRecord(epc.EntPyCost):
             retval= tmp.quantize(self.places, rounding=decimal.ROUND_HALF_UP)
         return retval
 
-    def LeeBC3(self, m):
+    def readBC3(self, m):
         self.comentario= m.med.comentario
         self.unidades= m.med.unidades
         self.largo= m.med.largo

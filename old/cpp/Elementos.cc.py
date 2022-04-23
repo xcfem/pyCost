@@ -170,7 +170,7 @@ def LeeSpre(self, &is):
 
 def LeeBC3(self, &els):
     if not els.empty():
-        if verborrea>2:
+        if self.verbosityLevel>2:
             std.clog << "Cargando precios elementales." << std.endl
          sz_inicial = size()
         Codigos.const_iterator i=els.begin()
@@ -184,7 +184,7 @@ def LeeBC3(self, &els):
             std.cerr << "¡Errornot , pasaron: " << els.size()
                       << " precios elementales y se cargaron "
                       << num_agregados << std.endl
-        if verborrea>2:
+        if self.verbosityLevel>2:
             std.clog << "Cargados " << els.size() << " precios elementales. " << std.endl
 
 

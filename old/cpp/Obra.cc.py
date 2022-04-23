@@ -164,7 +164,7 @@ def LeeBC3Mediciones(self, &co):
 def LeeBC3(self, &is):
     CodigosObra co
     std.clog << "Leyendo registros FIEBDC 3..."
-    co.LeeBC3(is,verborrea); #Carga los registros BC3.
+    co.LeeBC3(is) # Read BC3 records.
     std.clog << "hecho." << std.endl
     std.clog << "Leyendo estructura de capítulos..."
     LeeBC3DatosObra(co.GetDatosObra())

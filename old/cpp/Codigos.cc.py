@@ -64,7 +64,7 @@ def GetSubDescompuestos(self, &ppal, &descompuestos):
     return retval
 
 
-def InsertaReg(self, &str_reg, &verborrea, &cont_mediciones):
+def InsertaReg(self, str_reg, cont_mediciones):
     StrTok strtk(str_reg)
     tipo = (strtk.get_token('|'))[0]
     cod = strtk.get_token('|')
@@ -72,7 +72,7 @@ def InsertaReg(self, &str_reg, &verborrea, &cont_mediciones):
 
     if(tipo=='V' or tipo=='K' or tipo=='L' or
             tipo=='A' or tipo=='G' or tipo=='E')
-        if verborrea > 0:
+        if self.verbosityLevel > 0:
             std.clog << "Se ignora el registro de tipo " << tipo << ".\n"
         return
 
@@ -100,7 +100,7 @@ def InsertaReg(self, &str_reg, &verborrea, &cont_mediciones):
         break
     case 'D':
         if resto.length()<2:
-            if(verborrea>4) #No tiene porqué ser un error.
+            if(self.verbosityLevel>4) #No tiene porqué ser un error.
                 std.cerr << "Descomposición vacía en concepto: \'" << cod
                           << "\' se ignora la descomposición." << std.endl
 

@@ -103,18 +103,18 @@ def LeeBC3Caps(self, &co):
         if j!=sc.end():
             reg = sc.GetDatosCapitulo(j)
             if i!=end():
-                if verborrea>4:
+                if self.verbosityLevel>4:
                     std.clog << "Cargando el subcapítulo: '" << reg.Datos().Titulo() << "'\n"
                 i.Titulo()= reg.Datos().Titulo(); #Título
 
                 #Lee los elementales del capítulo.
                 elementos_capitulo = co.FiltraElementales(reg.Datos().desc)
                 i.LeeBC3Elementales(elementos_capitulo)
-                if verborrea>4:
+                if self.verbosityLevel>4:
                     std.clog << "  Cargados " << elementos_capitulo.size()
                               << " precios elementales del capítulo." << std.endl
                 co.BorraElementales(elementos_capitulo); #Borra los ya leídos.
-                if verborrea>4:
+                if self.verbosityLevel>4:
                     std.clog << "  Quedan " << co.GetDatosElementos().size() << " precios elementales." << std.endl
 
                 #Lee los subcapítulos.
@@ -140,7 +140,7 @@ def LeeBC3Caps(self, &co):
 #             if i!=end():
 ##                 descompuestos = co.FiltraDescompuestos(reg.Datos().desc)
 #                 if descompuestos.size()>0) i.LeeBC3DescompFase1(descompuestos:
-#                 if verborrea>4:
+#                 if self.verbosityLevel>4:
 # 		  std.clog << "  Cargados " << descompuestos.size()
 #                             << " precios descompuestos del capítulo." << std.endl
 #                 i.LeeBC3DescFase1(co); #Carga los descompuestos de sus subcapitulos.
