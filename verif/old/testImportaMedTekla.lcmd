@@ -1,0 +1,20 @@
+\path{"/usr/local/lib/macros_lcmd"}
+\path{"/usr/local/lib/macros_ppl"}
+\archivo_err{"/tmp/pp.err"}
+
+\incluye{"importaMedTekla.pplm"}
+
+\def_prop["refUdObra","string"]{"02.02.12"}
+\def_prop["fNameIn","string"]{"./verif/medAuxArmadura.txt"}
+\def_prop["fNameOut","string"]{"./verif/medAuxArmadura.ppl"}
+
+
+\importaMedTekla(@refUdObra,@fNameIn,@fNameOut){}
+\def_prop["iguales","double"]{@fcmp(@fNameOut,"./verif/medAuxArmadura.ppl.verif")}
+
+\if
+  {
+    \cond{@iguales}
+    \then{\print{"test importMedTekla 01: pasa.\n"}}
+    \else{\print{"test importMedTekla 01: falla.\n"}}
+  }
