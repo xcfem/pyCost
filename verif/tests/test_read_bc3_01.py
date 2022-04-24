@@ -5,7 +5,7 @@ from __future__ import print_function
 
 import math
 from pycost.structure import obra
-obra= obra.Obra(cod="test", tit="Test title")
+site= obra.Obra(cod="test", tit="Test title")
 
 # Read section definition from file.
 import os
@@ -13,11 +13,11 @@ pth= os.path.dirname(__file__)
 # print("pth= ", pth)
 if(not pth):
   pth= "."
-inputFile= open(pth+'/data/test_file.bc3')
+inputFile= open(pth+'/data/test_file.bc3',mode='r')
 
-obra.readBC3(inputFile)
+site.readBC3(inputFile)
 
-price= obra.getPrice()
+price= site.getPrice()
 
 
 # print(price)

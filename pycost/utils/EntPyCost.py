@@ -1,14 +1,11 @@
 # -*- coding: utf-8 -*-
 #EntPyCost.py
 
-
 class EntPyCost(object):
     ''' Root PyCost class.
 
     :ivar owner: object to which this object belongs.
-    :ivar verbosityLevel: verbosity level for logging messages.
     '''
-    verbosityLevel= 0 #verbosity level for logging messages.
     
     def __init__(self, owner= None):
         ''' Constructor.

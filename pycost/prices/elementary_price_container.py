@@ -163,8 +163,7 @@ class ElementaryPrices(concept_dict.ConceptDict):
 
     def readBC3(self, els):
         if not els.empty():
-            if self.verbosityLevel>2:
-                logging.info("Cargando precios elementales." + '\n')
+            logging.info("Reading elementary prices." + '\n')
             sz_inicial= len(self)
             el= elementary_price.ElementaryPrice()
             for i in self:
@@ -176,8 +175,7 @@ class ElementaryPrices(concept_dict.ConceptDict):
                 lmsg.error("¡Errornot , pasaron: " + els.size()
                           + " precios elementales y se cargaron "
                           + num_agregados+ '\n')
-            if self.verbosityLevel>2:
-                logging.info("Cargados " + els.size() + " precios elementales. " + '\n')
+            logging.info("Loaded " + els.size() + " elementary prices. " + '\n')
 
 
     def ImprLtxTipo(self, tipo, os):

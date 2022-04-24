@@ -9,7 +9,7 @@ from pycost.bc3 import codigos_obra as cod
 from pycost.prices import elementary_price
 from pycost.utils import pylatex_utils
 from pycost.utils import basic_types
-
+import tempfile
 
 def print_tree(current_node, indent="", last='updown'):
 
@@ -45,7 +45,37 @@ def print_tree(current_node, indent="", last='updown'):
         next_last = 'down' if down.index(child) is len(down) - 1 else ''
         next_indent = '{0}{1}{2}'.format(indent, ' ' if 'down' in last else '│', " " * len(current_node.Codigo()))
         print_tree(child, indent=next_indent, last=next_last)
-        
+
+def preprocess_file(inputFile):
+    ''' Put each BC3 record in one line.
+
+    :param inputFile: input file.
+    '''
+    separator= '~'
+    def each_chunk(stream):
+        buffer = ''
+        while True:  # until EOF
+            chunk = stream.read(4096)
+            if not chunk:  # EOF?
+                yield buffer
+                break
+            buffer+= chunk
+            while True:  # until no separator is found
+                try:
+                    part, buffer = buffer.split(separator, 1)
+                except ValueError:
+                    break
+                else:
+                    yield part
+    tmpFile= tempfile.NamedTemporaryFile(suffix='.bc3', mode='w', encoding='utf-8', delete=False)
+    for chunk in each_chunk(inputFile):
+        chunk= chunk.replace('\n','') # remove newline characters.
+        if(len(chunk)>0):
+            chunk= separator+chunk+'\n'
+            tmpFile.write(chunk)  # writing chunk by chunk.
+    tmpFile.close()
+    return tmpFile.name
+
 class Obra(cp.Chapter):
     ''' Construction site class.'''
     def __init__(self, cod="ObraSinCod", tit="ObraSinTit"):
@@ -222,9 +252,11 @@ class Obra(cp.Chapter):
 
         :param inputFile: input file to read from.
         '''
+        tmpFileName= preprocess_file(inputFile)
+        tmpFile= open(tmpFileName, 'r')
         co= cod.CodigosObra()
         logging.info("Reading FIEBDC 3 records...")
-        co.readBC3(inputFile) #Reads BC3 records.
+        co.readBC3(tmpFile) #Reads BC3 records.
         logging.info("done." + '\n')
         logging.info(u"Leyendo estructura de capítulos...")
         LeeBC3DatosObra(co.GetDatosObra())

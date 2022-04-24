@@ -21,8 +21,7 @@ class EntBC3(epc.EntPyCost):
         #   self.title= tit
 
     def readBC3(self, r):
-        if self.verbosityLevel>4:
-            logging.info("Cargando concepto: '" + r.Codigo() + "'\n")
+        logging.info("Loading concept: '" + r.Codigo() + "'\n")
         self.codigo= r.Codigo()
         self.title= protege_signos(r.Datos().getTitle())
 

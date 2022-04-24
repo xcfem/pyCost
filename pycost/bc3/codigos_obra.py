@@ -92,8 +92,7 @@ class CodigosObra(epc.EntPyCost):
         self.resto.Borra(udsobr)
         if self.resto.size()>0:
             lmsg.error("Quedaron " + self.resto.size() + " conceptos sin importar" + '\n')
-            if self.verbosityLevel>4:
-                lmsg.error(self.resto + '\n')
+            lmsg.error(self.resto + '\n')
 
 
         codigos_capitulos= caps.GetCodigos()
@@ -114,24 +113,26 @@ class CodigosObra(epc.EntPyCost):
         count= 0
         while(inputFile):
             reg= inputFile.readline()
-            if(reg[0]=='~'):
-                reg= reg[1:]
             print(reg)
-            count+= 1
-            if self.verbosityLevel>6:
-                logging.info("Leyendo registro: " + count + '\n')
-            reg= reg.replace(chr(13),'')
-            reg= reg.replace('\n','')
-            if len(reg)>2:
-                tipo= reg[0]
-                if(tipo == 'M'): # Quantities are directly inserted.
-                    quantities.InsertaReg(reg, count)
-                else:
-                    self.resto.InsertaReg(reg, count)
+            if(len(reg)==0):
+                break;
+            else:
+                if(reg[0]=='~'):
+                    reg= reg[1:]
+                count+= 1
+                logging.info("Reading record: " + str(count) + '\n')
+                reg= reg.replace(chr(13),'')
+                reg= reg.replace('\n','')
+                if len(reg)>2:
+                    tipo= reg[0]
+                    if(tipo == 'M'): # Quantities are directly inserted.
+                        self.quantities.InsertaReg(reg, count)
+                    else:
+                        self.resto.InsertaReg(reg, count)
 
-
-        logging.info("  " + self.quantities.size() + " quantities read." + '\n')
-        Trocea()
+        inputFile.close()
+        logging.info("  " + str(len(self.quantities)) + " quantities read." + '\n')
+        self.Trocea()
 
 
     #not  @brief Devuelve los registros de la descomposicion que corresponden a

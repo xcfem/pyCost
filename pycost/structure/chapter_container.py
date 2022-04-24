@@ -97,19 +97,16 @@ class Subcapitulos(list, epc.EntPyCost):
             if j:
                 reg= sc.getChapterData(j)
                 if i:
-                    if self.verbosityLevel>4:
-                        logging.info(u"Cargando el subcapítulo: '" + reg.Datos().getTitle() + "'\n")
+                    logging.info(u"Loading sub-chapter: '" + reg.Datos().getTitle() + "'\n")
                     i.titulo= reg.Datos().getTitle(); #Título
 
                     #Lee los elementales del capítulo.
                     elementos_capitulo= co.FiltraElementales(reg.Datos().desc)
                     i.LeeBC3Elementales(elementos_capitulo)
-                    if self.verbosityLevel>4:
-                        logging.info("  Cargados " + elementos_capitulo.size()
-                                  + u" precios elementales del capítulo." + '\n')
+                    logging.info("  Loaded " + elementos_capitulo.size()
+                                  + u" elementary prices of the chapter." + '\n')
                     co.BorraElementales(elementos_capitulo); #Borra los ya leídos.
-                    if self.verbosityLevel>4:
-                        logging.info("  Quedan " + co.GetDatosElementos().size() + " precios elementales." + '\n')
+                    logging.info("  They remain " + co.GetDatosElementos().size() + " elementary prices." + '\n')
 
                     #Lee los subcapítulos.
                     i.subcapitulos.newChapters(reg.Datos().filterChapters(nombres_capitulos))

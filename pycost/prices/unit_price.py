@@ -70,8 +70,7 @@ class UnitPrice(ms.Measurable):
             if not ent:
                 ent= bd.Busca((i).codigo)
             if not ent:
-                if(self.verbosityLevel>6): #Puede no ser un error.
-                    lmsg.error("UnitPrice.ObtienePunteros; No se encontró la componente: " + (i).codigo + '\n')
+                lmsg.warning("UnitPrice.ObtienePunteros; No se encontró la componente: " + (i).codigo + '\n')
                 error= True
                 continue
 

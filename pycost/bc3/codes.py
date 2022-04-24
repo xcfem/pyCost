@@ -128,58 +128,70 @@ class Codigos(dict):
 
         return retval
 
+    def find(self, cod):
+        ''' Find the BC3 record corresponding to the argument key.
+
+        :param cod: key.
+        '''
+        retval= None
+        if(cod in self):
+            retval= self[cod]
+        else:
+            codSharp= cod+'#'
+            if(codSharp in self):
+                retval= self[codSharp]
+            else:
+                codSharp2= codSharp+'#'
+                if(codSharp2 in self):
+                    retval= self[codSharp2]
+        return retval
+            
     def InsertaReg(self, str_reg, quantities_counter):
-        strtk= StrTok(str_reg)
-        tipo= (strtk.get_token('|'))[0]
-        cod= strtk.get_token('|')
-        cod= q_car_d(cod,'\\'); #Quitamos la barra si está al final.
+        tokens= str_reg.split('|')
+        print('tokens: ', tokens)
+        tipo= tokens.pop(0)
+        cod= tokens.pop(0)
+        cod= cod.strip('\\'); # Remove leading backslash.
+        print(tipo, cod)
 
         if(tipo=='V' or tipo=='K' or tipo=='L' or
                 tipo=='A' or tipo=='G' or tipo=='E'):
-            if self.verbosityLevel > 0:
-                logging.info("Se ignora el registro de tipo " + tipo + ".\n")
+            logging.info("Ignoring '"+tipo+"' record.")
             return
 
-        if(len(cod)<1): return
-        resto= strtk.resto()
-        i= find(cod)
-        if(not i):
-            i= find(cod+'#')
-            if(not i): #El registro no es de capítulo.
-                i= find(cod+"##")
-                if(not i): #El registro tampoco es de obra luego es nuevo.
-                    if(tipo == 'M'): #El registro corresponde a una medición.
-                        if(has_char(cod,'\\')): #A veces el registro ~M es de la forma: ~M|13.3.1#\01.009|1....
-                            cod= copia_desde(cod,'\\') #aquí le quitamod la parte 13.3.1#\ al código.
-                        cod= str(quantities_counter) + '@' + cod
+        if(len(cod)>0 and len(tokens)> 0):
+            bc3Record= self.find(cod)
+            if(bc3Record is None): # Code not found => new record.
+                if(tipo == 'M'): #El registro corresponde a una medición.
+                    if('\\' in cod): #Sometimes the ~M has the form: ~M|13.3.1#\01.009|1....
+                        cod= cod.partition('\\')[2] # remove part 13.3.1#\ of the code.
+                    cod= str(quantities_counter) + '@' + cod
 
-                    (self)[cod]= RegBC3(); #Lo damos de alta.
-                    i= find(cod)
+                bc3Record= bc3_record.RegBC3() # Constructor.
+                (self)[cod]= bc3Record # Update dictionary.
 
-        if(tipo=='C'):
-            (i).second.c= pc8TOlatin1(resto)
-        elif(tipo=='D'):
-            if len(resto)<2:
-                if(self.verbosityLevel>4): #No tiene porqué ser un error.
-                    lmsg.error(u"Descomposición vacía en concepto: \'" + cod
-                              + "\' se ignora la descomposición." + '\n')
-
+            if(tipo=='C'):
+                bc3Record.c= tokens.pop(0)
+            elif(tipo=='D'):
+                if len(tokens)<2:
+                    lmsg.log(u"No components for concept: \'" + cod
+                              + "\' decomposition ignored." + '\n')
+                else:
+                    bc3Record.d= tokens
+            elif(tipo=='T'):
+                bc3Record.t= tokens
+            elif(tipo=='M'):
+                bc3Record.m= tokens
+            elif(tipo=='Y'):
+                bc3Record.y= tokens
             else:
-                (i).second.d= resto
-        elif(tipo=='T'):
-            (i).second.t= pc8TOlatin1(resto)
-        elif(tipo=='M'):
-            (i).second.m= pc8TOlatin1(resto)
-        elif(tipo=='Y'):
-            (i).second.y= resto
-        else:
-            lmsg.error("Registro de tipo: " + tipo + " desconocido." + '\n')
+                lmsg.error("Record of type: " + tipo + " unknown." + '\n')
 
     #not  @brief Devuelve el registro que corresponde a la obra.
     def GetObra(self):
         retval= None
         for i in self:
-            if EsObra(i):
+            if self.EsObra(i):
                 retval[(i).first]= (i).second
         if not retval.size():
             lmsg.error("No se encontró el capítulo raíz." + '\n')
