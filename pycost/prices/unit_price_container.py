@@ -2,6 +2,7 @@
 #Descompuestos.py
 
 import pylatex
+import logging
 from pycost.prices import elementary_price_container
 from pycost.prices import unit_price
 from pycost.utils import concept_dict
@@ -14,7 +15,7 @@ class Descompuestos(concept_dict.ConceptDict):
         i= Busca(cod_ud)
         j= el.Busca(cod_el)
         if not j:
-            lmsg.error("Elemento: " + cod_el
+            logging.error("Elemento: " + cod_el
                       + " no encontrado en unidad de obra: " + cod_ud + '\n')
             exit(1)
 

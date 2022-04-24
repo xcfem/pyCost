@@ -88,7 +88,7 @@ class Subcapitulos(list, epc.EntPyCost):
     def LeeBC3Caps(self, co):
         sc= Codigos(co.GetDatosCaps())
         if len(sc)<1:
-            lmsg.error("No se encontraron subcapitulos." + '\n')
+            logging.error("No se encontraron subcapitulos." + '\n')
 
         nombres_capitulos= co.getChapterCodes()
 
@@ -114,7 +114,7 @@ class Subcapitulos(list, epc.EntPyCost):
 
 
             else:
-                lmsg.error(u"LeeBC3Caps; No se encontró el capítulo: " + i.Codigo() + '\n')
+                logging.error(u"LeeBC3Caps; No se encontró el capítulo: " + i.Codigo() + '\n')
                 continue
 
 

@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 #ConceptDict.py
 
-
+import logging
 from pycost.utils import EntPyCost as epy
 
 class KeyMap(dict):
@@ -23,7 +23,7 @@ class ConceptDict(epy.EntPyCost):
 
     @staticmethod
     def err_no_encontrado(cod):
-        lmsg.error("Concepto: " + cod + " no encontrado" + '\n')
+        logging.error("Concepto: " + cod + " no encontrado" + '\n')
 
     def Busca(self,cod):
         retval= None

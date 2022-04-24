@@ -2,7 +2,7 @@
 #fiebdc3.py
 '''Basic FIE BDC-3 utilities.'''
 
-
+import logging
 
 def es_codigo_obra(c):
     '''Returns true if c it's the code of a project.'''
@@ -20,38 +20,42 @@ def es_codigo_capitulo(c):
         if sz<2:
             retval= True; #Chapter without name.
         else:
-            retval= (c[sz-2]!='#'); #Si no es obra, capítulo.
-
+            retval= (c[-2]!='#'); #Si no es obra, capítulo.
     return retval
 
 
 def es_codigo_capitulo_u_obra(c):
     sz= len(c)
     if sz>0:
-        return (c[sz-1]=='#')
+        return (c[-1]=='#')
     else:
         return False
 
 
-def limpia_str(Str):
-    return q_car(q_car(Str,char(10)),char(13))
+def limpia_str(inputStr):
+    retval= ''
+    if(inputStr):
+        retval= inputStr.replace(chr(10),'')
+        retval= retval.replace(chr(13),'')
+    return retval
 
 class regBC3(object):
     def decod_bc3(self, strtk):
-        lmsg.error('decod_bc3 not implemented.')
+        logging.error('decod_bc3 not implemented.')
         return None
     def decod_str_bc3(self, Str):
         if Str:
-            strtk= StrTok(limpia_str(Str))
+            strtk= limpia_str(Str)
             self.decod_bc3(strtk)
     def Write(self, os):
-        lmsg.error('Write not implemented.')
+        logging.error('Write not implemented.')
 
 
-class regBC3_lista_reg(list,regBC3):
+class regBC3_lista_reg(list, regBC3):
     def __init__(self, Str):
         self.decod_str_bc3(limpia_Str(Str))
-    def decod_bc3(strtk):
+        
+    def decod_bc3(self, strtk):
         if not strtk:
             return strtk #Empty.
         else:
@@ -108,12 +112,13 @@ class regBC3_desc(regBC3):
 class regBC3_d(regBC3_lista_reg):
     ''' ~D type BC3 record.'''
     def __init__(self,Str):
-        decod_str_bc3(limpia_str(Str))
-    def decod_bc3(strtk):
-        '''La cadena que se pasa es la que queda a la dere.pya
+        print(Str)
+        self.decod_str_bc3(limpia_str(Str))
+    def decod_bc3(self, strtk):
+        '''La cadena que se pasa es la que queda a la derecha
            #de ~D|'''
-        strtk_lista_desc= strtk.get_token('|')
-        regBC3_lista_reg.decod_bc3(strtk_lista_desc)
+        strtk_lista_desc= strtk.split('|')
+        super(regBC3_d,self).decod_bc3(strtk= strtk_lista_desc)
         return strtk
     def isChapter(r, nombres_capitulo):
         '''Return true if the records is a chapter.'''
@@ -190,7 +195,7 @@ class regBC3_linea_med(regBC3):
         self.tipo= 0
         self.med= MedArq()
         self.decod_str_bc3(limpia_str(Str))
-    def decod_bc3(strtk):
+    def decod_bc3(self, strtk):
         tmp= strtk.get_token('\\')
         if tmp:
             tipo= int(tmp)
@@ -201,7 +206,7 @@ class regBC3_linea_med(regBC3):
 
 
 class regBC3_ruta(list,regBC3):
-    def decod_bc3(strtk):
+    def decod_bc3(self, strtk):
         '''Decodes string.'''
         StrTok.dq_campos.operator=(strtk.campos('\\'))
         return strtk
@@ -229,9 +234,9 @@ class regBC3_m(regBC3):
         ruta= regBC3_ruta()
         med_total= 0.0
         lista_med= regBC3_lista_reg
-        decod_str_bc3(limpia_str(Str))
+        self.decod_str_bc3(limpia_str(Str))
 
-    def decod_bc3(strtk):
+    def decod_bc3(self, strtk):
         '''Decodes string.
            La cadena que se pasa es la que queda a la derecha
            de ~M|
@@ -258,6 +263,7 @@ class regBC3_c(regBC3):
         self.precio= 0.0
         self.tipo= 0
         self.decod_str_bc3(limpia_str(Str))
+        
     def decod_bc3(self,strtk):
         '''Decodifica la cadena Str'''
         self.unidad= strtk.get_token('|')
@@ -279,15 +285,17 @@ class regBC3_c(regBC3):
 
 
 
-#not  @brief Corresponde a un registro ~T de BC3.
 class regBC3_t(regBC3):
+    '''Corresponds to a ~T record of BC3.'''
     def __init__(self,Str):
         self.texto= ''
         self.decod_str_bc3(limpia_str(Str))
-    def decod_bc3(strtk):
+        
+    def decod_bc3(self, strtk):
         '''Decodification.'''
         self.texto= strtk.get_token('|')
-        return strtk                 
+        return strtk
+    
     def Write(self,os):
         os.write("Texto: " + self.texto + '\n')
 

@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 #ComponentList.py
 
+import logging
 from pycost.utils import EntPyCost as epc
 from pycost.prices.price_justification import PriceJustificationList as pjl
 from pycost.prices.price_justification import PriceJustificationRecordContainer as pjrc
@@ -73,7 +74,7 @@ class ComponentList(list, epc.EntPyCost):
             if(((i).getType()!=mat) and not ((i).isPercentage())):
                 i.productionRate*= Lambda
         if Lambda<0.0:
-            lmsg.error("lambda= " + Lambda + " negativo" + '\n')
+            logging.error("lambda= " + Lambda + " negativo" + '\n')
 
         return Lambda
 

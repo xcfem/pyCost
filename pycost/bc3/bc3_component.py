@@ -1,5 +1,6 @@
 #BC3Component.py
 
+import logging
 from pycost.bc3 import fr_entity
 from pycost.bc3 import bc3_entity
 from pycost.prices.price_justification import PriceJustificationRecord as pjr
@@ -61,7 +62,7 @@ class BC3Component(fr_entity.EntFR):
         if self.ent:
             return self.ent
         else:
-            lmsg.error("La componente no se refiere a ninguna entidad" + '\n')
+            logging.error("La componente no se refiere a ninguna entidad" + '\n')
             exit(1)
 
     def getPriceJustificationRecord(self, over):

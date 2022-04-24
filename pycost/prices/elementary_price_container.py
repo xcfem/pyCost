@@ -15,7 +15,7 @@ class ElementaryPrices(concept_dict.ConceptDict):
         super(ElementaryPrices,self).__init__()
         
     def WriteHCalc(os):
-        lmsg.error("ElementaryPrices.WriteHCalc no implementada." + '\n')
+        logging.error("ElementaryPrices.WriteHCalc no implementada." + '\n')
 
         
     @staticmethod
@@ -172,7 +172,7 @@ class ElementaryPrices(concept_dict.ConceptDict):
 
             num_agregados= len(self)-sz_inicial
             if num_agregados != els.size():
-                lmsg.error("¡Errornot , pasaron: " + els.size()
+                logging.error("¡Errornot , pasaron: " + els.size()
                           + " precios elementales y se cargaron "
                           + num_agregados+ '\n')
             logging.info("Loaded " + els.size() + " elementary prices. " + '\n')

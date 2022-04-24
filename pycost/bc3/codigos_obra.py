@@ -26,7 +26,7 @@ class CodigosObra(epc.EntPyCost):
 
 
     def GetDatosObra(self):
-        return caps.GetObra()
+        return self.caps.GetObra()
 
 
     #not  @brief Devuelve los registros correspondientes a los capítulos
@@ -82,25 +82,28 @@ class CodigosObra(epc.EntPyCost):
            descompuestos, etc.
         '''
         obra= self.resto.GetObra(); #Obtiene los registros que corresponden a la obra.
-        caps.InsertaCods(obra)
+        self.caps.InsertaCods(obra)
         #resto.Borra(obra)
-        caps+= self.resto.GetChapters()
-        resto.Borra(caps)
-        elementos= self.resto.GetElementos()
-        resto.Borra(elementos)
-        udsobr= self.resto.GetDescompuestos()
-        self.resto.Borra(udsobr)
-        if self.resto.size()>0:
-            lmsg.error("Quedaron " + self.resto.size() + " conceptos sin importar" + '\n')
-            lmsg.error(self.resto + '\n')
+        self.caps.update(self.resto.GetChapters())
+        self.resto.Borra(self.caps)
+        self.elementos= self.resto.GetElementos()
+        self.resto.Borra(self.elementos)
+        self.udsobr= self.resto.GetDescompuestos()
+        self.resto.Borra(self.udsobr)
+        if(len(self.resto)>0):
+            logging.error("They left " + str(len(self.resto)) + ' not imported concepts.')
+            logging.error(str(self.resto) + '\n')
 
 
-        codigos_capitulos= caps.GetCodigos()
+        codigos_capitulos= self.caps.GetCodigos()
 
 
-    #@ brief Devuelve los datos del capítulo al que apunta el iterador.
-    def getChapterData(self, i):
-        return caps.getChapterData(i)
+    def getChapterData(self, key):
+        ''' Return the data of the chapter with the key argument.
+
+        :param key: chapter codename.
+        '''
+        return self.caps.getChapterData(key)
 
 
     def readBC3(self, inputFile):

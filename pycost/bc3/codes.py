@@ -3,6 +3,7 @@
 
 import logging
 from pycost.bc3 import bc3_record
+from pycost.bc3 import fiebdc3
 
 class reg_T(object):
     def __init__(self,c= '',d= None):
@@ -31,39 +32,38 @@ class reg_T(object):
 class Codigos(dict):
 
     #Clasificación
-    @staticmethod
-    def isChapterOrObra(i):
-        if(EsMedicion(i)): #Quantities have the code of their chapter.
+    def isChapterOrObra(self, i):
+        if(self.EsMedicion(i)): #Quantities have the code of their chapter.
             return False
         else:
-            return es_codigo_capitulo_u_obra((i).first)
+            return fiebdc3.es_codigo_capitulo_u_obra(i)
 
-    @staticmethod
-    def isChapter(i):
-        if isChapterOrObra(i):
-            return not EsObra(i)
+    def isChapter(self, i):
+        if self.isChapterOrObra(i):
+            return not self.EsObra(i)
         else:
             return False
 
     @staticmethod
-    def EsObra(i):
-        return es_codigo_obra((i).first)
+    def EsObra(cod):
+        return fiebdc3.es_codigo_obra(cod)
 
-    @staticmethod
-    def EsElemento(i):
-        return ((i).second.EsElemento())
+    def EsElemento(self, i):
+        return ((self)[i].EsElemento())
 
-    @staticmethod
     def EsMedicion(self, i):
         '''Devuelve verdadero si el registro corresponde a una medición.'''
-        return ((i).second.EsMedicion())
+        return ((self)[i].EsMedicion())
 
-    @staticmethod
-    def EsDescompuesto(i):
-        if(EsMedicion(i)): return False
-        if(EsElemento(i)): return False
-        if(isChapterOrObra(i)): return False
-        return True
+    def EsDescompuesto(self, i):
+        if(self.EsMedicion(i)):
+            return False
+        elif(self.EsElemento(i)):
+            return False
+        elif(self.isChapterOrObra(i)):
+            return False
+        else:
+            return True
 
     def __iadd__(cods):
         InsertaCods(cods)
@@ -71,10 +71,7 @@ class Codigos(dict):
 
 
     def InsertaCods(self, cods):
-        for i in cods:
-            (self)[(i).first]= (i).second
-
-
+        self.update(cods)
 
     #not  @brief Devuelve los subcapítulos del capitulo que se pasa como parámetro.
     def GetSubCaps(self, ppal):
@@ -82,15 +79,15 @@ class Codigos(dict):
         desc= ppal.GetDesc(); #Obtiene la descomposición
         for i in desc:
             cod= (i).codigo
-            if(es_codigo_capitulo(cod)): #Es un capítulo.
+            if(fiebdc3.es_codigo_capitulo(cod)): #Es un capítulo.
                 j= findChapter(cod)
                 if j:
                     retval[(j).first]= (j).second
                 else:
-                    lmsg.error("Codigos.GetSubCaps; No se encontró el subcapítulo: " + cod + '\n')
+                    logging.error("Codigos.GetSubCaps; No se encontró el subcapítulo: " + cod + '\n')
 
             #else: #partidas del capítulo
-            #lmsg.error(u"subcapítulo raro: " + cod + '\n')
+            #logging.error(u"subcapítulo raro: " + cod + '\n')
 
         return retval
 
@@ -106,7 +103,7 @@ class Codigos(dict):
         desc= ppal.GetDesc(); #Obtiene la descomposición
         for i in desc:
             cod= (i).codigo
-            if(not es_codigo_capitulo(cod)): #No es un capítulo.
+            if(not fiebdc3.es_codigo_capitulo(cod)): #No es un capítulo.
                 j= elementos.find(cod)
                 if j!=end():
                     retval[(j).first]= (j).second
@@ -120,7 +117,7 @@ class Codigos(dict):
         desc= ppal.GetDesc(); #Obtiene la descomposición
         for i in desc:
             cod= (i).codigo
-            if(not es_codigo_capitulo(cod)): #No es un capítulo.
+            if(not fiebdc3.es_codigo_capitulo(cod)): #No es un capítulo.
                 j= descompuestos.find(cod)
                 if j!=end():
                     retval[(j).first]= (j).second
@@ -174,7 +171,7 @@ class Codigos(dict):
                 bc3Record.c= tokens.pop(0)
             elif(tipo=='D'):
                 if len(tokens)<2:
-                    lmsg.log(u"No components for concept: \'" + cod
+                    logging.log(u"No components for concept: \'" + cod
                               + "\' decomposition ignored." + '\n')
                 else:
                     bc3Record.d= tokens
@@ -185,16 +182,16 @@ class Codigos(dict):
             elif(tipo=='Y'):
                 bc3Record.y= tokens
             else:
-                lmsg.error("Record of type: " + tipo + " unknown." + '\n')
+                logging.error("Record of type: " + tipo + " unknown." + '\n')
 
-    #not  @brief Devuelve el registro que corresponde a la obra.
     def GetObra(self):
+        ''' Return the record that corresponds to the root chapter.'''
         retval= None
-        for i in self:
-            if self.EsObra(i):
-                retval[(i).first]= (i).second
-        if not retval.size():
-            lmsg.error("No se encontró el capítulo raíz." + '\n')
+        for key in self:
+            if self.EsObra(key):
+                retval= {key: self[key]}
+        if(retval is None):
+            logging.error("Root chapter not found.")
         return retval
 
 
@@ -208,18 +205,18 @@ class Codigos(dict):
 
     #not  @brief Devuelve el tipo de concepto al que corresponde el registro.
     def GetTipoConcepto(self, i):
-        if EsObra(i):
+        if self.EsObra(i):
             return obra
-        elif EsElemento(i):
+        elif self.EsElemento(i):
             return elemento
-        elif EsMedicion(i):
+        elif self.EsMedicion(i):
             return medicion
-        elif EsDescompuesto(i):
+        elif self.EsDescompuesto(i):
             return descompuesto
-        elif isChapter(i):
+        elif self.isChapter(i):
             return capitulo
         else:
-            lmsg.error("No se encontró el tipo del concepto: '" + (i).first + "'\n")
+            logging.error("Type of the concept: '" + str(i) + "' not found.")
             return sin_tipo
 
 
@@ -248,17 +245,17 @@ class Codigos(dict):
     def GetChapters(self):
         retval= None
         for i in self:
-            if isChapter(i):
-                retval[(i).first]= (i).second
-        logging.info("  leídos " + retval.size() + " capítulos." + '\n')
+            if self.isChapter(i):
+                retval= {i:self[i]}
+        logging.info("  read " + str(len(retval)) + ' chapters.')
         return retval
 
 
     #not  @brief Devuelve los códigos de los objetos del contenedor
     def GetCodigos(self):
         retval= set()
-        for i in self:
-            retval.insert((i).first)
+        for key in self:
+            retval.add(key)
         return retval
 
 
@@ -266,9 +263,9 @@ class Codigos(dict):
     def GetElementos(self):
         retval= None
         for i in self:
-            if EsElemento(i):
-                retval[(i).first]= (i).second
-        logging.info("  leídos " + retval.size() + " precios elementales." + '\n')
+            if self.EsElemento(i):
+                retval= {i:self[i]}
+        logging.info("  read " + str(len(retval)) + " elementary prices." + '\n')
         return retval
 
 
@@ -286,19 +283,25 @@ class Codigos(dict):
     def GetDescompuestos(self):
         retval= None
         for i in self:
-            if EsDescompuesto(i):
+            if self.EsDescompuesto(i):
                 retval[(i).first]= (i).second
-        logging.info(" leídos " + retval.size() + " precios descompuestos." + '\n')
+        size= 0
+        if(retval):
+            size= len(retval)
+        logging.info(" read " + str(size) + " precios descompuestos." + '\n')
         return retval
 
 
-    #not  @brief Borra los elementos de self que estan en cods.
     def Borra(self, cods):
-        for i in cods:
-            j= find((i).first)
-            if j: erase(j)
+        '''Removes the elements that are already in the dictionary
+           argument.
 
-
+        :param cods: dictionary with the keys to remove.
+        '''
+        if(cods):
+            keysToRemove= cods.keys()
+            for key in keysToRemove:
+                del self[key]
 
     #not  @brief Extrae las entidades que corresponden a unidades de obra
     def GetUdsObra(self, udsobra):
@@ -311,7 +314,7 @@ class Codigos(dict):
             if j:
                 retval[(j).first]= (j).second
             else:
-                lmsg.error("GetUdsObra: No se encontro la unidad: \'" + codud
+                logging.error("GetUdsObra: No se encontro la unidad: \'" + codud
                           + "\' de la medición: " + scap + '\n')
 
         return retval

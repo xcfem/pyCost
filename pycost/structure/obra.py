@@ -94,12 +94,12 @@ class Obra(cp.Chapter):
 
     def WriteSpre(self):
         precios.WriteSpre()
-        lmsg.error(u"Exportación de capítulos no implementada." + '\n')
+        logging.error(u"Exportación de capítulos no implementada." + '\n')
 
     def findPrice(self, cod):
         retval= super(Obra,self).findPrice(cod)
         if not retval:
-            lmsg.error('unit price: '+ cod + ' not found.')
+            logging.error('unit price: '+ cod + ' not found.')
         return retval
 
     def CodigoBC3(self):
@@ -135,7 +135,7 @@ class Obra(cp.Chapter):
                 tit= ''
                 getline(inputFile,tit,'\n')
                 tit= q_blancos(tit.substr(0,len(tit)-1))
-                lmsg.error(u"Cargando capítulo: " + cod + ' ' + tit + '*' + '\n')
+                logging.error(u"Cargando capítulo: " + cod + ' ' + tit + '*' + '\n')
                 cp= Chapter(cod,tit)
                 ruta= replace(lista,'/','\\')
                 pos= ruta.find('\\')
@@ -156,7 +156,7 @@ class Obra(cp.Chapter):
                 contenido= contenido.substr(pos+1,len(contenido))
                 udo= precios.searchForUnitPrice(cod_ud_obra)
                 if not udo:
-                    lmsg.error("Unidad de obra: " + cod_ud_obra
+                    logging.error("Unidad de obra: " + cod_ud_obra
                               + " no encontrada" + '\n')
                     return
 
@@ -206,10 +206,12 @@ class Obra(cp.Chapter):
         return self.BuscaSubcapitulo(ruta)
 
 
-    def LeeBC3DatosObra(self, obra):
-        if obra.size()<1:
-            lmsg.error(u"No se encontró la obra." + '\n')
-        reg= obra.getChapterData(obra.begin())
+    def LeeBC3DatosObra(self, rootChapterDict):
+        if(len(rootChapterDict)<1):
+            logging.error('Root chapter not found.')
+        key= next(iter(rootChapterDict)) # first key
+        rootChapter= rootChapterDict[key]
+        reg= rootChapter.getChapterData()
         self.codigo= reg.Codigo(); #Código
         self.titulo= reg.Datos().getTitle(); #Título
         subcapitulos.newChapters(reg.Datos().desc)
@@ -217,20 +219,20 @@ class Obra(cp.Chapter):
     def readQuantitiesFromBC3(self, co):
         med= co.getQuantityData()
         if med.size()<1:
-            lmsg.error("Quantities not found." + '\n')
+            logging.error("Quantities not found." + '\n')
         for i in med:
             reg= med.GetDatosMedicion(i)
             # UnitPrice *ud= precios.searchForUnitPrice(reg.CodigoUnidad())
             cod_unidad= copia_desde(reg.CodigoUnidad(),'@')
             ud= self.findPrice(cod_unidad)
             if not ud:
-                lmsg.error(u"Obra.readQuantitiesFromBC3: No se encontró el precio: \'"
+                logging.error(u"Obra.readQuantitiesFromBC3: No se encontró el precio: \'"
                           + cod_unidad + "\'" + '\n')
-                lmsg.error(u"  El concepto de código: \'" + cod_unidad + "\'")
+                logging.error(u"  El concepto de código: \'" + cod_unidad + "\'")
                 if not co.ExisteConcepto(cod_unidad):
-                    lmsg.error(" no existe." + '\n')
+                    logging.error(" no existe." + '\n')
                 else:
-                    lmsg.error(" exists in the table: "
+                    logging.error(" exists in the table: "
                               + co.StrTablaConcepto(cod_unidad) + '\n')
 
 
@@ -244,7 +246,7 @@ class Obra(cp.Chapter):
                 if c:
                     c.AppendUnitPriceQuantities(m)
                 else:
-                    lmsg.error(u"No se encontró el capítulo: " + reg.getChapterCode() + '\n')
+                    logging.error(u"No se encontró el capítulo: " + reg.getChapterCode() + '\n')
 
 
     def readBC3(self, inputFile):
@@ -259,7 +261,7 @@ class Obra(cp.Chapter):
         co.readBC3(tmpFile) #Reads BC3 records.
         logging.info("done." + '\n')
         logging.info(u"Leyendo estructura de capítulos...")
-        LeeBC3DatosObra(co.GetDatosObra())
+        self.LeeBC3DatosObra(co.GetDatosObra())
         subcapitulos.LeeBC3Caps(co); #Lee capitulos y precios elementales.
         logging.info("done." + '\n')
 

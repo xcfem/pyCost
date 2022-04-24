@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 #ElementaryPrice.py
 
+import logging
 from pycost.utils import basic_types
 from pycost.utils import measurable as m
 from decimal import Decimal
@@ -19,7 +20,7 @@ class ElementaryPrice(m.Measurable):
     def check_tipo(self):
         if not Codigo().empty():
             if tipo==sin_clasif and not isPercentage():
-                lmsg.error("El precio elemental de código: " + Codigo()
+                logging.error("El precio elemental de código: " + Codigo()
                           + " no es un porcentaje y su tipo está sin clasificar." + '\n')
 
     def getType(self):

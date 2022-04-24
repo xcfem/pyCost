@@ -2,6 +2,7 @@
 #UnitPrice.py
 
 import pylatex
+import logging
 from pycost.utils import measurable as ms
 from pycost.prices import elementary_price_container
 from pycost.prices import component_list
@@ -42,7 +43,7 @@ class UnitPrice(ms.Measurable):
             if not error:
                 components= tmp
             else:
-                lmsg.error("Error al leer descomposición de la unidad: " + self.Codigo() + '\n')
+                logging.error("Error al leer descomposición de la unidad: " + self.Codigo() + '\n')
 
         else:
             components= GetSindesco(r.Datos().getPrice(),bp)
@@ -70,7 +71,7 @@ class UnitPrice(ms.Measurable):
             if not ent:
                 ent= bd.Busca((i).codigo)
             if not ent:
-                lmsg.warning("UnitPrice.ObtienePunteros; No se encontró la componente: " + (i).codigo + '\n')
+                logging.warning("UnitPrice.ObtienePunteros; No se encontró la componente: " + (i).codigo + '\n')
                 error= True
                 continue
 

@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 #Chapter.py
 
+import logging
 import pylatex
 from decimal import Decimal
 from pycost.measurements import measurement_container
@@ -85,7 +86,7 @@ class Chapter(bc3_entity.EntBC3):
         if ruta:
             retval= self.subcapitulos.Busca(ruta)
             if not retval:
-                lmsg.error(u"Chapter.BuscaSubcapitulo: no se encontró el subcapítulo: " + ruta[1]
+                logging.error(u"Chapter.BuscaSubcapitulo: no se encontró el subcapítulo: " + ruta[1]
                           + u" en el capítulo: " + self.Codigo() + " (" + self.getTitle()
                           + ") (ruta: " + ruta + ')' + '\n')
                 #Si no encuentra el capítulo devuelve este mismo
@@ -99,7 +100,7 @@ class Chapter(bc3_entity.EntBC3):
         if(pos>len(lst)): #Not on tht bar so it must be a subchapter of this one.
             indice= atoi(lst.c_str())
             if indice>subcapitulos.size():
-                lmsg.error(u"Capítulo: " + indice + " no encontrado." + '\n')
+                logging.error(u"Capítulo: " + indice + " no encontrado." + '\n')
                 return None
 
             retval= self.subcapitulos[indice-1]
@@ -109,12 +110,12 @@ class Chapter(bc3_entity.EntBC3):
             ind= lst.substr(0,pos)
             indice= atoi(ind.c_str())
             if indice>subcapitulos.size():
-                lmsg.error(u"Capítulo: " + indice + " no encontrado." + '\n')
+                logging.error(u"Capítulo: " + indice + " no encontrado." + '\n')
                 return None
 
             return self.subcapitulos[indice-1].BuscaSubcapitulo(lst.substr(pos+1,lst.size()-1))
 
-        lmsg.error("sale por aqui (y no debiera) en el capitulo: " + self.Codigo() + '\n')
+        logging.error("sale por aqui (y no debiera) en el capitulo: " + self.Codigo() + '\n')
         return retval
     def BuscaCodigo(self, nmb):
         if (self.Codigo()==nmb) or ((self.Codigo()+'#')==nmb):
@@ -152,8 +153,8 @@ class Chapter(bc3_entity.EntBC3):
         if sect!='root':
             doc.append('\\' + sect + '{' + self.getTitle() + '}' + '\n')
         self.quantities.ImprCompLtxMed(os, otro.quantities)
-        lmsg.error("aqui 1: " + self.getTitle() + ' ' + self.subcapitulos.size() + u" subcapítulos" + '\n')
-        lmsg.error("aqui 2: " + otro.getTitle() + ' ' + otro.subcapitulos.size() + u" subcapítulos" + '\n')
+        logging.error("aqui 1: " + self.getTitle() + ' ' + self.subcapitulos.size() + u" subcapítulos" + '\n')
+        logging.error("aqui 2: " + otro.getTitle() + ' ' + otro.subcapitulos.size() + u" subcapítulos" + '\n')
         self.subcapitulos.ImprCompLtxMed(os,pylatex_utils.getLatexSection(sect), otro.subcapitulos)
     def writeQuantitiesIntoLatexDocument(self, doc, parentSection):
         if(self.hasQuantities()):
