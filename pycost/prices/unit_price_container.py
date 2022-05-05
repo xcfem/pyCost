@@ -21,14 +21,9 @@ class Descompuestos(concept_dict.ConceptDict):
 
         i.Append(j,f,r)
 
-
-    def GetBuscador(self):
-        return BuscadorDescompuestos(self)
-
-
     def LeeBC3Fase1(self, cds):
         '''Lee las unidades de obra a falta de la descomposición.'''
-        ud= UnitPrice()
+        ud= unit_price.UnitPrice()
         for i in cds:
             reg= cds.getUnitPriceData(i)
             ud.LeeBC3Fase1(reg)
@@ -39,13 +34,13 @@ class Descompuestos(concept_dict.ConceptDict):
         '''Lee la descomposición de las unidades.'''
         ud=None
         error= False
-        retval= set_pendientes
+        retval= set()
         for i in cds:
             reg= cds.getUnitPriceData(i)
             ud= Busca(reg.Codigo())
             error= ud.LeeBC3Fase2(reg,bp)
             if error:
-                retval.insert(reg.Codigo())
+                retval.add(reg.Codigo())
         return retval
 
     def WriteSpre(self, os):

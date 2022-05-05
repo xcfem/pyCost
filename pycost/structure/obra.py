@@ -4,6 +4,7 @@
 import logging
 import pylatex
 from pycost.structure import chapter as cp
+from pycost.structure import unit_price_quantities
 from pycost.utils import percentages as pc
 from pycost.bc3 import codigos_obra as cod
 from pycost.prices import elementary_price
@@ -202,7 +203,10 @@ class Obra(cp.Chapter):
 
 
     def findChapterMedicion(self,ruta):
-        ruta.pop_back(); #Eliminamos el último elemento que es la posición.
+        print('ruta antes: ', ruta)
+        #ruta.pop(-1)
+        ruta.pop(-1) #Eliminamos el último elemento que es la posición.
+        print('ruta después: ', ruta)
         return self.BuscaSubcapitulo(ruta)
 
 
@@ -211,19 +215,19 @@ class Obra(cp.Chapter):
             logging.error('Root chapter not found.')
         key= next(iter(rootChapterDict)) # first key
         rootChapter= rootChapterDict[key]
-        reg= rootChapter.getChapterData()
-        self.codigo= reg.Codigo(); #Código
-        self.titulo= reg.Datos().getTitle(); #Título
-        subcapitulos.newChapters(reg.Datos().desc)
+        reg= rootChapterDict.getChapterData(key= key)
+        self.codigo= reg.Codigo(); # code
+        self.titulo= reg.Datos().getTitle(); # title
+        self.subcapitulos.newChapters(reg.Datos().desc)
 
     def readQuantitiesFromBC3(self, co):
         med= co.getQuantityData()
-        if med.size()<1:
+        if(len(med)<1):
             logging.error("Quantities not found." + '\n')
         for i in med:
             reg= med.GetDatosMedicion(i)
             # UnitPrice *ud= precios.searchForUnitPrice(reg.CodigoUnidad())
-            cod_unidad= copia_desde(reg.CodigoUnidad(),'@')
+            cod_unidad= reg.CodigoUnidad().partition('@')[2]
             ud= self.findPrice(cod_unidad)
             if not ud:
                 logging.error(u"Obra.readQuantitiesFromBC3: No se encontró el precio: \'"
@@ -234,13 +238,11 @@ class Obra(cp.Chapter):
                 else:
                     logging.error(" exists in the table: "
                               + co.StrTablaConcepto(cod_unidad) + '\n')
-
-
             else:
-                m= UnitPriceQuantities(ud)
+                m= unit_price_quantities.UnitPriceQuantities(ud)
                 m.readBC3(reg.Datos())
                 r=reg.Datos().Ruta()
-                c= findChapterMedicion(r)
+                c= self.findChapterMedicion(r)
                 if not c:
                     c= BuscaCodigo(reg.getChapterCode())
                 if c:
@@ -262,29 +264,29 @@ class Obra(cp.Chapter):
         logging.info("done." + '\n')
         logging.info(u"Leyendo estructura de capítulos...")
         self.LeeBC3DatosObra(co.GetDatosObra())
-        subcapitulos.LeeBC3Caps(co); #Lee capitulos y precios elementales.
+        self.subcapitulos.LeeBC3Caps(co); #Lee capitulos y precios elementales.
         logging.info("done." + '\n')
 
         logging.info("Reading prices...")
-        precios.LeeBC3Elementales(co.GetDatosElementos()); #Lee los precios elementales fuera de capítulo.
+        self.precios.LeeBC3Elementales(co.GetDatosElementos()); #Lee los precios elementales fuera de capítulo.
 
         #LeeBC3DescFase1(co); #Lee descompuestos de capitulos.
-        precios.LeeBC3DescompFase1(co.GetDatosUnidades())
+        self.precios.LeeBC3DescompFase1(co.GetDatosUnidades())
 
         logging.info("done." + '\n')
         logging.info("Leyendo descomposiciones...")
 
         #pendientes= LeeBC3DescFase2(co); #Lee descomposiciones.
-        pendientes= precios.LeeBC3DescompFase2(co.GetDatosUnidades())
+        pendientes= self.precios.LeeBC3DescompFase2(co.GetDatosUnidades())
 
         logging.info("done." + '\n')
         logging.info("Leyendo precios globales...")
-        precios.LeeBC3DescompFase1(co.GetDatosUnidades())
-        tmp= precios.LeeBC3DescompFase2(co.GetDatosUnidades())
-        logging.info("num. precios= " + precios.NumDescompuestos() + '\n')
-        pendientes.insert(tmp.begin(),tmp.end())
+        self.precios.LeeBC3DescompFase1(co.GetDatosUnidades())
+        tmp= self.precios.LeeBC3DescompFase2(co.GetDatosUnidades())
+        logging.info("num. precios= " + str(self.precios.NumDescompuestos()) + '\n')
+        pendientes.update(tmp)
         logging.info("done." + '\n')
-        if pendientes.size():
+        if(len(pendientes)>0):
             logging.info("   Leyendo descomposiciones (y 2)...")
             #pendientes= LeeBC3DescFase2(co); #Lee descomposiciones.
             pendientes= precios.LeeBC3DescompFase2(co.GetDatosUnidades()); #Lee descomposiciones.
@@ -297,7 +299,7 @@ class Obra(cp.Chapter):
 
         logging.info("Reading quantities...")
 
-        readQuantitiesFromBC3(co)
+        self.readQuantitiesFromBC3(co)
         logging.info("done." + '\n')
 
     def ImprLtxPresEjecMat(self, doc):

@@ -4,11 +4,16 @@
 import logging
 from pycost.bc3 import bc3_record
 from pycost.bc3 import fiebdc3
+from pycost.utils import concept_dict
 
 class reg_T(object):
-    def __init__(self,c= '',d= None):
-        self.cod= c #Codigo.
-        self.datos= d
+    def __init__(self, c= '',d= None):
+        ''' Constructor.
+        :param c: code.
+        :param d: data.
+        '''
+        self.cod= c # code.
+        self.datos= d # data.
 
     def Codigo(self):
         return self.cod
@@ -17,12 +22,12 @@ class reg_T(object):
         return self.datos
 
     def CodigoUnidad(self):
-        strtk= StrTok(cod)
-        return strtk.campos('\\').rbegin()
+        tokens= self.cod.rpartition('\\')
+        return tokens[2]
 
     def getChapterCode(self):
-        strtk= StrTok(cod)
-        return strtk.campos('\\').begin()
+        tokens= self.cod.partition('\\')
+        return tokens[0]
 
     def Write(os):
         os.write(cod + '\n')
@@ -145,11 +150,9 @@ class Codigos(dict):
             
     def InsertaReg(self, str_reg, quantities_counter):
         tokens= str_reg.split('|')
-        print('tokens: ', tokens)
         tipo= tokens.pop(0)
         cod= tokens.pop(0)
         cod= cod.strip('\\'); # Remove leading backslash.
-        print(tipo, cod)
 
         if(tipo=='V' or tipo=='K' or tipo=='L' or
                 tipo=='A' or tipo=='G' or tipo=='E'):
@@ -189,7 +192,7 @@ class Codigos(dict):
         retval= None
         for key in self:
             if self.EsObra(key):
-                retval= {key: self[key]}
+                retval= Codigos({key: self[key]})
         if(retval is None):
             logging.error("Root chapter not found.")
         return retval
@@ -238,15 +241,12 @@ class Codigos(dict):
             retval= "capitulo"
         return retval
 
-
-
-
     #not  @brief Extrae las entidades que corresponden a capitulos
     def GetChapters(self):
-        retval= None
+        retval= Codigos()
         for i in self:
             if self.isChapter(i):
-                retval= {i:self[i]}
+                retval[i]= self[i]
         logging.info("  read " + str(len(retval)) + ' chapters.')
         return retval
 
@@ -261,34 +261,31 @@ class Codigos(dict):
 
     #not  @brief Extrae las entidades que corresponden a elementos
     def GetElementos(self):
-        retval= None
+        retval= Codigos()
         for i in self:
             if self.EsElemento(i):
-                retval= {i:self[i]}
+                retval[i]= self[i]
         logging.info("  read " + str(len(retval)) + " elementary prices." + '\n')
         return retval
 
 
     #not  @brief Extract quantity entities
     def getQuantities(self):
-        retval= None
+        retval= Codigos()
         for i in self:
             if EsMedicion(i):
-                retval[(i).first]= (i).second
-        logging.info(retval.size() + " quantities read." + '\n')
+                retval[i]= self[i]
+        logging.info(str(len(retval)) + " quantities read." + '\n')
         return retval
 
 
     #not  @brief Extrae las entidades que corresponden a descompuestos
     def GetDescompuestos(self):
-        retval= None
+        retval= Codigos()
         for i in self:
             if self.EsDescompuesto(i):
-                retval[(i).first]= (i).second
-        size= 0
-        if(retval):
-            size= len(retval)
-        logging.info(" read " + str(size) + " precios descompuestos." + '\n')
+                retval[i]= self[i]
+        logging.info(" read " + str(len(retval)) + " precios descompuestos." + '\n')
         return retval
 
 
@@ -305,14 +302,14 @@ class Codigos(dict):
 
     #not  @brief Extrae las entidades que corresponden a unidades de obra
     def GetUdsObra(self, udsobra):
-        retval= None
+        retval= Codigos()
         for i in udsobra:
             Str= StrTok((i).first)
             scap= Str.get_token('\\')
             codud= Str.resto()
             j= find(codud)
             if j:
-                retval[(j).first]= (j).second
+                retval[j]= self[j]
             else:
                 logging.error("GetUdsObra: No se encontro la unidad: \'" + codud
                           + "\' de la medición: " + scap + '\n')
@@ -320,24 +317,30 @@ class Codigos(dict):
         return retval
 
 
-    def GetDatosElemento(self, i):
-        return reg_elemento((i).first,(i).second.GetDatosElemento())
+    def GetDatosElementaryPrice(self, key):
+        ''' Return the elementary price data.'''
+        retval= None
+        if(key in self):
+            retval= reg_T(c= key, d= self[key].GetDatosElemento())
+        # elif(key in concept_dict.ConceptDict.claves):
+        #     retval= reg_T(c= key, d= concept_dict.ConceptDict.claves[key].GetDatosElemento())
+        else:
+            logging.error('elementary price: '+key+' not found.')
+        return retval
 
 
-    def GetDatosUnitPrice(self, i):
-        return reg_udobra((i).first,(i).second.GetDatosUnitPrice())
+    def GetDatosUnitPrice(self, key):
+        return reg_T(c= key, d= self[key].GetDatosUnitPrice())
 
+    def getChapterData(self, key):
+        return reg_T(c= key, d= self[key].getChapterData())
 
-    def getChapterData(self, i):
-        return reg_capitulo((i).first,(i).second.getChapterData())
-
-
-    def GetDatosMedicion(self, i):
-        return reg_medicion((i).first,(i).second.GetDatosMedicion())
+    def GetDatosMedicion(self, key):
+        return reg_T(c= key, d= self[key].GetDatosMedicion())
 
 
     def Print(self,os):
-        for i in self:
-            os.write(u"Código: " + (i).first + '\n'+ (i).second + '\n')
+        for key in self:
+            os.write(u"Código: " + key + '\n'+ self[key] + '\n')
         return os
 

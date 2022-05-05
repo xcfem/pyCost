@@ -15,13 +15,13 @@ class RegBC3(object):
         self.y= None #Descomposición.
 
     def GetDatosElemento(self):
-        return regBC3_elemento(self.GetConcepto(),self.GetTexto())
+        return fiebdc3.regBC3_elemento(self.GetConcepto(),self.GetTexto())
 
     def getUnitPriceData(self):
-        return regBC3_udobra(self.GetConcepto(),self.GetTexto(),self.GetDesc())
+        return fiebdc3.regBC3_udobra(self.GetConcepto(),self.GetTexto(),self.GetDesc())
 
     def GetDatosMedicion(self):
-        return regBC3_medicion(self.GetConcepto(),self.GetTexto(),self.GetMed())
+        return fiebdc3.regBC3_medicion(self.GetConcepto(),self.GetTexto(),self.GetMed())
 
     def GetConcepto(self):
         return fiebdc3.regBC3_c(self.c)

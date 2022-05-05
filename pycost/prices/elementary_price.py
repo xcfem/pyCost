@@ -18,7 +18,7 @@ class ElementaryPrice(m.Measurable):
         self.tipo= tp
 
     def check_tipo(self):
-        if not Codigo().empty():
+        if(len(self.Codigo())>0):
             if tipo==sin_clasif and not isPercentage():
                 logging.error("El precio elemental de código: " + Codigo()
                           + " no es un porcentaje y su tipo está sin clasificar." + '\n')
@@ -30,10 +30,13 @@ class ElementaryPrice(m.Measurable):
         return self.precio
 
     def readBC3(self, r):
-        Measurable.readBC3(r)
-        precio= r.Datos().getPrice()
-        tipo= sint2TipoConcepto(r.Datos().getType())
-
+        ''' Read data from BC3 record.'''
+        if(r):
+            super(ElementaryPrice,self).readBC3(r= r)
+            self.precio= r.Datos().getPrice()
+            self.tipo= basic_types.sint2tipo_concepto(r.Datos().getType())
+        else:
+            logging.warning('Argument is none.')
 
     def printLtx(self, data_table):
         row= [pylatex_utils.ascii2latex(self.Codigo())]

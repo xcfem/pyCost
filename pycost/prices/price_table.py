@@ -1,13 +1,14 @@
 # -*- coding: utf-8 -*-
-#CuaPre.py
-
-
-
+''' Price tables.'''
 
 from pycost.prices import elementary_price_container
 from pycost.prices import unit_price_container
 from pycost.bc3 import codigos_obra
 from pycost.utils import EntPyCost as epc
+
+class Buscadores(dict):
+    def __init__(self):
+        super(Buscadores, self).__init__()
 
 class CuaPre(epc.EntPyCost):
     def __init__(self):
@@ -34,6 +35,7 @@ class CuaPre(epc.EntPyCost):
 
 
     def LeeBC3Elementales(self, elem):
+        ''' Read elementary prices.'''
         self.elementos.readBC3(elem)
 
     def LeeBC3DescompFase1(self, descomp):
@@ -41,11 +43,9 @@ class CuaPre(epc.EntPyCost):
 
     def LeeBC3DescompFase2(self, descomp):
         bp= Buscadores()
-        b_elem= elementos.GetBuscador()
-        bp["elementos"]= b_elem
-        b_desc= unidades.GetBuscador()
-        bp["ud_obra"]= b_desc
-        return unidades.LeeBC3Fase2(descomp,bp)
+        bp["elementos"]= self.elementos
+        bp["ud_obra"]= self.unidades
+        return self.unidades.LeeBC3Fase2(descomp,bp)
 
     def searchForUnitPrice(self, cod):
         return self.unidades.Busca(cod)
@@ -78,26 +78,26 @@ class CuaPre(epc.EntPyCost):
             self.unidades.LeeSpre(iS,elementos)
 
 
-    #not  @brief Write los precios elementales.
     def ImprLtxElementales(self, os):
+        '''Write elementary prices.''' 
         self.elementos.printLtx(os)
 
 
-    #not  @brief Write la justificación de precios.
     def writePriceJustification(self, doc):
+        '''Write price justification.'''
         self.unidades.writePriceJustification(doc)
 
 
-    #not  @brief Write el cuadro de precios número 1.
     def writePriceTableOneIntoLatexDocument(self, os):
+        '''Write first price table.'''
         self.unidades.writePriceTableOneIntoLatexDocument(os)
 
-    #not  @brief Write el cuadro de precios número 2.
     def writePriceTableTwoIntoLatexDocument(self, os):
+        '''Write second prince table.'''
         self.unidades.writePriceTableTwoIntoLatexDocument(os)
 
-    #not  @brief Write los cuadros de precios números 1 y 2.
     def writePriceTablesIntoLatexDocument(self, os):
+        '''Write both price tables.'''
         writePriceTableOneIntoLatexDocument(os)
         writePriceTableTwoIntoLatexDocument(os)
 

@@ -1,8 +1,5 @@
 #Measurable.py
 
-
-
-
 #include <string>
 from pycost.bc3 import bc3_entity as eBC3
 from pycost.bc3 import codes
@@ -11,9 +8,10 @@ class Measurable(eBC3.EntBC3):
     '''Thing that you can measure (en m,kg.py,m2,m3,...)'''
 
     def readBC3(self, r):
+        ''' Read from BC3 record.'''
         super(Measurable,self).readBC3(r)
         self.unidad= r.Datos().Unidad()
-        self.long_description= protege_signos(r.Datos().Texto())
+        self.long_description= r.Datos().Texto()
 
     def __init__(self, cod, tit, ud, ld= None):
         super(Measurable,self).__init__(cod,tit)

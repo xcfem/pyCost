@@ -21,9 +21,14 @@ class EntBC3(epc.EntPyCost):
         #   self.title= tit
 
     def readBC3(self, r):
-        logging.info("Loading concept: '" + r.Codigo() + "'\n")
-        self.codigo= r.Codigo()
-        self.title= protege_signos(r.Datos().getTitle())
+        ''' Read from BC3 record.'''
+        if(r):
+            cod= r.Codigo()
+            logging.info("Loading concept: '" + cod + "'\n")
+            self.codigo= cod
+            self.title= r.Datos().getTitle()
+        else:
+            logging.warning('Argument is none.')
 
     def Codigo(self):
         return self.codigo

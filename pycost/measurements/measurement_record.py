@@ -125,11 +125,12 @@ class MeasurementRecord(epc.EntPyCost):
         return retval
 
     def readBC3(self, m):
-        self.comentario= m.med.comentario
-        self.unidades= m.med.unidades
-        self.largo= m.med.largo
-        self.ancho= m.med.ancho
-        self.alto= m.med.alto
+        ''' Read measurement.'''
+        self.comentario= m['comentario']
+        self.unidades= m['unidades']
+        self.largo= m['largo']
+        self.ancho= m['ancho']
+        self.alto= m['alto']
 
     def getComponents(self):
         '''Return measurement components: 

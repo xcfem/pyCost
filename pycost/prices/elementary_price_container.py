@@ -17,9 +17,8 @@ class ElementaryPrices(concept_dict.ConceptDict):
     def WriteHCalc(os):
         logging.error("ElementaryPrices.WriteHCalc no implementada." + '\n')
 
-        
     @staticmethod
-    def printLatexHeader(self, tipo, os):
+    def printLatexHeader(tipo, os):
         str_tipo= basic_types.str_tipo(tipo)
 
         doc.append(pylatex_utils.ltx_begin("center") + '\n')
@@ -63,7 +62,7 @@ class ElementaryPrices(concept_dict.ConceptDict):
                     pre= precios.substr(0,len(precios)-1)
                 elem= elementary_price.ElementaryPrice(cod,tit,ud,atof(pre.c_str()),mdo)
                 elem.texto_largo= tit
-                Append(elem)
+                self.Append(elem)
                 if(iS.peek() == 26): break
 
         resto= ''
@@ -92,7 +91,7 @@ class ElementaryPrices(concept_dict.ConceptDict):
                     pre= precios.substr(0,len(precios)-1)
                 elem= elementary_price.ElementaryPrice(cod,tit,ud,atof(pre.c_str()),maq)
                 elem.texto_largo= tit
-                Append(elem)
+                self.Append(elem)
                 if(iS.peek() == 26): break
 
         resto= ''
@@ -121,7 +120,7 @@ class ElementaryPrices(concept_dict.ConceptDict):
                     pre= precios.substr(0,len(precios)-1)
                 elem= elementary_price.ElementaryPrice(cod,tit,ud,atof(pre.c_str()),mat)
                 elem.texto_largo= tit
-                Append(elem)
+                self.Append(elem)
                 if(iS.peek() == 26): break
 
         resto= ''
@@ -162,20 +161,26 @@ class ElementaryPrices(concept_dict.ConceptDict):
         if(Str.find("[MAT]")<len(Str)): LeeMatSpre(iS)
 
     def readBC3(self, els):
-        if not els.empty():
+        if (len(els)>0):
             logging.info("Reading elementary prices." + '\n')
             sz_inicial= len(self)
             el= elementary_price.ElementaryPrice()
-            for i in self:
-                el.readBC3(els.GetDatosElementaryPrice(i))
-                Append(el)
+            keys= list(self.concepts.keys())
+            print('els= ', els)
+            for key in els.keys():
+                print('***** key= ', key)
+                data= els.GetDatosElementaryPrice(key)
+                print('***** data= ', data)
+                el.readBC3(data)
+                self.Append(el)
 
             num_agregados= len(self)-sz_inicial
-            if num_agregados != els.size():
-                logging.error("¡Errornot , pasaron: " + els.size()
+            sz= len(els)
+            if num_agregados != sz:
+                logging.error("¡Errornot , pasaron: " + str(sz)
                           + " precios elementales y se cargaron "
-                          + num_agregados+ '\n')
-            logging.info("Loaded " + els.size() + " elementary prices. " + '\n')
+                          + str(num_agregados)+ '\n')
+            logging.info("Loaded " + str(sz) + " elementary prices. " + '\n')
 
 
     def ImprLtxTipo(self, tipo, os):

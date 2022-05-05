@@ -18,32 +18,30 @@ class CodigosObra(epc.EntPyCost):
         self.codigos_capitulos= set()
 
     def GetDatosElementos(self):
-        return elementos
-
+        ''' Return elementary prices data.'''
+        print('**** here elementos: ', self.elementos)
+        return self.elementos
 
     def GetDatosUnidades(self):
-        return udsobr
-
+        return self.udsobr
 
     def GetDatosObra(self):
         return self.caps.GetObra()
 
-
-    #not  @brief Devuelve los registros correspondientes a los capítulos
-    #not  de la obra.
-    def GetDatosCaps():
-        return caps
+    def GetDatosCaps(self):
+        ''' Return the records corresponding to the chapters.'''
+        return self.caps
 
 
     #not  @brief Devuelve los códigos de los capítulos de la obra.
     def getChapterCodes(self):
-        return codigos_capitulos
+        return self.codigos_capitulos
 
     def ExisteConcepto(self, cod):
         '''Devuelve verdadero si existe el concepto 
            cuyo código se pasa como parámetro.'''
         retval= False
-        for c in containers:
+        for c in self.containers:
             if c.find(cod) != None:
               retval= True
               break
@@ -116,7 +114,6 @@ class CodigosObra(epc.EntPyCost):
         count= 0
         while(inputFile):
             reg= inputFile.readline()
-            print(reg)
             if(len(reg)==0):
                 break;
             else:
@@ -138,15 +135,20 @@ class CodigosObra(epc.EntPyCost):
         self.Trocea()
 
 
-    #not  @brief Devuelve los registros de la descomposicion que corresponden a
-    #not  precios elementales.
     def FiltraElementales(self, descomp):
+        '''Devuelve los registros de la descomposicion que corresponden a
+        precios elementales.
+
+        :param descomp: price decomposition.
+        '''
         return FiltraPrecios(descomp,elementos)
 
-
-    #not  @brief Devuelve los registros de la descomposicion que corresponden a
-    #not  precios descompuestos.
     def FiltraDescompuestos(self, descomp):
+        '''Devuelve los registros de la descomposicion que corresponden a
+        precios descompuestos.
+
+        :param descomp: price decomposition.
+        '''
         return FiltraPrecios(descomp,udsobr)
 
 
@@ -166,19 +168,18 @@ class CodigosObra(epc.EntPyCost):
     def getQuantityData(self):
         return self.quantities
 
-
     def BorraElementales(self, els):
-        elementos.Borra(els)
+        self.elementos.Borra(els)
 
 
     def BorraDescompuestos(self, uds):
-        udsobr.Borra(uds)
+        self.udsobr.Borra(uds)
 
 
     def Print(os):
         os.write("Obra: " + '\n' + self.GetDatosObra() + '\n'
            + u"Capítulos: " + '\n' + self.caps + '\n'
-           + "Elementos:" + '\n' + '\n'
+           + "Elementos:" + '\n' + self.elementos + '\n'
            + "Descompuestos:" + '\n' + self.udsobr + '\n'
            + basic_types.quantitiesCaption + ':\n' + self.quantities + '\n'
            + "Quedan: " + '\n' + self.resto + '\n')

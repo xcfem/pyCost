@@ -6,6 +6,7 @@ from decimal import Decimal
 import pylatex
 from pycost.prices import price_table
 from pycost.structure import chapter
+from pycost.bc3 import codes
 from pycost.bc3 import codigos_obra
 from pycost.utils import EntPyCost as epc
 
@@ -79,14 +80,14 @@ class Subcapitulos(list, epc.EntPyCost):
 
     def newChapters(self, descomp):
         '''Append the chapters from the records on the container.'''
-        sz= descomp.size()
+        #sz= len(descomp)
         for i in self:
             self.newChapter(descomp[i])
 
 
     #not  @brief Carga los datos de los subcapítulos de (self).
     def LeeBC3Caps(self, co):
-        sc= Codigos(co.GetDatosCaps())
+        sc= codes.Codigos(co.GetDatosCaps())
         if len(sc)<1:
             logging.error("No se encontraron subcapitulos." + '\n')
 

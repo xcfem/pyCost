@@ -12,13 +12,17 @@ class KeyMap(dict):
 class ConceptDict(epy.EntPyCost):
     claves= KeyMap()
     def __init__(self):
+        ''' Constructor.'''
         super(ConceptDict,self).__init__()
-        self.map= dict()
+        self.concepts= dict()
     def __len__(self):
-        return len(self.map)
-    def Append(self,u):
-        self.claves[u.Codigo()]= u
-        self.map[u.Codigo()]= u
+        return len(self.concepts)
+    
+    def Append(self, u):
+        ''' Append the argument to the concept dictionary.'''
+        key= u.Codigo()
+        self.claves[key]= u
+        self.concepts[key]= u
         return u
 
     @staticmethod
@@ -32,12 +36,12 @@ class ConceptDict(epy.EntPyCost):
         return retval
 
     def WriteBC3(self,os):
-        for j in self.map.keys():
-           self.map[j].WriteBC3(os)
+        for j in self.concepts.keys():
+           self.concepts[j].WriteBC3(os)
 
     def Write(self,os):
-        for j in self.map.keys():
-           self.map[j].Write(os)
+        for j in self.concepts.keys():
+           self.concepts[j].Write(os)
 
 
 def find_concept(conceptName):

@@ -50,12 +50,14 @@ class Quantities(list, epy.EntPyCost):
             t+=(i).getRoundedTotal()
         return t
 
-    #| @brief Read quantities list.
     def readBC3(self, m):
-        rm= MeasurementRecord()
+        ''' Read quantities list.'''
+        rm= measurement_record.MeasurementRecord()
         for i in m:
-            rm.readBC3(i)
-            append(rm)
+            print('i= ', i)
+            for l in i.med.lines:
+                rm.readBC3(l)
+            self.append(rm)
 
     def WriteBC3(self, os):
         for i in self:
