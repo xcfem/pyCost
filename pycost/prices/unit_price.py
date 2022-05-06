@@ -9,6 +9,7 @@ from pycost.prices import component_list
 from pycost.utils import pylatex_utils
 from pycost.utils import basic_types
 from pycost.bc3 import fr_entity
+from pycost.bc3 import bc3_component
 from decimal import Decimal
 
 class UnitPrice(ms.Measurable):
@@ -19,6 +20,7 @@ class UnitPrice(ms.Measurable):
     def __init__(self, cod="", desc="", ud="", ld= None):
         super(UnitPrice,self).__init__(cod,desc,ud,ld)
         self.components= component_list.ComponentList()
+        
     def getType(self):
         return basic_types.mat; #XXX provisional.
     def getPrice(self):
@@ -28,7 +30,7 @@ class UnitPrice(ms.Measurable):
         self.components.AsignaFactor(f)
 
     def Append(self,entity, f, r):
-        tmp= BC3Component(e= entity,fr= fr_entity.EntFR(f,r))
+        tmp= bc3_component.BC3Component(e= entity,fr= fr_entity.EntFR(f,r))
         self.components.append(tmp)
         return tmp
 
@@ -38,8 +40,8 @@ class UnitPrice(ms.Measurable):
 
     def LeeBC3Fase2(self, r, bp):
         error= False
-        if r.Datos().desc.size():
-            tmp= ObtienePunteros(r.Datos().desc,bp,error)
+        if(len(r.Datos().desc)>0):
+            tmp= UnitPrice.ObtienePunteros(r.Datos().desc,bp,error)
             if not error:
                 components= tmp
             else:
@@ -52,17 +54,17 @@ class UnitPrice(ms.Measurable):
     def GetSindesco(self, productionRate, bp):
         '''Para unidades de obra sin descomposición de las que
            sólo se conoce el precio.'''
-        retval= ComponentList()
+        retval= component_list.ComponentList()
         be= bp["elementos"]
         ent= be.Busca("SINDESCO")
         factorAndRate= fr_entity.EntFR(1.0,productionRate)
-        retval.append(BC3Component(e= ent,fr= factorAndRate))
+        retval.append(bc3_component.BC3Component(e= ent,fr= factorAndRate))
         return retval
 
     @staticmethod
-    def ObtienePunteros(self, descBC3, bp, error):
+    def ObtienePunteros(descBC3, bp, error):
         '''Obtiene los punteros a los precios de la descomposición.'''
-        retval= ComponentList()
+        retval= component_list.ComponentList()
         be= bp["elementos"]
         bd= bp["ud_obra"]
         ent= None
@@ -74,22 +76,16 @@ class UnitPrice(ms.Measurable):
                 logging.warning("UnitPrice.ObtienePunteros; No se encontró la componente: " + (i).codigo + '\n')
                 error= True
                 continue
-
             else:
-                retval.append(fr_entity.BC3Component(ent,i))
+                retval.append(bc3_component.BC3Component(ent,i))
                 error= False
-
-
         return retval
-
-
 
     def WriteSpre(self, os):
         os.write(self.Codigo() + '|'
            + self.Unidad() + '|'
            + getTitle() + '|')
         components.WriteSpre(os)
-
 
     def WriteBC3(self, os):
         super(UnitPrice,self).WriteBC3(os)
@@ -152,4 +148,14 @@ class UnitPrice(ms.Measurable):
            + '"' + self.StrPriceToWords(True) + '"' + tab
            + getPriceString() + '\n')
 
+    def getDict(self):
+        ''' Return a dictionary containing the object data.'''
+        retval= super(UnitPrice, self).getDict()
+        retval['components']= self.components.getDict()
+        return retval
+        
+    def setFromDict(self,dct):
+        ''' Read member values from a dictionary.'''
+        self.components.setFromDict(dct['components'])
+        super(UnitPrice, self).setFromDict(dct)
 

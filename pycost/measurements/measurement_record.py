@@ -154,6 +154,24 @@ class MeasurementRecord(epc.EntPyCost):
         os.write(self.comentario + ','
            + self.unidades + ','
            + str(self.largo) + ',' + str(self.ancho) + ',' + str(self.alto) + '\n')
+    def getDict(self):
+        ''' Return a dictionary containing the object data.'''
+        retval= super(MeasurementRecord, self).getDict()
+        retval['commentary']= self.comentario
+        retval['units']= self.unidades
+        retval['width']= self.ancho
+        retval['length']= self.largo
+        retval['height']= self.alto
+        return retval
+        
+    def setFromDict(self,dct):
+        ''' Read member values from a dictionary.'''
+        self.comentario= dct['comentario']
+        self.unidades= dct['units']
+        self.largo= dct['length']
+        self.ancho= dct['width']
+        self.alto= dct['height']
+        super(MeasurementRecord, self).setFromDict(dct)
 
     #not  @brief Imprime la medición en Latex.
     def printLtx(self, data_table, ancho):

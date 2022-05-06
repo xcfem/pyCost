@@ -23,10 +23,20 @@ class UnitPriceQuantities(ptp.UnitPriceQuantitiesBase):
 
     def readBC3(self, m):
         ''' Read quantities from BC3 record.'''
-        empty= len(m.med.lista_med)==0
+        empty= len(m.med.lista_med.lines)==0
         if(empty):
             rm= mr.MeasurementRecord("",m.med.med_total)
             self.quantities.append(rm)
         else:
-            self.quantities.readBC3(m.med.lista_med)
+            self.quantities.readBC3(m.med.lista_med.lines)
 
+    def getDict(self):
+        ''' Return a dictionary containing the object data.'''
+        retval= super(UnitPriceQuantities, self).getDict()
+        retval['quantities']= self.quantities.getDict()
+        return retval
+        
+    def setFromDict(self,dct):
+        ''' Read member values from a dictionary.'''
+        self.quantities.setFromDict(dct['quantities'])
+        super(UnitPriceQuantities, self).setFromDict(dct)

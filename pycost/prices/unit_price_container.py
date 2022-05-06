@@ -23,11 +23,11 @@ class Descompuestos(concept_dict.ConceptDict):
 
     def LeeBC3Fase1(self, cds):
         '''Lee las unidades de obra a falta de la descomposición.'''
-        ud= unit_price.UnitPrice()
         for i in cds:
             reg= cds.getUnitPriceData(i)
+            ud= unit_price.UnitPrice()
             ud.LeeBC3Fase1(reg)
-            Append(ud)
+            self.Append(ud)
 
 
     def LeeBC3Fase2(self, cds, bp):
@@ -37,7 +37,7 @@ class Descompuestos(concept_dict.ConceptDict):
         retval= set()
         for i in cds:
             reg= cds.getUnitPriceData(i)
-            ud= Busca(reg.Codigo())
+            ud= self.Busca(reg.Codigo())
             error= ud.LeeBC3Fase2(reg,bp)
             if error:
                 retval.add(reg.Codigo())
@@ -148,5 +148,16 @@ class Descompuestos(concept_dict.ConceptDict):
         for j in self.map.keys():
             self.map[j].WriteHCalc(os)
 
-
+    def getDict(self):
+        ''' Return a dictionary containing the object data.'''
+        retval= super(Descompuestos, self).getDict()
+        return retval
+        
+    def setFromDict(self,dct):
+        ''' Read member values from a dictionary.'''
+        for key in dct:
+            p= unit_price.UnitPrice(key)
+            itemDict= dct[key]
+            p.setFromDict(itemDict)
+        super(Descompuestos, self).setFromDict(dct)
 

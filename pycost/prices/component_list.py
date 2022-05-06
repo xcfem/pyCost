@@ -9,6 +9,11 @@ from pycost.utils import basic_types
 
 class ComponentList(list, epc.EntPyCost):
     '''Componentes de un precio descompuesto.'''
+    
+    def __init__(self):
+        super(ComponentList,self).__init__()
+        epc.EntPyCost.__init__(self)
+        
     def getPrice(self):
         return self.getRoundedPrice()
 
@@ -110,4 +115,18 @@ class ComponentList(list, epc.EntPyCost):
         lista= self.getPriceJustificationList(pa)
         lista.writePriceTableOneIntoLatexDocument(os,genero)
 
+    def getDict(self):
+        ''' Return a dictionary containing the object data.'''
+        retval= epc.EntPyCost.getDict(self)
+        for idx, comp in enumerate(self):
+            retval[idx]= comp.getDict()
+        return retval
+        
+    def setFromDict(self,dct):
+        ''' Read member values from a dictionary.'''
+        for key in dct:
+            comp= bc3_component.BC3Component(key)
+            itemDict= dct[key]
+            comp.setFromDict(itemDict)
+        epc.EntPyCost.setFromDict(dct)
 

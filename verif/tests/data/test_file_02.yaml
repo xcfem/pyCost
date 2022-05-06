@@ -1,0 +1,36 @@
+code: ROOT##
+prices:
+  elementary_prices:
+    SINDESCO:
+      code: SINDESCO
+      long_description: ''
+      price: 1.0
+      title: sin_desc
+      type: 3
+      unit: ''
+  units: {}
+quantities: {}
+sub_chapters:
+  01#:
+    code: 01#
+    prices:
+      elementary_prices:
+        A01:
+          code: A01
+          long_description: Subsubconcept A01 description
+          price: 10.0
+          title: Subsubconcept A01
+          type: 0
+          unit: ''
+        B01:
+          code: B01
+          long_description: Subsubconcept 1B description
+          price: 2.4
+          title: Subsubconcept 1B
+          type: 0
+          unit: ''
+      units: {}
+    quantities: {}
+    sub_chapters: {}
+    title: Subconcept 1
+title: Test title

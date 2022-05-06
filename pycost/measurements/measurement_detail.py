@@ -10,6 +10,12 @@ from pycost.utils import pylatex_utils
 
 class Quantities(list, epy.EntPyCost):
     '''Quantities de una unidad de obra.'''
+
+    def __init__(self):
+        ''' Constructor.'''
+        super(Quantities, self).__init__()
+        epy.EntPyCost.__init__(self)
+        
     def getTotalUnits(self):
         '''Return the total number of units.'''
         t= measurement_record.MeasurementRecord.dimension(0.0)
@@ -52,11 +58,9 @@ class Quantities(list, epy.EntPyCost):
 
     def readBC3(self, m):
         ''' Read quantities list.'''
-        rm= measurement_record.MeasurementRecord()
-        for i in m:
-            print('i= ', i)
-            for l in i.med.lines:
-                rm.readBC3(l)
+        for l in m:
+            rm= measurement_record.MeasurementRecord()
+            rm.readBC3(l)
             self.append(rm)
 
     def WriteBC3(self, os):
@@ -104,3 +108,17 @@ class Quantities(list, epy.EntPyCost):
             (i).WriteHCalc(os)
         os.write(",,,,Suma ..." + tab + Total() + '\n' + '\n')
 
+    def getDict(self):
+        ''' Return a dictionary containing the object data.'''
+        retval= epy.EntPyCost.getDict(self)
+        for idx, i in enumerate(self):
+            retval[idx]= i.getDict()
+        return retval
+        
+    def setFromDict(self,dct):
+        ''' Read member values from a dictionary.'''
+        for key in dct:
+            itemDict= dct[key]
+            item= measurement_record.MeasurementRecord()
+            item.setFromDict(itemDict)
+        epy.EntPyCost.setFromDict(dct)

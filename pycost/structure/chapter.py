@@ -81,6 +81,7 @@ class Chapter(bc3_entity.EntBC3):
         self.precios.LeeBC3DescompFase1(descompuestos)
     def LeeBC3DescompFase2(self, descompuestos):
         return self.precios.LeeBC3DescompFase2(descompuestos)
+    
     def BuscaSubcapitulo(self, ruta):
         retval= None
         if ruta:
@@ -92,31 +93,29 @@ class Chapter(bc3_entity.EntBC3):
                 #Si no encuentra el capítulo devuelve este mismo
                 retval= self
         return retval
+    
     def BuscaSubcapitulo(self, lst):
         '''Search the sub-chapter indicated by
-           the string of the form 1\2\1\4'''
+           the list of the form ['1', '2', '1', '4']. '''
         retval= None
-        pos= lst.find('\\')
-        if(pos>len(lst)): #Not on tht bar so it must be a subchapter of this one.
-            indice= atoi(lst.c_str())
-            if indice>subcapitulos.size():
-                logging.error(u"Capítulo: " + indice + " no encontrado." + '\n')
+        sz= len(lst)
+        if(sz>0): # not empty.
+            indice= int(lst.pop(0))
+            if(indice>len(self.subcapitulos)):
+                logging.error(u"Chapter: " + str(indice) + " not found in chapter: "+str(self.Codigo()) + '\n')
                 return None
-
-            retval= self.subcapitulos[indice-1]
-            return retval
-
-        else: #Ha de ser subcapitulo del que esta a la izquierda de la barra
-            ind= lst.substr(0,pos)
-            indice= atoi(ind.c_str())
-            if indice>subcapitulos.size():
-                logging.error(u"Capítulo: " + indice + " no encontrado." + '\n')
-                return None
-
-            return self.subcapitulos[indice-1].BuscaSubcapitulo(lst.substr(pos+1,lst.size()-1))
+            if(sz==1): # it must be a subchapter of this one.
+                retval= self.subcapitulos[indice-1]
+                return retval
+            elif(sz>1): # still diging.
+                return self.subcapitulos[indice-1].BuscaSubcapitulo(lst)
+        else:
+            logging.error(u"Empty list argument: " + str(lst) + '\n')
+            return None
 
         logging.error("sale por aqui (y no debiera) en el capitulo: " + self.Codigo() + '\n')
         return retval
+    
     def BuscaCodigo(self, nmb):
         if (self.Codigo()==nmb) or ((self.Codigo()+'#')==nmb):
             return self
@@ -127,28 +126,53 @@ class Chapter(bc3_entity.EntBC3):
             return self
         else:
             return self.subcapitulos.BuscaCodigo(nmb)
+        
     def findPrice(self, cod):
         retval= self.precios.findPrice(cod)
         if not retval:
             retval= self.subcapitulos.findPrice(cod)
         return retval
+    
     def WritePreciosBC3(self, os):
         self.precios.WriteBC3(os)
         self.subcapitulos.WritePreciosBC3(os)
+        
     def WriteDescompBC3(self, os):
         self.subcapitulos.WriteDescompBC3(os,self.CodigoBC3())
         self.quantities.WriteDescompBC3(os,self.CodigoBC3())
+        
     def WriteBC3(self, os, pos):
         self.WriteConceptoBC3(os)
         self.WriteDescompBC3(os)
         self.WriteQuantitiesBC3(os,pos)
         self.WriteSubChaptersBC3(os,pos)
+
+    def getDict(self):
+        ''' Return a dictionary containing the object data.'''
+        retval= super(Chapter, self).getDict()
+        retval['sub_chapters']= self.subcapitulos.getDict()
+        retval['prices']= self.precios.getDict()
+        retval['quantities']= self.quantities.getDict()
+        return retval
+        
+    def setFromDict(self,dct):
+        ''' Read member values from a dictionary.'''
+        self.subcapitulos.setFromDict(dct['sub_chapters'])
+        self.prices.setFromDict(dct['prices'])
+        self.quantities.setFromDict(dct['quantities'])
+        super(Chapter, self).setFromDict(dct)
+    
     def getPrice(self):
-        return (self.subcapitulos.getPrice() + self.quantities.getPrice()) * self.fr.getProduct()
+        priceSubC= self.subcapitulos.getPrice()
+        priceQuant= self.quantities.getPrice()
+        factor= self.fr.getProduct()
+        return (priceSubC + priceQuant)*factor 
+    
     def getRoundedPrice(self):
         retval= self.subcapitulos.getRoundedPrice() + self.quantities.getRoundedPrice()
         retval*= self.fr.getRoundedProduct()
         return retval
+    
     def ImprCompLtxMed(self, os, sect, otro):
         if sect!='root':
             doc.append('\\' + sect + '{' + self.getTitle() + '}' + '\n')

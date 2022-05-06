@@ -45,3 +45,15 @@ class ElementaryPrice(m.Measurable):
         row.append(self.getLtxPriceString())
         data_table.add_row(row)
 
+    def getDict(self):
+        ''' Return a dictionary containing the object data.'''
+        retval= super(ElementaryPrice, self).getDict()
+        retval['type']= self.tipo
+        retval['price']= self.precio
+        return retval
+        
+    def setFromDict(self,dct):
+        ''' Read member values from a dictionary.'''
+        self.tipo= dct['type']
+        self.precio= dct['price']
+        super(ElementaryPrice, self).setFromDict(dct)

@@ -203,10 +203,7 @@ class Obra(cp.Chapter):
 
 
     def findChapterMedicion(self,ruta):
-        print('ruta antes: ', ruta)
-        #ruta.pop(-1)
         ruta.pop(-1) #Eliminamos el último elemento que es la posición.
-        print('ruta después: ', ruta)
         return self.BuscaSubcapitulo(ruta)
 
 
@@ -218,16 +215,18 @@ class Obra(cp.Chapter):
         reg= rootChapterDict.getChapterData(key= key)
         self.codigo= reg.Codigo(); # code
         self.titulo= reg.Datos().getTitle(); # title
-        self.subcapitulos.newChapters(reg.Datos().desc)
+        components= reg.Datos().desc
+        self.subcapitulos.newChapters(components)
 
     def readQuantitiesFromBC3(self, co):
         med= co.getQuantityData()
         if(len(med)<1):
-            logging.error("Quantities not found." + '\n')
+            logging.info("No quantities in BC3 file.")
         for i in med:
             reg= med.GetDatosMedicion(i)
             # UnitPrice *ud= precios.searchForUnitPrice(reg.CodigoUnidad())
-            cod_unidad= reg.CodigoUnidad().partition('@')[2]
+            tmp= reg.CodigoUnidad()
+            cod_unidad= reg.CodigoUnidad().partition('@')[0]
             ud= self.findPrice(cod_unidad)
             if not ud:
                 logging.error(u"Obra.readQuantitiesFromBC3: No se encontró el precio: \'"
@@ -241,14 +240,15 @@ class Obra(cp.Chapter):
             else:
                 m= unit_price_quantities.UnitPriceQuantities(ud)
                 m.readBC3(reg.Datos())
-                r=reg.Datos().Ruta()
-                c= self.findChapterMedicion(r)
+                ruta= reg.Datos().Ruta()
+                chapterCode= reg.getChapterCode()
+                c= self.findChapterMedicion(ruta)
                 if not c:
-                    c= BuscaCodigo(reg.getChapterCode())
+                    c= self.BuscaCodigo(chapterCode)
                 if c:
                     c.AppendUnitPriceQuantities(m)
                 else:
-                    logging.error(u"No se encontró el capítulo: " + reg.getChapterCode() + '\n')
+                    logging.error(u"No se encontró el capítulo: " + chapterCode + '\n')
 
 
     def readBC3(self, inputFile):

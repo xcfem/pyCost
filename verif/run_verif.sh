@@ -34,6 +34,9 @@ START=$(date +%s.%N)
 # Misc. tests
 echo "$BLEU" "PyCost tests." "$NORMAL"
 python tests/test_01.py
+python tests/test_read_bc3_01.py
+python tests/test_read_bc3_02.py
+python tests/test_read_bc3_03.py
 
 END=$(date +%s.%N)
 DIFF=$(echo "$END - $START" | bc)

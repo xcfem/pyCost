@@ -19,7 +19,6 @@ class CodigosObra(epc.EntPyCost):
 
     def GetDatosElementos(self):
         ''' Return elementary prices data.'''
-        print('**** here elementos: ', self.elementos)
         return self.elementos
 
     def GetDatosUnidades(self):
@@ -92,9 +91,7 @@ class CodigosObra(epc.EntPyCost):
             logging.error("They left " + str(len(self.resto)) + ' not imported concepts.')
             logging.error(str(self.resto) + '\n')
 
-
-        codigos_capitulos= self.caps.GetCodigos()
-
+        self.codigos_capitulos= self.caps.GetCodigos()
 
     def getChapterData(self, key):
         ''' Return the data of the chapter with the key argument.
@@ -141,7 +138,7 @@ class CodigosObra(epc.EntPyCost):
 
         :param descomp: price decomposition.
         '''
-        return FiltraPrecios(descomp,elementos)
+        return self.FiltraPrecios(descomp,self.elementos)
 
     def FiltraDescompuestos(self, descomp):
         '''Devuelve los registros de la descomposicion que corresponden a
@@ -151,16 +148,14 @@ class CodigosObra(epc.EntPyCost):
         '''
         return FiltraPrecios(descomp,udsobr)
 
-
-    #not  @brief Devuelve los registros de la descomposicion que corresponden a los
-    #not  precios que se pasan como parámetros.
     def FiltraPrecios(self, descomp, precios):
-        retval= None
+        '''Devuelve los registros de la descomposicion que corresponden a los
+           precios que se pasan como parámetros.'''
+        retval= codes.Codigos()
         for d in descomp:
             p= precios.find(d.codigo)
-            if(p): #Encontró el precio
-                retval[p.first]= p.second
-
+            if(p): # price found
+                retval[d.codigo]= p
         return retval
 
 

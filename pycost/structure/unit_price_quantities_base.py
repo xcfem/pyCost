@@ -168,5 +168,18 @@ class UnitPriceQuantitiesBase(epc.EntPyCost):
         self.ImprLtxPie(data_table,totalr)
         data_table.add_hline()
         data_table.add_empty_row()
+        
+    def getDict(self):
+        ''' Return a dictionary containing the object data.'''
+        retval= super(UnitPriceQuantitiesBase, self).getDict()
+        retval['ud']= self.ud.Codigo()
+        return retval
+        
+    def setFromDict(self,dct):
+        ''' Read member values from a dictionary.'''
+        udCode= dct['ud']
+        self.ud= None
+        logging.error('UnitPriceQuantitiesBase::setFromDict not implemented yet.')
+        super(UnitPriceQuantitiesBase, self).setFromDict(dct)
 
 

@@ -20,6 +20,19 @@ class EntBC3(epc.EntPyCost):
         # else:
         #   self.title= tit
 
+    def getDict(self):
+        ''' Return a dictionary containing the object data.'''
+        retval= super(EntBC3, self).getDict()
+        retval['code']= self.codigo
+        retval['title']= self.title
+        return retval
+        
+    def setFromDict(self,dct):
+        ''' Read member values from a dictionary.'''
+        self.codigo= dct['code']
+        self.title= dct['title']
+        super(EntBC3, self).setFromDict(dct)
+    
     def readBC3(self, r):
         ''' Read from BC3 record.'''
         if(r):
@@ -66,7 +79,6 @@ class EntBC3(epc.EntPyCost):
 
     def getLongDescription(self):
         return self.static_texto_largo
-
 
     def ChrTipo(self):
         return basic_types.tipo_concepto2chr(self.getType())

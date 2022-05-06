@@ -78,8 +78,9 @@ class Codigos(dict):
     def InsertaCods(self, cods):
         self.update(cods)
 
-    #not  @brief Devuelve los subcapítulos del capitulo que se pasa como parámetro.
     def GetSubCaps(self, ppal):
+        ''' Devuelve los subcapítulos del capitulo que se pasa 
+            como parámetro.'''
         retval= None
         desc= ppal.GetDesc(); #Obtiene la descomposición
         for i in desc:
@@ -163,15 +164,15 @@ class Codigos(dict):
             bc3Record= self.find(cod)
             if(bc3Record is None): # Code not found => new record.
                 if(tipo == 'M'): #El registro corresponde a una medición.
-                    if('\\' in cod): #Sometimes the ~M has the form: ~M|13.3.1#\01.009|1....
-                        cod= cod.partition('\\')[2] # remove part 13.3.1#\ of the code.
-                    cod= str(quantities_counter) + '@' + cod
+                    # if('\\' in cod): #Sometimes the ~M has the form: ~M|13.3.1#\01.009|1....
+                    #     cod= cod.partition('\\')[2] # remove part 13.3.1#\ of the code.
+                    cod= cod+'@'+str(quantities_counter)
 
                 bc3Record= bc3_record.RegBC3() # Constructor.
                 (self)[cod]= bc3Record # Update dictionary.
 
             if(tipo=='C'):
-                bc3Record.c= tokens.pop(0)
+                bc3Record.c= tokens
             elif(tipo=='D'):
                 if len(tokens)<2:
                     logging.log(u"No components for concept: \'" + cod
@@ -198,11 +199,15 @@ class Codigos(dict):
         return retval
 
 
-    #not  @brief Devuelve un iterador al capítulo con el código que se pasa como parámetro.
     def findChapter(self, cod):
-        retval= find(cod); #Código
-        if retval==end():
-            retval= find(cod+'#')
+        ''' Devuelve el capítulo con el código que se pasa como parámetro.'''
+        retval = None
+        if cod in self:
+            retval= self[cod]
+        else:
+            tmp= cod+'#'
+            if(tmp in self):
+                retval= self[tmp]
         return retval
 
 
@@ -329,11 +334,14 @@ class Codigos(dict):
         return retval
 
 
-    def GetDatosUnitPrice(self, key):
-        return reg_T(c= key, d= self[key].GetDatosUnitPrice())
+    def getUnitPriceData(self, key):
+        return reg_T(c= key, d= self[key].getUnitPriceData())
 
     def getChapterData(self, key):
-        return reg_T(c= key, d= self[key].getChapterData())
+        retval= None
+        if key in self:
+            retval= reg_T(c= key, d= self[key].getChapterData())
+        return retval
 
     def GetDatosMedicion(self, key):
         return reg_T(c= key, d= self[key].GetDatosMedicion())

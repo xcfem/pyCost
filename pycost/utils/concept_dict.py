@@ -15,6 +15,7 @@ class ConceptDict(epy.EntPyCost):
         ''' Constructor.'''
         super(ConceptDict,self).__init__()
         self.concepts= dict()
+        
     def __len__(self):
         return len(self.concepts)
     
@@ -43,6 +44,13 @@ class ConceptDict(epy.EntPyCost):
         for j in self.concepts.keys():
            self.concepts[j].Write(os)
 
+    def getDict(self):
+        ''' Return a dictionary containing the object data.'''
+        retval= super(ConceptDict, self).getDict()
+        for key in self.concepts:
+            value= self.concepts[key]
+            retval[key]= value.getDict()
+        return retval
 
 def find_concept(conceptName):
     return ConceptDict.claves[conceptName]

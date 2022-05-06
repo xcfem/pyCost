@@ -13,7 +13,7 @@ from pycost.utils import EntPyCost as epc
 class Subcapitulos(list, epc.EntPyCost):
 
     def __init__(self,ptr_cap):
-        epc.EntPyCost.__init__(ptr_cap)
+        epc.EntPyCost.__init__(self, owner= ptr_cap)
 
     def getContenedor(self):
         return self
@@ -36,7 +36,6 @@ class Subcapitulos(list, epc.EntPyCost):
         for j in self:
             p+= (j).getRoundedPrice()
         return p
-
 
     def Busca(self,ruta):
         if(len(ruta)==0): return None
@@ -72,45 +71,45 @@ class Subcapitulos(list, epc.EntPyCost):
         self.append(c)
         return c
 
-
     def newChapterFromRecord(self, r):
         '''Appends a chapter.'''
-        return self.newChapter(Chapter(r.codigo,"",r.factor,r.productionRate))
-
+        return self.newChapter(chapter.Chapter(r.codigo,"",r.factor,r.productionRate))
 
     def newChapters(self, descomp):
         '''Append the chapters from the records on the container.'''
         #sz= len(descomp)
-        for i in self:
-            self.newChapter(descomp[i])
+        for comp in descomp:
+            self.newChapterFromRecord(comp)
 
-
-    #not  @brief Carga los datos de los subcapítulos de (self).
     def LeeBC3Caps(self, co):
+        ''' Carga los datos de los subcapítulos de (self).'''
         sc= codes.Codigos(co.GetDatosCaps())
         if len(sc)<1:
             logging.error("No se encontraron subcapitulos." + '\n')
 
-        nombres_capitulos= co.getChapterCodes()
+        chapterNames= co.getChapterCodes()
 
         for i in self:
-            j= sc.findChapter(i.Codigo()); #sc.find(i.Codigo()); #Código
+            code= i.Codigo()
+            j= sc.findChapter(code)
             if j:
-                reg= sc.getChapterData(j)
+                reg= sc.getChapterData(code)
                 if i:
                     logging.info(u"Loading sub-chapter: '" + reg.Datos().getTitle() + "'\n")
-                    i.titulo= reg.Datos().getTitle(); #Título
+                    i.readBC3(reg) # Title
 
                     #Lee los elementales del capítulo.
                     elementos_capitulo= co.FiltraElementales(reg.Datos().desc)
                     i.LeeBC3Elementales(elementos_capitulo)
-                    logging.info("  Loaded " + elementos_capitulo.size()
-                                  + u" elementary prices of the chapter." + '\n')
+                    if(elementos_capitulo):
+                      logging.info("  Loaded " + str(len(elementos_capitulo))
+                                   + u" elementary prices of the chapter."
+                                   + '\n')
                     co.BorraElementales(elementos_capitulo); #Borra los ya leídos.
-                    logging.info("  They remain " + co.GetDatosElementos().size() + " elementary prices." + '\n')
+                    logging.info("  They remain " + str(len(co.GetDatosElementos())) + " elementary prices." + '\n')
 
                     #Lee los subcapítulos.
-                    i.subcapitulos.newChapters(reg.Datos().filterChapters(nombres_capitulos))
+                    i.subcapitulos.newChapters(reg.Datos().filterChapters(chapterNames))
                     i.subcapitulos.LeeBC3Caps(co); #Carga los subcapitulos.
 
 
@@ -206,9 +205,24 @@ class Subcapitulos(list, epc.EntPyCost):
                 retval= True
                 break
         return retval
+    
     def getQuantitiesReport(self):
         retval= QuantitiesReport()
         for j in self:
             retval.Merge((j).getQuantitiesReport())
         return retval
 
+    def getDict(self):
+        ''' Return a dictionary containing the object data.'''
+        retval= epc.EntPyCost.getDict(self)
+        for chapter in self:
+            code= chapter.Codigo()
+            retval[code]= chapter.getDict()
+        return retval
+        
+    def setFromDict(self,dct):
+        ''' Read member values from a dictionary.'''
+        for key in dct:
+            chapterDict= dct[key]
+            chapter= chapter.Chapter(key)
+            chapter.setFromDict(chapterDict)

@@ -8,6 +8,7 @@
 import pylatex
 from pycost.structure import unit_price_quantities
 from pycost.measurements import measurement_report
+from pycost.measurements import measurement_record
 #import Pieza
 from pycost.utils import EntPyCost as epc
 
@@ -16,6 +17,10 @@ from pycost.utils import basic_types
 
 class ChapterQuantities(list, epc.EntPyCost):
 
+    def __init__(self):
+        super(ChapterQuantities, self).__init__()
+        epc.EntPyCost.__init__(self, owner= None)
+        
     def getLtxPriceString(self):
         return basic_types.human_readable(self.getRoundedPrice())
 
@@ -149,3 +154,16 @@ class ChapterQuantities(list, epc.EntPyCost):
             retval.Inserta((i).Informe())
         return retval
 
+    def getDict(self):
+        ''' Return a dictionary containing the object data.'''
+        retval= epc.EntPyCost.getDict(self)
+        for idx, i in enumerate(self):
+            retval[idx]= i.getDict()
+        return retval
+        
+    def setFromDict(self,dct):
+        ''' Read member values from a dictionary.'''
+        for key in dct:
+            itemDict= dct[key]
+            item= measurement_record.MeasurementRecord()
+            item.setFromDict(itemDict)

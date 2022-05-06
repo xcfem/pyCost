@@ -40,8 +40,9 @@ class RegBC3(object):
         elif(self.y):
             tmp= self.y
         bc3String= ''
-        for s in tmp:
-            bc3String+= s
+        if(tmp): # if it's composed.
+            for s in tmp:
+                bc3String+= s
         return fiebdc3.regBC3_d(bc3String)
 
 

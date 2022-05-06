@@ -93,7 +93,7 @@ def str_tipo(tipo):
 
 quantitiesCaption= 'Mediciones'
 
-sin_desc_string= u'Sin descomposición'
+sin_desc_string= u'sin_desc'
 
 def to_words(number, genre, lng= 'es'):
     return num2words(number, lang= lng)

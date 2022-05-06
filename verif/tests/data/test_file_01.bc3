@@ -1,0 +1,13 @@
+~V|The generator|FIEBDC-3/2007|The application||ANSI|Example BC3 file|3|8||
+~K|\2\3\3\2\2\2\2\EUR\|0\13\6\\21|\2\\\3\\2\2\2\\2\3\EUR\||
+~C|ROOT##||Root concept|1000400.48|210314|0|
+~D|ROOT##
+|01#\\1
+\02#\\1
+\|
+
+~C|01#||Subconcept 1|148|210314|0|
+~T|01#|Subconcept 1 description|
+
+~C|02#||Subconcept 2|500250.23|210314|0|
+~T|02#|Subconcept 2 description|

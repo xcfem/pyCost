@@ -32,3 +32,15 @@ class Measurable(eBC3.EntBC3):
         if len(self.getLongDescription())>0:
             os.write("~T|" + self.Codigo() + '|' + self.getLongDescription() + '|' + '\n')
 
+    def getDict(self):
+        ''' Return a dictionary containing the object data.'''
+        retval= super(Measurable, self).getDict()
+        retval['long_description']= self.long_description
+        retval['unit']= self.unidad
+        return retval
+        
+    def setFromDict(self,dct):
+        ''' Read member values from a dictionary.'''
+        self.long_description= dct['long_description']
+        self.unidad= dct['unit']
+        super(Measurable, self).setFromDict(dct)

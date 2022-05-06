@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 #EntPyCost.py
+import logging
 
 class EntPyCost(object):
     ''' Root PyCost class.
@@ -13,6 +14,17 @@ class EntPyCost(object):
         :param owner: object to which this object belongs.
         '''
         self.owner= owner
+        
+    def getDict(self):
+        ''' Return a dictionary containing the object data.'''
+        retval= dict()
+        if(not self.owner is None):
+            logging.error("Can't store pointer to owner.")
+        return retval
+        
+    def setFromDict(self,dct):
+        ''' Read member values from a dictionary.'''
+        # Does nothing.
 
     @staticmethod
     def peek(inputFile, length=1):

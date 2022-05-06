@@ -44,9 +44,8 @@ class regBC3(object):
         logging.error('decod_bc3 not implemented.')
         return None
     def decod_str_bc3(self, Str):
-        if(len(Str)>0):
-            strtk= limpia_str(Str)
-            self.decod_bc3(strtk)
+        if(Str and len(Str)>0):
+            self.decod_bc3(Str)
             
     def Write(self, os):
         logging.error('Write not implemented.')
@@ -71,10 +70,24 @@ class regBC3_lista_reg(list, regBC3):
         if not strtk:
             return strtk # empty.
         else:
-            lt= self.T(Str= None)
             for token in strtk:
-                lt.decod_bc3(token)
-                self.append(lt)
+                compData= token.split('\\')
+                while(len(compData)>0):
+                    code= compData.pop(0)
+                    if(len(code)>0): # code not empty.
+                        factor= 1.0
+                        prodRate= 0.0
+                        if(len(compData)>0):
+                            tmp= compData.pop(0)
+                            if(len(tmp)>0):
+                                factor= float(tmp)
+                        if(len(compData)>0):
+                            tmp= compData.pop(0)
+                            if(len(tmp)>0):
+                                prodRate= float(tmp)
+                        lt= self.T(Str= None)
+                        lt.setValues(c= code, f= factor, pr= prodRate)
+                        self.append(lt)
         return strtk
     
     def Write(self, os):
@@ -114,6 +127,17 @@ class regBC3_desc(regBC3):
         self.factor= 1.0 # factor defaults to 1.0
         self.productionRate= 0.0
         self.decod_str_bc3(limpia_str(Str))
+
+    def setValues(self, c, f, pr):
+        ''' Set the values of the object attributes.
+
+        :param c: entity code.
+        :param f: entity factor.
+        :param pr: entity production rate.
+        '''
+        self.codigo= c
+        self.factor= f
+        self.productionRate= pr
         
     def decod_bc3(self, strtk):
         ''' decode tokens.'''
@@ -156,25 +180,27 @@ class regBC3_d(regBC3_lista_reg):
         super(regBC3_d,self).decod_bc3(strtk= strtk_lista_desc)
         return strtk
     
+    @staticmethod
     def isChapter(r, nombres_capitulo):
         '''Return true if the records is a chapter.'''
         retval= r.isChapter()
         if not retval:
-            retval= (nombres_capitulo.find(r.codigo+'#')!= nombres_capitulo.end())
+            tmp= r.codigo+'#'
+            retval= (tmp in nombres_capitulo)
         return retval
-    
-    def filterChapters(nombres_capitulo):
+
+    def filterChapters(self, nombres_capitulo):
         '''Devuelve los elementos de la descomposición que son capítulos.'''
-        retval= regBC3_d()
+        retval= regBC3_d(Str= '')
         for i in self:
-            if isChapter(i,nombres_capitulo):
+            if regBC3_d.isChapter(i,nombres_capitulo):
                 retval.append(i)
         return retval
     
-    def FiltraPrecios(nombres_capitulo):
+    def FiltraPrecios(self, nombres_capitulo):
         '''Devuelve los elementos de la descomposición que 
            son precios elementales o descompuestos.'''
-        retval= regBC3_d()
+        retval= regBC3_d(Str= '')
         for i in self:
             if not isChapter(i,nombres_capitulo):
                 retval.append(i)
@@ -258,6 +284,9 @@ class regBC3_ruta(list, regBC3):
     def decod_bc3(self, strtk):
         '''Decodes string.'''
         self.extend(strtk.split('\\'))
+        # Remove empty element at end.
+        if(len(self[-1])==0):
+            self.pop(-1)
         return strtk
         
     def Chapters():
@@ -279,26 +308,25 @@ class regBC3_m(regBC3):
     :ivar ruta: path Cap/subcap/subsubcap/.../posicion
     :ivar med: (MedArq) mensuration
     '''
-    def __init__(self, strList):
+    def __init__(self, tokens):
+        # Remove empty element at end.
+        if(len(tokens[-1])==0):
+            tokens.pop(-1)
         self.ruta= regBC3_ruta()
-        self.ruta.decod_bc3(strList[0])
-        self.med_total= float(strList[1])
-        self.lista_med= regBC3_lista_med(T= regBC3_linea_med, Str= strList[2])
-        #self.decod_str_bc3(limpia_str(strList[2]))
+        if(len(tokens)>0):
+            self.ruta.decod_bc3(tokens.pop(0))
+        if(len(tokens)>0):
+            self.med_total= float(tokens.pop(0))
+        if(len(tokens)>0):
+            self.decod_str_bc3(tokens)
 
-    def decod_bc3(self, strtk):
-        '''Decodes string.
-           La cadena que se pasa es la que queda a la derecha
-           de ~M|
-        '''
-        strtk_ruta= strtk.get_token('|')
-        self.ruta.decod_bc3(strtk_ruta)
-        tmp= strtk.get_token('|')
-        if(tmp):
-            self.med_total= float(tmp)
-        strtk_lista_med= strtk.get_token('|')
-        self.lista_med.decod_bc3(strtk_lista_med)
-        return strtk
+    def decod_bc3(self, tokens):
+        '''Decodes tokens.'''
+        self.lista_med= MedArq()
+        while (len(tokens)>0):
+            tk= tokens.pop(0)
+            self.lista_med.decod_bc3(tk)
+        return tokens
     
     def Write(self,os):
         os.write("Ruta: ")
@@ -313,20 +341,28 @@ class regBC3_c(regBC3):
         self.resumen= ''
         self.precio= 0.0
         self.tipo= 0
-        self.decod_str_bc3(limpia_str(Str))
+        self.decod_str_bc3(Str)
         
-    def decod_bc3(self,strtk):
-        '''Decodifica la cadena Str'''
-        self.unidad= strtk.get_token('|')
-        self.resumen= strtk.get_token('|')
-        self.tmp= strtk.get_token('|')
-        if tmp:
-            self.precio= float(tmp)
-        self.fecha= strtk.get_token('|')
-        tmp= strtk.get_token('|')
-        if tmp:
-            self.tipo= int(tmp)
-        return strtk
+    def decod_bc3(self, tokens):
+        '''Decodifies tokens.'''
+        if(len(tokens)>0):
+            self.unidad= tokens.pop(0)
+        if(len(tokens)>0):        
+            self.resumen= tokens.pop(0)
+        if(len(tokens)>0):
+            tmp= tokens.pop(0)
+            if(len(tmp)>0):
+                self.precio= float(tmp)
+        if(len(tokens)>0):
+            self.fecha= tokens.pop(0)
+        if(len(tokens)>0):
+            tmp= tokens.pop(0)
+            if(len(tmp)>0):
+                if('%' in tmp):
+                    self.tipo= tmp
+                else:
+                    self.tipo= int(tmp)
+        return tokens
     
     def Write(self,os):
         os.write("Unidad: " + unidad + '\n'
@@ -335,20 +371,17 @@ class regBC3_c(regBC3):
            + "Fecha: " + fecha + '\n'
            + "Tipo: " + tipo + '\n')
 
-
-
 class regBC3_t(regBC3):
     '''Corresponds to a ~T record of BC3.'''
     def __init__(self,Str):
         self.texto= ''
         if(Str):
-            self.decod_str_bc3(limpia_str(Str[0]))
+            self.decod_str_bc3(Str)
         
-    def decod_bc3(self, strtk):
+    def decod_bc3(self, tokens):
         '''Decodification.'''
-        self.texto= strtk.split('|')[0]
-        print('****** texto: ', self.texto)
-        return strtk
+        self.texto= tokens[0]
+        return tokens
     
     def Write(self,os):
         os.write("Texto: " + self.texto + '\n')

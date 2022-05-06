@@ -12,6 +12,7 @@ class Buscadores(dict):
 
 class CuaPre(epc.EntPyCost):
     def __init__(self):
+        super(CuaPre,self).__init__()
         self.elementos= elementary_price_container.ElementaryPrices() #Precios elementales.
         self.unidades= unit_price_container.Descompuestos() #Unidades de obra.
 
@@ -59,7 +60,6 @@ class CuaPre(epc.EntPyCost):
             retval= self.BuscaElementaryPrice(cod)
         return retval
 
-
     def WriteSpre(self):
         self.elementos.WriteSpre()
         ofs_des= std.ofstream("DES001.std",std.ios.out)
@@ -103,10 +103,22 @@ class CuaPre(epc.EntPyCost):
 
 
     def WriteHCalc(self, os):
-        elementos.WriteHCalc(os)
+        self.elementos.WriteHCalc(os)
         self.unidades.WriteHCalc(os)
 
 
     def SimulaDescomp(self, origen, destino):
         self.unidades.SimulaDescomp(origen,destino)
 
+    def getDict(self):
+        ''' Return a dictionary containing the object data.'''
+        retval= super(CuaPre, self).getDict()
+        retval['elementary_prices']= self.elementos.getDict()
+        retval['units']= self.unidades.getDict()
+        return retval
+        
+    def setFromDict(self,dct):
+        ''' Read member values from a dictionary.'''
+        self.elementos.setFromDict(dct['elementary_prices'])
+        self.unidades.setFromDict(dct['units'])
+        super(CuaPre, self).setFromDict(dct)

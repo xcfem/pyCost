@@ -1,0 +1,68 @@
+code: ROOT##
+prices:
+  elementary_prices:
+    SINDESCO:
+      code: SINDESCO
+      long_description: ''
+      price: 1.0
+      title: sin_desc
+      type: 3
+      unit: ''
+  units: {}
+quantities: {}
+sub_chapters:
+  01#:
+    code: 01#
+    prices:
+      elementary_prices:
+        A01:
+          code: A01
+          long_description: Subsubconcept A01 description
+          price: 10.0
+          title: Subsubconcept A01
+          type: 0
+          unit: ''
+      units: {}
+    quantities:
+      0:
+        quantities:
+          0:
+            commentary: Line A01 1
+            height: 1
+            length: 2.0
+            units: 1.0
+            width: 1
+          1:
+            commentary: ''
+            height: 1
+            length: 1
+            units: 1
+            width: 1
+          2:
+            commentary: Line A01 2
+            height: 1
+            length: 2.0
+            units: 2.0
+            width: 2.0
+          3:
+            commentary: ''
+            height: 1
+            length: 1
+            units: 1
+            width: 1
+          4:
+            commentary: ''
+            height: 1
+            length: 1
+            units: 1
+            width: 1
+          5:
+            commentary: ''
+            height: 1
+            length: 1
+            units: 1
+            width: 1
+        ud: A01
+    sub_chapters: {}
+    title: Subconcept 1
+title: Test title

@@ -161,16 +161,14 @@ class ElementaryPrices(concept_dict.ConceptDict):
         if(Str.find("[MAT]")<len(Str)): LeeMatSpre(iS)
 
     def readBC3(self, els):
-        if (len(els)>0):
+        
+        if (els and (len(els)>0)):
             logging.info("Reading elementary prices." + '\n')
             sz_inicial= len(self)
-            el= elementary_price.ElementaryPrice()
             keys= list(self.concepts.keys())
-            print('els= ', els)
             for key in els.keys():
-                print('***** key= ', key)
                 data= els.GetDatosElementaryPrice(key)
-                print('***** data= ', data)
+                el= elementary_price.ElementaryPrice()
                 el.readBC3(data)
                 self.Append(el)
 
@@ -201,3 +199,15 @@ class ElementaryPrices(concept_dict.ConceptDict):
         doc.append(pylatex_utils.ltx_newpage + '\n')
         ImprLtxTipo(mat,os)
 
+    def getDict(self):
+        ''' Return a dictionary containing the object data.'''
+        retval= super(ElementaryPrices, self).getDict()
+        return retval
+        
+    def setFromDict(self,dct):
+        ''' Read member values from a dictionary.'''
+        for key in dct:
+            p= elementary_price.ElementaryPrice(key)
+            itemDict= dct[key]
+            p.setFromDict(itemDict)
+        super(ElementaryPrices, self).setFromDict(dct)

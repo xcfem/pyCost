@@ -14,16 +14,22 @@ pth= os.path.dirname(__file__)
 # print("pth= ", pth)
 if(not pth):
     pth= "."
-inputFile= open(pth+'/data/test_file_01.bc3',mode='r')
+inputFile= open(pth+'/data/test_file_03.bc3',mode='r')
 
 site.readBC3(inputFile)
 
 # Write in YAML format
 import yaml
-with open(pth+'/data/test_file_01.yaml', 'w') as file:
+with open(pth+'/data/test_file_03.yaml', 'w') as file:
     outputs= yaml.dump(site.getDict(), file)
 file.close()
 
+numElementaryPrices= 0
+numQuantities= 0
+for sc in site.subcapitulos:
+    numElementaryPrices+= len(sc.precios.Elementales())
+    numQuantities+= len(sc.quantities)
+    
 # Get test values.
 price= site.getPrice()
 numChapters= len(site.subcapitulos)
@@ -31,12 +37,13 @@ numChapters= len(site.subcapitulos)
 '''
 print('price: ', price)
 print('num chapters: ', numChapters)
+print('num quantities: ', numQuantities)
 '''
 
 import os
 from misc_utils import log_messages as lmsg
 fname= os.path.basename(__file__)
-if ((price==0.0) and (numChapters==2)):
+if ((price==140.0) and (numChapters==1) and (numElementaryPrices==1) and (numQuantities==1)):
     print('test: '+fname+': ok.')
 else:
     lmsg.error('test: '+fname+' ERROR.')

@@ -3,12 +3,10 @@
 from __future__ import division
 from __future__ import print_function
 
-import math
 from pycost.structure import obra
 obra= obra.Obra(cod="test", tit="Test title")
 
 price= obra.getPrice()
-
 
 # print(price)
 
