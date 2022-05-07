@@ -210,4 +210,5 @@ class ElementaryPrices(concept_dict.ConceptDict):
             p= elementary_price.ElementaryPrice(key)
             itemDict= dct[key]
             p.setFromDict(itemDict)
+            self.Append(p)
         super(ElementaryPrices, self).setFromDict(dct)

@@ -166,7 +166,8 @@ class MeasurementRecord(epc.EntPyCost):
         
     def setFromDict(self,dct):
         ''' Read member values from a dictionary.'''
-        self.comentario= dct['comentario']
+        print('HERE keys: ', dct.keys())
+        self.comentario= dct['commentary']
         self.unidades= dct['units']
         self.largo= dct['length']
         self.ancho= dct['width']

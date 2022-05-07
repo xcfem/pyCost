@@ -39,16 +39,17 @@ class UnitPrice(ms.Measurable):
         super(UnitPrice,self).readBC3(r)
 
     def LeeBC3Fase2(self, r, bp):
+        ''' Read the components of the unit.'''
         error= False
         if(len(r.Datos().desc)>0):
             tmp= UnitPrice.ObtienePunteros(r.Datos().desc,bp,error)
             if not error:
-                components= tmp
+                self.components= tmp
             else:
-                logging.error("Error al leer descomposición de la unidad: " + self.Codigo() + '\n')
+                logging.error("Error reading components of unit: " + self.Codigo() + '\n')
 
         else:
-            components= GetSindesco(r.Datos().getPrice(),bp)
+            self.components= GetSindesco(r.Datos().getPrice(),bp)
         return error
 
     def GetSindesco(self, productionRate, bp):
@@ -85,7 +86,7 @@ class UnitPrice(ms.Measurable):
         os.write(self.Codigo() + '|'
            + self.Unidad() + '|'
            + getTitle() + '|')
-        components.WriteSpre(os)
+        self.components.WriteSpre(os)
 
     def WriteBC3(self, os):
         super(UnitPrice,self).WriteBC3(os)

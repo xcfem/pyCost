@@ -121,4 +121,5 @@ class Quantities(list, epy.EntPyCost):
             itemDict= dct[key]
             item= measurement_record.MeasurementRecord()
             item.setFromDict(itemDict)
-        epy.EntPyCost.setFromDict(dct)
+            self.append(item)
+        epy.EntPyCost.setFromDict(self,dct)

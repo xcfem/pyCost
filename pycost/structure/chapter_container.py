@@ -224,5 +224,6 @@ class Subcapitulos(list, epc.EntPyCost):
         ''' Read member values from a dictionary.'''
         for key in dct:
             chapterDict= dct[key]
-            chapter= chapter.Chapter(key)
-            chapter.setFromDict(chapterDict)
+            ch= chapter.Chapter(key)
+            ch.setFromDict(chapterDict)
+            self.append(ch)

@@ -1,3 +1,4 @@
+chapter_quantities: {}
 code: ROOT##
 prices:
   elementary_prices:
@@ -9,22 +10,21 @@ prices:
       type: 3
       unit: ''
   units: {}
-quantities: {}
 sub_chapters:
   01#:
+    chapter_quantities: {}
     code: 01#
     prices:
       elementary_prices: {}
       units: {}
-    quantities: {}
     sub_chapters: {}
     title: Subconcept 1
   02#:
+    chapter_quantities: {}
     code: 02#
     prices:
       elementary_prices: {}
       units: {}
-    quantities: {}
     sub_chapters: {}
     title: Subconcept 2
 title: Test title

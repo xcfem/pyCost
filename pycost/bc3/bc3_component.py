@@ -15,7 +15,7 @@ class BC3Component(fr_entity.EntFR):
         self.ent= e
 
     def getPrice(self):
-        return self.ent.getPrice()*getProduct()
+        return self.ent.getPrice()*self.getProduct()
 
     def getRoundedPrice(self):
         retval= self.ent.getRoundedPrice()
@@ -36,18 +36,14 @@ class BC3Component(fr_entity.EntFR):
         '''For percentages.'''
         return basic_types.human_readable(PrecioSobre(sobre))
 
-
     def getType(self):
         return self.ent.getType()
-
 
     def CodigoEntidad(self):
         return self.ent.Codigo()
 
-
     def isPercentage(self):
         return self.ent.isPercentage()
-
 
     def WriteSpre(self, os):
         if not ((self.CodigoEntidad()).find('%')):
@@ -71,16 +67,25 @@ class BC3Component(fr_entity.EntFR):
         else:
             return pjr.PriceJustificationRecord(self.ent.Codigo(),self.getRoundedProduct(),self.ent.Unidad(),self.ent.getTitle(),False,self.ent.getRoundedPrice(),0.0)
 
-
     def ImprLtxJustPre(self, os, over):
         r= self.getPriceJustificationRecord(over)
         r.ImprLtxJustPre(os)
         return r.getTotal()
-
 
     def writePriceTableTwoIntoLatexDocument(self, doc, over):
         r= self.getPriceJustificationRecord(over)
         r.writePriceTableTwoIntoLatexDocument(doc)
         return r.getTotal()
 
+    def getDict(self):
+        ''' Return a dictionary containing the object data.'''
+        retval= super(BC3Component,self).getDict()
+        retval['ent_code']= self.ent.Codigo()
+        return retval
+        
+    def setFromDict(self,dct):
+        ''' Read member values from a dictionary.'''
+        ent_code= dct['ent_code']
+        logging.error('BC3Component::setFromDict not implemented yet.')
+        super(BC3Component,self).setFromDict(dct)
 

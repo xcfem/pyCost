@@ -165,5 +165,6 @@ class ChapterQuantities(list, epc.EntPyCost):
         ''' Read member values from a dictionary.'''
         for key in dct:
             itemDict= dct[key]
-            item= measurement_record.MeasurementRecord()
+            item= unit_price_quantities.UnitPriceQuantities()
             item.setFromDict(itemDict)
+            self.append(item)

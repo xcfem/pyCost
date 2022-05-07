@@ -1,3 +1,4 @@
+chapter_quantities: {}
 code: ROOT##
 prices:
   elementary_prices:
@@ -9,23 +10,11 @@ prices:
       type: 3
       unit: ''
   units: {}
-quantities: {}
 sub_chapters:
   01#:
-    code: 01#
-    prices:
-      elementary_prices:
-        A01:
-          code: A01
-          long_description: Subsubconcept A01 description
-          price: 10.0
-          title: Subsubconcept A01
-          type: 0
-          unit: ''
-      units: {}
-    quantities:
+    chapter_quantities:
       0:
-        quantities:
+        measurements:
           0:
             commentary: Line A01 1
             height: 1
@@ -63,6 +52,17 @@ sub_chapters:
             units: 1
             width: 1
         ud: A01
+    code: 01#
+    prices:
+      elementary_prices:
+        A01:
+          code: A01
+          long_description: Subsubconcept A01 description
+          price: 10.0
+          title: Subsubconcept A01
+          type: 0
+          unit: ''
+      units: {}
     sub_chapters: {}
     title: Subconcept 1
 title: Test title

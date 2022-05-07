@@ -33,10 +33,10 @@ class UnitPriceQuantities(ptp.UnitPriceQuantitiesBase):
     def getDict(self):
         ''' Return a dictionary containing the object data.'''
         retval= super(UnitPriceQuantities, self).getDict()
-        retval['quantities']= self.quantities.getDict()
+        retval['measurements']= self.quantities.getDict()
         return retval
         
     def setFromDict(self,dct):
         ''' Read member values from a dictionary.'''
-        self.quantities.setFromDict(dct['quantities'])
+        self.quantities.setFromDict(dct['measurements'])
         super(UnitPriceQuantities, self).setFromDict(dct)

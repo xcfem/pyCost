@@ -12,6 +12,7 @@ class EntFR(epc.EntPyCost):
     formatString= '{0:.'+str(precision)+'f}'
 
     def __init__(self, f= 1.0, r=0.0):
+        super(EntFR, self).__init__()
         self.factor= f
         self.productionRate= r
         
@@ -46,4 +47,15 @@ class EntFR(epc.EntPyCost):
         txtRate=  self.formatString.format(self.productionRate)
         os.write(txtFactor + '\\' + txtRate + '\\')
 
-
+    def getDict(self):
+        ''' Return a dictionary containing the object data.'''
+        retval= super(EntFR, self).getDict()
+        retval['factor']= self.factor
+        retval['production_rate']= self.productionRate
+        return retval
+        
+    def setFromDict(self,dct):
+        ''' Read member values from a dictionary.'''
+        self.factor= dct['factor']
+        self.productionRate= dct['production_rate']
+        super(EntFR, self).setFromDict(dct)

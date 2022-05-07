@@ -22,7 +22,7 @@ class Descompuestos(concept_dict.ConceptDict):
         i.Append(j,f,r)
 
     def LeeBC3Fase1(self, cds):
-        '''Lee las unidades de obra a falta de la descomposición.'''
+        '''Read the units whitout its components.'''
         for i in cds:
             reg= cds.getUnitPriceData(i)
             ud= unit_price.UnitPrice()
@@ -31,8 +31,8 @@ class Descompuestos(concept_dict.ConceptDict):
 
 
     def LeeBC3Fase2(self, cds, bp):
-        '''Lee la descomposición de las unidades.'''
-        ud=None
+        '''Reads the components of the unit.'''
+        ud= None
         error= False
         retval= set()
         for i in cds:
@@ -159,5 +159,6 @@ class Descompuestos(concept_dict.ConceptDict):
             p= unit_price.UnitPrice(key)
             itemDict= dct[key]
             p.setFromDict(itemDict)
+            self.Append(p)
         super(Descompuestos, self).setFromDict(dct)
 

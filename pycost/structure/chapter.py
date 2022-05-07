@@ -152,14 +152,14 @@ class Chapter(bc3_entity.EntBC3):
         retval= super(Chapter, self).getDict()
         retval['sub_chapters']= self.subcapitulos.getDict()
         retval['prices']= self.precios.getDict()
-        retval['quantities']= self.quantities.getDict()
+        retval['chapter_quantities']= self.quantities.getDict()
         return retval
         
     def setFromDict(self,dct):
         ''' Read member values from a dictionary.'''
         self.subcapitulos.setFromDict(dct['sub_chapters'])
-        self.prices.setFromDict(dct['prices'])
-        self.quantities.setFromDict(dct['quantities'])
+        self.precios.setFromDict(dct['prices'])
+        self.quantities.setFromDict(dct['chapter_quantities'])
         super(Chapter, self).setFromDict(dct)
     
     def getPrice(self):
@@ -242,6 +242,7 @@ class Chapter(bc3_entity.EntBC3):
 
         if self.quantities:
             doc.append("\\newpage" + '\n')
+            
     def hasQuantities(self):
         '''Returns true if the chapter (or its subchapters) have
            quantities.'''

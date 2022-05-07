@@ -2,6 +2,7 @@
 '''Something that can return the quantities for a unit price.'''
 
 import pylatex
+import logging
 from pycost.prices import unit_price_report
 from pycost.measurements import measurement_detail
 from pycost.utils import basic_types

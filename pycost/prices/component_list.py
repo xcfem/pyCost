@@ -128,5 +128,6 @@ class ComponentList(list, epc.EntPyCost):
             comp= bc3_component.BC3Component(key)
             itemDict= dct[key]
             comp.setFromDict(itemDict)
+            self.append(comp)
         epc.EntPyCost.setFromDict(dct)
 
