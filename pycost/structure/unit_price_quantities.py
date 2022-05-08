@@ -37,6 +37,10 @@ class UnitPriceQuantities(ptp.UnitPriceQuantitiesBase):
         return retval
         
     def setFromDict(self,dct):
-        ''' Read member values from a dictionary.'''
-        self.quantities.setFromDict(dct['measurements'])
-        super(UnitPriceQuantities, self).setFromDict(dct)
+        ''' Read member values from a dictionary.
+
+        :param dct: input dictionary.
+        '''
+        pendingLinks= self.quantities.setFromDict(dct['measurements']) # Links that cannot be set yet.
+        pendingLinks.extend(super(UnitPriceQuantities, self).setFromDict(dct))
+        return pendingLinks

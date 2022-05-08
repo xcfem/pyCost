@@ -5,6 +5,7 @@ import logging
 from pycost.utils import EntPyCost as epc
 from pycost.prices.price_justification import PriceJustificationList as pjl
 from pycost.prices.price_justification import PriceJustificationRecordContainer as pjrc
+from pycost.bc3 import bc3_component
 from pycost.utils import basic_types
 
 class ComponentList(list, epc.EntPyCost):
@@ -123,11 +124,16 @@ class ComponentList(list, epc.EntPyCost):
         return retval
         
     def setFromDict(self,dct):
-        ''' Read member values from a dictionary.'''
+        ''' Read member values from a dictionary.
+
+        :param dct: input dictionary.
+        '''
+        pendingLinks= list() # Links that cannot be set yet.
         for key in dct:
             comp= bc3_component.BC3Component(key)
             itemDict= dct[key]
-            comp.setFromDict(itemDict)
+            pendingLinks.extend(comp.setFromDict(itemDict))
             self.append(comp)
-        epc.EntPyCost.setFromDict(dct)
+        pendingLinks.extend(epc.EntPyCost.setFromDict(self, dct))
+        return pendingLinks
 

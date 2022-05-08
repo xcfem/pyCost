@@ -117,9 +117,11 @@ class Quantities(list, epy.EntPyCost):
         
     def setFromDict(self,dct):
         ''' Read member values from a dictionary.'''
+        pendingLinks= list() # Links that cannot be set yet.
         for key in dct:
             itemDict= dct[key]
             item= measurement_record.MeasurementRecord()
-            item.setFromDict(itemDict)
+            pendingLinks.extend(item.setFromDict(itemDict))
             self.append(item)
-        epy.EntPyCost.setFromDict(self,dct)
+        pendingLinks.extend(epy.EntPyCost.setFromDict(self,dct))
+        return pendingLinks

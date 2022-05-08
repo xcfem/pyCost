@@ -22,9 +22,13 @@ class EntPyCost(object):
             logging.error("Can't store pointer to owner.")
         return retval
         
-    def setFromDict(self,dct):
-        ''' Read member values from a dictionary.'''
-        # Does nothing.
+    def setFromDict(self, dct):
+        ''' Read member values from a dictionary.
+
+        :param dct: input dictionary.
+        '''
+        pendingLinks= list() # Links that cannot be set yet.
+        return pendingLinks
 
     @staticmethod
     def peek(inputFile, length=1):

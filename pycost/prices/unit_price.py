@@ -156,7 +156,11 @@ class UnitPrice(ms.Measurable):
         return retval
         
     def setFromDict(self,dct):
-        ''' Read member values from a dictionary.'''
-        self.components.setFromDict(dct['components'])
-        super(UnitPrice, self).setFromDict(dct)
+        ''' Read member values from a dictionary.
+
+        :param dct: input dictionary.
+        '''
+        pendingLinks= self.components.setFromDict(dct['components']) # Links that cannot be set yet.
+        pendingLinks.extend(super(UnitPrice, self).setFromDict(dct))
+        return pendingLinks
 

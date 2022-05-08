@@ -40,7 +40,10 @@ class Measurable(eBC3.EntBC3):
         return retval
         
     def setFromDict(self,dct):
-        ''' Read member values from a dictionary.'''
+        ''' Read member values from a dictionary.
+
+        :param dct: input dictionary.
+        '''
         self.long_description= dct['long_description']
         self.unidad= dct['unit']
-        super(Measurable, self).setFromDict(dct)
+        return super(Measurable, self).setFromDict(dct)

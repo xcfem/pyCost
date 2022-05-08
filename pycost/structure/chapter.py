@@ -121,6 +121,7 @@ class Chapter(bc3_entity.EntBC3):
             return self
         else:
             return self.subcapitulos.BuscaCodigo(nmb)
+        
     def BuscaCodigo(self, nmb):
         if self.Codigo()==nmb:
             return self
@@ -156,11 +157,34 @@ class Chapter(bc3_entity.EntBC3):
         return retval
         
     def setFromDict(self,dct):
-        ''' Read member values from a dictionary.'''
-        self.subcapitulos.setFromDict(dct['sub_chapters'])
-        self.precios.setFromDict(dct['prices'])
-        self.quantities.setFromDict(dct['chapter_quantities'])
-        super(Chapter, self).setFromDict(dct)
+        ''' Read member values from a dictionary.
+
+        :param dct: input dictionary.
+        '''
+        pendingLinks= self.subcapitulos.setFromDict(dct['sub_chapters'])
+        pendingLinks.extend(self.precios.setFromDict(dct['prices']))
+        pendingLinks.extend(self.quantities.setFromDict(dct['chapter_quantities']))
+        pendingLinks.extend(super(Chapter, self).setFromDict(dct))
+        return pendingLinks
+
+    def solvePendingLinks(self, pendingLinks):
+        ''' Solve object pending links.
+
+        :param pendingLinks: list of pending links.
+        '''
+        for link in pendingLinks:
+            key= link['key']
+            value= self.findPrice(key)
+            if(value):
+                obj= link['object']
+                attribute= link['attr']
+                if(hasattr(obj, attribute)):
+                    setattr(obj, attribute, value)
+                else:
+                    logging.error('attribute: '+attribute+' not found for object: '+str(obj))
+            else:
+                logging.error('price: '+key+' not found.')
+        return pendingLinks
     
     def getPrice(self):
         priceSubC= self.subcapitulos.getPrice()

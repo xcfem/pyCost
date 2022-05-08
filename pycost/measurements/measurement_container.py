@@ -163,8 +163,10 @@ class ChapterQuantities(list, epc.EntPyCost):
         
     def setFromDict(self,dct):
         ''' Read member values from a dictionary.'''
+        pendingLinks= list()
         for key in dct:
             itemDict= dct[key]
             item= unit_price_quantities.UnitPriceQuantities()
-            item.setFromDict(itemDict)
+            pendingLinks.extend(item.setFromDict(itemDict))
             self.append(item)
+        return pendingLinks

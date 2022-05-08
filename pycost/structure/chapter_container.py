@@ -221,9 +221,15 @@ class Subcapitulos(list, epc.EntPyCost):
         return retval
         
     def setFromDict(self,dct):
-        ''' Read member values from a dictionary.'''
+        ''' Read member values from a dictionary.
+
+        :param dct: input dictionary.
+        '''
+        pendingLinks= list() # Links that cannot be set yet.
         for key in dct:
             chapterDict= dct[key]
             ch= chapter.Chapter(key)
-            ch.setFromDict(chapterDict)
+            pendingLinks.extend(ch.setFromDict(chapterDict))
             self.append(ch)
+        pendingLinks.extend(epc.EntPyCost.setFromDict(self, dct))
+        return pendingLinks

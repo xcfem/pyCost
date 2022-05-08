@@ -84,8 +84,14 @@ class BC3Component(fr_entity.EntFR):
         return retval
         
     def setFromDict(self,dct):
-        ''' Read member values from a dictionary.'''
+        ''' Read member values from a dictionary.
+
+        :param dct: input dictionary.
+        '''
+        pendingLinks= list() # Links that cannot be set yet.
         ent_code= dct['ent_code']
-        logging.error('BC3Component::setFromDict not implemented yet.')
-        super(BC3Component,self).setFromDict(dct)
+        self.ent= None
+        pendingLinks.append({'object':self, 'attr':'ent', 'key':ent_code}) 
+        pendingLinks.extend(super(BC3Component,self).setFromDict(dct))
+        return pendingLinks
 

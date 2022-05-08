@@ -118,7 +118,12 @@ class CuaPre(epc.EntPyCost):
         return retval
         
     def setFromDict(self,dct):
-        ''' Read member values from a dictionary.'''
-        self.elementos.setFromDict(dct['elementary_prices'])
-        self.unidades.setFromDict(dct['units'])
-        super(CuaPre, self).setFromDict(dct)
+        ''' Read member values from a dictionary.
+
+        :param dct: input dictionary.
+        '''
+        # pendingLinks: links that cannot be set yet.
+        pendingLinks= self.elementos.setFromDict(dct['elementary_prices'])
+        pendingLinks.extend(self.unidades.setFromDict(dct['units']))
+        pendingLinks.extend(super(CuaPre, self).setFromDict(dct))
+        return pendingLinks

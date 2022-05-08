@@ -177,10 +177,15 @@ class UnitPriceQuantitiesBase(epc.EntPyCost):
         return retval
         
     def setFromDict(self,dct):
-        ''' Read member values from a dictionary.'''
+        ''' Read member values from a dictionary.
+
+        :param dct: input dictionary.
+        '''
+        pendingLinks= list() # Links that cannot be set yet.
         udCode= dct['ud']
         self.ud= None
-        logging.error('UnitPriceQuantitiesBase::setFromDict not implemented yet.')
-        super(UnitPriceQuantitiesBase, self).setFromDict(dct)
+        pendingLinks.append({'object':self, 'attr':'ud', 'key':udCode}) 
+        pendingLinks.extend(super(UnitPriceQuantitiesBase, self).setFromDict(dct))
+        return pendingLinks
 
 

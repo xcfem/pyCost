@@ -205,10 +205,15 @@ class ElementaryPrices(concept_dict.ConceptDict):
         return retval
         
     def setFromDict(self,dct):
-        ''' Read member values from a dictionary.'''
+        ''' Read member values from a dictionary.
+
+        :param dct: input dictionary.
+        '''
+        pendingLinks= list() # Links that cannot be set yet.
         for key in dct:
             p= elementary_price.ElementaryPrice(key)
             itemDict= dct[key]
-            p.setFromDict(itemDict)
+            pendingLinks.extend(p.setFromDict(itemDict))
             self.Append(p)
-        super(ElementaryPrices, self).setFromDict(dct)
+        pendingLinks.extend(super(ElementaryPrices, self).setFromDict(dct))
+        return pendingLinks

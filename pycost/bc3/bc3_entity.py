@@ -28,10 +28,13 @@ class EntBC3(epc.EntPyCost):
         return retval
         
     def setFromDict(self,dct):
-        ''' Read member values from a dictionary.'''
+        ''' Read member values from a dictionary.
+
+        :param dct: input dictionary.
+        '''
         self.codigo= dct['code']
         self.title= dct['title']
-        super(EntBC3, self).setFromDict(dct)
+        return super(EntBC3, self).setFromDict(dct)
     
     def readBC3(self, r):
         ''' Read from BC3 record.'''

@@ -55,7 +55,10 @@ class EntFR(epc.EntPyCost):
         return retval
         
     def setFromDict(self,dct):
-        ''' Read member values from a dictionary.'''
+        ''' Read member values from a dictionary..
+
+        :param dct: input dictionary.
+        '''
         self.factor= dct['factor']
         self.productionRate= dct['production_rate']
-        super(EntFR, self).setFromDict(dct)
+        return super(EntFR, self).setFromDict(dct)

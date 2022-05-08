@@ -53,7 +53,10 @@ class ElementaryPrice(m.Measurable):
         return retval
         
     def setFromDict(self,dct):
-        ''' Read member values from a dictionary.'''
+        ''' Read member values from a dictionary.
+
+        :param dct: input dictionary.
+        '''
         self.tipo= dct['type']
         self.precio= dct['price']
-        super(ElementaryPrice, self).setFromDict(dct)
+        return super(ElementaryPrice, self).setFromDict(dct)

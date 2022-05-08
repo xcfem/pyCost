@@ -154,11 +154,16 @@ class Descompuestos(concept_dict.ConceptDict):
         return retval
         
     def setFromDict(self,dct):
-        ''' Read member values from a dictionary.'''
+        ''' Read member values from a dictionary.
+
+        :param dct: input dictionary.
+        '''
+        pendingLinks= list() # Links that cannot be set yet.
         for key in dct:
             p= unit_price.UnitPrice(key)
             itemDict= dct[key]
-            p.setFromDict(itemDict)
+            pendingLinks.extend(p.setFromDict(itemDict))
             self.Append(p)
-        super(Descompuestos, self).setFromDict(dct)
+        pendingLinks.extend(super(Descompuestos, self).setFromDict(dct))
+        return pendingLinks
 
