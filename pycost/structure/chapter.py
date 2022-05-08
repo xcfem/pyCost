@@ -161,9 +161,9 @@ class Chapter(bc3_entity.EntBC3):
 
         :param dct: input dictionary.
         '''
-        pendingLinks= self.subcapitulos.setFromDict(dct['sub_chapters'])
+        pendingLinks= self.quantities.setFromDict(dct['chapter_quantities'])
         pendingLinks.extend(self.precios.setFromDict(dct['prices']))
-        pendingLinks.extend(self.quantities.setFromDict(dct['chapter_quantities']))
+        pendingLinks.extend(self.subcapitulos.setFromDict(dct['sub_chapters']))
         pendingLinks.extend(super(Chapter, self).setFromDict(dct))
         return pendingLinks
 
@@ -175,6 +175,8 @@ class Chapter(bc3_entity.EntBC3):
         for link in pendingLinks:
             key= link['key']
             value= self.findPrice(key)
+            if(value is None):
+                value= self.BuscaCodigo(key)
             if(value):
                 obj= link['object']
                 attribute= link['attr']

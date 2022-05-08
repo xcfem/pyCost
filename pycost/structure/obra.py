@@ -99,8 +99,8 @@ class Obra(cp.Chapter):
 
     def findPrice(self, cod):
         retval= super(Obra,self).findPrice(cod)
-        if not retval:
-            logging.error('unit price: '+ cod + ' not found.')
+        # if not retval:
+        #     logging.error('unit price: '+ cod + ' not found.')
         return retval
 
     def CodigoBC3(self):

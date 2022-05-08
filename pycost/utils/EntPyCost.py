@@ -7,7 +7,6 @@ class EntPyCost(object):
 
     :ivar owner: object to which this object belongs.
     '''
-    
     def __init__(self, owner= None):
         ''' Constructor.
 
@@ -19,7 +18,8 @@ class EntPyCost(object):
         ''' Return a dictionary containing the object data.'''
         retval= dict()
         if(not self.owner is None):
-            logging.error("Can't store pointer to owner.")
+            ownerCode= self.owner.Codigo()
+            retval['owner_code']= ownerCode
         return retval
         
     def setFromDict(self, dct):
@@ -28,6 +28,10 @@ class EntPyCost(object):
         :param dct: input dictionary.
         '''
         pendingLinks= list() # Links that cannot be set yet.
+        self.owner= None
+        if('owner_code' in dct):
+            ownerCode= dct['owner_code']
+            pendingLinks.append({'object':self, 'attr':'owner', 'key':ownerCode}) 
         return pendingLinks
 
     @staticmethod

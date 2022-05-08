@@ -14,26 +14,27 @@ import os
 pth= os.path.dirname(__file__)
 # print("pth= ", pth)
 if(not pth):
-    pth= "."
-inputFile= open(pth+'/data/test_file_01.yaml',mode='r')
+    pth= '.'
+inputFile= open(pth+'/../data/test_file_06.yaml',mode='r')
 dataDict= yaml.safe_load(inputFile)
 inputFile.close()
 
-site.setFromDict(dataDict)
+pendingLinks= site.solvePendingLinks(site.setFromDict(dataDict))
 
 # Get test values.
 price= site.getPrice()
-numChapters= len(site.subcapitulos)
+refPrice= 1726.36
+ratio= abs(price-refPrice)/refPrice
 
 '''
-print('price: ', price)
-print('num chapters: ', numChapters)
+print("ratio= ", ratio)
 '''
 
 import os
 from misc_utils import log_messages as lmsg
 fname= os.path.basename(__file__)
-if ((price==0.0) and (numChapters==2)):
+if (ratio<1e-5):
     print('test: '+fname+': ok.')
 else:
     lmsg.error('test: '+fname+' ERROR.')
+

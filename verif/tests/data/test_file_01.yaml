@@ -11,20 +11,26 @@ prices:
       unit: ''
   units: {}
 sub_chapters:
-  01#:
-    chapter_quantities: {}
-    code: 01#
-    prices:
-      elementary_prices: {}
-      units: {}
-    sub_chapters: {}
-    title: Subconcept 1
-  02#:
-    chapter_quantities: {}
-    code: 02#
-    prices:
-      elementary_prices: {}
-      units: {}
-    sub_chapters: {}
-    title: Subconcept 2
+  components:
+    01#:
+      chapter_quantities: {}
+      code: 01#
+      prices:
+        elementary_prices: {}
+        units: {}
+      sub_chapters:
+        components: {}
+        owner_code: 01#
+      title: Subconcept 1
+    02#:
+      chapter_quantities: {}
+      code: 02#
+      prices:
+        elementary_prices: {}
+        units: {}
+      sub_chapters:
+        components: {}
+        owner_code: 02#
+      title: Subconcept 2
+  owner_code: ROOT##
 title: Test title

@@ -1,3 +1,4 @@
+chapter_quantities: {}
 code: URBANIZACION_CIUDAD_DE_LA_JUSTICIA##
 prices:
   elementary_prices:
@@ -5314,1458 +5315,1300 @@ prices:
         \ umbral reconstruido de los antiguos sillares acopiados en obra."
       title: ''
       unit: ''
-quantities: {}
 sub_chapters:
-  CAPITULO1#:
-    code: CAPITULO1#
-    prices:
-      elementary_prices: {}
-      units: {}
-    quantities: {}
-    sub_chapters:
-      CAP1.1#:
-        code: CAP1.1#
-        prices:
-          elementary_prices: {}
-          units: {}
-        quantities:
-          0:
-            quantities:
+  components:
+    CAPITULO1#:
+      chapter_quantities: {}
+      code: CAPITULO1#
+      prices:
+        elementary_prices: {}
+        units: {}
+      sub_chapters:
+        components:
+          CAP1.1#:
+            chapter_quantities:
               0:
-                commentary: "Cubicaci\xF3n capa primeros 0.50 m, medidis seg\xFAn\
-                  \ perfil"
-                height: 1
-                length: 3970.0
-                units: 1.0
-                width: 1
+                measurements:
+                  0:
+                    commentary: "Cubicaci\xF3n capa primeros 0.50 m, medidis seg\xFA\
+                      n perfil"
+                    height: 1
+                    length: 3970.0
+                    units: 1.0
+                    width: 1
+                  1:
+                    commentary: "Cubicaci\xF3n hasta obtenci\xF3n de base explanada,\
+                      \ medida seg\xFAn perfil"
+                    height: 1
+                    length: 1240.0
+                    units: 1.0
+                    width: 1
+                  2:
+                    commentary: ''
+                    height: 1
+                    length: 1
+                    units: 1
+                    width: 1
+                ud: DMOVI3001
               1:
-                commentary: "Cubicaci\xF3n hasta obtenci\xF3n de base explanada, medida\
-                  \ seg\xFAn perfil"
-                height: 1
-                length: 1240.0
-                units: 1.0
-                width: 1
+                measurements:
+                  0:
+                    commentary: Total estimado 90% suelo excavado
+                    height: 1
+                    length: 5210.0
+                    units: 0.9
+                    width: 1
+                  1:
+                    commentary: ''
+                    height: 1
+                    length: 1
+                    units: 1
+                    width: 1
+                ud: DSELECRI
               2:
-                commentary: ''
-                height: 1
-                length: 1
-                units: 1
-                width: 1
-            ud: DMOVI3001
-          1:
-            quantities:
-              0:
-                commentary: Total estimado 90% suelo excavado
-                height: 1
-                length: 5210.0
-                units: 0.9
-                width: 1
-              1:
-                commentary: ''
-                height: 1
-                length: 1
-                units: 1
-                width: 1
-            ud: DSELECRI
-          2:
-            quantities:
-              0:
-                commentary: Terraplen total medido sobre perfil
-                height: 1
-                length: 2125.0
-                units: 1.0
-                width: 1
-              1:
-                commentary: ''
-                height: 1
-                length: 1
-                units: 1
-                width: 1
-            ud: RELL0301
-          3:
-            quantities:
-              0:
-                commentary: Partida estimada equivalente al volumen de escombros
-                height: 1
-                length: 5210.0
-                units: 0.1
-                width: 1
-              1:
-                commentary: ''
-                height: 1
-                length: 1
-                units: 1
-                width: 1
-            ud: DTERCAMINOS
-          4:
-            quantities:
-              0:
-                commentary: Acopio piedra
-                height: 1.1
-                length: 121.0
-                units: 1.0
-                width: 4.55
-              1:
-                commentary: ''
-                height: 1
-                length: 1
-                units: 1
-                width: 1
-            ud: DTRTIERRAS
-          5:
-            quantities:
-              0:
-                commentary: 'Demolicion zonas exteriorres en construccion de muros '
-                height: 1
-                length: 180.0
-                units: 1.0
-                width: 0.4
-              1:
-                commentary: Demolicion de acometida de saneamiento
-                height: 1
-                length: 10.0
-                units: 1.0
-                width: 3.0
-              2:
-                commentary: ''
-                height: 1
-                length: 1
-                units: 1
-                width: 1
-            ud: DEMpav04a
-        sub_chapters: {}
-        title: MOVIMIENTO DE TIERRAS
-      CAP1.10#:
-        code: CAP1.10#
-        prices:
-          elementary_prices:
-            DESPAVCAUCHO:
-              code: DESPAVCAUCHO
-              long_description: "Suministro y extendido de pavimento confortplay o\
-                \ equivalente, segun especificaciones del P.P.T.P., incluso preparaci\xF3\
-                n del terreno y elementos de remate."
-              price: 117.65
-              title: Suministro y extendido de pavimento confortplay o equivalente,
-                segun especificaciones del P.P.T.P.
-              type: 0
-              unit: M2
-          units: {}
-        quantities:
-          0:
-            quantities:
-              0:
-                commentary: Pavimento juego tipo 1
-                height: 1
-                length: 88.0
-                units: 1.0
-                width: 1
-              1:
-                commentary: "Pavimento juego tipo 2\t"
-                height: 1
-                length: 77.0
-                units: 1.0
-                width: 1
-              2:
-                commentary: ''
-                height: 1
-                length: 1
-                units: 1
-                width: 1
-            ud: DESPAVCAUCHO
-        sub_chapters: {}
-        title: MOBILIARIO URBANO
-      CAP1.2#:
-        code: CAP1.2#
-        prices:
-          elementary_prices:
-            CATATUB:
-              code: CATATUB
-              long_description: "Conexi\xF3n a tubo de alcantrillado existente DN\
-                \ 400 mm y desvio de aguas, incluyendo corte de tubo existente para\
-                \ formaci\xF3n de bancada y canal, vertido de hormig\xF3n HM-20 y\
-                \ aplacado con losetas cer\xE1micas."
-              price: 446.08
-              title: "Conexi\xF3n a tubo de alcantarillado existente DN 400 mm y desvio\
-                \ de aguas, incluyendo corte de tubo existente para formaci\xF3n de\
-                \ bancada y canal, vertido de hormig\xF3n HM-20 y aplacado con losetas\
-                \ cer\xE1micas."
-              type: 0
-              unit: PA
-          units: {}
-        quantities:
-          0:
-            quantities:
-              0:
-                commentary: Tramo DN315
-                height: 1.83
-                length: 55.0
-                units: 1.0
-                width: 1
-              1:
-                commentary: Tramo DN200
-                height: 1.2
-                length: 55.0
-                units: 1.0
-                width: 1
-              2:
-                commentary: Tramo Dn160
-                height: 1.0
-                length: 25.0
-                units: 1.0
-                width: 1
+                measurements:
+                  0:
+                    commentary: Terraplen total medido sobre perfil
+                    height: 1
+                    length: 2125.0
+                    units: 1.0
+                    width: 1
+                  1:
+                    commentary: ''
+                    height: 1
+                    length: 1
+                    units: 1
+                    width: 1
+                ud: RELL0301
               3:
-                commentary: 'Escavacion canaletas '
-                height: 0.2
-                length: 182.0
-                units: 1.0
-                width: 0.5
+                measurements:
+                  0:
+                    commentary: Partida estimada equivalente al volumen de escombros
+                    height: 1
+                    length: 5210.0
+                    units: 0.1
+                    width: 1
+                  1:
+                    commentary: ''
+                    height: 1
+                    length: 1
+                    units: 1
+                    width: 1
+                ud: DTERCAMINOS
               4:
-                commentary: ''
-                height: 1
-                length: 1
-                units: 1
-                width: 1
-            ud: DEXZANJAT
-          1:
-            quantities:
-              0:
-                commentary: Tramo DN315
-                height: 0.7
-                length: 55.0
-                units: 1.0
-                width: 0.9
-              1:
-                commentary: Tuberia a descontar
-                height: 0.08
-                length: 55.0
-                units: -1.0
-                width: 1
-              2:
-                commentary: Tramo DN200
-                height: 0.6
-                length: 55.0
-                units: 1.0
-                width: 0.7
-              3:
-                commentary: "Tuber\xEDa a descontar"
-                height: 0.03
-                length: 55.0
-                units: -1.0
-                width: 1
-              4:
-                commentary: Tuberia DN160
-                height: 0.6
-                length: 20.0
-                units: 1.0
-                width: 0.7
+                measurements:
+                  0:
+                    commentary: Acopio piedra
+                    height: 1.1
+                    length: 121.0
+                    units: 1.0
+                    width: 4.55
+                  1:
+                    commentary: ''
+                    height: 1
+                    length: 1
+                    units: 1
+                    width: 1
+                ud: DTRTIERRAS
               5:
-                commentary: "Tuber\xEDa a descontar"
-                height: 0.02
-                length: 20.0
-                units: -1.0
-                width: 1
-              6:
-                commentary: ''
-                height: 1
-                length: 1
-                units: 1
-                width: 1
-            ud: DARENA6
-          2:
-            quantities:
+                measurements:
+                  0:
+                    commentary: 'Demolicion zonas exteriorres en construccion de muros '
+                    height: 1
+                    length: 180.0
+                    units: 1.0
+                    width: 0.4
+                  1:
+                    commentary: Demolicion de acometida de saneamiento
+                    height: 1
+                    length: 10.0
+                    units: 1.0
+                    width: 3.0
+                  2:
+                    commentary: ''
+                    height: 1
+                    length: 1
+                    units: 1
+                    width: 1
+                ud: DEMpav04a
+            code: CAP1.1#
+            prices:
+              elementary_prices: {}
+              units: {}
+            sub_chapters:
+              components: {}
+              owner_code: CAP1.1#
+            title: MOVIMIENTO DE TIERRAS
+          CAP1.10#:
+            chapter_quantities:
               0:
-                commentary: Relleno zanja DN315 ( Excavacion -relleno arena)
-                height: 1
-                length: 66.05
-                units: 1.0
-                width: 1
-              1:
-                commentary: Relleno zanja DN200 ( Excavacion -relleno arena)
-                height: 1
-                length: 42.9
-                units: 1.0
-                width: 1
-              2:
-                commentary: Relleno zanja DN160 ( Excavacion -relleno arena)
-                height: 1
-                length: 16.9
-                units: 1.0
-                width: 1
-              3:
-                commentary: ''
-                height: 1
-                length: 1
-                units: 1
-                width: 1
-            ud: DZAHORRAS
-          3:
-            quantities:
-              0:
-                commentary: ''
-                height: 1
-                length: 1
-                units: 3.0
-                width: 1
-              1:
-                commentary: ''
-                height: 1
-                length: 1
-                units: 1
-                width: 1
-            ud: POZO0202
-          4:
-            quantities:
-              0:
-                commentary: ''
-                height: 1
-                length: 1
-                units: 2.0
-                width: 1
-              1:
-                commentary: ''
-                height: 1
-                length: 1
-                units: 1
-                width: 1
-            ud: DPOMIXTO110
-          5:
-            quantities:
-              0:
-                commentary: ''
-                height: 1
-                length: 1
-                units: 1.0
-                width: 1
-              1:
-                commentary: ''
-                height: 1
-                length: 1
-                units: 1
-                width: 1
-            ud: CATATUB
-        sub_chapters: {}
-        title: RED DE DRENAJE
-      CAP1.3#:
-        code: CAP1.3#
-        prices:
-          elementary_prices: {}
-          units: {}
-        quantities:
-          0:
-            quantities:
-              0:
-                commentary: "Excavaci\xF3n zapatas Muro 1"
-                height: 1.2
-                length: 32.03
-                units: 1.0
-                width: 0.7
-              1:
-                commentary: "Excavaci\xF3n zapatas Muro 2"
-                height: 1.2
-                length: 38.32
-                units: 1.0
-                width: 0.7
-              2:
-                commentary: "Excavaci\xF3n zapatas Muro 3 "
-                height: 1.2
-                length: 47.78
-                units: 1.0
-                width: 0.7
-              3:
-                commentary: "Excavaci\xF3n zapatas Muro 4"
-                height: 1.2
-                length: 57.54
-                units: 1.0
-                width: 0.7
-              4:
-                commentary: "Excavaci\xF3n zapatas Muro 5"
-                height: 1.2
-                length: 36.65
-                units: 1.0
-                width: 0.7
-              5:
-                commentary: "Excavaci\xF3n zapatas Muro 6"
-                height: 1.2
-                length: 49.87
-                units: 1.0
-                width: 0.7
-              6:
-                commentary: "Excavaci\xF3n zapatas Muro 7"
-                height: 1.2
-                length: 38.33
-                units: 1.0
-                width: 0.7
-              7:
-                commentary: "Excavaci\xF3n zapatas Muro 8"
-                height: 1.2
-                length: 28.98
-                units: 1.0
-                width: 0.7
-              8:
-                commentary: "Excavaci\xF3n zapatas Muro 9 "
-                height: 1.2
-                length: 25.45
-                units: 1.0
-                width: 0.7
-              9:
-                commentary: "Excavaci\xF3n zapatas Muro 10"
-                height: 1.2
-                length: 46.38
-                units: 1.0
-                width: 0.7
-              10:
-                commentary: "Excavaci\xF3n zapatas Muro 11"
-                height: 1.2
-                length: 85.27
-                units: 1.0
-                width: 0.7
-              11:
-                commentary: "Excavaci\xF3n zapatas Muro 11"
-                height: 1.2
-                length: 8.26
-                units: 1.0
-                width: 0.7
-              12:
-                commentary: ''
-                height: 1
-                length: 1
-                units: 1
-                width: 1
-            ud: DEXZANJAT
-          1:
-            quantities:
-              0:
-                commentary: "Materia excavaci\xF3n"
-                height: 1.0
-                length: 415.56
-                units: 1.0
-                width: 1.0
-              1:
-                commentary: ''
-                height: 1
-                length: 1
-                units: 1
-                width: 1
-            ud: DTRTIERRAS1
-          2:
-            quantities:
-              0:
-                commentary: "Superficie medida en alzado Muro n\xBA 1 de 0.80 metros "
-                height: 1
-                length: 1.56
-                units: 1.0
-                width: 0.8
-              1:
-                commentary: "Superficie medida en alzado Muro n\xBA 1 de1.10 metros "
-                height: 1
-                length: 1.62
-                units: 1.0
-                width: 1.1
-              2:
-                commentary: "Superficie medida en alzado Muro n\xBA 2 de 0.80 metros "
-                height: 1
-                length: 1.34
-                units: 1.0
-                width: 0.8
-              3:
-                commentary: "Superficie medida en alzado Muro n\xBA 2 de 1.10 metros "
-                height: 1
-                length: 2.52
-                units: 1.0
-                width: 1.1
-              4:
-                commentary: "Superficie medida en alzado Muro n\xBA3 de 0.80 metros "
-                height: 1
-                length: 1.63
-                units: 1.0
-                width: 0.8
-              5:
-                commentary: "Superficie medida en alzado Muro n\xBA3 de 1.10 metros "
-                height: 1
-                length: 2.8
-                units: 1.0
-                width: 1.1
-              6:
-                commentary: "Superficie medida en alzado Muro n\xBA4 de 0.80 metros "
-                height: 1
-                length: 1.56
-                units: 1.0
-                width: 0.8
-              7:
-                commentary: "Superficie medida en alzado Muro n\xBA4 de 1.10 metros "
-                height: 1
-                length: 4.11
-                units: 1.0
-                width: 1.1
-              8:
-                commentary: "Superficie medida en alzado Muro n\xBA 5 de 0.80 metros "
-                height: 1
-                length: 1.57
-                units: 1.0
-                width: 0.8
-              9:
-                commentary: "Superficie medida en alzado Muro n\xBA 5 de 1.10 metros "
-                height: 1
-                length: 2.07
-                units: 1.0
-                width: 1.1
-              10:
-                commentary: "Superficie medida en alzado Muro n\xBA 6 de 0.80 metros "
-                height: 1
-                length: 2.07
-                units: 1.0
-                width: 0.8
-              11:
-                commentary: "Superficie medida en alzado Muro n\xBA6 de 1.10 metros "
-                height: 1
-                length: 2.9
-                units: 1.0
-                width: 1.1
-              12:
-                commentary: "Superficie medida en alzado Muro n\xBA 7 de 0.80 metros "
-                height: 1
-                length: 3.83
-                units: 1.0
-                width: 0.8
-              13:
-                commentary: "Superficie medida en alzado Muro n\xBA 8 de 0.80 metros "
-                height: 1
-                length: 2.89
-                units: 1.0
-                width: 0.8
-              14:
-                commentary: "Superficie medida en alzado Muro n\xBA 9 de 0.80 metros "
-                height: 1
-                length: 2.53
-                units: 1.0
-                width: 0.8
-              15:
-                commentary: "Superficie medida en alzado Muro n\xBA10 de 0.80 metros "
-                height: 1
-                length: 2.54
-                units: 1.0
-                width: 0.8
-              16:
-                commentary: "Superficie medida en alzado Muro n\xBA 10 de 1.10 metros "
-                height: 1
-                length: 2.55
-                units: 1.0
-                width: 1.1
-              17:
-                commentary: "Superficie medida en alzado Muro n\xBA 11 de 0.80 metros "
-                height: 1
-                length: 5.54
-                units: 1.0
-                width: 0.8
-              18:
-                commentary: "Superficie medida en alzado Muro n\xBA 11 de 1.10 metros "
-                height: 1
-                length: 3.2
-                units: 1.0
-                width: 1.1
-              19:
-                commentary: "Superficie medida en alzado Muro n\xBA 12 de 0.80 metros "
-                height: 1
-                length: 0.82
-                units: 1.0
-                width: 0.8
-              20:
-                commentary: ''
-                height: 1
-                length: 1
-                units: 1
-                width: 1
-            ud: CRL0310
-          3:
-            quantities:
-              0:
-                commentary: "Hormigon en formaci\xF3n de zapatas"
-                height: 1
-                length: 1
-                units: 1
-                width: 1
-              1:
-                commentary: "Superficie medida en alzado Muro n\xBA 1 de 0.80 metros "
-                height: 1
-                length: 10.09
-                units: 1.0
-                width: 0.8
-              2:
-                commentary: "Superficie medida en alzado Muro n\xBA 1 de1.10 metros "
-                height: 1
-                length: 9.74
-                units: 1.0
-                width: 1.1
-              3:
-                commentary: "Superficie medida en alzado Muro n\xBA 2 de 0.80 metros "
-                height: 1
-                length: 8.79
-                units: 1.0
-                width: 0.8
-              4:
-                commentary: "Superficie medida en alzado Muro n\xBA 2 de 1.10 metros "
-                height: 1
-                length: 15.18
-                units: 1.0
-                width: 1.1
-              5:
-                commentary: "Superficie medida en alzado Muro n\xBA3 de 0.80 metros "
-                height: 1
-                length: 10.62
-                units: 1.0
-                width: 0.8
-              6:
-                commentary: "Superficie medida en alzado Muro n\xBA3 de 1.10 metros "
-                height: 1
-                length: 16.85
-                units: 1.0
-                width: 1.1
-              7:
-                commentary: "Superficie medida en alzado Muro n\xBA4 de 0.80 metros "
-                height: 1
-                length: 9.98
-                units: 1.0
-                width: 0.8
-              8:
-                commentary: "Superficie medida en alzado Muro n\xBA4 de 1.10 metros "
-                height: 1
-                length: 25.51
-                units: 1.0
-                width: 1.1
-              9:
-                commentary: "Superficie medida en alzado Muro n\xBA 5 de 0.80 metros "
-                height: 1
-                length: 9.96
-                units: 1.0
-                width: 0.8
-              10:
-                commentary: "Superficie medida en alzado Muro n\xBA 5 de 1.10 metros "
-                height: 1
-                length: 12.44
-                units: 1.0
-                width: 1.1
-              11:
-                commentary: "Superficie medida en alzado Muro n\xBA 6 de 0.80 metros "
-                height: 1
-                length: 12.98
-                units: 1.0
-                width: 0.8
-              12:
-                commentary: "Superficie medida en alzado Muro n\xBA6 de 1.10 metros "
-                height: 1
-                length: 17.42
-                units: 1.0
-                width: 1.1
-              13:
-                commentary: "Superficie medida en alzado Muro n\xBA 7 de 0.80 metros "
-                height: 1
-                length: 22.99
-                units: 1.0
-                width: 0.8
-              14:
-                commentary: "Superficie medida en alzado Muro n\xBA 8 de 0.80 metros "
-                height: 1
-                length: 17.38
-                units: 1.0
-                width: 0.8
-              15:
-                commentary: "Superficie medida en alzado Muro n\xBA 9 de 0.80 metros "
-                height: 1
-                length: 15.4
-                units: 1.0
-                width: 0.8
-              16:
-                commentary: "Superficie medida en alzado Muro n\xBA10 de 0.80 metros "
-                height: 1
-                length: 15.66
-                units: 1.0
-                width: 0.8
-              17:
-                commentary: "Superficie medida en alzado Muro n\xBA 10 de 1.10 metros "
-                height: 1
-                length: 15.31
-                units: 1.0
-                width: 1.1
-              18:
-                commentary: "Superficie medida en alzado Muro n\xBA 11 de 0.80 metros "
-                height: 1
-                length: 33.55
-                units: 1.0
-                width: 0.8
-              19:
-                commentary: "Superficie medida en alzado Muro n\xBA 11 de 1.10 metros "
-                height: 1
-                length: 19.31
-                units: 1.0
-                width: 1.1
-              20:
-                commentary: "Superficie medida en alzado Muro n\xBA 12 de 0.80 metros "
-                height: 1
-                length: 4.72
-                units: 1.0
-                width: 0.8
-              21:
-                commentary: "Hormigon en formaci\xF3n de alzados"
-                height: 1
-                length: 1
-                units: 1
-                width: 1
-              22:
-                commentary: Superficie Alzado M1
-                height: 1
-                length: 31.67
-                units: 1.0
-                width: 0.3
-              23:
-                commentary: Superficie Alzado M2
-                height: 1
-                length: 44.07
-                units: 1.0
-                width: 0.3
-              24:
-                commentary: Superficie Alzado M3
-                height: 1
-                length: 52.77
-                units: 1.0
-                width: 0.3
-              25:
-                commentary: Superficie Alzado M4
-                height: 1
-                length: 69.28
-                units: 1.0
-                width: 0.3
-              26:
-                commentary: Superficie Alzado M5
-                height: 1
-                length: 31.56
-                units: 1.0
-                width: 0.3
-              27:
-                commentary: Superficie Alzado M6
-                height: 1
-                length: 42.19
-                units: 1.0
-                width: 0.3
-              28:
-                commentary: Superficie Alzado M7
-                height: 1
-                length: 32.52
-                units: 1.0
-                width: 0.3
-              29:
-                commentary: Superficie Alzado M8
-                height: 1
-                length: 25.53
-                units: 1.0
-                width: 0.3
-              30:
-                commentary: Superficie Alzado M9
-                height: 1
-                length: 19.14
-                units: 1.0
-                width: 0.3
-              31:
-                commentary: Superficie Alzado M10
-                height: 1
-                length: 49.6
-                units: 1.0
-                width: 0.3
-              32:
-                commentary: Superficie Alzado M11
-                height: 1
-                length: 66.07
-                units: 1.0
-                width: 0.3
-              33:
-                commentary: Superficie Alzado M12
-                height: 1
-                length: 8.88
-                units: 1.0
-                width: 0.3
-              34:
-                commentary: ''
-                height: 1
-                length: 1
-                units: 1
-                width: 1
-            ud: DHA30
-          4:
-            quantities:
-              0:
-                commentary: ' zapatas Muro 1'
-                height: 1.0
-                length: 32.03
-                units: 1.0
-                width: 0.7
-              1:
-                commentary: ' zapatas Muro 2'
-                height: 1.0
-                length: 38.32
-                units: 1.0
-                width: 0.7
-              2:
-                commentary: ' zapatas Muro 3 '
-                height: 1.0
-                length: 47.78
-                units: 1.0
-                width: 0.7
-              3:
-                commentary: ' zapatas Muro 4'
-                height: 1.0
-                length: 57.54
-                units: 1.0
-                width: 0.7
-              4:
-                commentary: zapatas Muro 5
-                height: 1.0
-                length: 36.65
-                units: 1.0
-                width: 0.7
-              5:
-                commentary: ' zapatas Muro 6'
-                height: 1.0
-                length: 49.87
-                units: 1.0
-                width: 0.7
-              6:
-                commentary: ' zapatas Muro 7'
-                height: 1.0
-                length: 38.33
-                units: 1.0
-                width: 0.7
-              7:
-                commentary: ' zapatas Muro 8'
-                height: 1.0
-                length: 28.98
-                units: 1.0
-                width: 0.7
-              8:
-                commentary: ' zapatas Muro 9 '
-                height: 1.0
-                length: 25.45
-                units: 1.0
-                width: 0.7
-              9:
-                commentary: zapatas Muro 10
-                height: 1.0
-                length: 46.38
-                units: 1.0
-                width: 0.7
-              10:
-                commentary: ' zapatas Muro 11'
-                height: 1.0
-                length: 85.27
-                units: 1.0
-                width: 0.7
-              11:
-                commentary: ' zapatas Muro 12'
-                height: 1.0
-                length: 8.26
-                units: 1.0
-                width: 0.7
-              12:
-                commentary: ''
-                height: 1
-                length: 1
-                units: 1
-                width: 1
-            ud: ENCOzapatas
-          5:
-            quantities:
-              0:
-                commentary: Superficie Alzado M1
-                height: 1
-                length: 31.67
-                units: 1.0
-                width: 0.3
-              1:
-                commentary: Superficie Alzado M2
-                height: 1
-                length: 44.07
-                units: 1.0
-                width: 0.3
-              2:
-                commentary: Superficie Alzado M3
-                height: 1
-                length: 52.77
-                units: 1.0
-                width: 0.3
-              3:
-                commentary: Superficie Alzado M4
-                height: 1
-                length: 69.28
-                units: 1.0
-                width: 0.3
-              4:
-                commentary: Superficie Alzado M5
-                height: 1
-                length: 31.56
-                units: 1.0
-                width: 0.3
-              5:
-                commentary: Superficie Alzado M6
-                height: 1
-                length: 42.19
-                units: 1.0
-                width: 0.3
-              6:
-                commentary: Superficie Alzado M7
-                height: 1
-                length: 32.52
-                units: 1.0
-                width: 0.3
-              7:
-                commentary: Superficie Alzado M8
-                height: 1
-                length: 25.53
-                units: 1.0
-                width: 0.3
-              8:
-                commentary: Superficie Alzado M9
-                height: 1
-                length: 19.14
-                units: 1.0
-                width: 0.3
-              9:
-                commentary: Superficie Alzado M10
-                height: 1
-                length: 49.6
-                units: 1.0
-                width: 0.3
-              10:
-                commentary: Superficie Alzado M11
-                height: 1
-                length: 66.07
-                units: 1.0
-                width: 0.3
-              11:
-                commentary: Superficie Alzado M12
-                height: 1
-                length: 8.88
-                units: 1.0
-                width: 0.3
-              12:
-                commentary: ''
-                height: 1
-                length: 1
-                units: 1
-                width: 1
-            ud: ENCOFenol1
-          6:
-            quantities:
-              0:
-                commentary: ' zapatasTipo 1'
-                height: 5.0
-                length: 192.11
-                units: 0.62
-                width: 4.69
-              1:
-                commentary: ' zapatas Tipo 2'
-                height: 5.0
-                length: 224.65
-                units: 0.62
-                width: 4.15
-              2:
-                commentary: ' zapatas Tipo 3 '
-                height: 5.0
-                length: 8.26
-                units: 0.62
-                width: 4.15
-              3:
-                commentary: ''
-                height: 1
-                length: 1
-                units: 1
-                width: 1
-            ud: ACERO0103
-        sub_chapters: {}
-        title: MUROS DE HORMIGON
-      CAP1.4#:
-        code: CAP1.4#
-        prices:
-          elementary_prices:
-            PAELEC1:
-              code: PAELEC1
-              long_description: "P.A. de abono \xEDntegro para la adaptaci\xF3n del\
-                \ cuadro de protecci\xF3n y maniobra existente y la conexi\xF3n de\
-                \ los nuevos circuitos de la Plaza, incluyendo elementos de protecci\xF3\
-                n y maniobra, conexiones y material auxiliar"
-              price: 250.0
-              title: Acometida cuadro existente
-              type: 0
-              unit: Ud
-            PAELEC2:
-              code: PAELEC2
-              long_description: "P.A. de abono \xEDntegro para la legalizaci\xF3n\
-                \ de la instalaci\xF3n el\xE9ctrica, incluyendo proyecto, en su caso,\
-                \ bolet\xEDn del instalador, gestiones y tasas."
-              price: 150.0
-              title: Boletin instalador
-              type: 0
-              unit: Ud
-          units: {}
-        quantities:
-          0:
-            quantities:
-              0:
-                commentary: "Canalizaci\xF3n tipo 1"
-                height: 0.2
-                length: 55.0
-                units: 1.0
-                width: 0.3
-              1:
-                commentary: "Canalizaci\xF3n tipo 2"
-                height: 0.4
-                length: 45.0
-                units: 1.0
-                width: 0.3
-              2:
-                commentary: "Canalizaci\xF3n tipo 3"
-                height: 0.4
-                length: 319.0
-                units: 1.0
-                width: 0.4
-              3:
-                commentary: ''
-                height: 1
-                length: 1
-                units: 1
-                width: 1
-            ud: DEXZANJAT
-          1:
-            quantities:
-              0:
-                commentary: "Canaliozaci\xF3n tipo 3"
-                height: 1
-                length: 319.0
-                units: 1.0
-                width: 1
-              1:
-                commentary: ''
-                height: 1
-                length: 1
-                units: 1
-                width: 1
-            ud: DCANA1203
-          2:
-            quantities:
-              0:
-                commentary: "Canalizaci\xF3n Tipo 2"
-                height: 1
-                length: 45.0
-                units: 1.0
-                width: 1
-              1:
-                commentary: ''
-                height: 1
-                length: 1
-                units: 1
-                width: 1
-            ud: DCANA1208
-          3:
-            quantities:
-              0:
-                commentary: "Canalizaci\xF3n tipo 1"
-                height: 1
-                length: 55.0
-                units: 1.0
-                width: 1
-              1:
-                commentary: ''
-                height: 1
-                length: 1
-                units: 1
-                width: 1
-            ud: DCANA1204
-          4:
-            quantities:
-              0:
-                commentary: ''
-                height: 1
-                length: 1
-                units: 26.0
-                width: 1
-              1:
-                commentary: ''
-                height: 1
-                length: 1
-                units: 1
-                width: 1
-            ud: DCANA4001
-          5:
-            quantities:
-              0:
-                commentary: ''
-                height: 1
-                length: 1
-                units: 8.0
-                width: 1
-              1:
-                commentary: ''
-                height: 1
-                length: 1
-                units: 1
-                width: 1
-            ud: DCANA4020
-          6:
-            quantities:
-              0:
-                commentary: ''
-                height: 1
-                length: 1
-                units: 18.0
-                width: 1
-              1:
-                commentary: ''
-                height: 1
-                length: 1
-                units: 1
-                width: 1
-            ud: CIMENTA01
-          7:
-            quantities:
-              0:
-                commentary: ''
-                height: 1
-                length: 1
-                units: 5.0
-                width: 1
-              1:
-                commentary: ''
-                height: 1
-                length: 1
-                units: 1
-                width: 1
-            ud: CIMENTA02
-          8:
-            quantities:
-              0:
-                commentary: ''
-                height: 1
-                length: 5.0
-                units: 18.0
-                width: 1
-              1:
-                commentary: ''
-                height: 1
-                length: 9.0
-                units: 3.0
-                width: 1
-              2:
-                commentary: ''
-                height: 1
-                length: 9.0
-                units: 2.0
-                width: 3.0
-              3:
-                commentary: ''
-                height: 1
-                length: 3.0
-                units: 4.0
-                width: 1
-              4:
-                commentary: ''
-                height: 1
-                length: 1
-                units: 1
-                width: 1
-            ud: DALCB0225
-        sub_chapters: {}
-        title: ALUMBRADO
-      CAP1.5#:
-        code: CAP1.5#
-        prices:
-          elementary_prices:
-            PAAGUA1:
-              code: PAAGUA1
-              long_description: "P.A. Taponamiento acometida agua potable antiguo\
-                \ cuartel militar, seg\xFAn presupuesto A.M.A.E.M. ( 11/04/2016)"
-              price: 310.0
-              title: P.A. Taponamiento acometida agua potable antiguo cuartel militar.
-              type: 0
-              unit: UD
-            PAAGUA2:
-              code: PAAGUA2
-              long_description: "P.A. de acometida agua potable a Red de Riego DN50,\
-                \ seg\xFAn presupuesto A.M.A.E.M. ( 11/04/2016)."
-              price: 2000.0
-              title: P.A. de acometida agua potable a Red de Riego DN50.
-              type: 0
-              unit: Ud
-            PV04:
-              code: PV04
-              long_description: "V\xE1lvula de cierre manual modelo GAER de Regaber,\
-                \ o equivalente DN50, cuerpo de fundici\xF3n, compuerta de fundici\xF3\
-                n, recubierta de EPDM, tornillo de acero inoxidable, anillo y cojinetes\
-                \ de lat\xF3n cz134 y juntas t\xF3ricas de NBR."
-              price: 100.0
-              title: "V\xE1lvula de cierre manual GAER DN50."
-              type: 0
-              unit: Ud
-            PV05:
-              code: PV05
-              long_description: "V\xE1lvula reductora de presi\xF3n y caudal\xEDmetro,\
-                \ hidrante modelo BM de Regaber, o equivalente,  DN50, cuerpo de fundici\xF3\
-                n, uni\xF3n rosca hembra."
-              price: 200.0
-              title: "V\xE1lvula reductora de presi\xF3n y caudal\xEDmetro, hidranteBM\
-                \ de Regaber, DN50."
-              type: 0
-              unit: Ud
-            PV06:
-              code: PV06
-              long_description: "Programador TMC-424 TORO de 24 estaciones con sistema\
-                \ de comunicaci\xF3n TRICOMM, seg\xFAn prescripciones del P.P.T.P."
-              price: 2500.0
-              title: "Programador TMC-424 TORO de 24 estaciones con sistema de comunicaci\xF3\
-                n TRICOMM"
-              type: 0
-              unit: Ud
-            PVC03:
-              code: PVC03
-              long_description: "V\xE1lvula de diafragma DN 50mm, modelo GALsol de\
-                \ Regaber, o equivalente, con soleoide incorporado de 24 VAC, construida\
-                \ en poliamida reforzada con fibra de vidrio, diafrafma de caucho\
-                \ y tornillos de acero inoxidable, conexiones rosca hembra normalizadas."
-              price: 73.53
-              title: "V\xE1lvula de diafragma DN 50 mm, modelo GALsol de Regaber,\
-                \ o equivalente, con soleoide incorporado de 24 VAC, construida en\
-                \ poliamida reforzada con fibra de vidrio, diafrafma de caucho y tornillos\
-                \ de acero inoxidable, conexiones rosca hembra normalizadas."
-              type: 0
-              unit: Ud
-          units: {}
-        quantities:
-          0:
-            quantities:
-              0:
-                commentary: Acometida
-                height: 1
-                length: 88.0
-                units: 1.0
-                width: 1
-              1:
-                commentary: Circuito 1
-                height: 1
-                length: 107.0
-                units: 1.0
-                width: 1
-              2:
-                commentary: Circuito 2
-                height: 1
-                length: 44.0
-                units: 1.0
-                width: 1
-              3:
-                commentary: Circuito 3
-                height: 1
-                length: 104.0
-                units: 1.0
-                width: 1
-              4:
-                commentary: Circuito 4
-                height: 1
-                length: 118.0
-                units: 1.0
-                width: 1
-              5:
-                commentary: Circuito 5
-                height: 1
-                length: 96.0
-                units: 1.0
-                width: 1
-              6:
-                commentary: Circuito 6
-                height: 1
-                length: 192.0
-                units: 1.0
-                width: 1
-              7:
-                commentary: Colectores
-                height: 1
-                length: 148.0
-                units: 1.0
-                width: 1
-              8:
-                commentary: ''
-                height: 1
-                length: 1
-                units: 1
-                width: 1
-            ud: FFB19450
-          1:
-            quantities:
-              0:
-                commentary: Mazizos arbustivas
-                height: 1
-                length: 145.0
-                units: 1.0
-                width: 1
-              1:
-                commentary: ''
-                height: 1
-                length: 1
-                units: 1
-                width: 1
-            ud: FFB26455
-          2:
-            quantities:
-              0:
-                commentary: Red de alcorques
-                height: 1
-                length: 50.0
-                units: 1.0
-                width: 1
-              1:
-                commentary: Fuentes  bebedero
-                height: 1
-                length: 70.0
-                units: 1.0
-                width: 1
-              2:
-                commentary: ''
-                height: 1
-                length: 1
-                units: 1
-                width: 1
-            ud: FFB26425
-          3:
-            quantities:
-              0:
-                commentary: Mazizo 1
-                height: 1
-                length: 65.0
-                units: 1.0
-                width: 1
-              1:
-                commentary: Pradera 1
-                height: 1
-                length: 287.0
-                units: 1.0
-                width: 1
-              2:
-                commentary: Pradera 2
-                height: 1
-                length: 45.0
-                units: 1.0
-                width: 1
-              3:
-                commentary: Pradera 3
-                height: 1
-                length: 223.0
-                units: 1.0
-                width: 1
-              4:
-                commentary: Pradera 4
-                height: 1
-                length: 131.0
-                units: 1.0
-                width: 1
-              5:
-                commentary: Mazizo 2
-                height: 1
-                length: 84.0
-                units: 1.0
-                width: 1
-              6:
-                commentary: Pradera 5
-                height: 1
-                length: 133.0
-                units: 1.0
-                width: 1
-              7:
-                commentary: Pradera 6
-                height: 1
-                length: 592.0
-                units: 1.0
-                width: 1
-              8:
-                commentary: Mazizo 3
-                height: 1
-                length: 128.0
-                units: 1.0
-                width: 1
-              9:
-                commentary: Pradera 7
-                height: 1
-                length: 202.0
-                units: 1.0
-                width: 1
-              10:
-                commentary: Pradera 8
-                height: 1
-                length: 360.0
-                units: 1.0
-                width: 1
-              11:
-                commentary: Pradera 9
-                height: 1
-                length: 275.0
-                units: 1.0
-                width: 1
-              12:
-                commentary: Pradera 10
-                height: 1
-                length: 136.0
-                units: 1.0
-                width: 1
-              13:
-                commentary: Pradera 11
-                height: 1
-                length: 161.0
-                units: 1.0
-                width: 1
-              14:
-                commentary: Alcorques
-                height: 1
-                length: 80.0
-                units: 1.0
-                width: 1
-              15:
-                commentary: mazizos parterres
-                height: 1
-                length: 216.0
-                units: 1.0
-                width: 1
-              16:
-                commentary: ''
-                height: 1
-                length: 1
-                units: 1
-                width: 1
-            ud: DRIESUB
-        sub_chapters: {}
-        title: RED DE RIEGO
-      CAP1.6#:
-        code: CAP1.6#
-        prices:
-          elementary_prices: {}
-          units: {}
-        quantities: {}
-        sub_chapters:
-          CAP1.6.1#:
-            code: CAP1.6.1#
+                measurements:
+                  0:
+                    commentary: Pavimento juego tipo 1
+                    height: 1
+                    length: 88.0
+                    units: 1.0
+                    width: 1
+                  1:
+                    commentary: "Pavimento juego tipo 2\t"
+                    height: 1
+                    length: 77.0
+                    units: 1.0
+                    width: 1
+                  2:
+                    commentary: ''
+                    height: 1
+                    length: 1
+                    units: 1
+                    width: 1
+                ud: DESPAVCAUCHO
+            code: CAP1.10#
             prices:
               elementary_prices:
-                ARENA10:
-                  code: ARENA10
-                  long_description: Arena caliza puesta en obra
-                  price: 7.0
-                  title: Arena caliza puesta en obra
+                DESPAVCAUCHO:
+                  code: DESPAVCAUCHO
+                  long_description: "Suministro y extendido de pavimento confortplay\
+                    \ o equivalente, segun especificaciones del P.P.T.P., incluso\
+                    \ preparaci\xF3n del terreno y elementos de remate."
+                  price: 117.65
+                  title: Suministro y extendido de pavimento confortplay o equivalente,
+                    segun especificaciones del P.P.T.P.
                   type: 0
-                  unit: Tn
-                TERRNATU:
-                  code: TERRNATU
-                  long_description: Tierra natural de textura francoarenosa, procedente
-                    de prestamo de hasta 60 km.
-                  price: 15.69
-                  title: Tierra natural de prestamo
-                  type: 0
-                  unit: M3
+                  unit: M2
               units: {}
-            quantities:
+            sub_chapters:
+              components: {}
+              owner_code: CAP1.10#
+            title: MOBILIARIO URBANO
+          CAP1.2#:
+            chapter_quantities:
               0:
-                quantities:
+                measurements:
+                  0:
+                    commentary: Tramo DN315
+                    height: 1.83
+                    length: 55.0
+                    units: 1.0
+                    width: 1
+                  1:
+                    commentary: Tramo DN200
+                    height: 1.2
+                    length: 55.0
+                    units: 1.0
+                    width: 1
+                  2:
+                    commentary: Tramo Dn160
+                    height: 1.0
+                    length: 25.0
+                    units: 1.0
+                    width: 1
+                  3:
+                    commentary: 'Escavacion canaletas '
+                    height: 0.2
+                    length: 182.0
+                    units: 1.0
+                    width: 0.5
+                  4:
+                    commentary: ''
+                    height: 1
+                    length: 1
+                    units: 1
+                    width: 1
+                ud: DEXZANJAT
+              1:
+                measurements:
+                  0:
+                    commentary: Tramo DN315
+                    height: 0.7
+                    length: 55.0
+                    units: 1.0
+                    width: 0.9
+                  1:
+                    commentary: Tuberia a descontar
+                    height: 0.08
+                    length: 55.0
+                    units: -1.0
+                    width: 1
+                  2:
+                    commentary: Tramo DN200
+                    height: 0.6
+                    length: 55.0
+                    units: 1.0
+                    width: 0.7
+                  3:
+                    commentary: "Tuber\xEDa a descontar"
+                    height: 0.03
+                    length: 55.0
+                    units: -1.0
+                    width: 1
+                  4:
+                    commentary: Tuberia DN160
+                    height: 0.6
+                    length: 20.0
+                    units: 1.0
+                    width: 0.7
+                  5:
+                    commentary: "Tuber\xEDa a descontar"
+                    height: 0.02
+                    length: 20.0
+                    units: -1.0
+                    width: 1
+                  6:
+                    commentary: ''
+                    height: 1
+                    length: 1
+                    units: 1
+                    width: 1
+                ud: DARENA6
+              2:
+                measurements:
+                  0:
+                    commentary: Relleno zanja DN315 ( Excavacion -relleno arena)
+                    height: 1
+                    length: 66.05
+                    units: 1.0
+                    width: 1
+                  1:
+                    commentary: Relleno zanja DN200 ( Excavacion -relleno arena)
+                    height: 1
+                    length: 42.9
+                    units: 1.0
+                    width: 1
+                  2:
+                    commentary: Relleno zanja DN160 ( Excavacion -relleno arena)
+                    height: 1
+                    length: 16.9
+                    units: 1.0
+                    width: 1
+                  3:
+                    commentary: ''
+                    height: 1
+                    length: 1
+                    units: 1
+                    width: 1
+                ud: DZAHORRAS
+              3:
+                measurements:
+                  0:
+                    commentary: ''
+                    height: 1
+                    length: 1
+                    units: 3.0
+                    width: 1
+                  1:
+                    commentary: ''
+                    height: 1
+                    length: 1
+                    units: 1
+                    width: 1
+                ud: POZO0202
+              4:
+                measurements:
+                  0:
+                    commentary: ''
+                    height: 1
+                    length: 1
+                    units: 2.0
+                    width: 1
+                  1:
+                    commentary: ''
+                    height: 1
+                    length: 1
+                    units: 1
+                    width: 1
+                ud: DPOMIXTO110
+              5:
+                measurements:
+                  0:
+                    commentary: ''
+                    height: 1
+                    length: 1
+                    units: 1.0
+                    width: 1
+                  1:
+                    commentary: ''
+                    height: 1
+                    length: 1
+                    units: 1
+                    width: 1
+                ud: CATATUB
+            code: CAP1.2#
+            prices:
+              elementary_prices:
+                CATATUB:
+                  code: CATATUB
+                  long_description: "Conexi\xF3n a tubo de alcantrillado existente\
+                    \ DN 400 mm y desvio de aguas, incluyendo corte de tubo existente\
+                    \ para formaci\xF3n de bancada y canal, vertido de hormig\xF3\
+                    n HM-20 y aplacado con losetas cer\xE1micas."
+                  price: 446.08
+                  title: "Conexi\xF3n a tubo de alcantarillado existente DN 400 mm\
+                    \ y desvio de aguas, incluyendo corte de tubo existente para formaci\xF3\
+                    n de bancada y canal, vertido de hormig\xF3n HM-20 y aplacado\
+                    \ con losetas cer\xE1micas."
+                  type: 0
+                  unit: PA
+              units: {}
+            sub_chapters:
+              components: {}
+              owner_code: CAP1.2#
+            title: RED DE DRENAJE
+          CAP1.3#:
+            chapter_quantities:
+              0:
+                measurements:
+                  0:
+                    commentary: "Excavaci\xF3n zapatas Muro 1"
+                    height: 1.2
+                    length: 32.03
+                    units: 1.0
+                    width: 0.7
+                  1:
+                    commentary: "Excavaci\xF3n zapatas Muro 2"
+                    height: 1.2
+                    length: 38.32
+                    units: 1.0
+                    width: 0.7
+                  2:
+                    commentary: "Excavaci\xF3n zapatas Muro 3 "
+                    height: 1.2
+                    length: 47.78
+                    units: 1.0
+                    width: 0.7
+                  3:
+                    commentary: "Excavaci\xF3n zapatas Muro 4"
+                    height: 1.2
+                    length: 57.54
+                    units: 1.0
+                    width: 0.7
+                  4:
+                    commentary: "Excavaci\xF3n zapatas Muro 5"
+                    height: 1.2
+                    length: 36.65
+                    units: 1.0
+                    width: 0.7
+                  5:
+                    commentary: "Excavaci\xF3n zapatas Muro 6"
+                    height: 1.2
+                    length: 49.87
+                    units: 1.0
+                    width: 0.7
+                  6:
+                    commentary: "Excavaci\xF3n zapatas Muro 7"
+                    height: 1.2
+                    length: 38.33
+                    units: 1.0
+                    width: 0.7
+                  7:
+                    commentary: "Excavaci\xF3n zapatas Muro 8"
+                    height: 1.2
+                    length: 28.98
+                    units: 1.0
+                    width: 0.7
+                  8:
+                    commentary: "Excavaci\xF3n zapatas Muro 9 "
+                    height: 1.2
+                    length: 25.45
+                    units: 1.0
+                    width: 0.7
+                  9:
+                    commentary: "Excavaci\xF3n zapatas Muro 10"
+                    height: 1.2
+                    length: 46.38
+                    units: 1.0
+                    width: 0.7
+                  10:
+                    commentary: "Excavaci\xF3n zapatas Muro 11"
+                    height: 1.2
+                    length: 85.27
+                    units: 1.0
+                    width: 0.7
+                  11:
+                    commentary: "Excavaci\xF3n zapatas Muro 11"
+                    height: 1.2
+                    length: 8.26
+                    units: 1.0
+                    width: 0.7
+                  12:
+                    commentary: ''
+                    height: 1
+                    length: 1
+                    units: 1
+                    width: 1
+                ud: DEXZANJAT
+              1:
+                measurements:
+                  0:
+                    commentary: "Materia excavaci\xF3n"
+                    height: 1.0
+                    length: 415.56
+                    units: 1.0
+                    width: 1.0
+                  1:
+                    commentary: ''
+                    height: 1
+                    length: 1
+                    units: 1
+                    width: 1
+                ud: DTRTIERRAS1
+              2:
+                measurements:
+                  0:
+                    commentary: "Superficie medida en alzado Muro n\xBA 1 de 0.80\
+                      \ metros "
+                    height: 1
+                    length: 1.56
+                    units: 1.0
+                    width: 0.8
+                  1:
+                    commentary: "Superficie medida en alzado Muro n\xBA 1 de1.10 metros "
+                    height: 1
+                    length: 1.62
+                    units: 1.0
+                    width: 1.1
+                  2:
+                    commentary: "Superficie medida en alzado Muro n\xBA 2 de 0.80\
+                      \ metros "
+                    height: 1
+                    length: 1.34
+                    units: 1.0
+                    width: 0.8
+                  3:
+                    commentary: "Superficie medida en alzado Muro n\xBA 2 de 1.10\
+                      \ metros "
+                    height: 1
+                    length: 2.52
+                    units: 1.0
+                    width: 1.1
+                  4:
+                    commentary: "Superficie medida en alzado Muro n\xBA3 de 0.80 metros "
+                    height: 1
+                    length: 1.63
+                    units: 1.0
+                    width: 0.8
+                  5:
+                    commentary: "Superficie medida en alzado Muro n\xBA3 de 1.10 metros "
+                    height: 1
+                    length: 2.8
+                    units: 1.0
+                    width: 1.1
+                  6:
+                    commentary: "Superficie medida en alzado Muro n\xBA4 de 0.80 metros "
+                    height: 1
+                    length: 1.56
+                    units: 1.0
+                    width: 0.8
+                  7:
+                    commentary: "Superficie medida en alzado Muro n\xBA4 de 1.10 metros "
+                    height: 1
+                    length: 4.11
+                    units: 1.0
+                    width: 1.1
+                  8:
+                    commentary: "Superficie medida en alzado Muro n\xBA 5 de 0.80\
+                      \ metros "
+                    height: 1
+                    length: 1.57
+                    units: 1.0
+                    width: 0.8
+                  9:
+                    commentary: "Superficie medida en alzado Muro n\xBA 5 de 1.10\
+                      \ metros "
+                    height: 1
+                    length: 2.07
+                    units: 1.0
+                    width: 1.1
+                  10:
+                    commentary: "Superficie medida en alzado Muro n\xBA 6 de 0.80\
+                      \ metros "
+                    height: 1
+                    length: 2.07
+                    units: 1.0
+                    width: 0.8
+                  11:
+                    commentary: "Superficie medida en alzado Muro n\xBA6 de 1.10 metros "
+                    height: 1
+                    length: 2.9
+                    units: 1.0
+                    width: 1.1
+                  12:
+                    commentary: "Superficie medida en alzado Muro n\xBA 7 de 0.80\
+                      \ metros "
+                    height: 1
+                    length: 3.83
+                    units: 1.0
+                    width: 0.8
+                  13:
+                    commentary: "Superficie medida en alzado Muro n\xBA 8 de 0.80\
+                      \ metros "
+                    height: 1
+                    length: 2.89
+                    units: 1.0
+                    width: 0.8
+                  14:
+                    commentary: "Superficie medida en alzado Muro n\xBA 9 de 0.80\
+                      \ metros "
+                    height: 1
+                    length: 2.53
+                    units: 1.0
+                    width: 0.8
+                  15:
+                    commentary: "Superficie medida en alzado Muro n\xBA10 de 0.80\
+                      \ metros "
+                    height: 1
+                    length: 2.54
+                    units: 1.0
+                    width: 0.8
+                  16:
+                    commentary: "Superficie medida en alzado Muro n\xBA 10 de 1.10\
+                      \ metros "
+                    height: 1
+                    length: 2.55
+                    units: 1.0
+                    width: 1.1
+                  17:
+                    commentary: "Superficie medida en alzado Muro n\xBA 11 de 0.80\
+                      \ metros "
+                    height: 1
+                    length: 5.54
+                    units: 1.0
+                    width: 0.8
+                  18:
+                    commentary: "Superficie medida en alzado Muro n\xBA 11 de 1.10\
+                      \ metros "
+                    height: 1
+                    length: 3.2
+                    units: 1.0
+                    width: 1.1
+                  19:
+                    commentary: "Superficie medida en alzado Muro n\xBA 12 de 0.80\
+                      \ metros "
+                    height: 1
+                    length: 0.82
+                    units: 1.0
+                    width: 0.8
+                  20:
+                    commentary: ''
+                    height: 1
+                    length: 1
+                    units: 1
+                    width: 1
+                ud: CRL0310
+              3:
+                measurements:
+                  0:
+                    commentary: "Hormigon en formaci\xF3n de zapatas"
+                    height: 1
+                    length: 1
+                    units: 1
+                    width: 1
+                  1:
+                    commentary: "Superficie medida en alzado Muro n\xBA 1 de 0.80\
+                      \ metros "
+                    height: 1
+                    length: 10.09
+                    units: 1.0
+                    width: 0.8
+                  2:
+                    commentary: "Superficie medida en alzado Muro n\xBA 1 de1.10 metros "
+                    height: 1
+                    length: 9.74
+                    units: 1.0
+                    width: 1.1
+                  3:
+                    commentary: "Superficie medida en alzado Muro n\xBA 2 de 0.80\
+                      \ metros "
+                    height: 1
+                    length: 8.79
+                    units: 1.0
+                    width: 0.8
+                  4:
+                    commentary: "Superficie medida en alzado Muro n\xBA 2 de 1.10\
+                      \ metros "
+                    height: 1
+                    length: 15.18
+                    units: 1.0
+                    width: 1.1
+                  5:
+                    commentary: "Superficie medida en alzado Muro n\xBA3 de 0.80 metros "
+                    height: 1
+                    length: 10.62
+                    units: 1.0
+                    width: 0.8
+                  6:
+                    commentary: "Superficie medida en alzado Muro n\xBA3 de 1.10 metros "
+                    height: 1
+                    length: 16.85
+                    units: 1.0
+                    width: 1.1
+                  7:
+                    commentary: "Superficie medida en alzado Muro n\xBA4 de 0.80 metros "
+                    height: 1
+                    length: 9.98
+                    units: 1.0
+                    width: 0.8
+                  8:
+                    commentary: "Superficie medida en alzado Muro n\xBA4 de 1.10 metros "
+                    height: 1
+                    length: 25.51
+                    units: 1.0
+                    width: 1.1
+                  9:
+                    commentary: "Superficie medida en alzado Muro n\xBA 5 de 0.80\
+                      \ metros "
+                    height: 1
+                    length: 9.96
+                    units: 1.0
+                    width: 0.8
+                  10:
+                    commentary: "Superficie medida en alzado Muro n\xBA 5 de 1.10\
+                      \ metros "
+                    height: 1
+                    length: 12.44
+                    units: 1.0
+                    width: 1.1
+                  11:
+                    commentary: "Superficie medida en alzado Muro n\xBA 6 de 0.80\
+                      \ metros "
+                    height: 1
+                    length: 12.98
+                    units: 1.0
+                    width: 0.8
+                  12:
+                    commentary: "Superficie medida en alzado Muro n\xBA6 de 1.10 metros "
+                    height: 1
+                    length: 17.42
+                    units: 1.0
+                    width: 1.1
+                  13:
+                    commentary: "Superficie medida en alzado Muro n\xBA 7 de 0.80\
+                      \ metros "
+                    height: 1
+                    length: 22.99
+                    units: 1.0
+                    width: 0.8
+                  14:
+                    commentary: "Superficie medida en alzado Muro n\xBA 8 de 0.80\
+                      \ metros "
+                    height: 1
+                    length: 17.38
+                    units: 1.0
+                    width: 0.8
+                  15:
+                    commentary: "Superficie medida en alzado Muro n\xBA 9 de 0.80\
+                      \ metros "
+                    height: 1
+                    length: 15.4
+                    units: 1.0
+                    width: 0.8
+                  16:
+                    commentary: "Superficie medida en alzado Muro n\xBA10 de 0.80\
+                      \ metros "
+                    height: 1
+                    length: 15.66
+                    units: 1.0
+                    width: 0.8
+                  17:
+                    commentary: "Superficie medida en alzado Muro n\xBA 10 de 1.10\
+                      \ metros "
+                    height: 1
+                    length: 15.31
+                    units: 1.0
+                    width: 1.1
+                  18:
+                    commentary: "Superficie medida en alzado Muro n\xBA 11 de 0.80\
+                      \ metros "
+                    height: 1
+                    length: 33.55
+                    units: 1.0
+                    width: 0.8
+                  19:
+                    commentary: "Superficie medida en alzado Muro n\xBA 11 de 1.10\
+                      \ metros "
+                    height: 1
+                    length: 19.31
+                    units: 1.0
+                    width: 1.1
+                  20:
+                    commentary: "Superficie medida en alzado Muro n\xBA 12 de 0.80\
+                      \ metros "
+                    height: 1
+                    length: 4.72
+                    units: 1.0
+                    width: 0.8
+                  21:
+                    commentary: "Hormigon en formaci\xF3n de alzados"
+                    height: 1
+                    length: 1
+                    units: 1
+                    width: 1
+                  22:
+                    commentary: Superficie Alzado M1
+                    height: 1
+                    length: 31.67
+                    units: 1.0
+                    width: 0.3
+                  23:
+                    commentary: Superficie Alzado M2
+                    height: 1
+                    length: 44.07
+                    units: 1.0
+                    width: 0.3
+                  24:
+                    commentary: Superficie Alzado M3
+                    height: 1
+                    length: 52.77
+                    units: 1.0
+                    width: 0.3
+                  25:
+                    commentary: Superficie Alzado M4
+                    height: 1
+                    length: 69.28
+                    units: 1.0
+                    width: 0.3
+                  26:
+                    commentary: Superficie Alzado M5
+                    height: 1
+                    length: 31.56
+                    units: 1.0
+                    width: 0.3
+                  27:
+                    commentary: Superficie Alzado M6
+                    height: 1
+                    length: 42.19
+                    units: 1.0
+                    width: 0.3
+                  28:
+                    commentary: Superficie Alzado M7
+                    height: 1
+                    length: 32.52
+                    units: 1.0
+                    width: 0.3
+                  29:
+                    commentary: Superficie Alzado M8
+                    height: 1
+                    length: 25.53
+                    units: 1.0
+                    width: 0.3
+                  30:
+                    commentary: Superficie Alzado M9
+                    height: 1
+                    length: 19.14
+                    units: 1.0
+                    width: 0.3
+                  31:
+                    commentary: Superficie Alzado M10
+                    height: 1
+                    length: 49.6
+                    units: 1.0
+                    width: 0.3
+                  32:
+                    commentary: Superficie Alzado M11
+                    height: 1
+                    length: 66.07
+                    units: 1.0
+                    width: 0.3
+                  33:
+                    commentary: Superficie Alzado M12
+                    height: 1
+                    length: 8.88
+                    units: 1.0
+                    width: 0.3
+                  34:
+                    commentary: ''
+                    height: 1
+                    length: 1
+                    units: 1
+                    width: 1
+                ud: DHA30
+              4:
+                measurements:
+                  0:
+                    commentary: ' zapatas Muro 1'
+                    height: 1.0
+                    length: 32.03
+                    units: 1.0
+                    width: 0.7
+                  1:
+                    commentary: ' zapatas Muro 2'
+                    height: 1.0
+                    length: 38.32
+                    units: 1.0
+                    width: 0.7
+                  2:
+                    commentary: ' zapatas Muro 3 '
+                    height: 1.0
+                    length: 47.78
+                    units: 1.0
+                    width: 0.7
+                  3:
+                    commentary: ' zapatas Muro 4'
+                    height: 1.0
+                    length: 57.54
+                    units: 1.0
+                    width: 0.7
+                  4:
+                    commentary: zapatas Muro 5
+                    height: 1.0
+                    length: 36.65
+                    units: 1.0
+                    width: 0.7
+                  5:
+                    commentary: ' zapatas Muro 6'
+                    height: 1.0
+                    length: 49.87
+                    units: 1.0
+                    width: 0.7
+                  6:
+                    commentary: ' zapatas Muro 7'
+                    height: 1.0
+                    length: 38.33
+                    units: 1.0
+                    width: 0.7
+                  7:
+                    commentary: ' zapatas Muro 8'
+                    height: 1.0
+                    length: 28.98
+                    units: 1.0
+                    width: 0.7
+                  8:
+                    commentary: ' zapatas Muro 9 '
+                    height: 1.0
+                    length: 25.45
+                    units: 1.0
+                    width: 0.7
+                  9:
+                    commentary: zapatas Muro 10
+                    height: 1.0
+                    length: 46.38
+                    units: 1.0
+                    width: 0.7
+                  10:
+                    commentary: ' zapatas Muro 11'
+                    height: 1.0
+                    length: 85.27
+                    units: 1.0
+                    width: 0.7
+                  11:
+                    commentary: ' zapatas Muro 12'
+                    height: 1.0
+                    length: 8.26
+                    units: 1.0
+                    width: 0.7
+                  12:
+                    commentary: ''
+                    height: 1
+                    length: 1
+                    units: 1
+                    width: 1
+                ud: ENCOzapatas
+              5:
+                measurements:
+                  0:
+                    commentary: Superficie Alzado M1
+                    height: 1
+                    length: 31.67
+                    units: 1.0
+                    width: 0.3
+                  1:
+                    commentary: Superficie Alzado M2
+                    height: 1
+                    length: 44.07
+                    units: 1.0
+                    width: 0.3
+                  2:
+                    commentary: Superficie Alzado M3
+                    height: 1
+                    length: 52.77
+                    units: 1.0
+                    width: 0.3
+                  3:
+                    commentary: Superficie Alzado M4
+                    height: 1
+                    length: 69.28
+                    units: 1.0
+                    width: 0.3
+                  4:
+                    commentary: Superficie Alzado M5
+                    height: 1
+                    length: 31.56
+                    units: 1.0
+                    width: 0.3
+                  5:
+                    commentary: Superficie Alzado M6
+                    height: 1
+                    length: 42.19
+                    units: 1.0
+                    width: 0.3
+                  6:
+                    commentary: Superficie Alzado M7
+                    height: 1
+                    length: 32.52
+                    units: 1.0
+                    width: 0.3
+                  7:
+                    commentary: Superficie Alzado M8
+                    height: 1
+                    length: 25.53
+                    units: 1.0
+                    width: 0.3
+                  8:
+                    commentary: Superficie Alzado M9
+                    height: 1
+                    length: 19.14
+                    units: 1.0
+                    width: 0.3
+                  9:
+                    commentary: Superficie Alzado M10
+                    height: 1
+                    length: 49.6
+                    units: 1.0
+                    width: 0.3
+                  10:
+                    commentary: Superficie Alzado M11
+                    height: 1
+                    length: 66.07
+                    units: 1.0
+                    width: 0.3
+                  11:
+                    commentary: Superficie Alzado M12
+                    height: 1
+                    length: 8.88
+                    units: 1.0
+                    width: 0.3
+                  12:
+                    commentary: ''
+                    height: 1
+                    length: 1
+                    units: 1
+                    width: 1
+                ud: ENCOFenol1
+              6:
+                measurements:
+                  0:
+                    commentary: ' zapatasTipo 1'
+                    height: 5.0
+                    length: 192.11
+                    units: 0.62
+                    width: 4.69
+                  1:
+                    commentary: ' zapatas Tipo 2'
+                    height: 5.0
+                    length: 224.65
+                    units: 0.62
+                    width: 4.15
+                  2:
+                    commentary: ' zapatas Tipo 3 '
+                    height: 5.0
+                    length: 8.26
+                    units: 0.62
+                    width: 4.15
+                  3:
+                    commentary: ''
+                    height: 1
+                    length: 1
+                    units: 1
+                    width: 1
+                ud: ACERO0103
+            code: CAP1.3#
+            prices:
+              elementary_prices: {}
+              units: {}
+            sub_chapters:
+              components: {}
+              owner_code: CAP1.3#
+            title: MUROS DE HORMIGON
+          CAP1.4#:
+            chapter_quantities:
+              0:
+                measurements:
+                  0:
+                    commentary: "Canalizaci\xF3n tipo 1"
+                    height: 0.2
+                    length: 55.0
+                    units: 1.0
+                    width: 0.3
+                  1:
+                    commentary: "Canalizaci\xF3n tipo 2"
+                    height: 0.4
+                    length: 45.0
+                    units: 1.0
+                    width: 0.3
+                  2:
+                    commentary: "Canalizaci\xF3n tipo 3"
+                    height: 0.4
+                    length: 319.0
+                    units: 1.0
+                    width: 0.4
+                  3:
+                    commentary: ''
+                    height: 1
+                    length: 1
+                    units: 1
+                    width: 1
+                ud: DEXZANJAT
+              1:
+                measurements:
+                  0:
+                    commentary: "Canaliozaci\xF3n tipo 3"
+                    height: 1
+                    length: 319.0
+                    units: 1.0
+                    width: 1
+                  1:
+                    commentary: ''
+                    height: 1
+                    length: 1
+                    units: 1
+                    width: 1
+                ud: DCANA1203
+              2:
+                measurements:
+                  0:
+                    commentary: "Canalizaci\xF3n Tipo 2"
+                    height: 1
+                    length: 45.0
+                    units: 1.0
+                    width: 1
+                  1:
+                    commentary: ''
+                    height: 1
+                    length: 1
+                    units: 1
+                    width: 1
+                ud: DCANA1208
+              3:
+                measurements:
+                  0:
+                    commentary: "Canalizaci\xF3n tipo 1"
+                    height: 1
+                    length: 55.0
+                    units: 1.0
+                    width: 1
+                  1:
+                    commentary: ''
+                    height: 1
+                    length: 1
+                    units: 1
+                    width: 1
+                ud: DCANA1204
+              4:
+                measurements:
+                  0:
+                    commentary: ''
+                    height: 1
+                    length: 1
+                    units: 26.0
+                    width: 1
+                  1:
+                    commentary: ''
+                    height: 1
+                    length: 1
+                    units: 1
+                    width: 1
+                ud: DCANA4001
+              5:
+                measurements:
+                  0:
+                    commentary: ''
+                    height: 1
+                    length: 1
+                    units: 8.0
+                    width: 1
+                  1:
+                    commentary: ''
+                    height: 1
+                    length: 1
+                    units: 1
+                    width: 1
+                ud: DCANA4020
+              6:
+                measurements:
+                  0:
+                    commentary: ''
+                    height: 1
+                    length: 1
+                    units: 18.0
+                    width: 1
+                  1:
+                    commentary: ''
+                    height: 1
+                    length: 1
+                    units: 1
+                    width: 1
+                ud: CIMENTA01
+              7:
+                measurements:
+                  0:
+                    commentary: ''
+                    height: 1
+                    length: 1
+                    units: 5.0
+                    width: 1
+                  1:
+                    commentary: ''
+                    height: 1
+                    length: 1
+                    units: 1
+                    width: 1
+                ud: CIMENTA02
+              8:
+                measurements:
+                  0:
+                    commentary: ''
+                    height: 1
+                    length: 5.0
+                    units: 18.0
+                    width: 1
+                  1:
+                    commentary: ''
+                    height: 1
+                    length: 9.0
+                    units: 3.0
+                    width: 1
+                  2:
+                    commentary: ''
+                    height: 1
+                    length: 9.0
+                    units: 2.0
+                    width: 3.0
+                  3:
+                    commentary: ''
+                    height: 1
+                    length: 3.0
+                    units: 4.0
+                    width: 1
+                  4:
+                    commentary: ''
+                    height: 1
+                    length: 1
+                    units: 1
+                    width: 1
+                ud: DALCB0225
+            code: CAP1.4#
+            prices:
+              elementary_prices:
+                PAELEC1:
+                  code: PAELEC1
+                  long_description: "P.A. de abono \xEDntegro para la adaptaci\xF3\
+                    n del cuadro de protecci\xF3n y maniobra existente y la conexi\xF3\
+                    n de los nuevos circuitos de la Plaza, incluyendo elementos de\
+                    \ protecci\xF3n y maniobra, conexiones y material auxiliar"
+                  price: 250.0
+                  title: Acometida cuadro existente
+                  type: 0
+                  unit: Ud
+                PAELEC2:
+                  code: PAELEC2
+                  long_description: "P.A. de abono \xEDntegro para la legalizaci\xF3\
+                    n de la instalaci\xF3n el\xE9ctrica, incluyendo proyecto, en su\
+                    \ caso, bolet\xEDn del instalador, gestiones y tasas."
+                  price: 150.0
+                  title: Boletin instalador
+                  type: 0
+                  unit: Ud
+              units: {}
+            sub_chapters:
+              components: {}
+              owner_code: CAP1.4#
+            title: ALUMBRADO
+          CAP1.5#:
+            chapter_quantities:
+              0:
+                measurements:
+                  0:
+                    commentary: Acometida
+                    height: 1
+                    length: 88.0
+                    units: 1.0
+                    width: 1
+                  1:
+                    commentary: Circuito 1
+                    height: 1
+                    length: 107.0
+                    units: 1.0
+                    width: 1
+                  2:
+                    commentary: Circuito 2
+                    height: 1
+                    length: 44.0
+                    units: 1.0
+                    width: 1
+                  3:
+                    commentary: Circuito 3
+                    height: 1
+                    length: 104.0
+                    units: 1.0
+                    width: 1
+                  4:
+                    commentary: Circuito 4
+                    height: 1
+                    length: 118.0
+                    units: 1.0
+                    width: 1
+                  5:
+                    commentary: Circuito 5
+                    height: 1
+                    length: 96.0
+                    units: 1.0
+                    width: 1
+                  6:
+                    commentary: Circuito 6
+                    height: 1
+                    length: 192.0
+                    units: 1.0
+                    width: 1
+                  7:
+                    commentary: Colectores
+                    height: 1
+                    length: 148.0
+                    units: 1.0
+                    width: 1
+                  8:
+                    commentary: ''
+                    height: 1
+                    length: 1
+                    units: 1
+                    width: 1
+                ud: FFB19450
+              1:
+                measurements:
+                  0:
+                    commentary: Mazizos arbustivas
+                    height: 1
+                    length: 145.0
+                    units: 1.0
+                    width: 1
+                  1:
+                    commentary: ''
+                    height: 1
+                    length: 1
+                    units: 1
+                    width: 1
+                ud: FFB26455
+              2:
+                measurements:
+                  0:
+                    commentary: Red de alcorques
+                    height: 1
+                    length: 50.0
+                    units: 1.0
+                    width: 1
+                  1:
+                    commentary: Fuentes  bebedero
+                    height: 1
+                    length: 70.0
+                    units: 1.0
+                    width: 1
+                  2:
+                    commentary: ''
+                    height: 1
+                    length: 1
+                    units: 1
+                    width: 1
+                ud: FFB26425
+              3:
+                measurements:
                   0:
                     commentary: Mazizo 1
                     height: 1
@@ -6799,7 +6642,7 @@ sub_chapters:
                   5:
                     commentary: Mazizo 2
                     height: 1
-                    length: 44.0
+                    length: 84.0
                     units: 1.0
                     width: 1
                   6:
@@ -6817,7 +6660,7 @@ sub_chapters:
                   8:
                     commentary: Mazizo 3
                     height: 1
-                    length: 62.0
+                    length: 128.0
                     units: 1.0
                     width: 1
                   9:
@@ -6851,14 +6694,538 @@ sub_chapters:
                     units: 1.0
                     width: 1
                   14:
+                    commentary: Alcorques
+                    height: 1
+                    length: 80.0
+                    units: 1.0
+                    width: 1
+                  15:
+                    commentary: mazizos parterres
+                    height: 1
+                    length: 216.0
+                    units: 1.0
+                    width: 1
+                  16:
                     commentary: ''
                     height: 1
                     length: 1
                     units: 1
                     width: 1
-                ud: USJT10abz
+                ud: DRIESUB
+            code: CAP1.5#
+            prices:
+              elementary_prices:
+                PAAGUA1:
+                  code: PAAGUA1
+                  long_description: "P.A. Taponamiento acometida agua potable antiguo\
+                    \ cuartel militar, seg\xFAn presupuesto A.M.A.E.M. ( 11/04/2016)"
+                  price: 310.0
+                  title: P.A. Taponamiento acometida agua potable antiguo cuartel
+                    militar.
+                  type: 0
+                  unit: UD
+                PAAGUA2:
+                  code: PAAGUA2
+                  long_description: "P.A. de acometida agua potable a Red de Riego\
+                    \ DN50, seg\xFAn presupuesto A.M.A.E.M. ( 11/04/2016)."
+                  price: 2000.0
+                  title: P.A. de acometida agua potable a Red de Riego DN50.
+                  type: 0
+                  unit: Ud
+                PV04:
+                  code: PV04
+                  long_description: "V\xE1lvula de cierre manual modelo GAER de Regaber,\
+                    \ o equivalente DN50, cuerpo de fundici\xF3n, compuerta de fundici\xF3\
+                    n, recubierta de EPDM, tornillo de acero inoxidable, anillo y\
+                    \ cojinetes de lat\xF3n cz134 y juntas t\xF3ricas de NBR."
+                  price: 100.0
+                  title: "V\xE1lvula de cierre manual GAER DN50."
+                  type: 0
+                  unit: Ud
+                PV05:
+                  code: PV05
+                  long_description: "V\xE1lvula reductora de presi\xF3n y caudal\xED\
+                    metro, hidrante modelo BM de Regaber, o equivalente,  DN50, cuerpo\
+                    \ de fundici\xF3n, uni\xF3n rosca hembra."
+                  price: 200.0
+                  title: "V\xE1lvula reductora de presi\xF3n y caudal\xEDmetro, hidranteBM\
+                    \ de Regaber, DN50."
+                  type: 0
+                  unit: Ud
+                PV06:
+                  code: PV06
+                  long_description: "Programador TMC-424 TORO de 24 estaciones con\
+                    \ sistema de comunicaci\xF3n TRICOMM, seg\xFAn prescripciones\
+                    \ del P.P.T.P."
+                  price: 2500.0
+                  title: "Programador TMC-424 TORO de 24 estaciones con sistema de\
+                    \ comunicaci\xF3n TRICOMM"
+                  type: 0
+                  unit: Ud
+                PVC03:
+                  code: PVC03
+                  long_description: "V\xE1lvula de diafragma DN 50mm, modelo GALsol\
+                    \ de Regaber, o equivalente, con soleoide incorporado de 24 VAC,\
+                    \ construida en poliamida reforzada con fibra de vidrio, diafrafma\
+                    \ de caucho y tornillos de acero inoxidable, conexiones rosca\
+                    \ hembra normalizadas."
+                  price: 73.53
+                  title: "V\xE1lvula de diafragma DN 50 mm, modelo GALsol de Regaber,\
+                    \ o equivalente, con soleoide incorporado de 24 VAC, construida\
+                    \ en poliamida reforzada con fibra de vidrio, diafrafma de caucho\
+                    \ y tornillos de acero inoxidable, conexiones rosca hembra normalizadas."
+                  type: 0
+                  unit: Ud
+              units: {}
+            sub_chapters:
+              components: {}
+              owner_code: CAP1.5#
+            title: RED DE RIEGO
+          CAP1.6#:
+            chapter_quantities: {}
+            code: CAP1.6#
+            prices:
+              elementary_prices: {}
+              units: {}
+            sub_chapters:
+              components:
+                CAP1.6.1#:
+                  chapter_quantities:
+                    0:
+                      measurements:
+                        0:
+                          commentary: Mazizo 1
+                          height: 1
+                          length: 65.0
+                          units: 1.0
+                          width: 1
+                        1:
+                          commentary: Pradera 1
+                          height: 1
+                          length: 287.0
+                          units: 1.0
+                          width: 1
+                        2:
+                          commentary: Pradera 2
+                          height: 1
+                          length: 45.0
+                          units: 1.0
+                          width: 1
+                        3:
+                          commentary: Pradera 3
+                          height: 1
+                          length: 223.0
+                          units: 1.0
+                          width: 1
+                        4:
+                          commentary: Pradera 4
+                          height: 1
+                          length: 131.0
+                          units: 1.0
+                          width: 1
+                        5:
+                          commentary: Mazizo 2
+                          height: 1
+                          length: 44.0
+                          units: 1.0
+                          width: 1
+                        6:
+                          commentary: Pradera 5
+                          height: 1
+                          length: 133.0
+                          units: 1.0
+                          width: 1
+                        7:
+                          commentary: Pradera 6
+                          height: 1
+                          length: 592.0
+                          units: 1.0
+                          width: 1
+                        8:
+                          commentary: Mazizo 3
+                          height: 1
+                          length: 62.0
+                          units: 1.0
+                          width: 1
+                        9:
+                          commentary: Pradera 7
+                          height: 1
+                          length: 202.0
+                          units: 1.0
+                          width: 1
+                        10:
+                          commentary: Pradera 8
+                          height: 1
+                          length: 360.0
+                          units: 1.0
+                          width: 1
+                        11:
+                          commentary: Pradera 9
+                          height: 1
+                          length: 275.0
+                          units: 1.0
+                          width: 1
+                        12:
+                          commentary: Pradera 10
+                          height: 1
+                          length: 136.0
+                          units: 1.0
+                          width: 1
+                        13:
+                          commentary: Pradera 11
+                          height: 1
+                          length: 161.0
+                          units: 1.0
+                          width: 1
+                        14:
+                          commentary: ''
+                          height: 1
+                          length: 1
+                          units: 1
+                          width: 1
+                      ud: USJT10abz
+                    1:
+                      measurements:
+                        0:
+                          commentary: "Formaci\xF3n de ribera del estanque."
+                          height: 1
+                          length: 1
+                          units: 1
+                          width: 1
+                        1:
+                          commentary: '- Zona tramo recto'
+                          height: 1
+                          length: 0.84
+                          units: 2.0
+                          width: 38.0
+                        2:
+                          commentary: '- Zona esquimer'
+                          height: 1
+                          length: 0.86
+                          units: 2.0
+                          width: 8.6
+                        3:
+                          commentary: '- Zona surtidor'
+                          height: 1
+                          length: 0.86
+                          units: 1.0
+                          width: 32.52
+                        4:
+                          commentary: ''
+                          height: 1
+                          length: 1
+                          units: 1
+                          width: 1
+                      ud: TERRNATU
+                    2:
+                      measurements:
+                        0:
+                          commentary: "Arena para elaboraci\xF3n de tierra vegetal"
+                          height: 1
+                          length: 1
+                          units: 650.0
+                          width: 1
+                        1:
+                          commentary: "Arena para elaboracion de sustrato de plantaci\xF3\
+                            n de arbolado"
+                          height: 1
+                          length: 1
+                          units: 150.0
+                          width: 1
+                        2:
+                          commentary: ''
+                          height: 1
+                          length: 1
+                          units: 1
+                          width: 1
+                      ud: ARENA10
+                    3:
+                      measurements:
+                        0:
+                          commentary: "Humus para elaboraci\xF3n de tierra vegeta"
+                          height: 1
+                          length: 1
+                          units: 100.0
+                          width: 1
+                        1:
+                          commentary: "Humus para elaboraci\xF3n de sustrato de plantaci\xF3\
+                            n"
+                          height: 1
+                          length: 1
+                          units: 15.0
+                          width: 1
+                        2:
+                          commentary: ''
+                          height: 1
+                          length: 1
+                          units: 1
+                          width: 1
+                      ud: HUMUSLOMB
+                    4:
+                      measurements:
+                        0:
+                          commentary: Arbolado
+                          height: 1
+                          length: 1.5
+                          units: 97.0
+                          width: 1
+                        1:
+                          commentary: Ficus ejemplar y quercus
+                          height: 1
+                          length: 10.0
+                          units: 1.0
+                          width: 1
+                        2:
+                          commentary: ''
+                          height: 1
+                          length: 1
+                          units: 1
+                          width: 1
+                      ud: SSTRATO10
+                  code: CAP1.6.1#
+                  prices:
+                    elementary_prices:
+                      ARENA10:
+                        code: ARENA10
+                        long_description: Arena caliza puesta en obra
+                        price: 7.0
+                        title: Arena caliza puesta en obra
+                        type: 0
+                        unit: Tn
+                      TERRNATU:
+                        code: TERRNATU
+                        long_description: Tierra natural de textura francoarenosa,
+                          procedente de prestamo de hasta 60 km.
+                        price: 15.69
+                        title: Tierra natural de prestamo
+                        type: 0
+                        unit: M3
+                    units: {}
+                  sub_chapters:
+                    components: {}
+                    owner_code: CAP1.6.1#
+                  title: "TAREAS PREVIAS Y PREPARACI\xD3N  DEL TERRENO"
+                CAP1.6.2#:
+                  chapter_quantities: {}
+                  code: CAP1.6.2#
+                  prices:
+                    elementary_prices: {}
+                    units: {}
+                  sub_chapters:
+                    components: {}
+                    owner_code: CAP1.6.2#
+                  title: ARBOLADO
+                CAP1.6.3#:
+                  chapter_quantities: {}
+                  code: CAP1.6.3#
+                  prices:
+                    elementary_prices: {}
+                    units: {}
+                  sub_chapters:
+                    components: {}
+                    owner_code: CAP1.6.3#
+                  title: ARBUSTIVAS Y TAPIZANTES
+              owner_code: CAP1.6#
+            title: JARDINERIA
+          CAP1.7#:
+            chapter_quantities:
+              0:
+                measurements:
+                  0:
+                    commentary: Tramo recto
+                    height: 1
+                    length: 1.2
+                    units: 38.2
+                    width: 1
+                  1:
+                    commentary: Zona esquimer
+                    height: 1
+                    length: 1.62
+                    units: 8.6
+                    width: 1
+                  2:
+                    commentary: Zona Surtidor
+                    height: 1
+                    length: 1.62
+                    units: 13.96
+                    width: 1
+                  3:
+                    commentary: ''
+                    height: 1
+                    length: 1
+                    units: 1
+                    width: 1
+                ud: OFRE02
               1:
-                quantities:
+                measurements:
+                  0:
+                    commentary: Zona tramo recto
+                    height: 1
+                    length: 38.2
+                    units: 1.0
+                    width: 6.85
+                  1:
+                    commentary: Zona Esquimer
+                    height: 1
+                    length: 8.93
+                    units: 1.0
+                    width: 8.6
+                  2:
+                    commentary: Zona Surtidor
+                    height: 1
+                    length: 8.93
+                    units: 1.0
+                    width: 13.96
+                  3:
+                    commentary: ''
+                    height: 1
+                    length: 1
+                    units: 1
+                    width: 1
+                ud: DGEOTEX300
+              2:
+                measurements:
+                  0:
+                    commentary: Zona tramo recto
+                    height: 1
+                    length: 38.2
+                    units: 1.0
+                    width: 6.85
+                  1:
+                    commentary: Zona Esquimer
+                    height: 1
+                    length: 8.93
+                    units: 1.0
+                    width: 8.6
+                  2:
+                    commentary: Zona Surtidor
+                    height: 1
+                    length: 8.93
+                    units: 1.0
+                    width: 13.96
+                  3:
+                    commentary: "Zona losa c\xE1mara instalaciones"
+                    height: 1
+                    length: 3.35
+                    units: 1.0
+                    width: 3.0
+                  4:
+                    commentary: ''
+                    height: 1
+                    length: 1
+                    units: 1
+                    width: 1
+                ud: DLAMINA
+              3:
+                measurements:
+                  0:
+                    commentary: Zona tramo recto
+                    height: 1
+                    length: 76.4
+                    units: 1.0
+                    width: 1.0
+                  1:
+                    commentary: Zona Esquimer
+                    height: 1
+                    length: 31.8
+                    units: 1.0
+                    width: 1.0
+                  2:
+                    commentary: Zona Surtidor
+                    height: 1
+                    length: 38.28
+                    units: 1.0
+                    width: 1.0
+                  3:
+                    commentary: ''
+                    height: 1
+                    length: 1
+                    units: 1
+                    width: 1
+                ud: DGEOTEX125
+              4:
+                measurements:
+                  0:
+                    commentary: Zona tramo recto
+                    height: 1
+                    length: 213.64
+                    units: 1.0
+                    width: 1.0
+                  1:
+                    commentary: Zona Esquimer
+                    height: 1
+                    length: 70.0
+                    units: 1.0
+                    width: 1.0
+                  2:
+                    commentary: Zona Surtidor
+                    height: 1
+                    length: 119.0
+                    units: 1.0
+                    width: 1.0
+                  3:
+                    commentary: ''
+                    height: 1
+                    length: 1
+                    units: 1
+                    width: 1
+                ud: DGEOTEX3
+              5:
+                measurements:
+                  0:
+                    commentary: Zona tramo recto
+                    height: 1
+                    length: 38.2
+                    units: 2.0
+                    width: 1.0
+                  1:
+                    commentary: Zona Esquimer
+                    height: 1
+                    length: 30.0
+                    units: 1.0
+                    width: 1.0
+                  2:
+                    commentary: Zona Surtidor
+                    height: 1
+                    length: 17.6
+                    units: 1.0
+                    width: 1.0
+                  3:
+                    commentary: ''
+                    height: 1
+                    length: 1
+                    units: 1
+                    width: 1
+                ud: TRINTER10
+              6:
+                measurements:
+                  0:
+                    commentary: Zona canal
+                    height: 1
+                    length: 38.2
+                    units: 2.0
+                    width: 1.0
+                  1:
+                    commentary: Zona Surtidor
+                    height: 1
+                    length: 31.8
+                    units: 1.0
+                    width: 1.0
+                  2:
+                    commentary: Zona Esquimer
+                    height: 1
+                    length: 38.28
+                    units: 1.0
+                    width: 1.0
+                  3:
+                    commentary: ''
+                    height: 1
+                    length: 1
+                    units: 1
+                    width: 1
+                ud: TRINTER11
+              7:
+                measurements:
                   0:
                     commentary: "Formaci\xF3n de ribera del estanque."
                     height: 1
@@ -6890,929 +7257,640 @@ sub_chapters:
                     units: 1
                     width: 1
                 ud: TERRNATU
-              2:
-                quantities:
+              8:
+                measurements:
                   0:
-                    commentary: "Arena para elaboraci\xF3n de tierra vegetal"
+                    commentary: '- Zona canal'
                     height: 1
-                    length: 1
-                    units: 650.0
-                    width: 1
-                  1:
-                    commentary: "Arena para elaboracion de sustrato de plantaci\xF3\
-                      n de arbolado"
-                    height: 1
-                    length: 1
-                    units: 150.0
-                    width: 1
-                  2:
-                    commentary: ''
-                    height: 1
-                    length: 1
-                    units: 1
-                    width: 1
-                ud: ARENA10
-              3:
-                quantities:
-                  0:
-                    commentary: "Humus para elaboraci\xF3n de tierra vegeta"
-                    height: 1
-                    length: 1
-                    units: 100.0
-                    width: 1
-                  1:
-                    commentary: "Humus para elaboraci\xF3n de sustrato de plantaci\xF3\
-                      n"
-                    height: 1
-                    length: 1
-                    units: 15.0
-                    width: 1
-                  2:
-                    commentary: ''
-                    height: 1
-                    length: 1
-                    units: 1
-                    width: 1
-                ud: HUMUSLOMB
-              4:
-                quantities:
-                  0:
-                    commentary: Arbolado
-                    height: 1
-                    length: 1.5
-                    units: 97.0
-                    width: 1
-                  1:
-                    commentary: Ficus ejemplar y quercus
-                    height: 1
-                    length: 10.0
+                    length: 0.52
                     units: 1.0
-                    width: 1
+                    width: 38.2
+                  1:
+                    commentary: '- Zona esquimer'
+                    height: 1
+                    length: 0.8
+                    units: 1.0
+                    width: 8.6
                   2:
+                    commentary: '- Zona surtidor'
+                    height: 1
+                    length: 0.8
+                    units: 1.0
+                    width: 13.96
+                  3:
                     commentary: ''
                     height: 1
                     length: 1
                     units: 1
                     width: 1
-                ud: SSTRATO10
-            sub_chapters: {}
-            title: "TAREAS PREVIAS Y PREPARACI\xD3N  DEL TERRENO"
-          CAP1.6.2#:
-            code: CAP1.6.2#
+                ud: TERRANATU2
+            code: CAP1.7#
             prices:
               elementary_prices: {}
               units: {}
-            quantities: {}
-            sub_chapters: {}
-            title: ARBOLADO
-          CAP1.6.3#:
-            code: CAP1.6.3#
-            prices:
-              elementary_prices: {}
-              units: {}
-            quantities: {}
-            sub_chapters: {}
-            title: ARBUSTIVAS Y TAPIZANTES
-        title: JARDINERIA
-      CAP1.7#:
-        code: CAP1.7#
-        prices:
-          elementary_prices: {}
-          units: {}
-        quantities:
-          0:
-            quantities:
+            sub_chapters:
+              components:
+                CAP.1.7.1#:
+                  chapter_quantities:
+                    0:
+                      measurements:
+                        0:
+                          commentary: "Solera c\xE1mara"
+                          height: 1
+                          length: 8.27
+                          units: 1.0
+                          width: 1
+                        1:
+                          commentary: Alzados
+                          height: 1
+                          length: 8.35
+                          units: 1.0
+                          width: 1
+                        2:
+                          commentary: Arqueta drenaje
+                          height: 1
+                          length: 1.01
+                          units: 1.0
+                          width: 1
+                        3:
+                          commentary: Arqueta obturador y esquimer
+                          height: 1
+                          length: 1.06
+                          units: 1.0
+                          width: 1
+                        4:
+                          commentary: Losa superior
+                          height: 1
+                          length: 1.68
+                          units: 1.0
+                          width: 1
+                        5:
+                          commentary: ''
+                          height: 1
+                          length: 1
+                          units: 1
+                          width: 1
+                      ud: DHA30
+                    1:
+                      measurements:
+                        0:
+                          commentary: "Medici\xF3n por cuant\xEDa 75 kg/m^3"
+                          height: 1
+                          length: 75.0
+                          units: 1.0
+                          width: 20.37
+                        1:
+                          commentary: ''
+                          height: 1
+                          length: 1
+                          units: 1
+                          width: 1
+                      ud: ACERO0103
+                  code: CAP.1.7.1#
+                  prices:
+                    elementary_prices:
+                      ESCAL1:
+                        code: ESCAL1
+                        long_description: "Suministro y colocaci\xF3n de escalera\
+                          \ de seguridad de acero inoxidable,seg\xFAn norma EN 14396/2001,\
+                          \ para acceso acceso a camara instalaciones, de 2 m. de\
+                          \ altura con fijaciones al muro y dispositivo de embarque\
+                          \ plegable, con pasamanos de 60 cm. de longitud,"
+                        price: 1960.78
+                        title: Escalera de seguridad de acero inox.
+                        type: 0
+                        unit: Ud
+                      INSTALAELEC:
+                        code: INSTALAELEC
+                        long_description: "Instalaci\xF3n el\xE9ctrica completa seg\xFA\
+                          n esquema, incluso envolvente normalizada, accesorios y\
+                          \ peque\xF1o material.."
+                        price: 500.0
+                        title: "Instalaci\xF3n el\xE9ctrica completa seg\xFAn esquema,\
+                          \ incluso envolvente normalizada."
+                        type: 0
+                        unit: Ud
+                      INSTALAFONT:
+                        code: INSTALAFONT
+                        long_description: "Instalaci\xF3n completa de fontaner\xED\
+                          a. seg\xFAn planos, incluyendo tuber\xEDas y accesorios\
+                          \ de PVC de DN 25, 50, 63 y 90 mm."
+                        price: 500.0
+                        title: "Instalaci\xF3n completa de fontaner\xEDa. seg\xFA\
+                          n planos, incluyendo tuber\xEDas y accesorios de PVC de\
+                          \ DN 25, 50, 63 y 90 mm."
+                        type: 0
+                        unit: Ud
+                      INSTELEC01:
+                        code: INSTELEC01
+                        long_description: "Interruptor magnetot\xE9rmico 1P+N, de\
+                          \ 20 A, serie Acti 9, iK60N, de Schneider, o equivalente,\
+                          \ poder de corte 6 kA, curva C, clase 2, fabricado seg\xFA\
+                          n UNE-EN 60898."
+                        price: 22.92
+                        title: "Interruptor magnetot\xE9rmico 1P+N, de 20 A, serie\
+                          \ Acti 9, iK60N, de Schneider, o equivalente, poder de corte\
+                          \ 6 kA, curva C, clase 2, fabricado seg\xFAn UNE-EN 60898."
+                        type: 0
+                        unit: Ud
+                      INSTELEC02:
+                        code: INSTELEC02
+                        long_description: "Interruptor magnetot\xE9rmico 1P+N, de\
+                          \ 16 A, serie Acti 9, iK60N, de Schneider, o equivalente,\
+                          \ poder de corte 6 kA, curva C, clase 2, fabricado seg\xFA\
+                          n UNE-EN 60898."
+                        price: 22.37
+                        title: "Interruptor magnetot\xE9rmico 1P+N, de 16 A, serie\
+                          \ Acti 9, iK60N, de Schneider, o equivalente, poder de corte\
+                          \ 6 kA, curva C, clase 2, fabricado seg\xFAn UNE-EN 60898."
+                        type: 0
+                        unit: Ud
+                      INSTELEC03:
+                        code: INSTELEC03
+                        long_description: "Interruptor diferenical 2P de 25 A y 30\
+                          \ mA de sensibilidad, serie Acti 9 de Schneider, o equivalente,\
+                          \ clase AC,con indicador de defecto, fabricado seg\xFAn\
+                          \ UNE-EN 60898"
+                        price: 72.38
+                        title: "Interruptor diferenical 2P de 25 A y 30 mA de sensibilidad,\
+                          \ serie Acti 9 de Schneider, o equivalente, clase AC,con\
+                          \ indicador de defecto, fabricado seg\xFAn UNE-EN 60898"
+                        type: 0
+                        unit: Ud
+                      INSTELEC04:
+                        code: INSTELEC04
+                        long_description: "Interruptor magnetot\xE9rmico 1P+N, de\
+                          \ 10 A, serie Acti 9, iK60N, de Schneider, o equivalente,\
+                          \ poder de corte 6 kA, curva C, clase 2, fabricado seg\xFA\
+                          n UNE-EN 60898."
+                        price: 21.98
+                        title: "Interruptor magnetot\xE9rmico 1P+N, de 10 A, serie\
+                          \ Acti 9, iK60N, de Schneider, o equivalente, poder de corte\
+                          \ 6 kA, curva C, clase 2, fabricado seg\xFAn UNE-EN 60898."
+                        type: 0
+                        unit: Ud
+                      INSTELEC05:
+                        code: INSTELEC05
+                        long_description: "Interruptor magnetot\xE9rmico 1P+N, de\
+                          \ 6 A, serie Acti 9, iK60N, de Schneider, o equivalente,\
+                          \ poder de corte 6 kA, curva C, clase 2, fabricado seg\xFA\
+                          n UNE-EN 60898."
+                        price: 53.21
+                        title: "Interruptor magnetot\xE9rmico 1P+N, de 6 A, serie\
+                          \ Acti 9, iK60N, de Schneider, o equivalente, poder de corte\
+                          \ 6 kA, curva C, clase 2, fabricado seg\xFAn UNE-EN 60898."
+                        type: 0
+                        unit: Ud
+                      INSTELEC06:
+                        code: INSTELEC06
+                        long_description: Guardamotor-contactor para bomba de potencia
+                          1 kW.
+                        price: 75.0
+                        title: Guardamotor-contactor para bomba de potencia 1 kW.
+                        type: 0
+                        unit: Ud
+                      PASAIN02:
+                        code: PASAIN02
+                        long_description: "Ud. suministro e instalaci\xF3n de pasamuros\
+                          \ de acero inoxidable AISI 304 L, DN 1 1/2\x94, OD 48,3\
+                          \ mm, de 30 cm de longitud, incluso corona circular de cierre\
+                          \ de chapa del mismo material y espesor, de 10 cm de anchura,\
+                          \ y manguitos para conexi\xF3n de enlace rosca hembra de\
+                          \ tubo de PVC DN 110 mm, colocado en obra durante el hormigonado\
+                          \ de la estructura y posteriormente soldado al manguito."
+                        price: 30.0
+                        title: "Ud. suministro e instalaci\xF3n de pasamuros de acero\
+                          \ inoxidable AISI 304 L, DN 1 1/2\x94, OD 48,3 mm, de 30\
+                          \ cm de longitud."
+                        type: 0
+                        unit: Ud
+                      PASAIN03:
+                        code: PASAIN03
+                        long_description: "Ud. suministro e instalaci\xF3n de pasamuros\
+                          \ de acero inoxidable AISI 304 L, DN 1/2\x94, OD 21,3 mm,\
+                          \ de 30 cm de longitud, incluso corona circular de cierre\
+                          \ de chapa del mismo material y espesor, de 10 cm de anchura,\
+                          \ y manguitos para conexi\xF3n de enlace rosca hembra de\
+                          \ tubo de PVC DN 110 mm, colocado en obra durante el hormigonado\
+                          \ de la estructura y posteriormente soldado al manguito."
+                        price: 30.0
+                        title: "Ud. suministro e instalaci\xF3n de pasamuros de acero\
+                          \ inoxidable AISI 304 L, DN 1/2\x94, OD 21,3 mm, de 30 cm\
+                          \ de longitud."
+                        type: 0
+                        unit: Ud
+                      PASAINO01:
+                        code: PASAINO01
+                        long_description: "Ud. suministro e instalaci\xF3n de pasamuros\
+                          \ de acero inoxidable AISI 304 L, DN 3\x94, OD 88,9 mm,\
+                          \ de 30 cm de longitud, incluso corona circular de cierre\
+                          \ de chapa del mismo material y espesor, de 10 cm de anchura,\
+                          \ y manguito para conexi\xF3n de enlace rosca hembra de\
+                          \ tubo de PVC DN 110 mm, colocado en obra durante el hormigonado\
+                          \ de la estructura y posteriormente soldado al manguito."
+                        price: 50.0
+                        title: "Ud. suministro e instalaci\xF3n de pasamuros de acero\
+                          \ inoxidable AISI 304 L, DN 3\x94, OD 88,9 mm, de 30 cm\
+                          \ de longitud."
+                        type: 0
+                        unit: Ud
+                      PASAPVC01:
+                        code: PASAPVC01
+                        long_description: "Ud. suministro e instalaci\xF3n de pasamuros\
+                          \ de PVC, de DN 160 mm, PN 10."
+                        price: 30.0
+                        title: "Ud. suministro e instalaci\xF3n de pasamuros de PVC,\
+                          \ de DN 160 mm, PN 10."
+                        type: 0
+                        unit: Ud
+                      PVC01:
+                        code: PVC01
+                        long_description: "V\xE1lvula de esfera normalizada de PVC,\
+                          \ DN 90 mm, PN 10."
+                        price: 166.23
+                        title: "V\xE1lvula de esfera normalizada de PVC, DN 90 mm,\
+                          \ PN 10."
+                        type: 0
+                        unit: Ud
+                      PVC02:
+                        code: PVC02
+                        long_description: "V\xE1lvula de esfera normalizada de PVC,\
+                          \ DN 63 mm, PN 10."
+                        price: 34.81
+                        title: "V\xE1lvula de esfera normalizada de PVC, DN 63 mm,\
+                          \ PN 10."
+                        type: 0
+                        unit: Ud
+                      PVC04:
+                        code: PVC04
+                        long_description: "v\xE1lvula de esfera normalizada de PVC,\
+                          \ DN 50 mm, PN 10."
+                        price: 25.0
+                        title: "V\xE1lvula de esfera normalizada de PVC, DN 50 mm,\
+                          \ PN 10."
+                        type: 0
+                        unit: Ud
+                      PVC05:
+                        code: PVC05
+                        long_description: "V\xE1lvula de esfera normalizada de PVC,\
+                          \ DN 1/2\x94, PN 10, roscada."
+                        price: 11.0
+                        title: "V\xE1lvula de esfera normalizada de PVC, DN 1/2\x94\
+                          , PN 10, roscada."
+                        type: 0
+                        unit: Ud
+                      PVC06:
+                        code: PVC06
+                        long_description: "V\xE1lvula de retenci\xF3n normalizada\
+                          \ de PVC, DN 50 mm, PN 10."
+                        price: 24.51
+                        title: "V\xE1lvula de retenci\xF3n normalizada de PVC, DN\
+                          \ 50 mm, PN 10."
+                        type: 0
+                        unit: Ud
+                      PVC07:
+                        code: PVC07
+                        long_description: "V\xE1lvula de retenci\xF3n normalizada\
+                          \ de PVC, DN 1/2\x94, PN 10, roscada."
+                        price: 11.0
+                        title: "V\xE1lvula de retenci\xF3n normalizada de PVC, DN\
+                          \ 1/2\x94, PN 10, roscada."
+                        type: 0
+                        unit: Ud
+                      chimenea:
+                        code: chimenea
+                        long_description: "Chimenea ventilaci\xF3n camara, seg\xFA\
+                          n planos y P.P.T.P."
+                        price: 125.0
+                        title: "Chimenea ventilaci\xF3n camara"
+                        type: 0
+                        unit: Ud
+                    units: {}
+                  sub_chapters:
+                    components: {}
+                    owner_code: CAP.1.7.1#
+                  title: CAMARA DE INSTALACIONES
+              owner_code: CAP1.7#
+            title: ESTANQUE
+          CAP1.8#:
+            chapter_quantities:
               0:
-                commentary: Tramo recto
-                height: 1
-                length: 1.2
-                units: 38.2
-                width: 1
-              1:
-                commentary: Zona esquimer
-                height: 1
-                length: 1.62
-                units: 8.6
-                width: 1
-              2:
-                commentary: Zona Surtidor
-                height: 1
-                length: 1.62
-                units: 13.96
-                width: 1
-              3:
-                commentary: ''
-                height: 1
-                length: 1
-                units: 1
-                width: 1
-            ud: OFRE02
-          1:
-            quantities:
-              0:
-                commentary: Zona tramo recto
-                height: 1
-                length: 38.2
-                units: 1.0
-                width: 6.85
-              1:
-                commentary: Zona Esquimer
-                height: 1
-                length: 8.93
-                units: 1.0
-                width: 8.6
-              2:
-                commentary: Zona Surtidor
-                height: 1
-                length: 8.93
-                units: 1.0
-                width: 13.96
-              3:
-                commentary: ''
-                height: 1
-                length: 1
-                units: 1
-                width: 1
-            ud: DGEOTEX300
-          2:
-            quantities:
-              0:
-                commentary: Zona tramo recto
-                height: 1
-                length: 38.2
-                units: 1.0
-                width: 6.85
-              1:
-                commentary: Zona Esquimer
-                height: 1
-                length: 8.93
-                units: 1.0
-                width: 8.6
-              2:
-                commentary: Zona Surtidor
-                height: 1
-                length: 8.93
-                units: 1.0
-                width: 13.96
-              3:
-                commentary: "Zona losa c\xE1mara instalaciones"
-                height: 1
-                length: 3.35
-                units: 1.0
-                width: 3.0
-              4:
-                commentary: ''
-                height: 1
-                length: 1
-                units: 1
-                width: 1
-            ud: DLAMINA
-          3:
-            quantities:
-              0:
-                commentary: Zona tramo recto
-                height: 1
-                length: 76.4
-                units: 1.0
-                width: 1.0
-              1:
-                commentary: Zona Esquimer
-                height: 1
-                length: 31.8
-                units: 1.0
-                width: 1.0
-              2:
-                commentary: Zona Surtidor
-                height: 1
-                length: 38.28
-                units: 1.0
-                width: 1.0
-              3:
-                commentary: ''
-                height: 1
-                length: 1
-                units: 1
-                width: 1
-            ud: DGEOTEX125
-          4:
-            quantities:
-              0:
-                commentary: Zona tramo recto
-                height: 1
-                length: 213.64
-                units: 1.0
-                width: 1.0
-              1:
-                commentary: Zona Esquimer
-                height: 1
-                length: 70.0
-                units: 1.0
-                width: 1.0
-              2:
-                commentary: Zona Surtidor
-                height: 1
-                length: 119.0
-                units: 1.0
-                width: 1.0
-              3:
-                commentary: ''
-                height: 1
-                length: 1
-                units: 1
-                width: 1
-            ud: DGEOTEX3
-          5:
-            quantities:
-              0:
-                commentary: Zona tramo recto
-                height: 1
-                length: 38.2
-                units: 2.0
-                width: 1.0
-              1:
-                commentary: Zona Esquimer
-                height: 1
-                length: 30.0
-                units: 1.0
-                width: 1.0
-              2:
-                commentary: Zona Surtidor
-                height: 1
-                length: 17.6
-                units: 1.0
-                width: 1.0
-              3:
-                commentary: ''
-                height: 1
-                length: 1
-                units: 1
-                width: 1
-            ud: TRINTER10
-          6:
-            quantities:
-              0:
-                commentary: Zona canal
-                height: 1
-                length: 38.2
-                units: 2.0
-                width: 1.0
-              1:
-                commentary: Zona Surtidor
-                height: 1
-                length: 31.8
-                units: 1.0
-                width: 1.0
-              2:
-                commentary: Zona Esquimer
-                height: 1
-                length: 38.28
-                units: 1.0
-                width: 1.0
-              3:
-                commentary: ''
-                height: 1
-                length: 1
-                units: 1
-                width: 1
-            ud: TRINTER11
-          7:
-            quantities:
-              0:
-                commentary: "Formaci\xF3n de ribera del estanque."
-                height: 1
-                length: 1
-                units: 1
-                width: 1
-              1:
-                commentary: '- Zona tramo recto'
-                height: 1
-                length: 0.84
-                units: 2.0
-                width: 38.0
-              2:
-                commentary: '- Zona esquimer'
-                height: 1
-                length: 0.86
-                units: 2.0
-                width: 8.6
-              3:
-                commentary: '- Zona surtidor'
-                height: 1
-                length: 0.86
-                units: 1.0
-                width: 32.52
-              4:
-                commentary: ''
-                height: 1
-                length: 1
-                units: 1
-                width: 1
-            ud: TERRNATU
-          8:
-            quantities:
-              0:
-                commentary: '- Zona canal'
-                height: 1
-                length: 0.52
-                units: 1.0
-                width: 38.2
-              1:
-                commentary: '- Zona esquimer'
-                height: 1
-                length: 0.8
-                units: 1.0
-                width: 8.6
-              2:
-                commentary: '- Zona surtidor'
-                height: 1
-                length: 0.8
-                units: 1.0
-                width: 13.96
-              3:
-                commentary: ''
-                height: 1
-                length: 1
-                units: 1
-                width: 1
-            ud: TERRANATU2
-        sub_chapters:
-          CAP.1.7.1#:
-            code: CAP.1.7.1#
-            prices:
-              elementary_prices:
-                ESCAL1:
-                  code: ESCAL1
-                  long_description: "Suministro y colocaci\xF3n de escalera de seguridad\
-                    \ de acero inoxidable,seg\xFAn norma EN 14396/2001, para acceso\
-                    \ acceso a camara instalaciones, de 2 m. de altura con fijaciones\
-                    \ al muro y dispositivo de embarque plegable, con pasamanos de\
-                    \ 60 cm. de longitud,"
-                  price: 1960.78
-                  title: Escalera de seguridad de acero inox.
-                  type: 0
-                  unit: Ud
-                INSTALAELEC:
-                  code: INSTALAELEC
-                  long_description: "Instalaci\xF3n el\xE9ctrica completa seg\xFA\
-                    n esquema, incluso envolvente normalizada, accesorios y peque\xF1\
-                    o material.."
-                  price: 500.0
-                  title: "Instalaci\xF3n el\xE9ctrica completa seg\xFAn esquema, incluso\
-                    \ envolvente normalizada."
-                  type: 0
-                  unit: Ud
-                INSTALAFONT:
-                  code: INSTALAFONT
-                  long_description: "Instalaci\xF3n completa de fontaner\xEDa. seg\xFA\
-                    n planos, incluyendo tuber\xEDas y accesorios de PVC de DN 25,\
-                    \ 50, 63 y 90 mm."
-                  price: 500.0
-                  title: "Instalaci\xF3n completa de fontaner\xEDa. seg\xFAn planos,\
-                    \ incluyendo tuber\xEDas y accesorios de PVC de DN 25, 50, 63\
-                    \ y 90 mm."
-                  type: 0
-                  unit: Ud
-                INSTELEC01:
-                  code: INSTELEC01
-                  long_description: "Interruptor magnetot\xE9rmico 1P+N, de 20 A,\
-                    \ serie Acti 9, iK60N, de Schneider, o equivalente, poder de corte\
-                    \ 6 kA, curva C, clase 2, fabricado seg\xFAn UNE-EN 60898."
-                  price: 22.92
-                  title: "Interruptor magnetot\xE9rmico 1P+N, de 20 A, serie Acti\
-                    \ 9, iK60N, de Schneider, o equivalente, poder de corte 6 kA,\
-                    \ curva C, clase 2, fabricado seg\xFAn UNE-EN 60898."
-                  type: 0
-                  unit: Ud
-                INSTELEC02:
-                  code: INSTELEC02
-                  long_description: "Interruptor magnetot\xE9rmico 1P+N, de 16 A,\
-                    \ serie Acti 9, iK60N, de Schneider, o equivalente, poder de corte\
-                    \ 6 kA, curva C, clase 2, fabricado seg\xFAn UNE-EN 60898."
-                  price: 22.37
-                  title: "Interruptor magnetot\xE9rmico 1P+N, de 16 A, serie Acti\
-                    \ 9, iK60N, de Schneider, o equivalente, poder de corte 6 kA,\
-                    \ curva C, clase 2, fabricado seg\xFAn UNE-EN 60898."
-                  type: 0
-                  unit: Ud
-                INSTELEC03:
-                  code: INSTELEC03
-                  long_description: "Interruptor diferenical 2P de 25 A y 30 mA de\
-                    \ sensibilidad, serie Acti 9 de Schneider, o equivalente, clase\
-                    \ AC,con indicador de defecto, fabricado seg\xFAn UNE-EN 60898"
-                  price: 72.38
-                  title: "Interruptor diferenical 2P de 25 A y 30 mA de sensibilidad,\
-                    \ serie Acti 9 de Schneider, o equivalente, clase AC,con indicador\
-                    \ de defecto, fabricado seg\xFAn UNE-EN 60898"
-                  type: 0
-                  unit: Ud
-                INSTELEC04:
-                  code: INSTELEC04
-                  long_description: "Interruptor magnetot\xE9rmico 1P+N, de 10 A,\
-                    \ serie Acti 9, iK60N, de Schneider, o equivalente, poder de corte\
-                    \ 6 kA, curva C, clase 2, fabricado seg\xFAn UNE-EN 60898."
-                  price: 21.98
-                  title: "Interruptor magnetot\xE9rmico 1P+N, de 10 A, serie Acti\
-                    \ 9, iK60N, de Schneider, o equivalente, poder de corte 6 kA,\
-                    \ curva C, clase 2, fabricado seg\xFAn UNE-EN 60898."
-                  type: 0
-                  unit: Ud
-                INSTELEC05:
-                  code: INSTELEC05
-                  long_description: "Interruptor magnetot\xE9rmico 1P+N, de 6 A, serie\
-                    \ Acti 9, iK60N, de Schneider, o equivalente, poder de corte 6\
-                    \ kA, curva C, clase 2, fabricado seg\xFAn UNE-EN 60898."
-                  price: 53.21
-                  title: "Interruptor magnetot\xE9rmico 1P+N, de 6 A, serie Acti 9,\
-                    \ iK60N, de Schneider, o equivalente, poder de corte 6 kA, curva\
-                    \ C, clase 2, fabricado seg\xFAn UNE-EN 60898."
-                  type: 0
-                  unit: Ud
-                INSTELEC06:
-                  code: INSTELEC06
-                  long_description: Guardamotor-contactor para bomba de potencia 1
-                    kW.
-                  price: 75.0
-                  title: Guardamotor-contactor para bomba de potencia 1 kW.
-                  type: 0
-                  unit: Ud
-                PASAIN02:
-                  code: PASAIN02
-                  long_description: "Ud. suministro e instalaci\xF3n de pasamuros\
-                    \ de acero inoxidable AISI 304 L, DN 1 1/2\x94, OD 48,3 mm, de\
-                    \ 30 cm de longitud, incluso corona circular de cierre de chapa\
-                    \ del mismo material y espesor, de 10 cm de anchura, y manguitos\
-                    \ para conexi\xF3n de enlace rosca hembra de tubo de PVC DN 110\
-                    \ mm, colocado en obra durante el hormigonado de la estructura\
-                    \ y posteriormente soldado al manguito."
-                  price: 30.0
-                  title: "Ud. suministro e instalaci\xF3n de pasamuros de acero inoxidable\
-                    \ AISI 304 L, DN 1 1/2\x94, OD 48,3 mm, de 30 cm de longitud."
-                  type: 0
-                  unit: Ud
-                PASAIN03:
-                  code: PASAIN03
-                  long_description: "Ud. suministro e instalaci\xF3n de pasamuros\
-                    \ de acero inoxidable AISI 304 L, DN 1/2\x94, OD 21,3 mm, de 30\
-                    \ cm de longitud, incluso corona circular de cierre de chapa del\
-                    \ mismo material y espesor, de 10 cm de anchura, y manguitos para\
-                    \ conexi\xF3n de enlace rosca hembra de tubo de PVC DN 110 mm,\
-                    \ colocado en obra durante el hormigonado de la estructura y posteriormente\
-                    \ soldado al manguito."
-                  price: 30.0
-                  title: "Ud. suministro e instalaci\xF3n de pasamuros de acero inoxidable\
-                    \ AISI 304 L, DN 1/2\x94, OD 21,3 mm, de 30 cm de longitud."
-                  type: 0
-                  unit: Ud
-                PASAINO01:
-                  code: PASAINO01
-                  long_description: "Ud. suministro e instalaci\xF3n de pasamuros\
-                    \ de acero inoxidable AISI 304 L, DN 3\x94, OD 88,9 mm, de 30\
-                    \ cm de longitud, incluso corona circular de cierre de chapa del\
-                    \ mismo material y espesor, de 10 cm de anchura, y manguito para\
-                    \ conexi\xF3n de enlace rosca hembra de tubo de PVC DN 110 mm,\
-                    \ colocado en obra durante el hormigonado de la estructura y posteriormente\
-                    \ soldado al manguito."
-                  price: 50.0
-                  title: "Ud. suministro e instalaci\xF3n de pasamuros de acero inoxidable\
-                    \ AISI 304 L, DN 3\x94, OD 88,9 mm, de 30 cm de longitud."
-                  type: 0
-                  unit: Ud
-                PASAPVC01:
-                  code: PASAPVC01
-                  long_description: "Ud. suministro e instalaci\xF3n de pasamuros\
-                    \ de PVC, de DN 160 mm, PN 10."
-                  price: 30.0
-                  title: "Ud. suministro e instalaci\xF3n de pasamuros de PVC, de\
-                    \ DN 160 mm, PN 10."
-                  type: 0
-                  unit: Ud
-                PVC01:
-                  code: PVC01
-                  long_description: "V\xE1lvula de esfera normalizada de PVC, DN 90\
-                    \ mm, PN 10."
-                  price: 166.23
-                  title: "V\xE1lvula de esfera normalizada de PVC, DN 90 mm, PN 10."
-                  type: 0
-                  unit: Ud
-                PVC02:
-                  code: PVC02
-                  long_description: "V\xE1lvula de esfera normalizada de PVC, DN 63\
-                    \ mm, PN 10."
-                  price: 34.81
-                  title: "V\xE1lvula de esfera normalizada de PVC, DN 63 mm, PN 10."
-                  type: 0
-                  unit: Ud
-                PVC04:
-                  code: PVC04
-                  long_description: "v\xE1lvula de esfera normalizada de PVC, DN 50\
-                    \ mm, PN 10."
-                  price: 25.0
-                  title: "V\xE1lvula de esfera normalizada de PVC, DN 50 mm, PN 10."
-                  type: 0
-                  unit: Ud
-                PVC05:
-                  code: PVC05
-                  long_description: "V\xE1lvula de esfera normalizada de PVC, DN 1/2\x94\
-                    , PN 10, roscada."
-                  price: 11.0
-                  title: "V\xE1lvula de esfera normalizada de PVC, DN 1/2\x94, PN\
-                    \ 10, roscada."
-                  type: 0
-                  unit: Ud
-                PVC06:
-                  code: PVC06
-                  long_description: "V\xE1lvula de retenci\xF3n normalizada de PVC,\
-                    \ DN 50 mm, PN 10."
-                  price: 24.51
-                  title: "V\xE1lvula de retenci\xF3n normalizada de PVC, DN 50 mm,\
-                    \ PN 10."
-                  type: 0
-                  unit: Ud
-                PVC07:
-                  code: PVC07
-                  long_description: "V\xE1lvula de retenci\xF3n normalizada de PVC,\
-                    \ DN 1/2\x94, PN 10, roscada."
-                  price: 11.0
-                  title: "V\xE1lvula de retenci\xF3n normalizada de PVC, DN 1/2\x94\
-                    , PN 10, roscada."
-                  type: 0
-                  unit: Ud
-                chimenea:
-                  code: chimenea
-                  long_description: "Chimenea ventilaci\xF3n camara, seg\xFAn planos\
-                    \ y P.P.T.P."
-                  price: 125.0
-                  title: "Chimenea ventilaci\xF3n camara"
-                  type: 0
-                  unit: Ud
-              units: {}
-            quantities:
-              0:
-                quantities:
+                measurements:
                   0:
-                    commentary: "Solera c\xE1mara"
-                    height: 1
-                    length: 8.27
+                    commentary: "Zona de Hormog\xF3n dos capas"
+                    height: 0.15
+                    length: 1349.0
                     units: 1.0
                     width: 1
                   1:
-                    commentary: Alzados
-                    height: 1
-                    length: 8.35
+                    commentary: "Zona de Hormig\xF3n dos capas escaleras"
+                    height: 0.15
+                    length: 141.0
                     units: 1.0
                     width: 1
                   2:
-                    commentary: Arqueta drenaje
-                    height: 1
-                    length: 1.01
+                    commentary: Zona Calzada portugueas
+                    height: 0.15
+                    length: 500.0
                     units: 1.0
                     width: 1
                   3:
-                    commentary: Arqueta obturador y esquimer
-                    height: 1
-                    length: 1.06
+                    commentary: Zona Calzada portuguesa escalera
+                    height: 0.15
+                    length: 45.0
                     units: 1.0
                     width: 1
                   4:
-                    commentary: Losa superior
-                    height: 1
-                    length: 1.68
+                    commentary: Zona adoquin
+                    height: 0.15
+                    length: 737.0
                     units: 1.0
                     width: 1
                   5:
+                    commentary: Zona albero
+                    height: 0.15
+                    length: 1130.0
+                    units: 1.0
+                    width: 1
+                  6:
                     commentary: ''
                     height: 1
                     length: 1
                     units: 1
                     width: 1
-                ud: DHA30
+                ud: OFRE02
               1:
-                quantities:
+                measurements:
                   0:
-                    commentary: "Medici\xF3n por cuant\xEDa 75 kg/m^3"
+                    commentary: Zona paseos y escenario
                     height: 1
-                    length: 75.0
+                    length: 1396.0
                     units: 1.0
-                    width: 20.37
+                    width: 1
                   1:
                     commentary: ''
                     height: 1
                     length: 1
                     units: 1
                     width: 1
-                ud: ACERO0103
-            sub_chapters: {}
-            title: CAMARA DE INSTALACIONES
-        title: ESTANQUE
-      CAP1.8#:
-        code: CAP1.8#
-        prices:
-          elementary_prices: {}
-          units: {}
-        quantities:
-          0:
-            quantities:
-              0:
-                commentary: "Zona de Hormog\xF3n dos capas"
-                height: 0.15
-                length: 1349.0
-                units: 1.0
-                width: 1
-              1:
-                commentary: "Zona de Hormig\xF3n dos capas escaleras"
-                height: 0.15
-                length: 141.0
-                units: 1.0
-                width: 1
+                  2:
+                    commentary: ''
+                    height: 1
+                    length: 1
+                    units: 1
+                    width: 1
+                ud: DPAVHORPUL
               2:
-                commentary: Zona Calzada portugueas
-                height: 0.15
-                length: 500.0
-                units: 1.0
-                width: 1
+                measurements:
+                  0:
+                    commentary: Zona de escaleras
+                    height: 1
+                    length: 141.0
+                    units: 1.0
+                    width: 1
+                  1:
+                    commentary: ''
+                    height: 1
+                    length: 1
+                    units: 1
+                    width: 1
+                ud: FORMAESCALA
               3:
-                commentary: Zona Calzada portuguesa escalera
-                height: 0.15
-                length: 45.0
-                units: 1.0
-                width: 1
+                measurements:
+                  0:
+                    commentary: Zona de sendas
+                    height: 1
+                    length: 500.0
+                    units: 1.0
+                    width: 1
+                  1:
+                    commentary: "Zona c\xE1mara de instalaciones"
+                    height: 1
+                    length: 3.0
+                    units: 1.0
+                    width: 1
+                  2:
+                    commentary: ''
+                    height: 1
+                    length: 1
+                    units: 1
+                    width: 1
+                  3:
+                    commentary: ''
+                    height: 1
+                    length: 1
+                    units: 1
+                    width: 1
+                ud: PAVMARMOL1
               4:
-                commentary: Zona adoquin
-                height: 0.15
-                length: 737.0
-                units: 1.0
-                width: 1
+                measurements:
+                  0:
+                    commentary: Zona de escaleras
+                    height: 1
+                    length: 45.0
+                    units: 1.0
+                    width: 1
+                  1:
+                    commentary: ''
+                    height: 1
+                    length: 1
+                    units: 1
+                    width: 1
+                ud: PAVMARMOL20
               5:
-                commentary: Zona albero
-                height: 0.15
-                length: 1130.0
-                units: 1.0
-                width: 1
+                measurements:
+                  0:
+                    commentary: Zona de reposiciones de muros
+                    height: 1
+                    length: 72.0
+                    units: 1.0
+                    width: 1
+                  1:
+                    commentary: Nuevas zonas accesos a plaza
+                    height: 1
+                    length: 737.0
+                    units: 1.0
+                    width: 1
+                  2:
+                    commentary: ''
+                    height: 1
+                    length: 1
+                    units: 1
+                    width: 1
+                ud: DPAVA0510
               6:
-                commentary: ''
-                height: 1
-                length: 1
-                units: 1
-                width: 1
-            ud: OFRE02
-          1:
-            quantities:
+                measurements:
+                  0:
+                    commentary: Zona de albero 1
+                    height: 1
+                    length: 74.0
+                    units: 1.0
+                    width: 1
+                  1:
+                    commentary: Zona de albero 2
+                    height: 1
+                    length: 204.0
+                    units: 1.0
+                    width: 1
+                  2:
+                    commentary: Zona de albero 3
+                    height: 1
+                    length: 593.0
+                    units: 1.0
+                    width: 1
+                  3:
+                    commentary: Zona de albero 4
+                    height: 1
+                    length: 297.0
+                    units: 1.0
+                    width: 1
+                  4:
+                    commentary: ''
+                    height: 1
+                    length: 1
+                    units: 1
+                    width: 1
+                ud: DALPEDR
+            code: CAP1.8#
+            prices:
+              elementary_prices: {}
+              units: {}
+            sub_chapters:
+              components: {}
+              owner_code: CAP1.8#
+            title: PAVIMENTACION
+          CAP1.9#:
+            chapter_quantities:
               0:
-                commentary: Zona paseos y escenario
-                height: 1
-                length: 1396.0
-                units: 1.0
-                width: 1
+                measurements:
+                  0:
+                    commentary: Estanque 1
+                    height: 1
+                    length: 70.0
+                    units: 1.0
+                    width: 1
+                  1:
+                    commentary: Estanque 2
+                    height: 1
+                    length: 47.0
+                    units: 1.0
+                    width: 1
+                  2:
+                    commentary: Estanque 3
+                    height: 1
+                    length: 39.0
+                    units: 1.0
+                    width: 1
+                  3:
+                    commentary: Estrado 1
+                    height: 1
+                    length: 33.0
+                    units: 1.0
+                    width: 1
+                  4:
+                    commentary: Estrado 2
+                    height: 1
+                    length: 9.0
+                    units: 1.0
+                    width: 1
+                  5:
+                    commentary: Estrado escalera
+                    height: 1
+                    length: 3.0
+                    units: 1.0
+                    width: 1
+                  6:
+                    commentary: ''
+                    height: 1
+                    length: 1
+                    units: 1
+                    width: 1
+                ud: barand01
               1:
-                commentary: ''
-                height: 1
-                length: 1
-                units: 1
-                width: 1
+                measurements:
+                  0:
+                    commentary: "Medici\xF3n seg\xFAn despiece de planos"
+                    height: 1
+                    length: 855.34
+                    units: 1.0
+                    width: 1
+                  1:
+                    commentary: ''
+                    height: 1
+                    length: 1
+                    units: 1
+                    width: 1
+                ud: D5.2
               2:
-                commentary: ''
-                height: 1
-                length: 1
-                units: 1
-                width: 1
-            ud: DPAVHORPUL
-          2:
-            quantities:
-              0:
-                commentary: Zona de escaleras
-                height: 1
-                length: 141.0
-                units: 1.0
-                width: 1
-              1:
-                commentary: ''
-                height: 1
-                length: 1
-                units: 1
-                width: 1
-            ud: FORMAESCALA
-          3:
-            quantities:
-              0:
-                commentary: Zona de sendas
-                height: 1
-                length: 500.0
-                units: 1.0
-                width: 1
-              1:
-                commentary: "Zona c\xE1mara de instalaciones"
-                height: 1
-                length: 3.0
-                units: 1.0
-                width: 1
-              2:
-                commentary: ''
-                height: 1
-                length: 1
-                units: 1
-                width: 1
-              3:
-                commentary: ''
-                height: 1
-                length: 1
-                units: 1
-                width: 1
-            ud: PAVMARMOL1
-          4:
-            quantities:
-              0:
-                commentary: Zona de escaleras
-                height: 1
-                length: 45.0
-                units: 1.0
-                width: 1
-              1:
-                commentary: ''
-                height: 1
-                length: 1
-                units: 1
-                width: 1
-            ud: PAVMARMOL20
-          5:
-            quantities:
-              0:
-                commentary: Zona de reposiciones de muros
-                height: 1
-                length: 72.0
-                units: 1.0
-                width: 1
-              1:
-                commentary: Nuevas zonas accesos a plaza
-                height: 1
-                length: 737.0
-                units: 1.0
-                width: 1
-              2:
-                commentary: ''
-                height: 1
-                length: 1
-                units: 1
-                width: 1
-            ud: DPAVA0510
-          6:
-            quantities:
-              0:
-                commentary: Zona de albero 1
-                height: 1
-                length: 74.0
-                units: 1.0
-                width: 1
-              1:
-                commentary: Zona de albero 2
-                height: 1
-                length: 204.0
-                units: 1.0
-                width: 1
-              2:
-                commentary: Zona de albero 3
-                height: 1
-                length: 593.0
-                units: 1.0
-                width: 1
-              3:
-                commentary: Zona de albero 4
-                height: 1
-                length: 297.0
-                units: 1.0
-                width: 1
-              4:
-                commentary: ''
-                height: 1
-                length: 1
-                units: 1
-                width: 1
-            ud: DALPEDR
-        sub_chapters: {}
-        title: PAVIMENTACION
-      CAP1.9#:
-        code: CAP1.9#
-        prices:
-          elementary_prices: {}
-          units: {}
-        quantities:
-          0:
-            quantities:
-              0:
-                commentary: Estanque 1
-                height: 1
-                length: 70.0
-                units: 1.0
-                width: 1
-              1:
-                commentary: Estanque 2
-                height: 1
-                length: 47.0
-                units: 1.0
-                width: 1
-              2:
-                commentary: Estanque 3
-                height: 1
-                length: 39.0
-                units: 1.0
-                width: 1
-              3:
-                commentary: Estrado 1
-                height: 1
-                length: 33.0
-                units: 1.0
-                width: 1
-              4:
-                commentary: Estrado 2
-                height: 1
-                length: 9.0
-                units: 1.0
-                width: 1
-              5:
-                commentary: Estrado escalera
-                height: 1
-                length: 3.0
-                units: 1.0
-                width: 1
-              6:
-                commentary: ''
-                height: 1
-                length: 1
-                units: 1
-                width: 1
-            ud: barand01
-          1:
-            quantities:
-              0:
-                commentary: "Medici\xF3n seg\xFAn despiece de planos"
-                height: 1
-                length: 855.34
-                units: 1.0
-                width: 1
-              1:
-                commentary: ''
-                height: 1
-                length: 1
-                units: 1
-                width: 1
-            ud: D5.2
-          2:
-            quantities:
-              0:
-                commentary: Rampa acceso estrado
-                height: 1
-                length: 18.68
-                units: 1.0
-                width: 1
-              1:
-                commentary: "Per\xEDmetro estrado"
-                height: 1
-                length: 84.32
-                units: 1.0
-                width: 1
-              2:
-                commentary: Escalera estrado
-                height: 1
-                length: 75.23
-                units: 1.0
-                width: 1
-              3:
-                commentary: ''
-                height: 1
-                length: 1
-                units: 1
-                width: 1
-            ud: pefil1
-        sub_chapters: {}
-        title: CERRAJERIA
-    title: "URBANIZACI\xD3N DE LA PLAZA"
-  CAPITULO2#:
-    code: CAPITULO2#
-    prices:
-      elementary_prices:
-        ESRESIDUOS:
-          code: ESRESIDUOS
-          long_description: "Estudio Gesti\xF3n de Residuos"
-          price: 18352.94
-          title: "Estudio Gesti\xF3n de Residuos"
-          type: 0
-          unit: Ud
-      units: {}
-    quantities: {}
-    sub_chapters: {}
-    title: GESTION DE RESIDUOS
-  CAPITULO3#:
-    code: CAPITULO3#
-    prices:
-      elementary_prices:
-        ESSESA:
-          code: ESSESA
-          long_description: Estudio Seguridad y Salud
-          price: 29261.4
-          title: Estudio Seguridad y Salud
-          type: 0
-          unit: Ud
-      units: {}
-    quantities: {}
-    sub_chapters: {}
-    title: SEGURIDAD Y SALUD
+                measurements:
+                  0:
+                    commentary: Rampa acceso estrado
+                    height: 1
+                    length: 18.68
+                    units: 1.0
+                    width: 1
+                  1:
+                    commentary: "Per\xEDmetro estrado"
+                    height: 1
+                    length: 84.32
+                    units: 1.0
+                    width: 1
+                  2:
+                    commentary: Escalera estrado
+                    height: 1
+                    length: 75.23
+                    units: 1.0
+                    width: 1
+                  3:
+                    commentary: ''
+                    height: 1
+                    length: 1
+                    units: 1
+                    width: 1
+                ud: pefil1
+            code: CAP1.9#
+            prices:
+              elementary_prices: {}
+              units: {}
+            sub_chapters:
+              components: {}
+              owner_code: CAP1.9#
+            title: CERRAJERIA
+        owner_code: CAPITULO1#
+      title: "URBANIZACI\xD3N DE LA PLAZA"
+    CAPITULO2#:
+      chapter_quantities: {}
+      code: CAPITULO2#
+      prices:
+        elementary_prices:
+          ESRESIDUOS:
+            code: ESRESIDUOS
+            long_description: "Estudio Gesti\xF3n de Residuos"
+            price: 18352.94
+            title: "Estudio Gesti\xF3n de Residuos"
+            type: 0
+            unit: Ud
+        units: {}
+      sub_chapters:
+        components: {}
+        owner_code: CAPITULO2#
+      title: GESTION DE RESIDUOS
+    CAPITULO3#:
+      chapter_quantities: {}
+      code: CAPITULO3#
+      prices:
+        elementary_prices:
+          ESSESA:
+            code: ESSESA
+            long_description: Estudio Seguridad y Salud
+            price: 29261.4
+            title: Estudio Seguridad y Salud
+            type: 0
+            unit: Ud
+        units: {}
+      sub_chapters:
+        components: {}
+        owner_code: CAPITULO3#
+      title: SEGURIDAD Y SALUD
+  owner_code: URBANIZACION_CIUDAD_DE_LA_JUSTICIA##
 title: Test title

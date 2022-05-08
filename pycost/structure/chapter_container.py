@@ -215,9 +215,11 @@ class Subcapitulos(list, epc.EntPyCost):
     def getDict(self):
         ''' Return a dictionary containing the object data.'''
         retval= epc.EntPyCost.getDict(self)
+        components= dict()
         for chapter in self:
             code= chapter.Codigo()
-            retval[code]= chapter.getDict()
+            components[code]= chapter.getDict()
+        retval['components']= components
         return retval
         
     def setFromDict(self,dct):
@@ -226,8 +228,9 @@ class Subcapitulos(list, epc.EntPyCost):
         :param dct: input dictionary.
         '''
         pendingLinks= list() # Links that cannot be set yet.
-        for key in dct:
-            chapterDict= dct[key]
+        components= dct['components']
+        for key in components:
+            chapterDict= components[key]
             ch= chapter.Chapter(key)
             pendingLinks.extend(ch.setFromDict(chapterDict))
             self.append(ch)
