@@ -341,6 +341,10 @@ class Codigos(dict):
         retval= None
         if key in self:
             retval= reg_T(c= key, d= self[key].getChapterData())
+        else:
+            tmp= key+'#'
+            if(tmp in self):
+                retval= reg_T(c= key, d= self[tmp].getChapterData())
         return retval
 
     def GetDatosMedicion(self, key):

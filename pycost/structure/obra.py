@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 #Obra.py
 
+import yaml
 import logging
 import pylatex
 from pycost.structure import chapter as cp
@@ -451,4 +452,22 @@ class Obra(cp.Chapter):
     def printTree(self):
         print_tree(self)
 
+def bc3_to_yaml(inputFileName, outputFileName):
+    ''' Reads a BC3 file and creates the corresponding YAML format file.
+
+    :param inputFileName: name of the input file.
+    '''
+    # Create main object.
+    site= Obra(cod="test", tit="Test title")
+
+    # Read section definition from file.
+    inputFile= open(inputFileName,mode='r', encoding="latin-1")
+
+    site.readBC3(inputFile)
+    inputFile.close()
+
+    # Write in YAML format
+    with open(outputFileName, 'w') as outputFile:
+        outputs= yaml.dump(site.getDict(), outputFile, allow_unicode=True)
+    outputFile.close()
 
