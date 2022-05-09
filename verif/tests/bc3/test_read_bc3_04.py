@@ -14,15 +14,16 @@ pth= os.path.dirname(__file__)
 # print("pth= ", pth)
 if(not pth):
     pth= "."
-inputFile= open(pth+'/../data/test_file_04.bc3',mode='r')
+inputFile= open(pth+'/../data/test_file_04.bc3',mode='r')#, encoding="latin-1")
 
 site.readBC3(inputFile)
+inputFile.close()
 
 # Write in YAML format
 import yaml
-with open(pth+'/../data/test_file_04.yaml', 'w') as file:
-    outputs= yaml.dump(site.getDict(), file)
-file.close()
+with open(pth+'/../data/test_file_04.yaml', 'w') as outputFile:
+    outputs= yaml.dump(site.getDict(), outputFile, allow_unicode=True)
+outputFile.close()
 
 numElementaryPrices= 0
 numQuantities= 0
