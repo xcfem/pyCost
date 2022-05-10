@@ -79,7 +79,10 @@ def preprocess_file(inputFile):
     return tmpFile.name
 
 class Obra(cp.Chapter):
-    ''' Construction site class.'''
+    ''' Construction site class.
+
+    :ivar percentages: percentage tables.
+    '''
     def __init__(self, cod="ObraSinCod", tit="ObraSinTit"):
         ''' Constructor.
 
@@ -452,13 +455,32 @@ class Obra(cp.Chapter):
     def printTree(self):
         print_tree(self)
 
-def bc3_to_yaml(inputFileName, outputFileName):
+    def extractConcepts(self, conceptCodes, cod='CodelessRoot', tit= 'TitlelessRoot'):
+        ''' Returns a new root-chapter containing the concepts corresponding
+            to the codes in the argument list.
+
+        :param conceptCodes: concepts to extract.
+        :param cod: construction site codename.
+        :param tit: constuction site description.
+        '''
+        # Create root object.
+        retval= Obra(cod= cod, tit= tit)
+        for cCode in conceptCodes:
+            # Search for elementary price.
+            price= self.findPrice(cCode)
+            if(price):
+                price.appendToChapter(retval)
+        return retval
+
+def bc3_to_yaml(inputFileName, outputFileName, cod='CodelessRoot', tit= 'TitlelessRoot'):
     ''' Reads a BC3 file and creates the corresponding YAML format file.
 
     :param inputFileName: name of the input file.
+    :param cod: construction site codename.
+    :param tit: constuction site description.
     '''
-    # Create main object.
-    site= Obra(cod="test", tit="Test title")
+    # Create root object.
+    site= Obra(cod= cod, tit= tit)
 
     # Read section definition from file.
     inputFile= open(inputFileName,mode='r', encoding="latin-1")

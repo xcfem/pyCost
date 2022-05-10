@@ -1,0 +1,157 @@
+chapter_quantities: {}
+code: CodelessRoot
+prices:
+  elementary_prices:
+    '%':
+      code: '%'
+      long_description: Medios auxiliares
+      price: 0.0
+      title: Medios auxiliares
+      type: 0
+      unit: '%'
+    '%003':
+      code: '%003'
+      long_description: ''
+      price: 0.0
+      title: 3 % Medios auxiliares
+      type: 0
+      unit: '%'
+    ANILLO01:
+      code: ANILLO01
+      long_description: Módulo base prefabricado de hormigón armado, con orificios
+        para entrada-salida de tuberías de DN 400 a DN 800 de altura comprendida entre
+        0,70 m y 1,30 m, clase R, norma UNE-EN 1917, UNE 127917
+      price: 82.05
+      title: Módulo base prefabricado de hormigón armado, con orificios para entrada-salida
+        de tuberías de DN 400 a DN 800 de altura comprendida entre 0,70 m y 1,30 m,
+        clase R, norma UNE-EN 1917, UNE 127917
+      type: 3
+      unit: Ud
+    MAACE0201:
+      code: MAACE0201
+      long_description: Acero AEH-500N en barras corrugadas, para elementos de hormigón,
+        incluso corte, ferrallado, colocación y pp. de atado con alambre recocido
+        y separadores, según instrucción EH-91, medido en peso nominal.
+      price: 0.62
+      title: ''
+      type: 3
+      unit: KG.
+    MAMV01a:
+      code: MAMV01a
+      long_description: Motocultor 60/80 cm.
+      price: 1.13
+      title: Motocultor 60/80 cm
+      type: 2
+      unit: h
+    OFICFER:
+      code: OFICFER
+      long_description: OFICIAL PRIMERA FERRALLISTA
+      price: 18.14
+      title: Oficial ferrallista
+      type: 1
+      unit: H
+    OFICJAR:
+      code: OFICJAR
+      long_description: Oficial jardinero.
+      price: 18.14
+      title: Oficial jardinero
+      type: 1
+      unit: H
+    PBGA01a:
+      code: PBGA01a
+      long_description: Agua potable en obra.
+      price: 0.65
+      title: Agua potable en obra
+      type: 3
+      unit: m3
+    PEONES:
+      code: PEONES
+      long_description: Peón especializado
+      price: 13.75
+      title: Peón especializado
+      type: 1
+      unit: H
+    SINDESCO:
+      code: SINDESCO
+      long_description: ''
+      price: 1.0
+      title: sin_desc
+      type: 3
+      unit: ''
+    VER3l:
+      code: VER3l
+      long_description: Verbena bonaerensis C-3L
+      price: 3.6
+      title: Verbena bonaerensis C-3L
+      type: 3
+      unit: ud
+  units:
+    ACERO0103:
+      code: ACERO0103
+      components:
+        0:
+          ent_code: OFICFER
+          factor: 1.0
+          production_rate: 0.015
+        1:
+          ent_code: PEONES
+          factor: 1.0
+          production_rate: 0.015
+        2:
+          ent_code: MAACE0201
+          factor: 1.0
+          production_rate: 1.0
+        3:
+          ent_code: '%003'
+          factor: 1.0
+          production_rate: 0.03
+      long_description: Acero en barras corrugadas, UNE-EN 10080 B 500 SD, incluso
+        corte, ferrallado, colocación y p.p. de atado con alambre recocido, despuntes,
+        incluso separadores de plástico rígidos, elaborado en taller y colocado en
+        obra, diámetros varios.
+      title: ''
+      unit: ''
+    AR0005b:
+      code: AR0005b
+      components:
+        0:
+          ent_code: OFICJAR
+          factor: 1.0
+          production_rate: 0.02
+        1:
+          ent_code: PEONES
+          factor: 1.0
+          production_rate: 0.03
+        2:
+          ent_code: VER3l
+          factor: 1.0
+          production_rate: 1.0
+        3:
+          ent_code: MAMV01a
+          factor: 1.0
+          production_rate: 0.01
+        4:
+          ent_code: PBGA01a
+          factor: 1.0
+          production_rate: 0.02
+        5:
+          ent_code: '%'
+          factor: 1.0
+          production_rate: 0.03
+      long_description: Suministro y plantación de Verbena bonaerensis  C-3L  40 cm
+        de alltura.perfectamente enraizado y formado, con un mínimo de tres meses
+        de cultivo en el contenedor presentado. Libre de lesión o enfermedad alguna,
+        aprobado y seleccionado en origen por la dirección facultativa. Apertura de
+        hoyo de 0,60x,0,60x0,60, retirada de la excavación y relleno con sustrato
+        de plantación compuesto de 60% de arena de sílice 0,1 a 4 mm, 20% compost
+        de origen vegetal, 20% tierra vegetal de textura franco arenosa (Porcentajes
+        en peso) y una conductividad eléctrica menor de 0,8 dS/m según NTJ 05T,incluso
+        tapado y apretado, riegos de plantación con manguera según pliego de condiciones
+        y hasta el funcionamiento normalizado de la instalación de riego, medida la
+        unidad suministrada en obra.
+      title: ''
+      unit: ''
+sub_chapters:
+  components: {}
+  owner_code: CodelessRoot
+title: TitlelessRoot

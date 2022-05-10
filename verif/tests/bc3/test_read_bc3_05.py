@@ -15,7 +15,7 @@ pth= os.path.dirname(__file__)
 # print("pth= ", pth)
 if(not pth):
     pth= "."
-inputFile= open(pth+'/../data/test_file_05.bc3',mode='r')#, encoding="latin-1")
+inputFile= open(pth+'/../data/test_file_05.bc3',mode='r', encoding="utf-8")
 
 site.readBC3(inputFile)
 inputFile.close()

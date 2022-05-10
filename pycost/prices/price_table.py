@@ -11,6 +11,11 @@ class Buscadores(dict):
         super(Buscadores, self).__init__()
 
 class CuaPre(epc.EntPyCost):
+    ''' Price tables:
+
+    :ivar elementos: elementary prices.
+    :ivar unidades: composed prices.
+    '''
     def __init__(self):
         super(CuaPre,self).__init__()
         self.elementos= elementary_price_container.ElementaryPrices() #Precios elementales.
@@ -33,7 +38,6 @@ class CuaPre(epc.EntPyCost):
 
     def AgregaComponente(self, cod_ud, cod_el, r, f= 1.0):
         self.unidades.AgregaComponente(elementos,cod_ud,cod_el,r,f)
-
 
     def LeeBC3Elementales(self, elem):
         ''' Read elementary prices.'''
@@ -82,7 +86,6 @@ class CuaPre(epc.EntPyCost):
         '''Write elementary prices.''' 
         self.elementos.printLtx(os)
 
-
     def writePriceJustification(self, doc):
         '''Write price justification.'''
         self.unidades.writePriceJustification(doc)
@@ -127,3 +130,9 @@ class CuaPre(epc.EntPyCost):
         pendingLinks.extend(self.unidades.setFromDict(dct['units']))
         pendingLinks.extend(super(CuaPre, self).setFromDict(dct))
         return pendingLinks
+
+    def clear(self):
+        '''removes all items from the chapter.'''
+        self.unidades.clear()
+        self.elementos.clear()
+        

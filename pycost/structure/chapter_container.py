@@ -236,3 +236,9 @@ class Subcapitulos(list, epc.EntPyCost):
             self.append(ch)
         pendingLinks.extend(epc.EntPyCost.setFromDict(self, dct))
         return pendingLinks
+
+    def clear(self):
+        '''removes all items from the chapter.'''
+        for sc in self:
+            sc.clear()
+        super(Subcapitulos,self).clear()

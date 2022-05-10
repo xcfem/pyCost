@@ -15,6 +15,13 @@ from pycost.utils import pylatex_utils
 from pycost.utils import basic_types
 
 class Chapter(bc3_entity.EntBC3):
+    ''' Chapter.
+
+    :ivar fr: factor and production rate values.
+    :ivar subcapitulos: sub-chapters.
+    :ivar quantities: chapter quantities.
+    :ivar precios: chapter price table.
+    '''
     precision= 2
     places= Decimal(10) ** -precision
     formatString= '{0:.'+str(precision)+'f}'
@@ -310,3 +317,8 @@ class Chapter(bc3_entity.EntBC3):
         retval.Merge(self.subcapitulos.getQuantitiesReport())
         return retval
 
+    def clear(self):
+        '''removes all items from the chapter.'''
+        self.quantities.clear()
+        self.subcapitulos.clear()
+        self.precios.clear()

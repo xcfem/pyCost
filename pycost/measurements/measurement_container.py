@@ -170,3 +170,9 @@ class ChapterQuantities(list, epc.EntPyCost):
             pendingLinks.extend(item.setFromDict(itemDict))
             self.append(item)
         return pendingLinks
+    
+    def clear(self):
+        '''removes all items from the chapter.'''
+        for sc in self:
+            sc.clear()
+        super(ChapterQuantities, self).clear()

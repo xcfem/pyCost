@@ -164,3 +164,8 @@ class UnitPrice(ms.Measurable):
         pendingLinks.extend(super(UnitPrice, self).setFromDict(dct))
         return pendingLinks
 
+    def appendToChapter(self, chapter):
+        ''' Insert this price in the chapter argument.'''
+        for comp in self.components:
+            comp.ent.appendToChapter(chapter)
+        chapter.precios.unidades.Append(self)

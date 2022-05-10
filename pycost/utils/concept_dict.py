@@ -52,5 +52,10 @@ class ConceptDict(epy.EntPyCost):
             retval[key]= value.getDict()
         return retval
 
+    def clear(self):
+        '''removes all items from the container.'''
+        self.concepts.clear()
+        
+
 def find_concept(conceptName):
     return ConceptDict.claves[conceptName]

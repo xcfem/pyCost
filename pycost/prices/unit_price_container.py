@@ -167,3 +167,9 @@ class Descompuestos(concept_dict.ConceptDict):
         pendingLinks.extend(super(Descompuestos, self).setFromDict(dct))
         return pendingLinks
 
+    def clear(self):
+        '''removes all items from the container.'''
+        # for p in self.concepts:
+        #     print('unit price container: ', p)
+        #     p.clear()
+        super(Descompuestos, self).clear()

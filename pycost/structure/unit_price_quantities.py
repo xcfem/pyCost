@@ -44,3 +44,8 @@ class UnitPriceQuantities(ptp.UnitPriceQuantitiesBase):
         pendingLinks= self.quantities.setFromDict(dct['measurements']) # Links that cannot be set yet.
         pendingLinks.extend(super(UnitPriceQuantities, self).setFromDict(dct))
         return pendingLinks
+    
+    def clear(self):
+        '''removes all items from the chapter.'''
+        self.quantities.clear()
+

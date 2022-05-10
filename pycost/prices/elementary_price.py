@@ -60,3 +60,8 @@ class ElementaryPrice(m.Measurable):
         self.tipo= dct['type']
         self.precio= dct['price']
         return super(ElementaryPrice, self).setFromDict(dct)
+
+    def appendToChapter(self, chapter):
+        ''' Insert this elementary price in the chapter argument.'''
+        chapter.precios.elementos.Append(self)
+

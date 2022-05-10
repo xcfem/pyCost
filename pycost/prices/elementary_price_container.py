@@ -217,3 +217,7 @@ class ElementaryPrices(concept_dict.ConceptDict):
             self.Append(p)
         pendingLinks.extend(super(ElementaryPrices, self).setFromDict(dct))
         return pendingLinks
+
+    def clear(self):
+        '''removes all items from the chapter.'''
+        super(ElementaryPrices, self).clear()
