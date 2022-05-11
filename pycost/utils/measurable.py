@@ -5,21 +5,35 @@ from pycost.bc3 import bc3_entity as eBC3
 from pycost.bc3 import codes
 
 class Measurable(eBC3.EntBC3):
-    '''Thing that you can measure (en m,kg.py,m2,m3,...)'''
+    '''Buildable thing that you can measure (en m, kg, m2, m3,...)
 
-    def readBC3(self, r):
-        ''' Read from BC3 record.'''
-        super(Measurable,self).readBC3(r)
-        self.unidad= r.Datos().Unidad()
-        self.long_description= r.Datos().Texto()
+    :param unidad: unit of measurement.
+    :param long_description: description of the measurable thing.
+    '''
 
     def __init__(self, cod, tit, ud, ld= None):
+        ''' Constructor.
+ 
+        :param cod: identifier.
+        :param tit: short description.
+        :param ud: unit of measurement.
+        :param ld: long description.
+        '''
         super(Measurable,self).__init__(cod,tit)
         self.unidad= ud
         if(ld):
           self.long_description= ld #unicode(ld,encoding='utf-8')
         else:
           self.long_description= ''
+          
+    def readBC3(self, r):
+        ''' Read from BC3 record.
+
+        :param r: BC3 record.
+        '''
+        super(Measurable,self).readBC3(r)
+        self.unidad= r.Datos().Unidad()
+        self.long_description= r.Datos().Texto()
 
     def getLongDescription(self):
         return self.long_description

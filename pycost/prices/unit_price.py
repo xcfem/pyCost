@@ -13,11 +13,23 @@ from pycost.bc3 import bc3_component
 from decimal import Decimal
 
 class UnitPrice(ms.Measurable):
+    ''' Cost of the materials, equipment, and labor needed
+        to build a building unit.
+
+    :ivar components: components of the cost (materials,...).
+    '''
     precision= 2
     places= Decimal(10) ** -precision
     formatString= '{0:.'+str(precision)+'f}'
 
     def __init__(self, cod="", desc="", ud="", ld= None):
+        ''' Constructor.
+ 
+        :param cod: identifier.
+        :param tit: short description.
+        :param ud: unit of measurement.
+        :param ld: long description.
+        '''
         super(UnitPrice,self).__init__(cod,desc,ud,ld)
         self.components= component_list.ComponentList()
         

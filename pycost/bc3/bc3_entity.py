@@ -8,10 +8,20 @@ from pycost.utils import basic_types
 from decimal import Decimal
 
 class EntBC3(epc.EntPyCost):
+    '''FieBDC 3 entity.
+
+    :ivar codigo: identifier of the entity.
+    :ivar title: short description of the entity.
+    '''
     static_txtud= ''
     static_texto_largo= ''
     
     def __init__(self, cod, tit):
+        ''' Constructor.
+ 
+        :param cod: identifier.
+        :param tit: short description.
+        '''
         super(EntBC3,self).__init__()
         self.codigo= cod
         self.title= tit

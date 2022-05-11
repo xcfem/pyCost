@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-'''Trivial PyCost test.''' 
+'''Extract concepts from unit cost databases.''' 
 from __future__ import division
 from __future__ import print_function
 
