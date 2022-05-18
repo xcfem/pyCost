@@ -22,12 +22,12 @@ inputFile.close()
 pendingLinks= site.solvePendingLinks(site.setFromDict(dataDict))
 
 extracted= obra.Obra(cod="extracted", tit="Extracted concepts.")
-conceptCodes= ['ACERO0103', 'AR0005b', 'ANILLO01']
-extracted= site.extractConcepts(conceptCodes, extracted)
+conceptCodes= ['AR.*', 'DBANCOIND.*']
+extracted= site.extractConceptsRegex(conceptCodes, extracted)
 
 
 # Write in YAML format
-yamlFile= pth+'/data/test_extract_concepts.yaml'
+yamlFile= pth+'/data/test_extract_concepts_regex.yaml'
 with open(yamlFile, 'w') as outputFile:
     outputs= yaml.dump(extracted.getDict(), outputFile, allow_unicode=True)
 outputFile.close()
@@ -67,7 +67,7 @@ print('num. unitary prices: ', numUnitPrices)
 import os
 from misc_utils import log_messages as lmsg
 fname= os.path.basename(__file__)
-if ((price==0.0) and (numChapters==0) and (numElementaryPrices==11) and (numUnitPrices==2) and (numQuantities==0)):
+if ((price==0.0) and (numChapters==0) and (numElementaryPrices==25) and (numUnitPrices==13) and (numQuantities==0)):
     print('test: '+fname+': ok.')
 else:
     lmsg.error('test: '+fname+' ERROR.')

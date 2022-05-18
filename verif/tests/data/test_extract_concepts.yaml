@@ -1,5 +1,5 @@
 chapter_quantities: {}
-code: CodelessRoot
+code: extracted
 prices:
   elementary_prices:
     '%':
@@ -153,5 +153,5 @@ prices:
       unit: ''
 sub_chapters:
   components: {}
-  owner_code: CodelessRoot
-title: TitlelessRoot
+  owner_code: extracted
+title: Extracted concepts.

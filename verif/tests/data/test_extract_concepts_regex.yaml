@@ -1,0 +1,674 @@
+chapter_quantities: {}
+code: extracted
+prices:
+  elementary_prices:
+    '%':
+      code: '%'
+      long_description: Medios auxiliares
+      price: 0.0
+      title: Medios auxiliares
+      type: 0
+      unit: '%'
+    '%003':
+      code: '%003'
+      long_description: ''
+      price: 0.0
+      title: 3 % Medios auxiliares
+      type: 0
+      unit: '%'
+    '%UMAUX0103':
+      code: '%UMAUX0103'
+      long_description: ''
+      price: 0.0
+      title: 3 % Medios auxiliares
+      type: 0
+      unit: '%'
+    ARENA10:
+      code: ARENA10
+      long_description: Arena caliza puesta en obra
+      price: 7.0
+      title: Arena caliza puesta en obra
+      type: 0
+      unit: Tn
+    ARENA100:
+      code: ARENA100
+      long_description: Arena granítica especial para filtro de agua
+      price: 150.0
+      title: Arena granítica especial para filtro de agua
+      type: 3
+      unit: m3
+    CALL5L:
+      code: CALL5L
+      long_description: Callistemon laevis C-5L 80 cm altura
+      price: 8.7
+      title: Callistemon laevis C-5L 80 cm altura
+      type: 3
+      unit: ud
+    ECH5L:
+      code: ECH5L
+      long_description: Echium candicans C-5L 50 cm altura
+      price: 9.86
+      title: Echium candicans C-5L 50 cm altura
+      type: 3
+      unit: ud
+    GAI1l:
+      code: GAI1l
+      long_description: Gaillardia grandiflora C-3L
+      price: 4.6
+      title: Gaillardia grandiflora C-3L
+      type: 3
+      unit: ud
+    MAMV01a:
+      code: MAMV01a
+      long_description: Motocultor 60/80 cm.
+      price: 1.13
+      title: Motocultor 60/80 cm
+      type: 2
+      unit: h
+    MIR3l:
+      code: MIR3l
+      long_description: Mirtus comunis C-3L 60 cm altura
+      price: 4.85
+      title: Mirtus comunis C-3L 60 cm altura
+      type: 3
+      unit: ud
+    OFIC:
+      code: OFIC
+      long_description: ''
+      price: 14.57
+      title: Oficial 1ª
+      type: 1
+      unit: H.
+    OFICJAR:
+      code: OFICJAR
+      long_description: Oficial jardinero.
+      price: 18.14
+      title: Oficial jardinero
+      type: 1
+      unit: H
+    PBGA01a:
+      code: PBGA01a
+      long_description: Agua potable en obra.
+      price: 0.65
+      title: Agua potable en obra
+      type: 3
+      unit: m3
+    PEON:
+      code: PEON
+      long_description: ''
+      price: 12.7
+      title: Peón Ordinario
+      type: 1
+      unit: H
+    PEONES:
+      code: PEONES
+      long_description: Peón especializado
+      price: 13.75
+      title: Peón especializado
+      type: 1
+      unit: H
+    PIS5L:
+      code: PIS5L
+      long_description: Pistacea lentiscus C-5L 60 cm altura
+      price: 8.2
+      title: Pistacea lentiscus C-5L 60 cm altura
+      type: 3
+      unit: ud
+    ROS1L:
+      code: ROS1L
+      long_description: Rosmarinus prostatus C-1L
+      price: 2.0
+      title: Rosmarinus prostatus C-1L
+      type: 3
+      unit: ud
+    SINDESCO:
+      code: SINDESCO
+      long_description: ''
+      price: 1.0
+      title: sin_desc
+      type: 3
+      unit: ''
+    UBANMOD:
+      code: UBANMOD
+      long_description: Ud. Banco MOON de SANTA & COLE, o equivalente, de 1,80m de
+        longitud con respaldo. Asiento y respaldo formado por listones de madera tropical
+        con certificado FSC, tratada con aceite protector, de 45x45mm y remates de
+        45x200mm. La tornillería de fijación de los listones es de acero inoxidable.
+        Patas de fundición de hierro con imprimación antioxidante y pintadas en polvo
+        color negro. Los perfiles de unión de los listones con las patas son de acero
+        con imprimación antioxidante y pintura en polvo color negro.
+      price: 1680.0
+      title: Ud. banco modelo Moon de Santa y Cole, o equivalente; de 1.80 m. de longitud
+        con respaldo.
+      type: 3
+      unit: Ud
+    UBANMOD-1:
+      code: UBANMOD-1
+      long_description: ' Banco modular individual de  de dimensiones 0,60x0,40x0,45
+        m de color tosca o gris a decidir por la D.F., de aproximadamente 250 Kg de
+        peso, textura lisa, aristas biseladas y con armaduras de acero galvanizado,
+        anclado mediante 4 pernos de acero inoxidable a cimentación de hormigón'
+      price: 2500.0
+      title: Ud. banco modelo Moon de Santa y Cole, o equivalente; con patas de fundición
+        de hierro con imprimación antioxidante y capa de pintura en polvo, color negro;
+        perfiles de unión de los listones con las patas, de acero con imprimación
+        antioxidante y capa de
+      type: 3
+      unit: Ud
+    UBANMOD-2:
+      code: UBANMOD-2
+      long_description: Ud. Banco MOON de SANTA & COLE, o equivalente, de 3.000m de
+        longitud con respaldo. Asiento y respaldo formado por listones de madera tropical
+        con certificado FSC, tratada con aceite protector, de 45x45mm y remates de
+        45x200mm. La tornillería de fijación de los listones es de acero inoxidable.
+        Patas de fundición de hierro con imprimación antioxidante y pintadas en polvo
+        color negro. Los perfiles de unión de los listones con las patas son de acero
+        con imprimación antioxidante y pintura en polvo color negro.
+      price: 2500.0
+      title: Ud. banco modelo Moon de Santa y Cole, o equivalente; de 3.00 m. de longitud
+        con respaldo.
+      type: 3
+      unit: Ud
+    UBANMOD-22:
+      code: UBANMOD-22
+      long_description: Ud. Banco MOON de SANTA & COLE, o equivalente, de 3.000m de
+        longitud sin respaldo. Asiento formado por listones de madera tropical con
+        certificado FSC, tratada con aceite protector, de 45x45mm y remates de 45x200mm.
+        La tornillería de fijación de los listones es de acero inoxidable. Patas de
+        fundición de hierro con imprimación antioxidante y pintadas en polvo color
+        negro. Los perfiles de unión de los listones con las patas son de acero con
+        imprimación antioxidante y pintura en polvo color negro.
+      price: 1995.0
+      title: Ud. banco modelo Moon de Santa y Cole, o equivalente; de 3.00 m. de longitud
+        sin respaldo.
+      type: 3
+      unit: Ud
+    UHM20:
+      code: UHM20
+      long_description: ''
+      price: 49.61
+      title: Hormigón HM-20/P/20/I
+      type: 3
+      unit: M3.
+    URETR0101:
+      code: URETR0101
+      long_description: ''
+      price: 26.48
+      title: Retroexcavadora sobre neumáticos.
+      type: 2
+      unit: H.
+    VER3l:
+      code: VER3l
+      long_description: Verbena bonaerensis C-3L
+      price: 3.6
+      title: Verbena bonaerensis C-3L
+      type: 3
+      unit: ud
+  units:
+    AHM20:
+      code: AHM20
+      components:
+        0:
+          ent_code: PEON
+          factor: 1.0
+          production_rate: 0.15
+        1:
+          ent_code: UHM20
+          factor: 1.0
+          production_rate: 1.0
+        2:
+          ent_code: '%UMAUX0103'
+          factor: 1.0
+          production_rate: 0.03
+      long_description: Hormigón HM-20 suministrado de central, vertido, en relleno
+        de zanjas, pozos, soleras, cimentaciones, arquetas y formación de bancadas,
+        incluso vibrado y acabado superficial.
+      title: ''
+      unit: ''
+    AR0005b:
+      code: AR0005b
+      components:
+        0:
+          ent_code: OFICJAR
+          factor: 1.0
+          production_rate: 0.02
+        1:
+          ent_code: PEONES
+          factor: 1.0
+          production_rate: 0.03
+        2:
+          ent_code: VER3l
+          factor: 1.0
+          production_rate: 1.0
+        3:
+          ent_code: MAMV01a
+          factor: 1.0
+          production_rate: 0.01
+        4:
+          ent_code: PBGA01a
+          factor: 1.0
+          production_rate: 0.02
+        5:
+          ent_code: '%'
+          factor: 1.0
+          production_rate: 0.03
+      long_description: Suministro y plantación de Verbena bonaerensis  C-3L  40 cm
+        de alltura.perfectamente enraizado y formado, con un mínimo de tres meses
+        de cultivo en el contenedor presentado. Libre de lesión o enfermedad alguna,
+        aprobado y seleccionado en origen por la dirección facultativa. Apertura de
+        hoyo de 0,60x,0,60x0,60, retirada de la excavación y relleno con sustrato
+        de plantación compuesto de 60% de arena de sílice 0,1 a 4 mm, 20% compost
+        de origen vegetal, 20% tierra vegetal de textura franco arenosa (Porcentajes
+        en peso) y una conductividad eléctrica menor de 0,8 dS/m según NTJ 05T,incluso
+        tapado y apretado, riegos de plantación con manguera según pliego de condiciones
+        y hasta el funcionamiento normalizado de la instalación de riego, medida la
+        unidad suministrada en obra.
+      title: ''
+      unit: ''
+    AR0008b:
+      code: AR0008b
+      components:
+        0:
+          ent_code: OFICJAR
+          factor: 1.0
+          production_rate: 0.02
+        1:
+          ent_code: PEONES
+          factor: 1.0
+          production_rate: 0.03
+        2:
+          ent_code: CALL5L
+          factor: 1.0
+          production_rate: 1.0
+        3:
+          ent_code: MAMV01a
+          factor: 1.0
+          production_rate: 0.01
+        4:
+          ent_code: PBGA01a
+          factor: 1.0
+          production_rate: 0.02
+        5:
+          ent_code: '%'
+          factor: 1.0
+          production_rate: 0.03
+      long_description: Suministro y plantación de Callistemon laevis C-5L  80 cm
+        de alltura.perfectamente enraizado y formado, con un mínimo de tres meses
+        de cultivo en el contenedor presentado. Libre de lesión o enfermedad alguna,
+        aprobado y seleccionado en origen por la dirección facultativa. Apertura de
+        hoyo de 0,60x,0,60x0,60, retirada de la excavación y relleno con sustrato
+        de plantación compuesto de 60% de arena de sílice 0,1 a 4 mm, 20% compost
+        de origen vegetal, 20% tierra vegetal de textura franco arenosa (Porcentajes
+        en peso) y una conductividad eléctrica menor de 0,8 dS/m según NTJ 05T,incluso
+        tapado y apretado, riegos de plantación con manguera según pliego de condiciones
+        y hasta el funcionamiento normalizado de la instalación de riego, medida la
+        unidad suministrada en obra.
+      title: ''
+      unit: ''
+    AR0009b:
+      code: AR0009b
+      components:
+        0:
+          ent_code: OFICJAR
+          factor: 1.0
+          production_rate: 0.02
+        1:
+          ent_code: PEONES
+          factor: 1.0
+          production_rate: 0.03
+        2:
+          ent_code: ECH5L
+          factor: 1.0
+          production_rate: 1.0
+        3:
+          ent_code: MAMV01a
+          factor: 1.0
+          production_rate: 0.01
+        4:
+          ent_code: PBGA01a
+          factor: 1.0
+          production_rate: 0.02
+        5:
+          ent_code: '%'
+          factor: 1.0
+          production_rate: 0.03
+      long_description: Suministro y plantación de Echium candicans C-5L  50 cm de
+        alltura.perfectamente enraizado y formado, con un mínimo de tres meses de
+        cultivo en el contenedor presentado. Libre de lesión o enfermedad alguna,
+        aprobado y seleccionado en origen por la dirección facultativa. Apertura de
+        hoyo de 0,60x,0,60x0,60, retirada de la excavación y relleno con sustrato
+        de plantación compuesto de 60% de arena de sílice 0,1 a 4 mm, 20% compost
+        de origen vegetal, 20% tierra vegetal de textura franco arenosa (Porcentajes
+        en peso) y una conductividad eléctrica menor de 0,8 dS/m según NTJ 05T,incluso
+        tapado y apretado, riegos de plantación con manguera según pliego de condiciones
+        y hasta el funcionamiento normalizado de la instalación de riego, medida la
+        unidad suministrada en obra.
+      title: ''
+      unit: ''
+    AR0011bb:
+      code: AR0011bb
+      components:
+        0:
+          ent_code: OFICJAR
+          factor: 1.0
+          production_rate: 0.02
+        1:
+          ent_code: PEONES
+          factor: 1.0
+          production_rate: 0.03
+        2:
+          ent_code: PIS5L
+          factor: 1.0
+          production_rate: 1.0
+        3:
+          ent_code: MAMV01a
+          factor: 1.0
+          production_rate: 0.01
+        4:
+          ent_code: PBGA01a
+          factor: 1.0
+          production_rate: 0.02
+        5:
+          ent_code: '%'
+          factor: 1.0
+          production_rate: 0.03
+      long_description: Suministro y plantación de Perovskia atripicifolia C-5L  60
+        cm de alltura.perfectamente enraizado y formado, con un mínimo de tres meses
+        de cultivo en el contenedor presentado. Libre de lesión o enfermedad alguna,
+        aprobado y seleccionado en origen por la dirección facultativa. Apertura de
+        hoyo de 0,60x,0,60x0,60, retirada de la excavación y relleno con sustrato
+        de plantación compuesto de 60% de arena de sílice 0,1 a 4 mm, 20% compost
+        de origen vegetal, 20% tierra vegetal de textura franco arenosa (Porcentajes
+        en peso) y una conductividad eléctrica menor de 0,8 dS/m según NTJ 05T,incluso
+        tapado y apretado, riegos de plantación con manguera según pliego de condiciones
+        y hasta el funcionamiento normalizado de la instalación de riego, medida la
+        unidad suministrada en obra.
+      title: ''
+      unit: ''
+    AR0012bb:
+      code: AR0012bb
+      components:
+        0:
+          ent_code: GAI1l
+          factor: 1.0
+          production_rate: 1.0
+        1:
+          ent_code: OFICJAR
+          factor: 1.0
+          production_rate: 0.022
+        2:
+          ent_code: PEONES
+          factor: 1.0
+          production_rate: 0.085
+        3:
+          ent_code: MAMV01a
+          factor: 1.0
+          production_rate: 0.01
+        4:
+          ent_code: PBGA01a
+          factor: 1.0
+          production_rate: 0.02
+        5:
+          ent_code: '%'
+          factor: 1.0
+          production_rate: 0.03
+      long_description: Suministro y plantación de Gaillardia grandiflora rose en
+        C-3L.perfectamente enraizado y formado, con un mínimo de tres meses de cultivo
+        en el contenedor presentado. Libre de lesión o enfermedad alguna, aprobado
+        y seleccionado en origen por la dirección facultativa. Apertura de hoyo de
+        0,50x0,50x0,50, retirada de la excavación y relleno con sustrato de plantación
+        compuesto de 60% de arena de sílice 0,1 a 4 mm, 20% compost de origen vegetal,
+        20% tierra vegetal de textura franco arenosa (Porcentajes en peso) y una conductividad
+        eléctrica menor de 0,8 dS/m según NTJ 05T,incluso tapado y apretado, riegos
+        de plantación con manguera según pliego de condiciones y hasta el funcionamiento
+        normalizado de la instalación de riego, medida la unidad suministrada en obra.
+      title: ''
+      unit: ''
+    AR0013bbb:
+      code: AR0013bbb
+      components:
+        0:
+          ent_code: ROS1L
+          factor: 1.0
+          production_rate: 1.0
+        1:
+          ent_code: OFICJAR
+          factor: 1.0
+          production_rate: 0.022
+        2:
+          ent_code: PEONES
+          factor: 1.0
+          production_rate: 0.085
+        3:
+          ent_code: MAMV01a
+          factor: 1.0
+          production_rate: 0.01
+        4:
+          ent_code: PBGA01a
+          factor: 1.0
+          production_rate: 0.02
+        5:
+          ent_code: '%'
+          factor: 1.0
+          production_rate: 0.03
+      long_description: Suministro y plantación de Rosmarinus postratus en C-1L.perfectamente
+        enraizado y formado, con un mínimo de tres meses de cultivo en el contenedor
+        presentado. Libre de lesión o enfermedad alguna, aprobado y seleccionado en
+        origen por la dirección facultativa. Apertura de hoyo de 0,50x0,50x0,50, retirada
+        de la excavación y relleno con sustrato de plantación compuesto de 60% de
+        arena de sílice 0,1 a 4 mm, 20% compost de origen vegetal, 20% tierra vegetal
+        de textura franco arenosa (Porcentajes en peso) y una conductividad eléctrica
+        menor de 0,8 dS/m según NTJ 05T,incluso tapado y apretado, riegos de plantación
+        con manguera según pliego de condiciones y hasta el funcionamiento normalizado
+        de la instalación de riego, medida la unidad suministrada en obra.
+      title: ''
+      unit: ''
+    AR0014bb:
+      code: AR0014bb
+      components:
+        0:
+          ent_code: MIR3l
+          factor: 1.0
+          production_rate: 1.0
+        1:
+          ent_code: OFICJAR
+          factor: 1.0
+          production_rate: 0.022
+        2:
+          ent_code: PEONES
+          factor: 1.0
+          production_rate: 0.085
+        3:
+          ent_code: MAMV01a
+          factor: 1.0
+          production_rate: 0.01
+        4:
+          ent_code: PBGA01a
+          factor: 1.0
+          production_rate: 0.02
+        5:
+          ent_code: '%'
+          factor: 1.0
+          production_rate: 0.03
+      long_description: Suministro y plantación de Mirtus comunis en C-3L.perfectamente
+        enraizado y formado, con un mínimo de tres meses de cultivo en el contenedor
+        presentado. Libre de lesión o enfermedad alguna, aprobado y seleccionado en
+        origen por la dirección facultativa. Apertura de hoyo de 0,50x0,50x0,50, retirada
+        de la excavación y relleno con sustrato de plantación compuesto de 60% de
+        arena de sílice 0,1 a 4 mm, 20% compost de origen vegetal, 20% tierra vegetal
+        de textura franco arenosa (Porcentajes en peso) y una conductividad eléctrica
+        menor de 0,8 dS/m según NTJ 05T,incluso tapado y apretado, riegos de plantación
+        con manguera según pliego de condiciones y hasta el funcionamiento normalizado
+        de la instalación de riego, medida la unidad suministrada en obra.
+      title: ''
+      unit: ''
+    DBANCOIND16:
+      code: DBANCOIND16
+      components:
+        0:
+          ent_code: PEON
+          factor: 1.0
+          production_rate: 0.487
+        1:
+          ent_code: OFIC
+          factor: 1.0
+          production_rate: 0.244
+        2:
+          ent_code: UBANMOD
+          factor: 1.0
+          production_rate: 1.0
+        3:
+          ent_code: DEXZANJAT-1
+          factor: 1.0
+          production_rate: 0.072
+        4:
+          ent_code: AHM20
+          factor: 1.0
+          production_rate: 0.072
+        5:
+          ent_code: '%003'
+          factor: 1.0
+          production_rate: 0.03
+      long_description: Ud. Banco MOON de SANTA & COLE, o equivalente, de 1,80m de
+        longitud con respaldo. Asiento y respaldo formado por listones de madera tropical
+        con certificado FSC, tratada con aceite protector, de 45x45mm y remates de
+        45x200mm. La tornillería de fijación de los listones es de acero inoxidable.
+        Patas de fundición de hierro con imprimación antioxidante y pintadas en polvo
+        color negro. Los perfiles de unión de los listones con las patas son de acero
+        con imprimación antioxidante y pintura en polvo color negro.
+      title: ''
+      unit: ''
+    DBANCOIND18:
+      code: DBANCOIND18
+      components:
+        0:
+          ent_code: PEON
+          factor: 1.0
+          production_rate: 0.5
+        1:
+          ent_code: OFIC
+          factor: 1.0
+          production_rate: 0.244
+        2:
+          ent_code: UBANMOD-2
+          factor: 1.0
+          production_rate: 1.0
+        3:
+          ent_code: DEXZANJAT-1
+          factor: 1.0
+          production_rate: 0.072
+        4:
+          ent_code: AHM20
+          factor: 1.0
+          production_rate: 0.072
+        5:
+          ent_code: '%003'
+          factor: 1.0
+          production_rate: 0.03
+      long_description: Ud. Banco MOON de SANTA & COLE, o equivalente, de 3.00m de
+        longitud con respaldo. Asiento y respaldo formado por listones de madera tropical
+        con certificado FSC, tratada con aceite protector, de 45x45mm y remates de
+        45x200mm. La tornillería de fijación de los listones es de acero inoxidable.
+        Patas de fundición de hierro con imprimación antioxidante y pintadas en polvo
+        color negro. Los perfiles de unión de los listones con las patas son de acero
+        con imprimación antioxidante y pintura en polvo color negro.
+      title: ''
+      unit: ''
+    DBANCOIND19:
+      code: DBANCOIND19
+      components:
+        0:
+          ent_code: PEON
+          factor: 1.0
+          production_rate: 0.5
+        1:
+          ent_code: OFIC
+          factor: 1.0
+          production_rate: 0.244
+        2:
+          ent_code: UBANMOD-22
+          factor: 1.0
+          production_rate: 1.0
+        3:
+          ent_code: DEXZANJAT-1
+          factor: 1.0
+          production_rate: 0.072
+        4:
+          ent_code: AHM20
+          factor: 1.0
+          production_rate: 0.072
+        5:
+          ent_code: '%003'
+          factor: 1.0
+          production_rate: 0.03
+      long_description: Ud. Banco MOON de SANTA & COLE, o equivalente, de 3.00m de
+        longitud sin respaldo. Asiento formado por listones de madera tropical con
+        certificado FSC, tratada con aceite protector, de 45x45mm y remates de 45x200mm.
+        La tornillería de fijación de los listones es de acero inoxidable. Patas de
+        fundición de hierro con imprimación antioxidante y pintadas en polvo color
+        negro. Los perfiles de unión de los listones con las patas son de acero con
+        imprimación antioxidante y pintura en polvo color negro.
+      title: ''
+      unit: ''
+    DBANCOIND201:
+      code: DBANCOIND201
+      components:
+        0:
+          ent_code: PEON
+          factor: 1.0
+          production_rate: 0.487
+        1:
+          ent_code: OFIC
+          factor: 1.0
+          production_rate: 0.244
+        2:
+          ent_code: UBANMOD-1
+          factor: 1.0
+          production_rate: 1.0
+        3:
+          ent_code: DEXZANJAT-1
+          factor: 1.0
+          production_rate: 0.072
+        4:
+          ent_code: AHM20
+          factor: 1.0
+          production_rate: 0.072
+        5:
+          ent_code: '%003'
+          factor: 1.0
+          production_rate: 0.03
+      long_description: Ud. banco modelo Moon de Santa y Cole, o equivalente; con
+        patas de fundición de hierro con imprimación antioxidante y capa de pintura
+        en polvo, color negro; perfiles de unión de los listones con las patas, de
+        acero con imprimación antioxidante y capa de pintura en polvo, color negro;
+        c) tornillería de anclaje de los listones, de acero con protección antioxidante;
+        asiento y respaldo formado por listones de 45 x 45 mm de sección, longitudes
+        de 1,80 m y remates de 45 x 200 mm de sección, de madera tropical, con certificado
+        FSC, protegida con aceite de dos componentes, incluso anclaje formado por
+        dos pernos de acero por pata tratados con protección antioxidante.
+      title: ''
+      unit: ''
+    DEXZANJAT-1:
+      code: DEXZANJAT-1
+      components:
+        0:
+          ent_code: PEON
+          factor: 1.0
+          production_rate: 0.025
+        1:
+          ent_code: URETR0101
+          factor: 1.0
+          production_rate: 0.1
+        2:
+          ent_code: '%003'
+          factor: 1.0
+          production_rate: 0.03
+      long_description: Excavación en zanja, pozo o zapatas de muros, a máquina, en
+        todo tipo de terreno, incluso perfilado de la sección y p.p. de excavación
+        a mano en terreno próximo a servicios.
+      title: ''
+      unit: ''
+sub_chapters:
+  components: {}
+  owner_code: extracted
+title: Extracted concepts.

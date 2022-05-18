@@ -12,7 +12,7 @@ class Descompuestos(concept_dict.ConceptDict):
     '''Unidades de obra.'''
 
     def AgregaComponente(self, el, cod_ud, cod_el, r, f):
-        i= Busca(cod_ud)
+        i= self.Busca(cod_ud)
         j= el.Busca(cod_el)
         if not j:
             logging.error("Elemento: " + cod_el

@@ -59,9 +59,23 @@ class CuaPre(epc.EntPyCost):
         return self.elementos.Busca(cod)
 
     def findPrice(self, cod):
+        ''' Return the concept with the code corresponding to the argument.
+
+        :param cod: code of the concept to find.
+        '''
         retval= self.searchForUnitPrice(cod)
         if not retval:
             retval= self.BuscaElementaryPrice(cod)
+        return retval
+    
+    def findPricesRegex(self, regex):
+        ''' Return the concepts with a code that matches to the regular
+            expression argument.
+
+        :param regex: regular expression to match with the concept code.
+        '''
+        retval= self.unidades.findRegex(regex)
+        retval.extend(self.elementos.findRegex(regex))
         return retval
 
     def WriteSpre(self):

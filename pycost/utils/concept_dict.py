@@ -36,6 +36,20 @@ class ConceptDict(epy.EntPyCost):
           retval= self.claves[cod]
         return retval
 
+    def findRegex(self, regex):
+        ''' Return the concepts with a code that matches to the regular
+            expression argument.
+
+        :param regex: regular expression to match with the concept code.
+        '''
+        retval= list()
+        for key in self.claves:
+            if(not regex.match(key) is None):
+                retval.append(self.claves[key])
+        return retval
+        
+        
+
     def WriteBC3(self,os):
         for j in self.concepts.keys():
            self.concepts[j].WriteBC3(os)

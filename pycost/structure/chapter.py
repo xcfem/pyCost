@@ -3,6 +3,7 @@
 
 import logging
 import pylatex
+import re
 from decimal import Decimal
 from pycost.measurements import measurement_container
 from pycost.bc3 import fr_entity
@@ -136,10 +137,59 @@ class Chapter(bc3_entity.EntBC3):
             return self.subcapitulos.BuscaCodigo(nmb)
         
     def findPrice(self, cod):
+        ''' Return the concept with the code corresponding to the argument.
+
+        :param cod: code of the concept to find.
+        '''
         retval= self.precios.findPrice(cod)
         if not retval:
             retval= self.subcapitulos.findPrice(cod)
         return retval
+
+    def findPricesRegex(self, regex):
+        ''' Return the concepts with a code that matches to the regular
+            expression argument.
+
+        :param regex: regular expression to match with the concept code.
+        '''
+        retval= self.precios.findPricesRegex(regex)
+        retval.extend(self.subcapitulos.findPricesRegex(regex))
+        return retval
+        
+    
+    def extractConcepts(self, conceptCodes, recipientChapter):
+        ''' Dumps the concepts corresponding to the codes in the argument list
+            in the recipient chapter.
+
+        :param conceptCodes: concepts to extract.
+        :param recipientChapter: chapter that will receive the 
+                                 extracted concepts.
+        :param tit: constuction site description.
+        '''
+        for cCode in conceptCodes:
+            # Search concept.
+            price= self.findPrice(cCode)
+            if(price):
+                price.appendToChapter(recipientChapter)
+        return recipientChapter
+    
+    def extractConceptsRegex(self, conceptCodes, recipientChapter):
+        ''' Dumps the concepts corresponding to the codes in the argument list
+            in the recipient chapter.
+
+        :param conceptCodes: concepts to extract.
+        :param recipientChapter: chapter that will receive the 
+                                 extracted concepts.
+        :param tit: constuction site description.
+        '''
+        for cCode in conceptCodes:
+            # Search for elementary price.
+            testExpr= re.compile(cCode)
+            prices= self.findPricesRegex(testExpr)
+            if(len(prices)>0):
+                for p in prices:
+                    p.appendToChapter(recipientChapter)
+        return recipientChapter
     
     def WritePreciosBC3(self, os):
         self.precios.WriteBC3(os)

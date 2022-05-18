@@ -66,6 +66,17 @@ class Subcapitulos(list, epc.EntPyCost):
             retval= (i).findPrice(cod)
             if(retval): break
         return retval
+    
+    def findPricesRegex(self, regex):
+        ''' Return the concepts with a code that matches to the regular
+            expression argument.
+
+        :param regex: regular expression to match with the concept code.
+        '''
+        retval= list()
+        for chapter in self:
+            retval.extend(chapter.findPricesRegex(regex))
+        return retval
 
     def newChapter(self, c):
         self.append(c)

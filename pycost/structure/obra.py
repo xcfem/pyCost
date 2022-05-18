@@ -454,24 +454,7 @@ class Obra(cp.Chapter):
 
     def printTree(self):
         print_tree(self)
-
-    def extractConcepts(self, conceptCodes, cod='CodelessRoot', tit= 'TitlelessRoot'):
-        ''' Returns a new root-chapter containing the concepts corresponding
-            to the codes in the argument list.
-
-        :param conceptCodes: concepts to extract.
-        :param cod: construction site codename.
-        :param tit: constuction site description.
-        '''
-        # Create root object.
-        retval= Obra(cod= cod, tit= tit)
-        for cCode in conceptCodes:
-            # Search for elementary price.
-            price= self.findPrice(cCode)
-            if(price):
-                price.appendToChapter(retval)
-        return retval
-
+        
 def bc3_to_yaml(inputFileName, outputFileName, cod='CodelessRoot', tit= 'TitlelessRoot'):
     ''' Reads a BC3 file and creates the corresponding YAML format file.
 
