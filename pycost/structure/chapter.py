@@ -77,7 +77,7 @@ class Chapter(bc3_entity.EntBC3):
         return super(Chapter,self).CodigoBC3() + "#"
     def CuadroPrecios(self):
         return self.precios
-    def AppendUnitPriceQuantities(self, m):
+    def appendUnitPriceQuantities(self, m):
         self.quantities.append(m)
     def getBC3Component(self):
         '''Return this chapter as a component.'''

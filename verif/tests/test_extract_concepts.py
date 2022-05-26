@@ -9,17 +9,13 @@ from pycost.structure import obra
 # Create main object.
 site= obra.Obra(cod="test", tit="Test title")
 
-# Read section definition from file.
+# Read data from file.
 import os
 pth= os.path.dirname(__file__)
 # print("pth= ", pth)
 if(not pth):
     pth= '.'
-inputFile= open(pth+'/data/test_file_05.yaml',mode='r')
-dataDict= yaml.safe_load(inputFile)
-inputFile.close()
-
-pendingLinks= site.solvePendingLinks(site.setFromDict(dataDict))
+pendingLinks= site.readFromYaml(pth+'/data/test_file_05.yaml')
 
 extracted= obra.Obra(cod="extracted", tit="Extracted concepts.")
 conceptCodes= ['ACERO0103', 'AR0005b', 'ANILLO01']
@@ -37,12 +33,8 @@ site.clear()
 extracted.clear()
 
 # Read the new YAML file.
-inputFile= open(yamlFile,mode='r')
-newDataDict= yaml.safe_load(inputFile)
-inputFile.close()
-
 newRoot= obra.Obra()
-pendingLinks= newRoot.solvePendingLinks(newRoot.setFromDict(newDataDict))
+newRoot.readFromYaml(yamlFile)
 
 numElementaryPrices= len(newRoot.precios.Elementales())
 numUnitPrices= len(newRoot.precios.UdsObra())

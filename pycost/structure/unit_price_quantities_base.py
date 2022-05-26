@@ -13,9 +13,6 @@ class UnitPriceQuantitiesBase(epc.EntPyCost):
 
     def __init__(self,u):
         super(UnitPriceQuantitiesBase,self).__init__()
-        if(u is None):
-            logging.error(u"NoneType unit price.")
-            quit()
         self.ud= u
 
     def getUnitPriceCode(self):

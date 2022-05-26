@@ -9,17 +9,13 @@ from pycost.structure import obra
 # Create main object.
 site= obra.Obra(cod="test", tit="Test title")
 
-# Read section definition from file.
+# Read data from file.
 import os
 pth= os.path.dirname(__file__)
 # print("pth= ", pth)
 if(not pth):
     pth= '.'
-inputFile= open(pth+'/../data/test_file_02.yaml',mode='r')
-dataDict= yaml.safe_load(inputFile)
-inputFile.close()
-
-pendingLinks= site.solvePendingLinks(site.setFromDict(dataDict))
+pendingLinks= site.readFromYaml(pth+'/../data/test_file_02.yaml')
 
 numElementaryPrices= 0
 for sc in site.subcapitulos:

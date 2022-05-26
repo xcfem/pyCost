@@ -49,3 +49,12 @@ class UnitPriceQuantities(ptp.UnitPriceQuantitiesBase):
         '''removes all items from the chapter.'''
         self.quantities.clear()
 
+    def appendMeasurement(self, textComment,nUnits,length,width,height):
+        '''Add generic quantities to the price defined as parameter
+
+        :param textComment:   string to comment each measuremt line generated 
+        :param nUnits: number of units
+        :param length, width, height: dimensions
+        '''
+        self.quantities.append(mr.MeasurementRecord(textComment,nUnits, length, width, height))
+

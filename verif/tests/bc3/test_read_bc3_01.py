@@ -8,7 +8,7 @@ from pycost.structure import obra
 # Create main object.
 site= obra.Obra(cod="test", tit="Test title")
 
-# Read section definition from file.
+# Read data from file.
 import os
 pth= os.path.dirname(__file__)
 # print("pth= ", pth)
@@ -20,10 +20,7 @@ site.readBC3(inputFile)
 inputFile.close()
 
 # Write in YAML format
-import yaml
-with open(pth+'/../data/test_file_01.yaml', 'w') as outputFile:
-    outputs= yaml.dump(site.getDict(), outputFile, allow_unicode=True)
-outputFile.close()
+site.writeYaml(pth+'/../data/test_file_01.yaml')
 
 # Get test values.
 price= site.getPrice()

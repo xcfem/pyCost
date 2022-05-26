@@ -101,10 +101,15 @@ class Obra(cp.Chapter):
         precios.WriteSpre()
         logging.error(u"Exportación de capítulos no implementada." + '\n')
 
-    def findPrice(self, cod):
+    def getUnitPrice(self, cod):
+        ''' Tries to return the unit price identified by the code argument.
+            Issues an error if failed.
+
+        :param cod: unit price identifier.
+        '''
         retval= super(Obra,self).findPrice(cod)
-        # if not retval:
-        #     logging.error('unit price: '+ cod + ' not found.')
+        if not retval:
+            logging.error('unit price: '+ cod + ' not found.')
         return retval
 
     def CodigoBC3(self):
@@ -118,11 +123,11 @@ class Obra(cp.Chapter):
         else:
             self.BuscaSubcapitulo(cap_padre).getSubcapitulos().newChapter(cap)
 
-    def AppendUnitPriceQuantities(self, cap_padre, m):
+    def appendUnitPriceQuantities(self, cap_padre, m):
         ''' Appends la partida being passed as parameter
             to the sub-chapter indicated by the string
             of the form 1\2\1\4.'''
-        BuscaSubcapitulo(cap_padre).AppendUnitPriceQuantities(m)
+        BuscaSubcapitulo(cap_padre).appendUnitPriceQuantities(m)
 
     def LeeMedicSpre(self, inputFile):
         cdg= ""
@@ -196,7 +201,7 @@ class Obra(cp.Chapter):
                         muo.Append(rm)
 
 
-                AppendUnitPriceQuantities(cod,muo)
+                appendUnitPriceQuantities(cod,muo)
 
     def LeeSpre(self, inputFile):
         str= ''
@@ -250,7 +255,7 @@ class Obra(cp.Chapter):
                 if not c:
                     c= self.BuscaCodigo(chapterCode)
                 if c:
-                    c.AppendUnitPriceQuantities(m)
+                    c.appendUnitPriceQuantities(m)
                 else:
                     logging.error(u"No se encontró el capítulo: " + chapterCode + '\n')
 
@@ -454,6 +459,30 @@ class Obra(cp.Chapter):
 
     def printTree(self):
         print_tree(self)
+
+    def readFromYaml(self, inputFileName):
+        ''' Load data from a YAML file.
+
+        :param inputFileName: name of the input file.
+        '''
+        # Read data from file.
+        inputFile= open(inputFileName, mode='r')
+        dataDict= yaml.safe_load(inputFile)
+        inputFile.close()
+        pendingLinks= self.solvePendingLinks(self.setFromDict(dataDict))
+        return pendingLinks
+    
+    def writeYaml(self, outputFileName):
+        ''' Load data from a YAML file.
+
+        :param outputFileName: name of the output file.
+        '''
+        # Read data from file.
+        outputFile= open(outputFileName, mode='w')
+        outputs= yaml.dump(self.getDict(), outputFile, allow_unicode=True)
+        outputFile.close()
+
+        
         
 def bc3_to_yaml(inputFileName, outputFileName, cod='CodelessRoot', tit= 'TitlelessRoot'):
     ''' Reads a BC3 file and creates the corresponding YAML format file.
@@ -465,7 +494,7 @@ def bc3_to_yaml(inputFileName, outputFileName, cod='CodelessRoot', tit= 'Titlele
     # Create root object.
     site= Obra(cod= cod, tit= tit)
 
-    # Read section definition from file.
+    # Read data from file.
     inputFile= open(inputFileName,mode='r', encoding="latin-1")
 
     site.readBC3(inputFile)
@@ -475,4 +504,6 @@ def bc3_to_yaml(inputFileName, outputFileName, cod='CodelessRoot', tit= 'Titlele
     with open(outputFileName, 'w') as outputFile:
         outputs= yaml.dump(site.getDict(), outputFile, allow_unicode=True)
     outputFile.close()
+
+
 
