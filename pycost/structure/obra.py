@@ -2,6 +2,7 @@
 #Obra.py
 
 import yaml
+import pickle
 import logging
 import pylatex
 from pycost.structure import chapter as cp
@@ -505,5 +506,20 @@ def bc3_to_yaml(inputFileName, outputFileName, cod='CodelessRoot', tit= 'Titlele
         outputs= yaml.dump(site.getDict(), outputFile, allow_unicode=True)
     outputFile.close()
 
+def yaml_to_pickle(inputFileName, outputFileName, cod='CodelessRoot', tit= 'TitlelessRoot'):
+    ''' Reads a BC3 file and creates the corresponding YAML format file.
+
+    :param inputFileName: name of the input file.
+    :param cod: construction site codename.
+    :param tit: constuction site description.
+    '''
+    # Create root object.
+    site= Obra(cod= cod, tit= tit)
+
+    # Read data from file.
+    pendingLinks= site.readFromYaml(inputFileName)
+    # Dump into pickle file.
+    with open(outputFileName, 'wb') as fh:
+        pickle.dump(site, fh)
 
 

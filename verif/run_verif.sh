@@ -51,6 +51,11 @@ python tests/yaml/test_read_yaml_03.py
 python tests/yaml/test_read_yaml_04.py
 #python tests/yaml/test_read_yaml_05.py
 python tests/yaml/test_read_yaml_06.py
+echo "$BLEU" "  pickle read/write tests." "$NORMAL"
+python tests/pickle/test_write_pickle.py
+python tests/pickle/test_read_pickle.py
+python tests/pickle/test_yaml_to_pickle.py
+
 
 END=$(date +%s.%N)
 DIFF=$(echo "$END - $START" | bc)
