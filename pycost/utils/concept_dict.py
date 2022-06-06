@@ -10,7 +10,7 @@ class KeyMap(dict):
 
 
 class ConceptDict(epy.EntPyCost):
-    claves= KeyMap()
+    #claves= KeyMap()
     def __init__(self):
         ''' Constructor.'''
         super(ConceptDict,self).__init__()
@@ -22,7 +22,7 @@ class ConceptDict(epy.EntPyCost):
     def Append(self, u):
         ''' Append the argument to the concept dictionary.'''
         key= u.Codigo()
-        self.claves[key]= u
+        #self.claves[key]= u
         self.concepts[key]= u
         return u
 
@@ -32,8 +32,10 @@ class ConceptDict(epy.EntPyCost):
 
     def Busca(self,cod):
         retval= None
-        if cod in self.claves:
-          retval= self.claves[cod]
+        # if cod in self.claves:
+        #     retval= self.claves[cod]
+        if cod in self.concepts:
+            retval= self.concepts[cod]
         return retval
 
     def findRegex(self, regex):
@@ -43,9 +45,12 @@ class ConceptDict(epy.EntPyCost):
         :param regex: regular expression to match with the concept code.
         '''
         retval= list()
-        for key in self.claves:
+        # for key in self.claves:
+        #     if(not regex.match(key) is None):
+        #         retval.append(self.claves[key])
+        for key in self.concepts:
             if(not regex.match(key) is None):
-                retval.append(self.claves[key])
+                retval.append(self.concepts[key])
         return retval
         
         

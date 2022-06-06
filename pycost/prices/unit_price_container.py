@@ -44,12 +44,12 @@ class Descompuestos(concept_dict.ConceptDict):
         return retval
 
     def WriteSpre(self, os):
-        for j in self.map.keys():
-            self.map[j].WriteSpre(os)
+        for j in self.concepts:
+            self.concepts[j].WriteSpre(os)
 
     def AsignaFactor(self, f):
-        for j in self.map.keys():
-            self.map[j].AsignaFactor(f)
+        for j in self.concepts:
+            self.concepts[j].AsignaFactor(f)
 
     def LeeSpre(self, iS, elementos):
         if iS.peek()!= 26:
@@ -113,9 +113,9 @@ class Descompuestos(concept_dict.ConceptDict):
                 data_table.end_table_footer()
                 data_table.add_hline()
                 data_table.end_table_last_footer()
-                for j in self.map.keys():
+                for j in self.concepts:
                     data_table.add_empty_row()
-                    self.map[j].writePriceTableOneIntoLatexDocument(data_table)
+                    self.concepts[j].writePriceTableOneIntoLatexDocument(data_table)
                     data_table.add_empty_row()
 
             doc.append(pylatex_utils.NormalSizeCommand())
@@ -125,8 +125,8 @@ class Descompuestos(concept_dict.ConceptDict):
             doc.append(pylatex_utils.SmallCommand())
             longTableStr= 'l'
             with doc.create(pylatex_utils.LongTable(longTableStr)) as data_table:
-                for j in self.map.keys():
-                    self.map[j].writePriceJustification(data_table)
+                for j in self.concepts:
+                    self.concepts[j].writePriceJustification(data_table)
             doc.append(pylatex_utils.NormalSizeCommand())
 
     def writePriceTableTwoIntoLatexDocument(self, doc):
@@ -135,8 +135,8 @@ class Descompuestos(concept_dict.ConceptDict):
             doc.append(pylatex_utils.SmallCommand())
             longTableStr= 'l'
             with doc.create(pylatex_utils.LongTable(longTableStr)) as data_table:
-                for j in self.map.keys():
-                    self.map[j].writePriceTableTwoIntoLatexDocument(data_table)
+                for j in self.concepts:
+                    self.concepts[j].writePriceTableTwoIntoLatexDocument(data_table)
             doc.append(pylatex_utils.NormalSizeCommand())
 
     def WriteHCalc(self, os):
@@ -145,8 +145,8 @@ class Descompuestos(concept_dict.ConceptDict):
            + u"Denominación" + tab
            + "Precio en letra" + tab
            + "Precio en cifra" + '\n')
-        for j in self.map.keys():
-            self.map[j].WriteHCalc(os)
+        for j in self.concepts:
+            self.concepts[j].WriteHCalc(os)
 
     def getDict(self):
         ''' Return a dictionary containing the object data.'''
