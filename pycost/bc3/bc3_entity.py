@@ -114,12 +114,12 @@ class EntBC3(epc.EntPyCost):
         os.write(self.ChrTipo() + '|\n')
 
     def Write(self, os):
-        os.write("Codigo: " + Codigo() + '\n'
-           + "Unidad: " + Unidad() + '\n'
-           + "Title: " + getTitle() + '\n'
-           + "Precio: " + getPriceString() + '\n'
-           + "Fecha: "  + Fecha() + '\n'
-           + "Tipo: " + ChrTipo() + '\n'
+        os.write("Codigo: " + self.Codigo() + '\n'
+           + "Unidad: " + self.Unidad() + '\n'
+           + "Title: " + self.getTitle() + '\n'
+           + "Precio: " + self.getPriceString() + '\n'
+           + "Fecha: "  + self.Fecha() + '\n'
+           + "Tipo: " + self.ChrTipo() + '\n'
            + "Texto largo: " + self.getLongDescription() + '\n')
 
     def Print(self,os):

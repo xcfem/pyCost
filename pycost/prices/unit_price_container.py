@@ -66,7 +66,7 @@ class Descompuestos(concept_dict.ConceptDict):
                 getline(iS,tit,'|')
                 unidad= UnitPrice(cod,tit,ud)
                 unidad.texto_largo= tit
-                Append(unidad)
+                self.Append(unidad)
                 perc= '' #percentage
                 getline(iS,perc,'|')
                 descomp= '' #descomposición
