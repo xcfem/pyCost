@@ -80,7 +80,10 @@ class BC3Component(fr_entity.EntFR):
     def getDict(self):
         ''' Return a dictionary containing the object data.'''
         retval= super(BC3Component,self).getDict()
-        retval['ent_code']= self.ent.Codigo()
+        if(self.ent):
+            retval['ent_code']= self.ent.Codigo()
+        else:
+            logging.error("La componente no se refiere a ninguna entidad" + '\n')
         return retval
         
     def setFromDict(self,dct):
