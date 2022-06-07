@@ -1,0 +1,1257 @@
+AU90100001 - EXCAVACIÓN DE ZANJA EN TIERRAS A MÁQUINA , CON PROFUNDIDAD HASTA 4 M , SIN ENTIBACIÓN.
+6,72 € / m³
+EXCAVACIÓN DE ZANJA EN TIERRAS A MÁQUINA , CON PROFUNDIDAD HASTA 4 M , SIN INCLUIR ENTIBACIÓN, CON AGOTAMIENTO, REFINO, APLOMADO DE PAREDES, CARGA, DESCARGA Y TRANSPORTE AL LUGAR ASIGNADO EN EL INTERIOR DE LA OBRA DE PRODUCTOS SOBRANTES, I/ HERRAMIENTAS Y MEDIOS AUXILIARES.
+
+Descompuesto
+Código	Unidad	Descripción	Cantidad	Precio	Importe
+MOC0000100	h	CAPATAZ	0,0022	21,98 €	0,05 €
+MOC0000500	h	PEÓN	0,0229	19,92 €	0,46 €
+MQ04020010	h	RETROCARGADORA SOBRE RUEDAS DE 75 KW DE POTENCIA	0,0160	58,76 €	0,94 €
+MQ06020200	h	CAMIÓN CON CAJA BASCULANTE 4X2, DE 199 KW DE POTENCIA	0,0660	76,21 €	5,03 €
+MQ02010010	h	BOMBA CENTRÍFUGA DE SUPERFICIE DE 1450 RPM, MOTOR DIESEL DE 30,00 KW DE POTENCIA (500 BAR)	0,0300	8,06 €	0,24 €
+
+#***
+
+AU90100004 - EXCAVACIÓN DE ZANJA A MANO, EN NORMAL, HASTA 4 M DE PROFUNDIDAD , SIN ENTIBACIÓN.
+14,79 € / m³
+Descompuesto
+Código	Unidad	Descripción	Cantidad	Precio	Importe
+MOC0000100	h	CAPATAZ	0,0430	21,98 €	0,95 €
+MOC0000500	h	PEÓN	0,4300	19,92 €	8,57 €
+MQ06020200	h	CAMIÓN CON CAJA BASCULANTE 4X2, DE 199 KW DE POTENCIA	0,0660	76,21 €	5,03 €
+MQ02010010	h	BOMBA CENTRÍFUGA DE SUPERFICIE DE 1450 RPM, MOTOR DIESEL DE 30,00 KW DE POTENCIA (500 BAR)	0,0300	8,06 €	0,24 €
+
+#***
+
+OHC010aaadb - Encofrado plano en paramento oculto. (D/NNI/E).
+5,71 € / m²
+Encofrado plano en paramento oculto, incluso posterior desencofrado i/ limpieza, humedecido, aplicación de desencofrante, p.p. de elementos complementarios para su estabilidad y adecuada ejecución.
+
+Trabajo: Diurno. 
+
+Banda de mantenimiento: No necesita intervalo. 
+
+Condiciones de ejecución: Volumen escaso.
+Descompuesto
+Código	Unidad	Descripción	Cantidad	Precio	Importe
+MQ14000000	h	GRÚA AUTOPROPULSADA TODOTERRENO PARA CARGA MÁXIMA DE 20 T	0,0125	105,24 €	1,32 €
+MN01120001	m	AMORTIZACIÓN DE TABLÓN DE MADERA DE PINO PARA 10 USOS	3,0000	0,35 €	1,05 €
+MN01120005	ud	AMORTIZACIÓN DE PUNTAL METÁLICO Y TELESCÓPICO DE 5 M Y 150 USOS	3,0000	0,20 €	0,60 €
+MN01120003	m²	AMORTIZACIÓN DE TABLÓN DE MADERA DE PINO DE 22 MM PLANO PARA 10 USOS	1,0000	1,02 €	1,02 €
+MN01120013	l	DESENCOFRANTE	0,0750	1,75 €	0,13 €
+MN01120011	kg	MATERIALES AUXILIARES PARA ENCOFRAR	0,4000	0,92 €	0,37 €
+%VOL	%	Sobrecoste por volumen escaso	0,2000	4,48 €	0,90 €
+%CIND	%	Costes indirectos	0,0600	5,38 €	0,32 €
+
+#***
+
+OHC010baadb - Encofrado plano en paramento visto. (D/NNI/E).
+12,57 € / m²
+Encofrado plano en paramento visto, incluso posterior desencofrado i/ limpieza, humedecido, aplicación de desencofrante, p.p. de elementos complementarios para su estabilidad y adecuada ejecución.
+
+Trabajo: Diurno. 
+
+Banda de mantenimiento: No necesita intervalo. 
+
+Condiciones de ejecución: Volumen escaso.
+Descompuesto
+Código	Unidad	Descripción	Cantidad	Precio	Importe
+MQ14000000	h	GRÚA AUTOPROPULSADA TODOTERRENO PARA CARGA MÁXIMA DE 20 T	0,0125	105,24 €	1,32 €
+MN01120001	m	AMORTIZACIÓN DE TABLÓN DE MADERA DE PINO PARA 10 USOS	3,0000	0,35 €	1,05 €
+MN01120005	ud	AMORTIZACIÓN DE PUNTAL METÁLICO Y TELESCÓPICO DE 5 M Y 150 USOS	3,0000	0,20 €	0,60 €
+MN01120004	m²	AMORTIZACIÓN DE TABLÓN MACHIHEMBRADO DE MADERA DE PINO DE 22 MM PLANO PARA 3 USOS	1,0000	6,41 €	6,41 €
+MN01120013	l	DESENCOFRANTE	0,0750	1,75 €	0,13 €
+MN01120011	kg	MATERIALES AUXILIARES PARA ENCOFRAR	0,4000	0,92 €	0,37 €
+%VOL	%	Sobrecoste por volumen escaso	0,2000	9,87 €	1,97 €
+%CIND	%	Costes indirectos	0,0600	11,85 €	
+
+#***
+
+OHA010aaadb - Hormigón en masa HM-20, colocado en exterior, con grúa o bomba de hormigonado. (D/NNI/E).
+101,35 € / m³
+Hormigón en masa HM-20, de cualquier consistencia y tamaño máximo de árido 20 mm, colocado en exterior, con grúa o bomba de hormigonado, incluso vibrado, vigilancia y protección del hormigón según instrucción de hormigón estructural vigente, maquinaria, herramientas y medios auxiliares necesarios. 
+
+Trabajo: Diurno.
+
+Banda de mantenimiento: No necesita intervalo
+
+Condiciones de ejecución:Volumen escaso.
+Descompuesto
+Código	Unidad	Descripción	Cantidad	Precio	Importe
+MQ08060010	h	CAMIÓN HORMIGONERA DE 10 M3 DE CAPACIDAD	0,0650	86,80 €	5,64 €
+MQ08070200	h	BOMBA PARA HORMIGÓN SOBRE CAMIÓN PLUMA DE 36 M, PRODUCCIÓN DE 60 M3/H	0,0400	217,30 €	8,69 €
+MQ08110010	h	VIBRADOR DE HORMIGÓN DE 66 MM DE DIÁMETRO	0,0800	0,59 €	0,05 €
+MQ0103C000	h	COMPRESOR ROTATIVO ESTACIONARIO, MOTOR ELÉCTRICO DE 12 M3/MIN DE CAUDAL (200 A 500 KPA)	0,0400	14,41 €	0,58 €
+MQ0100A030	h	GRUPO ELECTRÓGENO, MOTOR DIESEL DE 100 KVA	0,0400	20,13 €	0,81 €
+MN01060004	m³	HORMIGÓN DE RESISTENCIA CARACTERÍSTICA 20 N/mm2, DE CUALQUIER CONSISTENCIA Y TAMAÑO MÁXIMO DEL ÁRIDO 20 MM, INCLUIDOS ADITIVOS	1,0500	60,87 €	63,91 €
+%VOL	%	Sobrecoste por volumen escaso	0,2000	79,68 €	15,94 €
+%CIND	%	Costes indirectos	0,0600	95,61 €	5,74 €
+
+#***
+
+OHA020aaadb - Hormigón para armar o pretensar HA-25 o HP-25, elaborado en central fija o móvil, colocado en exterior, con grúa o bomba de hormigonado. (D/NNI/E).
+107,73 € / m³
+Hormigón para armar o pretensar HA-25 o HP-25, elaborado en central fija o móvil, de cualquier consistencia y tamaño máximo de árido 20 mm, colocado en exterior, con grúa o bomba de hormigonado, incluso vibrado, vigilancia y protección del hormigón según instrucción de hormigón estructural vigente, maquinaria, herramientas y medios auxiliares necesarios. 
+
+Trabajo: Diurno.
+
+Banda de mantenimiento: No necesita intervalo.
+
+Condiciones de ejecución: Volumen escaso.
+Descompuesto
+Código	Unidad	Descripción	Cantidad	Precio	Importe
+MQ08060010	h	CAMIÓN HORMIGONERA DE 10 M3 DE CAPACIDAD	0,0650	86,80 €	5,64 €
+MQ08070200	h	BOMBA PARA HORMIGÓN SOBRE CAMIÓN PLUMA DE 36 M, PRODUCCIÓN DE 60 M3/H	0,0400	217,30 €	8,69 €
+MQ08110010	h	VIBRADOR DE HORMIGÓN DE 66 MM DE DIÁMETRO	0,1200	0,59 €	0,07 €
+MQ0103C000	h	COMPRESOR ROTATIVO ESTACIONARIO, MOTOR ELÉCTRICO DE 12 M3/MIN DE CAUDAL (200 A 500 KPA)	0,0400	14,41 €	0,58 €
+MQ0100A030	h	GRUPO ELECTRÓGENO, MOTOR DIESEL DE 100 KVA	0,0400	20,13 €	0,81 €
+MN01060100	m³	HORMIGÓN DE RESISTENCIA CARACTERÍSTICA 25 N/mm2, DE CUALQUIER CONSISTENCIA Y TAMAÑO MÁXIMO DEL ÁRIDO 20 MM, INCLUIDOS ADITIVOS	1,0500	65,62 €	68,90 €
+%VOL	%	Sobrecoste por volumen escaso	0,2000	84,69 €	16,94 €
+%CIND	%	Costes indirectos	0,0600	101,62 €	6,10 €
+
+#***
+
+OHA020daadb - Hormigón para armar o pretensar HA-40 o HP-40, elaborado en central fija o móvil, colocado en exterior, con grúa o bomba de hormigonado. (D/NNI/E).
+143,20 € / m³
+Hormigón para armar o pretensar HA-40 o HP-40, elaborado en central fija o móvil, de cualquier consistencia y tamaño máximo de árido 20 mm, colocado en exterior, con grúa o bomba de hormigonado, incluso vibrado, vigilancia y protección del hormigón según instrucción de hormigón estructural vigente, maquinaria, herramientas y medios auxiliares necesarios. 
+
+Trabajo: Diurno.
+
+Banda de mantenimiento: No necesita intervalo.
+
+Condiciones de ejecución: Volumen escaso.
+Descompuesto
+Código	Unidad	Descripción	Cantidad	Precio	Importe
+MQ08060010	h	CAMIÓN HORMIGONERA DE 10 M3 DE CAPACIDAD	0,0650	86,80 €	5,64 €
+MQ08070200	h	BOMBA PARA HORMIGÓN SOBRE CAMIÓN PLUMA DE 36 M, PRODUCCIÓN DE 60 M3/H	0,0400	217,30 €	8,69 €
+MQ08110010	h	VIBRADOR DE HORMIGÓN DE 66 MM DE DIÁMETRO	0,1200	0,59 €	0,07 €
+MQ0103C000	h	COMPRESOR ROTATIVO ESTACIONARIO, MOTOR ELÉCTRICO DE 12 M3/MIN DE CAUDAL (200 A 500 KPA)	0,0400	14,41 €	0,58 €
+MQ0100A030	h	GRUPO ELECTRÓGENO, MOTOR DIESEL DE 100 KVA	0,0400	20,13 €	0,81 €
+MN01060400	m³	HORMIGÓN DE RESISTENCIA CARACTERÍSTICA 40 N/mm2, DE CUALQUIER CONSISTENCIA Y TAMAÑO MÁXIMO DEL ÁRIDO 20 MM, INCLUIDOS ADITIVOS	1,0500	92,18 €	96,79 €
+%VOL	%	Sobrecoste por volumen escaso	0,2000	112,58 €	22,52 €
+%CIND	%	Costes indirectos	0,0600	135,09 €	8,11 €
+
+#***
+
+OHB010baadb - Acero corrugado B 500, colocado en elementos horizontales. (D/NNI/E).
+1,46 € / kg
+Acero corrugado B 500, colocado en elementos horizontales, incluso p.p. de cortes, despuntes, alambre de atar y separadores, terminado.
+
+Trabajo: Diurno
+
+Banda de mantenimiento:No necesita intervalo
+
+Condiciones de ejecución: Volumen escaso
+Descompuesto
+Código	Unidad	Descripción	Cantidad	Precio	Importe
+MN01110002	kg	ACERO CORRUGADO B 500 EN BARRAS ELABORADO	1,0300	1,10 €	1,13 €
+MN01100600	ud	SEPARADOR HOMOLOGADO DE PLÁSTICO PARA ARMADURAS	0,0600	0,13 €	0,01 €
+MN01100002	kg	ALAMBRE RECOCIDO Ø 1,3 MM	0,0100	0,76 €	0,01 €
+%VOL	%	Sobrecoste por volumen escaso	0,2000	1,15 €	0,23 €
+%CIND	%	Costes indirectos	0,0600	1,38 €	0,08 €
+
+#***
+
+OHB010bbadb - Acero corrugado B 500, colocado en elementos verticales. (D/NNI/E).
+1,60 € / kg
+Acero corrugado B 500, colocado en elementos verticales, incluso p.p. de cortes, despuntes, alambre de atar y separadores, terminado.
+
+Trabajo: Diurno
+
+Banda de mantenimiento:No necesita intervalo
+
+Condiciones de ejecución: Volumen escaso
+Descompuesto
+Código	Unidad	Descripción	Cantidad	Precio	Importe
+MQ14000000	h	GRÚA AUTOPROPULSADA TODOTERRENO PARA CARGA MÁXIMA DE 20 T	0,0010	105,24 €	0,11 €
+MN01110002	kg	ACERO CORRUGADO B 500 EN BARRAS ELABORADO	1,0300	1,10 €	1,13 €
+MN01100600	ud	SEPARADOR HOMOLOGADO DE PLÁSTICO PARA ARMADURAS	0,0600	0,13 €	0,01 €
+MN01100002	kg	ALAMBRE RECOCIDO Ø 1,3 MM	0,0100	0,76 €	0,01 €
+%VOL	%	Sobrecoste por volumen escaso	0,2000	1,25 €	0,25 €
+%CIND	%	Costes indirectos	0,0600	1,50 €	0,09 €
+
+#***
+
+OHB050adb - Acero especial en cordones para pretensar.
+3,71 € / kg
+Acero especial en cordones para pretensar i/ vainas y todos los accesorios necesarios, los anclajes activo y pasivo, acopladores, todas las operaciones y equipos de tesado, las operaciones y equipos de inyección, el sellado de cajetines.
+
+Trabajo: Diurno. 
+
+Banda de mantenimiento: No necesita intervalo. 
+
+Condiciones de ejecución: Volumen escaso.
+Descompuesto
+Código	Unidad	Descripción	Cantidad	Precio	Importe
+MQ14000000	h	GRÚA AUTOPROPULSADA TODOTERRENO PARA CARGA MÁXIMA DE 20 T	0,0010	105,24 €	0,11 €
+MQ03070205	h	EQUIPO PARA TESADO DE CABLES CON CRIC HIDRÁULICO	0,0030	21,79 €	0,07 €
+MQ03060100	h	EQUIPO DE MEZCLADO Y AGITACIÓN PARA PEQUEÑA PRODUCCIÓN DE INYECCIONES DE 100 L DE CAPACIDAD (ANCLAJES Y MICROPILOTES)	0,0030	16,30 €	0,05 €
+MQ03070210	h	LANZADORA PARA MANIPULACIÓN Y FORMACIÓN DE TENDONES DE PRETENSADO	0,0030	19,75 €	0,06 €
+MQ16020100	h	CIZALLA ELÉCTRICA DE CORTE DE 45 MM DE DIÁMETRO (PARA FERRALLA)	0,0030	16,34 €	0,05 €
+MN01050012	l	LECHADA DE CEMENTO PARA INYECTAR	5,0000	0,11 €	0,55 €
+MN01100002	kg	ALAMBRE RECOCIDO Ø 1,3 MM	0,0200	0,76 €	0,02 €
+MN01100070	ud	ANCLAJE ACTIVO Y ACCESORIOS	0,0050	48,95 €	0,24 €
+MN01100071	ud	ANCLAJE PASIVO Y ACCESORIOS	0,0050	37,66 €	0,19 €
+MN01100095	m	VAINA CORRUGADA DE DIÁMETRO 50 MM A 90 MM	0,2000	1,39 €	0,28 €
+MN01110500	kg	ACERO ESPECIAL EN CORDONES PARA PRETENSAR	1,0500	1,18 €	1,24 €
+MN01110002	kg	ACERO CORRUGADO B 500 EN BARRAS ELABORADO	0,0500	1,10 €	0,06 €
+%VOL	%	Sobrecoste por volumen escaso	0,2000	2,90 €	0,58 €
+%CIND	%	Costes indirectos	0,0600	3,48 €	0,21 €
+
+#***
+
+OCA090beadb - Perforación de micropilote de diámetro >0,15 m - 0,20 m, armado con tubo acero 88,9 mm diámetro exterior y 9,5 mm de espesor. (D/NNI/E).
+83,13 € / m
+Perforación de micropilote de diámetro >0,15 m - 0,20 m compuesto por tubo acero 88,9 mm diámetro exterior y 9,5 mm de espesor con rosca de cualquier tipo de acero, ejecutado con cualquier ángulo y en cualquier terreno, i/ ensayos previos y en ejecución.
+
+Trabajo: Diurno. 
+
+Banda de mantenimiento: No necesita intervalo. 
+
+Condiciones de ejecución: Volumen escaso.
+Descompuesto
+Código	Unidad	Descripción	Cantidad	Precio	Importe
+MQ03060500	h	EQUIPO PARA INYECCIONES PROFUNDAS CON BOMBA Y CARRO PARA BARRENAS	0,1333	280,57 €	37,40 €
+MQ0100A030	h	GRUPO ELECTRÓGENO, MOTOR DIESEL DE 100 KVA	0,1333	20,13 €	2,68 €
+MQ06020200	h	CAMIÓN CON CAJA BASCULANTE 4X2, DE 199 KW DE POTENCIA	0,0060	76,21 €	0,46 €
+MQ06050000	h	CAMIÓN CON TANQUE PARA AGUA DE 10 M3	0,0200	61,07 €	1,22 €
+MN01010001	m³	AGUA	0,0130	0,52 €	0,01 €
+MP01050002	t	CEMENTO PORTLAND CEM II/B-S/42,5	0,0340	72,40 €	2,46 €
+MN02020005	m	TUBO DE ACERO DE 88,9 MM DE DIÁMETRO Y 9,5 MM DE ESPESOR DE PARED	1,0200	17,97 €	18,33 €
+MN02020100	ud	VÁLVULA PARA INYECCIÓN Y REINYECCIÓN DE LECHADA DE CEMENTO	1,0000	2,79 €	2,79 €
+%VOL	%	Sobrecoste por volumen escaso	0,2000	65,35 €	13,07 €
+%CIND	%	Costes indirectos	0,0600	78,42 €	4,71 €
+
+#***
+
+OCC010abcbN - Lanzamiento de viga pretensada tipo T H=80 cm. (N/<3/E).
+1.352,78 € / m
+Lanzamiento de viga pretensada tipo T de H=80 cm i/ transporte, colocación y todos los materiales y medios necesarios para la correcta ejecución de la unidad de obra.
+
+Trabajo: Nocturno.
+
+Banda de mantenimiento:i < 3 horas.
+
+Condiciones de ejecución: Volumen escaso.
+Descompuesto
+Código	Unidad	Descripción	Cantidad	Precio	Importe
+MQ14000035	h	GRÚA AUTOPROPULSADA CARRETERA PARA CARGA MÁXIMA DE 100 T	0,2600	244,28 €	63,51 €
+%VOL	%	Sobrecoste por volumen escaso	0,2000	1.063,51 €	212,70 €
+%CIND	%	Costes indirectos	0,0600	1.276,22 €	76,57 €
+
+#***
+
+OCH040adb - Impermeabilización de junta dilatación con geocompuesto bentonita. (D/NNI/E).
+10,48 € / m
+Impermeabilización de junta de dilatación mediante colocacion de una franja de 50 cm de ancho de geocompuesto de bentonita sódica natural en polvo contenida entre geotextiles de refuerzo, y un total de 5000 g/m² de bentonita en polvo con un contenido en montmorillonita aprox. 90 %, resistencia a tracción compuesto de 20 kN/m long. , p.p. de solapes, herramientas, medios auxiliares y limpieza del lugar de trabajo.
+
+Trabajo: Diurno. 
+
+Banda de mantenimiento: No necesita intervalo. 
+
+Condiciones de ejecución: Volumen escaso.
+Descompuesto
+Código	Unidad	Descripción	Cantidad	Precio	Importe
+MN05060010	m²	SUMINISTRO DE GEOCOMPUESTO DE BENTONITA	0,5000	16,48 €	8,24 €
+%VOL	%	Sobrecoste por volumen escaso	0,2000	8,24 €	1,65 €
+%CIND	%	Costes indirectos	0,0600	9,89 €	0,59 €
+
+#***
+
+OCH020adb - Sellado de juntas y refuerzo de los solapes del geocompuestos de bentonita. (D/NNI/E).
+1,14 € / m
+Sellado de juntas y refuerzo de los solapes del geocompuestos de bentonita , canaletas, con pasta de bentonita de sodio natural (proporción 1:4 de bentonita con agua), bentonita en polvo; incluso limpieza del soporte y eliminación de arrugas, piedras y elementos sueltos. 
+
+Trabajo: Diurno. 
+
+Banda de mantenimiento: No necesita intervalo. 
+
+Condiciones de ejecución: Volumen escaso.
+Descompuesto
+Código	Unidad	Descripción	Cantidad	Precio	Importe
+MN01090026	kg	BENTONITA SODIO NATURAL EN POLVO	0,5000	1,80 €	0,90 €
+%VOL	%	Sobrecoste por volumen escaso	0,2000	0,90 €	0,18 €
+%CIND	%	Costes indirectos	0,0600	1,08 €	0,06 €
+
+#***
+
+OCH050badb - Impermeabilización lámina autoadhesiva bituminosa en frío en paramentos horizontales. (D/NNI/E).
+15,09 € / m²
+Impermeabilización de paramentos horizontales enterrados mediante colocación de lámina bituminosa de SBS de 1.5 mm de espesor y acabada en film de polietileno de alta densidad (PEAD) de 0,10 mm de espesor, mediante la lámina bituminosa,  incluso imprimación previa de la superficie con un consumo de 1 kg/m² de emulsión bituminosa.
+
+Trabajo: Diurno. 
+
+Banda de mantenimiento: No necesita intervalo. 
+
+Condiciones de ejecución: Volumen escaso.
+Descompuesto
+Código	Unidad	Descripción	Cantidad	Precio	Importe
+MN05010002	m²	LÁMINA BITUMINOSA EN FRIO 	1,0500	9,33 €	9,80 €
+MN05010003	kg	EMULSIÓN BITUMINOSA IMPERMEABILIZANTE	1,1000	1,87 €	2,06 €
+%VOL	%	Sobrecoste por volumen escaso	0,2000	11,85 €	2,37 €
+%CIND	%	Costes indirectos	0,0600	14,22 €	0,85 €
+
+#***
+
+OCH060adb - Lámina drenante fijada en trasdós de muros y estribo. (D/NNI/E).
+11,56 € / m²
+Lámina drenante fijada en trasdós de muros y estribos formado por lámina drenante de geotextil y núcleo drenante intermedio, incluso solapes.
+
+Trabajo: Diurno.
+
+Banda de mantenimiento: No necesita intervalo.
+
+Condiciones de ejecución: Volumen escaso.
+Descompuesto
+Código	Unidad	Descripción	Cantidad	Precio	Importe
+MN05030005	m²	LÁMINA DRENANTE DE GEOTEXTIL Y NÚCLEO DRENANTE INTERMEDIO	1,1000	8,26 €	9,09 €
+%VOL	%	Sobrecoste por volumen escaso	0,2000	9,09 €	1,82 €
+%CIND	%	Costes indirectos	0,0600	10,90 €	0,65 €
+
+#***
+
+OCH070adb - Pintado de impermeabilización de paramento con emulsión bituminosa catiónica al 50% de betún, tipo ECI. (D/NNI/E).
+0,48 € / m²
+Pintado de impermeabilización de paramento con emulsión bituminosa catiónica al 50% de betún, tipo ECI.
+
+Trabajo: Diurno.
+
+Banda de mantenimiento: No necesita intervalo.
+
+Condiciones de ejecución: Volumen escaso.
+Descompuesto
+Código	Unidad	Descripción	Cantidad	Precio	Importe
+MN01050008	kg	EMULSIÓN BITUMINOSA CATIÓNICA AL 50% DE BETÚN, TIPO ECI	1,8000	0,21 €	0,38 €
+%VOL	%	Sobrecoste por volumen escaso	0,2000	0,38 €	0,08 €
+%CIND	%	Costes indirectos	0,0600	0,45 €	0,03 €
+
+#***
+
+OCH090abcb - Sellado y protección de junta de dilatación de tablero con banda de elástomero termoplástico. (N/<3/E).
+207,27 € / m
+Sellado y protección de junta de dilatación de tableros con banda de elastómero termoplástico (TPE) de 1 mm de espesor dispuesta en fuelle o bucle, incluida descubierta y reposición de balasto en la amplitud necesaria con desplazamiento de traviesa si fuera necesario, limpieza del soporte y del interior de la junta de posibles encastramientos, sellado con banda de elastómero termoplástico (TPE) de 1 mm de espesor dispuesta en fuelle o bucle adherida al soporte al menos en 6 cm a cada lado de la junta con resina epoxi, banda de neopreno de 100 mm de anchura y 10 mm de espesor a cada lado de junta, fijación de la misma según características del soporte y chapa de acero galvanizado de dimensiones mínimas de 400x10 mm anclada al soporte mediante anclajes y arandelas de métrica M8 galvanizados, totalmente terminado. Incluido parte proporcional de replanteo, medios auxiliares, herramientas, maquinaria, materiales (banda TPE, banda de neopreno, resina epoxi, chapa y anclajes), mano de obra, control y aseguramiento de la calidad.
+
+Trabajo: Nocturno.
+
+Banda de mantenimiento:i < 3 horas.
+
+Condiciones de ejecución: Volumen escaso.
+Descompuesto
+Código	Unidad	Descripción	Cantidad	Precio	Importe
+MQ16030225	h	EQUIPO CHORRO DE AIRE	0,3900	2,98 €	1,16 €
+MQ0103C215	h	COMPRESOR ROTATIVO TRANSPORTABLE, MOTOR DIESEL DE 11,1 M3/MIN DE CAUDAL (700 KPA)	0,3900	23,84 €	9,30 €
+MQ06020200	h	CAMIÓN CON CAJA BASCULANTE 4X2, DE 199 KW DE POTENCIA	0,3900	76,21 €	29,72 €
+MQ04010105	h	CARGADORA SOBRE RUEDAS DE 60 KW DE POTENCIA (1 M3 DE CAPACIDAD)	0,3900	51,15 €	19,95 €
+MN03020002	kg	ACERO S 275 JR GALVANIZADO Y LACADO, CORTADO A MEDIDA I/ IMPRIMACIÓN ANTIOXIDANTE	32,0000	1,90 €	60,80 €
+MN01092039	kg	ADHESIVO BANDAS DE SELLADO DE JUNTAS	1,0000	9,97 €	9,97 €
+MN05050018	m	BANDA ELÁSTICA PARA JUNTA CON MOVIMIENTO 	1,0500	8,58 €	9,01 €
+MN05050019	kg	MASILLA AUTONIVELANTE SELLADO	0,2000	33,99 €	6,80 €
+MN05050020	m²	BANDA DE NEOPRENO IMPERMEABILIZANTE 10 MM	0,1050	69,00 €	7,25 €
+MN18000086	ud	PEQUEÑO MATERIAL DE FIJACIÓN Y TORNILLERÍA	1,0000	9,00 €	9,00 €
+%VOL	%	Sobrecoste por volumen escaso	0,2000	162,95 €	32,59 €
+%CIND	%	Costes indirectos	0,0600	195,54 €	11,73 €
+
+#***
+
+OCH090bbcb - Sellado y protección de junta de dilatación de tablero con fondo de junta. (N/<3/E).
+109,79 € / m
+Sellado y protección de junta de dilatación de tablero con abertura hasta 3,75 cm con fondo de junta de espuma de polietileno de célula cerrada de sección circular y masilla de poliuretano; incluida  descubierta y reposición de balasto en la amplitud necesaria con desplazamiento de traviesa si fuera necesario, limpieza del soporte y del interior de la junta de posibles  encastramientos, masilla de poliuretano bicomponente, imprimación de poliuretano de los labios de la junta. banda de neopreno de 100 mm de anchura y 10 mm de espesor a cada lado de junta, fijación de la misma según características del soporte y chapa de acero galvanizado de dimensiones mínimas de 400x10 mm anclada al soporte mediante anclajes y arandelas de métrica M8 galvanizados, totalmente terminado. Incluido parte proporcional de replanteo, medios auxiliares, herramientas, maquinaria, materiales (imprimación, masilla y fondo de junta, chapa y anclajes), mano de obra, control y aseguramiento de la calidad.
+
+Trabajo: Nocturno.
+
+Banda de mantenimiento:i < 3 horas.
+
+Condiciones de ejecución: Volumen escaso.
+Descompuesto
+Código	Unidad	Descripción	Cantidad	Precio	Importe
+MQ16030225	h	EQUIPO CHORRO DE AIRE	0,3900	2,98 €	1,16 €
+MQ0103C215	h	COMPRESOR ROTATIVO TRANSPORTABLE, MOTOR DIESEL DE 11,1 M3/MIN DE CAUDAL (700 KPA)	0,3900	23,84 €	9,30 €
+MQ06020200	h	CAMIÓN CON CAJA BASCULANTE 4X2, DE 199 KW DE POTENCIA	0,3900	76,21 €	29,72 €
+MQ04010105	h	CARGADORA SOBRE RUEDAS DE 60 KW DE POTENCIA (1 M3 DE CAPACIDAD)	0,3900	51,15 €	19,95 €
+MN05050019	kg	MASILLA AUTONIVELANTE SELLADO	0,7000	33,99 €	23,79 €
+MN05050022	m	FONDO DE JUNTA DE POLIETILENO DE CÉLULA CERRADA (40 MM)	1,1000	1,66 €	1,83 €
+MN01142003	kg	IMPRIMACIÓN TRASPARENTE EN BASE DE POLIURETANO 	0,0100	55,69 €	0,56 €
+%VOL	%	Sobrecoste por volumen escaso	0,2000	86,31 €	17,26 €
+%CIND	%	Costes indirectos	0,0600	103,57 €	6,21 €
+
+#***
+
+OCH090cbcb - Sellado de junta de dilatación desde parte inferior de tablero. (N/<3/E).
+42,17 € / m
+Sellado de junta de dilatación desde parte inferior de tablero con abertura hasta 3,75 cm., con fondo de junta de espuma de polietileno de célula cerrada de sección circular y masilla de poliuretano; incluido limpieza del soporte y del interior de la junta de posibles encastramientos, masilla de poliuretano bicomponente, imprimación de poliuretano de los labios de la junta, totalmente terminado.  Incluido parte proporcional de replanteo, medios auxiliares, herramientas, maquinaria, materiales (imprimación, masilla y fondo de junta), mano de obra, control y aseguramiento de la calidad.
+
+Trabajo: Nocturno.
+
+Banda de mantenimiento:i < 3 horas.
+
+Condiciones de ejecución: Volumen escaso.
+Descompuesto
+Código	Unidad	Descripción	Cantidad	Precio	Importe
+MQ16030225	h	EQUIPO CHORRO DE AIRE	0,2600	2,98 €	0,77 €
+MQ0103C215	h	COMPRESOR ROTATIVO TRANSPORTABLE, MOTOR DIESEL DE 11,1 M3/MIN DE CAUDAL (700 KPA)	0,2600	23,84 €	6,20 €
+MN05050019	kg	MASILLA AUTONIVELANTE SELLADO	0,7000	33,99 €	23,79 €
+MN05050022	m	FONDO DE JUNTA DE POLIETILENO DE CÉLULA CERRADA (40 MM)	1,1000	1,66 €	1,83 €
+MN01142003	kg	IMPRIMACIÓN TRASPARENTE EN BASE DE POLIURETANO 	0,0100	55,69 €	0,56 €
+%VOL	%	Sobrecoste por volumen escaso	0,2000	33,15 €	6,63 €
+%CIND	%	Costes indirectos	0,0600	39,78 €	2,39 €
+
+#***
+
+OCI010aadb - Junta nueva de sellado. (D/NNI/E).
+2,98 € / m
+Junta nueva de sellado con poliestireno expandido, corte y demolición de ancho en zona ocupada por la junta i/ elementos de fijación y sellado con resina epoxi enrasado con el pavimento.
+
+Trabajo: Diurno. 
+
+Banda de mantenimiento: No necesita intervalo. 
+
+Condiciones de ejecución: Volumen escaso.
+Descompuesto
+Código	Unidad	Descripción	Cantidad	Precio	Importe
+MN05050008	l	MÁSTICO ASFÁLTICO EN RELLENO JUNTA DILATACIÓN	0,6000	2,74 €	1,64 €
+MN01090002	kg	RESINA EPOXI	0,2000	3,48 €	0,70 €
+%VOL	%	Sobrecoste por volumen escaso	0,2000	2,34 €	0,47 €
+%CIND	%	Costes indirectos	0,0600	2,81 €	0,17 €
+
+#***
+
+OCJ010bcb - Conexión para puesta a tierra de armaduras y de elementos metálicos en pasos elevados sobre el ferrocarril. (N/<3/E).
+1.011,75 € / ud
+Conexión para puesta a tierra de armaduras y de elementos metálicos del tablero en pasos elevados sobre el ferrocarril.
+
+Trabajo: Nocturno. 
+
+Banda de mantenimiento: i < 3 horas. 
+
+Condiciones de ejecución: Volumen escaso.
+Descompuesto
+Código	Unidad	Descripción	Cantidad	Precio	Importe
+MQ06020100	h	CAMIÓN CON CAJA FIJA Y GRÚA AUXILIAR, PARA 16 T	0,6500	70,29 €	45,69 €
+MN10020001	ud	LAZO CONEXIÓM CABLE LOSA-PILA O ESTRIBO	6,0000	9,63 €	57,75 €
+MN10020004	ud	LAZO CONEXIÓN CABLE BARANDILLA-BARANDILLA	4,0000	9,63 €	38,50 €
+MN10020005	ud	LAZO CONEXIÓN CABLE BARANDILLA-VALLA PROTECCIÓN	4,0000	9,63 €	38,50 €
+MN10020006	ud	LAZO CONEXIÓN BARANDILLA-BIONDA	4,0000	9,63 €	38,50 €
+MN10020007	ud	LAZO CONEXIÓN BARANDILLA-LOSA	4,0000	9,63 €	38,50 €
+MN10030006	ud	KIT PARA SOLDADURA ALUMINOTÉRMICA (PLETINA-BARANDILLA)	4,0000	9,63 €	38,50 €
+MN10030003	ud	TERMINAL DE CONEXIÓN PARA PILA-CARRIL EXTERIOR	2,0000	6,44 €	12,87 €
+MN10030004	ud	TERMINAL DE CONEXIÓN PARA PILA-BARANDILLA	2,0000	6,44 €	12,87 €
+MN09050002	ud	ARQUETA 400 X 400 X 600 MM REGISTRABLE	1,0000	17,10 €	17,10 €
+MN19000291	m	CABLE DE COBRE DESNUDO DE 50 MM² 	95,0000	4,67 €	443,65 €
+MN10030009	ud	PICA DE ACERO-COBRE 2 M Y 18 MM DE DIÁMETRO	1,0000	12,82 €	12,82 €
+%VOL	%	Sobrecoste por volumen escaso	0,2000	795,26 €	159,05 €
+%CIND	%	Costes indirectos	0,0600	954,31 €	57,26 €
+
+#***
+
+OCK010bcb - Imposta prefabricada en viaductos ferroviarios. (N/<3/E).
+128,90 € / m
+Imposta prefabricada en viaductos ferroviarios.
+
+Trabajo: Nocturno. 
+
+Banda de mantenimiento: i < 3 horas. 
+
+Condiciones de ejecución: Volumen escaso.
+Descompuesto
+Código	Unidad	Descripción	Cantidad	Precio	Importe
+MQ14000000	h	GRÚA AUTOPROPULSADA TODOTERRENO PARA CARGA MÁXIMA DE 20 T	0,6500	105,24 €	68,41 €
+MN06020001	m	IMPOSTA PREFABRICADA DE HORMIGÓN	1,0000	26,31 €	26,31 €
+AU10100001	m³	HORMIGÓN EN MASA HM-20, DE CUALQUIER CONSISTENCIA Y TAMAÑO MÁXIMO DEL ÁRIDO 20 MM	0,0900	73,58 €	6,62 €
+%VOL	%	Sobrecoste por volumen escaso	0,2000	101,34 €	20,27 €
+%CIND	%	Costes indirectos	0,0600	121,61 €	7,30 €
+
+#***
+
+OCK040adb - Barandilla metálica en viaducto de ferrocarril. (D/NNI/E).
+79,74 € / m
+Barandilla metálica galvanizada en viaducto de ferrocarril, formada por perfil tubular de 100 mm de diámetro y espesor 4-6 mm, perfil IPN-100 cada 2,00 m y 3 perfiles tubulares de 50 mm de diámetro y 3 mm de espesor (según detalle) ejecutada con acero S 275 JR en perfiles laminados o plancha, cortado a medida recibida mediante placa de reparto y acero para armaduras B 500 S de límite elástico 5100 kp/cm² elaborado y mortero seco de cemento 1:4 con aditivos plastificantes i/ imprimación antioxidante y doble capa de pintura.(Según NAP 2-0-0.1 Puentes y Viaductos).
+
+Trabajo: Diurno. 
+
+Banda de mantenimiento: No necesita intervalo. 
+
+Condiciones de ejecución: Volumen escaso.
+Descompuesto
+Código	Unidad	Descripción	Cantidad	Precio	Importe
+MQ11020020	h	EQUIPO DE SOLDADURA ELÉCTRICA	0,1600	6,30 €	1,01 €
+MN01070001	m³	MORTERO SECO DE CEMENTO 1:4, CON ADITIVOS PLASTIFICANTES	0,0020	62,58 €	0,13 €
+MN01110002	kg	ACERO CORRUGADO B 500 EN BARRAS ELABORADO	0,3000	1,10 €	0,33 €
+MN03020000	kg	ACERO S 275 EN PERFILES LAMINADOS O PLANCHA, CORTADO A MEDIDA I/ IMPRIMACIÓN ANTIOXIDANTE	24,4300	1,23 €	30,05 €
+MN01100061	ud	PLACA DE REPARTO 150 X 150 MM, INCLUSO TUERCA	1,0000	1,60 €	1,60 €
+MN03020300	m	TUBO DE ACERO GALVANIZADO SOLDADO DE 100 MM DE DIÁMETRO Y ESPESOR 4-6 MM I/ IMPRIMACIÓN ANTIOXIDANTE Y DOBLE CAPA DE PINTURA	1,0000	29,57 €	29,57 €
+%VOL	%	Sobrecoste por volumen escaso	0,2000	62,68 €	12,54 €
+%CIND	%	Costes indirectos	0,0600	75,22 €	4,51 €
+
+#***
+
+OCK050adb - Módulo de cerramiento de 1,80 x 2,50 m de protección antivandalismo en pasos superiores. (D/NNI/E).
+255,02 € / ud
+Módulo de cerramiento de 1,80 x 2,50 m de protección antivandalismo en pasos superiores.
+
+Trabajo: Diurno. 
+
+Banda de mantenimiento: No necesita intervalo. 
+
+Condiciones de ejecución: Volumen escaso.
+Descompuesto
+Código	Unidad	Descripción	Cantidad	Precio	Importe
+MQ14000000	h	GRÚA AUTOPROPULSADA TODOTERRENO PARA CARGA MÁXIMA DE 20 T	0,0150	105,24 €	1,58 €
+MQ11020020	h	EQUIPO DE SOLDADURA ELÉCTRICA	0,2000	6,30 €	1,26 €
+MN04020005	m²	PANEL DE METAL EXPANDIDO	2,5200	19,00 €	47,88 €
+MN03020002	kg	ACERO S 275 JR GALVANIZADO Y LACADO, CORTADO A MEDIDA I/ IMPRIMACIÓN ANTIOXIDANTE	31,7100	1,90 €	60,25 €
+MN03020100	m²	CHAPA PERFILADA PRELACADA	1,7400	12,42 €	21,61 €
+MN01100084	ud	TORNILLO, TUERCA Y ARANDELAS M6	42,0000	0,24 €	10,08 €
+MN08080001	m	POSTE DE TUBO RECTANGULAR DE 60 X 80 X 5 MM	2,7000	21,42 €	57,83 €
+%VOL	%	Sobrecoste por volumen escaso	0,2000	200,49 €	40,10 €
+%CIND	%	Costes indirectos	0,0600	240,59 €	14,44 €
+
+#***
+
+SBA100 - SEPARACION FÍSICA RÍGIDA PARA TRABAJOS EN O PRÓXIMOS A LA ZONA DE SEGURIDAD CON TRAFICO FERROVIARIO
+17,01 € / m
+Cercado con entelado metálico galvanizado de malla simple torsión, trama 50/14 y postes de tubo de acero galvanizado por inmersión de 48 mm de diámetro y tornapuntas tubo acero galvanizado de 32 mm de diámetro, montada, i/replanteo y recibido con hormigón, tensores, grupillas y accesorios (amortizable en un diez usos), según R.D. 486/97 y R.D. 1627/97.
+
+
+
+A instalar en trabajos que inciden o quedan proximos a la zona de seguridad y se realizaran con tráfico ferroviario segun la NAR 6/16.
+Descompuesto
+Código	Unidad	Descripción	Cantidad	Precio	Importe
+MOC0000100	h	CAPATAZ	0,0300	21,98 €	0,66 €
+MOC0000200	h	OFICIAL 1A	0,1000	21,51 €	2,15 €
+MOC0000600	h	AYUDANTE	0,3000	20,42 €	6,13 €
+MOC0000500	h	PEÓN	0,3000	19,92 €	5,98 €
+MN16070301	m	CINTA BALIZAMIENTO BICOLOR 8 CM	0,1000	0,13 €	0,01 €
+MN16020323	m²	VALLADO SIMPLE TORSIÓN ST 50/14 GALVANIZADO	0,1000	1,44 €	0,14 €
+MN16020324	ud	POSTE TUBO ACERO GALVANIZADO D=48 MM	0,0300	5,80 €	0,17 €
+MN16020325	ud	POSTE ESQUINA ACERO GALVANIZADO D=48 MM	0,0080	21,00 €	0,17 €
+MN16020326	ud	TORNAPUNTA ACERO GALVANIZADO D=32 MM	0,0080	6,36 €	0,05 €
+AU10100001	m³	HORMIGÓN EN MASA HM-20, DE CUALQUIER CONSISTENCIA Y TAMAÑO MÁXIMO DEL ÁRIDO 20 MM	0,0080	73,58 €	0,59 €
+%CIND	%	Costes indirectos	0,0600	16,05 €	0,96 €
+
+#***
+
+SBA010a - Barandilla de protección guardacuerpos metálicos (tubo 50 mm). Apriete a forjado.
+9,65 € / m
+Barandilla de protección de perímetros de forjados, compuesta por guardacuerpos metálico cada 2,50 m (amortizable en 8 usos), fijado por apriete al forjado, pasamanos y travesaño intermedio formado por tubo 50 mm (amortizable en 10 usos), pintado en amarillo y negro, y rodapié de 15x5 cm (amortizable en 3 usos), según norma UNE-EN 13374, incluso colocación y desmontaje , según R.D. 486/97 y R.D. 1627/97
+Descompuesto
+Código	Unidad	Descripción	Cantidad	Precio	Importe
+MOC0000100	h	CAPATAZ	0,0150	21,98 €	0,33 €
+MOC0000200	h	OFICIAL 1A	0,1500	21,51 €	3,23 €
+MOC0000500	h	PEÓN	0,1500	19,92 €	2,99 €
+MN16020303	ud	GUARDACUERPOS METÁLICO	0,0650	10,44 €	0,68 €
+MN16020309	m³	TABLA MADERA PINO 15X5 CM	0,0030	218,36 €	0,66 €
+MN16020330	m	PASAMANOS TUBO D=50 MM	0,2400	5,04 €	1,21 €
+%CIND	%	Costes indirectos	0,0600	9,09 €	0,55 €
+
+#***
+
+SBA010b - Barandilla de protección guardacuerpos metálicos (tubo 50 mm). Embebido forjado.
+9,91 € / m
+Barandilla de protección de perímetros de forjados, compuesta por guardacuerpos metálico cada 2,50 m (amortizable en 8 usos), anclados mediante cápsulas de plástico embebidas en el forjado, pasamanos y travesaño intermedio formado por tubo 50 mm (amortizable en 10 usos), pintado en amarillo, y rodapié de 15x5 cm (amortizable en 3 usos), según norma UNE-EN 13374, incluso colocación y desmontaje , según R.D. 486/97 y R.D. 1627/97
+Descompuesto
+Código	Unidad	Descripción	Cantidad	Precio	Importe
+MOC0000100	h	CAPATAZ	0,0300	21,98 €	0,66 €
+MOC0000500	h	PEÓN	0,3000	19,92 €	5,98 €
+MN16020303	ud	GUARDACUERPOS METÁLICO	0,0650	10,44 €	0,68 €
+MN16020309	m³	TABLA MADERA PINO 15X5 CM	0,0030	218,36 €	0,66 €
+MN16020330	m	PASAMANOS TUBO D=50 MM	0,2400	5,04 €	1,21 €
+MN16020333	ud	CÁPSULA Y TAPA PARA GUARDACUERPOS	0,3300	0,47 €	0,16 €
+%CIND	%	Costes indirectos	0,0600	9,33 €	0,56 €
+
+#***
+SBA010f - Barandilla de protección protección lateral zanjas.
+8,33 € / m
+Barandilla de protección lateral de zanjas, formada por tres tabloncillos de madera de pino de 20x7 cm y estaquillas de madera de D=8 cm hincadas en el terreno cada 1,00 m (amortizable en 3 usos), incluso colocación y desmontaje , según R.D. 486/97 y R.D. 1627/97
+Descompuesto
+Código	Unidad	Descripción	Cantidad	Precio	Importe
+MOC0000100	h	CAPATAZ	0,0100	21,98 €	0,22 €
+MOC0000200	h	OFICIAL 1A	0,1000	21,51 €	2,15 €
+MOC0000500	h	PEÓN	0,1000	19,92 €	1,99 €
+MN16020307	m³	TABLÓN MADERA PINO 20X7 CM	0,0110	232,21 €	2,55 €
+MN16020328	m	PUNTAL DE PINO 2,5 M D=8/10 MM	0,6670	1,42 €	0,95 €
+%CIND	%	Costes indirectos	0,0600	7,86 €	0,47 €
+
+#***
+
+SBA010f - Barandilla de protección protección lateral zanjas.
+8,33 € / m
+Barandilla de protección lateral de zanjas, formada por tres tabloncillos de madera de pino de 20x7 cm y estaquillas de madera de D=8 cm hincadas en el terreno cada 1,00 m (amortizable en 3 usos), incluso colocación y desmontaje , según R.D. 486/97 y R.D. 1627/97
+Descompuesto
+Código	Unidad	Descripción	Cantidad	Precio	Importe
+MOC0000100	h	CAPATAZ	0,0100	21,98 €	0,22 €
+MOC0000200	h	OFICIAL 1A	0,1000	21,51 €	2,15 €
+MOC0000500	h	PEÓN	0,1000	19,92 €	1,99 €
+MN16020307	m³	TABLÓN MADERA PINO 20X7 CM	0,0110	232,21 €	2,55 €
+MN16020328	m	PUNTAL DE PINO 2,5 M D=8/10 MM	0,6670	1,42 €	0,95 €
+%CIND	%	Costes indirectos	0,0600	7,86 €	0,47 €
+
+#***
+
+SBA040a - Valla contención de peatones.
+3,93 € / ud
+Valla de contención de peatones, metálica, prolongable de 2,50 m de largo y 1,00 m de altura, color amarillo (amortizable para 20 usos), incluso montaje y desmontaje, según R.D. 486/97 y R.D. 1627/97.
+Descompuesto
+Código	Unidad	Descripción	Cantidad	Precio	Importe
+MOC0000100	h	CAPATAZ	0,0100	21,98 €	0,22 €
+MOC0000500	h	PEÓN	0,1000	19,92 €	1,99 €
+MN16020310	ud	VALLA CONTENCIÓN PEATONES 2,5X1 M (20 USOS)	1,0000	1,50 €	1,50 €
+%CIND	%	Costes indirectos	0,0600	3,71 €	0,22 €
+
+#***
+
+SBA080 - ALQUILER VALLA CONTENCIÓN PEATONES
+4,30 € / ud
+Alquiler unidad/mes de valla de contención de peatones, metálica, de 2,50 m de largo y 1,00 m de altura, color amarillo, incluso colocación y desmontaje, según R.D. 486/97 y R.D. 1627/97.
+Descompuesto
+Código	Unidad	Descripción	Cantidad	Precio	Importe
+MOC0000100	h	CAPATAZ	0,0100	21,98 €	0,22 €
+MOC0000500	h	PEÓN	0,1000	19,92 €	1,99 €
+MN16020316	ud	ALQUILER VALLA CONTENCIÓN PEATONAL 2,5X1 M	1,0000	1,85 €	1,85 €
+%CIND	%	Costes indirectos	0,0600	4,06 €	0,24 €
+
+#***
+
+SBA090a - Barrera de seguridad tipo new jersey de plástico simple.
+11,87 € / ud
+Montaje o desmontaje de barrera de seguridad tipo new jersey de plástico simple, incluido el suministro, siempre llenas (amortizable 10 usos).
+Descompuesto
+Código	Unidad	Descripción	Cantidad	Precio	Importe
+MOC0000100	h	CAPATAZ	0,0100	21,98 €	0,22 €
+MOC0000200	h	OFICIAL 1A	0,1000	21,51 €	2,15 €
+MOC0000500	h	PEÓN	0,1000	19,92 €	1,99 €
+MN16020008	m	BARRERA DE SEGURIDAD TIPO NEW JERSEY PLÁSTICO 1,20X0,60X0,40M SIMPLE, 10 USOS	1,0000	6,66 €	6,66 €
+MN01010001	m³	AGUA	0,3500	0,52 €	0,18 €
+%CIND	%	Costes indirectos	0,0600	11,20 €	0,67 €
+
+#***
+
+SBA060a - Puerta de acceso peatonal chapa 1,00x2,00 m.
+48,69 € / ud
+Puerta de acceso peatonal de chapa galvanizada de 1,00x2,00 m para colocación en valla de cerramiento de las mismas características, incluso montaje y desmontaje, según R.D. 486/97 y R.D. 1627/97 (amortizable en 5 usos).
+Descompuesto
+Código	Unidad	Descripción	Cantidad	Precio	Importe
+MOC0000100	h	CAPATAZ	0,0050	21,98 €	0,11 €
+MOC0000600	h	AYUDANTE	0,0500	20,42 €	1,02 €
+MOC0000500	h	PEÓN	0,0500	19,92 €	1,00 €
+MN16020322	ud	PUERTA CHAPA GALVANIZADA 1X2 M, 5 USOS	1,0000	43,80 €	43,80 €
+%CIND	%	Costes indirectos	0,0600	45,93 €	2,76 €
+
+#***
+
+SBA070b - Alquiler valla de enrejado galvanizado.
+5,16 € / m
+Alquiler m/mes de valla realizada con paneles prefabricados de 3,50x2,00 m de altura, enrejados de 80x150 mm y D=8 mm de espesor, soldado a tubos de D=40 mm y 1,50 mm de espesor, todo ello galvanizado en caliente, sobre soporte de hormigón prefabricado de 230x600x150 mm, separados cada 3,50 m, incluso accesorios de fijación, p.p. de portón , incluso montaje y desmontaje, según R.D. 486/97 y R.D. 1627/97.
+Descompuesto
+Código	Unidad	Descripción	Cantidad	Precio	Importe
+MOC0000100	h	CAPATAZ	0,0050	21,98 €	0,11 €
+MOC0000600	h	AYUDANTE	0,0500	20,42 €	1,02 €
+MOC0000500	h	PEÓN	0,0500	19,92 €	1,00 €
+MN16020314	m	ALQUILER VALLA ENREJADO MÓVIL 3,5X2 M	1,0000	2,74 €	2,74 €
+%CIND	%	Costes indirectos	0,0600	4,87 €	0,29 €
+
+#***
+
+SBB010 - LÁMPARA PORTÁTIL MANO
+13,49 € / ud
+Lámpara portátil de mano, con cesto protector y mango aislante, según R.D. 614/2001.
+Descompuesto
+Código	Unidad	Descripción	Cantidad	Precio	Importe
+MN16040101	ud	LÁMPARA PORTÁTIL MANO	1,0000	12,73 €	12,73 €
+%CIND	%	Costes indirectos	0,0600	12,73 €	0,76 €
+
+#***
+
+SBC020a - Protección de hueco horizontal con mallazo.
+9,01 € / m²
+Protección de hueco horizontal con mallazo electrosoldado de 15x15 cm D=5 mm, para protección fijado con conectores al zuncho del hueco y pasante sobre las tabicas y empotrado un metro a cada lado en la capa de compresión por cada lado, incluso cinta de señalización a 0,90 m de altura fijada con pies derechos , según R.D. 486/97 y R.D. 1627/97
+Descompuesto
+Código	Unidad	Descripción	Cantidad	Precio	Importe
+MOC0000100	h	CAPATAZ	0,0080	21,98 €	0,18 €
+MOC0000200	h	OFICIAL 1A	0,0800	21,51 €	1,72 €
+MOC0000400	h	PEÓN ESPECIALISTA	0,0800	20,17 €	1,61 €
+MN01110111	m²	MALLA 15 X 15 X 5	2,2500	1,16 €	2,61 €
+MN16070301	m	CINTA BALIZAMIENTO BICOLOR 8 CM	1,1000	0,13 €	0,14 €
+MN08040603	m	POSTE DE 80 X 40 X 2 MM	0,1250	6,49 €	0,81 €
+MN01100301	ud	ANCLAJE MECÁNICO DE EXPANSIÓN, CARGAS MEDIANAS, HORMIGÓN FISURADO Y CARGAS SISMICAS, D<10 MM, L=90 - 120 MM, ACERO AL CARBONO GALVANIZADO	1,0000	1,43 €	1,43 €
+%CIND	%	Costes indirectos	0,0600	8,50 €	0,51 €
+
+#***
+
+SBE010a - Red de seguridad tipo horca 1 planta.
+16,55 € / m
+Red tipo horca 1ª planta vertical de seguridad de malla de poliamida de 10x10 cm de paso, ennudada con cuerda de D=3 mm en módulos de 10x5 m incluso pescante metálico tipo horca de 7,50x2,00 m en tubo de 80x40x1,5 mm colocados cada 4,50 m, soporte mordaza (amortizable en 20 usos), anclajes de red, cuerdas de unión y red (amortizable en 10 usos), incluso colocación y desmontaje en primera puesta, según UNE-EN 1263,  R.D. 485/97 y R.D. 1627/97.
+Descompuesto
+Código	Unidad	Descripción	Cantidad	Precio	Importe
+MOC0000100	h	CAPATAZ	0,0250	21,98 €	0,55 €
+MOC0000200	h	OFICIAL 1A	0,2500	21,51 €	5,38 €
+MOC0000500	h	PEÓN	0,2500	19,92 €	4,98 €
+MN16020213	ud	PESCANTE/HORCA 7,50 M 80X40X1,5 MM	0,0200	149,12 €	2,98 €
+MN16020214	ud	GANCHO ANCLAJE FORJADO D=16 MM	0,7000	2,10 €	1,47 €
+MN16020221	m	CUERDA DE UNIÓN REDES DE SEGURIDAD	0,6000	0,41 €	0,25 €
+%CIND	%	Costes indirectos	0,0600	15,61 €	0,94 €
+
+#***
+
+SBF010 - TAPÓN PROTECTOR "TIPO SETA" ESPERAS ARMADURAS
+0,10 € / ud
+Colocación de tapón protector de plástico "tipo seta" de las puntas de acero en las esperas de las armaduras de la estructura de hormigón armado, incluso retirada antes del vertido del hormigón.
+Descompuesto
+Código	Unidad	Descripción	Cantidad	Precio	Importe
+MOC0000100	h	CAPATAZ	0,0001	21,98 €	0,00 €
+MOC0000500	h	PEÓN	0,0010	19,92 €	0,02 €
+MN16020223	ud	TAPÓN PROTECTOR PUNTAS ACERO TIPO SETA	1,0000	0,07 €	0,07 €
+%CIND	%	Costes indirectos	0,0600	0,09 €	0,01 €
+
+#***
+
+SBG010b - Tapa provisional metálica para arqueta 51x51 cm.
+10,48 € / ud
+Tapa provisional metálica para huecos de 50x50 cm, arquetas o similares, incluso colocación.
+Descompuesto
+Código	Unidad	Descripción	Cantidad	Precio	Importe
+MOC0000100	h	CAPATAZ	0,0050	21,98 €	0,11 €
+MOC0000500	h	PEÓN	0,0500	19,92 €	1,00 €
+MN16020102	ud	TAPA PROVISIONAL ARQUETA 51X51 CM	1,0000	7,35 €	7,35 €
+MN01100301	ud	ANCLAJE MECÁNICO DE EXPANSIÓN, CARGAS MEDIANAS, HORMIGÓN FISURADO Y CARGAS SISMICAS, D<10 MM, L=90 - 120 MM, ACERO AL CARBONO GALVANIZADO	1,0000	1,43 €	1,43 €
+%CIND	%	Costes indirectos	0,0600	9,89 €	0,59 €
+
+#***
+
+SBG010f - Tapa provisional metálica para pozo 70x70 cm.
+25,45 € / ud
+Tapa provisional metálica para pozos, pilotes o asimilables de 70x70 cm, arquetas o similares, incluso colocación.
+Descompuesto
+Código	Unidad	Descripción	Cantidad	Precio	Importe
+MOC0000100	h	CAPATAZ	0,0200	21,98 €	0,44 €
+MOC0000500	h	PEÓN	0,2000	19,92 €	3,98 €
+MN16020105	ud	TAPA PROVISIONAL POZO 70X70 CM	1,0000	18,16 €	18,16 €
+MN01100301	ud	ANCLAJE MECÁNICO DE EXPANSIÓN, CARGAS MEDIANAS, HORMIGÓN FISURADO Y CARGAS SISMICAS, D<10 MM, L=90 - 120 MM, ACERO AL CARBONO GALVANIZADO	1,0000	1,43 €	1,43 €
+%CIND	%	Costes indirectos	0,0600	24,01 €	1,44 €
+
+#***
+
+SBI020 - PAR TOPES CAUCHO PARA RUEDAS
+10,42 € / ud
+Tope para camión en movimientos de tierras, con tablón de madera  de pino y piquetas de barra de acero corrugado  de 20 mm de diámetro ancladas al terreno de longitud 1,8 m, y con el desmontaje incluido.
+Descompuesto
+Código	Unidad	Descripción	Cantidad	Precio	Importe
+MOC0000100	h	CAPATAZ	0,0129	21,98 €	0,28 €
+MOC0000200	h	OFICIAL 1A	0,1290	21,51 €	2,77 €
+MN16020120	ud	PAR TOPES CAUCHO RUEDAS NEGR TRI2RY	0,0530	127,95 €	6,78 €
+%CIND	%	Costes indirectos	0,0600	9,84 €	0,59 €
+
+#***
+
+SAA010b - Casco de seguridad ajustable rueda.
+11,28 € / ud
+Casco de seguridad con arnés de cabeza ajustable por medio de rueda dentada, para uso normal y eléctrico hasta 440 V.. Según R.D. 773/97 y R.D. 1407/92. Equipo de Protección Individual (EPI) con marcado de conformidad CE.
+Descompuesto
+Código	Unidad	Descripción	Cantidad	Precio	Importe
+MN16010102	ud	CASCO SEGURIDAD CON RUEDA	1,0000	10,64 €	10,64 €
+%CIND	%	Costes indirectos	0,0600	10,64 €	0,64 €
+
+#***
+
+SAA020c - Pantalla+casco seguridad soldar.
+19,05 € / ud
+Pantalla de seguridad para soldador de poliamida y cristal de 110x55 mm + casco con arnés de cabeza ajustable con rueda dentada. Según UNE-EN 175, UNE-EN 379. Según R.D. 773/97 y R.D. 1407/92. Equipo de Protección Individual (EPI) con marcado de conformidad CE.
+Descompuesto
+Código	Unidad	Descripción	Cantidad	Precio	Importe
+MN16010108	ud	CASCO + PANTALLA SOLDADOR	1,0000	17,97 €	17,97 €
+%CIND	%	Costes indirectos	0,0600	17,97 €	1,08 €
+
+#***
+SAA030d - Gafas antipolvo.
+9,85 € / ud
+Gafas antipolvo antiempañables, panorámicas. Según UNE-EN 172. Según R.D. 773/97 y R.D. 1407/92. Equipo de Protección Individual (EPI) con marcado de conformidad CE.
+Descompuesto
+Código	Unidad	Descripción	Cantidad	Precio	Importe
+MN16010113	ud	GAFAS ANTIPOLVO	1,0000	9,29 €	9,29 €
+%CIND	%	Costes indirectos	0,0600	9,29 €	0,56 €
+
+#***
+
+SAA070 - MASCARILLA CELULOSA DESECHABLE
+1,75 € / ud
+Mascarilla de celulosa desechable para trabajos en ambiente con polvo y humos. Según Según UNE-EN 136, R.D. 773/97 y R.D. 1407/92. Equipo de protección individual (EPI) con marcado de conformidad CE.
+Descompuesto
+Código	Unidad	Descripción	Cantidad	Precio	Importe
+MN16010116	ud	MASCARILLA CELULOSA DESECHABLE	1,0000	1,65 €	1,65 €
+%CIND	%	Costes indirectos	0,0600	1,65 €	0,10 €
+
+#***
+
+SAB020a - Conjunto lluvia alta visibilidad.
+29,97 € / ud
+Conjunto de lluvia alta visibilidad compuesto por pantalón y chaqueta. Ambos con tiras retroreflejantes microburbujas termoselladas, color plata, 50 mm, montaje paralelo. Según UNE-EN 471, UNE-EN 343   y R.D. 773/97. Equipo de Protección Individual (EPI) con marcado de conformidad CE.
+Descompuesto
+Código	Unidad	Descripción	Cantidad	Precio	Importe
+MN16010224	ud	CONJUNTO DE LLUVIA ALTA VISIBILIDAD	1,0000	28,27 €	28,27 €
+%CIND	%	Costes indirectos	0,0600	28,27 €	1,70 €
+
+#***
+
+SAB030c - Chaleco de obras con bandas reflectantes.
+3,46 € / ud
+Chaleco de obras con bandas reflectantes. Según UNE-EN 471, R.D. 773/97 y R.D. 1407/92. Equipo de Protección Individual (EPI) con marcado de conformidad CE.
+Descompuesto
+Código	Unidad	Descripción	Cantidad	Precio	Importe
+MN16010218	ud	CHALECO DE OBRAS REFLECTANTE	1,0000	3,26 €	3,26 €
+%CIND	%	Costes indirectos	0,0600	3,26 €	0,20 €
+
+#***
+
+SAB040d - Mono de trabajo poliéster-algodón.
+19,40 € / ud
+Mono de trabajo de una pieza de poliéster-algodón. Según UNE-EN 340, R.D. 773/97 y R.D. 1407/92. Equipo de Protección Individual (EPI) con marcado de conformidad CE.
+Descompuesto
+Código	Unidad	Descripción	Cantidad	Precio	Importe
+MN16010207	ud	MONO DE TRABAJO POLIÉSTER-ALGODÓN	1,0000	18,30 €	18,30 €
+%CIND	%	Costes indirectos	0,0600	18,30 €	1,10 €
+
+#***
+
+SAB080 - CINTURÓN PORTAHERRAMIENTAS
+19,29 € / ud
+Cinturón portaherramientas. Según R.D. 773/97 y R.D. 1407/92. Equipo de protección individual (EPI) con marcado de conformidad CE.
+Descompuesto
+Código	Unidad	Descripción	Cantidad	Precio	Importe
+MN16010203	ud	CINTURÓN PORTAHERRAMIENTAS	1,0000	18,20 €	18,20 €
+%CIND	%	Costes indirectos	0,0600	18,20 €	1,09 €
+
+#***
+
+SAB100 - CINTURÓN ANTIVIBRATORIO
+26,53 € / ud
+Cinturón antivibratorio. Según R.D. 773/97 y R.D. 1407/92. Equipo de protección individual (EPI) con marcado de conformidad CE.
+Descompuesto
+Código	Unidad	Descripción	Cantidad	Precio	Importe
+MN16010225	ud	CINTURON ANTIVIBRATORIO	1,0000	25,03 €	25,03 €
+%CIND	%	Costes indirectos	0,0600	25,03 €	1,50 €
+
+#***
+
+SAC010g - Par de guantes de uso general de lona y serraje.
+2,89 € / ud
+Par de guantes de uso general de lona y serraje . Según UNE-EN 420, UNE-EN 388.Según R.D. 773/97 y R.D. 1407/92. Equipo de Protección Individual (EPI) con marcado de conformidad CE.
+Descompuesto
+Código	Unidad	Descripción	Cantidad	Precio	Importe
+MN16010307	ud	PAR GUANTES USO GENERAL SERRAJE	1,0000	2,73 €	2,73 €
+%CIND	%	Costes indirectos	0,0600	2,73 €	0,16 €
+
+#***
+
+SAC040 - PAR MANGUITOS REFLECTANTES
+24,16 € / ud
+Par de manguitos reflectantes. Según Según UNE-EN 60984 y R.D. 773/97. Equipo de protección individual (EPI) con marcado de conformidad CE.
+Descompuesto
+Código	Unidad	Descripción	Cantidad	Precio	Importe
+MN16010317	ud	PAR MANGUITOS REFLECTANTES	1,0000	22,79 €	22,79 €
+%CIND	%	Costes indirectos	0,0600	22,79 €	1,37 €
+
+#***
+
+SAD010g - Par de botas de seguridad.
+31,57 € / ud
+Par de botas de seguridad para electricista hasta 5000 V de tensión. Según UNE-EN ISO 20345, UNE-EN ISO 20346, UNE-EN ISO 20347. Según R.D. 773/97 y R.D. 1407/92. Equipo de Protección Individual (EPI) con marcado de conformidad CE.
+Descompuesto
+Código	Unidad	Descripción	Cantidad	Precio	Importe
+MN16010407	ud	PAR BOTAS DE SEGURIDAD	1,0000	29,78 €	29,78 €
+%CIND	%	Costes indirectos	0,0600	29,78 €	1,79 €
+
+#***
+
+SAE080c - Equipo completo para trabajo vertical y horizontal.
+42,66 € / ud
+Equipo completo para trabajos en vertical y horizontal compuesto por un arnés de seguridad con amarre dorsal y pectoral, fabricado con cinta de nailon de 45 mm y elementos metálicos de acero inoxidable, un dispositivo anticaídas deslizante de doble función y un rollo de cuerda poliamida de 14 mm de 2 m con lazada, incluso bolsa portaequipo. Según UNE-EN 360, UNE-EN ISO 1140, UNE-EN 353-2, R.D. 773/97 y R.D. 1407/92. Equipo de Protección Individual (EPI) con marcado de conformidad CE. (amortizable en 5 usos)
+Descompuesto
+Código	Unidad	Descripción	Cantidad	Precio	Importe
+MN16010583	ud	EQUIPO TRABAJO VERTICAL Y HORIZONTAL	0,2000	201,25 €	40,25 €
+%CIND	%	Costes indirectos	0,0600	40,25 €	2,42 €
+
+#***
+
+SCA010ab - Alquiler de comedor.
+143,26 € / mes
+Mes de alquiler de de caseta prefabricada para comedor de obra de dimensiones de 2 a 9 m2. Estructura y cerramiento de chapa galvanizada pintada, aislamiento de poliestireno expandido autoextinguible, interior con tablero melaminado en color. Cubierta de chapa galvanizada reforzada con perfil de acero; fibra de vidrio de 60 mm, interior con tablex lacado. Suelo de aglomerado revestido con PVC continuo de 2 mm, y poliestireno de 50 mm con apoyo en base de chapa galvanizada de sección trapezoidal. Puerta de 0,80x2,00 m, de chapa galvanizada de 1 mm, reforzada y con poliestireno de 20 mm, picaporte y cerradura. Dos ventanas aluminio anodizado corredera, contraventana de acero galvanizado. Instalación eléctrica a 220 V, toma de tierra, automático, 2 fluorescentes de 40 W, enchufes para 1500 W y punto luz exterior de 60 W. Con transporte a 150 km (ida y vuelta). Entrega y recogida del módulo con camión grúa. Según R.D. 486/97 y R.D. 1627/97, incluso limpieza semanal.
+Descompuesto
+Código	Unidad	Descripción	Cantidad	Precio	Importe
+MOC0000100	h	CAPATAZ	0,2000	21,98 €	4,40 €
+MOC0000500	h	PEÓN	2,0000	19,92 €	39,84 €
+MN16050209	ud	ALQUILER MES CASETA COMEDOR DE 2 A 9 M2	1,0000	50,00 €	50,00 €
+MN16050234	ud	TRANSPORTE 150 KM ENTREGA Y RECOGIDA 1 MÓDULO	0,0850	481,26 €	40,91 €
+%CIND	%	Costes indirectos	0,0600	135,14 €	8,11 €
+
+#***
+
+SCA010da - Alquiler de WC químico estándar.
+311,89 € / mes
+Mes de alquiler de de WC químico estándar, compuesto por urinario, inodoro y depósito para desecho de 266 l. Sin necesidad de instalación. Incluso portes de entrega y recogida. Según R.D. 486/97 y R.D. 1627/97, incluso limpieza, retirada de residuos a depuradora autorizada y reposición de químicos.
+Descompuesto
+Código	Unidad	Descripción	Cantidad	Precio	Importe
+MOC0000100	h	CAPATAZ	0,2000	21,98 €	4,40 €
+MOC0000500	h	PEÓN	2,0000	19,92 €	39,84 €
+MN16050201	ud	ALQUILER MES WC QUÍMICO MENOR DE 2 M2 Y RECAMBIO	1,0000	130,00 €	130,00 €
+MN16050236	mes	LIMPIEZA, RETIRADA DE RESIDUOS A DEPURADORA AUTORIZADA Y REPOSICIÓN DE QUÍMICOS	1,0000	120,00 €	120,00 €
+%CIND	%	Costes indirectos	0,0600	294,24 €	17,65 €
+
+#***
+
+SCA010cb - Alquiler de vestuarios.
+179,63 € / mes
+Mes de alquiler de de caseta prefabricada para vestuarios en obra de dimensiones de 2 a 9 m2. Estructura de acero galvanizado. Cubierta y cerramiento lateral de chapa galvanizada trapezoidal de 0,6 mm reforzada con perfiles de acero, interior prelacado. Suelo de aglomerado hidrófugo de 19 mm puerta de acero de 1 mm, de 0,80x2,00 m pintada con cerradura. Ventana fija de cristal de 6 mm, recercado con perfil de goma. Con transporte a 150 km (ida y vuelta). Entrega y recogida del módulo con camión grúa. Según R.D. 486/97 y R.D. 1627/97, incluso limpieza semanal.
+Descompuesto
+Código	Unidad	Descripción	Cantidad	Precio	Importe
+MOC0000100	h	CAPATAZ	0,2000	21,98 €	4,40 €
+MOC0000500	h	PEÓN	2,0000	19,92 €	39,84 €
+MN16050206	ud	ALQUILER MES CASETA VESTUARIO DE 2 A 9 M2	1,0000	80,00 €	80,00 €
+MN16050301	ud	PERCHA PARA ASEOS O DUCHAS	0,0833	2,15 €	0,18 €
+MN16050302	ud	PORTARROLLOS INDUSTRIAL CON CERRADURA	0,0167	27,50 €	0,46 €
+MN16050303	ud	ESPEJO VESTUARIOS Y ASEOS	0,0167	26,35 €	0,44 €
+MN16050304	ud	DOSIFICADOR JABÓN LÍQUIDO	0,0167	25,00 €	0,42 €
+MN16050305	ud	JABÓN LÍQUIDO DESINFECTANTE 1 L	0,0167	12,95 €	0,22 €
+MN16050306	ud	DISPENSADOR DE PAPEL TOALLA	0,0167	55,90 €	0,93 €
+MN16050307	ud	SECAMANOS ELÉCTRICO	0,0167	99,50 €	1,66 €
+MN16050234	ud	TRANSPORTE 150 KM ENTREGA Y RECOGIDA 1 MÓDULO	0,0850	481,26 €	40,91 €
+%CIND	%	Costes indirectos	0,0600	169,45 €	10,17 €
+
+#***
+
+SCB010 - HORNO MICROONDAS
+11,65 € / ud
+Horno microondas, con plato giratorio incorporado (amortizable en 5 usos).
+Descompuesto
+Código	Unidad	Descripción	Cantidad	Precio	Importe
+MOC0000100	h	CAPATAZ	0,0100	21,98 €	0,22 €
+MOC0000500	h	PEÓN	0,1000	19,92 €	1,99 €
+MN16050308	ud	HORNO MICROONDAS	0,2000	43,90 €	8,78 €
+%CIND	%	Costes indirectos	0,0600	10,99 €	0,66 €
+
+#***
+
+SCB020 - TAQUILLA METÁLICA INDIVIDUAL
+23,12 € / ud
+Taquilla metálica individual para vestuario de 1,80 m de altura en acero laminado en frío, con tratamiento antifosfatante y anticorrosivo, con pintura secada al horno, cerradura, balda y tubo percha, lamas de ventilación en puerta, colocada (amortizable en 5 usos).
+Descompuesto
+Código	Unidad	Descripción	Cantidad	Precio	Importe
+MOC0000100	h	CAPATAZ	0,0100	21,98 €	0,22 €
+MOC0000500	h	PEÓN	0,1000	19,92 €	1,99 €
+MN16050309	ud	TAQUILLA METÁLICA INDIVIDUAL	0,2000	98,00 €	19,60 €
+%CIND	%	Costes indirectos	0,0600	21,81 €	1,31 €
+
+#***
+SCB030 - MESA MELAMINA PARA 10 PERSONAS
+35,48 € / ud
+Mesa de melamina para comedor de obra con capacidad para 10 personas (amortizable en 5 usos).
+Descompuesto
+Código	Unidad	Descripción	Cantidad	Precio	Importe
+MOC0000100	h	CAPATAZ	0,0100	21,98 €	0,22 €
+MOC0000500	h	PEÓN	0,1000	19,92 €	1,99 €
+MN16050310	ud	MESA MELAMINA PARA 10 PERSONAS	0,2000	156,32 €	31,26 €
+%CIND	%	Costes indirectos	0,0600	33,48 €	2,01 €
+
+#***
+SCB040 - BANCO MADERA PARA 5 PERSONAS
+21,41 € / ud
+Banco de madera con capacidad para 5 personas (amortizable en 5 usos).
+Descompuesto
+Código	Unidad	Descripción	Cantidad	Precio	Importe
+MOC0000100	h	CAPATAZ	0,0100	21,98 €	0,22 €
+MOC0000500	h	PEÓN	0,1000	19,92 €	1,99 €
+MN16050311	ud	BANCO MADERA PARA 5 PERSONAS	0,2000	89,95 €	17,99 €
+%CIND	%	Costes indirectos	0,0600	20,20 €	1,21 €
+
+#***
+SCB050 - DEPÓSITO-CUBO DE BASURAS
+4,66 € / ud
+Cubo para recogida de basuras (amortizable en 5 usos).
+Descompuesto
+Código	Unidad	Descripción	Cantidad	Precio	Importe
+MOC0000100	h	CAPATAZ	0,0100	21,98 €	0,22 €
+MOC0000500	h	PEÓN	0,1000	19,92 €	1,99 €
+MN16050312	ud	DEPÓSITO-CUBO BASURAS	0,2000	10,95 €	2,19 €
+%CIND	%	Costes indirectos	0,0600	4,40 €	0,26 €
+
+#***
+SCB100 - NEVERA ELÉCTRICA
+33,93 € / ud
+Nevera eléctrica de 75 l de capacidad, colocada y con el desmontaje incluido (amortizable en 5 usos).
+Descompuesto
+Código	Unidad	Descripción	Cantidad	Precio	Importe
+MOC0000100	h	CAPATAZ	0,0100	21,98 €	0,22 €
+MOC0000500	h	PEÓN	0,1000	19,92 €	1,99 €
+MN16050324	ud	FRIGORÍFICO PEQUEÑO 	0,2000	149,00 €	29,80 €
+%CIND	%	Costes indirectos	0,0600	32,01 €	1,92 €
+
+#***
+
+SDA010c - Extintor de polvo ABC 9 kg.
+33,61 € / ud
+Extintor de de polvo químico ABC polivalente antibrasa de eficacia 34A/144B, de 9 kg de agente extintor, con soporte, manómetro comprobable y manguera con difusor. Medida la unidad instalada, según R.D. 486/97 y R.D. 1627/97
+Descompuesto
+Código	Unidad	Descripción	Cantidad	Precio	Importe
+MOC0000100	h	CAPATAZ	0,0100	21,98 €	0,22 €
+MOC0000500	h	PEÓN	0,1000	19,92 €	1,99 €
+MN16030103	ud	EXTINTOR POLVO ABC 9 KG 34A/144B	1,0000	29,50 €	29,50 €
+%CIND	%	Costes indirectos	0,0600	31,71 €	1,90 €
+
+#***
+
+SEA010 - CINTA BALIZAMIENTO BICOLOR 8 CM
+1,32 € / m
+Cinta de balizamiento bicolor rojo/blanco de material plástico, incluso colocación y desmontaje, según R.D. 485/97 y R.D. 1627/97.
+Descompuesto
+Código	Unidad	Descripción	Cantidad	Precio	Importe
+MOC0000100	h	CAPATAZ	0,0050	21,98 €	0,11 €
+MOC0000500	h	PEÓN	0,0500	19,92 €	1,00 €
+MN16070301	m	CINTA BALIZAMIENTO BICOLOR 8 CM	1,1000	0,13 €	0,14 €
+%CIND	%	Costes indirectos	0,0600	1,25 €	0,07 €
+
+#***
+SEA030 - BOYA DESTELLANTE CON CÉLULA FOTOELÉCTRICA
+20,31 € / ud
+Boya destellante amarilla con carcasa de plástico y soporte de anclaje, con célula fotoeléctrica y pilas, incluido colocación y desmontaje, según R.D. 485/97 y R.D. 1627/97.
+Descompuesto
+Código	Unidad	Descripción	Cantidad	Precio	Importe
+MOC0000100	h	CAPATAZ	0,0100	21,98 €	0,22 €
+MOC0000500	h	PEÓN	0,1000	19,92 €	1,99 €
+MN16070304	ud	BOYA DESTELLANTE CON SOPORTE	1,0000	16,95 €	16,95 €
+%CIND	%	Costes indirectos	0,0600	19,16 €	1,15 €
+
+#***
+
+SEA100 - LUMINARIA COLOR ROJO BALIZAM.
+22,77 € / ud
+Luminaria para balizamiento fijo en color rojo, base metálica y carcasa de vidrio moldeado acabado en color rojo con protección antivandálica tipo hublott, lámpara de 40 w incandescente, accionamiento por célula fotoeléctrica y conexionado a red auxiliar eléctrica, montaje y desmontaje.
+Descompuesto
+Código	Unidad	Descripción	Cantidad	Precio	Importe
+MOC0000100	h	CAPATAZ	0,0126	21,98 €	0,28 €
+MOC0000400	h	PEÓN ESPECIALISTA	0,1260	20,17 €	2,54 €
+MN16070119	ud	LUMINARIA INCANDESC.CEL.FOTOEL.	1,0000	18,66 €	18,66 €
+%CIND	%	Costes indirectos	0,0600	21,48 €	1,29 €
+
+#***
+
+SEB010a - 220x300 mm obligación/prohibición/advertencia.
+4,89 € / ud
+Cartel serigrafiado sobre planchas de PVC blanco de 0,6 mm de espesor nominal. Tamaño 220x300 mm. Válidas para señales de obligación, prohibición y advertencia, incluido colocación, según R.D. 485/97 y R.D. 1627/97.
+Descompuesto
+Código	Unidad	Descripción	Cantidad	Precio	Importe
+MOC0000100	h	CAPATAZ	0,0100	21,98 €	0,22 €
+MOC0000500	h	PEÓN	0,1000	19,92 €	1,99 €
+MN16070201	ud	CARTEL PVC 220X300 MM OBLIGACIÓN/PROHIBICIÓN/ADVERTENCIA	1,0000	2,40 €	2,40 €
+%CIND	%	Costes indirectos	0,0600	4,61 €	0,28 €
+
+#***
+
+SEB020 - PANEL COMPLETO PVC 700X1000 MM
+16,99 € / ud
+Panel completo serigrafiado sobre planchas de pvc blanco de 0,6 mm de espesor nominal. Tamaño 700x1000 mm. Válido para incluir hasta 15 símbolos de señales, incluso textos "prohibido el paso a toda persona ajena a la obra", incluido colocación, según R.D. 485/97 y R.D. 1627/97.
+Descompuesto
+Código	Unidad	Descripción	Cantidad	Precio	Importe
+MOC0000100	h	CAPATAZ	0,0100	21,98 €	0,22 €
+MOC0000500	h	PEÓN	0,1000	19,92 €	1,99 €
+MN16070203	ud	PANEL COMPLETO PVC 700X1000 MM	1,0000	13,82 €	13,82 €
+%CIND	%	Costes indirectos	0,0600	16,03 €	0,96 €
+
+#***
+
+SEC020 - PALETA MANUAL 2 CARAS STOP-OBLIGATORIA
+8,48 € / ud
+Señal de seguridad manual a dos caras: stop-dirección obligatoria, tipo paleta, según R.D. 485/97 y R.D. 1627/97.
+Descompuesto
+Código	Unidad	Descripción	Cantidad	Precio	Importe
+MN16070109	ud	PALETA MANUAL 2 CARAS STOP-DIRECCIÓN OBLIGATORIA	1,0000	8,00 €	8,00 €
+%CIND	%	Costes indirectos	0,0600	8,00 €	0,48 €
+
+#***
+
+SEC010dab - Señal stop de 60 cm con soporte.
+70,32 € / ud
+Señal de seguridad stop de D60 cm, normalizada,  con soporte de acero galvanizado de 80x40x2 mm y 2 m de altura, incluido p.p. de apertura de pozo, hormigonado HM-20, colocación y desmontaje, según R.D. 485/97 y R.D. 1627/97.
+Descompuesto
+Código	Unidad	Descripción	Cantidad	Precio	Importe
+MOC0000100	h	CAPATAZ	0,0300	21,98 €	0,66 €
+MOC0000500	h	PEÓN	0,3000	19,92 €	5,98 €
+MN16070106	ud	SEÑAL OCTOGONAL D=60 CM REFLEXIVO E.G.	1,0000	48,50 €	48,50 €
+MN08040603	m	POSTE DE 80 X 40 X 2 MM	1,0000	6,49 €	6,49 €
+AU10100001	m³	HORMIGÓN EN MASA HM-20, DE CUALQUIER CONSISTENCIA Y TAMAÑO MÁXIMO DEL ÁRIDO 20 MM	0,0640	73,58 €	4,71 €
+%CIND	%	Costes indirectos	0,0600	66,33 €	3,98 €
+
+#***
+
+SEC010acb - Señal triangular de 90 cm con soporte.
+122,74 € / ud
+Señal de seguridad triangular de L=90 cm, normalizada,  con soporte de acero galvanizado de 80x40x2 mm y 2 m de altura, incluido p.p. de apertura de pozo, hormigonado HM-20, colocación y desmontaje, según R.D. 485/97 y R.D. 1627/97.
+Descompuesto
+Código	Unidad	Descripción	Cantidad	Precio	Importe
+MOC0000100	h	CAPATAZ	0,0300	21,98 €	0,66 €
+MOC0000500	h	PEÓN	0,3000	19,92 €	5,98 €
+MN16070102	ud	SEÑAL TRIANGULAR L=90 CM REFLEXIVO E.G.	1,0000	97,95 €	97,95 €
+MN08040603	m	POSTE DE 80 X 40 X 2 MM	1,0000	6,49 €	6,49 €
+AU10100001	m³	HORMIGÓN EN MASA HM-20, DE CUALQUIER CONSISTENCIA Y TAMAÑO MÁXIMO DEL ÁRIDO 20 MM	0,0640	73,58 €	4,71 €
+%CIND	%	Costes indirectos	0,0600	115,78 €	6,95 €
+
+#***
+
+SEC010ccb - Señal circular de 90 cm con soporte.
+104,86 € / ud
+Señal de seguridad circular de , normalizada,  con soporte de acero galvanizado de 80x40x2 mm y 2 m de altura, incluido p.p. de apertura de pozo, hormigonado HM-20, colocación y desmontaje, según R.D. 485/97 y R.D. 1627/97.
+Descompuesto
+Código	Unidad	Descripción	Cantidad	Precio	Importe
+MOC0000100	h	CAPATAZ	0,0300	21,98 €	0,66 €
+MOC0000500	h	PEÓN	0,3000	19,92 €	5,98 €
+MN16070105	ud	SEÑAL CIRCULAR D=90 CM REFLEXIVO E.G.	1,0000	81,08 €	81,08 €
+MN08040603	m	POSTE DE 80 X 40 X 2 MM	1,0000	6,49 €	6,49 €
+AU10100001	m³	HORMIGÓN EN MASA HM-20, DE CUALQUIER CONSISTENCIA Y TAMAÑO MÁXIMO DEL ÁRIDO 20 MM	0,0640	73,58 €	4,71 €
+%CIND	%	Costes indirectos	0,0600	98,91 €	5,93 €
+
+#***
+
+SEC060 - SEÑALISTA DE OBRA
+23,45 € / h
+Señalista de obra.
+Descompuesto
+Código	Unidad	Descripción	Cantidad	Precio	Importe
+MOC0000100	h	CAPATAZ	0,1000	21,98 €	2,20 €
+MOC0000500	h	PEÓN	1,0000	19,92 €	19,92 €
+%CIND	%	Costes indirectos	0,0600	22,12 €	1,33 €
+
+#***
+
+SED010 - ALQUILER APOYO A LA ILUMINACIÓN. CONJUNTO DE FOCOS ILUMINACIÓN PROVISIONAL EN REMOLQUE
+922,20 € / mes
+Alquiler torre de iluminación para exterior, mástil telescópico de 9 m de altura que funcionan con una manivela/polea Conjunto luminoso: 320 W fluorescente total de 4 focos. Voltaje de uso: 220 V
+Descompuesto
+Código	Unidad	Descripción	Cantidad	Precio	Importe
+MN16020010	mes	ALQUILER APOYO A LA ILUMINACION. CONJUNTO DE FOCOS ILUMINACION PROVISIONAL REMOLQUE	1,0000	870,00 €	870,00 €
+%CIND	%	Costes indirectos	0,0600	870,00 €	52,20 €
+
+#***
+
+PBA010a - Redacción de "Proyecto e informe de prueba de carga" en puente isostático.
+1.819,35 € / ud
+Redacción de "Proyecto e informe de prueba de carga" describiendo los medios empleados y los resultados obtenidos i/la realización de los cálculos y la definición de los planos que se considere necesario, en puente isostático .
+Descompuesto
+Código	Unidad	Descripción	Cantidad	Precio	Importe
+MN14020012	ud	REDACCIÓN DE "PROYECTO E INFORME DE PRUEBA DE CARGA" EN PUENTE ISOSTÁTICO	1,0000	1.716,37 €	1.716,37 €
+%CIND	%	Costes indirectos	0,0600	1.716,37 €	102,98 €
+
+#***
+
+PBA020aa - Realización de prueba de carga en puente isostático de un vano <= 20 m o en el primer vano de un puente de varios vanos isostáticos de luces <= 20 m.
+1.692,58 € / ud
+Realización de prueba de carga en puente isostático de un vano <= 20 m o en el primer vano de un puente de varios vanos isostáticos de luces <= 20 m.
+Descompuesto
+Código	Unidad	Descripción	Cantidad	Precio	Importe
+MN14020003	ud	REALIZACIÓN DE PRUEBA DE CARGA EN PUENTE ISOSTÁTICO DE UN VANO <= 20 M O EN EL 1ER VANO DE UN PUENTE DE VARIOS VANOS ISOSTÁTICOS DE LUCES <= 20 M	1,0000	1.596,77 €	1.596,77 €
+%CIND	%	Costes indirectos	0,0600	1.596,77 €	95,81 €
+
+#***
+
+SCA010ad - Alquiler de comedor.
+248,49 € / mes
+Mes de alquiler de de caseta prefabricada para comedor de obra de dimensiones mayor de 16 m2. Estructura y cerramiento de chapa galvanizada pintada, aislamiento de poliestireno expandido autoextinguible, interior con tablero melaminado en color. Cubierta de chapa galvanizada reforzada con perfil de acero; fibra de vidrio de 60 mm, interior con tablex lacado. Suelo de aglomerado revestido con PVC continuo de 2 mm, y poliestireno de 50 mm con apoyo en base de chapa galvanizada de sección trapezoidal. Puerta de 0,80x2,00 m, de chapa galvanizada de 1 mm, reforzada y con poliestireno de 20 mm, picaporte y cerradura. Dos ventanas aluminio anodizado corredera, contraventana de acero galvanizado. Instalación eléctrica a 220 V, toma de tierra, automático, 2 fluorescentes de 40 W, enchufes para 1500 W y punto luz exterior de 60 W. Con transporte a 150 km (ida y vuelta). Entrega y recogida del módulo con camión grúa. Según R.D. 486/97 y R.D. 1627/97, incluso limpieza semanal.
+Descompuesto
+Código	Unidad	Descripción	Cantidad	Precio	Importe
+MOC0000100	h	CAPATAZ	0,2000	21,98 €	4,40 €
+MOC0000500	h	PEÓN	2,0000	19,92 €	39,84 €
+MN16050211	ud	ALQUILER MES CASETA COMEDOR MAYOR DE 16 M2	1,0000	149,27 €	149,27 €
+MN16050234	ud	TRANSPORTE 150 KM ENTREGA Y RECOGIDA 1 MÓDULO	0,0850	481,26 €	40,91 €
+%CIND	%	Costes indirectos	0,0600	234,41 €	14,06 €
+
+#***
+
+SCA010cc - Alquiler de vestuarios.
+184,93 € / mes
+Mes de alquiler de de caseta prefabricada para vestuarios en obra de dimensiones de 9 a 16 m2. Estructura de acero galvanizado. Cubierta y cerramiento lateral de chapa galvanizada trapezoidal de 0,6 mm reforzada con perfiles de acero, interior prelacado. Suelo de aglomerado hidrófugo de 19 mm puerta de acero de 1 mm, de 0,80x2,00 m pintada con cerradura. Ventana fija de cristal de 6 mm, recercado con perfil de goma. Con transporte a 150 km (ida y vuelta). Entrega y recogida del módulo con camión grúa. Según R.D. 486/97 y R.D. 1627/97, incluso limpieza semanal.
+Descompuesto
+Código	Unidad	Descripción	Cantidad	Precio	Importe
+MOC0000100	h	CAPATAZ	0,2000	21,98 €	4,40 €
+MOC0000500	h	PEÓN	2,0000	19,92 €	39,84 €
+MN16050207	ud	ALQUILER MES CASETA VESTUARIO DE 9 A 16 M2	1,0000	85,00 €	85,00 €
+MN16050301	ud	PERCHA PARA ASEOS O DUCHAS	0,0833	2,15 €	0,18 €
+MN16050302	ud	PORTARROLLOS INDUSTRIAL CON CERRADURA	0,0167	27,50 €	0,46 €
+MN16050303	ud	ESPEJO VESTUARIOS Y ASEOS	0,0167	26,35 €	0,44 €
+MN16050304	ud	DOSIFICADOR JABÓN LÍQUIDO	0,0167	25,00 €	0,42 €
+MN16050305	ud	JABÓN LÍQUIDO DESINFECTANTE 1 L	0,0167	12,95 €	0,22 €
+MN16050306	ud	DISPENSADOR DE PAPEL TOALLA	0,0167	55,90 €	0,93 €
+MN16050307	ud	SECAMANOS ELÉCTRICO	0,0167	99,50 €	1,66 €
+MN16050234	ud	TRANSPORTE 150 KM ENTREGA Y RECOGIDA 1 MÓDULO	0,0850	481,26 €	40,91 €
+%CIND	%	Costes indirectos	0,0600	174,45 €	10,47 €
+
+#***
+
+SCA010cd - Alquiler de vestuarios.
+195,53 € / mes
+Mes de alquiler de de caseta prefabricada para vestuarios en obra de dimensiones mayor de 16 m2. Estructura de acero galvanizado. Cubierta y cerramiento lateral de chapa galvanizada trapezoidal de 0,6 mm reforzada con perfiles de acero, interior prelacado. Suelo de aglomerado hidrófugo de 19 mm puerta de acero de 1 mm, de 0,80x2,00 m pintada con cerradura. Ventana fija de cristal de 6 mm, recercado con perfil de goma. Con transporte a 150 km (ida y vuelta). Entrega y recogida del módulo con camión grúa. Según R.D. 486/97 y R.D. 1627/97, incluso limpieza semanal.
+Descompuesto
+Código	Unidad	Descripción	Cantidad	Precio	Importe
+MOC0000100	h	CAPATAZ	0,2000	21,98 €	4,40 €
+MOC0000500	h	PEÓN	2,0000	19,92 €	39,84 €
+MN16050208	ud	ALQUILER MES CASETA VESTUARIO MAYOR DE 16 M2	1,0000	95,00 €	95,00 €
+MN16050301	ud	PERCHA PARA ASEOS O DUCHAS	0,0833	2,15 €	0,18 €
+MN16050302	ud	PORTARROLLOS INDUSTRIAL CON CERRADURA	0,0167	27,50 €	0,46 €
+MN16050303	ud	ESPEJO VESTUARIOS Y ASEOS	0,0167	26,35 €	0,44 €
+MN16050304	ud	DOSIFICADOR JABÓN LÍQUIDO	0,0167	25,00 €	0,42 €
+MN16050305	ud	JABÓN LÍQUIDO DESINFECTANTE 1 L	0,0167	12,95 €	0,22 €
+MN16050306	ud	DISPENSADOR DE PAPEL TOALLA	0,0167	55,90 €	0,93 €
+MN16050307	ud	SECAMANOS ELÉCTRICO	0,0167	99,50 €	1,66 €
+MN16050234	ud	TRANSPORTE 150 KM ENTREGA Y RECOGIDA 1 MÓDULO	0,0850	481,26 €	40,91 €
+%CIND	%	Costes indirectos	0,0600	184,45 €	11,07 €
+
+#***
+
+SFD010 - ALQUILER CASETA PRIMEROS AUXILIOS
+74,20 € / mes
+Alquiler caseta primeros auxilios, incluye material médico para su funcionamiento.
+Descompuesto
+Código	Unidad	Descripción	Cantidad	Precio	Importe
+MN16050235	mes	ALQUILER CASETA PRIMEROS AUXILIOS	1,0000	70,00 €	70,00 €
+%CIND	%	Costes indirectos	0,0600	70,00 €	4,20 €
+
+#***
+
+SAA050a - Juego de tapones antiruido de espuma poliuretano ajustables .
+0,51 € / ud
+Juego de tapones antiruido de espuma poliuretano ajustables . Según UNE-EN 458, UNE-EN 352. Según R.D. 773/97 y R.D. 1407/92. Equipo de Protección Individual (EPI) con marcado de conformidad CE.
+Descompuesto
+Código	Unidad	Descripción	Cantidad	Precio	Importe
+MN16010119	ud	JUEGO TAPONES ANTIRRUIDO ESPUMA POLIURETANO	1,0000	0,48 €	0,48 €
+%CIND	%	Costes indirectos	0,0600	0,48 €	0,03 €
+
+#***
+
+SAD010f - Par de botas de agua de seguridad.
+51,54 € / ud
+Par de botas de agua de seguridad con plantilla y puntera de acero. Según UNE-EN ISO 20345, UNE-EN ISO 20346, UNE-EN ISO 20347. Según R.D. 773/97 y R.D. 1407/92. Equipo de Protección Individual (EPI) con marcado de conformidad CE.
+Descompuesto
+Código	Unidad	Descripción	Cantidad	Precio	Importe
+MN16010406	ud	PAR BOTAS DE AGUA DE SEGURIDAD	1,0000	48,62 €	48,62 €
+%CIND	%	Costes indirectos	0,0600	48,62 €	2,92 €
+
+#***
+
+SAE040g - Banda 30 mm 2,00 m 2 mosquetones.
+16,22 € / ud
+Eslinga anticaída con absorbedor de energía compuesta por cinta de poliéster de 30 mm de espesor y 2,00 m de longitud con dos mosquetones de 17 mm de apertura (amortizable en 4 usos). Según UNE-EN 355, R.D. 773/97 y R.D. 1407/92. Equipo de Protección Individual (EPI) con marcado de conformidad CE (amortizable en 5 usos).
+Descompuesto
+Código	Unidad	Descripción	Cantidad	Precio	Importe
+MN16010533	ud	BANDA 30 MM 2 M 2 MOSQUETONES 17 MM-17 MM	0,2000	76,52 €	15,30 €
+%CIND	%	Costes indirectos	0,0600	15,30 €	0,92 €
+
+#***
+
+OGA010ad - Hidrodemolición automatizada de cualquier elemento. (D/NNI/-).
+1.497,78 € / m³
+Hidrodemolición automatizada de cualquier elemento hasta dejar armaduras a la vista y sin rastro de oxidación, ejecutada con técnicas de hidrodemolición con robot específico gran caudal 1000 bar, que permite la ejecución controlada automáticamente. Incluido parte proporcional de replanteo, limpieza, medios auxiliares, herramientas, maquinaria y mano de obra así como acopios intermedios, control y aseguramiento de la calidad.
+
+Trabajo: Diurno.
+
+Banda de mantenimiento:No necesita intervalo.
+Descompuesto
+Código	Unidad	Descripción	Cantidad	Precio	Importe
+MQ03000505	h	UAP WOMA 550Z Y ROBOT ESPECÍFICO PARA TABLEROS	2,0000	700,00 €	1.400,00 €
+MN01010001	m³	AGUA	25,0000	0,52 €	13,00 €
+%CIND	%	Costes indirectos	0,0600	1.413,00 €	84,78 €
+#***
