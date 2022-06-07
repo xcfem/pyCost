@@ -7,7 +7,8 @@ from pycost.bc3 import fiebdc3
 elemento, descompuesto, medicion, obra, capitulo, sin_tipo= range(0,6)
 
 class RegBC3(object):
-    def __init__(self):
+    def __init__(self, code):
+        self.code= code # Concept identifier.
         self.c= None #Concepto
         self.d= None #Descomposición.
         self.m= None #Medicion
@@ -25,7 +26,6 @@ class RegBC3(object):
 
     def GetConcepto(self):
         return fiebdc3.regBC3_c(self.c)
-
 
     def GetTexto(self):
         return fiebdc3.regBC3_t(self.t)

@@ -1,0 +1,179 @@
+chapter_quantities: {}
+code: root##
+prices:
+  elementary_prices:
+    '%':
+      code: '%'
+      long_description: Costes directos complementarios
+      price: 0.0
+      title: Costes directos complementarios
+      type: 0
+      unit: '%'
+    SINDESCO:
+      code: SINDESCO
+      long_description: ''
+      price: 1.0
+      title: sin_desc
+      type: 3
+      unit: ''
+    mo047:
+      code: mo047
+      long_description: Oficial 1ª montador de estructura metálica.
+      price: 20.74
+      title: Oficial 1ª montador de estructura metálica.
+      type: 1
+      unit: h
+    mo094:
+      code: mo094
+      long_description: Ayudante montador de estructura metálica.
+      price: 19.68
+      title: Ayudante montador de estructura metálica.
+      type: 1
+      unit: h
+    mq08sol020:
+      code: mq08sol020
+      long_description: Equipo y elementos auxiliares para soldadura eléctrica.
+      price: 3.42
+      title: Equipo y elementos auxiliares para soldadura eléctrica.
+      type: 2
+      unit: h
+    mt07aco010c:
+      code: mt07aco010c
+      long_description: Ferralla elaborada en taller industrial con acero en barras
+        corrugadas, UNE-EN 10080 B 500 S, de varios diámetros.
+      price: 1.6
+      title: Ferralla elaborada en taller industrial con acero en barras corrugadas,
+        UNE-EN 10080 B 500 S, de varios diámetros.
+      type: 3
+      unit: kg
+    mt07ala011k:
+      code: mt07ala011k
+      long_description: Pletina de acero laminado UNE-EN 10025 S275JR, para aplicaciones
+        estructurales. Trabajada y montada en taller, para colocar con uniones soldadas
+        en obra.
+      price: 2.01
+      title: Pletina de acero laminado UNE-EN 10025 S275JR, para aplicaciones estructurales.
+        Trabajada y montada en taller, para colocar con uniones soldadas en obra.
+      type: 3
+      unit: kg
+    re150101:
+      code: re150101
+      long_description: Envases de papel y cartón.
+      price: 0.0
+      title: Envases de papel y cartón.
+      type: 0
+      unit: kg
+    re150104:
+      code: re150104
+      long_description: Envases metálicos.
+      price: 0.0
+      title: Envases metálicos.
+      type: 0
+      unit: kg
+    re170201:
+      code: re170201
+      long_description: Madera.
+      price: 0.0
+      title: Madera.
+      type: 0
+      unit: kg
+    re170203:
+      code: re170203
+      long_description: Plástico.
+      price: 0.0
+      title: Plástico.
+      type: 0
+      unit: kg
+    re170604:
+      code: re170604
+      long_description: Materiales de aislamiento distintos de los especificados en
+        los códigos 17 06 01 y 17 06 03.
+      price: 0.0
+      title: Materiales de aislamiento distintos de los especificados en los códigos
+        17 06 01 y 17 06 03.
+      type: 0
+      unit: kg
+  units:
+    EAS005:
+      code: EAS005
+      components:
+        0:
+          ent_code: mt07ala011k
+          factor: 1.0
+          production_rate: 5.888
+        1:
+          ent_code: mt07aco010c
+          factor: 1.0
+          production_rate: 1.775
+        2:
+          ent_code: mq08sol020
+          factor: 1.0
+          production_rate: 0.015
+        3:
+          ent_code: mo047
+          factor: 1.0
+          production_rate: 0.297
+        4:
+          ent_code: mo094
+          factor: 1.0
+          production_rate: 0.297
+        5:
+          ent_code: '%'
+          factor: 1.0
+          production_rate: 0.02
+      long_description: 'Placa de anclaje de acero UNE-EN 10025 S275JR en perfil plano,
+        con taladro central biselado, de 250x250 mm y espesor 12 mm, con 4 pernos
+        soldados, de acero corrugado UNE-EN 10080 B 500 S de 12 mm de diámetro y 50
+        cm de longitud total.Criterio de valoración económica: El precio incluye los
+        cortes, los despuntes, la preparación de bordes, las pletinas, las piezas
+        especiales y los elementos auxiliares de montaje.Incluye: Limpieza y preparación
+        del plano de apoyo. Replanteo y marcado de los ejes. Colocación y fijación
+        provisional de la placa. Aplomado y nivelación.Criterio de medición de proyecto:
+        Número de unidades previstas, según documentación gráfica de Proyecto.Criterio
+        de medición de obra: Se medirá el número de unidades realmente ejecutadas
+        según especificaciones de Proyecto.'
+      title: Placa de anclaje de acero, con pernos soldados.
+      unit: Ud
+sub_chapters:
+  components:
+    E:
+      chapter_quantities: {}
+      code: E
+      prices:
+        elementary_prices: {}
+        units: {}
+      sub_chapters:
+        components:
+          EA:
+            chapter_quantities: {}
+            code: EA
+            prices:
+              elementary_prices: {}
+              units: {}
+            sub_chapters:
+              components:
+                EAS:
+                  chapter_quantities:
+                    0:
+                      measurements:
+                        0:
+                          commentary: ''
+                          height: 1
+                          length: 1
+                          units: 1
+                          width: 1
+                      ud: EAS005
+                  code: EAS
+                  prices:
+                    elementary_prices: {}
+                    units: {}
+                  sub_chapters:
+                    components: {}
+                    owner_code: EAS
+                  title: Pilares
+              owner_code: EA
+            title: Acero
+        owner_code: E
+      title: Estructuras
+  owner_code: root##
+title: Test title

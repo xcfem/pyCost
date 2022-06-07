@@ -291,11 +291,11 @@ class Obra(cp.Chapter):
         pendientes= self.precios.LeeBC3DescompFase2(co.GetDatosUnidades())
 
         logging.info("done." + '\n')
-        logging.info("Leyendo precios globales...")
-        self.precios.LeeBC3DescompFase1(co.GetDatosUnidades())
-        tmp= self.precios.LeeBC3DescompFase2(co.GetDatosUnidades())
-        logging.info("num. precios= " + str(self.precios.NumDescompuestos()) + '\n')
-        pendientes.update(tmp)
+        # logging.info("Leyendo precios globales...")
+        # self.precios.LeeBC3DescompFase1(co.GetDatosUnidades())
+        # tmp= self.precios.LeeBC3DescompFase2(co.GetDatosUnidades())
+        # logging.info("num. precios= " + str(self.precios.NumDescompuestos()) + '\n')
+        # pendientes.update(tmp)
         logging.info("done." + '\n')
         if(len(pendientes)>0):
             logging.info("   Leyendo descomposiciones (y 2)...")

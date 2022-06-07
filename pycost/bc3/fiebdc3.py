@@ -43,9 +43,11 @@ class regBC3(object):
     def decod_bc3(self, strtk):
         logging.error('decod_bc3 not implemented.')
         return None
+
     def decod_str_bc3(self, Str):
-        if(Str and len(Str)>0):
-            self.decod_bc3(Str)
+        if(Str):
+            if(len(Str)>0):
+                self.decod_bc3(Str)
             
     def Write(self, os):
         logging.error('Write not implemented.')
@@ -352,6 +354,9 @@ class regBC3_c(regBC3):
         if(len(tokens)>0):
             tmp= tokens.pop(0)
             if(len(tmp)>0):
+                if(tmp.find('\\')):
+                    tmp= tmp.split('\\')
+                    tmp= tmp[0]
                 self.precio= float(tmp)
         if(len(tokens)>0):
             self.fecha= tokens.pop(0)

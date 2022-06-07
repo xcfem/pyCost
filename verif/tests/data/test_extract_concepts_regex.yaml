@@ -223,8 +223,10 @@ prices:
       long_description: Hormigón HM-20 suministrado de central, vertido, en relleno
         de zanjas, pozos, soleras, cimentaciones, arquetas y formación de bancadas,
         incluso vibrado y acabado superficial.
-      title: ''
-      unit: ''
+      title: Hormigón HM-20 suministrado de central, vertido, en relleno de zanjas,
+        pozos, soleras, cimentaciones, arquetas y formación de bancadas, incluso vibrado
+        y acabado superficial.
+      unit: M3.
     AR0005b:
       code: AR0005b
       components:
@@ -263,8 +265,8 @@ prices:
         tapado y apretado, riegos de plantación con manguera según pliego de condiciones
         y hasta el funcionamiento normalizado de la instalación de riego, medida la
         unidad suministrada en obra.
-      title: ''
-      unit: ''
+      title: Verbena bonaerensis C-3L 40 cm altura
+      unit: Ud
     AR0008b:
       code: AR0008b
       components:
@@ -303,8 +305,8 @@ prices:
         tapado y apretado, riegos de plantación con manguera según pliego de condiciones
         y hasta el funcionamiento normalizado de la instalación de riego, medida la
         unidad suministrada en obra.
-      title: ''
-      unit: ''
+      title: Callistemon laevisi C-5L 80 cm altura
+      unit: Ud
     AR0009b:
       code: AR0009b
       components:
@@ -343,8 +345,8 @@ prices:
         tapado y apretado, riegos de plantación con manguera según pliego de condiciones
         y hasta el funcionamiento normalizado de la instalación de riego, medida la
         unidad suministrada en obra.
-      title: ''
-      unit: ''
+      title: Echium candicans C-5L 50 cm altura
+      unit: Ud
     AR0011bb:
       code: AR0011bb
       components:
@@ -383,8 +385,8 @@ prices:
         tapado y apretado, riegos de plantación con manguera según pliego de condiciones
         y hasta el funcionamiento normalizado de la instalación de riego, medida la
         unidad suministrada en obra.
-      title: ''
-      unit: ''
+      title: Pistacea lentiscus C-5L 60 cm altura
+      unit: Ud
     AR0012bb:
       code: AR0012bb
       components:
@@ -422,8 +424,8 @@ prices:
         eléctrica menor de 0,8 dS/m según NTJ 05T,incluso tapado y apretado, riegos
         de plantación con manguera según pliego de condiciones y hasta el funcionamiento
         normalizado de la instalación de riego, medida la unidad suministrada en obra.
-      title: ''
-      unit: ''
+      title: Gaillardia grandiflora C-3L
+      unit: Ud
     AR0013bbb:
       code: AR0013bbb
       components:
@@ -461,8 +463,8 @@ prices:
         menor de 0,8 dS/m según NTJ 05T,incluso tapado y apretado, riegos de plantación
         con manguera según pliego de condiciones y hasta el funcionamiento normalizado
         de la instalación de riego, medida la unidad suministrada en obra.
-      title: ''
-      unit: ''
+      title: Rosmarinus postratus C-1L
+      unit: Ud
     AR0014bb:
       code: AR0014bb
       components:
@@ -500,8 +502,8 @@ prices:
         menor de 0,8 dS/m según NTJ 05T,incluso tapado y apretado, riegos de plantación
         con manguera según pliego de condiciones y hasta el funcionamiento normalizado
         de la instalación de riego, medida la unidad suministrada en obra.
-      title: ''
-      unit: ''
+      title: Mirtus comunis C-3L 60 cm altura
+      unit: Ud
     DBANCOIND16:
       code: DBANCOIND16
       components:
@@ -536,8 +538,8 @@ prices:
         Patas de fundición de hierro con imprimación antioxidante y pintadas en polvo
         color negro. Los perfiles de unión de los listones con las patas son de acero
         con imprimación antioxidante y pintura en polvo color negro.
-      title: ''
-      unit: ''
+      title: Suministro y colocación de banco de 1.80m de longitud con respaldo
+      unit: Ud
     DBANCOIND18:
       code: DBANCOIND18
       components:
@@ -572,8 +574,8 @@ prices:
         Patas de fundición de hierro con imprimación antioxidante y pintadas en polvo
         color negro. Los perfiles de unión de los listones con las patas son de acero
         con imprimación antioxidante y pintura en polvo color negro.
-      title: ''
-      unit: ''
+      title: Suministro y colocación de banco de 3.00 m de longitud con respaldo
+      unit: Ud
     DBANCOIND19:
       code: DBANCOIND19
       components:
@@ -608,8 +610,8 @@ prices:
         fundición de hierro con imprimación antioxidante y pintadas en polvo color
         negro. Los perfiles de unión de los listones con las patas son de acero con
         imprimación antioxidante y pintura en polvo color negro.
-      title: ''
-      unit: ''
+      title: Suministro y colocación de banco de 3.00 m de longitud sin respaldo
+      unit: Ud
     DBANCOIND201:
       code: DBANCOIND201
       components:
@@ -646,8 +648,8 @@ prices:
         de 1,80 m y remates de 45 x 200 mm de sección, de madera tropical, con certificado
         FSC, protegida con aceite de dos componentes, incluso anclaje formado por
         dos pernos de acero por pata tratados con protección antioxidante.
-      title: ''
-      unit: ''
+      title: Suministro y colocación de banco modular de 3.00 sobre muro.
+      unit: Ud
     DEXZANJAT-1:
       code: DEXZANJAT-1
       components:
@@ -666,8 +668,10 @@ prices:
       long_description: Excavación en zanja, pozo o zapatas de muros, a máquina, en
         todo tipo de terreno, incluso perfilado de la sección y p.p. de excavación
         a mano en terreno próximo a servicios.
-      title: ''
-      unit: ''
+      title: Excavación en zanja, pozo o zapatas de muros, a máquina, en todo tipo
+        de terreno, incluso perfilado de la sección y p.p. de excavación a mano en
+        terreno próximo a servicios.
+      unit: M3
 sub_chapters:
   components: {}
   owner_code: extracted

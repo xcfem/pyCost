@@ -2701,8 +2701,10 @@ prices:
         corte, ferrallado, colocación y p.p. de atado con alambre recocido, despuntes,
         incluso separadores de plástico rígidos, elaborado en taller y colocado en
         obra, diámetros varios.
-      title: ''
-      unit: ''
+      title: Acero en barras corrugadas, UNE-EN 10080 B 500 SD, incluso corte, ferrallado,
+        colocación y p.p. de atado con alambre recocido, despuntes, incluso separadores
+        de plástico rígidos, elaborado en taller y colocado en obra, diámetros varios.
+      unit: Kg.
     AHM20:
       code: AHM20
       components:
@@ -2721,8 +2723,10 @@ prices:
       long_description: Hormigón HM-20 suministrado de central, vertido, en relleno
         de zanjas, pozos, soleras, cimentaciones, arquetas y formación de bancadas,
         incluso vibrado y acabado superficial.
-      title: ''
-      unit: ''
+      title: Hormigón HM-20 suministrado de central, vertido, en relleno de zanjas,
+        pozos, soleras, cimentaciones, arquetas y formación de bancadas, incluso vibrado
+        y acabado superficial.
+      unit: M3.
     AMORT0101:
       code: AMORT0101
       components:
@@ -2735,8 +2739,8 @@ prices:
           factor: 1.0
           production_rate: 1.0
       long_description: Mortero c.p. M-40:a (1:6), suministrado de central.
-      title: ''
-      unit: ''
+      title: Mortero c.p. M-40:a (1:6), suministrado de central.
+      unit: M3.
     AMORT5:
       code: AMORT5
       components:
@@ -2749,8 +2753,8 @@ prices:
           factor: 1.0
           production_rate: 1.0
       long_description: Mortero de cemento M5,  suministrado de central
-      title: ''
-      unit: ''
+      title: Mortero de cemento M5, suministrado de central
+      unit: M3
     AR0005b:
       code: AR0005b
       components:
@@ -2789,8 +2793,8 @@ prices:
         tapado y apretado, riegos de plantación con manguera según pliego de condiciones
         y hasta el funcionamiento normalizado de la instalación de riego, medida la
         unidad suministrada en obra.
-      title: ''
-      unit: ''
+      title: Verbena bonaerensis C-3L 40 cm altura
+      unit: Ud
     AR0008b:
       code: AR0008b
       components:
@@ -2829,8 +2833,8 @@ prices:
         tapado y apretado, riegos de plantación con manguera según pliego de condiciones
         y hasta el funcionamiento normalizado de la instalación de riego, medida la
         unidad suministrada en obra.
-      title: ''
-      unit: ''
+      title: Callistemon laevisi C-5L 80 cm altura
+      unit: Ud
     AR0009b:
       code: AR0009b
       components:
@@ -2869,8 +2873,8 @@ prices:
         tapado y apretado, riegos de plantación con manguera según pliego de condiciones
         y hasta el funcionamiento normalizado de la instalación de riego, medida la
         unidad suministrada en obra.
-      title: ''
-      unit: ''
+      title: Echium candicans C-5L 50 cm altura
+      unit: Ud
     AR0011bb:
       code: AR0011bb
       components:
@@ -2909,8 +2913,8 @@ prices:
         tapado y apretado, riegos de plantación con manguera según pliego de condiciones
         y hasta el funcionamiento normalizado de la instalación de riego, medida la
         unidad suministrada en obra.
-      title: ''
-      unit: ''
+      title: Pistacea lentiscus C-5L 60 cm altura
+      unit: Ud
     AR0012bb:
       code: AR0012bb
       components:
@@ -2948,8 +2952,8 @@ prices:
         eléctrica menor de 0,8 dS/m según NTJ 05T,incluso tapado y apretado, riegos
         de plantación con manguera según pliego de condiciones y hasta el funcionamiento
         normalizado de la instalación de riego, medida la unidad suministrada en obra.
-      title: ''
-      unit: ''
+      title: Gaillardia grandiflora C-3L
+      unit: Ud
     AR0013bbb:
       code: AR0013bbb
       components:
@@ -2987,8 +2991,8 @@ prices:
         menor de 0,8 dS/m según NTJ 05T,incluso tapado y apretado, riegos de plantación
         con manguera según pliego de condiciones y hasta el funcionamiento normalizado
         de la instalación de riego, medida la unidad suministrada en obra.
-      title: ''
-      unit: ''
+      title: Rosmarinus postratus C-1L
+      unit: Ud
     AR0014bb:
       code: AR0014bb
       components:
@@ -3026,8 +3030,8 @@ prices:
         menor de 0,8 dS/m según NTJ 05T,incluso tapado y apretado, riegos de plantación
         con manguera según pliego de condiciones y hasta el funcionamiento normalizado
         de la instalación de riego, medida la unidad suministrada en obra.
-      title: ''
-      unit: ''
+      title: Mirtus comunis C-3L 60 cm altura
+      unit: Ud
     AU90100001:
       code: AU90100001
       components:
@@ -3105,8 +3109,10 @@ prices:
       long_description: Suministro y colocación de berenjeno decorativo en alzados
         laterales de muros de hormigon en masa, incluso retirada y repaso de acabado,
         para obtención de superfices lisas.
-      title: ''
-      unit: ''
+      title: Suministro y colocación de berenjeno decorativo en alzados laterales
+        de muros de hormigon en masa, incluso retirada y repaso de acabado, para obtención
+        de superfices lisas.
+      unit: ml
     CANALACO26:
       code: CANALACO26
       components:
@@ -3151,8 +3157,11 @@ prices:
         de entronque con la tubería de DN400 y pequeño material para dejar la unidad
         totalmente terminada. Con dado de hormigón HM-20/P/20/I alrededor del canal
         de espesor mínimo de 15 cm y altura de 23 cm.
-      title: ''
-      unit: ''
+      title: Suminsitro e instalación de canal  de drenaje lineal para instalación
+        enterradas de hormigón polímero, de clase de carga C250, con reja de fundición
+        con sistema de fijación rápida Drainlock sin tornillos montado en bastidor
+        empotrado al canal, tipo ACO DR
+      unit: Ml
     CANALACO3.1:
       code: CANALACO3.1
       components:
@@ -3197,8 +3206,11 @@ prices:
         de entronque con la tubería de DN400 y pequeño material para dejar la unidad
         totalmente terminada. Con dado de hormigón HM-20/P/20/I alrededor del canal
         de espesor mínimo de 15 cm y altura de 23 cm.
-      title: ''
-      unit: ''
+      title: Suminsitro e instalación de canal  de drenaje lineal para instalación
+        enterradas de hormigón polímero, de clase de carga C250, con reja de fundición
+        con sistema de fijación rápida Drainlock sin tornillos montado en bastidor
+        empotrado al canal, tipo ACO DRAIN
+      unit: Ml
     CANALACO36:
       code: CANALACO36
       components:
@@ -3243,8 +3255,20 @@ prices:
         de entronque con la tubería de DN400 y pequeño material para dejar la unidad
         totalmente terminada. Con dado de hormigón HM-20/P/20/I alrededor del canal
         de espesor mínimo de 15 cm y altura de 23 cm.
-      title: ''
-      unit: ''
+      title: Suminsitro e instalación de canal  de drenaje lineal para instalación
+        enterradas de hormigón polímero, de clase de carga C250, con reja de fundición
+        con sistema de fijación rápida Drainlock sin tornillos montado en bastidor
+        empotrado al canal, tipo ACO DRAIN MD200 o equivalente, con sección en "V"
+        con efecto autolimpieza, con espacio para junta de sellado. Con certificado
+        de homologación CE y cumplimineto íntegro de toda la norma EN1433. Canal de
+        altura total 31.5 cm, ancho total de 23,50 cm y ancho interior 200 mm, y longitud
+        total de 100 cm. Totalmente instalado, y rematado con el pavimento colindante,
+        incluyendo p.p. de excavación, encofrado, tapas y adaptadores de salida con
+        junta labiolaberíntica, carrete DN 200, codo de 45º/90º, tubo de PVC DN 160,  pieza
+        de entronque con la tubería de DN400 y pequeño material para dejar la unidad
+        totalmente terminada. Con dado de hormigón HM-20/P/20/I alrededor del canal
+        de espesor mínimo de 15 cm y altura de 23 cm.
+      unit: Ml
     CELAUS:
       code: CELAUS
       components:
@@ -3291,8 +3315,8 @@ prices:
         sobre terreno asentado, unido mediante doble cinta de caucho a una distancia
         mínima de 15 cm, así como cuidados hasta la recepción, medida la unidad ejecutada
         en obra.
-      title: ''
-      unit: ''
+      title: Celtis australis 20-25 cm CP
+      unit: Ud
     CERSIL:
       code: CERSIL
       components:
@@ -3331,8 +3355,8 @@ prices:
         tapado y apretado, riegos de plantación con manguera según pliego de condiciones
         y hasta el funcionamiento normalizado de la instalación de riego, así como
         cuidados hasta la recepción, medida la unidad ejecutada en obra.
-      title: ''
-      unit: ''
+      title: Ceratonia siliqua 30/40 cm CT70
+      unit: Ud
     CIMENTA01:
       code: CIMENTA01
       components:
@@ -3366,8 +3390,8 @@ prices:
           production_rate: 0.03
       long_description: Cimentación de farola de 50*50*70, según planos de detalle,
         incluso relleno de la sobreexcavación con hormigón.
-      title: ''
-      unit: ''
+      title: Cimentación de farola de 50*50*70, según planos de detalle.
+      unit: Ud.
     CIMENTA02:
       code: CIMENTA02
       components:
@@ -3401,8 +3425,8 @@ prices:
           production_rate: 0.03
       long_description: Cimentación de farola de 80*80*80, según planos de detalle,
         incluso relleno de la sobreexcavación con hormigón.
-      title: ''
-      unit: ''
+      title: Cimentación de farola de 80*80*80, según planos de detalle.
+      unit: Ud.
     COLUMN4:
       code: COLUMN4
       components:
@@ -3458,8 +3482,18 @@ prices:
         tensión nominal 230 V, clase eléctrica II,  pintada del mismo color que el
         soporte, incluso placa  y pernos de anclaje y p.p. de pequeño material, totalmente
         instalado.
-      title: ''
-      unit: ''
+      title: Suministro e instalación de Punto de luz compuesto por columna cilíndrica
+        modelo CASTILLA de Socelec o equivalente, de 4 m de altura., de acero S235JR,
+        según UNE 10025, brazo con perfil normalizado, fuste y brazo galvanizados
+        por inmersión en caliente, imprimados y pintados con pintura en polvo de resina
+        de polieseter y secado en horno, color GRIS 600 SAND BLASTED; con luninaria
+        modelo CITEA LED MIDI NG, de Socelec o equivalente, equipada con 16 leds blanco
+        neutro de alta potencia, 26 W de consumo total, 100.000 horas de vida, sistema
+        de protección contra sobretensiones hasta 10 kV, luneta placa de acero galvanizado
+        y pintado, protector de vidrio plano IK08, bloque óptico y auxiliares P 65,
+        tensión nominal 230 V, clase eléctrica II, pintada del mismo color que el
+        soporte, incluso placa de anclaje y p.p. de pequeño material, totalmente instalado.
+      unit: Ud.
     COLUMN8:
       code: COLUMN8
       components:
@@ -3515,8 +3549,18 @@ prices:
         tensión nominal 230 V, clase eléctrica II,  pintada del mismo color que el
         soporte, incluso placa y pernos de anclaje de anclaje y p.p. de pequeño material,
         totalmente instalado.
-      title: ''
-      unit: ''
+      title: Suministro e instalación de luz compuesto por columna cilíndrica modelo
+        CASTILLA de Socelec o equivalente, de 8 m de altura, de acero S235JR, según
+        UNE 10025, brazo con perfil normalizado, fuste y brazo galvanizados por inmersión
+        en caliente, imprimados y pintados con pintura en polvo de resina de polieseter
+        y secado en horno, color GRIS 600 SAND BLASTED; con luninaria modelo CITEA
+        LED MIDI NG, de Socelec o equivalente, equipada con 64 leds blanco neutro
+        de alta potencia, 99 W de consumo total, 100.000 horas de vida, sistema de
+        protección contra sobretensiones hasta 10 kV, luneta placa de acero galvanizado
+        y pintado, protector de vidrio plano IK08, bloque óptico y auxiliares P 65,
+        tensión nominal 230 V, clase eléctrica II,  pintada del mismo color que el
+        soporte, incluso placa de anclaje y p.p. de pequeño material, totalmente instalado.
+      unit: Ud.
     COLUMN9:
       code: COLUMN9
       components:
@@ -3569,8 +3613,17 @@ prices:
         total, 100.000 horas de vida, bloque óptico y auxiliares IP 66, con mecanismo
         de regulación de la inclinación, incluso caja de conexiones, placa y pernos
         de anclaje y p.p. de pequeño material, totalmente instalado.
-      title: ''
-      unit: ''
+      title: Suministro e instalación de punto de luz PRON de Socelec o equivalente,
+        compuesto de columna troncocónica curvada de 9 metros de altura, con tres
+        brazos orientables, de acero galvanizado por inmersión en caliente, imprimado
+        y pintado con proceso de pintura Hightech, color  GRIS 600 SAND BLASTED, con
+        3 Proyectores herméticos, tipo NEOS 2 LED, de Socelec o equivalente, cuerpo
+        y marco de aluminio inyectado pintado, protector de vidrio IK08, pintados
+        del mismo color, 75 W de consumo total, 100.000 horas de vida, bloque óptico
+        y auxiliares IP 66, con mecanismo de regulación de la inclinación, incluso
+        caja de conexiones, placa de anclaje y p.p. de pequeño material, totalmente
+        instalado.
+      unit: Ud.
     CRL0310:
       code: CRL0310
       components:
@@ -3592,8 +3645,9 @@ prices:
           production_rate: 0.03
       long_description: Hormigón de limpieza HL-15/B/20 fabricado en central y vertido
         con cubilote, de 10 cm de espesor.
-      title: ''
-      unit: ''
+      title: Hormigón de limpieza HL-15/B/20 fabricado en central y vertido con cubilote,
+        de 10 cm de espesor.
+      unit: M3
     D5.2:
       code: D5.2
       components:
@@ -3630,8 +3684,16 @@ prices:
         20 cm de longitud 4 cm de altura y 4 mm de espesor, para colocación del conjunto
         mediante hinca sobre la capa base de zahorra de los pavimentos. (Peso total
         conjunto de 5 m de longitud: 25,41 kg).'
-      title: ''
-      unit: ''
+      title: 'Suministro y colocación de pletina de acero de 100 mm de anchura y 10
+        mm de espesor, en tramos rectos de longitud variable, según planos, con varillas
+        soldadas de acero en barras corrugadas de DN 10 mm, de 30 cm de longitud,
+        soldadas a la pletina cada 0,70/0,80 metro de longitud y refuerzos en los
+        extremos, galvanizado el conjunto en baño caliente hasta alcanzar una capa
+        de zinc de 450 g/m2, equivalente a 65 µm, incluso pletina de unión de 20 cm
+        de longitud 4 cm de altura y 4 mm de espesor, para colocación del conjunto
+        mediante hinca sobre la capa base de zahorra de los pavimentos. (Peso total
+        conjunto de 5 m de longitud: 25,41 kg).'
+      unit: Ml
     DALCA0201:
       code: DALCA0201
       components:
@@ -3650,8 +3712,8 @@ prices:
       long_description: Piqueta toma de tierra formada por barra cilíndrica de acero
         de 2 mts. de largo recubierta por capa uniforme de cobre, colocada con cable
         y bornas de conexión.
-      title: ''
-      unit: ''
+      title: Piqueta toma de tierra formada por barra cilíndrica de 2m.
+      unit: Ud.
     DALCB0110:
       code: DALCB0110
       components:
@@ -3669,8 +3731,9 @@ prices:
           production_rate: 0.03
       long_description: Cable unipolar tierra verde-amarillo, de tensor asignada 450/750V.
         de sección 16 mm2. colocado bajo tubo en instalación subterránea.
-      title: ''
-      unit: ''
+      title: Cable unipolar tierra verde-amarillo, de tensor asignada 450/750V. de
+        sección 16 mm2, segun hoja de cálculo CDT.
+      unit: Ml.
     DALCB0225:
       code: DALCB0225
       components:
@@ -3688,8 +3751,8 @@ prices:
           production_rate: 0.03
       long_description: Cable RV-0.6/1KV. de 2 x 2.5 mm2 colocado bajo tubo en instalación
         subterránea para conexión de las luminarias.
-      title: ''
-      unit: ''
+      title: Cable RV-0.6/1KV. de 2 x 2.5 mm2 colocado bajo tubo
+      unit: Ml.
     DALCB0406:
       code: DALCB0406
       components:
@@ -3707,8 +3770,9 @@ prices:
           production_rate: 0.03
       long_description: Cable RV-0,6/1KV de 4 x 6 mm2. colocado bajo tubo en instalación
         subterránea.
-      title: ''
-      unit: ''
+      title: Cable RV-0,6/1KV de 4 x 6 mm2. colocado bajo tubo en instalación subterránea,
+        medición segun hoja de cálculo CDT.
+      unit: Ml.
     DALPEDR:
       code: DALPEDR
       components:
@@ -3759,8 +3823,10 @@ prices:
       long_description: Pavimento formado por arena de Albero de 10 cm de espesor,
         extendida, rasanteada y compactada, previa ejecución de muestra para la aprobación
         por la D.F.
-      title: ''
-      unit: ''
+      title: Pavimento formado por arena de Albero de 10 cm de espesor, extendida,
+        rasanteada y compactada, previa ejecución de muestra para la aprobación por
+        la D.F.
+      unit: M2.
     DARENA6:
       code: DARENA6
       components:
@@ -3787,8 +3853,10 @@ prices:
       long_description: Suministro y extendido de arena humeda ( 10% agua en peso
         ), de 6 mm de tamaño máximo, elaborada mediante machaqueo de roca caliza,
         en asiento y proteccion de tuberias.
-      title: ''
-      unit: ''
+      title: Suministro y extendido de arena humeda ( 10% agua en peso ), de 6 mm
+        de tamaño máximo, elaborada mediante machaqueo de roca caliza, en asiento
+        y proteccion de tuberias.
+      unit: M3.
     DBANCOIND16:
       code: DBANCOIND16
       components:
@@ -3823,8 +3891,8 @@ prices:
         Patas de fundición de hierro con imprimación antioxidante y pintadas en polvo
         color negro. Los perfiles de unión de los listones con las patas son de acero
         con imprimación antioxidante y pintura en polvo color negro.
-      title: ''
-      unit: ''
+      title: Suministro y colocación de banco de 1.80m de longitud con respaldo
+      unit: Ud
     DBANCOIND18:
       code: DBANCOIND18
       components:
@@ -3859,8 +3927,8 @@ prices:
         Patas de fundición de hierro con imprimación antioxidante y pintadas en polvo
         color negro. Los perfiles de unión de los listones con las patas son de acero
         con imprimación antioxidante y pintura en polvo color negro.
-      title: ''
-      unit: ''
+      title: Suministro y colocación de banco de 3.00 m de longitud con respaldo
+      unit: Ud
     DBANCOIND19:
       code: DBANCOIND19
       components:
@@ -3895,8 +3963,8 @@ prices:
         fundición de hierro con imprimación antioxidante y pintadas en polvo color
         negro. Los perfiles de unión de los listones con las patas son de acero con
         imprimación antioxidante y pintura en polvo color negro.
-      title: ''
-      unit: ''
+      title: Suministro y colocación de banco de 3.00 m de longitud sin respaldo
+      unit: Ud
     DBANCOIND201:
       code: DBANCOIND201
       components:
@@ -3933,8 +4001,8 @@ prices:
         de 1,80 m y remates de 45 x 200 mm de sección, de madera tropical, con certificado
         FSC, protegida con aceite de dos componentes, incluso anclaje formado por
         dos pernos de acero por pata tratados con protección antioxidante.
-      title: ''
-      unit: ''
+      title: Suministro y colocación de banco modular de 3.00 sobre muro.
+      unit: Ud
     DBOMACH:
       code: DBOMACH
       components:
@@ -3957,8 +4025,10 @@ prices:
       long_description: Suministro e instalación de bomba de achique de acero inoxidable,
         de 0,5 kW de potencia, conexión de descarga 2", monofásica a 230 V y 2690
         rpm, incluso boya y 10 m de cable H07RN, modelo JUMBO 5W de ABS o equivalente.
-      title: ''
-      unit: ''
+      title: Suministro e instalación de bomba de achique de acero inoxidable, de
+        0,5 kW de potencia, conexión de descarga 2", monofásica a 230 V y 2690 rpm,
+        incluso boya y 10 m de cable H07RN, modelo JUMBO 5W de ABS o equivalente.
+      unit: Ud
     DBOMDOS:
       code: DBOMDOS
       components:
@@ -3982,8 +4052,11 @@ prices:
         autoaspirante, modelo DMS-A, de Grundfoss, o equivalente, de 2,5 l/h de capacidad
         y 11 bar de presión máxima, tensión nominal 230 V, potencia máxima 20 W, grado
         de protección IP 65, clase de aislamiento F, totalmente instalada y regulada.
-      title: ''
-      unit: ''
+      title: Suminsitro e instalación de  Bomba dosificadora de membrana autoaspirante,
+        modelo DMS-A, de Grundfoss, o equivalente, de 2,5 l/h de capacidad y 11 bar
+        de presión máxima, tensión nominal 230 V, potencia máxima 20 W, grado de protección
+        IP 65, clase de aislamiento F, totalmente instalada y regulada.
+      unit: Ud
     DBONMACH11:
       code: DBONMACH11
       components:
@@ -4008,8 +4081,8 @@ prices:
         4 velocidades programables por día, pantalla LCD, corrección del factor de
         potencia, con prefiltor incorporado, fabricada con termoplásticos de última
         generación.
-      title: ''
-      unit: ''
+      title: Suministro e instalacion Bomba Viron 320 de Astra o equivalente.
+      unit: Ud.
     DCANA1203:
       code: DCANA1203
       components:
@@ -4044,8 +4117,10 @@ prices:
       long_description: Canalización 3 Ø 90 mm, en prisma de hormigón HM-20 en aceras,
         de Polietileno corrugado doble pared, Clase N según norma EN-50086, para alojamiento
         de cables, incluso guía de alambre galvanizado y cinta de atención.
-      title: ''
-      unit: ''
+      title: Canalización 3 Ø 90 mm, en prisma de hormigón HM-20 en aceras, de Polietileno
+        corrugado doble pared, Clase N según norma EN-50086, para alojamiento de cables,
+        incluso guía de alambre galvanizado y cinta de atención.
+      unit: Ml.
     DCANA1204:
       code: DCANA1204
       components:
@@ -4080,8 +4155,10 @@ prices:
       long_description: Canalización 1 Ø 90 mm, en prisma de hormigón HM-20 en aceras,
         de Polietileno corrugado doble pared, Clase N según norma EN-50086, para alojamiento
         de cables, incluso guía de alambre galvanizado y cinta de atención.
-      title: ''
-      unit: ''
+      title: Canalización 1 Ø 90 mm, en prisma de hormigón HM-20 en aceras, de Polietileno
+        corrugado doble pared, Clase N según norma EN-50086, para alojamiento de cables,
+        incluso guía de alambre galvanizado y cinta de atención.
+      unit: Ml.
     DCANA1208:
       code: DCANA1208
       components:
@@ -4116,8 +4193,10 @@ prices:
       long_description: Canalización 2 Ø 90 mm, en prisma de hormigón HM-20 en aceras,
         de Polietileno corrugado doble pared, Clase N según norma EN-50086, para alojamiento
         de cables, incluso guía de alambre galvanizado y cinta de atención.
-      title: ''
-      unit: ''
+      title: Canalización 2 Ø 90 mm, en prisma de hormigón HM-20 en aceras, de Polietileno
+        corrugado doble pared, Clase N según norma EN-50086, para alojamiento de cables,
+        incluso guía de alambre galvanizado y cinta de atención.
+      unit: Ml.
     DCANA3301:
       code: DCANA3301
       components:
@@ -4151,8 +4230,9 @@ prices:
           production_rate: 0.03
       long_description: Arqueta de 33x33x50 cm. en aceras ejecutada con HM-20, según
         planos de detalle.
-      title: ''
-      unit: ''
+      title: Arqueta de 33x33x50 cm. en aceras ejecutada con HM-20, según planos de
+        detalle.
+      unit: Ud.
     DCANA4001:
       code: DCANA4001
       components:
@@ -4198,8 +4278,8 @@ prices:
           production_rate: 0.03
       long_description: Arqueta de 40x40x60 cm. ejecutada con HM-20, según planos
         de detalle.
-      title: ''
-      unit: ''
+      title: Arqueta de 40x40x60 cm. ejecutada con HM-20, según planos de detalle.
+      unit: Ud.
     DCANA4020:
       code: DCANA4020
       components:
@@ -4245,8 +4325,8 @@ prices:
           production_rate: 0.03
       long_description: Arqueta de 60x60x60 cm. ejecutada con HM-20, según planos
         de detalle.
-      title: ''
-      unit: ''
+      title: Arqueta de 60x60x60 cm. ejecutada con HM-20, según planos de detalle.
+      unit: Ud.
     DCMAND:
       code: DCMAND
       components:
@@ -4268,8 +4348,9 @@ prices:
           production_rate: 0.03
       long_description: Suministro y colocación de cable eléctrico de mando, de 4
         x 1,5 mm2 de sección, tipo RV 1000 V, para conexión de unidades de campo.
-      title: ''
-      unit: ''
+      title: Suministro y colocación de cable eléctrico de mando, de 4 x 1,5 mm2 de
+        sección, tipo RV 1000 V, para conexión de unidades de campo.
+      unit: M
     DDEPHIPO:
       code: DDEPHIPO
       components:
@@ -4292,8 +4373,9 @@ prices:
       long_description: Suministro y colocación de depósito 60 litros, para hipoclorito
         sódico, de polietileno, de doble pared, homologado, con toma rescada para
         tuberia de PVC DN 12.5 mm.
-      title: ''
-      unit: ''
+      title: Suministro y colocación de depósito 60 litros, para hipoclorito sódico,
+        de polietileno, de doble pared, homologado.
+      unit: Ud
     DEMpav04a:
       code: DEMpav04a
       components:
@@ -4320,8 +4402,10 @@ prices:
       long_description: Demolición de pavimentación existente( aceras, calzadas, y
         bordillos )incluso precorte de límites y carga y transporte a vertedero del
         material porcedente de la demolición, incluido canon de vertido.
-      title: ''
-      unit: ''
+      title: Demolición de pavimentación existente( aceras, calzadas, y bordillos
+        )incluso precorte de límites y carga y transporte a vertedero del material
+        porcedente de la demolición, incluido canon de vertido.
+      unit: M2
     DENCVIGAS:
       code: DENCVIGAS
       components:
@@ -4343,8 +4427,9 @@ prices:
           production_rate: 0.02
       long_description: Encofrado y desencofrado en vigas y losas, incluyendo fondo,
         laterales, sopandas  y apuntalamientos
-      title: ''
-      unit: ''
+      title: Encofrado y desencofrado de vigas y losas, incluyendo fondo, laterales,
+        sopandas  y apuntalamientos
+      unit: M2
     DESATLA1:
       code: DESATLA1
       components:
@@ -4378,8 +4463,13 @@ prices:
         \ grado de resistencia a los impactos IK 10, clase eléctrica I, equipado con\
         \ LED de alta potencia, 8 W de consumo total, incluso caja de conexiones y\
         \ p.p. de pequeño material, totalmente instalado,"
-      title: ''
-      unit: ''
+      title: "Suministro e instalación de punto de luz BLOCO de Socelec, versión \x93\
+        Directo opal cuadrado\x94 o equivalente, compuesto por cuerpo de aleación\
+        \ de aluminnio inyectado, protector de vidrio, color negro AKZO 200 enarenado,\
+        \ bloque óptico IP 66, grado de resistencia a los impactos IK 10, clase eléctrica\
+        \ I, equipado con LED de alta potencia, 8 W de consumo total, incluso caja\
+        \ de conexiones y p.p. de pequeño material, totalmente instalado,"
+      unit: Ud
     DEXZANJAT:
       code: DEXZANJAT
       components:
@@ -4398,8 +4488,10 @@ prices:
       long_description: Excavación en zanja, pozo o zapatas de muros, a máquina, en
         todo tipo de terreno, incluso perfilado de la sección y p.p. de excavación
         a mano en terreno próximo a servicios.
-      title: ''
-      unit: ''
+      title: Excavación en zanja, pozo o zapatas de muros, a máquina, en todo tipo
+        de terreno, incluso perfilado de la sección y p.p. de excavación a mano en
+        terreno próximo a servicios.
+      unit: M3
     DEXZANJAT-1:
       code: DEXZANJAT-1
       components:
@@ -4418,8 +4510,10 @@ prices:
       long_description: Excavación en zanja, pozo o zapatas de muros, a máquina, en
         todo tipo de terreno, incluso perfilado de la sección y p.p. de excavación
         a mano en terreno próximo a servicios.
-      title: ''
-      unit: ''
+      title: Excavación en zanja, pozo o zapatas de muros, a máquina, en todo tipo
+        de terreno, incluso perfilado de la sección y p.p. de excavación a mano en
+        terreno próximo a servicios.
+      unit: M3
     DGEOTEX125:
       code: DGEOTEX125
       components:
@@ -4447,8 +4541,15 @@ prices:
         EN ISO 13438,  resistencia química según EN 14030, resistencia microbiológica
         según EN 12225 y resistencia al punzonamiento estático CBR según EN 12236
         de 1275 N mínimo, solapados un mínimo de 100 mm. Incluye  mermas por solape.
-      title: ''
-      unit: ''
+      title: Suministro y colocación, en protección de apoyo de muros, de flotante
+        de geotextil Typar SF-37 o equivalente, 100% polipropileno termosoldado, de
+        125 gr/m2 y precomprimido para evitar la colmatación debido a su delgada estructura
+        en la que no quedan retenidos finos formando una red puente de partículas
+        más grandes en la zona adyacente, resistencia la oxidación según EN ISO 13438,  resistencia
+        química según EN 14030, resistencia microbiológica según EN 12225 y resistencia
+        al punzonamiento estático CBR según EN 12236 de 1275 N mínimo, solapados un
+        mínimo de 100 mm. Incluye  mermas por solape.
+      unit: M2
     DGEOTEX3:
       code: DGEOTEX3
       components:
@@ -4478,8 +4579,17 @@ prices:
         norma EN ISO 13433, suministrado en rollos de 30 m de largo, incluso solape
         y adherencia con cintas adhesivas de doble cara y procedimineto según pliego
         del fabricante y del proyecto. Incluye  mermas por solape.
-      title: ''
-      unit: ''
+      title: Suministro y colocación flotante de geotextil antiraices, tipo RootBarrier
+        Pro o equivalente,  con acabado liso e impenetrable a las mismas, impermeable
+        al agua, con una estructura de polipropileno 100% no tejida, de 0.8 mm de
+        espesor, 325 gr/m2 de peso, resistencia a tracción según EN ISO 10319 de 22
+        KN/m, alargamiento a la máxima tensión del 50 % según EN ISO 10319, resistencia
+        a la rotura de 60 kg según ASTM D4533-91, resistencia a las perforaciones
+        de 3500 N según norma EN ISO 12236 50mm y perforación dinámica de 12 mm según
+        norma EN ISO 13433, suministrado en rollos de 30 m de largo, incluso solape
+        y adherencia con cintas adhesivas de doble cara y procedimineto según pliego
+        del fabricante y del proyecto. Incluye  mermas por solape.
+      unit: M2
     DGEOTEX300:
       code: DGEOTEX300
       components:
@@ -4506,8 +4616,14 @@ prices:
         a tracción 26.5 KN/m y resistencia al punzonamiento estático CBR de 3.200
         N mínimo, y demás características según Pliego de Condiciones. Solape entre
         piezas de 10 cm, incluso mermas por despieces y solapes.
-      title: ''
-      unit: ''
+      title: Suministro y colocación flotante sobre la base de zahorras compactadas,
+        de geotextil separador 100% fibras vírgenes de polipropileno de alta tenacidad
+        con tratamiento anti-UV, unidas mecánicamente por un  proceso de ahujado con
+        posterior termofusión, de 300 gr/m2, espesor 2,6-3.2 mm,resistentencia a tracción
+        26.5 KN/m y resistencia al punzonamiento estático CBR de 3.200 N mínimo, y
+        demás características según Pliego de Condiciones. Solape entre piezas de
+        10 cm, incluso mermas por despieces y solapes.
+      unit: M2
     DHA30:
       code: DHA30
       components:
@@ -4530,8 +4646,10 @@ prices:
       long_description: Hormigón HA-30/B/20/IIIa+Qb, en formación de zapatas, soleras,
         alzados de muro, losas y vigas y cámaras, fabricado en central con cemento
         SR puesto en obra, vertido con cubilote y grua, incluso vibrado y curado.
-      title: ''
-      unit: ''
+      title: Hormigón HA-30/B/20/IIIa+Qb, en formación de zapatas, soleras, alzados
+        de muro, losas, vigas y cámaras, fabricado en central con cemento SR puesto
+        en obra, vertido con cubilote y grua, incluso vibrado y curado.
+      unit: M3
     DLAMINA:
       code: DLAMINA
       components:
@@ -4564,8 +4682,20 @@ prices:
         borde, según plano de detalle y pliego del proyecto. Incluye uniones, mermas,
         cortes, remates, refuerzos y sellados para la instalación de las boquillas
         de aspiración de fondo. Medida según superficie realmente impermeabilizada.
-      title: ''
-      unit: ''
+      title: Suministro y colocación flotante de lámina impermeable de caucho EPDM
+        Geomembrana de FIRESTONE o equivalente de 1,1 mm. de espesor, con densidad
+        1.288 gr/m2, suministrada en módulos prefabricados de 30,5 m., 45,75 m y 61
+        m. de longitud por 12,20 m. de ancho, según plano de despiece, con elongación
+        del 300%, resistencia a la tracción 9 N/mm2 según ISO R 527, resistencia al
+        punzonamiento estático 0,7 kN según EN ISO12236, resistencia a la penetración
+        de raíces según CEN/TS 14416, marcado CE, certificado ISO14001 e ISO9001,
+        incluso Unión química entre módulos mediante solape de 200 mm, aplicación
+        a las dos caras del solape de la imprimación del sistema QuickPrime Plus e
+        interposición de Junta rápida autoadhesiva de 152 mm y sellado del borde,
+        según plano de detalle y pliego del proyecto. Incluye uniones, mermas, cortes,
+        remates, refuerzos y sellados para la instalación de las boquillas de aspiración
+        de fondo. Medida según superficie realmente impermeabilizada.
+      unit: M2
     DMOBI2601:
       code: DMOBI2601
       components:
@@ -4596,8 +4726,10 @@ prices:
       long_description: Suministro y colocación de papelera sencilla con estructura
         y chapa de revestimiento de acero galvanizado en caliente, pintada al horno,
         con puerta y cerradura, modelo a elegir por la D. F., totalmente instalada.
-      title: ''
-      unit: ''
+      title: Suministro y colocación de papelera sencilla con estructura y chapa de
+        revestimiento de acero galvanizado en caliente, pintada al horno, con puerta
+        y cerradura, modelo a elegir por la D. F., totalmente instalada.
+      unit: Ud.
     DMOBI2701:
       code: DMOBI2701
       components:
@@ -4645,8 +4777,19 @@ prices:
         agua potable con llave de corte y arqueta para su alojamiento, y las tuberías
         de desagüe hasta vertido a definir por la D.F., completamente acabado y en
         funcionamiento.
-      title: ''
-      unit: ''
+      title: Suministro e instalación de fuente bebedero de agua, con fuste de acero
+        inoxidable marino de 190 mm de diámetro, provisto de dos grifos antivandálicos
+        de bronce cromado sujetos al fuste a diferente altura, pulsadores temporizados
+        marca Presto o equivalente, rejilla circular inferior de acero inoxidable
+        o fundición dúctil, en dos piezas, sobre cerco del mismo material recibido
+        sobre hormigón, formación de pendientes en base de hormigón terminado con
+        pintura impermeabilizante de clorocaucho, colocación de dos sumideros sifónicos
+        de salida horizontal provistos de rejilla de acero inoxidable, incluyendo
+        la cimentación necesaria para su correcto anclaje, conexiones a la red de
+        agua potable con llave de corte y arqueta para su alojamiento, y las tuberías
+        de desagüe hasta vertido a definir por la D.F., completamente acabado y en
+        funcionamiento.
+      unit: Ud.
     DMOVI2001a:
       code: DMOVI2001a
       components:
@@ -4674,8 +4817,10 @@ prices:
         tipo de terreno, incluso roca, hasta una profundidad de 5 metros, incluso
         perfilado de la sección y retirada de la obra del material procedente de la
         excavación.
-      title: ''
-      unit: ''
+      title: Excavación en zanja, arqueta o pozo a máquina, en cualquier tipo de terreno,
+        incluso roca, hasta una profundidad de 5 metros, incluso perfilado de la sección
+        y retirada de la obra del material procedente de la excavación.
+      unit: M3.
     DMOVI3001:
       code: DMOVI3001
       components:
@@ -4698,8 +4843,11 @@ prices:
       long_description: Excavación general del terreno existente a maquina , medición
         carga del material seleccionado, según criterio de la Dirección facultativa,
         y trasporte a zona de cribado, machaqueo y mezcla en obra.
-      title: ''
-      unit: ''
+      title: Excavación general del terreno existente a maquina, incluso cimentaciones
+        de edificios antiguos, medición carga del material seleccionado, según criterio
+        de la Dirección facultativa, y trasporte a zona de cribado, machaqueo y mezcla
+        en obra.
+      unit: M3
     DPAVA0510:
       code: DPAVA0510
       components:
@@ -4738,8 +4886,13 @@ prices:
         humectación de la pieza, espolvoreado de cemento, recortes con máquina de
         disco al agua, formación de ingletes, rebajes y rejuntado. Todo el conjunto
         totalmente acabado.
-      title: ''
-      unit: ''
+      title: Pavimento de aceras con adoquín prefabricado de hormigón bicapa color
+        gris, de 20x20x6 cm, norma UNE-EN 1338 CLASE H, tomados con mortero M40-a
+        sobre solera de 15 cm hormigón HM-20, extendida sobre capa de 10 cms. de zahorra
+        artificial compactada al 98 % del Proctor Modificado, incluido humectación
+        de la pieza, espolvoreado de cemento, recortes con máquina de disco al agua,
+        formación de ingletes, rebajes y rejuntado. Todo el conjunto totalmente acabado.
+      unit: M2.
     DPAVHORPUL:
       code: DPAVHORPUL
       components:
@@ -4775,8 +4928,15 @@ prices:
         de cuarzo gris, y la ejecución de los cortes necesarios para la formación
         de juntas estructurales y de retración, previa ejecución de muestras para
         la aprobación por la D.F.
-      title: ''
-      unit: ''
+      title: Pavimento de hormigón HM-25/P/20/IIa de consistencia plástica, tamaño
+        máximo del árido 20 mm, reforzado con fibra de acero, ejecutado en dos capas
+        de 10 y 5 cm, esparcido desde camión, tendido y vibrado manual, fratasado
+        y pulido mecánico con helicóptero de la última capa, incluso la incorporación
+        en la última capa de una cuantía aproximada de 4 Kg/m2 de polvo de cuarzo
+        gris, y la ejecución de los cortes necesarios para la formación de juntas
+        estructurales y de retración, previa ejecución de muestras para la aprobación
+        por la D.F.
+      unit: M2
     DPOMIXTO110:
       code: DPOMIXTO110
       components:
@@ -4817,8 +4977,12 @@ prices:
         encofrado a dos caras, según planos de detalle, con registro de fundición
         clase C 250, según la norma EN 124, modelo HCIP 830 S NF, de EJ, con kit de
         acerrojado, o equivalente, según plano y especificaciones del Pliego.
-      title: ''
-      unit: ''
+      title: Ud. arqueta de 75x75x100 cm de dimensiones interiores y paredes y solera
+        de 20 cm de espesor, construida con hormigón en masa tipo HA-30/B/20/IIIa+Qb,
+        encofrado a dos caras, según planos de detalle, con registro de fundición
+        clase C 250, según la norma EN 124, modelo HCIP 830 S NF, de EJ, con kit de
+        acerrojado, o equivalente, según plano y especificaciones del Pliego.
+      unit: Ud
     DRIESUB:
       code: DRIESUB
       components:
@@ -4858,8 +5022,15 @@ prices:
         de 12 a 15 cm. Incluye esta unidad la p.p. de piezas especiales de conexión
         de las tuberías portaemisores entre sí y con los colectores de alimentación  y
         drenaje
-      title: ''
-      unit: ''
+      title: Instalación de riego por goteo subterráneo, con tuberías de polietileno
+        de 17 mm de diámetro nominal, color morado, con emisores autocompensantes
+        y antisuccionantes, de 2,3 l/h de caudal nominal, insertados en el interior
+        de la tubería, cada 40 cm. Las tuberías colocadas en paralelo con una separación
+        variable entre 55 y 85 cm, según  la  pendiente del terreno, y a una profundidad
+        de 12 a 15 cm. Incluye esta unidad la p.p. de piezas especiales de conexión
+        de las tuberías portaemisores entre sí y con los colectores de alimentación  y
+        drenaje
+      unit: M2
     DSELECRI:
       code: DSELECRI
       components:
@@ -4886,8 +5057,10 @@ prices:
       long_description: Selección, cribado, machaqueo y mezcla de los mejores suelos
         de la excavación para obtener suelo adecuado y emplearlo en los terraplenes
         de la obra y elaboracion de tierra vegetal.
-      title: ''
-      unit: ''
+      title: Selección, cribado, machaqueo y mezcla de los mejores suelos de la excavación
+        para obtener suelo adecuado y emplearlo en los terraplenes de la obra y elaboracion
+        de tierra vegetal.
+      unit: M3
     DTERCAMINOS:
       code: DTERCAMINOS
       components:
@@ -4923,8 +5096,11 @@ prices:
         no superiores a 20 cms., con suelo adecuado procedente de préstamo, extendidos,
         humectados o desecados, rasanteados y compactados al 98 % del Proctor Modificado,
         incluso compactado de la base del terreno natural.
-      title: ''
-      unit: ''
+      title: Formación de terraplén, por medios mecánicos, en tongadas no superiores
+        a 20 cms., con suelo adecuado procedente de préstamo, extendidos, humectados
+        o desecados, rasanteados y compactados al 98 % del Proctor Modificado, incluso
+        compactado de la base del terreno natural.
+      unit: M3
     DTRTIERRAS:
       code: DTRTIERRAS
       components:
@@ -4947,8 +5123,10 @@ prices:
       long_description: Carga mediante máquina de sillares y mampuestos de piedra
         arenisca y caliza, transporte hasta finca municipal  "Els Reiets" ( hasta
         10 Km de distancia ) y descarga en lugar de almacenaje.
-      title: ''
-      unit: ''
+      title: Carga mediante máquina de sillares y mampuestos de piedra arenisca y
+        caliza, transporte hasta finca municipal  "Els Reiets" ( hasta 10 Km de distancia
+        ) y descarga en lugar de almacenaje.
+      unit: M3
     DTRTIERRAS1:
       code: DTRTIERRAS1
       components:
@@ -4974,8 +5152,9 @@ prices:
           production_rate: 0.03
       long_description: Carga mediante máquina y transporte de material procedente
         de la excavación a zona de triturado y mezcla.
-      title: ''
-      unit: ''
+      title: Carga mediante máquina y transporte de material procedente de la excavación
+        a zona de triturado y mezcla.
+      unit: M3
     DTUBO160HA:
       code: DTUBO160HA
       components:
@@ -5002,8 +5181,13 @@ prices:
         parte proporcional de uniones, juntas, lubricante para juntas, codos y piezas
         especiales de conexión a pozos de registro de cualquier tipo o a tubo, según
         planos
-      title: ''
-      unit: ''
+      title: Suministro y colocación de tubería de doble pared de PVC corrugado, DN
+        160 mm, fabricado según la norma UNE-EN 13476, clase SN 8, resistencia circunferencial
+        específica 8 kN/m2, superficie estructurada, lisa la interior y corrugada
+        la exterior, unión por copa con junta elástica, color teja, incluso parte
+        proporcional de uniones, juntas, lubricante para juntas, codos y piezas especiales
+        de conexión a pozos de registro de cualquier tipo o a tubo, según planos
+      unit: Ml
     DTUBO200HA:
       code: DTUBO200HA
       components:
@@ -5030,8 +5214,13 @@ prices:
         parte proporcional de uniones, juntas, lubricante para juntas, codos y piezas
         especiales de conexión a pozos de registro de cualquier tipo o a tubo, según
         planos
-      title: ''
-      unit: ''
+      title: Suministro y colocación de tubería de doble pared de PVC corrugado, DN
+        200 mm, fabricado según la norma UNE-EN 13476, clase SN 8, resistencia circunferencial
+        específica 8 kN/m2, superficie estructurada, lisa la interior y corrugada
+        la exterior, unión por copa con junta elástica, color teja, incluso parte
+        proporcional de uniones, juntas, lubricante para juntas, codos y piezas especiales
+        de conexión a pozos de registro de cualquier tipo o a tubo, según planos
+      unit: Ml
     DTUBO315HA:
       code: DTUBO315HA
       components:
@@ -5058,8 +5247,13 @@ prices:
         parte proporcional de uniones, juntas, lubricante para juntas, codos y piezas
         especiales de conexión a pozos de registro de cualquier tipo o a tubo, según
         planos
-      title: ''
-      unit: ''
+      title: Suministro y colocación de tubería de doble pared de PVC corrugado, DN
+        315 mm, fabricado según la norma UNE-EN 13476, clase SN 8, resistencia circunferencial
+        específica 8 kN/m2, superficie estructurada, lisa la interior y corrugada
+        la exterior, unión por copa con junta elástica, color teja, incluso parte
+        proporcional de uniones, juntas, lubricante para juntas, codos y piezas especiales
+        de conexión a pozos de registro de cualquier tipo o a tubo, según planos
+      unit: Ml
     DTUPVC110:
       code: DTUPVC110
       components:
@@ -5081,8 +5275,9 @@ prices:
           production_rate: 0.03
       long_description: Canalización 1 Ø 110 mm. PVC rígido en drenaje de muros colocado
         según plano de detalle.
-      title: ''
-      unit: ''
+      title: Canalización 1 Ø 110 mm. PVC rígido en drenaje de muros colocado según
+        plano de detalle.
+      unit: Ml
     DZAHORRAS:
       code: DZAHORRAS
       components:
@@ -5109,8 +5304,9 @@ prices:
       long_description: Relleno y compactación de zanjas por medios mecánicos, con
         zahorras artificiales, en capas no superiores a 30 cm. compactadas al 98%
         del Proctor Modificado.
-      title: ''
-      unit: ''
+      title: Relleno y compactación de zanjas por medios mecánicos, con zahorras artificiales,
+        en capas no superiores a 30 cm. compactadas al 98% del Proctor Modificado.
+      unit: M3.
     ENCOF0202:
       code: ENCOF0202
       components:
@@ -5131,8 +5327,8 @@ prices:
           factor: 1.0
           production_rate: 0.03
       long_description: Encofrado y desencofrado plano en formación de zapatas.
-      title: ''
-      unit: ''
+      title: Encofrado y desencofrado plano en formacion de zapatas.
+      unit: M2.
     ENCOFenol1:
       code: ENCOFenol1
       components:
@@ -5164,8 +5360,10 @@ prices:
         de muros, a dos caras, con acabado visto con textura lisa, realizado con tablero
         contrachapado fenólico con bastidor metálico, amortizable en 20 usos,hasta
         3 m de altura.
-      title: ''
-      unit: ''
+      title: Encofrado y desencofrado plano en alzados de superficies vistas de muros,a
+        dos caras, con acabado visto con textura lisa, realizado con tablero contrachapado
+        fenólico con bastidor metálico, amortizable en 20 usos,hasta 3 m de altura.
+      unit: M2.
     ENCOzapatas:
       code: ENCOzapatas
       components:
@@ -5186,8 +5384,8 @@ prices:
           factor: 1.0
           production_rate: 0.03
       long_description: Encofrado y desencofrado plano en formación de zapatas.
-      title: ''
-      unit: ''
+      title: Encofrado y desencofrado plano en formacion de zapatas.
+      unit: M2.
     FFB19450:
       code: FFB19450
       components:
@@ -5218,8 +5416,10 @@ prices:
       long_description: 'Suministro y colocación de tubería PEAD DN 50, PN 10, serie
         SDR 17, fabricada según UNE-EN 12201-2, banda morada o marrón, incluso  p.p.
         de accesorios necesarios: uniones, codos, tés, bridas, etc.'
-      title: ''
-      unit: ''
+      title: 'Suministro y colocación de tubería PEAD DN 50, PN 10, serie SDR 17,
+        fabricada según UNE-EN 12201-2, banda morada o marrón, incluso  p.p. de accesorios
+        necesarios: uniones, codos, tés, bridas, etc.'
+      unit: M
     FFB26425:
       code: FFB26425
       components:
@@ -5250,8 +5450,10 @@ prices:
       long_description: 'Suministro y colocación de tubería PEAD DN 25, PN 10, serie
         SDR 17, fabricada según UNE-EN 12201-2, banda morada o marrón,  incluso  p.p.
         de accesorios necesarios: uniones, codos, tés, bridas, etc.'
-      title: ''
-      unit: ''
+      title: 'Suministro y colocación de tubería PEAD DN 25, PN 10, serie SDR 17,
+        fabricada según UNE-EN 12201-2, banda morada o marrón, incluso  p.p. de accesorios
+        necesarios: uniones, codos, tés, bridas, etc.'
+      unit: M
     FFB26455:
       code: FFB26455
       components:
@@ -5282,8 +5484,10 @@ prices:
       long_description: 'Suministro y colocación de tubería PEAD DN 32, PN 10, serie
         SDR 17, fabricada según UNE-EN 12201-2, banda morada o marrón, incluso  p.p.
         de accesorios necesarios: uniones, codos, tés, bridas, etc.'
-      title: ''
-      unit: ''
+      title: 'Suministro y colocación de tubería PEAD DN 32, PN 10, serie SDR 17,
+        fabricada según UNE-EN 12201-2, banda morada o marrón, incluso  p.p. de accesorios
+        necesarios: uniones, codos, tés, bridas, etc.'
+      unit: M
     FICUS1:
       code: FICUS1
       components:
@@ -5323,8 +5527,8 @@ prices:
         de riego,  incluido todos los medios mecánicos necesarios para su correcta
         plantación, así como cuidados hasta la recepción, medida la unidad ejecutada
         en obra.
-      title: ''
-      unit: ''
+      title: Ficus ejemplar
+      unit: Ud.
     FILTROARENA:
       code: FILTROARENA
       components:
@@ -5354,8 +5558,9 @@ prices:
         reforzado con fibra de vidrio, pie de polipropileno, tapa sin tornillos, tapón
         de vaciado, manómetro y purgador, sin válvula manual de selectora, para funcionamiento
         automático, según esquema hidráulico mostrado en plano, incluso arena filtrante.
-      title: ''
-      unit: ''
+      title: Filtro de Arena Rapidpool Lateral de Astral o eqivalente, incluso llenado
+        de arena.
+      unit: Ud
     FORMAESCALA:
       code: FORMAESCALA
       components:
@@ -5391,8 +5596,11 @@ prices:
         de 4 Kg/m2 de polvo de cuarzo gris, y la ejecución de los cortes necesarios
         para la formación de juntas estructurales y de retración, previa ejecución
         de muestras para la aprobación por la D.F.
-      title: ''
-      unit: ''
+      title: Pavimento de hormigón HM-25/P/20/IIa , en formacion de escaleras, de
+        consistencia plástica, tamaño máximo del árido 20 mm, reforzado con fibra
+        de acero, ejecutado en dos capas de 10 y 5 cm, esparcido desde camión, tendido
+        y vibrado manual, fratasado y pulido mecánico con helicóptero
+      unit: M2
     HUMUSLOMB:
       code: HUMUSLOMB
       components:
@@ -5406,8 +5614,8 @@ prices:
           production_rate: 0.03
       long_description: Tn de Humus de lombriz suministrado en lugar de empleo, en
         obra.
-      title: ''
-      unit: ''
+      title: Humus de lombriz.
+      unit: Tn
     JPP047:
       code: JPP047
       components:
@@ -5431,8 +5639,11 @@ prices:
         AUTOCLAVE, DE 2.5 M DE LONGITUD Y 10 CM DE DIÁMETRO, INCLUSO COLOCACIÓN (60-80
         CM ENTERRADO) Y AMARRE DE ÁRBOL MEDIANTE TRES ABRAZADERAS DE GOMA DE USO ESPECÍFICO
         PARA ENTUTORAR.
-      title: ''
-      unit: ''
+      title: ENTUTORADO DE ÁRBOL CON TUTOR TRIPLE DE MADERA TRATADA EN AUTOCLAVE,
+        DE 2.5 M DE LONGITUD Y 10 CM DE DIÁMETRO, INCLUSO COLOCACIÓN (60-80 CM ENTERRADO)
+        Y AMARRE DE ÁRBOL MEDIANTE TRES ABRAZADERAS DE GOMA DE USO ESPECÍFICO PARA
+        ENTUTORAR.
+      unit: UD
     LANCAM:
       code: LANCAM
       components:
@@ -5470,8 +5681,8 @@ prices:
         menor de 0,8 dS/m según NTJ 05T,incluso tapado y apretado, riegos de plantación
         con manguera según pliego de condiciones y hasta el funcionamiento normalizado
         de la instalación de riego, medida la unidad suministrada en obra.
-      title: ''
-      unit: ''
+      title: Lantana camara rose C-1L
+      unit: Ud
     OCA090beadb:
       code: OCA090beadb
       components:
@@ -6166,8 +6377,10 @@ prices:
       long_description: Extendido y compactación de zahorras artificiales Huso ZA-20,
         por medios mecánicos, en capas una capa de 15 cm de espesor, en formación
         de base de caminos, compactadas al 98% del Proctor Modificado.
-      title: ''
-      unit: ''
+      title: Extendido y compactación de zahorras artificiales Huso ZA-20, por medios
+        mecánicos, en capas una capa de 15 cm de espesor, en formación de base de
+        caminos, compactadas al 98% del Proctor Modificado.
+      unit: M3.
     OHA010aaadb:
       code: OHA010aaadb
       components:
@@ -6598,8 +6811,9 @@ prices:
         de las piezas, en cualquier geometría y disposición de las mismas, formando
         trabazón o diseños decorativos, incluso limpieza posterior, todo ello según
         muestras previas aprobadas por la D.F.
-      title: ''
-      unit: ''
+      title: Pavimento tipo calzada portuguesa realizado con piezas de granito berrocal
+        8*8.
+      unit: m2
     PAVMARMOL20:
       code: PAVMARMOL20
       components:
@@ -6637,8 +6851,9 @@ prices:
         de espesor, incluso rasanteado de las piezas, en cualquier geometría y disposición
         de las mismas, formando trabazón o diseños decorativos, incluso limpieza posterior,
         todo ello según muestras previas aprobadas por la D.F.
-      title: ''
-      unit: ''
+      title: Pavimento tipo calzada portuguesa realizado en formacion de escaleras,
+        con piezas de granito berrocal 8*8.
+      unit: m2
     PBA010a:
       code: PBA010a
       components:
@@ -6718,8 +6933,8 @@ prices:
         hoyo de 0.5x0.5x0.5, riegos de plantación con manguera según pligo de condiciones
         y hasta el funcionamiento normalizado de la instalación de riego. Medida la
         unidad suministrada en obra.'
-      title: ''
-      unit: ''
+      title: Suministro y plantación de planta de Ribera a definir por la DF en C-17
+      unit: ud
     POPALB:
       code: POPALB
       components:
@@ -6766,8 +6981,8 @@ prices:
         sobre terreno asentado, unido mediante doble cinta de caucho a una distancia
         mínima de 15 cm, así como cuidados hasta la recepción, medida la unidad ejecutada
         en obra.
-      title: ''
-      unit: ''
+      title: Populus alba "Bolleana" 20-25 cm CP
+      unit: Ud
     POZO0202:
       code: POZO0202
       components:
@@ -6842,8 +7057,18 @@ prices:
         Sika Fastfix-138 TP, o equivalente, y  marco y tapa de fundición de 60 cm.
         de diámetro, fabricada según la norma EN 124, modelo PAMREX de Saint Gobain
         o equivalente, totalmente acabado, según plano y especificaciones del Pliego.
-      title: ''
-      unit: ''
+      title: Suministro y montaje de pozo de registro prefabricado, formado piezas
+        prefabricadas, clase R, según las normas UNE 127917 y UNE-EN 1917, de 1.20
+        m. de diámetro interior para tuberías de DN 200 y  DN 3150, formado por módulo
+        base con orificios de fábrica y juntas para montaje de tubos de PVC estructurado,
+        módulo de recrecido, módulo cónico escentrico y anillo de ajuste, incluso
+        juntas de goma, media sección de PVC, formación de bancada con HM-20, pates
+        de polipropileno reforzado interiormente, marco recibido con mortero especial
+        de apoyo y fijación, de 50 N/mm2 de resistencia a compresión Sika Fastfix-138
+        TP, o equivalente, y  marco y tapa de fundición de 60 cm. de diámetro, fabricada
+        según la norma EN 124, modelo PAMREX de Saint Gobain o equivalente, totalmente
+        acabado, según plano y especificaciones del Pliego.
+      unit: Ud
     QUEIL:
       code: QUEIL
       components:
@@ -6889,8 +7114,8 @@ prices:
         de 250 cm altura y 100 mm de diámetro, anclado antes de tapar sobre terreno
         asentado, unido mediante doble cinta de caucho a una distancia mínima de 15
         cm, así como cuidados hasta la recepción, medida la unidad ejecutada en obra.
-      title: ''
-      unit: ''
+      title: Quercus ilex 20-25 cm
+      unit: Ud
     RELL0301:
       code: RELL0301
       components:
@@ -6927,8 +7152,12 @@ prices:
         a su lugar de empleo, extendidos, humectados o desecados, rasanteados y compactados
         al 98 % del Proctor Modificado. Incluso compactado previo de la base del terreno
         natural.
-      title: ''
-      unit: ''
+      title: Formación de terraplén, en tongadas no superiores a 20 cms., con suelos
+        adecuados, acopiados en la zona de cribado, incluso carga y transporte a su
+        lugar de empleo, extendidos, humectados o desecados, rasanteados y compactados
+        al 98 % del Proctor Modificado. Incluso compactado previo de la base del terreno
+        natural.
+      unit: M3.
     RELL0401:
       code: RELL0401
       components:
@@ -6959,8 +7188,10 @@ prices:
       long_description: Extendido y compactado de zahorra artificial artificial, compactado
         al 95% del Proctor Modificado, en capas de 10 cms. de espesor medio en regularización
         de superficies.
-      title: ''
-      unit: ''
+      title: Extendido y compactado de zahorra artificial artificial, compactado al
+        95% del Proctor Modificado, en capas de 10 cms. de espesor medio en regularización
+        de superficies.
+      unit: M3
     SAA010b:
       code: SAA010b
       components:
@@ -8383,8 +8614,8 @@ prices:
         tapado con mantillo (SI INCLUIDO EN ESTA UNIDAD).- Abonado de toda la superfície
         con abono órgano-mineral a razón de 60 gr/m2 (SI INCLUIDO EN ESTA UNIDAD)-
         Pase de rulo a la totalidad de la superficie (SI INCLUIDO EN ESTA UNIDAD).
-      title: ''
-      unit: ''
+      title: Siembra de césped Zoysia japónica el Toro
+      unit: m2
     SSTRATO10:
       code: SSTRATO10
       components:
@@ -8404,8 +8635,8 @@ prices:
         natural de textura francoarenosa procedente de préstamo o elaborada en obra,
         y transporte mediante pala hasta hoyos de plantación y arriates, medido el
         volumen ejecutado en obra.
-      title: ''
-      unit: ''
+      title: Elaboración de "sustrato de plantación".
+      unit: m3
     TERRANATU2:
       code: TERRANATU2
       components:
@@ -8419,8 +8650,8 @@ prices:
           production_rate: 0.03
       long_description: Zahoora natrural tamaño 20/50 mm, de origen fluvial, lavada
         y sumistrada en lugar de empleo en obra.
-      title: ''
-      unit: ''
+      title: Zahoora natural tamaño 20/50 mm.
+      unit: m3
     TRINTER10:
       code: TRINTER10
       components:
@@ -8447,8 +8678,8 @@ prices:
         en pliegos de 2.56 x 6.52 m, de color marrón, modelo EGA 20 de AQUANEA, o
         equivalente, incluso relleno de las celdas con grava natural de 2 cm de tamaño
         máximo.
-      title: ''
-      unit: ''
+      title: Colocación de malla volumétrica de 30 cm.
+      unit: m2
     TRINTER11:
       code: TRINTER11
       components:
@@ -8475,8 +8706,8 @@ prices:
         en pliegos de 2.56 x 6.52 m, de color marrón, modelo EGA 20 de AQUANEA, o
         equivalente, incluso relleno de las celdas con grava natural de 2 cm de tamaño
         máximo.
-      title: ''
-      unit: ''
+      title: Colocación de malla volumétrica de 20 cm.
+      unit: m2
     UCPM.10:
       code: UCPM.10
       components:
@@ -8502,8 +8733,9 @@ prices:
         y humus en las cantidades que  determin la D.F., según carácteristicas del
         Pliego de Prescripciones, incluso incorporación al terreno con pase cruzado
         de arado, y retirada de piedras y restos, medido el volumen ejecutado en obra.
-      title: ''
-      unit: ''
+      title: Elaboración de "tierra vegetal" en obra, con tierra natural procedente
+        de préstamo o elaborada en obra.
+      unit: m3
     USJT10abz:
       code: USJT10abz
       components:
@@ -8526,8 +8758,10 @@ prices:
       long_description: Preparación del terreno, entrecava desmenuzado, limpieza y
         nivelado para plantación, realizada por medios mecánicos, incluso extracción
         de piedras de tamaño superior a 5 cm. Medida la superficie ejecutada en obra.
-      title: ''
-      unit: ''
+      title: Preparación del terreno, entrecava desmenuzado, limpieza y nivelado para
+        plantación, realizada por medios mecánicos, incluso extracción de piedras
+        de tamaño superior a 5 cm. Medida la superficie ejecutada en obra.
+      unit: m2
     UTAPA201:
       code: UTAPA201
       components:
@@ -8549,8 +8783,8 @@ prices:
           production_rate: 0.03
       long_description: Registro fundición C250 de 75*75 cm, segun plano y Pliego
         de prescripciones.
-      title: ''
-      unit: ''
+      title: Registro fundición C250 de 75*75 cm.
+      unit: Ud
     barand01:
       code: barand01
       components:
@@ -8575,8 +8809,8 @@ prices:
         realizada con pletina 120 mm de anchura  y 8 mm de espesor, montantes realizados
         con barras de 12 mm de diámetro. Pasamanos tubular de 30 mmm de díametro y
         1.5 mm de espesor. Según planos y P.P.T.P.
-      title: ''
-      unit: ''
+      title: Barandilla de 1 m. de altura de acero inoxidable tipo AISI 316.
+      unit: ml
     cable1-6:
       code: cable1-6
       components:
@@ -8594,8 +8828,9 @@ prices:
           production_rate: 0.03
       long_description: Cable RV-0,6/1KV de 1 x 6 mm2. colocado bajo tubo en instalación
         subterránea.
-      title: ''
-      unit: ''
+      title: Cable RV-0,6/1KV de 1 x 6 mm2. colocado bajo tubo en instalación subterránea,
+        medición según hoja de cálculo CDT.
+      unit: Ml.
     juegotipo1:
       code: juegotipo1
       components:
@@ -8621,8 +8856,8 @@ prices:
           production_rate: 0.03
       long_description: Suministro y montaje de bicicleta estática mod 491 A, de HPC
         o equivalente, color gris, según especificaciones de P.P.T.P.
-      title: ''
-      unit: ''
+      title: Bicicleta estática
+      unit: ud
     juegotipo10:
       code: juegotipo10
       components:
@@ -8648,8 +8883,8 @@ prices:
           production_rate: 0.03
       long_description: Suministro y montaje de telefono mod.J3410A  de HPC o equivalente,
         según especificaciones del P.P.T.P.
-      title: ''
-      unit: ''
+      title: Teléfono
+      unit: Ud
     juegotipo2:
       code: juegotipo2
       components:
@@ -8675,8 +8910,8 @@ prices:
           production_rate: 0.03
       long_description: Suministro y montaje de juego de patines mod 409 A de HPC,
         o equivalente, color gris, según especificaciones del P.P.T.P.
-      title: ''
-      unit: ''
+      title: Juego de patines
+      unit: Ud
     juegotipo3:
       code: juegotipo3
       components:
@@ -8702,8 +8937,8 @@ prices:
           production_rate: 0.03
       long_description: Suministro y montaje de Rueda grande mod. 488 A de HPC o equivalente,
         color gris, según especificaciones de P.P.T.P.
-      title: ''
-      unit: ''
+      title: Rueda grande
+      unit: ud
     juegotipo4:
       code: juegotipo4
       components:
@@ -8729,8 +8964,8 @@ prices:
           production_rate: 0.03
       long_description: Suministro y montaje de barras de estiramientos mod. 467 A
         de HPC, o equivalente, color gris, según especificaciones del P.P.T.P.
-      title: ''
-      unit: ''
+      title: Barras de estiramientos
+      unit: Un
     juegotipo5:
       code: juegotipo5
       components:
@@ -8756,8 +8991,8 @@ prices:
           production_rate: 0.03
       long_description: Suministro y montaje de juego infantil mod Ixo J2523 M, de
         HPC, o equivalente, según especificaciones del P.P.T.P.
-      title: ''
-      unit: ''
+      title: Juego Infantil 1.
+      unit: Ud
     juegotipo6:
       code: juegotipo6
       components:
@@ -8783,8 +9018,8 @@ prices:
           production_rate: 0.03
       long_description: Suministro y montaje de Columpio basic Asientos Plano y cuna,
         mod J472PC de HPC, o equivalente, segun P.P.T.P.
-      title: ''
-      unit: ''
+      title: Columpio basic Asientos Plano y cuna.
+      unit: Ud
     juegotipo7:
       code: juegotipo7
       components:
@@ -8810,8 +9045,8 @@ prices:
           production_rate: 0.03
       long_description: Suministro y montaje de Muelle Tanden mod. J852 A de HPC o
         equivalente, segun especificaciones de P.P.T.P.
-      title: ''
-      unit: ''
+      title: Juego Muelle Tandem
+      unit: Ud
     juegotipo8:
       code: juegotipo8
       components:
@@ -8837,8 +9072,8 @@ prices:
           production_rate: 0.03
       long_description: Suministro y montaje de Cyclo mod J828A de HPC o equivalente,
         según especificaciones de P.P.T.P.
-      title: ''
-      unit: ''
+      title: Cyclo
+      unit: Ud
     juegotipo9:
       code: juegotipo9
       components:
@@ -8864,8 +9099,8 @@ prices:
           production_rate: 0.03
       long_description: Suministro y montaje de Vagón Ludic mod J2619A de HPC, o equivalente,
         según especificaciones de P.P.T.P.
-      title: ''
-      unit: ''
+      title: El vagon Ludic
+      unit: Ud
     pefil1:
       code: pefil1
       components:
@@ -8887,8 +9122,8 @@ prices:
           production_rate: 0.03
       long_description: Suministro y colocación de perfil de acero galvanizado en
         caliente LPN140, en formación de escalones y remate de pavimento de hormigón.
-      title: ''
-      unit: ''
+      title: Perfil normalizado de acero galvanizado LPN140.
+      unit: ml
     puerta1:
       code: puerta1
       components:
@@ -8907,8 +9142,8 @@ prices:
       long_description: Reconstrucción de antigua puerta cuartel militar, mediante
         reparación, decapado y aplicación de una capa de imprimación, sobre umbral
         reconstruido de los antiguos sillares acopiados en obra.
-      title: ''
-      unit: ''
+      title: Reconstruccion de antigua puerta cuartel Militar.
+      unit: Ud
 sub_chapters:
   components:
     CAPITULO1#:

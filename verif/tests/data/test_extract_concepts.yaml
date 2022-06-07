@@ -109,8 +109,10 @@ prices:
         corte, ferrallado, colocación y p.p. de atado con alambre recocido, despuntes,
         incluso separadores de plástico rígidos, elaborado en taller y colocado en
         obra, diámetros varios.
-      title: ''
-      unit: ''
+      title: Acero en barras corrugadas, UNE-EN 10080 B 500 SD, incluso corte, ferrallado,
+        colocación y p.p. de atado con alambre recocido, despuntes, incluso separadores
+        de plástico rígidos, elaborado en taller y colocado en obra, diámetros varios.
+      unit: Kg.
     AR0005b:
       code: AR0005b
       components:
@@ -149,8 +151,8 @@ prices:
         tapado y apretado, riegos de plantación con manguera según pliego de condiciones
         y hasta el funcionamiento normalizado de la instalación de riego, medida la
         unidad suministrada en obra.
-      title: ''
-      unit: ''
+      title: Verbena bonaerensis C-3L 40 cm altura
+      unit: Ud
 sub_chapters:
   components: {}
   owner_code: extracted

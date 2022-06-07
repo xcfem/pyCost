@@ -15,6 +15,10 @@ class reg_T(object):
         self.cod= c # code.
         self.datos= d # data.
 
+    def __str__(self):
+        ''' Return a string representation of the object.'''
+        return 'cod= '+ str(self.cod)+' data='+str(self.datos)
+    
     def Codigo(self):
         return self.cod
 
@@ -168,7 +172,7 @@ class Codigos(dict):
                     #     cod= cod.partition('\\')[2] # remove part 13.3.1#\ of the code.
                     cod= cod+'@'+str(quantities_counter)
 
-                bc3Record= bc3_record.RegBC3() # Constructor.
+                bc3Record= bc3_record.RegBC3(cod) # Constructor.
                 (self)[cod]= bc3Record # Update dictionary.
 
             if(tipo=='C'):

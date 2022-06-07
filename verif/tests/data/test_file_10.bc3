@@ -1,0 +1,72 @@
+~V|CYPE Ingenieros S.A.|FIEBDC-3/2016\03052022|Generador de precios de la construcción. CYPE Ingenieros, S.A.||ANSI||2||||
+~K|2\3\3\3\3\2\2\2\EUR\|3\0\0\0\21\|3\2\\3\3\\2\3\2\2\3\3\3\2\EUR\||
+~L||MS\Medidas para asegurar la compatibilidad entre los diferentes productos, elementos y sistemas constructivos que componen la unidad de obra.
+\CT\Características técnicas
+\NA\Normativa de aplicación
+\CMP\Criterio de medición en Proyecto
+\CPS\Condiciones que ha de cumplir el soporte antes de comenzar la ejecución de la unidad de obra
+\CPA\Condiciones ambientales que han de cumplirse durante la ejecución de la unidad de obra
+\CPC\Condiciones a exigir al contratista antes de comenzar la ejecución de la unidad de obra
+\PEF\Fases del proceso de ejecución
+\PEC\Condiciones de terminación del proceso de ejecución
+\PS\Pruebas de servicio
+\EN\Ensayos
+\CM\Conservación y mantenimiento
+\CMO\Criterio de medición en obra y condiciones de abono
+\CVE\Criterio de valoración económica
+\|
+~C|root##|||||0|
+~D|root##|
+E\1\1\
+|
+~C|E#||Estructuras|||0|
+~D|E#|
+EA\1\1\
+|
+~C|EA#||Acero|||0|
+~D|EA#|
+EAS\1\1\
+|
+~C|EAS#||Pilares|||0|
+~D|EAS#|
+EAS005\1\1\
+|
+~M|EAS#\EAS005|1\1\1\1\|1||
+|
+~C|EAS005|Ud|Placa de anclaje de acero, con pernos soldados.|0\||0|
+~T|EAS005|Placa de anclaje de acero UNE-EN 10025 S275JR en perfil plano, con taladro central biselado, de 250x250 mm y espesor 12 mm, con 4 pernos soldados, de acero corrugado UNE-EN 10080 B 500 S de 12 mm de diámetro y 50 cm de longitud total.
+Criterio de valoración económica: El precio incluye los cortes, los despuntes, la preparación de bordes, las pletinas, las piezas especiales y los elementos auxiliares de montaje.
+Incluye: Limpieza y preparación del plano de apoyo. Replanteo y marcado de los ejes. Colocación y fijación provisional de la placa. Aplomado y nivelación.
+Criterio de medición de proyecto: Número de unidades previstas, según documentación gráfica de Proyecto.
+Criterio de medición de obra: Se medirá el número de unidades realmente ejecutadas según especificaciones de Proyecto.
+|
+~D|EAS005|
+mt07ala011k\1\5.888\
+mt07aco010c\1\1.775\
+mq08sol020\1\0.015\
+mo047\1\0.297\
+mo094\1\0.297\
+%\1\0.02\
+|
+~C|re150101|kg|Envases de papel y cartón.|0\||4|
+~T|re150101|Envases de papel y cartón.|
+~C|re150104|kg|Envases metálicos.|0\||4|
+~T|re150104|Envases metálicos.|
+~C|re170201|kg|Madera.|0\||4|
+~T|re170201|Madera.|
+~C|re170203|kg|Plástico.|0\||4|
+~T|re170203|Plástico.|
+~C|re170604|kg|Materiales de aislamiento distintos de los especificados en los códigos 17 06 01 y 17 06 03.|0\||4|
+~T|re170604|Materiales de aislamiento distintos de los especificados en los códigos 17 06 01 y 17 06 03.|
+~C|mt07aco010c|kg|Ferralla elaborada en taller industrial con acero en barras corrugadas, UNE-EN 10080 B 500 S, de varios diámetros.|1.6\||3|
+~T|mt07aco010c|Ferralla elaborada en taller industrial con acero en barras corrugadas, UNE-EN 10080 B 500 S, de varios diámetros.|
+~C|mt07ala011k|kg|Pletina de acero laminado UNE-EN 10025 S275JR, para aplicaciones estructurales. Trabajada y montada en taller, para colocar con uniones soldadas en obra.|2.01\||3|
+~T|mt07ala011k|Pletina de acero laminado UNE-EN 10025 S275JR, para aplicaciones estructurales. Trabajada y montada en taller, para colocar con uniones soldadas en obra.|
+~C|mq08sol020|h|Equipo y elementos auxiliares para soldadura eléctrica.|3.42\||2|
+~T|mq08sol020|Equipo y elementos auxiliares para soldadura eléctrica.|
+~C|mo047|h|Oficial 1ª montador de estructura metálica.|20.74\||1|
+~T|mo047|Oficial 1ª montador de estructura metálica.|
+~C|mo094|h|Ayudante montador de estructura metálica.|19.68\||1|
+~T|mo094|Ayudante montador de estructura metálica.|
+~C|%|%|Costes directos complementarios|0\||0|
+~T|%|Costes directos complementarios|

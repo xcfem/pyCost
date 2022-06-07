@@ -36,6 +36,7 @@ echo "$BLEU" "PyCost tests." "$NORMAL"
 python tests/test_01.py
 python tests/test_02.py
 python tests/test_03.py
+echo "$BLEU" "  Misc tests." "$NORMAL"
 python tests/test_extract_concepts.py
 python tests/test_extract_concepts_regex.py
 python tests/test_merge_concepts_01.py
@@ -46,6 +47,7 @@ python tests/bc3/test_read_bc3_02.py
 python tests/bc3/test_read_bc3_03.py
 python tests/bc3/test_read_bc3_04.py
 #python tests/bc3/test_read_bc3_05.py
+python tests/bc3/test_read_bc3_06.py
 echo "$BLEU" "  YAML read tests." "$NORMAL"
 python tests/yaml/test_read_yaml_01.py
 python tests/yaml/test_read_yaml_02.py
