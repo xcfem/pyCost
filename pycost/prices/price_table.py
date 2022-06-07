@@ -6,10 +6,6 @@ from pycost.prices import unit_price_container
 from pycost.bc3 import codigos_obra
 from pycost.utils import EntPyCost as epc
 
-class Buscadores(dict):
-    def __init__(self):
-        super(Buscadores, self).__init__()
-
 class CuaPre(epc.EntPyCost):
     ''' Price tables:
 
@@ -46,11 +42,8 @@ class CuaPre(epc.EntPyCost):
     def LeeBC3DescompFase1(self, descomp):
         self.unidades.LeeBC3Fase1(descomp)
 
-    def LeeBC3DescompFase2(self, descomp):
-        bp= Buscadores()
-        bp["elementos"]= self.elementos
-        bp["ud_obra"]= self.unidades
-        return self.unidades.LeeBC3Fase2(descomp,bp)
+    def LeeBC3DescompFase2(self, descomp, rootChapter):
+        return self.unidades.LeeBC3Fase2(descomp, rootChapter= rootChapter)
 
     def searchForUnitPrice(self, cod):
         return self.unidades.Busca(cod)

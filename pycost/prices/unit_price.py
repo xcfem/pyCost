@@ -50,11 +50,11 @@ class UnitPrice(ms.Measurable):
         '''Lee la unidad a falta de la descomposición.'''
         super(UnitPrice,self).readBC3(r)
 
-    def LeeBC3Fase2(self, r, bp):
+    def LeeBC3Fase2(self, r, rootChapter):
         ''' Read the components of the unit.'''
         error= False
         if(len(r.Datos().desc)>0):
-            tmp= UnitPrice.ObtienePunteros(r.Datos().desc,bp,error)
+            tmp= UnitPrice.getPointers(r.Datos().desc, error, rootChapter= rootChapter)
             if not error:
                 self.components= tmp
             else:
@@ -75,18 +75,14 @@ class UnitPrice(ms.Measurable):
         return retval
 
     @staticmethod
-    def ObtienePunteros(descBC3, bp, error):
-        '''Obtiene los punteros a los precios de la descomposición.'''
+    def getPointers(descBC3, error, rootChapter):
+        '''Get the pointers to the component prices.'''
         retval= component_list.ComponentList()
-        be= bp["elementos"]
-        bd= bp["ud_obra"]
         ent= None
         for i in descBC3:
-            ent= be.Busca((i).codigo)
+            ent= rootChapter.getUnitPrice((i).codigo)
             if not ent:
-                ent= bd.Busca((i).codigo)
-            if not ent:
-                logging.warning("UnitPrice.ObtienePunteros; No se encontró la componente: " + (i).codigo + '\n')
+                logging.warning("UnitPrice.getPointers; component: " + (i).codigo + 'not found.')
                 error= True
                 continue
             else:

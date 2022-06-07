@@ -288,7 +288,7 @@ class Obra(cp.Chapter):
         logging.info("Leyendo descomposiciones...")
 
         #pendientes= LeeBC3DescFase2(co); #Lee descomposiciones.
-        pendientes= self.precios.LeeBC3DescompFase2(co.GetDatosUnidades())
+        pendientes= self.precios.LeeBC3DescompFase2(co.GetDatosUnidades(), rootChapter= self)
 
         logging.info("done." + '\n')
         # logging.info("Leyendo precios globales...")
@@ -300,11 +300,11 @@ class Obra(cp.Chapter):
         if(len(pendientes)>0):
             logging.info("   Leyendo descomposiciones (y 2)...")
             #pendientes= LeeBC3DescFase2(co); #Lee descomposiciones.
-            pendientes= precios.LeeBC3DescompFase2(co.GetDatosUnidades()); #Lee descomposiciones.
+            pendientes= precios.LeeBC3DescompFase2(co.GetDatosUnidades(), rootChapter= self); #Lee descomposiciones.
             logging.info("done." + '\n')
             logging.info("   Leyendo precios globales (y 2)...")
             precios.LeeBC3DescompFase1(co.GetDatosUnidades())
-            tmp= precios.LeeBC3DescompFase2(co.GetDatosUnidades())
+            tmp= precios.LeeBC3DescompFase2(co.GetDatosUnidades(), rootChapter= self)
             pendientes.insert(tmp.begin(),tmp.end())
             logging.info("done." + '\n')
 

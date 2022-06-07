@@ -30,7 +30,7 @@ class Descompuestos(concept_dict.ConceptDict):
             self.Append(ud)
 
 
-    def LeeBC3Fase2(self, cds, bp):
+    def LeeBC3Fase2(self, cds, rootChapter):
         '''Reads the components of the unit.'''
         ud= None
         error= False
@@ -38,7 +38,7 @@ class Descompuestos(concept_dict.ConceptDict):
         for i in cds:
             reg= cds.getUnitPriceData(i)
             ud= self.Busca(reg.Codigo())
-            error= ud.LeeBC3Fase2(reg,bp)
+            error= ud.LeeBC3Fase2(reg, rootChapter= rootChapter)
             if error:
                 retval.add(reg.Codigo())
         return retval

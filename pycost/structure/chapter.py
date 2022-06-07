@@ -87,8 +87,8 @@ class Chapter(bc3_entity.EntBC3):
         self.precios.LeeBC3Elementales(elementos)
     def LeeBC3DescompFase1(self, descompuestos):
         self.precios.LeeBC3DescompFase1(descompuestos)
-    def LeeBC3DescompFase2(self, descompuestos):
-        return self.precios.LeeBC3DescompFase2(descompuestos)
+    def LeeBC3DescompFase2(self, descompuestos, rootChapter):
+        return self.precios.LeeBC3DescompFase2(descompuestos, rootChapter= rootChapter)
     
     def BuscaSubcapitulo(self, ruta):
         retval= None
