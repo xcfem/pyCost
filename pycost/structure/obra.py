@@ -522,4 +522,19 @@ def yaml_to_pickle(inputFileName, outputFileName, cod='CodelessRoot', tit= 'Titl
     with open(outputFileName, 'wb') as fh:
         pickle.dump(site, fh)
 
+def pickle_to_yaml(inputFileName, outputFileName):
+    ''' Reads a BC3 file and creates the corresponding YAML format file.
+
+    :param inputFileName: name of the input file.
+    :param cod: construction site codename.
+    :param tit: constuction site description.
+    '''
+    # Read root object.
+    inputFile= open(inputFileName, 'rb')
+    rootChapter= pickle.load(inputFile)
+    inputFile.close()
+
+    # Write into YAML file.
+    rootChapter.writeYaml(outputFileName)
+
 
