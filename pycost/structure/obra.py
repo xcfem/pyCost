@@ -10,6 +10,7 @@ from pycost.structure import unit_price_quantities
 from pycost.utils import percentages as pc
 from pycost.bc3 import codigos_obra as cod
 from pycost.prices import elementary_price
+from pycost.prices import unit_price
 from pycost.utils import pylatex_utils
 from pycost.utils import basic_types
 import tempfile
@@ -482,6 +483,33 @@ class Obra(cp.Chapter):
         outputFile= open(outputFileName, mode='w')
         outputs= yaml.dump(self.getDict(), outputFile, allow_unicode=True)
         outputFile.close()
+
+
+    def readFromDictionaries(self, elementaryPricesDict, unitPricesDict):
+        ''' Read prices from data stored in dictionaries. The field names in
+            the dictionaries must correspond to those used in 
+            getDict/setFromDict methods.
+
+        :param elementaryPricesDict: dictionary storing the elementary prices data.
+        :param unitPricesDict: dictionary storing the unit prices data.
+        '''
+        # Append elementary prices.
+        for key in elementaryPricesDict:
+            fields= elementaryPricesDict[key]
+            tmp= elementary_price.ElementaryPrice(cod= fields['code'])
+            tmp.setFromDict(fields)
+            self.precios.elementos.Append(tmp)
+
+        pendingLinks= list() # Links that cannot be set yet.
+        # Append unit prices.
+        for key in unitPricesDict:
+            fields= unitPricesDict[key]
+            tmp= unit_price.UnitPrice(cod= fields['code'])
+            pendingLinks.extend(tmp.setFromDict(fields))
+            self.precios.unidades.Append(tmp)
+
+        return self.solvePendingLinks(pendingLinks)
+
 
         
         
