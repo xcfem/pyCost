@@ -42,8 +42,16 @@ class EntBC3(epc.EntPyCost):
 
         :param dct: input dictionary.
         '''
-        self.codigo= dct['code']
-        self.title= dct['title']
+        if('code' in dct):
+            self.codigo= dct['code']
+        else:
+            logging.error("'code' key missing in input dictionary:"+str(dct))
+            exit(-1)
+        if('title' in dct):
+            self.title= dct['title']
+        else:
+            logging.error("'title' key missing in input dictionary:"+str(dct))
+            exit(-1)
         return super(EntBC3, self).setFromDict(dct)
     
     def readBC3(self, r):
