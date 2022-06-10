@@ -168,7 +168,11 @@ class UnitPrice(ms.Measurable):
 
         :param dct: input dictionary.
         '''
-        pendingLinks= self.components.setFromDict(dct['components']) # Links that cannot be set yet.
+        if('components' in dct):
+            pendingLinks= self.components.setFromDict(dct['components']) # Links that cannot be set yet.
+        else:
+            logging.error("'components' key missing in input dictionary:"+str(dct))
+            exit(-1)
         pendingLinks.extend(super(UnitPrice, self).setFromDict(dct))
         return pendingLinks
 
