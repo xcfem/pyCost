@@ -2,6 +2,7 @@
 #Chapter.py
 
 import logging
+import sys
 import pylatex
 import re
 from decimal import Decimal
@@ -229,20 +230,25 @@ class Chapter(bc3_entity.EntBC3):
 
         :param pendingLinks: list of pending links.
         '''
+        missingCodes= list()
         for link in pendingLinks:
             key= link['key']
+            obj= link['object']
             value= self.findPrice(key)
             if(value is None):
                 value= self.BuscaCodigo(key)
             if(value):
-                obj= link['object']
                 attribute= link['attr']
                 if(hasattr(obj, attribute)):
                     setattr(obj, attribute, value)
                 else:
                     logging.error('attribute: '+attribute+' not found for object: '+str(obj))
             else:
-                logging.error('price: '+key+' not found.')
+                logging.error('price: \''+key+'\' in object: '+ str(obj)+ ' not found.')
+                missingCodes.append((key, link))
+        if(len(missingCodes)>0):
+            logging.error('Some codes were missing. Exiting')
+            sys.exit(1)
         return pendingLinks
     
     def getPrice(self):

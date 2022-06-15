@@ -1,0 +1,72 @@
+chapter_quantities:
+  0:
+    measurements:
+      0:
+        commentary: "Measurement"
+        height: 1
+        length: 75.0
+        units: 1.0
+        width: 20.37
+    ud: ACERO0103
+code: TEST_PROJECT##
+prices:
+  elementary_prices:
+    '%003':
+      code: '%003'
+      long_description: ''
+      price: 0.0
+      title: 3 % Medios auxiliares
+      type: 0
+      unit: '%'
+    OFICFER:
+      code: OFICFER
+      long_description: Iron worker
+      price: 18.14
+      title: Oficial ferrallista
+      type: 1
+      unit: H
+    PEONES:
+      code: PEONES
+      long_description: "Specialized laborer"
+      price: 13.75
+      title: "Specialized laborer"
+      type: 1
+      unit: H
+    MAACE0201:
+      code: MAACE0201
+      long_description: "Rebar steel."
+      price: 0.62
+      title: ''
+      type: 3
+      unit: kg.
+  units:
+    ACERO0103:
+      code: ACERO0103
+      components:
+        0:
+          ent_code: OFICFER
+          factor: 1.0
+          production_rate: 0.015
+        1:
+          ent_code: PEONES
+          factor: 1.0
+          production_rate: 0.015
+        2:
+          ent_code: MAACE0201
+          factor: 1.0
+          production_rate: 1.0
+        3:
+          ent_code: '%003'
+          factor: 1.0
+          production_rate: 0.03
+        3:
+          ent_code: 'NON_EXISTENT'
+          factor: 1.0
+          production_rate: 1.0
+      long_description: "Reinforcement steel."
+      title: ''
+      unit: ''
+sub_chapters: 
+  components: {}
+  owner_code: TEST_PROJECT##
+title: Test title

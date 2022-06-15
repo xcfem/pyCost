@@ -41,6 +41,7 @@ python tests/test_extract_concepts.py
 python tests/test_extract_concepts_regex.py
 python tests/test_merge_concepts_01.py
 python tests/test_merge_concepts_02.py
+python tests/test_bad_price_component.py
 echo "$BLEU" "  FieBDC3 read tests." "$NORMAL"
 python tests/bc3/test_read_bc3_01.py
 python tests/bc3/test_read_bc3_02.py
