@@ -1,0 +1,52 @@
+%% Example of use of pythontex in combination with pyCost
+\documentclass[11pt]{article}% 
+\usepackage{amsmath} 
+\usepackage{pythontex} 
+\usepackage{nopageno} 
+\begin{document} 
+ 
+ 
+\begin{pycode} 
+ 
+import os
+from pycost.structure import obra
+
+obra= obra.Obra(cod="test", tit="Test title")
+
+# Read data from file.
+pth= os.path.dirname(__file__)
+# print("pth= ", pth)
+if(not pth):
+    pth= '.'
+obra.readFromYaml(pth+'/../../../verif/tests/data/test_file_05.yaml')
+
+def getPriceDescription(code):
+    unitPrice= obra.findPrice(code)
+    return unitPrice.long_description
+
+def getPriceTable(codes):
+    tabData= list()
+    for code in codes:
+        description= getPriceDescription(code)
+        tabData.append([code, description])
+    retval= str()
+    for row in tabData:
+        retval+= row[0] + ' & ' + row[1] + '\\\\\n'
+        retval+= '\\hline\n'
+    return retval
+
+\end{pycode}
+ 
+The price table is:
+
+\begin{center}
+\begin{small}
+  \begin{tabular}{|c|p{11cm}|}
+    \hline
+    Código & Descripción \\
+    \hline
+  \py{getPriceTable(['CANALACO36','CELAUS'])}
+  \end{tabular}
+  \end{small}
+\end{center}
+\end{document}

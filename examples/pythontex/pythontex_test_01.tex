@@ -1,0 +1,30 @@
+%% Example of use of pythontex in combination with pyCost
+\documentclass[11pt]{article}% 
+\usepackage{amsmath} 
+\usepackage{pythontex} 
+\usepackage{nopageno} 
+\begin{document} 
+ 
+ 
+\begin{pycode} 
+ 
+import os
+from pycost.structure import obra
+
+obra= obra.Obra(cod="test", tit="Test title")
+
+# Read data from file.
+pth= os.path.dirname(__file__)
+# print("pth= ", pth)
+if(not pth):
+    pth= '.'
+obra.readFromYaml(pth+'/../../../verif/tests/data/test_03_prices.yaml')
+
+def getPriceDescription(code):
+    unitPrice= obra.findPrice(code)
+    return unitPrice.long_description
+
+\end{pycode} 
+ 
+The description of the price ACERO0103 is: \py{getPriceDescription("ACERO0103")} 
+\end{document}
