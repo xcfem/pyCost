@@ -4,7 +4,6 @@ from __future__ import division
 from __future__ import print_function
 
 import os
-import yaml
 from pycost.structure import obra
 from pycost.structure.chapter import Chapter
 from pycost.structure.unit_price_quantities import UnitPriceQuantities
