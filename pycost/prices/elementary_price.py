@@ -12,8 +12,17 @@ class ElementaryPrice(m.Measurable):
     places= Decimal(10) ** -precision
     formatString= '{0:.'+str(precision)+'f}'
 
-    def __init__(self, cod="", tit="", ud="", p=0.0, tp= basic_types.sin_clasif):
-        super(ElementaryPrice,self).__init__(cod,tit,ud)
+    def __init__(self, cod="", tit="", ud="", p=0.0, tp= basic_types.sin_clasif, long_description= None):
+        ''' Constructor.
+ 
+        :param cod: identifier.
+        :param tit: short description.
+        :param ud: unit of measurement.
+        :param p: price
+        :param tp: type (basic_types.mdo, basic_types.mat, basic_types.maq or basic_types.sin_clasif)
+        :param ld: long description.
+        '''
+        super(ElementaryPrice,self).__init__(cod= cod, tit= tit, ud=ud, ld= long_description)
         self.precio= p
         self.tipo= tp
 

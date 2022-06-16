@@ -33,9 +33,11 @@ START=$(date +%s.%N)
 
 # Misc. tests
 echo "$BLEU" "PyCost tests." "$NORMAL"
-python tests/test_01.py
-python tests/test_02.py
-python tests/test_03.py
+echo "$BLEU" "  Raw pyCost tests." "$NORMAL"
+python tests/raw_pycost/test_01.py
+python tests/raw_pycost/test_02.py
+python tests/raw_pycost/test_03.py
+python tests/raw_pycost/test_04.py
 echo "$BLEU" "  Misc tests." "$NORMAL"
 python tests/test_extract_concepts.py
 python tests/test_extract_concepts_regex.py

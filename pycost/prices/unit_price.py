@@ -30,7 +30,7 @@ class UnitPrice(ms.Measurable):
         :param ud: unit of measurement.
         :param ld: long description.
         '''
-        super(UnitPrice,self).__init__(cod,desc,ud,ld)
+        super(UnitPrice,self).__init__(cod= cod, tit= desc, ud= ud, ld= ld)
         self.components= component_list.ComponentList()
         
     def getType(self):

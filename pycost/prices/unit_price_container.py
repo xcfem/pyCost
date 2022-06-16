@@ -11,7 +11,12 @@ from pycost.utils import pylatex_utils
 class Descompuestos(concept_dict.ConceptDict):
     '''Unidades de obra.'''
 
-    def AgregaComponente(self, el, cod_ud, cod_el, r, f):
+    def appendComponent(self, el, cod_ud, cod_el, r, f):
+        ''' Append a new component to the container.
+
+        :param el: elementary prices container.
+        :param cod_ud: unit price 
+        '''
         i= self.Busca(cod_ud)
         j= el.Busca(cod_el)
         if not j:
@@ -85,7 +90,7 @@ class Descompuestos(concept_dict.ConceptDict):
                         cantidad= descomp.substr(0,len(descomp)-1)
                     if(elementos.find("%" + cod_el)!=elementos.end()): #Corresponds to a percentage.
                         cod_el= "%"+cod_el
-                    AgregaComponente(elementos,cod,cod_el,atof(cantidad.c_str()))
+                    appendComponent(el= elementos, cod_ud= cod, cod_el= cod_el, r= atof(cantidad.c_str()))
                     if(pos3>len(descomp)): break
 
                 if(iS.peek() == 26): break

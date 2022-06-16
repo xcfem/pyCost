@@ -11,9 +11,9 @@ prices:
       unit: '%'
     OFICFER:
       code: OFICFER
-      long_description: Iron worker
+      long_description: 'Iron worker'
       price: 18.14
-      title: Oficial ferrallista
+      title: 'Iron worker'
       type: 1
       unit: H
     PEONES:
@@ -52,7 +52,7 @@ prices:
           production_rate: 0.03
       long_description: "Reinforcement steel."
       title: ''
-      unit: ''
+      unit: 'kg'
 sub_chapters: 
   components: {}
   owner_code: TEST_PROJECT##

@@ -16,7 +16,7 @@ pth= os.path.dirname(__file__)
 # print("pth= ", pth)
 if(not pth):
     pth= '.'
-obra.readFromYaml(pth+'/./data/test_03_prices.yaml')
+obra.readFromYaml(pth+'/../data/test_03_prices.yaml')
 
 ch01= obra.subcapitulos.newChapter(Chapter(cod= '01', tit= 'Chapter 01'))
 
@@ -41,30 +41,33 @@ ratio1= abs(q1Cost-refQ1Cost)/refQ1Cost
 
 q2Cost= reinfMeasurements.getPrice()
 refQ2Cost= float(reinfMeasurements.getUnitPrice())*q2units*q2l
-ratio1= abs(q2Cost-refQ2Cost)/refQ2Cost
+ratio2= abs(q2Cost-refQ2Cost)/refQ2Cost
 
 totalRefCost= refQ1Cost+refQ2Cost
 
 cCost= ch01.getPrice()
-ratio2= abs(cCost-totalRefCost)/totalRefCost
+ratio3= abs(cCost-totalRefCost)/totalRefCost
 
 cost= obra.getPrice()
-ratio3= abs(cost-totalRefCost)/totalRefCost
+ratio4= abs(cost-totalRefCost)/totalRefCost
 
 '''
 print('rebar measurements cost: ', q1Cost)
 print('rebar reference cost: ', refQ1Cost)
 print('ratio1= ', ratio1)
-print('chapter cost: ', cCost)
+print('reinf measurements cost: ', q2Cost)
+print('reinf reference cost: ', refQ2Cost)
 print('ratio2= ', ratio2)
-print('total cost: ', cost)
+print('chapter cost: ', cCost)
 print('ratio3= ', ratio3)
+print('total cost: ', cost)
+print('ratio4= ', ratio4)
 '''
 
 import os
 from misc_utils import log_messages as lmsg
 fname= os.path.basename(__file__)
-if (ratio1<1e-6) and (ratio2<1e-6) and (ratio3<1e-6):
+if (ratio1<1e-6) and (ratio2<1e-6) and (ratio3<1e-6) and (ratio4<1e-6):
     print('test: '+fname+': ok.')
 else:
     lmsg.error('test: '+fname+' ERROR.')

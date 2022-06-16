@@ -32,8 +32,8 @@ class CuaPre(epc.EntPyCost):
     def TieneDescompuestos(self):
         return (self.NumDescompuestos()>0)
 
-    def AgregaComponente(self, cod_ud, cod_el, r, f= 1.0):
-        self.unidades.AgregaComponente(elementos,cod_ud,cod_el,r,f)
+    def appendComponent(self, cod_ud, cod_el, r, f= 1.0):
+        self.unidades.appendComponent(elementos,cod_ud,cod_el,r,f)
 
     def LeeBC3Elementales(self, elem):
         ''' Read elementary prices.'''
