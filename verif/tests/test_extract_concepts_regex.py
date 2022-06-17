@@ -61,11 +61,11 @@ print('num. unitary prices: ', numUnitPrices)
 '''
 
 import os
-from misc_utils import log_messages as lmsg
+import logging
 fname= os.path.basename(__file__)
 if ((price==0.0) and (numChapters==0) and (numElementaryPrices==25) and (numUnitPrices==13) and (numQuantities==0)):
     print('test: '+fname+': ok.')
 else:
-    lmsg.error('test: '+fname+' ERROR.')
+    logging.error('test: '+fname+' ERROR.')
 
 

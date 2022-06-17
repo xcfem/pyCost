@@ -63,9 +63,9 @@ print('ratio1= ', ratio1)
 '''
 
 import os
-from misc_utils import log_messages as lmsg
+import logging
 fname= os.path.basename(__file__)
 if (ratio1<1e-6):
     print('test: '+fname+': ok.')
 else:
-    lmsg.error('test: '+fname+' ERROR.')
+    logging.error('test: '+fname+' ERROR.')

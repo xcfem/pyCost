@@ -16,9 +16,9 @@ ch02_02= ch02.subcapitulos.newChapter(Chapter(cod= '02.02', tit= 'Chapter 02.02'
 totalChapters= len(obra.subcapitulos)+len(ch02.subcapitulos)
 
 import os
-from misc_utils import log_messages as lmsg
+import logging
 fname= os.path.basename(__file__)
 if (totalChapters==4):
     print('test: '+fname+': ok.')
 else:
-    lmsg.error('test: '+fname+' ERROR.')
+    logging.error('test: '+fname+' ERROR.')

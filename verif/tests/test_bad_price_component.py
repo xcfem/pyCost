@@ -21,10 +21,10 @@ retcode = subprocess.call([sys.executable, testBadPriceComponent],
 print(retcode)
 '''
 
-from misc_utils import log_messages as lmsg
+import logging
 fname= os.path.basename(__file__)
 if(retcode!=0):
     print('test: '+fname+': ok.')
 else:
-    lmsg.error('test: '+fname+' ERROR.')
+    logging.error('test: '+fname+' ERROR.')
 

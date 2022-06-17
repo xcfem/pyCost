@@ -42,9 +42,9 @@ print('num. elementary prices: ', numElementaryPrices)
 '''
 
 import os
-from misc_utils import log_messages as lmsg
+import logging
 fname= os.path.basename(__file__)
 if ((ratio1<1e-6) and (numChapters==3) and (numElementaryPrices==3) and (numQuantities==4)):
     print('test: '+fname+': ok.')
 else:
-    lmsg.error('test: '+fname+' ERROR.')
+    logging.error('test: '+fname+' ERROR.')
