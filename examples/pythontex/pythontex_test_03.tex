@@ -1,6 +1,7 @@
 %% Example of use of pythontex in combination with pyCost
 \documentclass[11pt]{article}% 
 \usepackage{pythontex}
+\usepackage{longtable}
 \usepackage{lipsum}
 
 \begin{document} 
@@ -27,12 +28,21 @@ def getPriceTable(codes):
     return retval.strip()
 
 def getTable(codes):
-    retval= '\\begin{tabular}{|c|c|p{9cm}|} \n'
+    retval= '\\begin{longtable}{|c|c|p{9cm}|} \n'
     retval+= '\\hline \n'
-    retval+= 'Código & Unidad & Descripción \\\\ \n'
+    retval+= '\\textbf{Código} & \\textbf{Unidad} & \\textbf{Descripción} \\\\ \n'
     retval+= '\\hline \n'
+    retval+= '\\endfirsthead \n'
+    retval+= '\\hline \n'
+    retval+= '\\textbf{Código} & \\textbf{Unidad} & \\textbf{Descripción} \\\\ \n'
+    retval+= '\\hline \n'
+    retval+= '\\endhead \n'
+    retval+= '\\hline \n'
+    retval+= '\\endfoot \n'
+    retval+= '\\hline \n'
+    retval+= '\\endlastfoot \n'
     retval+= getPriceTable(codes)
-    retval+= "\\end{tabular}\n"
+    retval+= "\\end{longtable}\n"
     return retval
     
         
@@ -42,7 +52,7 @@ The price table is:
 
 \begin{center}
 \begin{small}
-    \pyc{tabular_str= getTable(['CANALACO36','CELAUS'])}%
+    \pyc{tabular_str= getTable(['CANALACO26','CANALACO36','CELAUS','CERSIL','CIMENTA01'])}%
     \pyc{print(tabular_str, file=sys.stdout, flush=True)}%
 \end{small}
 \end{center}
