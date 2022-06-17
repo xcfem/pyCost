@@ -1,4 +1,7 @@
 '''Test data.'''
+from pycost.structure import obra
+from pycost.structure.chapter import Chapter
+from pycost.structure.unit_price_quantities import UnitPriceQuantities
 
 obra= obra.Obra(cod="test", tit="Test title")
 
@@ -7,7 +10,7 @@ pth= os.path.dirname(__file__)
 # print("pth= ", pth)
 if(not pth):
     pth= '.'
-obra.readFromYaml(pth+'/../../verif/tests/data/test_03_prices.yaml')
+obra.readFromYaml(pth+'/../data/test_03_prices.yaml')
 
 ch01= obra.subcapitulos.newChapter(Chapter(cod= '01', tit= 'Test'))
 

@@ -1,0 +1,46 @@
+\documentclass{book}%
+\usepackage[T1]{fontenc}%
+\usepackage[utf8]{inputenc}%
+\usepackage{lmodern}%
+\usepackage{textcomp}%
+\usepackage{lastpage}%
+\usepackage[spanish]{babel}%
+\usepackage{aeguill}%
+\usepackage{minitoc}%
+\usepackage{longtable}%
+%
+\selectlanguage{spanish}%
+%
+\begin{document}%
+\normalsize%
+\part{Presupuestos parciales}%
+\label{sec:Presupuestosparciales}%
+\chapter{Test}%
+\label{sec:Test}%
+\small%
+\begin{longtable}{lrlrr}%
+Partida&Cantidad&Descripción&\multicolumn{1}{p{1.5cm}}{Precio unitario}&Importe\\%
+\hline%
+\endhead%
+\multicolumn{5}{r}{../..}\\%
+\endfoot%
+\endlastfoot%
+MAACE0201&20.000 kg.&\multicolumn{1}{p{5cm}}{Rebar steel.}&0.62&12.400\\%
+&&&&\\%
+ACERO0103&500.000 kg&\multicolumn{1}{p{5cm}}{Reinforcement steel.}&1.13&565.000\\%
+&&&&\\%
+\multicolumn{4}{p{8cm}}{\textbf{Total: Test}}&\textbf{577.400}\\%
+\end{longtable}%
+\normalsize
+
+%
+\noindent%
+\large%
+\textbf{Total: Test title }%
+\dotfill%
+\textbf{577.40}%
+\newline%
+\normalsize
+
+%
+\end{document}

@@ -64,6 +64,9 @@ echo "$BLEU" "  pickle read/write tests." "$NORMAL"
 python tests/pickle/test_write_pickle.py
 python tests/pickle/test_read_pickle.py
 python tests/pickle/test_yaml_to_pickle.py
+echo "$BLEU" "  LaTeX write tests." "$NORMAL"
+python tests/latex/measurements_01.py
+python tests/latex/partial_estimates_01.py
 
 
 END=$(date +%s.%N)

@@ -5,12 +5,16 @@ from __future__ import print_function
 
 import os
 import pylatex
-from pycost.structure import obra
-from pycost.structure.chapter import Chapter
-from pycost.structure.unit_price_quantities import UnitPriceQuantities
 from pycost.utils import pylatex_utils
+import logging
+import filecmp
 
-exec(open("test_estimates.py").read())
+# Read data from file.
+pth= os.path.dirname(__file__)
+# print("pth= ", pth)
+if(not pth):
+    pth= '.'
+exec(open(pth+"/./test_estimates.py").read())
 
 # Store text int pylatex doc.
 doc= pylatex.Document(documentclass= 'book')
@@ -24,7 +28,28 @@ obra.writePartialBudgetsIntoLatexDocument(doc)
 
 # Generate LaTeX file.
 outputFilesBaseName= 'partial_estimates_01'
-doc.generate_tex(outputFilesBaseName)
+texFileName= outputFilesBaseName+'.tex'
+thisFile= pth+'/./'+outputFilesBaseName
+doc.generate_tex(thisFile)
+thisFile+= '.tex'
 
-# Remove temporary files.
+# Remove temporary files (if any).
 pylatex_utils.removeLtxTemporaryFiles(outputFilesBaseName)
+
+# Compare with reference file.
+refFile= pth+'/../data/ref_'+texFileName
+
+ok= filecmp.cmp(refFile, thisFile, shallow=False)
+
+# print(ok)
+# print(thisFile)
+
+fname= os.path.basename(__file__)
+if (ok):
+    print('test: '+fname+': ok.')
+else:
+    logging.error('test: '+fname+' ERROR.')
+
+# Remove LaTeX file
+if os.path.exists(thisFile):
+    os.remove(thisFile)
