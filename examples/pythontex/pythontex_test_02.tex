@@ -1,8 +1,8 @@
 %% Example of use of pythontex in combination with pyCost
 \documentclass[11pt]{article}% 
-\usepackage{amsmath} 
-\usepackage{pythontex} 
-\usepackage{nopageno} 
+\usepackage{pythontex}
+\usepackage{lipsum}
+
 \begin{document} 
  
  
@@ -10,6 +10,7 @@
  
 import os
 from pycost.structure import obra
+from pycost.utils import pylatex_utils
 
 obra= obra.Obra(cod="test", tit="Test title")
 
@@ -18,35 +19,29 @@ pth= os.path.dirname(__file__)
 # print("pth= ", pth)
 if(not pth):
     pth= '.'
-obra.readFromYaml(pth+'/../../../verif/tests/data/test_file_05.yaml')
-
-def getPriceDescription(code):
-    unitPrice= obra.findPrice(code)
-    return unitPrice.long_description
+obra.readFromYaml(pth+'/../../../verif/tests/data/yaml/test_file_05.yaml')
 
 def getPriceTable(codes):
-    tabData= list()
-    for code in codes:
-        description= getPriceDescription(code)
-        tabData.append([code, description])
-    retval= str()
-    for row in tabData:
-        retval+= row[0] + ' & ' + row[1] + '\\\\\n'
-        retval+= '\\hline\n'
-    return retval
-
+    tabData= obra.getPriceDescriptions(codes)
+    retval= pylatex_utils.getTabularDataFromList(tabData)
+    return retval.strip()
+        
 \end{pycode}
  
 The price table is:
 
 \begin{center}
 \begin{small}
-  \begin{tabular}{|c|p{11cm}|}
-    \hline
-    Código & Descripción \\
-    \hline
-  \py{getPriceTable(['CANALACO36','CELAUS'])}
-  \end{tabular}
+    \pyc{tabular_str= '\\begin{tabular}{|c|c|p{9cm}|} \n'}%
+    \pyc{tabular_str+= '\\hline \n'}%
+    \pyc{tabular_str+= 'Código & Unidad & Descripción \\\\ \n'}%
+    \pyc{tabular_str+= '\\hline \n'}%
+    \pyc{tabular_str+= getPriceTable(['CANALACO36','CELAUS'])}%
+    \pyc{tabular_str+= "\\end{tabular}\n"}%
+  \pyc{print(tabular_str, file=sys.stdout, flush=True)}%
   \end{small}
 \end{center}
+
+\lipsum
+
 \end{document}

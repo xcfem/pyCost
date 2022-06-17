@@ -453,6 +453,20 @@ class Obra(cp.Chapter):
         doc.create("Presupuestos parciales" + '\n')
         super(Obra,self).WriteHCalcPre(outputFile,'root')
 
+    def getPriceDescriptions(self, codes):
+        ''' Return a list populated with the codes and the corresponding
+            descriptions.
+
+        :param codes: list of the codes of the desired descriptions.
+        '''
+        retval= list()
+        for code in codes:
+            unitPrice= self.findPrice(code)
+            unit= unitPrice.unidad
+            description= unitPrice.long_description
+            retval.append([code, unit, description])
+        return retval
+
     def SimulaDescomp(self, origen, destino):
         precios.SimulaDescomp(origen,destino)
 

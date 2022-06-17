@@ -138,6 +138,22 @@ class LongTable(pylatex.table.LongTable):
 
         self.append(pylatex.Command('endlastfoot'))
 
+def getTabularDataFromList(listData):
+    ''' Return tabular data in LaTeX format from the data stored in the
+        list argument.
+
+    :param listData: list of lists.
+    '''
+    retval= str()
+    for row in listData:
+        if(len(row)>0):
+            retval+= row[0]
+            for item in row[1:]:
+                retval+= ' & ' + item
+            retval+= '\\\\\n' # row ends.
+            retval+= '\\hline\n' # hline
+    return retval
+
 
 def getLatexSection(parentSection):
     ''' Returns the section to use from this of its ancestor.'''

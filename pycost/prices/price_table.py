@@ -111,11 +111,9 @@ class CuaPre(epc.EntPyCost):
         writePriceTableOneIntoLatexDocument(os)
         writePriceTableTwoIntoLatexDocument(os)
 
-
     def WriteHCalc(self, os):
         self.elementos.WriteHCalc(os)
         self.unidades.WriteHCalc(os)
-
 
     def SimulaDescomp(self, origen, destino):
         self.unidades.SimulaDescomp(origen,destino)

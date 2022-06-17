@@ -18,7 +18,7 @@ pth= os.path.dirname(__file__)
 # print("pth= ", pth)
 if(not pth):
     pth= '.'
-obra.readFromYaml(pth+'/../../../verif/tests/data/test_03_prices.yaml')
+obra.readFromYaml(pth+'/../../../verif/tests/data/yaml/test_03_prices.yaml')
 
 def getPriceDescription(code):
     unitPrice= obra.findPrice(code)
