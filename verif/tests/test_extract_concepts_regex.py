@@ -15,7 +15,7 @@ pth= os.path.dirname(__file__)
 # print("pth= ", pth)
 if(not pth):
     pth= '.'
-pendingLinks= site.readFromYaml(pth+'/data/test_file_05.yaml')
+pendingLinks= site.readFromYaml(pth+'/data/yaml/test_file_05.yaml')
 
 extracted= obra.Obra(cod="extracted", tit="Extracted concepts.")
 conceptCodes= ['AR.*', 'DBANCOIND.*']
@@ -23,7 +23,7 @@ extracted= site.extractConceptsRegex(conceptCodes, extracted)
 
 
 # Write in YAML format
-yamlFile= pth+'/data/test_extract_concepts_regex.yaml'
+yamlFile= pth+'/data/yaml/test_extract_concepts_regex.yaml'
 with open(yamlFile, 'w') as outputFile:
     outputs= yaml.dump(extracted.getDict(), outputFile, allow_unicode=True)
 outputFile.close()

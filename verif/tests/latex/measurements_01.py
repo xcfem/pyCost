@@ -36,7 +36,7 @@ thisFile+= '.tex'
 pylatex_utils.removeLtxTemporaryFiles(outputFilesBaseName)
 
 # Compare with reference file.
-refFile= pth+'/../data/ref_'+texFileName
+refFile= pth+'/../data/latex/ref_'+texFileName
 
 ok= filecmp.cmp(refFile, thisFile, shallow=False)
 

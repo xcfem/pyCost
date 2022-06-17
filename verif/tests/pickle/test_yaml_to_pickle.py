@@ -12,8 +12,8 @@ pth= os.path.dirname(__file__)
 # print("pth= ", pth)
 if(not pth):
     pth= '.'
-yamlFileName= pth+'/../data/test_file_05.yaml'
-pickleFileName= pth+'/../data/test_file_05.pkl'
+yamlFileName= pth+'/../data/yaml/test_file_05.yaml'
+pickleFileName= pth+'/../data/pickle/test_file_05.pkl'
 obra.yaml_to_pickle(inputFileName= yamlFileName, outputFileName= pickleFileName)
 
 inputFile= open(pickleFileName, 'rb')

@@ -20,8 +20,8 @@ if(not pth):
     pth= '.'
 
 # Read price data from two databases
-pendingLinks= site.readFromYaml(pth+'/./data/test_file_05.yaml')
-pendingLinks= site.readFromYaml(pth+'/./data/test_file_07.yaml')
+pendingLinks= site.readFromYaml(pth+'/./data/yaml/test_file_05.yaml')
+pendingLinks= site.readFromYaml(pth+'/./data/yaml/test_file_07.yaml')
 
 # Check the number of prices read.
 numElementaryPrices= len(site.precios.Elementales())
@@ -32,7 +32,7 @@ numUnitPricesRef= 115+77
 ratio2= abs(numUnitPrices-numUnitPricesRef)/numUnitPricesRef
 
 # Write in YAML format
-site.writeYaml(pth+'/./data/test_file_08.yaml')
+site.writeYaml(pth+'/./data/yaml/test_file_08.yaml')
 
 '''
 print(numElementaryPrices)

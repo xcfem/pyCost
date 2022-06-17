@@ -15,7 +15,7 @@ pth= os.path.dirname(__file__)
 # print("pth= ", pth)
 if(not pth):
     pth= '.'
-pendingLinks= site.readFromYaml(pth+'/../data/test_file_01.yaml')
+pendingLinks= site.readFromYaml(pth+'/../data/yaml/test_file_01.yaml')
 
 
 # Get test values.

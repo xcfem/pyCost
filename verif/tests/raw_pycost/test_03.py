@@ -15,7 +15,7 @@ pth= os.path.dirname(__file__)
 # print("pth= ", pth)
 if(not pth):
     pth= '.'
-obra.readFromYaml(pth+'/../data/test_03_prices.yaml')
+obra.readFromYaml(pth+'/../data/yaml/test_03_prices.yaml')
 
 ch01= obra.subcapitulos.newChapter(Chapter(cod= '01', tit= 'Chapter 01'))
 

@@ -15,14 +15,14 @@ pth= os.path.dirname(__file__)
 # print("pth= ", pth)
 if(not pth):
     pth= '.'
-pendingLinks= site.readFromYaml(pth+'/../data/test_file_05.yaml')
+pendingLinks= site.readFromYaml(pth+'/../data/yaml/test_file_05.yaml')
 
 # Dump into pickle file.
-with open(pth+'/../data/test_file_05.pkl', 'wb') as fh:
+with open(pth+'/../data/pickle/test_file_05.yaml', 'wb') as fh:
     pickle.dump(site, fh)
 
 # Read from pickle file
-inputFile= open(pth+'/../data/test_file_05.pkl', 'rb')
+inputFile= open(pth+'/../data/pickle/test_file_05.pkl', 'rb')
 newRootChapter= pickle.load(inputFile)
 inputFile.close()
 

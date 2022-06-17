@@ -12,7 +12,7 @@ pth= os.path.dirname(__file__)
 # print("pth= ", pth)
 if(not pth):
     pth= '.'
-inputFile= open(pth+'/../data/test_file_05.pkl', 'rb')
+inputFile= open(pth+'/../data/pickle/test_file_05.pkl', 'rb')
 rootChapter= pickle.load(inputFile)
 inputFile.close()
 

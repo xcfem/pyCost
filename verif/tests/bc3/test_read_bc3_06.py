@@ -15,13 +15,13 @@ pth= os.path.dirname(__file__)
 # print("pth= ", pth)
 if(not pth):
     pth= "."
-inputFile= open(pth+'/../data/test_file_10.bc3',mode='r', encoding="utf-8")
+inputFile= open(pth+'/../data/bc3/test_file_10.bc3',mode='r', encoding="utf-8")
 
 site.readBC3(inputFile)
 inputFile.close()
 
 # Write in YAML format
-site.writeYaml(pth+'/../data/test_file_10.yaml')
+site.writeYaml(pth+'/../data/yaml/test_file_10.yaml')
 
 
 # Get test values.

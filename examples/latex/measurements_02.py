@@ -17,7 +17,7 @@ pth= os.path.dirname(__file__)
 # print("pth= ", pth)
 if(not pth):
     pth= '.'
-pendingLinks= site.readFromYaml(pth+'/../../verif/tests/data/test_file_05.yaml')
+pendingLinks= site.readFromYaml(pth+'/../../verif/tests/data/yaml/test_file_05.yaml')
 
 doc= pylatex.Document(documentclass= 'book')
 doc.packages.append(pylatex.Package('babel', options = ['spanish']))

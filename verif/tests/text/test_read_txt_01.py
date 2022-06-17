@@ -11,7 +11,7 @@ pth= os.path.dirname(__file__)
 # print("pth= ", pth)
 if(not pth):
     pth= '.'
-inputFileName= pth+'/../data/test_file_09.txt'
+inputFileName= pth+'/../data/text/test_file_09.txt'
 file1 = open(inputFileName,"r")
 
 import re
