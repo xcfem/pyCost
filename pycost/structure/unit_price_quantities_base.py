@@ -115,7 +115,7 @@ class UnitPriceQuantitiesBase(epc.EntPyCost):
         data_table.add_row(row)
         data_table.add_empty_row()
 
-    def ImprLtxPre(self, data_table):
+    def writePartialBudgetsIntoLatexDocument(self, data_table):
         row= self.getLtxBudgetRow('p{5cm}')
         data_table.add_row(row)
         data_table.add_empty_row()

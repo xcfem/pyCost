@@ -92,6 +92,7 @@ def str_tipo(tipo):
     return retval
 
 quantitiesCaption= 'Mediciones'
+partialBudgetsCaption= 'Presupuestos parciales'
 
 sin_desc_string= u'sin_desc'
 

@@ -269,15 +269,22 @@ class Chapter(bc3_entity.EntBC3):
         logging.error("aqui 1: " + self.getTitle() + ' ' + self.subcapitulos.size() + u" subcapítulos" + '\n')
         logging.error("aqui 2: " + otro.getTitle() + ' ' + otro.subcapitulos.size() + u" subcapítulos" + '\n')
         self.subcapitulos.ImprCompLtxMed(os,pylatex_utils.getLatexSection(sect), otro.subcapitulos)
+        
     def writeQuantitiesIntoLatexDocument(self, doc, parentSection):
-        if(self.hasQuantities()):
+        ''' Write quantities in the pylatex document argument.
+
+        :param doc: document to write into.
+        :param parentSection: section command for the parent chapter.
+        '''
+        if(self.hasQuantities()): # There is something to write.
             sectName= pylatex_utils.getLatexSection(parentSection)
             caption= basic_types.quantitiesCaption
             if(sectName!='part'):
-              caption= self.getTitle()
+                caption= self.getTitle()
             docPart= pylatex_utils.getPyLatexSection(sectName,caption)
             self.quantities.writeQuantitiesIntoLatexDocument(docPart)
-            self.subcapitulos.writeQuantitiesIntoLatexDocument(docPart,sectName)
+            if(len(self.subcapitulos)>0):
+                self.subcapitulos.writeQuantitiesIntoLatexDocument(docPart,sectName)
             doc.append(docPart)
         
     def writePriceTableOneIntoLatexDocument(self, doc, sect):
@@ -339,21 +346,30 @@ class Chapter(bc3_entity.EntBC3):
             return True
         else:
             return self.subcapitulos.hasQuantities()
-    def ImprLtxPre(self, doc, sect):
-        '''Imprime presupuestos parciales.'''
-        if(self.hasQuantities()):
-            if(sect!='root'):
-                doc.append(pylatex.Section(self.getTitle()))
-            self.quantities.ImprLtxPre(doc,self.getTitle())
-            self.subcapitulos.ImprLtxPre(doc,pylatex_utils.getLatexSection(sect))
-            if self.subcapitulos:
-                doc.append(pylatex.Command('noindent'))
-                doc.append(pylatex_utils.largeCommand())
-                doc.append(pylatex.utils.bold('Total: '+self.getTitle()+' '))
-                doc.append(pylatex.Command('dotfill'))
-                doc.append(pylatex.utils.bold(self.getLtxPriceString()))
-                doc.append(pylatex.NewLine())
-                doc.append(pylatex_utils.NormalSizeCommand())
+        
+    def writePartialBudgetsIntoLatexDocument(self, doc, parentSection):
+        '''Write partial budgets in the pylatex document argument.
+
+        :param doc: document to write into.
+        :param parentSection: section command for the parent chapter.
+        '''
+        if(self.hasQuantities()): # There is something to write.
+            sectName= pylatex_utils.getLatexSection(parentSection)
+            caption= basic_types.partialBudgetsCaption
+            if(sectName!='part'):
+                caption= self.getTitle()
+            docPart= pylatex_utils.getPyLatexSection(sectName,caption)
+            self.quantities.writePartialBudgetsIntoLatexDocument(docPart,self.getTitle())
+            if(len(self.subcapitulos)>0):
+                self.subcapitulos.writePartialBudgetsIntoLatexDocument(docPart, sectName)
+                docPart.append(pylatex.Command('noindent'))
+                docPart.append(pylatex_utils.largeCommand())
+                docPart.append(pylatex.utils.bold('Total: '+self.getTitle()+' '))
+                docPart.append(pylatex.Command('dotfill'))
+                docPart.append(pylatex.utils.bold(self.getLtxPriceString()))
+                docPart.append(pylatex.NewLine())
+                docPart.append(pylatex_utils.NormalSizeCommand())
+            doc.append(docPart)
 
     def WriteHCalcMed(self, os, sect):
         if sect!='root':

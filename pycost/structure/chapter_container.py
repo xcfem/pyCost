@@ -162,6 +162,11 @@ class Subcapitulos(list, epc.EntPyCost):
             i.ImprCompLtxMed(os,sect,j)
 
     def writeQuantitiesIntoLatexDocument(self, doc, sectName):
+        ''' Write quantities in the pylatex document argument.
+
+        :param doc: document to write into.
+        :param sectName: section command for the chapter.
+        '''        
         for j in self:
             (j).writeQuantitiesIntoLatexDocument(doc,sectName)
 
@@ -193,16 +198,19 @@ class Subcapitulos(list, epc.EntPyCost):
             j= otro[k]
             (i).ImprCompLtxPre(os,sect,j)
 
-    def ImprLtxPre(self, os, sect):
-        '''Imprime presupuestos parciales.'''
+    def writePartialBudgetsIntoLatexDocument(self, os, sectName):
+        ''' Write partial budgets into the pylatex document argument.
+
+        :param doc: pylatex document to write into.
+        :param sectName: section command for the chapter.
+        '''
         for j in self:
-            (j).ImprLtxPre(os,sect)
+            (j).writePartialBudgetsIntoLatexDocument(os,sectName)
 
 
     def WriteHCalcMed(self, os, sect):
         for j in self:
             (j).WriteHCalcMed(os,sect)
-
 
     def WriteHCalcPre(self, os, sect):
         for j in self:

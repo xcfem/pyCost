@@ -1,10 +1,12 @@
 # _*_ coding:utf-8 _*_
-#pylatex_utils.py
-
-'''Things that are not yet implemented in pylatex.'''
-
-
+'''pylatex_utils.py: things that are not yet implemented in pylatex.'''
+from pathlib import Path
+import os
+import glob
 import pylatex
+
+
+
 
 class Part(pylatex.section.Section):
     '''A class that represents a part.'''
@@ -269,3 +271,20 @@ def ascii2latex(s):
             continue
         retval+= c
     return retval
+
+def removeLtxTemporaryFiles(latexFileName):
+    ''' Remove LaTeX temporary files corresponding to the file name argument.
+
+    :param latexFileName: name of the latex file.
+    '''
+    fileName= Path(latexFileName).stem # Get file name without extension.
+    temporaryFilesExtensions= ['aux', 'bmt', 'lof', 'log', 'lot', 'ptc*', 'mtc*', 'toc', 'idx', 'maf', 'out'] # regular LaTeX temporary files.
+    temporaryFilesExtensions.extend(['4ct', '4tc', 'css', 'idv', 'lg', 'tmp', 'xref']) # htlatex temporary files.
+    for ext in temporaryFilesExtensions:
+        searchFor= fileName+'.'+ext
+        fileList= glob.glob(searchFor)
+        for filePath in fileList:
+            try:
+                os.remove(filePath)
+            except:
+                logging.error("Error while deleting file : ", filePath)        

@@ -1,9 +1,5 @@
 # -*- coding: utf-8 -*-
-#ChapterQuantities.py
-#Quantities de un capítulo.
-
-
-
+'''ChapterQuantities.py quantities inside a chapter.'''
 
 import pylatex
 from pycost.structure import unit_price_quantities
@@ -16,7 +12,8 @@ from pycost.utils import pylatex_utils
 from pycost.utils import basic_types
 
 class ChapterQuantities(list, epc.EntPyCost):
-
+    ''' Quantities inside a chapter. '''
+    
     def __init__(self):
         super(ChapterQuantities, self).__init__()
         epc.EntPyCost.__init__(self, owner= None)
@@ -77,6 +74,10 @@ class ChapterQuantities(list, epc.EntPyCost):
             doc.append(pylatex_utils.NormalSizeCommand())
 
     def writeQuantitiesIntoLatexDocument(self, doc):
+        ''' Write quantities into pylatex document.
+
+        :param doc: pylatex document to write into.
+        '''
         if len(self):
             num_campos= 6
             longTableStr= 'lrrrrr'
@@ -117,8 +118,12 @@ class ChapterQuantities(list, epc.EntPyCost):
             doc.append("\\end{longtable}" + '\n')
             doc.append(pylatex_utils.NormalSizeCommand())
 
-    def ImprLtxPre(self, doc, tit):
-        '''Imprime presupuestos parciales.'''
+    def writePartialBudgetsIntoLatexDocument(self, doc, tit):
+        ''' Write partial budgets into pylatex document.
+
+        :param doc: pylatex document to write into.
+        :param tit: title of the corresponding chapter.
+        '''
         if len(self):
             doc.append(pylatex_utils.SmallCommand())
             num_campos= 5
@@ -135,7 +140,7 @@ class ChapterQuantities(list, epc.EntPyCost):
                 data_table.end_table_footer()
                 data_table.end_table_last_footer()
                 for i in self:
-                    (i).ImprLtxPre(data_table)
+                    (i).writePartialBudgetsIntoLatexDocument(data_table)
                 data_table.add_row([pylatex.table.MultiColumn(4, align=pylatex.utils.NoEscape('p{8cm}'),data=pylatex.utils.bold('Total: '+tit)),pylatex.utils.bold(self.getLtxPriceString())])
             doc.append(pylatex_utils.NormalSizeCommand())
 

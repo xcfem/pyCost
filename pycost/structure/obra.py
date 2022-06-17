@@ -358,8 +358,9 @@ class Obra(cp.Chapter):
 
     def ImprLtxPresGen(self, doc):
         part= pylatex_utils.Part("Presupuestos Generales")
-        self.ImprLtxPresEjecMat(doc)
-        self.ImprLtxPresContrata(doc)
+        self.ImprLtxPresEjecMat(part)
+        self.ImprLtxPresContrata(part)
+        doc.append(part)
 
     def writeQuantitiesIntoLatexDocument(self, doc):
         super(Obra,self).writeQuantitiesIntoLatexDocument(doc,'root')
@@ -397,12 +398,8 @@ class Obra(cp.Chapter):
         self.writePriceTableOneIntoLatexDocument(doc)
         self.writePriceTableTwoIntoLatexDocument(doc)
 
-    def ImprLtxPreParc(self, doc):
-        part= pylatex_utils.Part('Presupuestos parciales')
-        part.append(pylatex.Command('parttoc'))
-        part.append(pylatex.Command('setcounter{chapter}{0}'))
-        super(Obra,self).ImprLtxPre(part,'root')
-        doc.append(part)
+    def writePartialBudgetsIntoLatexDocument(self, doc):
+        super(Obra,self).writePartialBudgetsIntoLatexDocument(doc,'root')
 
     def ImprCompLtxPreParc(self, otra, doc):
         part= pylatex_utils.Part('Presupuestos parciales')
@@ -435,7 +432,7 @@ class Obra(cp.Chapter):
         retval.append(pylatex.Command('doparttoc'))
         self.writeQuantitiesIntoLatexDocument(retval) #Quantities.
         self.writePriceTablesIntoLatexDocument(retval) #Price lists.
-        self.ImprLtxPreParc(retval) #Presupuestos parciales.
+        self.writePartialBudgetsIntoLatexDocument(retval) #Presupuestos parciales.
         self.ImprLtxResumen(retval) #Resument presup. parciales.
         self.ImprLtxPresGen(retval) #Presupuestos generales.
         return retval
