@@ -425,16 +425,24 @@ class Obra(cp.Chapter):
         ImprCompLtxPreParc(otra,os)
         #ImprLtxResumen(os)
 
+    def writeIntoLatexDocument(self, doc):
+        ''' Write budget in the pylatex document argument.
+
+        :param doc: document to write into.
+        '''
+        self.writeQuantitiesIntoLatexDocument(doc) #Quantities.
+        self.writePriceTablesIntoLatexDocument(doc) #Price lists.
+        self.writePartialBudgetsIntoLatexDocument(doc) #Presupuestos parciales.
+        self.ImprLtxResumen(doc) #Resument presup. parciales.
+        self.ImprLtxPresGen(doc) #Presupuestos generales.
+        return doc
+    
     def getLatexDocument(self):
         '''get the construction budget in LaTeX format.'''
         retval= pylatex.Document(documentclass= 'book')
         retval.packages.append(pylatex.Package('minitoc'))
         retval.append(pylatex.Command('doparttoc'))
-        self.writeQuantitiesIntoLatexDocument(retval) #Quantities.
-        self.writePriceTablesIntoLatexDocument(retval) #Price lists.
-        self.writePartialBudgetsIntoLatexDocument(retval) #Presupuestos parciales.
-        self.ImprLtxResumen(retval) #Resument presup. parciales.
-        self.ImprLtxPresGen(retval) #Presupuestos generales.
+        self.writeIntoLatexDocument(retval)
         return retval
 
     def ImprLtxInformeObra(self, os):
