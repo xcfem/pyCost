@@ -97,7 +97,7 @@ partialBudgetsCaption= 'Presupuestos parciales'
 sin_desc_string= u'sin_desc'
 
 def to_words(number, genre, lng= 'es'):
-    return num2words(number, lang= lng)
+    return num2words(number, lang= lng, to='currency')
 
 def human_readable(number,decPlaces= 3):
     #return locale.format('%d',number, grouping= True)
