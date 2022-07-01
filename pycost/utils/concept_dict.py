@@ -10,7 +10,7 @@ class KeyMap(dict):
 
 
 class ConceptDict(epy.EntPyCost):
-    #claves= KeyMap()
+    #claves= KeyMap() claves key map has been DEPRECATED.
     def __init__(self):
         ''' Constructor.'''
         super(ConceptDict,self).__init__()
@@ -77,4 +77,5 @@ class ConceptDict(epy.EntPyCost):
         
 
 def find_concept(conceptName):
-    return ConceptDict.claves[conceptName]
+    logging.error('find_concept has been deprecated. Use the getUnitPrice method of the root chapter.')
+    return None
