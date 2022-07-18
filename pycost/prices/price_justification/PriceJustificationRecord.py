@@ -55,14 +55,15 @@ class PriceJustificationRecord(object):
         return retval
 
     def writePriceJustification(self, data_table):
-        row= [pylatex_utils.ascii2latex(self.codigo)]
+        row= [self.codigo]
         row.append(basic_types.human_readable(self.rdto))
-        row.append(pylatex_utils.ascii2latex(self.unidad))
-        row.append(pylatex_utils.ascii2latex(self.titulo))
+        row.append(self.unidad)
+        row.append(self.titulo)
         if self.is_percentage:
-            row.append(basic_types.human_readable(self.unitario) + pylatex_utils.ltx_porciento); #Percentage
+            strUnary= basic_types.human_readable(self.unitario) + pylatex_utils.ltx_percent # Percentage
         else:
-            row.append(basic_types.human_readable(self.unitario)) #Precio unitario
+            strUnary= basic_types.human_readable(self.unitario) # price per unit.
+        row.append(strUnary)
         row.append(basic_types.human_readable(self.getTotal()))
         data_table.add_row(row)
 

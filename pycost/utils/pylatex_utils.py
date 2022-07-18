@@ -193,7 +193,8 @@ def getPyLatexSection(sctName,title):
         return Subparagraph(title)
     
 
-ltx_porciento= '\\%'
+#ltx_percent= '\\%'
+ltx_percent= '%'
 ltx_ldots= '\\ldots'
 def ltx_symbol(doc,s):
     doc.append('\\symbol{' + s + '}')

@@ -313,7 +313,12 @@ class Obra(cp.Chapter):
         self.readQuantitiesFromBC3(co)
         logging.info("done." + '\n')
 
-    def ImprLtxPresEjecMat(self, doc):
+    def ImprLtxPresEjecMat(self, doc, signaturesFileName= 'firmas'):
+        ''' Write the budget for material execution.
+
+        :param doc: pylatex document to write into.
+        :param signaturesFileName: name of the file containing the signatures.
+        '''
         #doc.append(u"\\subportadilla{Presupuestos Generales}{Presupuesto de ejecución material}" + '\n')
         chapter= pylatex_utils.Chapter(title= u'Presupuesto de ejecución material',numbering= False)
         chapter.append(pylatex.Command('cleardoublepage'))
@@ -331,10 +336,11 @@ class Obra(cp.Chapter):
         chapter.append(pylatex.NewLine())
         chapter.append(u'Asciende el presente presupuesto de ejecución material a la expresada cantidad de: ')
         chapter.append(pylatex_utils.textsc(basic_types.to_words(self.getRoundedPrice(),False) + ' euros.'))
-        chapter.append(pylatex_utils.input('firmas'))
+        if(signaturesFileName):
+            part.append(pylatex.Command('input{'+signaturesFileName+'}'))
         doc.append(chapter)
         
-    def ImprLtxPresContrata(self, doc):
+    def ImprLtxPresContrata(self, doc, signaturesFileName= 'firmas'):
         #doc.append(u"\\subportadilla{Presupuestos Generales}{Presupuesto de ejecución por contrata}" + '\n')
         chapter= pylatex_utils.Chapter(title= u'Presupuesto de ejecución por contrata',numbering= False)
         chapter.append(pylatex.Command('cleardoublepage'))
@@ -345,7 +351,8 @@ class Obra(cp.Chapter):
         chapter.append(center)
         chapter.append(pylatex.VerticalSpace('2cm'))
         self.percentages.printLtx(chapter,self.getRoundedPrice())
-        chapter.append(pylatex_utils.input('firmas'))
+        if(signaturesFileName):
+            part.append(pylatex.Command('input{'+signaturesFileName+'}'))
         doc.append(chapter)
 
     def WriteBC3(self, os, pos= ''):
@@ -372,27 +379,30 @@ class Obra(cp.Chapter):
         super(Obra,self).ImprCompLtxMed(os,'root',otra)
         doc.create(pylatex_utils.ltx_end("landscape") + '\n')
 
-    def writePriceTableOneIntoLatexDocument(self, doc):
+    def writePriceTableOneIntoLatexDocument(self, doc, signaturesFileName= 'firmas'):
         part= pylatex_utils.Part("Cuadro de precios no. 1")
         part.append(pylatex.Command('parttoc'))
         part.append(pylatex.Command('setcounter{chapter}{0}'))
         super(Obra,self).writePriceTableOneIntoLatexDocument(part,'root')
-        part.append(pylatex.Command('input{firmas}'))
+        if(signaturesFileName):
+            part.append(pylatex.Command('input{'+signaturesFileName+'}'))
         doc.append(part)
 
-    def writePriceTableTwoIntoLatexDocument(self, doc):
+    def writePriceTableTwoIntoLatexDocument(self, doc, signaturesFileName= 'firmas'):
         part= pylatex_utils.Part("Cuadro de precios no. 2")
         part.append(pylatex.Command('parttoc'))
         part.append(pylatex.Command('setcounter{chapter}{0}'))
         super(Obra,self).writePriceTableTwoIntoLatexDocument(part,'root')
-        part.append(pylatex.Command('input{firmas}'))
+        if(signaturesFileName):
+            part.append(pylatex.Command('input{'+signaturesFileName+'}'))
         doc.append(part)
 
-    def getPriceJustification(self):
-        retval= pylatex.Document(documentclass= 'article')
-        super(Obra,self).writePriceJustification(retval,'root')
-        retval.append(pylatex.Command('input{firmas}'))
-        return retval
+    def writePriceJustification(self, doc, signaturesFileName= 'firmas'):
+        part= pylatex_utils.Part("Justificación de precios")
+        super(Obra,self).writePriceJustification(part, 'root')
+        if(signaturesFileName):
+            part.append(pylatex.Command('input{'+signaturesFileName+'}'))
+        doc.append(part)
 
     def writePriceTablesIntoLatexDocument(self, doc):
         self.writePriceTableOneIntoLatexDocument(doc)

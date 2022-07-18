@@ -287,28 +287,45 @@ class Chapter(bc3_entity.EntBC3):
                 self.subcapitulos.writeQuantitiesIntoLatexDocument(docPart,sectName)
             doc.append(docPart)
         
-    def writePriceTableOneIntoLatexDocument(self, doc, sect):
+    def writePriceTableOneIntoLatexDocument(self, doc, parentSection):
+        ''' Write price table number one in the pylatex document argument.
+
+        :param doc: document to write into.
+        :param parentSection: section command for the parent chapter.
+        '''
         if(self.TieneDescompuestos()):
-            if sect!='root':
-                doc.append('\\' + sect + '{' + self.getTitle() + '}' + '\n')
+            if parentSection!='root':
+                doc.append('\\' + parentSection + '{' + self.getTitle() + '}' + '\n')
             if self.precios.TieneDescompuestos():
                 self.precios.writePriceTableOneIntoLatexDocument(doc)
-            self.subcapitulos.writePriceTableOneIntoLatexDocument(doc,pylatex_utils.getLatexSection(sect))
-    def writePriceTableTwoIntoLatexDocument(self, doc, sect):
+            self.subcapitulos.writePriceTableOneIntoLatexDocument(doc,pylatex_utils.getLatexSection(parentSection))
+    def writePriceTableTwoIntoLatexDocument(self, doc, parentSection):
+        ''' Write price table number two in the pylatex document argument.
+
+        :param doc: document to write into.
+        :param parentSection: section command for the parent chapter.
+        '''
         if self.precios.TieneDescompuestos():
-            if sect!='root':
-                doc.append('\\' + sect + '{' + self.getTitle() + '}' + '\n')
+            if parentSection!='root':
+                doc.append('\\' + parentSection + '{' + self.getTitle() + '}' + '\n')
             self.precios.writePriceTableTwoIntoLatexDocument(doc)
-        self.subcapitulos.writePriceTableTwoIntoLatexDocument(doc,pylatex_utils.getLatexSection(sect))
-    def writePriceJustification(self, doc, sect):
-        if(sect!='root'):
-            doc.append('\\' + sect + '{' + self.getTitle() + '}' + '\n')
+        self.subcapitulos.writePriceTableTwoIntoLatexDocument(doc,pylatex_utils.getLatexSection(parentSection))
+        
+    def writePriceJustification(self, doc, parentSection):
+        ''' Write price justification table in the pylatex document argument.
+
+        :param doc: document to write into.
+        :param parentSection: section command for the parent chapter.
+        '''
+        if(parentSection!='root'):
+            doc.append('\\' + parentSection + '{' + self.getTitle() + '}' + '\n')
         if self.precios.TieneDescompuestos():
             self.precios.writePriceJustification(doc)
-        self.subcapitulos.writePriceJustification(doc,pylatex_utils.getLatexSection(sect))
-    def ImprLtxResumen(self, doc, sect, recurre= True):
+        self.subcapitulos.writePriceJustification(doc,pylatex_utils.getLatexSection(parentSection))
+        
+    def ImprLtxResumen(self, doc, parentSection, recurre= True):
         if(self.hasQuantities()):
-            if(sect!='root'):
+            if(parentSection!='root'):
                 doc.add_item(self.getTitle())
                 doc.append(pylatex.Command('dotfill'))
                 doc.append(self.getLtxPriceString())
@@ -319,12 +336,12 @@ class Chapter(bc3_entity.EntBC3):
                 doc.append(pylatex.utils.bold(self.getLtxPriceString()))
                 doc.append(pylatex_utils.NormalSizeCommand())
             if(recurre):
-                self.subcapitulos.ImprLtxResumen(doc,pylatex_utils.getLatexSection(sect),recurre)
-    def ImprCompLtxPre(self, doc, sect, otro):
-        if sect!='root':
-            doc.append('\\' + sect + '{' + self.getTitle() + '}' + '\n')
+                self.subcapitulos.ImprLtxResumen(doc,pylatex_utils.getLatexSection(parentSection),recurre)
+    def ImprCompLtxPre(self, doc, parentSection, otro):
+        if parentSection!='root':
+            doc.append('\\' + parentSection + '{' + self.getTitle() + '}' + '\n')
         self.quantities.ImprCompLtxPre(doc, self.getTitle(),otro.quantities,otro.getTitle())
-        self.subcapitulos.ImprCompLtxPre(doc,pylatex_utils.getLatexSection(sect), otro.subcapitulos)
+        self.subcapitulos.ImprCompLtxPre(doc,pylatex_utils.getLatexSection(parentSection), otro.subcapitulos)
         if self.subcapitulos:
             doc.append(pylatex_utils.ltx_beg_itemize + '\n')
             doc.append("\\item \\noindent \\textbf{Total " + self.getTitle()
@@ -371,18 +388,18 @@ class Chapter(bc3_entity.EntBC3):
                 docPart.append(pylatex_utils.NormalSizeCommand())
             doc.append(docPart)
 
-    def WriteHCalcMed(self, os, sect):
-        if sect!='root':
+    def WriteHCalcMed(self, os, parentSection):
+        if parentSection!='root':
             os.write(self.getTitle() + '\n')
         self.quantities.WriteHCalcMed(os)
-        self.subcapitulos.WriteHCalcMed(os,sect)
+        self.subcapitulos.WriteHCalcMed(os,parentSection)
 
-    def WriteHCalcPre(self, os, sect):
-        if sect!='root':
+    def WriteHCalcPre(self, os, parentSection):
+        if parentSection!='root':
             os.write(self.getTitle() + '\n')
         self.quantities.WriteHCalcPre(os)
         os.write(tab + tab + tab + tab + "Total: " + tab + self.getTitle() + tab + self.getPriceString() + '\n')
-        self.subcapitulos.WriteHCalcPre(os,sect)
+        self.subcapitulos.WriteHCalcPre(os,parentSection)
 
     def getQuantitiesReport(self):
         retval= self.quantities.getQuantitiesReport()
