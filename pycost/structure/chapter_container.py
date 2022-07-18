@@ -9,6 +9,7 @@ from pycost.structure import chapter
 from pycost.bc3 import codes
 from pycost.bc3 import codigos_obra
 from pycost.utils import EntPyCost as epc
+from pycost.utils import basic_types
 
 class Subcapitulos(list, epc.EntPyCost):
 
@@ -152,14 +153,14 @@ class Subcapitulos(list, epc.EntPyCost):
             (i).WriteBC3(os,nueva_pos)
             conta+=1
 
-    def ImprCompLtxMed(self, os, sect, otro):
+    def ImprCompLtxMed(self, os, parentSection, otro):
         '''Suponemos que ambos capítulos tienen el 
            mismo número de subcapítulos.'''
         sz= len(otro)
         for k in range(0,sz):
             i= self[k]
             j= otro[k]
-            i.ImprCompLtxMed(os,sect,j)
+            i.ImprCompLtxMed(os,parentSection,j)
 
     def writeQuantitiesIntoLatexDocument(self, doc, sectName):
         ''' Write quantities in the pylatex document argument.
@@ -170,33 +171,43 @@ class Subcapitulos(list, epc.EntPyCost):
         for j in self:
             (j).writeQuantitiesIntoLatexDocument(doc,sectName)
 
-    def writePriceTableOneIntoLatexDocument(self, os, sect):
+    def writePriceTableOneIntoLatexDocument(self, os, parentSection):
         for j in self:
-            (j).writePriceTableOneIntoLatexDocument(os,sect)
+            (j).writePriceTableOneIntoLatexDocument(os,parentSection)
 
-    def writePriceTableTwoIntoLatexDocument(self, os, sect):
+    def writePriceTableTwoIntoLatexDocument(self, os, parentSection):
         for j in self:
-            (j).writePriceTableTwoIntoLatexDocument(os,sect)
+            (j).writePriceTableTwoIntoLatexDocument(os,parentSection)
 
-    def writePriceJustification(self, data_table, sect):
+    def writeElementaryPrices(self, doc, parentSection, tipos=  [basic_types.mdo, basic_types.maq, basic_types.mat]):
+        ''' Write the elementary prices table.
+
+        :param doc: pylatex document to write into.
+        :param parentSection: section command for the parent chapter.
+        :param tipos: types of the prices to write (maquinaria, materiales o mano de obra) defaults to all of them.
+        '''
         for j in self:
-            (j).writePriceJustification(data_table,sect)
+            (j).writeElementaryPrices(doc, parentSection, tipos)
+
+    def writePriceJustification(self, data_table, parentSection):
+        for j in self:
+            (j).writePriceJustification(data_table,parentSection)
 
 
-    def ImprLtxResumen(self, doc, sect, recurre):
+    def ImprLtxResumen(self, doc, parentSection, recurre):
         if len(self):
             with doc.create(pylatex.Itemize()) as itemize:
                 for j in self:
-                    (j).ImprLtxResumen(itemize,sect,recurre)
+                    (j).ImprLtxResumen(itemize,parentSection,recurre)
 
-    def ImprCompLtxPre(self, os, sect, otro):
+    def ImprCompLtxPre(self, os, parentSection, otro):
         '''Suponemos que ambos capítulos tienen el 
            mismo número de subcapítulos.'''
         sz= len(otro)
         for k in range(0,sz):
             i= self[k]
             j= otro[k]
-            (i).ImprCompLtxPre(os,sect,j)
+            (i).ImprCompLtxPre(os,parentSection,j)
 
     def writePartialBudgetsIntoLatexDocument(self, os, sectName):
         ''' Write partial budgets into the pylatex document argument.
@@ -208,13 +219,13 @@ class Subcapitulos(list, epc.EntPyCost):
             (j).writePartialBudgetsIntoLatexDocument(os,sectName)
 
 
-    def WriteHCalcMed(self, os, sect):
+    def WriteHCalcMed(self, os, parentSection):
         for j in self:
-            (j).WriteHCalcMed(os,sect)
+            (j).WriteHCalcMed(os,parentSection)
 
-    def WriteHCalcPre(self, os, sect):
+    def WriteHCalcPre(self, os, parentSection):
         for j in self:
-            (j).WriteHCalcPre(os,sect)
+            (j).WriteHCalcPre(os, parentSection)
 
     def hasQuantities(self):
         '''Returns true if al least one of the chapters have quantities.'''

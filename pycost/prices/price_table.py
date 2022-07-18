@@ -5,6 +5,7 @@ from pycost.prices import elementary_price_container
 from pycost.prices import unit_price_container
 from pycost.bc3 import codigos_obra
 from pycost.utils import EntPyCost as epc
+from pycost.utils import basic_types
 
 class CuaPre(epc.EntPyCost):
     ''' Price tables:
@@ -89,9 +90,13 @@ class CuaPre(epc.EntPyCost):
             self.unidades.LeeSpre(iS,elementos)
 
 
-    def ImprLtxElementales(self, os):
-        '''Write elementary prices.''' 
-        self.elementos.printLtx(os)
+    def writeElementaryPrices(self, doc, tipos=  [basic_types.mdo, basic_types.maq, basic_types.mat]):
+        ''' Write the elementary prices table.
+
+        :param doc: pylatex document to write into.
+        :param tipos: types of the prices to write (maquinaria, materiales o mano de obra) defaults to all of them.
+        '''
+        self.elementos.writeLatex(doc, tipos)
 
     def writePriceJustification(self, doc):
         '''Write price justification.'''

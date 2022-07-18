@@ -2,6 +2,7 @@
 #ElementaryPrice.py
 
 import logging
+from pycost.utils import pylatex_utils
 from pycost.utils import basic_types
 from pycost.utils import measurable as m
 from decimal import Decimal
@@ -47,7 +48,7 @@ class ElementaryPrice(m.Measurable):
         else:
             logging.warning('Argument is none.')
 
-    def printLtx(self, data_table):
+    def writeLatex(self, data_table):
         row= [pylatex_utils.ascii2latex(self.Codigo())]
         row.append(pylatex_utils.ascii2latex(self.Unidad()))
         row.append(pylatex_utils.ascii2latex(self.getTitle()))

@@ -209,34 +209,34 @@ def ltx_emph(doc, str):
     return '\\emph{' + str + '}'
 
 # Entornos
-def ltx_begin(doc, str):
-    doc.append('\\begin{' + str + '}')
-def ltx_end(doc, str):
-    doc.append('\\end{' + str + '}')
+def ltx_begin(textStr):
+    return '\\begin{' + textStr + '}'
+def ltx_end(textStr):
+    return '\\end{' + textStr + '}'
 
 # Varios
 ltx_newpage= '\\newpage'
-def ltx_input(doc, str):
-    doc.append('\\input{' + str + '}')
+def ltx_input(doc, textStr):
+    doc.append('\\input{' + textStr + '}')
 
 # Estructura
 
-def ltx_part(doc,  str):
-    doc.append('\\part{' + str + '}')
-def ltx_star_part(doc,  str):
-    doc.append('\\part*{' + str + '}')
-def ltx_chapter(doc,  str):
-    doc.append('\\chapter{' + str + '}')
-def ltx_star_chapter(doc,  str):
-    doc.append('\\chapter*{' + str + '}')
-def ltx_section(doc,  str):
-    doc.append('\\section{' + str + '}')
-def ltx_subsection(doc,  str):
-    doc.append('\\subsection{' + str + '}')
-def ltx_subsubsection(doc,  str):
-    doc.append('\\subsubsection{' + str + '}')
-def ltx_paragraph(doc,  str):
-    doc.append('\\paragraph{' + str + '}')
+def ltx_part(doc,  textStr):
+    doc.append('\\part{' + textStr + '}')
+def ltx_star_part(doc,  textStr):
+    doc.append('\\part*{' + textStr + '}')
+def ltx_chapter(doc,  textStr):
+    doc.append('\\chapter{' + textStr + '}')
+def ltx_star_chapter(doc,  textStr):
+    doc.append('\\chapter*{' + textStr + '}')
+def ltx_section(doc,  textStr):
+    doc.append('\\section{' + textStr + '}')
+def ltx_subsection(doc,  textStr):
+    doc.append('\\subsection{' + textStr + '}')
+def ltx_subsubsection(doc,  textStr):
+    doc.append('\\subsubsection{' + textStr + '}')
+def ltx_paragraph(doc,  textStr):
+    doc.append('\\paragraph{' + textStr + '}')
 
 # Listas
 ltx_beg_itemize= '\\begin{itemize}'
@@ -250,17 +250,17 @@ ltx_hline= '\\hline'
 ltx_endhead= '\\endhead'
 ltx_endfoot= '\\endfoot'
 ltx_endlastfoot= '\\endlastfoot'
-def ltx_cline(doc,  str):
-    doc.append('\\cline{' + str + '}')
+def ltx_cline(doc,  textStr):
+    doc.append('\\cline{' + textStr + '}')
 def ltx_datos_multicolumn( num_campos, just, texto):
     return ('{' + num_campos + '}{' + just + '}{' + texto + '}')
-def ltx_multicolumn(str):
-    return '\\multicolumn' + str
+def ltx_multicolumn(textStr):
+    return '\\multicolumn' + textStr
 
 def ascii2latex(s):
     '''Return the equivalent latex code.'''
     tmp= s
-    # if type(s) == str:
+    # if type(s) == textStr:
     #     # Ignore errors even if the string is not proper UTF-8 or has
     #     # broken marker bytes.
     #     # Python built-in function unicode() can do this.

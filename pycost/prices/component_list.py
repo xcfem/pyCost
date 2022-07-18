@@ -1,6 +1,5 @@
 # -*- coding: utf-8 -*-
 #ComponentList.py
-
 import logging
 from pycost.utils import EntPyCost as epc
 from pycost.prices.price_justification import PriceJustificationList as pjl

@@ -310,7 +310,19 @@ class Chapter(bc3_entity.EntBC3):
                 doc.append('\\' + parentSection + '{' + self.getTitle() + '}' + '\n')
             self.precios.writePriceTableTwoIntoLatexDocument(doc)
         self.subcapitulos.writePriceTableTwoIntoLatexDocument(doc,pylatex_utils.getLatexSection(parentSection))
-        
+
+    def writeElementaryPrices(self, doc, parentSection, tipos=  [basic_types.mdo, basic_types.maq, basic_types.mat]):
+        ''' Write the elementary prices table.
+
+        :param doc: pylatex document to write into.
+        :param parentSection: section command for the parent chapter.
+        :param tipos: types of the prices to write (maquinaria, materiales o mano de obra) defaults to all of them.
+        '''
+        if(parentSection!='root'):
+            doc.append('\\' + parentSection + '{' + self.getTitle() + '}' + '\n')
+        self.precios.writeElementaryPrices(doc, tipos)
+        self.subcapitulos.writeElementaryPrices(doc, pylatex_utils.getLatexSection(parentSection))
+    
     def writePriceJustification(self, doc, parentSection):
         ''' Write price justification table in the pylatex document argument.
 

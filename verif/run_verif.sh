@@ -68,6 +68,7 @@ echo "$BLEU" "  LaTeX write tests." "$NORMAL"
 python tests/latex/measurements_01.py
 python tests/latex/partial_estimates_01.py
 python tests/latex/price_justification.py
+python tests/latex/elementary_prices.py
 
 
 END=$(date +%s.%N)

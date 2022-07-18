@@ -1,9 +1,11 @@
 # -*- coding: utf-8 -*-
 #ElementaryPrices.py
 
+import pylatex
 import logging
 from pycost.prices import elementary_price
 from pycost.utils import concept_dict
+from pycost.utils import pylatex_utils
 from pycost.utils import basic_types
 from pycost.prices import component_list
 from pycost.bc3 import codes
@@ -18,26 +20,35 @@ class ElementaryPrices(concept_dict.ConceptDict):
         logging.error("ElementaryPrices.WriteHCalc no implementada." + '\n')
 
     @staticmethod
-    def printLatexHeader(tipo, os):
+    def writeLatexHeader(doc, tipo):
+        ''' Write the header for the elementary prices table.
+
+        :param doc: pylatex document to write into.
+        :param tipo: type of the prices to write (maquinaria, materiales o mano de obra).
+        '''
         str_tipo= basic_types.str_tipo(tipo)
 
-        doc.append(pylatex_utils.ltx_begin("center") + '\n')
+        doc.append(pylatex.NoEscape(pylatex_utils.ltx_begin(textStr= "center") + '\n'))
         doc.append(pylatex_utils.LargeCommand())
         doc.append(" Precios elementales de " + str_tipo + ' ')
         doc.append(pylatex_utils.NormalSizeCommand())
-        doc.append(pylatex_utils.ltx_end("center") + '\n')
+        doc.append(pylatex.NoEscape(pylatex_utils.ltx_end("center") + '\n'))
         doc.append(pylatex_utils.SmallCommand())
-        doc.append("\\begin{longtable}{|l|l|p{4cm}|r|}" + '\n'
-           + pylatex_utils.ltx_hline + '\n'
-           + u"Código & Ud. & Denominación & Precio\\\\" + '\n'
-           + pylatex_utils.ltx_hline + '\n'
-           + pylatex_utils.ltx_endhead + '\n'
-           + pylatex_utils.ltx_hline + '\n'
-           + "\\multicolumn{" + 4 + "}{|r|}{../..}\\\\\\hline" + '\n'
-           + pylatex_utils.ltx_endfoot + '\n'
-           + pylatex_utils.ltx_hline + '\n'
-           + pylatex_utils.ltx_endlastfoot + '\n')
-
+        # Create LaTeX longtable.
+        longTableStr= '|l|l|p{4cm}|r|'
+        headerRow= [u'Código','Ud.',u'Denominación',u'Coste directo']
+        with doc.create(pylatex_utils.LongTable(longTableStr)) as data_table:
+            data_table.add_hline()
+            data_table.add_row(headerRow)
+            data_table.add_hline()
+            data_table.end_table_header()
+            data_table.add_hline()
+            data_table.add_row((pylatex.table.MultiColumn(4, align='|r|',data='../..'),))
+            data_table.add_hline()
+            data_table.end_table_footer()
+            data_table.add_hline()
+            data_table.end_table_last_footer()
+        return data_table
 
     def LeeMdoSpre(self, iS):
         if iS.peek()!= 26:
@@ -181,23 +192,29 @@ class ElementaryPrices(concept_dict.ConceptDict):
             logging.info("Loaded " + str(sz) + " elementary prices. " + '\n')
 
 
-    def ImprLtxTipo(self, tipo, os):
-        printLatexHeader(tipo,os)
-        el= None
-        for i in self:
-            el= ((i).second)
-            if el.getType() == tipo:
-                el.printLtx(os)
+    def writeLatexPricesOfType(self, doc, tipo):
+        ''' Write the header for the elementary prices table.
 
-        doc.append("\\end{longtable}" + '\n')
+        :param doc: pylatex document to write into.
+        :param tipo: type of the prices to write (maquinaria, materiales o mano de obra).
+        '''
+        data_table= self.writeLatexHeader(doc, tipo)
+        el= None
+        for key in self.concepts:
+            el= self.concepts[key]
+            if el.getType() == tipo:
+                el.writeLatex(data_table)
         doc.append(pylatex_utils.NormalSizeCommand())
 
-    def printLtx(self, os):
-        ImprLtxTipo(mdo,os)
-        doc.append(pylatex_utils.ltx_newpage + '\n')
-        ImprLtxTipo(maq,os)
-        doc.append(pylatex_utils.ltx_newpage + '\n')
-        ImprLtxTipo(mat,os)
+    def writeLatex(self, doc, tipos= [basic_types.mdo, basic_types.maq, basic_types.mat]):
+        ''' Write the header for the elementary prices table.
+
+        :param doc: pylatex document to write into.
+        :param tipos: types of the prices to write (maquinaria, materiales o mano de obra) defaults to all of them.
+        '''
+        for tp in tipos:
+            self.writeLatexPricesOfType(doc, tp)
+            # doc.append(pylatex.NoEscape(pylatex_utils.ltx_newpage + '\n'))
 
     def getDict(self):
         ''' Return a dictionary containing the object data.'''
