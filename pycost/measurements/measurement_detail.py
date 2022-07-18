@@ -67,7 +67,11 @@ class Quantities(list, epy.EntPyCost):
         for i in self:
             (i).WriteBC3(os)
 
-    def ImprCompLtx(self, os, otra):
+    def ImprCompLtx(self, doc, otra):
+        ''' Write LaTeX report.
+
+        :param doc: pylatex document to write into.
+        '''
         media_empty_line= ['','', '', '', '']
         for i in self:
           for j in otra:
@@ -90,7 +94,11 @@ class Quantities(list, epy.EntPyCost):
 
         doc.add_empty_row()
 
-    def ImprCompLtx(self, os):
+    def ImprCompLtx(self, doc):
+        ''' Write LaTeX report.
+
+        :param doc: pylatex document to write into.
+        '''
         media_empty_line= ['','', '', '', '', '']
         for i in self:
             doc.append(media_empty_line)

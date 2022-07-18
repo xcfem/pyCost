@@ -29,6 +29,10 @@ class Percentages(epc.EntPyCost):
         return self.ApplyPercentage(p,self.iva)
 
     def printLtx(self, doc, precio_ejec_mat):
+        ''' Write in LaTeX format.
+
+        :param doc: pylatex document to write into.
+        '''
         precision= 2
         with doc.create(pylatex.Itemize()) as itemize:
             itemize.add_item(u'Total presupuesto de ejecución material ')

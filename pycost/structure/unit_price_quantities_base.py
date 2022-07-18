@@ -55,11 +55,15 @@ class UnitPriceQuantitiesBase(epc.EntPyCost):
         row.append((pylatex.table.MultiColumn(3,align= pylatex.utils.NoEscape(ancho),data= pylatex.utils.NoEscape('\\scriptsize '+pylatex_utils.ascii2latex(self.ud.getLongDescription())+ '\\normalsize'))))
         data_table.add_row(row)
 
-    def ImprCompLtxMed(self, doc, otra):
-        '''Imprime la partida.'''
+    def ImprCompLtxMed(self, doc, other):
+        '''Imprime la partida.
+
+        :param doc: pylatex document to write into.
+        :param other: project to compare with.
+        '''
         doc.add_empty_row()
-        totalr_otra= human_readable(otra.getRoundedTotal())
-        otra.printLatexHeader(os,totalr_otra,"p{4.5cm}|")
+        totalr_other= human_readable(other.getRoundedTotal())
+        other.printLatexHeader(os,totalr_other,"p{4.5cm}|")
         doc.append(pylatex_utils.ltx_ampsnd)
         totalr_esta= basic_types.human_readable(getRoundedTotal())
         printLatexHeader(os,totalr_esta,"p{4.5cm}")
@@ -68,8 +72,8 @@ class UnitPriceQuantitiesBase(epc.EntPyCost):
         doc.append(pylatex_utils.ltx_ampsnd)
         ImprLtxLeyenda(doc)
         doc.append(pylatex_utils.ltx_fin_reg + '\n' + pylatex_utils.ltx_hline + '\n')
-        quantities.ImprCompLtx(os,otra.quantities)
-        ImprLtxPie(os,totalr_otra)
+        quantities.ImprCompLtx(os,other.quantities)
+        ImprLtxPie(os,totalr_other)
         doc.append(pylatex_utils.ltx_ampsnd)
         ImprLtxPie(os,totalr_esta)
         doc.append(pylatex_utils.ltx_fin_reg + '\n')
@@ -77,8 +81,12 @@ class UnitPriceQuantitiesBase(epc.EntPyCost):
         doc.add_empty_row()
 
 
-    #not  @brief Imprime la partida.
-    def ImprCompLtxMed(self, os):
+    def ImprCompLtxMed(self, doc):
+        '''Imprime la partida.
+
+        :param doc: pylatex document to write into.
+        :param other: project to compare with.
+        '''        
         media_empty_line= ['','', '', '', '', '']
         doc.add_empty_row()
         doc.append(media_empty_line)
@@ -106,11 +114,11 @@ class UnitPriceQuantitiesBase(epc.EntPyCost):
         row.append(self.getLtxPriceString())
         return row
 
-    def ImprCompLtxPre(self, data_table, otra= None):
+    def ImprCompLtxPre(self, data_table, other= None):
         data_table.add_empty_row()
         row= ['','', '', '', '']
-        if(otra):
-            row= otra.getLtxBudgetRow('p{2.5cm}')
+        if(other):
+            row= other.getLtxBudgetRow('p{2.5cm}')
         row.extend(self.getLtxBudgetRow("p{2.5cm}"))
         data_table.add_row(row)
         data_table.add_empty_row()

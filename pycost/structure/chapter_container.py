@@ -171,13 +171,23 @@ class Subcapitulos(list, epc.EntPyCost):
         for j in self:
             (j).writeQuantitiesIntoLatexDocument(doc,sectName)
 
-    def writePriceTableOneIntoLatexDocument(self, os, parentSection):
-        for j in self:
-            (j).writePriceTableOneIntoLatexDocument(os,parentSection)
+    def writePriceTableOneIntoLatexDocument(self, doc, sectName):
+        ''' Write unit prices table one in the pylatex document argument.
 
-    def writePriceTableTwoIntoLatexDocument(self, os, parentSection):
+        :param doc: document to write into.
+        :param sectName: section command for the chapter.
+        '''
         for j in self:
-            (j).writePriceTableTwoIntoLatexDocument(os,parentSection)
+            (j).writePriceTableOneIntoLatexDocument(doc, sectName)
+
+    def writePriceTableTwoIntoLatexDocument(self, doc, sectName):
+        ''' Write unit prices table one in the pylatex document argument.
+
+        :param doc: document to write into.
+        :param sectName: section command for the chapter.
+        '''
+        for j in self:
+            (j).writePriceTableTwoIntoLatexDocument(doc, sectName)
 
     def writeElementaryPrices(self, doc, parentSection, tipos=  [basic_types.mdo, basic_types.maq, basic_types.mat]):
         ''' Write the elementary prices table.
@@ -190,33 +200,45 @@ class Subcapitulos(list, epc.EntPyCost):
             (j).writeElementaryPrices(doc, parentSection, tipos)
 
     def writePriceJustification(self, data_table, parentSection):
+        ''' Write unit prices table one in the pylatex document argument.
+
+        :param data_table: pylatex tabular data to populate.
+        :param parentSection: section command for the parent chapter.
+        '''
         for j in self:
             (j).writePriceJustification(data_table,parentSection)
 
 
-    def ImprLtxResumen(self, doc, parentSection, recurre):
+    def ImprLtxResumen(self, doc, parentSection, recursive):
+        ''' Write summary report.
+
+        :param doc: pylatex document to write into.
+        :param parentSection: section command for the parent chapter.
+        :param recursive: if true apply recursion through chapters.
+        '''
         if len(self):
             with doc.create(pylatex.Itemize()) as itemize:
                 for j in self:
-                    (j).ImprLtxResumen(itemize,parentSection,recurre)
+                    (j).ImprLtxResumen(itemize,parentSection,recursive)
 
-    def ImprCompLtxPre(self, os, parentSection, otro):
-        '''Suponemos que ambos capítulos tienen el 
-           mismo número de subcapítulos.'''
-        sz= len(otro)
-        for k in range(0,sz):
-            i= self[k]
-            j= otro[k]
-            (i).ImprCompLtxPre(os,parentSection,j)
+    def ImprCompLtxPre(self, doc, parentSection, other):
+        '''Compare chapters.
 
-    def writePartialBudgetsIntoLatexDocument(self, os, sectName):
+        :param doc: pylatex document to write into.
+        :param parentSection: section command for the parent chapter.
+        :param other: chapter to compare with.
+        '''
+        for i, j in zip(self, other):
+            i.ImprCompLtxPre(doc,parentSection,j)
+
+    def writePartialBudgetsIntoLatexDocument(self, doc, sectName):
         ''' Write partial budgets into the pylatex document argument.
 
         :param doc: pylatex document to write into.
         :param sectName: section command for the chapter.
         '''
         for j in self:
-            (j).writePartialBudgetsIntoLatexDocument(os,sectName)
+            (j).writePartialBudgetsIntoLatexDocument(doc,sectName)
 
 
     def WriteHCalcMed(self, os, parentSection):

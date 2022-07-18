@@ -73,6 +73,10 @@ class BC3Component(fr_entity.EntFR):
         return r.getTotal()
 
     def writePriceTableTwoIntoLatexDocument(self, doc, over):
+        ''' Write price table two into LaTeX document.
+
+        :param doc: pylatex document to write into.
+        '''
         r= self.getPriceJustificationRecord(over)
         r.writePriceTableTwoIntoLatexDocument(doc)
         return r.getTotal()

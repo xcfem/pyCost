@@ -99,22 +99,34 @@ class CuaPre(epc.EntPyCost):
         self.elementos.writeLatex(doc, tipos)
 
     def writePriceJustification(self, doc):
-        '''Write price justification.'''
+        '''Write price justification.
+
+        :param doc: pylatex document to write into.
+        '''
         self.unidades.writePriceJustification(doc)
 
 
-    def writePriceTableOneIntoLatexDocument(self, os):
-        '''Write first price table.'''
-        self.unidades.writePriceTableOneIntoLatexDocument(os)
+    def writePriceTableOneIntoLatexDocument(self, doc):
+        '''Write first price table.
 
-    def writePriceTableTwoIntoLatexDocument(self, os):
-        '''Write second prince table.'''
-        self.unidades.writePriceTableTwoIntoLatexDocument(os)
+        :param doc: pylatex document to write into.
+        '''
+        self.unidades.writePriceTableOneIntoLatexDocument(doc)
 
-    def writePriceTablesIntoLatexDocument(self, os):
-        '''Write both price tables.'''
-        writePriceTableOneIntoLatexDocument(os)
-        writePriceTableTwoIntoLatexDocument(os)
+    def writePriceTableTwoIntoLatexDocument(self, doc):
+        '''Write second prince table.
+
+        :param doc: pylatex document to write into.
+        '''
+        self.unidades.writePriceTableTwoIntoLatexDocument(doc)
+
+    def writePriceTablesIntoLatexDocument(self, doc):
+        '''Write both price tables.
+
+        :param doc: pylatex document to write into.
+        '''
+        writePriceTableOneIntoLatexDocument(doc)
+        writePriceTableTwoIntoLatexDocument(doc)
 
     def WriteHCalc(self, os):
         self.elementos.WriteHCalc(os)

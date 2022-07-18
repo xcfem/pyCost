@@ -341,6 +341,11 @@ class Obra(cp.Chapter):
         doc.append(chapter)
         
     def ImprLtxPresContrata(self, doc, signaturesFileName= 'firmas'):
+        ''' Write the contract execution budget.
+
+        :param doc: pylatex document to write into.
+        :param signaturesFileName: name of the file containing the signatures.
+        '''
         #doc.append(u"\\subportadilla{Presupuestos Generales}{Presupuesto de ejecución por contrata}" + '\n')
         chapter= pylatex_utils.Chapter(title= u'Presupuesto de ejecución por contrata',numbering= False)
         chapter.append(pylatex.Command('cleardoublepage'))
@@ -364,22 +369,38 @@ class Obra(cp.Chapter):
         self.WriteSubChaptersBC3(os,pos)
 
     def ImprLtxPresGen(self, doc):
+        ''' Write the general budget.
+
+        :param doc: pylatex document to write into.
+        '''
         part= pylatex_utils.Part("Presupuestos Generales")
         self.ImprLtxPresEjecMat(part)
         self.ImprLtxPresContrata(part)
         doc.append(part)
 
     def writeQuantitiesIntoLatexDocument(self, doc):
+        ''' Write measurements report.
+
+        :param doc: pylatex document to write into.
+        '''
         super(Obra,self).writeQuantitiesIntoLatexDocument(doc,'root')
 
-    def ImprCompLtxMed(self, otra, os):
+    def ImprCompLtxMed(self, doc, other):
+        ''' Write measurements comparison report.
+
+        :param doc: pylatex document to write into.
+        :param other: project to compare with.
+        '''
         doc.create(pylatex_utils.ltx_part(basic_types.quantitesCaption) + '\n')
         doc.create(pylatex.Command('parttoc'))
         doc.create(pylatex_utils.ltx_begin("landscape") + '\n')
-        super(Obra,self).ImprCompLtxMed(os,'root',otra)
+        super(Obra,self).ImprCompLtxMed(os,'root',other)
         doc.create(pylatex_utils.ltx_end("landscape") + '\n')
 
     def writePriceTableOneIntoLatexDocument(self, doc, signaturesFileName= 'firmas'):
+        '''
+        :param signaturesFileName: name of the file containing the signatures.
+        '''
         part= pylatex_utils.Part("Cuadro de precios no. 1")
         part.append(pylatex.Command('parttoc'))
         part.append(pylatex.Command('setcounter{chapter}{0}'))
@@ -389,6 +410,11 @@ class Obra(cp.Chapter):
         doc.append(part)
 
     def writePriceTableTwoIntoLatexDocument(self, doc, signaturesFileName= 'firmas'):
+        '''Write price table two.
+
+        :param doc: pylatex document to write into.
+        :param signaturesFileName: name of the file containing the signatures.
+        '''
         part= pylatex_utils.Part("Cuadro de precios no. 2")
         part.append(pylatex.Command('parttoc'))
         part.append(pylatex.Command('setcounter{chapter}{0}'))
@@ -408,6 +434,12 @@ class Obra(cp.Chapter):
         doc.append(part)
             
     def writePriceJustification(self, doc, signaturesFileName= 'firmas'):
+        ''' Write price justification.
+
+        :param doc: pylatex document to write into.
+        :param signaturesFileName: name of the file containing the signatures.
+        '''
+
         part= pylatex_utils.Part("Justificación de precios")
         super(Obra,self).writePriceJustification(part, 'root')
         if(signaturesFileName):
@@ -415,40 +447,61 @@ class Obra(cp.Chapter):
         doc.append(part)
 
     def writePriceTablesIntoLatexDocument(self, doc):
+        ''' Write price tables 1 and 2.
+
+        :param doc: pylatex document to write into.
+        '''
         self.writePriceTableOneIntoLatexDocument(doc)
         self.writePriceTableTwoIntoLatexDocument(doc)
 
     def writePartialBudgetsIntoLatexDocument(self, doc):
+        ''' Write partial budgets report.
+
+        :param doc: pylatex document to write into.
+        '''
         super(Obra,self).writePartialBudgetsIntoLatexDocument(doc,'root')
 
-    def ImprCompLtxPreParc(self, otra, doc):
+    def ImprCompLtxPreParc(self, doc, other):
+        ''' Compare partial budgets and write a report.
+
+        :param doc: pylatex document to write into.
+        :param other: project to compare with.
+        '''
         part= pylatex_utils.Part('Presupuestos parciales')
         part.append(pylatex.Command('parttoc'))
         part.append(pylatex.Command('setcounter{chapter}{0}'))
         part.append(pylatex_utils.ltx_begin("landscape") + '\n')
-        super(Obra,self).ImprCompLtxPre(part,'root',otra)
+        super(Obra,self).ImprCompLtxPre(part,'root',other)
         part.append(pylatex_utils.ltx_end("landscape") + '\n')
         doc.append(part)
 
     def ImprLtxResumen(self, doc):
+        ''' Write partial budgets summary.
+
+        :param doc: pylatex document to write into.
+        '''
         part= pylatex_utils.Part('Resumen de los presupuestos parciales')
         chapter= pylatex_utils.Chapter(title= 'Resumen',numbering= False)
         part.append(chapter)
         super(Obra,self).ImprLtxResumen(chapter,sect= 'root')
         doc.append(part)
 
-    def ImprCompLtx(self, otra, os):
-        ''' Prints the comparison with another project.'''
-        #ImprCompLtxMed(otra,os)
-        ImprCompLtxMed(otra,os)
+    def ImprCompLtx(self, doc, other):
+        ''' Prints the comparison with another project.
+
+        :param doc: pylatex document to write into.
+        :param other: project to compare with.
+        '''
+        #ImprCompLtxMed(other,os)
+        ImprCompLtxMed(other,os)
         precios.writePriceTablesIntoLatexDocument(os); #Price tables.
-        ImprCompLtxPreParc(otra,os)
+        ImprCompLtxPreParc(other,os)
         #ImprLtxResumen(os)
 
     def writeIntoLatexDocument(self, doc):
         ''' Write budget in the pylatex document argument.
 
-        :param doc: document to write into.
+        :param doc: pylatex document to write into.
         '''
         self.writeQuantitiesIntoLatexDocument(doc) #Quantities.
         self.writePriceTablesIntoLatexDocument(doc) #Price lists.

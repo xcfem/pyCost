@@ -262,13 +262,19 @@ class Chapter(bc3_entity.EntBC3):
         retval*= self.fr.getRoundedProduct()
         return retval
     
-    def ImprCompLtxMed(self, os, sect, otro):
-        if sect!='root':
-            doc.append('\\' + sect + '{' + self.getTitle() + '}' + '\n')
-        self.quantities.ImprCompLtxMed(os, otro.quantities)
+    def ImprCompLtxMed(self, doc, parentSection, other):
+        ''' Compare measurements of both projects and write a report.
+
+        :param doc: document to write into.
+        :param parentSection: section command for the parent chapter.
+        :param other: project to compare with.
+        '''
+        if parentSection!='root':
+            doc.append('\\' + parentSection + '{' + self.getTitle() + '}' + '\n')
+        self.quantities.ImprCompLtxMed(os, other.quantities)
         logging.error("aqui 1: " + self.getTitle() + ' ' + self.subcapitulos.size() + u" subcapítulos" + '\n')
-        logging.error("aqui 2: " + otro.getTitle() + ' ' + otro.subcapitulos.size() + u" subcapítulos" + '\n')
-        self.subcapitulos.ImprCompLtxMed(os,pylatex_utils.getLatexSection(sect), otro.subcapitulos)
+        logging.error("aqui 2: " + other.getTitle() + ' ' + other.subcapitulos.size() + u" subcapítulos" + '\n')
+        self.subcapitulos.ImprCompLtxMed(os,pylatex_utils.getLatexSection(parentSection), other.subcapitulos)
         
     def writeQuantitiesIntoLatexDocument(self, doc, parentSection):
         ''' Write quantities in the pylatex document argument.
@@ -335,7 +341,13 @@ class Chapter(bc3_entity.EntBC3):
             self.precios.writePriceJustification(doc)
         self.subcapitulos.writePriceJustification(doc,pylatex_utils.getLatexSection(parentSection))
         
-    def ImprLtxResumen(self, doc, parentSection, recurre= True):
+    def ImprLtxResumen(self, doc, parentSection, recursive= True):
+        ''' Write a summary report.
+
+        :param doc: document to write into.
+        :param parentSection: section command for the parent chapter.
+        :param recursive: if true apply recursion through chapters.
+        '''
         if(self.hasQuantities()):
             if(parentSection!='root'):
                 doc.add_item(self.getTitle())
@@ -347,18 +359,24 @@ class Chapter(bc3_entity.EntBC3):
                 doc.append(pylatex.Command('dotfill'))
                 doc.append(pylatex.utils.bold(self.getLtxPriceString()))
                 doc.append(pylatex_utils.NormalSizeCommand())
-            if(recurre):
-                self.subcapitulos.ImprLtxResumen(doc,pylatex_utils.getLatexSection(parentSection),recurre)
-    def ImprCompLtxPre(self, doc, parentSection, otro):
+            if(recursive):
+                self.subcapitulos.ImprLtxResumen(doc,pylatex_utils.getLatexSection(parentSection),recursive)
+    def ImprCompLtxPre(self, doc, parentSection, other):
+        ''' Write a comparison report.
+
+        :param doc: document to write into.
+        :param parentSection: section command for the parent chapter.
+        :param other: project to compare with.
+        '''
         if parentSection!='root':
             doc.append('\\' + parentSection + '{' + self.getTitle() + '}' + '\n')
-        self.quantities.ImprCompLtxPre(doc, self.getTitle(),otro.quantities,otro.getTitle())
-        self.subcapitulos.ImprCompLtxPre(doc,pylatex_utils.getLatexSection(parentSection), otro.subcapitulos)
+        self.quantities.ImprCompLtxPre(doc, self.getTitle(),other.quantities,other.getTitle())
+        self.subcapitulos.ImprCompLtxPre(doc,pylatex_utils.getLatexSection(parentSection), other.subcapitulos)
         if self.subcapitulos:
             doc.append(pylatex_utils.ltx_beg_itemize + '\n')
             doc.append("\\item \\noindent \\textbf{Total " + self.getTitle()
                + " (P. de construcción): } \\dotfill \\textbf{"
-               + otro.getLtxPriceString() + "} " + '\n' + '\n')
+               + other.getLtxPriceString() + "} " + '\n' + '\n')
             doc.append("\\item \\noindent \\textbf{Total " + self.getTitle()
                + " (P. modificado): }\\dotfill \\textbf{"
                + self.getLtxPriceString() + "} " + '\n')

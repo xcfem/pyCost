@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 #QuantitiesReport.py
 
-
+import pylatex
 from pycost.prices import unit_price_report as iuo
 
 class QuantitiesReport(dict):
@@ -17,7 +17,11 @@ class QuantitiesReport(dict):
         for i in otro:
             Inserta(UnitPriceReport((i).first,(i).second))
 
-    def printLtx(self, os):
+    def printLtx(self, doc):
+        ''' Write Latex report.
+
+        :param doc: pylatex document to write into.
+        '''
         if(size()>0):
             longTableStr= '|l|p{4cm}|r|r|'
             headerRow1= [u"Código",u"Descripción.",u"Medición",'Precio']

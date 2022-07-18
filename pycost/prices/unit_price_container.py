@@ -100,6 +100,10 @@ class Descompuestos(concept_dict.ConceptDict):
 
 
     def writePriceTableOneIntoLatexDocument(self, doc):
+        ''' Write unit price table one into a latex report.
+
+        :param doc: pylatex document to write into.
+        '''
         if(len(self)>=1):
             num_campos= 5
             doc.append(pylatex_utils.SmallCommand())
@@ -126,6 +130,10 @@ class Descompuestos(concept_dict.ConceptDict):
             doc.append(pylatex_utils.NormalSizeCommand())
 
     def writePriceJustification(self, doc):
+        ''' Write price justification into a latex report.
+
+        :param doc: pylatex document to write into.
+        '''
         if(len(self)>0):
             doc.append(pylatex_utils.SmallCommand())
             longTableStr= 'l'
@@ -135,6 +143,10 @@ class Descompuestos(concept_dict.ConceptDict):
             doc.append(pylatex_utils.NormalSizeCommand())
 
     def writePriceTableTwoIntoLatexDocument(self, doc):
+        ''' Write unit price table two into a latex report.
+
+        :param doc: pylatex document to write into.
+        '''
         if(len(self)>0):
             #doc.append(pylatex_utils.ltx_star_.chapter("Cuadro de precios no. 2") + '\n'
             doc.append(pylatex_utils.SmallCommand())

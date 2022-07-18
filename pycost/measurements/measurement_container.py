@@ -51,7 +51,12 @@ class ChapterQuantities(list, epc.EntPyCost):
                    + str((i).getRoundedTotal()) + '\\')
             os.write('|' + '\n')
 
-    def ImprCompLtxMed(self, os, otra):
+    def ImprCompLtxMed(self, doc, other):
+        ''' Write a LaTeX report containing a comparison of the measurements.
+
+        :param doc: pylatex documents to write into.
+        :param other: project to compare with.
+        '''
         if len(self):
             doc.append(pylatex_utils.ltx_tiny + '\n')
             doc.append(pylatex_utils.ltx_begin("longtable}{lrrrrr|lrrrrr") + '\n'
@@ -64,9 +69,9 @@ class ChapterQuantities(list, epc.EntPyCost):
                + pylatex_utils.ltx_endlastfoot + '\n')
             for i in self:
                  cod= (i).getUnitPriceCode()
-                 for j in otra:
+                 for j in other:
                     if(cod == (j).getUnitPriceCode()): break
-                    if(j!=otra.end()): #Found it!
+                    if(j!=other.end()): #Found it!
                         (i).ImprCompLtxMed(os,*(j))
                     else:
                         (i).ImprCompLtxMed(os)
@@ -89,7 +94,14 @@ class ChapterQuantities(list, epc.EntPyCost):
                     (i).writeQuantitiesIntoLatexDocument(data_table)
             doc.append(pylatex.Command('newpage'))
 
-    def ImprCompLtxPre(self, os, tit, otra, tit_otra):
+    def ImprCompLtxPre(self, doc, tit, other, tit_other):
+        ''' Write comparison report.
+
+        :param doc: pylatex document to write into.
+        :param tit: project title.
+        :param other: project to compare with.
+        :param tit_other: title of the other project.
+        '''
         if size():
             doc.append(pylatex_utils.ltx_tiny + '\n')
             doc.append(pylatex_utils.ltx_begin("longtable}{lrlrr|lrlrr") + '\n'
@@ -104,15 +116,15 @@ class ChapterQuantities(list, epc.EntPyCost):
                + pylatex_utils.ltx_endlastfoot + '\n')
             for i in self:
                  cod= (i).getUnitPriceCode()
-                 for j in otra:
+                 for j in other:
                      if(cod == (j).getUnitPriceCode()): break
-                 if(j!=otra.end()): #Found it!
+                 if(j!=other.end()): #Found it!
                      (i).ImprCompLtxPre(os,*(j))
                  else:
                      (i).ImprCompLtxPre(os)
 
             doc.append("\\multicolumn{4}{p{8cm}}{\\textbf{Total: "
-               + tit_otra + "}} & \\textbf{" + otra.getLtxPriceString() + "} & " + '\n')
+               + tit_other + "}} & \\textbf{" + other.getLtxPriceString() + "} & " + '\n')
             doc.append("\\multicolumn{4}{p{8cm}}{\\textbf{Total: "
                + tit + "}} & \\textbf{" + getLtxPriceString() + "}\\\\" + '\n')
             doc.append("\\end{longtable}" + '\n')
