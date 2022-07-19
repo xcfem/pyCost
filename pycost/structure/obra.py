@@ -337,7 +337,7 @@ class Obra(cp.Chapter):
         chapter.append(u'Asciende el presente presupuesto de ejecución material a la expresada cantidad de: ')
         chapter.append(pylatex_utils.textsc(basic_types.to_words(self.getRoundedPrice(),False) + ' euros.'))
         if(signaturesFileName):
-            part.append(pylatex.Command('input{'+signaturesFileName+'}'))
+            chapter.append(pylatex.Command('input{'+signaturesFileName+'}'))
         doc.append(chapter)
         
     def ImprLtxPresContrata(self, doc, signaturesFileName= 'firmas'):
@@ -357,7 +357,7 @@ class Obra(cp.Chapter):
         chapter.append(pylatex.VerticalSpace('2cm'))
         self.percentages.printLtx(chapter,self.getRoundedPrice())
         if(signaturesFileName):
-            part.append(pylatex.Command('input{'+signaturesFileName+'}'))
+            chapter.append(pylatex.Command('input{'+signaturesFileName+'}'))
         doc.append(chapter)
 
     def WriteBC3(self, os, pos= ''):
@@ -483,7 +483,7 @@ class Obra(cp.Chapter):
         part= pylatex_utils.Part('Resumen de los presupuestos parciales')
         chapter= pylatex_utils.Chapter(title= 'Resumen',numbering= False)
         part.append(chapter)
-        super(Obra,self).ImprLtxResumen(chapter,sect= 'root')
+        super(Obra,self).ImprLtxResumen(chapter, parentSection= 'root')
         doc.append(part)
 
     def ImprCompLtx(self, doc, other):
