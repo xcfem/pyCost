@@ -99,7 +99,12 @@ sin_desc_string= u'sin_desc'
 def to_words(number, genre, lng= 'es'):
     return num2words(number, lang= lng, to='currency')
 
-def human_readable(number,decPlaces= 3):
+def human_readable(number, decPlaces= 3):
+    ''' Return a string containing the number in a human readable form.
+
+    :param number: number to convert.
+    :param decPlaces: number of decimal places.
+    '''
     #return locale.format('%d',number, grouping= True)
     formatString= '{0:.'+str(decPlaces)+'f}'
     return formatString.format(number, grouping= True)
