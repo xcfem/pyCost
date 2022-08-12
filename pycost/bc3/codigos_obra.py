@@ -87,7 +87,6 @@ class CodigosObra(epc.EntPyCost):
         self.resto.Borra(self.elementos)
         self.udsobr= self.resto.getUnitCosts()
         self.resto.Borra(self.udsobr)
-        #print('HERE: ', len(self.resto))
         if(len(self.resto)>0):
             logging.error("They left " + str(len(self.resto)) + ' not imported concepts.')
             logging.error(str(self.resto) + '\n')
@@ -160,8 +159,8 @@ class CodigosObra(epc.EntPyCost):
         return retval
 
 
-    #not  @brief Returns the quantities records.
     def getQuantityData(self):
+        '''Returns the quantities records.'''
         return self.quantities
 
     def BorraElementales(self, els):

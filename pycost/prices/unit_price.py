@@ -61,14 +61,18 @@ class UnitPrice(ms.Measurable):
                 logging.error("Error reading components of unit: " + self.Codigo() + '\n')
 
         else:
-            self.components= GetSindesco(r.Datos().getPrice(),bp)
+            self.components= self.GetSindesco(r.Datos().getPrice(),rootChapter.precios)
         return error
 
     def GetSindesco(self, productionRate, bp):
         '''Para unidades de obra sin descomposición de las que
-           sólo se conoce el precio.'''
+           sólo se conoce el precio.
+
+        :param productionRate: production rate.
+        :param bp: price dictionary.
+        '''
         retval= component_list.ComponentList()
-        be= bp["elementos"]
+        be= bp.elementos
         ent= be.Busca("SINDESCO")
         factorAndRate= fr_entity.EntFR(1.0,productionRate)
         retval.append(bc3_component.BC3Component(e= ent,fr= factorAndRate))

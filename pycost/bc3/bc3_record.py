@@ -56,7 +56,7 @@ class RegBC3(object):
 
     def isElementaryCost(self):
         '''Return true if the entity corresponds to an elementary cost.'''
-        return ((self.d is None) and (self.y is None) and (self.m is None))
+        return ((self.d is None) and (self.y is None) and (self.m is None) and (self.p is None))
 
     def EsDescompuesto(self):
         '''Return true if the entity corresponds to a unit cost.'''

@@ -197,6 +197,8 @@ class Codigos(dict):
             entity= self[key]
             if entity.isChapter():
                 retval[key]= entity
+                if(entity.isParametric()):
+                    logging.error("parametric chapters not implemented yet.")
         logging.info("  read " + str(len(retval)) + ' chapters.')
         return retval
 
@@ -207,7 +209,6 @@ class Codigos(dict):
         for key in self:
             retval.add(key)
         return retval
-
 
     def getElementaryCosts(self):
         ''' Return the entities that correspond to elementary costs.'''
@@ -227,6 +228,8 @@ class Codigos(dict):
             entity= self[key]
             if entity.EsMedicion():
                 retval[key]= entity
+                if(entity.isParametric()):
+                    logging.error("parametric quantities not implemented yet.")
         logging.info(str(len(retval)) + " quantities read." + '\n')
         return retval
 
@@ -237,6 +240,8 @@ class Codigos(dict):
             entity= self[key]
             if entity.EsDescompuesto():
                 retval[key]= entity
+                if(entity.isParametric()):
+                    logging.error("parametric unit costs not implemented yet.")
                 
         logging.info(" read " + str(len(retval)) + " precios descompuestos." + '\n')
         return retval
