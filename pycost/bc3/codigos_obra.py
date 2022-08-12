@@ -83,10 +83,11 @@ class CodigosObra(epc.EntPyCost):
         #resto.Borra(obra)
         self.caps.update(self.resto.GetChapters())
         self.resto.Borra(self.caps)
-        self.elementos= self.resto.GetElementos()
+        self.elementos= self.resto.getElementaryCosts()
         self.resto.Borra(self.elementos)
-        self.udsobr= self.resto.GetDescompuestos()
+        self.udsobr= self.resto.getUnitCosts()
         self.resto.Borra(self.udsobr)
+        #print('HERE: ', len(self.resto))
         if(len(self.resto)>0):
             logging.error("They left " + str(len(self.resto)) + ' not imported concepts.')
             logging.error(str(self.resto) + '\n')
@@ -123,9 +124,9 @@ class CodigosObra(epc.EntPyCost):
                 if len(reg)>2:
                     tipo= reg[0]
                     if(tipo == 'M'): # Quantities are directly inserted.
-                        self.quantities.InsertaReg(reg, count)
+                        self.quantities.insertRecord(reg, count)
                     else:
-                        self.resto.InsertaReg(reg, count)
+                        self.resto.insertRecord(reg, count)
 
         inputFile.close()
         logging.info("  " + str(len(self.quantities)) + " quantities read." + '\n')

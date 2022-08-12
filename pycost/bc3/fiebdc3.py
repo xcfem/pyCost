@@ -365,6 +365,9 @@ class regBC3_c(regBC3):
             if(len(tmp)>0):
                 if('%' in tmp):
                     self.tipo= tmp
+                elif(tmp=='EA'): # See page 63 of the format definition
+                    self.tipo= 0
+                    self.subtype= 'Auxiliary element'
                 else:
                     self.tipo= int(tmp)
         return tokens

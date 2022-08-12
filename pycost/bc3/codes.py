@@ -40,40 +40,6 @@ class reg_T(object):
 
 class Codigos(dict):
 
-    #Clasificación
-    def isChapterOrObra(self, i):
-        if(self.EsMedicion(i)): #Quantities have the code of their chapter.
-            return False
-        else:
-            return fiebdc3.es_codigo_capitulo_u_obra(i)
-
-    def isChapter(self, i):
-        if self.isChapterOrObra(i):
-            return not self.EsObra(i)
-        else:
-            return False
-
-    @staticmethod
-    def EsObra(cod):
-        return fiebdc3.es_codigo_obra(cod)
-
-    def EsElemento(self, i):
-        return ((self)[i].EsElemento())
-
-    def EsMedicion(self, i):
-        '''Devuelve verdadero si el registro corresponde a una medición.'''
-        return ((self)[i].EsMedicion())
-
-    def EsDescompuesto(self, i):
-        if(self.EsMedicion(i)):
-            return False
-        elif(self.EsElemento(i)):
-            return False
-        elif(self.isChapterOrObra(i)):
-            return False
-        else:
-            return True
-
     def __iadd__(cods):
         InsertaCods(cods)
         return self
@@ -153,7 +119,12 @@ class Codigos(dict):
                     retval= self[codSharp2]
         return retval
             
-    def InsertaReg(self, str_reg, quantities_counter):
+    def insertRecord(self, str_reg, quantities_counter):
+        ''' Insert the tokens corresponding to a concept.
+
+        :param str_reg: character string containing the tokens.
+        :param quantities_counter: counter of the ~M records.
+        '''
         tokens= str_reg.split('|')
         tipo= tokens.pop(0)
         cod= tokens.pop(0)
@@ -167,7 +138,7 @@ class Codigos(dict):
         if(len(cod)>0 and len(tokens)> 0):
             bc3Record= self.find(cod)
             if(bc3Record is None): # Code not found => new record.
-                if(tipo == 'M'): #El registro corresponde a una medición.
+                if(tipo == 'M'): # The record corresponds to a measurement.
                     # if('\\' in cod): #Sometimes the ~M has the form: ~M|13.3.1#\01.009|1....
                     #     cod= cod.partition('\\')[2] # remove part 13.3.1#\ of the code.
                     cod= cod+'@'+str(quantities_counter)
@@ -189,6 +160,8 @@ class Codigos(dict):
                 bc3Record.m= tokens
             elif(tipo=='Y'):
                 bc3Record.y= tokens
+            elif(tipo=='P'):
+                bc3Record.p= tokens
             else:
                 logging.error("Record of type: " + tipo + " unknown." + '\n')
 
@@ -196,10 +169,12 @@ class Codigos(dict):
         ''' Return the record that corresponds to the root chapter.'''
         retval= None
         for key in self:
-            if self.EsObra(key):
-                retval= Codigos({key: self[key]})
+            entity= self[key]
+            if entity.EsObra():
+                retval= Codigos({key: entity})
         if(retval is None):
             logging.error("Root chapter not found.")
+            exit(1)
         return retval
 
 
@@ -215,47 +190,13 @@ class Codigos(dict):
         return retval
 
 
-    #not  @brief Devuelve el tipo de concepto al que corresponde el registro.
-    def GetTipoConcepto(self, i):
-        if self.EsObra(i):
-            return obra
-        elif self.EsElemento(i):
-            return elemento
-        elif self.EsMedicion(i):
-            return medicion
-        elif self.EsDescompuesto(i):
-            return descompuesto
-        elif self.isChapter(i):
-            return capitulo
-        else:
-            logging.error("Type of the concept: '" + str(i) + "' not found.")
-            return sin_tipo
-
-
-
-    #not  @brief Devuelve una cadena de caracteres que identifica el
-    #not  tipo de concepto al que corresponde el registro.
-    def StrTipoConcepto(self, i):
-        retval= "sin_tipo"
-        tipo= GetTipoConcepto(i)
-        if(tipo==obra):
-            retval= "obra"
-        elif(tipo==elemento):
-            retval= "elemento"
-        elif(tipo==medicion):
-            retval= "medicion"
-        elif(tipo==descompuesto):
-            retval= "descompuesto"
-        elif(tipo==capitulo):
-            retval= "capitulo"
-        return retval
-
     #not  @brief Extrae las entidades que corresponden a capitulos
     def GetChapters(self):
         retval= Codigos()
-        for i in self:
-            if self.isChapter(i):
-                retval[i]= self[i]
+        for key in self:
+            entity= self[key]
+            if entity.isChapter():
+                retval[key]= entity
         logging.info("  read " + str(len(retval)) + ' chapters.')
         return retval
 
@@ -268,32 +209,35 @@ class Codigos(dict):
         return retval
 
 
-    #not  @brief Extrae las entidades que corresponden a elementos
-    def GetElementos(self):
+    def getElementaryCosts(self):
+        ''' Return the entities that correspond to elementary costs.'''
         retval= Codigos()
-        for i in self:
-            if self.EsElemento(i):
-                retval[i]= self[i]
+        for key in self:
+            entity= self[key]
+            if entity.isElementaryCost():
+                retval[key]= entity
         logging.info("  read " + str(len(retval)) + " elementary prices." + '\n')
         return retval
 
 
-    #not  @brief Extract quantity entities
     def getQuantities(self):
+        ''' Extract quantity entities.'''
         retval= Codigos()
-        for i in self:
-            if EsMedicion(i):
-                retval[i]= self[i]
+        for key in self:
+            entity= self[key]
+            if entity.EsMedicion():
+                retval[key]= entity
         logging.info(str(len(retval)) + " quantities read." + '\n')
         return retval
 
-
-    #not  @brief Extrae las entidades que corresponden a descompuestos
-    def GetDescompuestos(self):
+    def getUnitCosts(self):
+        ''' Extract the entities that correspond to unit costs.'''
         retval= Codigos()
-        for i in self:
-            if self.EsDescompuesto(i):
-                retval[i]= self[i]
+        for key in self:
+            entity= self[key]
+            if entity.EsDescompuesto():
+                retval[key]= entity
+                
         logging.info(" read " + str(len(retval)) + " precios descompuestos." + '\n')
         return retval
 

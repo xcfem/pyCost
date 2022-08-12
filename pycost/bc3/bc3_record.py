@@ -9,11 +9,12 @@ elemento, descompuesto, medicion, obra, capitulo, sin_tipo= range(0,6)
 class RegBC3(object):
     def __init__(self, code):
         self.code= code # Concept identifier.
-        self.c= None #Concepto
-        self.d= None #Descomposición.
-        self.m= None #Medicion
-        self.t= None #Texto
-        self.y= None #Descomposición.
+        self.c= None # Concepto
+        self.d= None # Descomposición.
+        self.m= None # Medicion
+        self.t= None # Texto
+        self.y= None # Descomposición.
+        self.p= None # Parameter definitions.
 
     def GetDatosElemento(self):
         return fiebdc3.regBC3_elemento(self.GetConcepto(),self.GetTexto())
@@ -49,23 +50,79 @@ class RegBC3(object):
     def GetMed(self):
         return fiebdc3.regBC3_m(self.m)
 
-    def EsElemento(self):
+    def isParametric(self):
+        ''' Return true if the concept is a parametric one.'''
+        return (self.p is not None)
+
+    def isElementaryCost(self):
+        '''Return true if the entity corresponds to an elementary cost.'''
         return ((self.d is None) and (self.y is None) and (self.m is None))
 
-
+    def EsDescompuesto(self):
+        '''Return true if the entity corresponds to a unit cost.'''
+        if(self.EsMedicion()):
+            return False
+        elif(self.isElementaryCost()):
+            return False
+        elif(self.isChapterOrObra()):
+            return False
+        else:
+            return True
+        
     def EsMedicion(self):
+        '''Return true if the entity corresponds to a measurement.'''
         return not (self.m is None)
 
 
-    #not  @brief Devuelve verdadero si el concepto corresponde a una obra.
+    def getConceptType(self):
+        ''' Return the type of this concept.'''
+        if self.EsObra():
+            return obra
+        elif self.isElementaryCost():
+            return elemento
+        elif self.EsMedicion():
+            return medicion
+        elif self.EsDescompuesto():
+            return descompuesto
+        elif self.isChapter():
+            return capitulo
+        else:
+            logging.error("Type of the concept: '" + str(i) + "' not found.")
+            return sin_tipo
+
+    def getConceptTypeString(self):
+        ''' Return a string identifying the type of this concept.'''
+        retval= "sin_tipo"
+        tipo= self.getConceptType()
+        if(tipo==obra):
+            retval= "obra"
+        elif(tipo==elemento):
+            retval= "elemento"
+        elif(tipo==medicion):
+            retval= "medicion"
+        elif(tipo==descompuesto):
+            retval= "descompuesto"
+        elif(tipo==capitulo):
+            retval= "capitulo"
+        return retval
+
     def EsObra(self):
-        return fiebdc3.es_codigo_obra(self.c)
-
-
+        ''' Return true if this concept corresponds to the root chapter.'''
+        return fiebdc3.es_codigo_obra(self.code)
+    
     #not  @brief Devuelve verdadero si el concepto corresponde a un capitulo.
     def isChapter(self):
-        return fiebdc3.es_codigo_capitulo(self.c)
+        if self.isChapterOrObra():
+            return not self.EsObra()
+        else:
+            return False
+        #return fiebdc3.es_codigo_capitulo(self.c)
 
+    def isChapterOrObra(self):
+        if(self.EsMedicion()): #Quantities have the code of their chapter.
+            return False
+        else:
+            return fiebdc3.es_codigo_capitulo_u_obra(self.code)
 
     def getChapterData(self):
         return fiebdc3.regBC3_capitulo(self.GetConcepto(), self.GetTexto(), self.GetDesc())
