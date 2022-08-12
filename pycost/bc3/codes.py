@@ -240,9 +240,6 @@ class Codigos(dict):
             entity= self[key]
             if entity.EsDescompuesto():
                 retval[key]= entity
-                if(entity.isParametric()):
-                    logging.error("parametric unit costs not implemented yet.")
-                
         logging.info(" read " + str(len(retval)) + " precios descompuestos." + '\n')
         return retval
 

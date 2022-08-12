@@ -73,8 +73,11 @@ def preprocess_file(inputFile):
                     yield part
     tmpFile= tempfile.NamedTemporaryFile(suffix='.bc3', mode='w', encoding='utf-8', delete=False)
     for chunk in each_chunk(inputFile):
-        chunk= chunk.replace('\n','') # remove newline characters.
         if(len(chunk)>0):
+            if(chunk[0]=='P'): # Parametric concept.
+                chunk= chunk.replace('\n','&') # replace newline characters.
+            else:    
+                chunk= chunk.replace('\n','') # remove newline characters.
             chunk= separator+chunk+'\n'
             tmpFile.write(chunk)  # writing chunk by chunk.
     tmpFile.close()
@@ -282,13 +285,14 @@ class Obra(cp.Chapter):
         self.precios.LeeBC3Elementales(co.GetDatosElementos()); #Lee los precios elementales fuera de capítulo.
 
         #LeeBC3DescFase1(co); #Lee descompuestos de capitulos.
-        self.precios.LeeBC3DescompFase1(co.GetDatosUnidades())
+        unitCosts= co.GetDatosUnidades()
+        self.precios.LeeBC3DescompFase1(unitCosts)
 
         logging.info("done." + '\n')
         logging.info("Leyendo descomposiciones...")
 
         #pendientes= LeeBC3DescFase2(co); #Lee descomposiciones.
-        pendientes= self.precios.LeeBC3DescompFase2(co.GetDatosUnidades(), rootChapter= self)
+        pendientes= self.precios.LeeBC3DescompFase2(unitCosts, rootChapter= self)
 
         logging.info("done." + '\n')
         # logging.info("Leyendo precios globales...")

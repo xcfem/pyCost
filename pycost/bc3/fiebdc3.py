@@ -3,6 +3,7 @@
 '''Basic FIE BDC-3 utilities.'''
 
 import logging
+import re
 
 def es_codigo_obra(c):
     '''Returns true if c it's the code of a project.'''
@@ -389,6 +390,88 @@ class regBC3_t(regBC3):
     def decod_bc3(self, tokens):
         '''Decodification.'''
         self.texto= tokens[0]
+        return tokens
+    
+    def Write(self,os):
+        os.write("Texto: " + self.texto + '\n')
+
+class regBC3_p(regBC3):
+    '''Corresponds to a ~P record of BC3.'''
+    def __init__(self,Str):
+        self.variables= dict()
+        self.components= dict()
+        if(Str):
+            self.decod_str_bc3(Str)
+
+    @staticmethod
+    def isVariable(token):
+        '''Return true if the token corresponds to a variable.
+
+        :param token: text to analyze. 
+        '''
+        # See page 30 of the format definition document.
+        retval= False
+        prefix= token[0]
+        if((prefix=='%') or (prefix=='$')):
+            letter= token[1]
+            if(letter in ['A', 'B', 'C', 'D', 'F', 'G', 'H', 'I', 'J', 'K']):
+                retval= True
+            elif(letter in ['O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X']):
+                retval= True
+        return retval
+    @staticmethod
+    def isDecompositionStatement(token):
+        '''Return true if the token corresponds to a variable.
+
+        :param token: text to analyze. 
+        '''
+        # See page 29 of the format definition document.
+        retval= False
+        if(':' in token):
+            c= token.count(':')
+            if(c<=2):
+                expr= token.split(':')
+                for v in expr[1:]:
+                    if('$' in v):
+                        return False
+                retval= True
+        return retval
+    
+    def decod_bc3(self, tokens):
+        '''Decodification.'''
+        for tk in tokens:
+            innerTokens= tk.split('&')
+            for itk in innerTokens:
+                itk= itk.strip()
+                # remove comments.
+                itk= itk.split('#', 1)[0]
+                if(len(itk)>0):
+                    prefix= itk[0]
+                    if(self.isVariable(itk)):
+                        expr= itk.split('=')
+                        varName= expr[0][:2]
+                        if(prefix=='%'): # Numerical assignment statement.
+                            values= expr[1].split(',')
+                            tmp= list()
+                            for v in values:
+                                tmp.append(float(v))
+                            values= tmp
+                        elif(prefix=='$'):# Alphanumeric assignment statement.
+                            values = re.split(r',(?=")', expr[1])
+                            tmp= list()
+                            for v in values:
+                                tmp.append(v.strip('"'))
+                            values= tmp    
+                        self.variables[varName]= values
+                    elif(self.isDecompositionStatement(itk)):
+                         expr= itk.split(':')
+                         code= expr[0].strip()
+                         values= [expr[1].strip()]
+                         if(len(expr)>2):
+                             values.append(expr[2].strip())
+                         self.components[code]= values
+                    else:
+                        print('itk= ', itk)
         return tokens
     
     def Write(self,os):

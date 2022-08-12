@@ -3,6 +3,7 @@
 
 
 from pycost.bc3 import fiebdc3
+import logging
 
 elemento, descompuesto, medicion, obra, capitulo, sin_tipo= range(0,6)
 
@@ -20,6 +21,10 @@ class RegBC3(object):
         return fiebdc3.regBC3_elemento(self.GetConcepto(),self.GetTexto())
 
     def getUnitPriceData(self):
+        if(self.isParametric()):
+            logging.error(" Code: '"+self.code+"' is parametric. Parametric unit costs are not implemented yet.")
+            pd= self.getParametricData()
+        
         return fiebdc3.regBC3_udobra(self.GetConcepto(),self.GetTexto(),self.GetDesc())
 
     def GetDatosMedicion(self):
@@ -31,6 +36,8 @@ class RegBC3(object):
     def GetTexto(self):
         return fiebdc3.regBC3_t(self.t)
 
+    def getParametricData(self):
+        return fiebdc3.regBC3_p(self.p)
 
     def GetDesc(self):
         tmp= None

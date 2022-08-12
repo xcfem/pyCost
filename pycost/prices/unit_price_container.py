@@ -28,8 +28,8 @@ class Descompuestos(concept_dict.ConceptDict):
 
     def LeeBC3Fase1(self, cds):
         '''Read the units whitout its components.'''
-        for i in cds:
-            reg= cds.getUnitPriceData(i)
+        for key in cds:
+            reg= cds.getUnitPriceData(key)
             ud= unit_price.UnitPrice()
             ud.LeeBC3Fase1(reg)
             self.Append(ud)
