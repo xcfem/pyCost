@@ -400,6 +400,8 @@ class regBC3_p(regBC3):
     def __init__(self,Str):
         self.variables= dict()
         self.components= dict()
+        self.substitutionStatements= dict()
+        self.parameterLabelStatements= dict()
         if(Str):
             self.decod_str_bc3(Str)
 
@@ -419,6 +421,7 @@ class regBC3_p(regBC3):
             elif(letter in ['O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X']):
                 retval= True
         return retval
+    
     @staticmethod
     def isDecompositionStatement(token):
         '''Return true if the token corresponds to a variable.
@@ -436,15 +439,47 @@ class regBC3_p(regBC3):
                         return False
                 retval= True
         return retval
+
+    @staticmethod
+    def isSubstitutionStatement(token):
+        '''Return true if the token corresponds to a substitution statement.
+
+        :param token: text to analyze. 
+        '''
+        substitutionStatements= ['RESUMEN', 'TEXTO', 'PLIEGO', 'CLAVES', 'COMERCIAL', 'R', 'T', 'P', 'K', 'F', 'SUMMARY', 'TEXT', 'SPECIFICATIONS', 'KEY', 'COmMERCIAL']
+        # See page 29 of the format definition document.
+        retval= False
+        if('\\' in token):
+            innerTokens= token.split('\\')
+            firstLabel= innerTokens[1].strip()
+            if(firstLabel in substitutionStatements):
+                retval= True
+        return retval
+    
+    @staticmethod
+    def isParameterLabelStatement(token):
+        '''Return true if the token corresponds to a parameter-label statement.
+
+        :param token: text to analyze. 
+        '''
+        # See page 29 of the format definition document.
+        retval= False
+        if('\\' in token):
+            if(not regBC3_p.isSubstitutionStatement(token)):
+                retval= True
+        return retval
     
     def decod_bc3(self, tokens):
         '''Decodification.'''
         for tk in tokens:
             innerTokens= tk.split('&')
+            substitutionStatementContinues= False
             for itk in innerTokens:
                 itk= itk.strip()
                 # remove comments.
                 itk= itk.split('#', 1)[0]
+                if(substitutionStatementContinues):
+                    itk= lastStatement+itk
                 if(len(itk)>0):
                     prefix= itk[0]
                     if(self.isVariable(itk)):
@@ -470,8 +505,32 @@ class regBC3_p(regBC3):
                          if(len(expr)>2):
                              values.append(expr[2].strip())
                          self.components[code]= values
+                    elif(self.isSubstitutionStatement(itk)):
+                        lastChar= itk[-1]
+                        if(lastChar in ['\\', '"', '+', '-', '*', '/']):
+                            substitutionStatementContinues= False
+                            expr= itk.split('\\')
+                            if(itk[0]=='\\'):
+                                key= expr[1]
+                                value= expr[2]
+                            else:
+                                key= expr[0]
+                                value= expr[1]
+                            self.substitutionStatements[key]= value
+                        else:
+                            lastStatement= itk
+                            substitutionStatementContinues= True
+                    elif(self.isParameterLabelStatement(itk)):
+                        expr= itk.split('\\')
+                        if(itk[0]=='\\'):
+                            key= expr[1]
+                            value= expr[2]
+                        else:
+                            key= expr[0]
+                            value= expr[1]
+                        self.parameterLabelStatements[key]= value
                     else:
-                        print('itk= ', itk)
+                        logging.error('Unknown token in parametric concept: '+itk)
         return tokens
     
     def Write(self,os):
