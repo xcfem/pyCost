@@ -287,6 +287,9 @@ class Codigos(dict):
     def getUnitPriceData(self, key):
         return reg_T(c= key, d= self[key].getUnitPriceData())
 
+    def getParametricData(self, key):
+        return reg_T(c= key, d= self[key].getParametricData())
+
     def getChapterData(self, key):
         retval= None
         if key in self:

@@ -21,10 +21,7 @@ class RegBC3(object):
         return fiebdc3.regBC3_elemento(self.GetConcepto(),self.GetTexto())
 
     def getUnitPriceData(self):
-        if(self.isParametric()):
-            logging.error(" Code: '"+self.code+"' is parametric. Parametric unit costs are not implemented yet.")
-            pd= self.getParametricData()
-        
+        '''Return the data corresponding to a unit cost concept.'''
         return fiebdc3.regBC3_udobra(self.GetConcepto(),self.GetTexto(),self.GetDesc())
 
     def GetDatosMedicion(self):
@@ -37,6 +34,10 @@ class RegBC3(object):
         return fiebdc3.regBC3_t(self.t)
 
     def getParametricData(self):
+        return fiebdc3.regBC3_parametric(self.GetConcepto(), self.GetTexto(), self.getParameters())
+
+    def getParameters(self):
+        ''' Return the parametric concept contained in the BC3 file.'''
         return fiebdc3.regBC3_p(self.p)
 
     def GetDesc(self):
@@ -140,6 +141,7 @@ class RegBC3(object):
            + "D: " + self.d + ' ' + self.d.size() + '\n'
            + "M: " + self.m + ' ' + self.m.size() + '\n'
            + "T: " + self.t + ' ' + self.t.size() + '\n'
-           + "Y: " + self.y + ' ' + self.y.size() + '\n')
+           + "Y: " + self.y + ' ' + self.y.size() + '\n'
+           + "P: " + self.p + ' ' + self.p.size() + '\n')
         return os
 

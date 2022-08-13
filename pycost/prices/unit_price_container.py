@@ -3,13 +3,20 @@
 
 import pylatex
 import logging
+import sys
 from pycost.prices import elementary_price_container
 from pycost.prices import unit_price
 from pycost.utils import concept_dict
 from pycost.utils import pylatex_utils
 
 class Descompuestos(concept_dict.ConceptDict):
-    '''Unidades de obra.'''
+    '''Unidades de obra.
+
+    :ivar parametricConcepts: parametric concepts dictionary.
+    '''
+    def __init__(self):
+        super().__init__()
+        self.parametricConcepts= dict()
 
     def appendComponent(self, el, cod_ud, cod_el, r, f):
         ''' Append a new component to the container.
@@ -29,23 +36,27 @@ class Descompuestos(concept_dict.ConceptDict):
     def LeeBC3Fase1(self, cds):
         '''Read the units whitout its components.'''
         for key in cds:
-            reg= cds.getUnitPriceData(key)
-            ud= unit_price.UnitPrice()
-            ud.LeeBC3Fase1(reg)
-            self.Append(ud)
-
+            if('$' in key): # parametric concept.
+                reg= cds.getParametricData(key)
+                self.parametricConcepts[key]= reg.datos
+            else: # not a parametric concept.
+                reg= cds.getUnitPriceData(key)
+                ud= unit_price.UnitPrice()
+                ud.LeeBC3Fase1(reg)
+                self.Append(ud)
 
     def LeeBC3Fase2(self, cds, rootChapter):
         '''Reads the components of the unit.'''
         ud= None
         error= False
         retval= set()
-        for i in cds:
-            reg= cds.getUnitPriceData(i)
-            ud= self.Busca(reg.Codigo())
-            error= ud.LeeBC3Fase2(reg, rootChapter= rootChapter)
-            if error:
-                retval.add(reg.Codigo())
+        for key in cds:
+            if(not '$' in key): # not a parametric concept.
+                reg= cds.getUnitPriceData(key)
+                ud= self.Busca(reg.Codigo())
+                error= ud.LeeBC3Fase2(reg, rootChapter= rootChapter)
+                if error:
+                    retval.add(reg.Codigo())
         return retval
 
     def WriteSpre(self, os):
@@ -165,6 +176,20 @@ class Descompuestos(concept_dict.ConceptDict):
         for j in self.concepts:
             self.concepts[j].WriteHCalc(os)
 
+    def getParametricConceptsKeys(self):
+        ''' Return the keys of the parametric concepts.'''
+        return list(self.parametricConcepts.keys())
+
+    def getParametricConcept(self, key):
+        ''' Return the parametric concept identified by the key.'''
+        return self.parametricConcepts[key]
+
+    def writeParametricConcepts(self, os= sys.stdout):
+        ''' Writes a report of the parametrics concepts.'''
+        for key in self.parametricConcepts:
+            pc= self.parametricConcepts[key]
+            pc.Write(os)
+            
     def getDict(self):
         ''' Return a dictionary containing the object data.'''
         retval= super(Descompuestos, self).getDict()
@@ -190,3 +215,4 @@ class Descompuestos(concept_dict.ConceptDict):
         #     print('unit price container: ', p)
         #     p.clear()
         super(Descompuestos, self).clear()
+        self.parametricConcepts.clear()

@@ -4,6 +4,7 @@
 
 import logging
 import re
+import sys
 
 def es_codigo_obra(c):
     '''Returns true if c it's the code of a project.'''
@@ -373,12 +374,12 @@ class regBC3_c(regBC3):
                     self.tipo= int(tmp)
         return tokens
     
-    def Write(self,os):
-        os.write("Unidad: " + unidad + '\n'
-           + "Resumen: " + resumen + '\n'
-           + "Precio: " + precio + '\n'
-           + "Fecha: " + fecha + '\n'
-           + "Tipo: " + tipo + '\n')
+    def Write(self, os= sys.stdout):
+        os.write("Unidad: " + str(self.unidad) + '\n'
+           + "Resumen: " + self.resumen + '\n'
+           + "Precio: " + str(self.precio) + '\n'
+           + "Fecha: " + self.fecha + '\n'
+           + "Tipo: " + str(self.tipo) + '\n')
 
 class regBC3_t(regBC3):
     '''Corresponds to a ~T record of BC3.'''
@@ -402,6 +403,7 @@ class regBC3_p(regBC3):
         self.components= dict()
         self.substitutionStatements= dict()
         self.parameterLabelStatements= dict()
+        self.parameterLabelLetters= dict()
         if(Str):
             self.decod_str_bc3(Str)
 
@@ -524,17 +526,36 @@ class regBC3_p(regBC3):
                         expr= itk.split('\\')
                         if(itk[0]=='\\'):
                             key= expr[1]
-                            value= expr[2]
+                            values= expr[2:]
                         else:
                             key= expr[0]
-                            value= expr[1]
-                        self.parameterLabelStatements[key]= value
+                            values= expr[1:]
+                        key= key.strip()
+                        key= key.replace(' ','_')
+                        key= key.lower()
+                        tmp= list()
+                        for v in values:
+                            if(len(v)>0):
+                                v= v.strip()
+                                v= v.replace(' >= ', '>=')
+                                v= v.replace(' > ', '>')
+                                v= v.replace(' <= ', '<=')
+                                v= v.replace(' < ', '<')
+                                tmp.append(v)
+                        values= tmp
+                        letter= chr(len(self.parameterLabelStatements)+ord('A'))
+                        self.parameterLabelStatements[key]= values
+                        print(key, letter)
+                        self.parameterLabelLetters[key]= letter
                     else:
                         logging.error('Unknown token in parametric concept: '+itk)
         return tokens
     
-    def Write(self,os):
-        os.write("Texto: " + self.texto + '\n')
+    def Write(self,os= sys.stdout):
+        os.write("Parameter label statements:\n")
+        for key in self.parameterLabelStatements:
+            pl= self.parameterLabelStatements[key]
+            os.write('  '+key+' : '+str(pl)+'\n')
 
 class regBC3_elemento(object):
     def __init__(self, c, t):
@@ -565,21 +586,66 @@ class regBC3_elemento(object):
         self.ccpto.Write(os)
         self.txt.Write(os)
 
-
 class regBC3_udobra(regBC3_elemento):
     def __init__(self,c,t,d):
         ''' Constructor.
 
-        :param c: concepto.
-        :param t: texto.
+        :param c: concept.
+        :param t: text.
         :param d: components.
         '''        
         super(regBC3_udobra,self).__init__(c,t)
-        self.desc= d # decompotion.
+        self.desc= d # decomposition.
         
     def Write(self,os):
         super(regBC3_udobra,self).Write(os)
-        desc.Write(os)
+        self.desc.Write(os)
+        
+class regBC3_parametric(regBC3_elemento):
+    def __init__(self,c,t,p):
+        ''' Constructor.
+
+        :param c: concept.
+        :param t: text.
+        :param p: parameters.
+        '''        
+        super(regBC3_parametric, self).__init__(c,t)
+        self.parameters= p # parameters.
+
+    def getParameterOptions(self, parameterKey:str):
+        ''' Return the available options for the parameter
+            identified by the key.
+
+        :param parameterKey: identifier of the parameter.
+        '''
+        # get close parameter.
+        retval= None
+        if(parameterKey in self.parameters.parameterLabelStatements):
+            retval= self.parameters.parameterLabelStatements[parameterKey]
+        else:
+            logging.error('parameter: \''+parameterKey+'\' not found.')
+        return retval
+        
+
+    def getParameterIndex(self, parameterKey:str, parameterValue:str):
+        ''' Return the index of the parameterValue in the list of values
+            corresponding to the parameter key.
+
+        :param parameterKey: identifier of the parameter.
+        :param parameterValue: identifier of the value for the parameter.
+        '''
+        retval= None
+        options= self.getParameterOptions(parameterKey)
+        if(parameterValue in options):
+            retval= options.index(parameterValue)
+        else:
+            logging.error('parameter: \''+parameterKey+'\' has not option: \''+parameterValue+'\'\n')
+        return retval
+        
+        
+    def Write(self, os= sys.stdout):
+        super(regBC3_parametric,self).Write(os)
+        self.parameters.Write(os)
 
 class regBC3_medicion(regBC3_elemento):
     def __init__(self,c,t,m):
