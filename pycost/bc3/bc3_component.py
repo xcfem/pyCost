@@ -1,5 +1,6 @@
 #BC3Component.py
 
+import sys
 import logging
 from pycost.bc3 import fr_entity
 from pycost.bc3 import bc3_entity
@@ -80,6 +81,10 @@ class BC3Component(fr_entity.EntFR):
         r= self.getPriceJustificationRecord(over)
         r.writePriceTableTwoIntoLatexDocument(doc)
         return r.getTotal()
+
+    def Write(self, os= sys.stdout):
+        os.write(self.CodigoEntidad())
+        super(BC3Component,self).Write(os)
 
     def getDict(self):
         ''' Return a dictionary containing the object data.'''

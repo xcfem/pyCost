@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 #EntFR.py
 
+import sys
 from pycost.utils import basic_types
 from pycost.utils import EntPyCost as epc
 from decimal import Decimal
@@ -46,6 +47,12 @@ class EntFR(epc.EntPyCost):
         txtFactor=  self.formatString.format(self.factor)
         txtRate=  self.formatString.format(self.productionRate)
         os.write(txtFactor + '\\' + txtRate + '\\')
+
+    def Write(self, os= sys.stdout):
+        txtFactor=  self.formatString.format(self.factor)
+        txtRate=  self.formatString.format(self.productionRate)
+        os.write(' factor= '+txtFactor+ ' prod. rate: '+txtRate)
+        
 
     def getDict(self):
         ''' Return a dictionary containing the object data.'''

@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 #ComponentList.py
+import sys
 import logging
 from pycost.utils import EntPyCost as epc
 from pycost.prices.price_justification import PriceJustificationList as pjl
@@ -35,6 +36,11 @@ class ComponentList(list, epc.EntPyCost):
                 i.WriteBC3(os)
             os.write('|' + '\n')
 
+    def Write(self, os= sys.stdout):
+        os.write('components: ')
+        for c in self:
+            c.Write(os)
+            os.write('\n')
 
     def getRoundedPrice(self):
         lista= self.getPriceJustificationList(True)#XXX Here cumulated percentages.

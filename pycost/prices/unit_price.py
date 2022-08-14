@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 #UnitPrice.py
 
+import sys
 import pylatex
 import logging
 from pycost.utils import measurable as ms
@@ -51,7 +52,11 @@ class UnitPrice(ms.Measurable):
         super(UnitPrice,self).readBC3(r)
 
     def LeeBC3Fase2(self, r, rootChapter):
-        ''' Read the components of the unit.'''
+        ''' Read the components of the unit.
+
+        :param rootChapter: root chapter (access to the already 
+                            defined concepts).
+        '''
         error= False
         if(len(r.Datos().desc)>0):
             tmp= UnitPrice.getPointers(r.Datos().desc, error, rootChapter= rootChapter)
@@ -80,7 +85,11 @@ class UnitPrice(ms.Measurable):
 
     @staticmethod
     def getPointers(descBC3, error, rootChapter):
-        '''Get the pointers to the component prices.'''
+        '''Get the pointers to the component prices.
+
+        :param rootChapter: root chapter (access to the already 
+                            defined concepts).
+        '''
         retval= component_list.ComponentList()
         ent= None
         for i in descBC3:
@@ -105,6 +114,10 @@ class UnitPrice(ms.Measurable):
         self.components.WriteBC3(self.Codigo(),os)
 
 
+    def Write(self, os= sys.stdout):
+        super(UnitPrice,self).Write(os)
+        self.components.Write(os)
+        
     def SimulaDescomp(self,otra):
         '''Toma la descomposición de otra unidad de obra.
            sin alterar el precio de ésta.'''

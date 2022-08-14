@@ -5,6 +5,9 @@
 import logging
 import re
 import sys
+from pycost.bc3 import bc3_component
+##from pycost.prices import unit_price
+from pycost.bc3 import fr_entity
 
 def es_codigo_obra(c):
     '''Returns true if c it's the code of a project.'''
@@ -51,7 +54,7 @@ class regBC3(object):
             if(len(Str)>0):
                 self.decod_bc3(Str)
             
-    def Write(self, os):
+    def Write(self, os= sys.stdout):
         logging.error('Write not implemented.')
 
 
@@ -94,7 +97,7 @@ class regBC3_lista_reg(list, regBC3):
                         self.append(lt)
         return strtk
     
-    def Write(self, os):
+    def Write(self, os= sys.stdout):
         for i in self:
             i.Write(os)
 
@@ -113,7 +116,7 @@ class regBC3_lista_med(regBC3_lista_reg):
             self.append(lt)
         return strtk
     
-    def Write(self, os):
+    def Write(self, os= sys.stdout):
         for i in self:
             i.Write(os)
 
@@ -165,7 +168,7 @@ class regBC3_desc(regBC3):
     def EsObra(self):
         return es_codigo_obra(self.codigo)
 
-    def Write(self, os):
+    def Write(self, os= sys.stdout):
         os.write(u"Código: " + self.codigo + '\n'
            + "Factor: " + str(self.factor) + '\n'
            + "Production rate: " + str(self.productionRate) + '\n')
@@ -253,7 +256,7 @@ class MedArq(regBC3):
             self.lines.append(lineData)
         return strtk
     
-    def Write(self, os):
+    def Write(self, os= sys.stdout):
         for l in self.lines:
             os.write("Tipo: "+l['tipo']+ '\n'
                + "Comentario: " + l['comentario'] + '\n'
@@ -481,7 +484,11 @@ class regBC3_p(regBC3):
                 # remove comments.
                 itk= itk.split('#', 1)[0]
                 if(substitutionStatementContinues):
-                    itk= lastStatement+itk
+                    tmp= lastStatement
+                    if(tmp[-1]!='.'):
+                        tmp+= '.'
+                    tmp+= ' '+itk
+                    itk= tmp
                 if(len(itk)>0):
                     prefix= itk[0]
                     if(self.isVariable(itk)):
@@ -505,7 +512,10 @@ class regBC3_p(regBC3):
                     elif(self.isDecompositionStatement(itk)):
                          expr= itk.split(':')
                          code= expr[0].strip()
-                         values= [expr[1].strip()]
+                         values= list()
+                         if code in self.components:
+                             values= self.components[code]
+                         values.append(expr[1].strip())
                          if(len(expr)>2):
                              values.append(expr[2].strip())
                          self.components[code]= values
@@ -644,14 +654,14 @@ class regBC3_parametric(regBC3_elemento):
             logging.error('parameter: \''+parameterKey+'\' has not option: \''+parameterOption+'\'\n')
         return retval
 
-    def computeSelectedParameters(self, values):
-        ''' Return the indexes corresponding to the values argument.
+    def computeSelectedParameters(self, options):
+        ''' Return the indexes corresponding to the options argument.
 
-        :param values: list of (parameterKey, parameterOption) tuples assigning
+        :param options: list of (parameterKey, parameterOption) tuples assigning
                        values to the parameters.
         '''
         selectedParameters= dict()
-        for v in values:
+        for v in options:
             parameterKey= v[0] # identifier of the parameter.
             parameterOption= v[1] # option chose for this parameter.
             letter= self.parameters.parameterLabelLetters[parameterKey]
@@ -660,14 +670,14 @@ class regBC3_parametric(regBC3_elemento):
             selectedParameters['str'+letter]= parameterOption
         return selectedParameters
 
-    def getComponents(self, values):
-        ''' Compute the components that correspond to the values argument.
+    def getComponents(self, options):
+        ''' Compute the components that correspond to the options argument.
 
-        :param values: list of (parameterKey, parameterOption) tuples assigning
+        :param options: list of (parameterKey, parameterOption) tuples assigning
                        values to the parameters.
         '''
         retval= dict()
-        selectedParameters= self.computeSelectedParameters(values)
+        selectedParameters= self.computeSelectedParameters(options)
         for key in self.parameters.components:
             cList= self.parameters.components[key]
             for c in cList:
@@ -685,9 +695,108 @@ class regBC3_parametric(regBC3_elemento):
                     value= self.parameters.variables[varKey]
                 value= eval(c, self.parameters.variables)
                 if(value!=0.0):
-                    retval[key]= c
+                    retval[key]= value
+        return retval
+
+    def getSubstitutionStatementValue(self, options, substitutionStatementNames):
+        ''' Return the summary field.
+
+        :param options: list of (parameterKey, parameterOption) tuples assigning
+                       values to the parameters.
+        :param substitutionStatementNames: names of the substitution statement
+                                           (i. e.: ['RESUMEN, SUMMARY]).
+        '''
+        substitutionStatements= self.parameters.substitutionStatements
+        retval= ''
+        for name in substitutionStatementNames:
+            if(name in substitutionStatements):
+                retval= substitutionStatements[name]
+                break
+        retval= retval.replace('%', 'num')
+        retval= retval.replace('$', 'str')
+        selectedParameters= self.computeSelectedParameters(options)
+        for spKey in selectedParameters:
+            retval= retval.replace('('+spKey+')', '['+spKey+']')
+            value= selectedParameters[spKey]
+            retval= retval.replace(spKey, str(value))
+        # Extract string replacement patterns
+        p = re.compile("(str[A-Z]\[[0-9]+\])")
+        replacements= p.findall(retval)
+        for r in replacements:
+            value= eval(r, self.parameters.variables)
+            retval= retval.replace(r, value)
+        # Extract number replacement patterns
+        p = re.compile("(num[A-Z]\[[0-9]+\])")
+        replacements= p.findall(retval)
+        for r in replacements:
+            value= eval(r, self.parameters.variables)
+            print(r, value)
+            retval= retval.replace(r, value)
+        return retval
+    
+    def getSummary(self, options):
+        ''' Return the summary field.
+
+        :param options: list of (parameterKey, parameterOption) tuples assigning
+                        values to the parameters.
+        '''
+        return self.getSubstitutionStatementValue(options, ['RESUMEN', 'SUMMARY', 'R'])
+    
+    def getText(self, options):
+        ''' Return the text field.
+
+        :param options: list of (parameterKey, parameterOption) tuples assigning
+                        values to the parameters.
+        '''
+        return self.getSubstitutionStatementValue(options, ['TEXTO', 'TEXT', 'T'])
+    def getCodeTail(self, options):
+        ''' Return the tail for the code of the instantiated concept.
+
+        :param options: list of (parameterKey, parameterOption) tuples assigning
+                        values to the parameters.
+        '''
+        retval= ''
+        for v in options:
+            parameterKey= v[0] # identifier of the parameter.
+            parameterOption= v[1] # option chose for this parameter.
+            letter= self.parameters.parameterLabelLetters[parameterKey]
+            retval+= letter.lower()
         return retval
         
+    def getUnitPrice(self, code, options, rootChapter):
+        ''' Return a unit cost instantiating this object.
+
+        :param code: code for the new unit cost.
+        :param options: list of (parameterKey, parameterOption) tuples assigning
+                        values to the parameters.
+        :param rootChapter: root chapter (access to the already 
+                            defined concepts).
+        '''
+        codeTail= self.getCodeTail(options)
+        code= code.replace('$', codeTail)
+        components= self.getComponents(options)
+        summary= self.getSummary(options)
+        text= self.getText(options)
+        retval= unit_price.UnitPrice(cod= code, desc= summary, ud= self.Unidad(), ld= text)
+        # Populate component list.
+        cList= retval.components
+        for key in components:
+            searchKey= key
+            if('%' in key):
+                searchKey= key[1:] # Remove the first percent sign.
+            ent= rootChapter.getUnitPrice(searchKey)
+            if not ent:
+                logging.warning("UnitPrice.getPointers; component: " + key + ' not found.')
+                error= True
+                continue
+            else:
+                value= components[key]
+                fr= fr_entity.EntFR(f= 1.0, r= value)
+                cList.append(bc3_component.BC3Component(ent,fr))
+                error= False
+        
+        return retval
+
     def Write(self, os= sys.stdout):
         super(regBC3_parametric,self).Write(os)
         self.parameters.Write(os)
