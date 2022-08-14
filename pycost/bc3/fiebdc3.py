@@ -498,7 +498,9 @@ class regBC3_p(regBC3):
                             tmp= list()
                             for v in values:
                                 tmp.append(v.strip('"'))
-                            values= tmp    
+                            values= tmp
+                        varName= varName.replace('%', 'num')
+                        varName= varName.replace('$', 'str')
                         self.variables[varName]= values
                     elif(self.isDecompositionStatement(itk)):
                          expr= itk.split(':')
@@ -545,7 +547,6 @@ class regBC3_p(regBC3):
                         values= tmp
                         letter= chr(len(self.parameterLabelStatements)+ord('A'))
                         self.parameterLabelStatements[key]= values
-                        print(key, letter)
                         self.parameterLabelLetters[key]= letter
                     else:
                         logging.error('Unknown token in parametric concept: '+itk)
@@ -627,21 +628,65 @@ class regBC3_parametric(regBC3_elemento):
         return retval
         
 
-    def getParameterIndex(self, parameterKey:str, parameterValue:str):
-        ''' Return the index of the parameterValue in the list of values
+    def getParameterIndex(self, parameterKey:str, parameterOption:str):
+        ''' Return the index of the parameterOption in the list of values
             corresponding to the parameter key.
 
         :param parameterKey: identifier of the parameter.
-        :param parameterValue: identifier of the value for the parameter.
+        :param parameterOption: identifier of the option chosen for the 
+                                parameter.
         '''
         retval= None
         options= self.getParameterOptions(parameterKey)
-        if(parameterValue in options):
-            retval= options.index(parameterValue)
+        if(parameterOption in options):
+            retval= options.index(parameterOption)
         else:
-            logging.error('parameter: \''+parameterKey+'\' has not option: \''+parameterValue+'\'\n')
+            logging.error('parameter: \''+parameterKey+'\' has not option: \''+parameterOption+'\'\n')
         return retval
-        
+
+    def computeSelectedParameters(self, values):
+        ''' Return the indexes corresponding to the values argument.
+
+        :param values: list of (parameterKey, parameterOption) tuples assigning
+                       values to the parameters.
+        '''
+        selectedParameters= dict()
+        for v in values:
+            parameterKey= v[0] # identifier of the parameter.
+            parameterOption= v[1] # option chose for this parameter.
+            letter= self.parameters.parameterLabelLetters[parameterKey]
+            index= self.getParameterIndex(parameterKey, parameterOption)
+            selectedParameters['num'+letter]= index
+            selectedParameters['str'+letter]= parameterOption
+        return selectedParameters
+
+    def getComponents(self, values):
+        ''' Compute the components that correspond to the values argument.
+
+        :param values: list of (parameterKey, parameterOption) tuples assigning
+                       values to the parameters.
+        '''
+        retval= dict()
+        selectedParameters= self.computeSelectedParameters(values)
+        for key in self.parameters.components:
+            cList= self.parameters.components[key]
+            for c in cList:
+                c= c.replace('=', '==')
+                c= c.replace('%', 'num')
+                c= c.replace('$', 'str')
+                for i in range(0, len(selectedParameters)):
+                    charToReplace= chr(ord('a')+i)
+                    c= c.replace(charToReplace, str(i))
+                for spKey in selectedParameters:
+                    c= c.replace('('+spKey+')', '['+spKey+']')
+                    value= selectedParameters[spKey]
+                    c= c.replace(spKey, str(value))
+                for varKey in self.parameters.variables:
+                    value= self.parameters.variables[varKey]
+                value= eval(c, self.parameters.variables)
+                if(value!=0.0):
+                    retval[key]= c
+        return retval
         
     def Write(self, os= sys.stdout):
         super(regBC3_parametric,self).Write(os)
