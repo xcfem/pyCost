@@ -5,9 +5,6 @@
 import logging
 import re
 import sys
-from pycost.bc3 import bc3_component
-##from pycost.prices import unit_price
-from pycost.bc3 import fr_entity
 
 def es_codigo_obra(c):
     '''Returns true if c it's the code of a project.'''
@@ -400,7 +397,7 @@ class regBC3_t(regBC3):
         os.write("Texto: " + self.texto + '\n')
 
 class regBC3_p(regBC3):
-    '''Corresponds to a ~P record of BC3.'''
+    '''Corresponds to a ~P record of the FIEBDC-3 specification.'''
     def __init__(self,Str):
         self.variables= dict()
         self.components= dict()
@@ -569,32 +566,37 @@ class regBC3_p(regBC3):
             os.write('  '+key+' : '+str(pl)+'\n')
 
 class regBC3_elemento(object):
+    ''' Elementary price according to FIEBDC-3 specification.
+
+    :ivar concept: rebBC3_c object.
+    :ivar txt: regBC3_t object.
+    '''
     def __init__(self, c, t):
         ''' Constructor.
 
         :param c: concepto.
         :param t: texto.
         '''
-        self.ccpto= c #Concepto.
+        self.concept= c #Concepto.
         self.txt= t #Texto.
 
     def getTitle(self):
-        return self.ccpto.resumen
+        return self.concept.resumen
 
     def Unidad(self):
-        return self.ccpto.unidad
+        return self.concept.unidad
 
     def getPrice(self):
-        return self.ccpto.precio
+        return self.concept.precio
 
     def getType(self):
-        return self.ccpto.tipo
+        return self.concept.tipo
 
     def Texto(self):
         return self.txt.texto
 
     def Write(self,os):
-        self.ccpto.Write(os)
+        self.concept.Write(os)
         self.txt.Write(os)
 
 class regBC3_udobra(regBC3_elemento):
@@ -613,6 +615,10 @@ class regBC3_udobra(regBC3_elemento):
         self.desc.Write(os)
         
 class regBC3_parametric(regBC3_elemento):
+    ''' Parametric concept as defined in the FIEBDC-3 specification.
+
+    :ivar parameters: regBC3_p object containing the parametric information.
+    '''
     def __init__(self,c,t,p):
         ''' Constructor.
 
@@ -763,39 +769,6 @@ class regBC3_parametric(regBC3_elemento):
             retval+= letter.lower()
         return retval
         
-    def getUnitPrice(self, code, options, rootChapter):
-        ''' Return a unit cost instantiating this object.
-
-        :param code: code for the new unit cost.
-        :param options: list of (parameterKey, parameterOption) tuples assigning
-                        values to the parameters.
-        :param rootChapter: root chapter (access to the already 
-                            defined concepts).
-        '''
-        codeTail= self.getCodeTail(options)
-        code= code.replace('$', codeTail)
-        components= self.getComponents(options)
-        summary= self.getSummary(options)
-        text= self.getText(options)
-        retval= unit_price.UnitPrice(cod= code, desc= summary, ud= self.Unidad(), ld= text)
-        # Populate component list.
-        cList= retval.components
-        for key in components:
-            searchKey= key
-            if('%' in key):
-                searchKey= key[1:] # Remove the first percent sign.
-            ent= rootChapter.getUnitPrice(searchKey)
-            if not ent:
-                logging.warning("UnitPrice.getPointers; component: " + key + ' not found.')
-                error= True
-                continue
-            else:
-                value= components[key]
-                fr= fr_entity.EntFR(f= 1.0, r= value)
-                cList.append(bc3_component.BC3Component(ent,fr))
-                error= False
-        
-        return retval
 
     def Write(self, os= sys.stdout):
         super(regBC3_parametric,self).Write(os)

@@ -6,6 +6,7 @@ import logging
 import sys
 from pycost.prices import elementary_price_container
 from pycost.prices import unit_price
+from pycost.prices import parametric
 from pycost.utils import concept_dict
 from pycost.utils import pylatex_utils
 
@@ -38,7 +39,7 @@ class Descompuestos(concept_dict.ConceptDict):
         for key in cds:
             if('$' in key): # parametric concept.
                 reg= cds.getParametricData(key)
-                self.parametricConcepts[key]= reg.datos
+                self.parametricConcepts[key]= parametric.Parametric(c= reg.datos.concept, t= reg.datos.txt, p= reg.datos.parameters)
             else: # not a parametric concept.
                 reg= cds.getUnitPriceData(key)
                 ud= unit_price.UnitPrice()
