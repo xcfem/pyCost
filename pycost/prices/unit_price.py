@@ -36,6 +36,7 @@ class UnitPrice(ms.Measurable):
         
     def getType(self):
         return basic_types.mat; #XXX provisional.
+    
     def getPrice(self):
         return self.components.getPrice()
 

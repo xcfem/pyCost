@@ -1,0 +1,98 @@
+~V||FIEBDC-3/2007\70722|pyCost 1.0|\|utf-8||
+~C|ROOT##||BASE PRECIOS||12082022||
+~C|A#||ARQUITECTURA||23112018||
+~C|AA#||ACTUACIONES PREVIAS||||
+~C|AAA#||CONSOLIDACIONES||||
+~C|AAA010$|m²|APEO DE ESTRUCTURAS||||
+~D|AAA#|AAA010$\\1.0000\AAA020$\\1.0000\AAA030$\\1.0000\|
+~P|AAA010$|#1 Definición Parámetros
+\ALTURA DE APEO \<3 m\<6 m\
+\TRABAJO\Diurno \Nocturno \Cualquier franja horaria\
+\CONDICIONES DE EJECUCIÓN \Volumen relevante \Volumen escaso\Cualquier condición de ejecución\
+\BANDA DE MANTENIMIENTO\i >= 5 horas\3 <= i < 5 horas\i < 3 horas\No necesita intervalo\
+
+#2 Matrices o fórmulas de rendimientos
+
+#DECLARACIONES ADIF: Banda de mantenimiento
+%O(4)=1.1,1.2,1.3,1
+
+#Rendimientos mano de obra
+%P(2)=0.5,0.85
+
+#3 Matrices o fórmulas de textos
+
+# TEXTOS RESUMEN
+
+# TRABAJO
+$F(3)="D","N","-"
+
+# CONDICIONES DE EJECUCIÓN 
+$G(3)="R","E","-"
+
+# BANDA DE MANTENIMIENTO
+$H(4)=">5","3 a 5","<3","NNI"
+
+# MATERIAL 
+$I(2)="c/madera","c/metal"
+
+# TEXTOS DESCRIPTIVO
+
+# TEXTOS DESCRIPTIVO
+$J(2)="Apeo de estructura, hasta una altura máxima de 3 m, mediante sopandas, puntales y durmientes de madera, con parte proporcional de medios auxiliares y trabajos previos de limpieza para apoyos. Medida superficie realmente apeada descontando huecos.","Apeo de estructura, hasta una altura máxima de 6 m, mediante sopandas, puntales y durmientes metálicos, con parte proporcional de medios auxiliares y trabajos previos de limpieza para apoyos. Medida superficie realmente apeada descontando huecos."
+
+#4 Definición descomposición y rendimientos
+
+ #Mano de obra diurno
+MOC0000200 :(%P(%A)*%O(%D))*(%B=a) #OFICIAL 1A
+MOC0000500 :(0.5*%P(%A)*%O(%D))*(%B=a) #PEÓN
+MOC0000600 :(%P(%A)*%O(%D))*(%B=a) #AYUDANTE
+
+ #Mano de obra nocturna
+MOC0000201 :(%P(%A)*%O(%D))*(%B=b) #OFICIAL 1A NOCTURNO
+MOC0000501 :(0.5*%P(%A)*%O(%D))*(%B=b) #PEÓN NOCTURNO
+MOC0000601 :(%P(%A)*%O(%D))*(%B=b) #AYUDANTE NOCTURNO
+
+ #Mano de obra cualquier franja horaria = diurno (2/3 del rendimiento total) + nocturna (1/3 del rendimiento total)
+MOC0000200 :(%P(%A)*%O(%D))*0.67*(%B=c) #OFICIAL 1A
+MOC0000201 :(%P(%A)*%O(%D))*0.33*(%B=c) #OFICIAL 1A NOCTURNO
+MOC0000500 :(0.5*%P(%A)*%O(%D))*0.67*(%B=c) #PEÓN
+MOC0000501 :(0.5*%P(%A)*%O(%D))*0.33*(%B=c) #PEÓN NOCTURNO
+MOC0000600 :(%P(%A)*%O(%D))*0.67*(%B=c) #AYUDANTE
+MOC0000601 :(%P(%A)*%O(%D))*0.33*(%B=c) #AYUDANTE NOCTURNO
+
+
+ #Maquinaria
+MN26123064 :1*(%A=b) #Equipo metálico para apeos
+
+ #Material
+MN01123001 :0.11*(%A=a) #MADERA DE PINO PARA ENTIBACIONES
+MN01120024 :0.05*(%A=a) #PUNTAS DE ACERO DE 20X100 MM
+
+ #Sobrecoste por volumen escaso
+%%VOL :0.20*(%C=b) #Duración de la ud. de obra > 1 día
+
+ #Costes indirectos
+%%CIND :0.06 #Costes indirectos
+
+
+#5 Definición de textos
+
+\RESUMEN\Apeo de estructuras $I(%A) $A. ($F(%B)/$H(%D)/$G(%C))\
+
+\TEXTO\$J(%A) Según normativa de aplicación nacional y/o equivalente europea.
+Trabajo: $B.
+Banda de mantenimiento: $D
+Condiciones de ejecución: $C.\|
+~C|MOC0000200|h|OFICIAL 1A|21.51|15111998|1|
+~C|MOC0000500|h|PEÓN|19.92|15111998|1|
+~C|MOC0000600|h|AYUDANTE|20.42|07082018|1|
+~C|MOC0000201|h|OFICIAL 1A NOCTURNO|26.89|15111998|1|
+~C|MOC0000501|h|PEÓN NOCTURNO|24.9|15111998|1|
+~C|MOC0000601|h|AYUDANTE NOCTURNO|25.53|07082018|1|
+~C|MN26123064|ud|CONJUNTO METÁLICO PARA APEOS|1.94||3|
+~C|MN01123001|m³|MADERA DE PINO PARA ENTIBACIONES|231.15||3|
+~T|MN01123001|MADERA DE PINO PARA ENTIBACIONES|
+~C|MN01120024|kg|PUNTAS DE ACERO DE 20X100 MM|10.18|15111998|3|
+~T|MN01120024|PUNTAS DE ACERO DE 20X100 MM|
+~C|%VOL|%|Sobrecoste por volumen escaso||16102018|%|
+~C|%CIND|%|Costes indirectos|||%|

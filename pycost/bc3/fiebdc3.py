@@ -5,6 +5,8 @@
 import logging
 import re
 import sys
+from colorama import Fore
+from colorama import Style
 
 def es_codigo_obra(c):
     '''Returns true if c it's the code of a project.'''
@@ -256,11 +258,11 @@ class MedArq(regBC3):
     def Write(self, os= sys.stdout):
         for l in self.lines:
             os.write("Tipo: "+l['tipo']+ '\n'
-               + "Comentario: " + l['comentario'] + '\n'
-               + "Unidades: " + str(l['unidades']) + '\n'
-               + "Largo: " + str(l['largo']) + '\n'
-               + "Ancho: " + str(l['ancho']) + '\n'
-               + "Alto: " + str(l['alto']) + '\n')
+               + "Commentary: " + l['comentario'] + '\n'
+               + "Units: " + str(l['unidades']) + '\n'
+               + "Lenght: " + str(l['largo']) + '\n'
+               + "Width: " + str(l['ancho']) + '\n'
+               + "Height: " + str(l['alto']) + '\n')
 
 
 class regBC3_linea_med(regBC3):
@@ -558,12 +560,18 @@ class regBC3_p(regBC3):
                     else:
                         logging.error('Unknown token in parametric concept: '+itk)
         return tokens
-    
-    def Write(self,os= sys.stdout):
-        os.write("Parameter label statements:\n")
+
+    def writeParameterLabelStatements(self, os= sys.stdout):
+        os.write(Fore.RED+"Parameter label statements:\n"+Style.RESET_ALL)
         for key in self.parameterLabelStatements:
             pl= self.parameterLabelStatements[key]
-            os.write('  '+key+' : '+str(pl)+'\n')
+            keyString= Fore.GREEN+key+Style.RESET_ALL
+            optionsString= Fore.YELLOW+str(pl)+Style.RESET_ALL
+            os.write('  '+keyString+' : '+optionsString+'\n')
+        
+    
+    def Write(self, os= sys.stdout):
+        self.writeParameterLabelStatements(os)
 
 class regBC3_elemento(object):
     ''' Elementary price according to FIEBDC-3 specification.
@@ -768,7 +776,10 @@ class regBC3_parametric(regBC3_elemento):
             letter= self.parameters.parameterLabelLetters[parameterKey]
             retval+= letter.lower()
         return retval
-        
+
+    def writeParameterOptions(self, os= sys.stdout):
+        ''' Write the parameters and their options.'''
+        self.parameters.writeParameterLabelStatements(os)
 
     def Write(self, os= sys.stdout):
         super(regBC3_parametric,self).Write(os)
