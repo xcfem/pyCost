@@ -26,7 +26,7 @@ site.writeYaml(pth+'/../data/yaml/test_file_10.yaml')
 
 # Get test values.
 price= site.getPrice()
-ratio1= abs(price-27.27)/27.27
+ratio1= abs(price-27.26)/27.26
 
 # Get unit of the price EAS005
 unit= site.findPrice('EAS005').Unidad()

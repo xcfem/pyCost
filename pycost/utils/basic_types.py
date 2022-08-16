@@ -63,12 +63,12 @@ def tipo_concepto2chr(tp):
     else:
         return '0'
 
-pricePrecision= 3
+pricePrecision= 2
 pricePlaces= Decimal(10) ** -pricePrecision
 priceFormatString= '{0:.'+str(pricePrecision)+'f}'
 
 def ppl_price(price):
-    txtPrice=  priceFormatString.format(price)
+    txtPrice= priceFormatString.format(price)
     return Decimal(txtPrice)
     
 percentagePrecision= 3

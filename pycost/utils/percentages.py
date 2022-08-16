@@ -12,6 +12,7 @@ class Percentages(epc.EntPyCost):
         self.gg= gen #Gastos generales.
         self.bi= profit #Beneficio industrial.
         self.iva= vat #Impuesto sobre el valor añadido.
+        
     @staticmethod
     def ApplyPercentage(p, pc):
         temp2= basic_types.ppl_percentage(pc)
