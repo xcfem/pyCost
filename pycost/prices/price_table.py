@@ -98,12 +98,13 @@ class CuaPre(epc.EntPyCost):
         '''
         self.elementos.writeLatex(doc, tipos)
 
-    def writePriceJustification(self, doc):
+    def writePriceJustification(self, doc, filterBy= None):
         '''Write price justification.
 
         :param doc: pylatex document to write into.
+        :param filterBy: write price justification for those prices only.
         '''
-        self.unidades.writePriceJustification(doc)
+        self.unidades.writePriceJustification(doc, filterBy= filterBy)
 
 
     def writePriceTableOneIntoLatexDocument(self, doc):

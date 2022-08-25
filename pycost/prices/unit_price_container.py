@@ -141,18 +141,27 @@ class Descompuestos(concept_dict.ConceptDict):
 
             doc.append(pylatex_utils.NormalSizeCommand())
 
-    def writePriceJustification(self, doc):
+    def writePriceJustification(self, doc, filterBy= None):
         ''' Write price justification into a latex report.
 
         :param doc: pylatex document to write into.
+        :param filterBy: write price justification for those prices only.
         '''
         if(len(self)>0):
-            doc.append(pylatex_utils.SmallCommand())
-            longTableStr= 'l'
-            with doc.create(pylatex_utils.LongTable(longTableStr)) as data_table:
-                for j in self.concepts:
-                    self.concepts[j].writePriceJustification(data_table)
-            doc.append(pylatex_utils.NormalSizeCommand())
+            filteredConcepts= list()
+            if(filterBy is not None):
+                for key in self.concepts:
+                    if(key in filterBy):
+                        filteredConcepts.append(key)
+            else:
+                filteredConcepts= list(self.concepts.keys())
+            if(len(filteredConcepts)>0):
+                doc.append(pylatex_utils.SmallCommand())
+                longTableStr= 'l'
+                with doc.create(pylatex_utils.LongTable(longTableStr)) as data_table:
+                    for key in filteredConcepts:
+                        self.concepts[key].writePriceJustification(data_table)
+                doc.append(pylatex_utils.NormalSizeCommand())
 
     def writePriceTableTwoIntoLatexDocument(self, doc):
         ''' Write unit price table two into a latex report.

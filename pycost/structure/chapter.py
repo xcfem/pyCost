@@ -329,17 +329,18 @@ class Chapter(bc3_entity.EntBC3):
         self.precios.writeElementaryPrices(doc, tipos)
         self.subcapitulos.writeElementaryPrices(doc, pylatex_utils.getLatexSection(parentSection))
     
-    def writePriceJustification(self, doc, parentSection):
+    def writePriceJustification(self, doc, parentSection, filterBy= None):
         ''' Write price justification table in the pylatex document argument.
 
         :param doc: document to write into.
         :param parentSection: section command for the parent chapter.
+        :param filterBy: write price justification for those prices only.
         '''
         if(parentSection!='root'):
             doc.append('\\' + parentSection + '{' + self.getTitle() + '}' + '\n')
         if self.precios.TieneDescompuestos():
-            self.precios.writePriceJustification(doc)
-        self.subcapitulos.writePriceJustification(doc,pylatex_utils.getLatexSection(parentSection))
+            self.precios.writePriceJustification(doc, filterBy= filterBy)
+        self.subcapitulos.writePriceJustification(doc, pylatex_utils.getLatexSection(parentSection), filterBy= filterBy)
         
     def ImprLtxResumen(self, doc, parentSection, recursive= True):
         ''' Write a summary report.

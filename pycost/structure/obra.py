@@ -442,15 +442,16 @@ class Obra(cp.Chapter):
         super(Obra,self).writeElementaryPrices(doc= part, parentSection= 'root', tipos= tipos)
         doc.append(part)
             
-    def writePriceJustification(self, doc, signaturesFileName= 'firmas'):
+    def writePriceJustification(self, doc, signaturesFileName= 'firmas', filterBy= None):
         ''' Write price justification.
 
         :param doc: pylatex document to write into.
         :param signaturesFileName: name of the file containing the signatures.
+        :param filterBy: write price justification for those prices only.
         '''
 
         part= pylatex_utils.Part("Justificación de precios")
-        super(Obra,self).writePriceJustification(part, 'root')
+        super(Obra,self).writePriceJustification(part, 'root', filterBy= filterBy)
         if(signaturesFileName):
             part.append(pylatex.Command('input{'+signaturesFileName+'}'))
         doc.append(part)
