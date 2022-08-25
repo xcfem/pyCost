@@ -432,9 +432,21 @@ class Chapter(bc3_entity.EntBC3):
         self.subcapitulos.WriteHCalcPre(os,parentSection)
 
     def getQuantitiesReport(self):
+        ''' Return a report containing the total measurement for 
+            each unit price.'''
         retval= self.quantities.getQuantitiesReport()
         retval.Merge(self.subcapitulos.getQuantitiesReport())
         return retval
+
+    def getEmployedPrices(self, lowerMeasurementBound= 0.0):
+        ''' Return the codes of the prices that have a total measurement
+            greater than the limit argument.
+
+        :param lowerMeasurementBound: lower bound for the total measurement.
+        '''
+        quantitiesReport= self.getQuantitiesReport()
+        return quantitiesReport.getKeysWithMeasurementGreaterThan(lowerMeasurementBound= lowerMeasurementBound)
+       
 
     def clear(self):
         '''removes all items from the chapter.'''

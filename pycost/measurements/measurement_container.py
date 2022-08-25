@@ -167,7 +167,9 @@ class ChapterQuantities(list, epc.EntPyCost):
             (i).WriteHCalcPre(os)
 
     def getQuantitiesReport(self):
-        retval= QuantitiesReport()
+        ''' Return a report containing the total measurement for 
+            each unit price.'''
+        retval= measurement_report.QuantitiesReport()
         for i in self:
             retval.Inserta((i).Informe())
         return retval

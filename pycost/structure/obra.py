@@ -527,11 +527,13 @@ class Obra(cp.Chapter):
         self.writeIntoLatexDocument(retval)
         return retval
 
-    def ImprLtxInformeObra(self, os):
-    #Imprime en LaTeX el informe de obra.
-        im= getQuantitiesReport()
-        im.printLtx(os)
-
+    def getPriceReportLatexDocument(self):
+        '''Prints the report in latex format.'''
+        im= self.getQuantitiesReport()
+        retval= pylatex.Document(documentclass= 'article')
+        im.printLtx(retval)
+        return retval
+        
     def WriteHCalc(self, outputFile):
         ''' Write data using spreadsheet format
  

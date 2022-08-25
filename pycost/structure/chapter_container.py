@@ -10,6 +10,7 @@ from pycost.bc3 import codes
 from pycost.bc3 import codigos_obra
 from pycost.utils import EntPyCost as epc
 from pycost.utils import basic_types
+from pycost.measurements import measurement_report
 
 class Subcapitulos(list, epc.EntPyCost):
 
@@ -259,7 +260,7 @@ class Subcapitulos(list, epc.EntPyCost):
         return retval
     
     def getQuantitiesReport(self):
-        retval= QuantitiesReport()
+        retval= measurement_report.QuantitiesReport()
         for j in self:
             retval.Merge((j).getQuantitiesReport())
         return retval

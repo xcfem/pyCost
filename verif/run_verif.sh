@@ -46,6 +46,7 @@ python tests/test_extract_concepts_regex.py
 python tests/test_merge_concepts_01.py
 python tests/test_merge_concepts_02.py
 python tests/test_bad_price_component.py
+python tests/test_employed_prices.py
 echo "$BLEU" "  FieBDC3 read tests." "$NORMAL"
 python tests/bc3/test_read_bc3_01.py
 python tests/bc3/test_read_bc3_02.py
@@ -72,6 +73,7 @@ python tests/latex/measurements_01.py
 python tests/latex/partial_estimates_01.py
 python tests/latex/price_justification.py
 python tests/latex/elementary_prices.py
+python tests/latex/test_quantities_report.py
 
 
 END=$(date +%s.%N)
