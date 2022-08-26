@@ -1,7 +1,13 @@
 # -*- coding: utf-8 -*-
+'''Class to generate pyCost quantities of wall structural members.'''
+
 from __future__ import division
 
-#Class to generate pyCost quantities of wall structural members.
+__author__= "Ana Ortega (AO_O) "
+__copyright__= "Copyright 2017, AO_O"
+__license__= "GPL"
+__version__= "3.0"
+__email__= "ana.Ortega@ciccp.es "
 
 import math
 from pycost.measurements.measurement_record import MeasurementRecord

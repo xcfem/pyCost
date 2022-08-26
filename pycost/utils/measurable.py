@@ -1,6 +1,12 @@
-#Measurable.py
+# -*- coding: utf-8 -*-
+''' Base class for measurable objects.'''
 
-#include <string>
+__author__= "Luis C. Pérez Tato (LCPT)"
+__copyright__= "Copyright 2017, LCPT"
+__license__= "GPL"
+__version__= "3.0"
+__email__= "l.pereztato@ciccp.es"
+
 from pycost.bc3 import bc3_entity as eBC3
 from pycost.bc3 import codes
 

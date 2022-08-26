@@ -1,6 +1,12 @@
 # -*- coding: utf-8 -*-
 '''ChapterQuantities.py quantities inside a chapter.'''
 
+__author__= "Luis C. Pérez Tato (LCPT)"
+__copyright__= "Copyright 2017, LCPT"
+__license__= "GPL"
+__version__= "3.0"
+__email__= "l.pereztato@ciccp.es"
+
 import pylatex
 from pycost.structure import unit_price_quantities
 from pycost.measurements import measurement_report

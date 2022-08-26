@@ -1,6 +1,12 @@
 # -*- coding: utf-8 -*-
 ''' Price tables.'''
 
+__author__= "Luis C. Pérez Tato (LCPT)"
+__copyright__= "Copyright 2017, LCPT"
+__license__= "GPL"
+__version__= "3.0"
+__email__= "l.pereztato@ciccp.es"
+
 from pycost.prices import elementary_price_container
 from pycost.prices import unit_price_container
 from pycost.bc3 import codigos_obra

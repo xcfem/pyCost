@@ -1,5 +1,11 @@
 # -*- coding: utf-8 -*-
-#EntFR.py
+''' Entity that has a factor and production rate.'''
+
+__author__= "Luis C. Pérez Tato (LCPT)"
+__copyright__= "Copyright 2017, LCPT"
+__license__= "GPL"
+__version__= "3.0"
+__email__= "l.pereztato@ciccp.es"
 
 import sys
 from pycost.utils import basic_types

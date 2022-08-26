@@ -1,5 +1,11 @@
 # -*- coding: utf-8 -*-
-#QuantitiesReport.py
+''' Quantities report.'''
+
+__author__= "Luis C. Pérez Tato (LCPT)"
+__copyright__= "Copyright 2017, LCPT"
+__license__= "GPL"
+__version__= "3.0"
+__email__= "l.pereztato@ciccp.es"
 
 import pylatex
 from pycost.prices import unit_price_report

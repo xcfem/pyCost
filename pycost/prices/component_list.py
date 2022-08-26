@@ -1,5 +1,12 @@
 # -*- coding: utf-8 -*-
-#ComponentList.py
+''' Component list.'''
+
+__author__= "Luis C. Pérez Tato (LCPT)"
+__copyright__= "Copyright 2017, LCPT"
+__license__= "GPL"
+__version__= "3.0"
+__email__= "l.pereztato@ciccp.es"
+
 import sys
 import logging
 from pycost.utils import EntPyCost as epc

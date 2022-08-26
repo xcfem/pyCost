@@ -1,5 +1,11 @@
-#UnitPriceQuantitiesBase.py
+# -*- coding: utf-8 -*-
 '''Something that can return the quantities for a unit price.'''
+
+__author__= "Luis C. Pérez Tato (LCPT)"
+__copyright__= "Copyright 2017, LCPT"
+__license__= "GPL"
+__version__= "3.0"
+__email__= "l.pereztato@ciccp.es"
 
 import pylatex
 import logging

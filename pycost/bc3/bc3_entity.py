@@ -1,5 +1,12 @@
-#EntBC3.py
-#Precio elemental.
+# -*- coding: utf-8 -*-
+''' Base class for BC3 entities.'''
+
+__author__= "Luis C. Pérez Tato (LCPT)"
+__copyright__= "Copyright 2017, LCPT"
+__license__= "GPL"
+__version__= "3.0"
+__email__= "l.pereztato@ciccp.es"
+
 
 import logging
 from pycost.bc3 import codes

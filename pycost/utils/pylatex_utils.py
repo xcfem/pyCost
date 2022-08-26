@@ -1,11 +1,16 @@
 # _*_ coding:utf-8 _*_
 '''pylatex_utils.py: things that are not yet implemented in pylatex.'''
+
+__author__= "Luis C. Pérez Tato (LCPT)"
+__copyright__= "Copyright 2017, LCPT"
+__license__= "GPL"
+__version__= "3.0"
+__email__= "l.pereztato@ciccp.es"
+
 from pathlib import Path
 import os
 import glob
 import pylatex
-
-
 
 
 class Part(pylatex.section.Section):
