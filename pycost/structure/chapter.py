@@ -453,8 +453,23 @@ class Chapter(bc3_entity.EntBC3):
         '''
         quantitiesReport= self.getQuantitiesReport()
         return quantitiesReport.getKeysWithMeasurementGreaterThan(lowerMeasurementBound= lowerMeasurementBound)
-       
 
+    def getEmployedElementaryPrices(self, lowerMeasurementBound= 0.0):
+        ''' Return the codes of the elementary prices that have a total 
+            measurement greater than the limit argument.
+
+        :param lowerMeasurementBound: lower bound for the total measurement.
+        '''
+        employedPrices= self.getEmployedPrices(lowerMeasurementBound= lowerMeasurementBound)
+        retval= list()
+        for key in employedPrices:
+            price= self.findPrice(key)
+            for c in price.components:
+                code= c.CodigoEntidad()
+                if(code not in retval):
+                    retval.append(code)
+        return retval
+       
     def clear(self):
         '''removes all items from the chapter.'''
         self.quantities.clear()
