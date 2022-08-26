@@ -67,8 +67,15 @@ class Chapter(bc3_entity.EntBC3):
         '''
         return (self.NumElementales(filterBy= filterBy)>0)
     
-    def NumDescompuestos(self):
-        return self.precios.NumDescompuestos()+self.subcapitulos.NumDescompuestos()
+    def NumDescompuestos(self, filterBy= None):
+        ''' Return the number of compound prices in this chapter and its
+            sub-chapters. If filterBy is not None return only the number of 
+            compound prices whose code is also in the filterBy list.
+
+        :param filterBy: count only if the code is in this list.
+        '''
+        return self.precios.NumDescompuestos(filterBy= filterBy)+self.subcapitulos.NumDescompuestos(filterBy= filterBy)
+    
     def TieneDescompuestos(self, filterBy= None):
         ''' Return true if the chapter has compound prices. If filterBy 
         is not None return true only if the number of compound prices 
@@ -368,11 +375,11 @@ class Chapter(bc3_entity.EntBC3):
         :param parentSection: section command for the parent chapter.
         :param filterBy: write price justification for those prices only.
         '''
-        if(parentSection!='root'):
-            doc.append('\\' + parentSection + '{' + self.getTitle() + '}' + '\n')
-        if self.precios.TieneDescompuestos(filterBy= filterBy):
+        if(self.TieneDescompuestos(filterBy= filterBy)):
+            if(parentSection!='root'):
+                doc.append('\\' + parentSection + '{' + self.getTitle() + '}' + '\n')
             self.precios.writePriceJustification(doc, filterBy= filterBy)
-        self.subcapitulos.writePriceJustification(doc, pylatex_utils.getLatexSection(parentSection), filterBy= filterBy)
+            self.subcapitulos.writePriceJustification(doc, pylatex_utils.getLatexSection(parentSection), filterBy= filterBy)
         
     def ImprLtxResumen(self, doc, parentSection, recursive= True):
         ''' Write a summary report.

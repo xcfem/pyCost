@@ -35,13 +35,19 @@ class Subcapitulos(list, epc.EntPyCost):
         '''
         retval= 0
         for j in self:
-            retval+= (j).NumElementales(filterBy)
+            retval+= (j).NumElementales(filterBy= filterBy)
         return retval
     
-    def NumDescompuestos(self):
+    def NumDescompuestos(self, filterBy= None):
+        ''' Return the number of compound prices. If filterBy is not None
+        return only the number of compound prices whose code is also in the
+        filterBy list.
+
+        :param filterBy: count only if the code is in this list.
+        '''
         retval= 0
         for j in self:
-            retval+= (j).NumDescompuestos()
+            retval+= (j).NumDescompuestos(filterBy= filterBy)
         return retval
 
     def getPrice(self):
