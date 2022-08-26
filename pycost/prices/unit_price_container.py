@@ -25,6 +25,21 @@ class Descompuestos(concept_dict.ConceptDict):
         super().__init__()
         self.parametricConcepts= dict()
 
+    def size(self, filterBy= None):
+        ''' Return the number of compound prices in this container. If 
+        filterBy is not None return only the number of compound prices 
+        whose code is also in the filterBy list.
+
+        :param filterBy: count only if the code is in this list.
+        '''
+        retval= len(self)
+        if(filterBy is not None):
+            retval= 0
+            for key in self.concepts:
+                if key in filterBy:
+                    retval+= 1
+        return retval
+    
     def appendComponent(self, el, cod_ud, cod_el, r, f):
         ''' Append a new component to the container.
 

@@ -30,14 +30,36 @@ class CuaPre(epc.EntPyCost):
     def UdsObra(self):
         return self.unidades
 
-    def TieneElementales(self):
-        return (len(self.elementos)>0)
+    def NumElementales(self, filterBy= None):
+        ''' Return the number of elementary prices. If filterBy is not None
+        return only the number of elementary prices whose code is also in the
+        filterBy list.
 
-    def NumDescompuestos(self):
-        return len(self.unidades)
+        :param filterBy: count only if the code is in this list.
+        '''
+        return self.elementos.size(filterBy= filterBy)                
+    
+    def TieneElementales(self, filterBy= None):
+        ''' Return true if the container has elementary prices. If filterBy 
+        is not None return true only if the number of elementary prices 
+        whose code is also in the filterBy list is not zero.
 
-    def TieneDescompuestos(self):
-        return (self.NumDescompuestos()>0)
+        :param filterBy: count only the codes on this list.
+        '''
+        
+        return (self.NumElementales(filterBy= filterBy)>0)
+
+    def NumDescompuestos(self, filterBy= None):
+        ''' Return the number of compound prices. If filterBy is not None
+        return only the number of compound prices whose code is also in the
+        filterBy list.
+
+        :param filterBy: count only if the code is in this list.
+        '''
+        return self.unidades.size(filterBy= filterBy)
+
+    def TieneDescompuestos(self, filterBy= None):
+        return (self.NumDescompuestos(filterBy= filterBy)>0)
 
     def appendComponent(self, cod_ud, cod_el, r, f= 1.0):
         self.unidades.appendComponent(elementos,cod_ud,cod_el,r,f)
@@ -96,13 +118,14 @@ class CuaPre(epc.EntPyCost):
             self.unidades.LeeSpre(iS,elementos)
 
 
-    def writeElementaryPrices(self, doc, tipos=  [basic_types.mdo, basic_types.maq, basic_types.mat]):
+    def writeElementaryPrices(self, doc, tipos=  [basic_types.mdo, basic_types.maq, basic_types.mat], filterBy= None):
         ''' Write the elementary prices table.
 
         :param doc: pylatex document to write into.
         :param tipos: types of the prices to write (maquinaria, materiales o mano de obra) defaults to all of them.
+        :param filterBy: write those prices only.
         '''
-        self.elementos.writeLatex(doc, tipos)
+        self.elementos.writeLatex(doc, tipos, filterBy= filterBy)
 
     def writePriceJustification(self, doc, filterBy= None):
         '''Write price justification.
@@ -113,27 +136,30 @@ class CuaPre(epc.EntPyCost):
         self.unidades.writePriceJustification(doc, filterBy= filterBy)
 
 
-    def writePriceTableOneIntoLatexDocument(self, doc):
+    def writePriceTableOneIntoLatexDocument(self, doc, filterBy= None):
         '''Write first price table.
 
         :param doc: pylatex document to write into.
+        :param filterBy: write price only if its code is in the list.
         '''
-        self.unidades.writePriceTableOneIntoLatexDocument(doc)
+        self.unidades.writePriceTableOneIntoLatexDocument(doc, filterBy= filterBy)
 
-    def writePriceTableTwoIntoLatexDocument(self, doc):
+    def writePriceTableTwoIntoLatexDocument(self, doc, filterBy= None):
         '''Write second prince table.
 
         :param doc: pylatex document to write into.
+        :param filterBy: write price only if its code is in the list.
         '''
-        self.unidades.writePriceTableTwoIntoLatexDocument(doc)
+        self.unidades.writePriceTableTwoIntoLatexDocument(doc, filterBy= filterBy)
 
-    def writePriceTablesIntoLatexDocument(self, doc):
+    def writePriceTablesIntoLatexDocument(self, doc, filterBy= None):
         '''Write both price tables.
 
         :param doc: pylatex document to write into.
+        :param filterBy: write price only if its code is in the list.
         '''
-        writePriceTableOneIntoLatexDocument(doc)
-        writePriceTableTwoIntoLatexDocument(doc)
+        writePriceTableOneIntoLatexDocument(doc, filterBy= filterBy)
+        writePriceTableTwoIntoLatexDocument(doc, filterBy= filterBy)
 
     def WriteHCalc(self, os):
         self.elementos.WriteHCalc(os)

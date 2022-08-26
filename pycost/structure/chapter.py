@@ -48,13 +48,35 @@ class Chapter(bc3_entity.EntBC3):
         self.quantities= measurement_container.ChapterQuantities()
         self.precios= price_table.CuaPre() #Para precios elementales y
                                #descompuestos clasificados por capítulos.
-    def TieneElementales(self):
-        return self.precios.TieneElementales()
+
+    def NumElementales(self, filterBy= None):
+        ''' Return the number of elementary prices in this chapter and its
+            sub-chapters. If filterBy is not None return only the number of 
+            elementary prices whose code is also in the filterBy list.
+
+        :param filterBy: count only if the code is in this list.
+        '''
+        return self.precios.NumElementales(filterBy= filterBy)+self.subcapitulos.NumElementales(filterBy= filterBy)
+    
+    def TieneElementales(self, filterBy= None):
+        ''' Return true if the chapter has elementary prices. If filterBy 
+        is not None return true only if the number of elementary prices 
+        whose code is also in the filterBy list is not zero.
+
+        :param filterBy: count only the codes on this list.
+        '''
+        return (self.NumElementales(filterBy= filterBy)>0)
     
     def NumDescompuestos(self):
         return self.precios.NumDescompuestos()+self.subcapitulos.NumDescompuestos()
-    def TieneDescompuestos(self):
-        return self.NumDescompuestos()> 0
+    def TieneDescompuestos(self, filterBy= None):
+        ''' Return true if the chapter has compound prices. If filterBy 
+        is not None return true only if the number of compound prices 
+        whose code is also in the filterBy list is not zero.
+
+        :param filterBy: count only the codes on this list.
+        '''
+        return (self.NumDescompuestos(filterBy= filterBy)>0)
     
     def GetBuscadorDescompuestos(self):
         return self.precios.GetBuscadorDescompuestos()
@@ -299,41 +321,45 @@ class Chapter(bc3_entity.EntBC3):
                 self.subcapitulos.writeQuantitiesIntoLatexDocument(docPart,sectName)
             doc.append(docPart)
         
-    def writePriceTableOneIntoLatexDocument(self, doc, parentSection):
+    def writePriceTableOneIntoLatexDocument(self, doc, parentSection, filterBy= None):
         ''' Write price table number one in the pylatex document argument.
 
         :param doc: document to write into.
         :param parentSection: section command for the parent chapter.
+        :param filterBy: write those prices only.
         '''
-        if(self.TieneDescompuestos()):
+        if(self.TieneDescompuestos(filterBy= filterBy)):
             if parentSection!='root':
                 doc.append('\\' + parentSection + '{' + self.getTitle() + '}' + '\n')
-            if self.precios.TieneDescompuestos():
-                self.precios.writePriceTableOneIntoLatexDocument(doc)
-            self.subcapitulos.writePriceTableOneIntoLatexDocument(doc,pylatex_utils.getLatexSection(parentSection))
-    def writePriceTableTwoIntoLatexDocument(self, doc, parentSection):
+            if self.precios.TieneDescompuestos(filterBy= filterBy):
+                self.precios.writePriceTableOneIntoLatexDocument(doc, filterBy= filterBy)
+            self.subcapitulos.writePriceTableOneIntoLatexDocument(doc,pylatex_utils.getLatexSection(parentSection), filterBy= filterBy)
+    def writePriceTableTwoIntoLatexDocument(self, doc, parentSection, filterBy= None):
         ''' Write price table number two in the pylatex document argument.
 
         :param doc: document to write into.
         :param parentSection: section command for the parent chapter.
+        :param filterBy: write those prices only.
         '''
-        if self.precios.TieneDescompuestos():
+        if self.precios.TieneDescompuestos(filterBy= filterBy):
             if parentSection!='root':
                 doc.append('\\' + parentSection + '{' + self.getTitle() + '}' + '\n')
-            self.precios.writePriceTableTwoIntoLatexDocument(doc)
-        self.subcapitulos.writePriceTableTwoIntoLatexDocument(doc,pylatex_utils.getLatexSection(parentSection))
+            self.precios.writePriceTableTwoIntoLatexDocument(doc, filterBy= filterBy)
+        self.subcapitulos.writePriceTableTwoIntoLatexDocument(doc,pylatex_utils.getLatexSection(parentSection), filterBy= filterBy)
 
-    def writeElementaryPrices(self, doc, parentSection, tipos=  [basic_types.mdo, basic_types.maq, basic_types.mat]):
+    def writeElementaryPrices(self, doc, parentSection, tipos=  [basic_types.mdo, basic_types.maq, basic_types.mat], filterBy= None):
         ''' Write the elementary prices table.
 
         :param doc: pylatex document to write into.
         :param parentSection: section command for the parent chapter.
         :param tipos: types of the prices to write (maquinaria, materiales o mano de obra) defaults to all of them.
+        :param filterBy: write those prices only.
         '''
-        if(parentSection!='root'):
-            doc.append('\\' + parentSection + '{' + self.getTitle() + '}' + '\n')
-        self.precios.writeElementaryPrices(doc, tipos)
-        self.subcapitulos.writeElementaryPrices(doc, pylatex_utils.getLatexSection(parentSection))
+        if(self.TieneElementales(filterBy= filterBy)):
+            if(parentSection!='root'):
+                doc.append('\\' + parentSection + '{' + self.getTitle() + '}' + '\n')
+            self.precios.writeElementaryPrices(doc, tipos, filterBy= filterBy)
+            self.subcapitulos.writeElementaryPrices(doc, pylatex_utils.getLatexSection(parentSection), filterBy= filterBy)
     
     def writePriceJustification(self, doc, parentSection, filterBy= None):
         ''' Write price justification table in the pylatex document argument.
@@ -344,7 +370,7 @@ class Chapter(bc3_entity.EntBC3):
         '''
         if(parentSection!='root'):
             doc.append('\\' + parentSection + '{' + self.getTitle() + '}' + '\n')
-        if self.precios.TieneDescompuestos():
+        if self.precios.TieneDescompuestos(filterBy= filterBy):
             self.precios.writePriceJustification(doc, filterBy= filterBy)
         self.subcapitulos.writePriceJustification(doc, pylatex_utils.getLatexSection(parentSection), filterBy= filterBy)
         

@@ -21,7 +21,22 @@ class ElementaryPrices(concept_dict.ConceptDict):
     
     def __init__(self):
         super(ElementaryPrices,self).__init__()
-        
+
+    def size(self, filterBy= None):
+        ''' Return the number of elementary prices in this container. If 
+        filterBy is not None return only the number of elementary prices 
+        whose code is also in the filterBy list.
+
+        :param filterBy: count only if the code is in this list.
+        '''
+        retval= len(self)
+        if(filterBy is not None):
+            retval= 0
+            for key in self.concepts:
+                if key in filterBy:
+                    retval+= 1
+        return retval
+
     def WriteHCalc(os):
         logging.error("ElementaryPrices.WriteHCalc no implementada." + '\n')
 
@@ -198,28 +213,34 @@ class ElementaryPrices(concept_dict.ConceptDict):
             logging.info("Loaded " + str(sz) + " elementary prices. " + '\n')
 
 
-    def writeLatexPricesOfType(self, doc, tipo):
+    def writeLatexPricesOfType(self, doc, tipo, filterBy= None):
         ''' Write the header for the elementary prices table.
 
         :param doc: pylatex document to write into.
         :param tipo: type of the prices to write (maquinaria, materiales o mano de obra).
+        :param filterBy: write those prices only.
         '''
         data_table= self.writeLatexHeader(doc, tipo)
         el= None
         for key in self.concepts:
             el= self.concepts[key]
-            if el.getType() == tipo:
-                el.writeLatex(data_table)
+            if(filterBy is not None):
+                if (el.getType() == tipo) and (key in filterBy):
+                    el.writeLatex(data_table)
+            else:
+                if (el.getType() == tipo):
+                    el.writeLatex(data_table)
         doc.append(pylatex_utils.NormalSizeCommand())
 
-    def writeLatex(self, doc, tipos= [basic_types.mdo, basic_types.maq, basic_types.mat]):
+    def writeLatex(self, doc, tipos= [basic_types.mdo, basic_types.maq, basic_types.mat], filterBy= None):
         ''' Write the header for the elementary prices table.
 
         :param doc: pylatex document to write into.
         :param tipos: types of the prices to write (maquinaria, materiales o mano de obra) defaults to all of them.
+        :param filterBy: write those prices only.
         '''
         for tp in tipos:
-            self.writeLatexPricesOfType(doc, tp)
+            self.writeLatexPricesOfType(doc, tp, filterBy= filterBy)
             # doc.append(pylatex.NoEscape(pylatex_utils.ltx_newpage + '\n'))
 
     def getDict(self):

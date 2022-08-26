@@ -26,11 +26,23 @@ class Subcapitulos(list, epc.EntPyCost):
     def getContenedor(self):
         return self
 
-    def NumDescompuestos(self):
-        nd= 0
+    def NumElementales(self, filterBy= None):
+        ''' Return the number of elementary prices. If filterBy is not None
+        return only the number of elementary prices whose code is also in the
+        filterBy list.
+
+        :param filterBy: count only if the code is in this list.
+        '''
+        retval= 0
         for j in self:
-            nd+= (j).NumDescompuestos()
-        return nd
+            retval+= (j).NumElementales(filterBy)
+        return retval
+    
+    def NumDescompuestos(self):
+        retval= 0
+        for j in self:
+            retval+= (j).NumDescompuestos()
+        return retval
 
     def getPrice(self):
         p= 0.0
@@ -178,33 +190,36 @@ class Subcapitulos(list, epc.EntPyCost):
         for j in self:
             (j).writeQuantitiesIntoLatexDocument(doc,sectName)
 
-    def writePriceTableOneIntoLatexDocument(self, doc, sectName):
+    def writePriceTableOneIntoLatexDocument(self, doc, sectName, filterBy= None):
         ''' Write unit prices table one in the pylatex document argument.
 
         :param doc: document to write into.
         :param sectName: section command for the chapter.
+        :param filterBy: write the prices on the list only.
         '''
         for j in self:
-            (j).writePriceTableOneIntoLatexDocument(doc, sectName)
+            (j).writePriceTableOneIntoLatexDocument(doc, sectName, filterBy= filterBy)
 
-    def writePriceTableTwoIntoLatexDocument(self, doc, sectName):
+    def writePriceTableTwoIntoLatexDocument(self, doc, sectName, filterBy= None):
         ''' Write unit prices table one in the pylatex document argument.
 
         :param doc: document to write into.
         :param sectName: section command for the chapter.
+        :param filterBy: write the prices on the list only.
         '''
         for j in self:
-            (j).writePriceTableTwoIntoLatexDocument(doc, sectName)
+            (j).writePriceTableTwoIntoLatexDocument(doc, sectName, filterBy= filterBy)
 
-    def writeElementaryPrices(self, doc, parentSection, tipos=  [basic_types.mdo, basic_types.maq, basic_types.mat]):
+    def writeElementaryPrices(self, doc, parentSection, tipos=  [basic_types.mdo, basic_types.maq, basic_types.mat], filterBy= None):
         ''' Write the elementary prices table.
 
         :param doc: pylatex document to write into.
         :param parentSection: section command for the parent chapter.
         :param tipos: types of the prices to write (maquinaria, materiales o mano de obra) defaults to all of them.
+        :param filterBy: write those prices only.
         '''
         for j in self:
-            (j).writeElementaryPrices(doc, parentSection, tipos)
+            (j).writeElementaryPrices(doc, parentSection, tipos, filterBy= filterBy)
 
     def writePriceJustification(self, data_table, parentSection, filterBy= None):
         ''' Write unit prices table one in the pylatex document argument.

@@ -412,40 +412,43 @@ class Obra(cp.Chapter):
         super(Obra,self).ImprCompLtxMed(os,'root',other)
         doc.create(pylatex_utils.ltx_end("landscape") + '\n')
 
-    def writePriceTableOneIntoLatexDocument(self, doc, signaturesFileName= 'firmas'):
+    def writePriceTableOneIntoLatexDocument(self, doc, signaturesFileName= 'firmas', filterBy= None):
         '''
         :param signaturesFileName: name of the file containing the signatures.
+        :param filterBy: write those prices only.
         '''
         part= pylatex_utils.Part("Cuadro de precios no. 1")
         part.append(pylatex.Command('parttoc'))
         part.append(pylatex.Command('setcounter{chapter}{0}'))
-        super(Obra,self).writePriceTableOneIntoLatexDocument(part,'root')
+        super(Obra,self).writePriceTableOneIntoLatexDocument(part,'root', filterBy= filterBy)
         if(signaturesFileName):
             part.append(pylatex.Command('input{'+signaturesFileName+'}'))
         doc.append(part)
 
-    def writePriceTableTwoIntoLatexDocument(self, doc, signaturesFileName= 'firmas'):
+    def writePriceTableTwoIntoLatexDocument(self, doc, signaturesFileName= 'firmas', filterBy= None):
         '''Write price table two.
 
         :param doc: pylatex document to write into.
         :param signaturesFileName: name of the file containing the signatures.
+        :param filterBy: write the prices on the list only.
         '''
         part= pylatex_utils.Part("Cuadro de precios no. 2")
         part.append(pylatex.Command('parttoc'))
         part.append(pylatex.Command('setcounter{chapter}{0}'))
-        super(Obra,self).writePriceTableTwoIntoLatexDocument(part,'root')
+        super(Obra,self).writePriceTableTwoIntoLatexDocument(part,'root', filterBy= filterBy)
         if(signaturesFileName):
             part.append(pylatex.Command('input{'+signaturesFileName+'}'))
         doc.append(part)
 
-    def writeElementaryPrices(self, doc, tipos=  [basic_types.mdo, basic_types.maq, basic_types.mat]):
+    def writeElementaryPrices(self, doc, tipos=  [basic_types.mdo, basic_types.maq, basic_types.mat], filterBy= None):
         ''' Write the elementary prices table.
 
         :param doc: pylatex document to write into.
         :param tipos: types of the prices to write (maquinaria, materiales o mano de obra) defaults to all of them.
+        :param filterBy: write the prices on the list only.
         '''
         part= pylatex_utils.Part("Precios elementales")
-        super(Obra,self).writeElementaryPrices(doc= part, parentSection= 'root', tipos= tipos)
+        super(Obra,self).writeElementaryPrices(doc= part, parentSection= 'root', tipos= tipos, filterBy= filterBy)
         doc.append(part)
             
     def writePriceJustification(self, doc, signaturesFileName= 'firmas', filterBy= None):
