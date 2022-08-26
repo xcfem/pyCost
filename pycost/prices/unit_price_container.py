@@ -131,11 +131,25 @@ class Descompuestos(concept_dict.ConceptDict):
         resto= ''
         getline(iS,resto,'\n')
 
+    def filterConcepts(self, filterBy= None):
+        ''' Return a list with the concepts filtered by the list argument.
 
-    def writePriceTableOneIntoLatexDocument(self, doc):
+        :param filterBy: return the prices whose code is in the list only.
+        '''
+        retval= list()
+        if(filterBy is None):
+            retval= list(self.concepts.keys())
+        else:
+            for key in self.concepts:
+                if(key in filterBy):
+                    retval.append(key)
+        return retval
+        
+    def writePriceTableOneIntoLatexDocument(self, doc, filterBy= None):
         ''' Write unit price table one into a latex report.
 
         :param doc: pylatex document to write into.
+        :param filterBy: write price table for those prices only.
         '''
         if(len(self)>=1):
             num_campos= 5
@@ -155,9 +169,10 @@ class Descompuestos(concept_dict.ConceptDict):
                 data_table.end_table_footer()
                 data_table.add_hline()
                 data_table.end_table_last_footer()
-                for j in self.concepts:
+                filteredConcepts= self.filterConcepts(filterBy= filterBy)
+                for key in filteredConcepts:
                     data_table.add_empty_row()
-                    self.concepts[j].writePriceTableOneIntoLatexDocument(data_table)
+                    self.concepts[key].writePriceTableOneIntoLatexDocument(data_table)
                     data_table.add_empty_row()
 
             doc.append(pylatex_utils.NormalSizeCommand())
@@ -169,13 +184,7 @@ class Descompuestos(concept_dict.ConceptDict):
         :param filterBy: write price justification for those prices only.
         '''
         if(len(self)>0):
-            filteredConcepts= list()
-            if(filterBy is not None):
-                for key in self.concepts:
-                    if(key in filterBy):
-                        filteredConcepts.append(key)
-            else:
-                filteredConcepts= list(self.concepts.keys())
+            filteredConcepts= self.filterConcepts(filterBy= filterBy)
             if(len(filteredConcepts)>0):
                 doc.append(pylatex_utils.SmallCommand())
                 longTableStr= 'l'
@@ -184,18 +193,20 @@ class Descompuestos(concept_dict.ConceptDict):
                         self.concepts[key].writePriceJustification(data_table)
                 doc.append(pylatex_utils.NormalSizeCommand())
 
-    def writePriceTableTwoIntoLatexDocument(self, doc):
+    def writePriceTableTwoIntoLatexDocument(self, doc, filterBy= None):
         ''' Write unit price table two into a latex report.
 
         :param doc: pylatex document to write into.
+        :param filterBy: write price table for those prices only.
         '''
         if(len(self)>0):
             #doc.append(pylatex_utils.ltx_star_.chapter("Cuadro de precios no. 2") + '\n'
             doc.append(pylatex_utils.SmallCommand())
             longTableStr= 'l'
             with doc.create(pylatex_utils.LongTable(longTableStr)) as data_table:
-                for j in self.concepts:
-                    self.concepts[j].writePriceTableTwoIntoLatexDocument(data_table)
+                filteredConcepts= self.filterConcepts(filterBy= filterBy)
+                for key in filteredConcepts:
+                    self.concepts[key].writePriceTableTwoIntoLatexDocument(data_table)
             doc.append(pylatex_utils.NormalSizeCommand())
 
     def WriteHCalc(self, os):

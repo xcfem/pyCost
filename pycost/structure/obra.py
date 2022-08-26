@@ -465,13 +465,14 @@ class Obra(cp.Chapter):
             part.append(pylatex.Command('input{'+signaturesFileName+'}'))
         doc.append(part)
 
-    def writePriceTablesIntoLatexDocument(self, doc):
+    def writePriceTablesIntoLatexDocument(self, doc, filterBy= None):
         ''' Write price tables 1 and 2.
 
         :param doc: pylatex document to write into.
+        :param filterBy: write price tables for those prices only.
         '''
-        self.writePriceTableOneIntoLatexDocument(doc)
-        self.writePriceTableTwoIntoLatexDocument(doc)
+        self.writePriceTableOneIntoLatexDocument(doc, filterBy= filterBy)
+        self.writePriceTableTwoIntoLatexDocument(doc, filterBy= filterBy)
 
     def writePartialBudgetsIntoLatexDocument(self, doc):
         ''' Write partial budgets report.
@@ -517,13 +518,14 @@ class Obra(cp.Chapter):
         ImprCompLtxPreParc(other,os)
         #ImprLtxResumen(os)
 
-    def writeIntoLatexDocument(self, doc):
+    def writeIntoLatexDocument(self, doc, filterBy= None):
         ''' Write budget in the pylatex document argument.
 
         :param doc: pylatex document to write into.
+        :param filterBy: write those prices only.
         '''
         self.writeQuantitiesIntoLatexDocument(doc) #Quantities.
-        self.writePriceTablesIntoLatexDocument(doc) #Price lists.
+        self.writePriceTablesIntoLatexDocument(doc, filterBy= filterBy) #Price lists.
         self.writePartialBudgetsIntoLatexDocument(doc) #Presupuestos parciales.
         self.ImprLtxResumen(doc) #Resument presup. parciales.
         self.ImprLtxPresGen(doc) #Presupuestos generales.
