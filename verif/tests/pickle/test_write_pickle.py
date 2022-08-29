@@ -27,7 +27,7 @@ newRootChapter= pickle.load(inputFile)
 inputFile.close()
 
 cost= newRootChapter.getPrice()
-ratio1= abs(cost-400611.11184120004)/400611.11184120004
+ratio1= abs(cost-400628.3115692)/400628.3115692
 
 '''
 print(cost)

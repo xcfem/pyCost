@@ -18,10 +18,10 @@ rootChapter= pickle.load(inputFile)
 inputFile.close()
 
 cost= rootChapter.getPrice()
-ratio1= abs(cost-400611.11184120004)/400611.11184120004
+ratio1= abs(cost-400628.3115692)/400628.3115692
 
 roundedCost= float(rootChapter.getRoundedPrice())
-ratio2= abs(roundedCost-400611.11)/400611.11
+ratio2= abs(roundedCost-400628.29)/400628.29
 
 '''
 print(cost)
