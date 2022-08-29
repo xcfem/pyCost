@@ -25,7 +25,7 @@ for sc in site.subcapitulos:
     
 # Get test values.
 price= site.getPrice()
-ratio1= abs(price-395.20)/395.20
+ratio1= abs(price-296.0)/269.0
 numChapters= len(site.subcapitulos)
 
 '''

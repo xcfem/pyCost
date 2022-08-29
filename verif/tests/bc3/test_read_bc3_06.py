@@ -4,6 +4,7 @@ from __future__ import division
 from __future__ import print_function
 
 import yaml
+import pylatex
 from pycost.structure import obra
 
 # Create main object.
@@ -35,6 +36,14 @@ unit= site.findPrice('EAS005').Unidad()
 print('price: ', price)
 print('ratio1: ', ratio1)
 print('unit: ', unit)
+doc=pylatex.Document(documentclass= 'book')
+doc.packages.append(pylatex.Package('babel', options = ['spanish']))
+doc.packages.append(pylatex.Package('aeguill'))
+doc.packages.append(pylatex.Package('minitoc'))
+doc.preamble.append(pylatex.Command('selectlanguage', 'spanish'))
+# doc.append(pylatex.Command('doparttoc'))
+site.writePartialBudgetsIntoLatexDocument(doc)
+doc.generate_tex('partial_budgets')
 '''
 
 import os

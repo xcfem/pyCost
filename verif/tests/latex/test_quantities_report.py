@@ -47,6 +47,6 @@ if (ok):
 else:
     logging.error('test: '+fname+' ERROR.')
 
-# Remove LaTeX file
-if os.path.exists(thisFile):
-    os.remove(thisFile)
+# # Remove LaTeX file
+# if os.path.exists(thisFile):
+#     os.remove(thisFile)

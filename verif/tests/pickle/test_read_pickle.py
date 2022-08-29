@@ -18,10 +18,10 @@ rootChapter= pickle.load(inputFile)
 inputFile.close()
 
 cost= rootChapter.getPrice()
-ratio1= abs(cost-405019.2418412)/405019.2418412
+ratio1= abs(cost-400611.11184120004)/400611.11184120004
 
 roundedCost= float(rootChapter.getRoundedPrice())
-ratio2= abs(roundedCost-405019.23)/405019.23
+ratio2= abs(roundedCost-400611.11)/400611.11
 
 '''
 print(cost)
@@ -33,7 +33,7 @@ print(ratio2)
 import os
 import logging
 fname= os.path.basename(__file__)
-if (ratio1<1e-6) and abs(ratio1<1e-6):
+if (ratio1<1e-6) and abs(ratio2<1e-6):
     print('test: '+fname+': ok.')
 else:
     logging.error('test: '+fname+' ERROR.')

@@ -37,7 +37,7 @@ print('num. elementary prices: ', numElementaryPrices)
 import os
 import logging
 fname= os.path.basename(__file__)
-if ((price==140.0) and (numChapters==1) and (numElementaryPrices==2) and (numQuantities==1)):
+if ((price==100.0) and (numChapters==1) and (numElementaryPrices==2) and (numQuantities==1)):
     print('test: '+fname+': ok.')
 else:
     logging.error('test: '+fname+' ERROR.')

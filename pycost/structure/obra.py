@@ -234,7 +234,7 @@ class Obra(cp.Chapter):
         rootChapter= rootChapterDict[key]
         reg= rootChapterDict.getChapterData(key= key)
         self.codigo= reg.Codigo(); # code
-        self.titulo= reg.Datos().getTitle(); # title
+        self.title= reg.Datos().getTitle(); # title
         components= reg.Datos().desc
         self.subcapitulos.newChapters(components)
 

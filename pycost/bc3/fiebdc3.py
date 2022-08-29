@@ -230,10 +230,10 @@ class MedArq(regBC3):
         while(len(tokens)>0):
             tipo= 0
             comentario= ''
-            unidades= 1
-            largo= 1
-            ancho= 1
-            alto= 1
+            unidades= 0
+            largo= 0
+            ancho= 0
+            alto= 0
             if(len(tokens)>0):
                 tmp= tokens.pop(0)
                 if(len(tmp)>0):
@@ -256,13 +256,23 @@ class MedArq(regBC3):
                 tmp= tokens.pop(0)
                 if(len(tmp)>0):
                     alto= float(tmp)
+            # If any of the dimension is not null.
+            if((unidades!= 0) or (largo!=0) or (ancho!=0) or (alto!=0)):
+                if(unidades==0):
+                    unidades= 1
+                if(largo==0):
+                    largo= 1
+                if(ancho==0):
+                    ancho= 1
+                if(alto==0):
+                    alto= 1
             lineData= {'tipo':tipo, 'comentario':comentario, 'unidades':unidades, 'largo':largo, 'ancho':ancho, 'alto':alto}
             self.lines.append(lineData)
         return strtk
     
     def Write(self, os= sys.stdout):
         for l in self.lines:
-            os.write("Tipo: "+l['tipo']+ '\n'
+            os.write("Tipo: "+str(l['tipo'])+ '\n'
                + "Commentary: " + l['comentario'] + '\n'
                + "Units: " + str(l['unidades']) + '\n'
                + "Lenght: " + str(l['largo']) + '\n'
@@ -300,18 +310,18 @@ class regBC3_ruta(list, regBC3):
             self.pop(-1)
         return strtk
         
-    def Chapters():
-        return size()-1
+    def Chapters(self):
+        return len(self)-1
 
     def Posicion(self):
         return self[-1]
 
     def Write(self,os):
         Str= "Chapter: "
-        for i in range(0,Chapters()):
+        for i in range(0,self.Chapters()):
             os.write(Str + self[i] + '\n')
             Str= "Sub" + Str
-        os.write(u"Posición: " + Posicion())
+        os.write(u"Posición: " + self.Posicion())
 
 class regBC3_m(regBC3):
     '''FIEBDC-3 ~M record
@@ -339,11 +349,11 @@ class regBC3_m(regBC3):
             self.lista_med.decod_bc3(tk)
         return tokens
     
-    def Write(self,os):
+    def Write(self, os= sys.stdout):
         os.write("Ruta: ")
         self.ruta.Write(os)
-        os.write('\n' + "Total: " + med_total + '\n')
-        lista_med.Write(os)
+        os.write('\n' + "Total: " + str(self.med_total) + '\n')
+        self.lista_med.Write(os)
 
 class regBC3_c(regBC3):
     ''' FIEBDC ~C record.'''

@@ -157,10 +157,10 @@ sub_chapters:
                     0:
                       measurements:
                         0:
-                          commentary: ''
+                          commentary: Line A01 1
                           height: 1
                           length: 1
-                          units: 1
+                          units: 1.0
                           width: 1
                       ud: EAS005
                   code: EAS
@@ -176,4 +176,4 @@ sub_chapters:
         owner_code: E
       title: Estructuras
   owner_code: root##
-title: Test title
+title: ''

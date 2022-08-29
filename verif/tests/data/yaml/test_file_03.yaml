@@ -24,10 +24,10 @@ sub_chapters:
               width: 1
             1:
               commentary: ''
-              height: 1
-              length: 1
-              units: 1
-              width: 1
+              height: 0
+              length: 0
+              units: 0
+              width: 0
             2:
               commentary: Line A01 2
               height: 1
@@ -36,22 +36,22 @@ sub_chapters:
               width: 2.0
             3:
               commentary: ''
-              height: 1
-              length: 1
-              units: 1
-              width: 1
+              height: 0
+              length: 0
+              units: 0
+              width: 0
             4:
               commentary: ''
-              height: 1
-              length: 1
-              units: 1
-              width: 1
+              height: 0
+              length: 0
+              units: 0
+              width: 0
             5:
               commentary: ''
-              height: 1
-              length: 1
-              units: 1
-              width: 1
+              height: 0
+              length: 0
+              units: 0
+              width: 0
           ud: A01
       code: 01#
       prices:
@@ -69,4 +69,4 @@ sub_chapters:
         owner_code: 01#
       title: Subconcept 1
   owner_code: ROOT##
-title: Test title
+title: Root concept
