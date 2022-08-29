@@ -113,20 +113,40 @@ class ComponentList(list, epc.EntPyCost):
 
 
     def getPriceJustificationList(self, pa):
+        ''' Return the price justification list.
+
+        :param pa: True percentages must be cumulated.
+        '''
         return pjl.PriceJustificationList(pa,self.getElementaryPricesOfType(basic_types.mdo),self.getElementaryPricesOfType(basic_types.mat),self.getElementaryPricesOfType(basic_types.maq),self.getElementaryPricesOfType(basic_types.sin_clasif),self.getPourcentagesForType(basic_types.sin_clasif))
 
 
     def writePriceJustification(self, data_table, pa):
+        ''' Write the price justification in the argument table.
+
+        :param data_table: LaTeX table to write the justification into.
+        :param pa: True percentages must be cumulated.
+        '''
         lista= self.getPriceJustificationList(pa)
         lista.writePriceJustification(data_table)
 
     def writePriceTableTwoIntoLatexDocument(self, os, pa):
+        ''' Write the price table number two in LaTeX forma.
+
+        :param os: LaTeX document to write into.
+        :param pa: True percentages must be cumulated.
+        '''
         lista= self.getPriceJustificationList(pa)
         lista.writePriceTableTwoIntoLatexDocument(os)
 
-    def writePriceTableOneIntoLatexDocument(self, os, pa, genero):
+    def writePriceTableOneIntoLatexDocument(self, os, pa, gender):
+        ''' Write the price table number one in LaTeX forma.
+
+        :param os: LaTeX document to write into.
+        :param pa: True percentages must be cumulated.
+        :param gender: Gender to use for the currency.
+        '''
         lista= self.getPriceJustificationList(pa)
-        lista.writePriceTableOneIntoLatexDocument(os,genero)
+        lista.writePriceTableOneIntoLatexDocument(os,gender)
 
     def getDict(self):
         ''' Return a dictionary containing the object data.'''

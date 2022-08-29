@@ -75,6 +75,14 @@ priceFormatString= '{0:.'+str(pricePrecision)+'f}'
 def ppl_price(price):
     txtPrice= priceFormatString.format(price)
     return Decimal(txtPrice)
+
+justificationPrecision= 3
+justificationPlaces= Decimal(10) ** -justificationPrecision
+justificationFormatString= '{0:.'+str(justificationPrecision)+'f}'
+
+def ppl_justification(perc):
+    txtJustification=  justificationFormatString.format(perc)
+    return Decimal(txtJustification)
     
 percentagePrecision= 3
 percentagePlaces= Decimal(10) ** -percentagePrecision

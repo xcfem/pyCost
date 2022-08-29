@@ -26,7 +26,7 @@ class PriceJustificationList(object):
     def __init__(self,pa, mano, mater, maqui, otr, perc):
         ''' Constructor.
 
-        :param pa: True if cumulated percentages
+        :param pa: True if cumulated percentages.
         :param mano: labor (instance of PriceJustificationRecord class)
         :param mater: materials (instance of PriceJustificationRecord class)
         :param maqui: machinery (instance of PriceJustificationRecord class)
@@ -46,14 +46,14 @@ class PriceJustificationList(object):
             self.percentages.SetBase(base)
     
     def Base(self):
-        retval= basic_types.ppl_price(self.mano_de_obra.getTotal())
+        retval= basic_types.ppl_justification(self.mano_de_obra.getTotal())
         retval+= self.materiales.getTotal()
         retval+= self.maquinaria.getTotal()
         retval+= self.otros.getTotal()
         return retval
 
     def getTotal(self):
-        retval= basic_types.ppl_price(self.Base())
+        retval= basic_types.ppl_justification(self.Base())
         retval+= self.percentages.getTotal()
         return retval
 

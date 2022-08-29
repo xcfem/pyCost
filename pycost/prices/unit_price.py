@@ -134,6 +134,7 @@ class UnitPrice(ms.Measurable):
 
 
     def writePriceJustification(self, data_table):
+        ''' Write price justification in the table argument.'''
         tableStr= 'l r l p{4cm} r r'
         nested_data_table= pylatex.Tabular(tableStr)
         row= [pylatex_utils.ascii2latex(self.Codigo())]
@@ -145,7 +146,7 @@ class UnitPrice(ms.Measurable):
         nested_data_table.add_row(headerRow)
         nested_data_table.add_hline()
         #Decomposition
-        self.components.writePriceJustification(nested_data_table,True); #XXX Here cumulated percentages.
+        self.components.writePriceJustification(nested_data_table,pa= True); # Cumulated percentages.
         data_table.add_row([nested_data_table])
 
     def getLtxCodeUnitDescription(self):
