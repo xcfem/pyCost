@@ -134,7 +134,10 @@ class UnitPrice(ms.Measurable):
 
 
     def writePriceJustification(self, data_table):
-        ''' Write price justification in the table argument.'''
+        ''' Write price justification in the table argument.
+
+        :param data_table: pylatex tabular data to populate.
+        '''
         tableStr= 'l r l p{4cm} r r'
         nested_data_table= pylatex.Tabular(tableStr)
         row= [pylatex_utils.ascii2latex(self.Codigo())]

@@ -182,7 +182,9 @@ class Descompuestos(concept_dict.ConceptDict):
 
         :param doc: pylatex document to write into.
         :param filterBy: write price justification for those prices only.
+        :returns: list of the written prices.
         '''
+        retval= list()
         if(len(self)>0):
             filteredConcepts= self.filterConcepts(filterBy= filterBy)
             if(len(filteredConcepts)>0):
@@ -191,7 +193,9 @@ class Descompuestos(concept_dict.ConceptDict):
                 with doc.create(pylatex_utils.LongTable(longTableStr)) as data_table:
                     for key in filteredConcepts:
                         self.concepts[key].writePriceJustification(data_table)
+                        retval.append(key)
                 doc.append(pylatex_utils.NormalSizeCommand())
+        return retval
 
     def writePriceTableTwoIntoLatexDocument(self, doc, filterBy= None):
         ''' Write unit price table two into a latex report.

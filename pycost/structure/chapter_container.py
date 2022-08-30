@@ -233,9 +233,12 @@ class Subcapitulos(list, epc.EntPyCost):
         :param data_table: pylatex tabular data to populate.
         :param parentSection: section command for the parent chapter.
         :param filterBy: write price justification for those prices only.
+        :returns: list of the written prices.
         '''
+        retval= list()
         for j in self:
-            (j).writePriceJustification(data_table, parentSection= parentSection, filterBy= filterBy)
+            retval+= (j).writePriceJustification(data_table, parentSection= parentSection, filterBy= filterBy)
+        return retval
 
 
     def ImprLtxResumen(self, doc, parentSection, recursive):

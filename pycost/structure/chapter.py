@@ -341,6 +341,7 @@ class Chapter(bc3_entity.EntBC3):
             if self.precios.TieneDescompuestos(filterBy= filterBy):
                 self.precios.writePriceTableOneIntoLatexDocument(doc, filterBy= filterBy)
             self.subcapitulos.writePriceTableOneIntoLatexDocument(doc,pylatex_utils.getLatexSection(parentSection), filterBy= filterBy)
+            
     def writePriceTableTwoIntoLatexDocument(self, doc, parentSection, filterBy= None):
         ''' Write price table number two in the pylatex document argument.
 
@@ -374,12 +375,15 @@ class Chapter(bc3_entity.EntBC3):
         :param doc: document to write into.
         :param parentSection: section command for the parent chapter.
         :param filterBy: write price justification for those prices only.
+        :returns: list of the written prices.
         '''
+        retval= list()
         if(self.TieneDescompuestos(filterBy= filterBy)):
             if(parentSection!='root'):
                 doc.append('\\' + parentSection + '{' + self.getTitle() + '}' + '\n')
-            self.precios.writePriceJustification(doc, filterBy= filterBy)
-            self.subcapitulos.writePriceJustification(doc, pylatex_utils.getLatexSection(parentSection), filterBy= filterBy)
+            retval= self.precios.writePriceJustification(doc, filterBy= filterBy)
+            retval+= self.subcapitulos.writePriceJustification(doc, pylatex_utils.getLatexSection(parentSection), filterBy= filterBy)
+        return retval
         
     def ImprLtxResumen(self, doc, parentSection, recursive= True):
         ''' Write a summary report.
@@ -497,10 +501,14 @@ class Chapter(bc3_entity.EntBC3):
         retval= list()
         for key in employedPrices:
             price= self.findPrice(key)
-            for c in price.components:
-                code= c.CodigoEntidad()
-                if(code not in retval):
-                    retval.append(code)
+            if(hasattr(price, 'components')): # is a compound price
+                for c in price.components:
+                    code= c.CodigoEntidad()
+                    if(code not in retval):
+                        retval.append(code)
+            else: # it's an elementary price already.
+                if(key not in retval):
+                    retval.append(key)
         return retval
        
     def clear(self):

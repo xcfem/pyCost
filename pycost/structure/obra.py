@@ -457,13 +457,21 @@ class Obra(cp.Chapter):
         :param doc: pylatex document to write into.
         :param signaturesFileName: name of the file containing the signatures.
         :param filterBy: write price justification for those prices only.
+        :returns: list of the written prices.
         '''
-
         part= pylatex_utils.Part("Justificación de precios")
-        super(Obra,self).writePriceJustification(part, 'root', filterBy= filterBy)
+        retval= super(Obra,self).writePriceJustification(part, 'root', filterBy= filterBy)
         if(signaturesFileName):
             part.append(pylatex.Command('input{'+signaturesFileName+'}'))
         doc.append(part)
+        if(filterBy is not None):
+            missingPrices= list() # prices that are in filterBy but have not been printed.
+            for p in filterBy:
+                if not p in retval:
+                    missingPrices.append(p)
+            if(len(missingPrices)>0):
+                logging.warning('The following prices are missing: '+str(missingPrices))
+        return retval
 
     def writePriceTablesIntoLatexDocument(self, doc, filterBy= None):
         ''' Write price tables 1 and 2.
