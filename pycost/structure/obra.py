@@ -8,6 +8,7 @@ __version__= "3.0"
 __email__= "l.pereztato@ciccp.es"
 
 import yaml
+import json
 import pickle
 import logging
 import pylatex
@@ -603,7 +604,7 @@ class Obra(cp.Chapter):
         return pendingLinks
     
     def writeYaml(self, outputFileName):
-        ''' Load data from a YAML file.
+        ''' Write data to a YAML file.
 
         :param outputFileName: name of the output file.
         '''
@@ -612,6 +613,27 @@ class Obra(cp.Chapter):
         outputs= yaml.dump(self.getDict(), outputFile, allow_unicode=True)
         outputFile.close()
 
+    def readFromJson(self, inputFileName):
+        ''' Load data from a JSON file.
+
+        :param inputFileName: name of the input file.
+        '''
+        # Read data from file.
+        inputFile= open(inputFileName, mode='r')
+        dataDict= json.load(inputFile)
+        inputFile.close()
+        pendingLinks= self.solvePendingLinks(self.setFromDict(dataDict))
+        return pendingLinks
+    
+    def writeJson(self, outputFileName, indent= 2):
+        ''' Write data to a JSON file.
+
+        :param outputFileName: name of the output file.
+        '''
+        # Read data from file.
+        outputFile= open(outputFileName, mode='w')
+        outputs= json.dump(self.getDict(), outputFile, indent= indent)
+        outputFile.close()
 
     def readFromDictionaries(self, elementaryPricesDict, unitPricesDict):
         ''' Read prices from data stored in dictionaries. The field names in
