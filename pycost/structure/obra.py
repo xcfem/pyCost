@@ -343,13 +343,11 @@ class Obra(cp.Chapter):
         chapter.append(pylatex.utils.bold(u'Presupuesto de Ejecución Material:'))
         chapter.append(pylatex.Command('dotfill'))
         ltxPriceString= self.getLtxPriceString()
-        print(ltxPriceString)
         chapter.append(pylatex.utils.bold(self.getLtxPriceString()))
         chapter.append(pylatex.VerticalSpace('0.5cm'))
         chapter.append(pylatex.NewLine())
         chapter.append(u'Asciende el presente presupuesto de ejecución material a la expresada cantidad de: ')
         roundedPrice= self.getRoundedPrice()
-        print(roundedPrice)
         chapter.append(pylatex_utils.textsc(basic_types.to_words(roundedPrice,False) + ' euros.'))
         if(signaturesFileName):
             chapter.append(pylatex.Command('input{'+signaturesFileName+'}'))
