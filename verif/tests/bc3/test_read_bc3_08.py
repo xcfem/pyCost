@@ -29,8 +29,6 @@ rootChapter.writeJson(pth+'/../data/json/test_file_08.json')
 ch01= rootChapter.subcapitulos.newChapter(chapter.Chapter(cod= '01', tit= 'Chapter 01'))
 ## EAS010 quantities.
 steelMeasurements= unit_price_quantities.UnitPriceQuantities(rootChapter.getUnitPrice('EAS010'))
-q1units= 2
-q1l= 10.0
 steelMeasurements.appendMeasurement(textComment='test A', nUnits= 26, length= 10, width=51.2, height=None)
 ch01.appendUnitPriceQuantities(steelMeasurements)
 
