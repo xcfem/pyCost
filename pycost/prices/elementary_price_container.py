@@ -220,17 +220,22 @@ class ElementaryPrices(concept_dict.ConceptDict):
         :param tipo: type of the prices to write (maquinaria, materiales o mano de obra).
         :param filterBy: write those prices only.
         '''
-        data_table= self.writeLatexHeader(doc, tipo)
-        el= None
+        # Get concepts to write.
+        filteredConcepts= list()
         for key in self.concepts:
             el= self.concepts[key]
-            if(filterBy is not None):
-                if (el.getType() == tipo) and (key in filterBy):
-                    el.writeLatex(data_table)
-            else:
-                if (el.getType() == tipo):
-                    el.writeLatex(data_table)
-        doc.append(pylatex_utils.NormalSizeCommand())
+            if(el.getType() == tipo):            
+                if(filterBy is not None):
+                    if(key in filterBy):
+                        filteredConcepts.append(el)
+                else:
+                    filteredConcepts.append(el)
+        
+        if(len(filteredConcepts)>0):
+            data_table= self.writeLatexHeader(doc, tipo)
+            for el in filteredConcepts:
+                el.writeLatex(data_table)
+            doc.append(pylatex_utils.NormalSizeCommand())
 
     def writeLatex(self, doc, tipos= [basic_types.mdo, basic_types.maq, basic_types.mat], filterBy= None):
         ''' Write the header for the elementary prices table.
