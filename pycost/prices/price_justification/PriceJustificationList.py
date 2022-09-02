@@ -74,7 +74,7 @@ class PriceJustificationList(object):
 
     def getLtxPriceString(self):
         ''' Return the price number in a human readable form.'''
-        return basic_types.human_readable(self.getTotalCP1())
+        return basic_types.human_readable_currency(self.getTotalCP1())
 
     def StrPriceToWords(self, genero):
         return basic_types.to_words(self.getTotalCP1(),genero)

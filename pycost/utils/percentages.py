@@ -63,9 +63,9 @@ class Percentages(epc.EntPyCost):
             itemize.append(basic_types.human_readable(precio_iva,precision))
             total= suma_gg_bi + precio_iva
             
-        doc.append(pylatex.utils.bold(u'Presupuesto de ejecución por contrata:')+pylatex.NoEscape('\dotfill') + pylatex.utils.bold(basic_types.human_readable(total,precision)))
+        doc.append(pylatex.utils.bold(u'Presupuesto base de licitación:')+pylatex.NoEscape('\dotfill') + pylatex.utils.bold(basic_types.human_readable(total,precision)))
         doc.append(pylatex.VerticalSpace('0.5cm'))
         doc.append(pylatex.NewLine())
-        doc.append(u'Asciende el presente presupuesto de ejecución por contrata a la expresada cantidad de: ')
-        doc.append(pylatex_utils.textsc(basic_types.to_words(total,False) + ' euros.'))
+        doc.append(u'Asciende el presente presupuesto base de licitación a la expresada cantidad de: ')
+        doc.append(pylatex_utils.textsc(basic_types.to_words(total,False)))
 

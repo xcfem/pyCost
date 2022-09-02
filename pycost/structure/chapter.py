@@ -105,6 +105,10 @@ class Chapter(bc3_entity.EntBC3):
                     break
         return retval
     
+    def getLtxPriceString(self):
+        ''' Return the price in as a string in human readable format.'''
+        return basic_types.human_readable_currency(self.getRoundedPrice())
+    
     def WriteQuantitiesBC3(self,os, pos=""):
         self.quantities.Write(os,self.CodigoBC3(),pos)
     def WriteSubChaptersBC3(self,os, pos=""):

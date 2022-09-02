@@ -31,7 +31,7 @@ class BC3Component(fr_entity.EntFR):
         return retval
 
     def getLtxPriceString(self):
-        return basic_types.human_readable(self.getRoundedPrice())
+        return basic_types.human_readable_currency(self.getRoundedPrice())
 
 
     def PrecioSobre(self, sobre):

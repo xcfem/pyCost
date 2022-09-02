@@ -122,7 +122,16 @@ def human_readable(number, decPlaces= 3):
     formatString= '{0:.'+str(decPlaces)+'f}'
     return formatString.format(number, grouping= True)
 
-# import Currency
-# typedef Currency<3> ppl_percentage
+def human_readable_currency(number, symbol= False, grouping=True):
+    ''' Return a string containing the number in a human readable form.
 
+    :param number: number to convert.
+    :param decPlaces: number of decimal places.
+    '''
+    #return locale.format('%d',number, grouping= True)
+    #formatString= '{0:.'+str(decPlaces)+'f}'
+    #return formatString.format(number, grouping= True)
+    localeString= 'es_ES.utf-8'
+    l= locale.setlocale(locale.LC_ALL, localeString)
+    return locale.currency(number, symbol= symbol, grouping= grouping)
 

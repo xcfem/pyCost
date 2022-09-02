@@ -89,7 +89,6 @@ class EntBC3(epc.EntPyCost):
 
     def getLtxPriceString(self):
         ''' Return the price in as a string in human readable format.'''
-        # return self.getPriceString()
         return basic_types.human_readable(self.getRoundedPrice(), decPlaces= self.precision)
     def StrPriceToWords(self, genero):
         return basic_types.toWord(self.getRoundedPrice(),genero)

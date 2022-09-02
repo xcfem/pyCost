@@ -26,7 +26,7 @@ class ChapterQuantities(list, epc.EntPyCost):
         
     def getLtxPriceString(self):
         ''' Return the price in as a string in human readable format.'''
-        return basic_types.human_readable(self.getRoundedPrice())
+        return basic_types.human_readable_currency(self.getRoundedPrice())
 
     def getPrice(self):
         t= 0.0

@@ -330,25 +330,25 @@ class Obra(cp.Chapter):
         :param doc: pylatex document to write into.
         :param signaturesFileName: name of the file containing the signatures.
         '''
-        #doc.append(u"\\subportadilla{Presupuestos Generales}{Presupuesto de ejecución material}" + '\n')
-        chapter= pylatex_utils.Chapter(title= u'Presupuesto de ejecución material',numbering= False)
+        headerText= u'Presupuesto de ejecución material'
+        chapter= pylatex_utils.Chapter(title= headerText,numbering= False)
         chapter.append(pylatex.Command('cleardoublepage'))
         center= pylatex.Center()
         center.append(pylatex_utils.LargeCommand())
-        center.append(pylatex.utils.bold(u'Presupuesto de Ejecución Material'))
+        center.append(pylatex.utils.bold(headerText))
         center.append(pylatex_utils.largeCommand())
         chapter.append(center)
         chapter.append(pylatex.VerticalSpace('2cm'))
         self.subcapitulos.ImprLtxResumen(chapter,"",False)
-        chapter.append(pylatex.utils.bold(u'Presupuesto de Ejecución Material:'))
+        chapter.append(pylatex.utils.bold(headerText))
         chapter.append(pylatex.Command('dotfill'))
         ltxPriceString= self.getLtxPriceString()
-        chapter.append(pylatex.utils.bold(self.getLtxPriceString()))
+        chapter.append(pylatex.utils.bold(ltxPriceString))
         chapter.append(pylatex.VerticalSpace('0.5cm'))
         chapter.append(pylatex.NewLine())
         chapter.append(u'Asciende el presente presupuesto de ejecución material a la expresada cantidad de: ')
         roundedPrice= self.getRoundedPrice()
-        chapter.append(pylatex_utils.textsc(basic_types.to_words(roundedPrice,False) + ' euros.'))
+        chapter.append(pylatex_utils.textsc(basic_types.to_words(roundedPrice,False)))
         if(signaturesFileName):
             chapter.append(pylatex.Command('input{'+signaturesFileName+'}'))
         doc.append(chapter)
@@ -359,12 +359,12 @@ class Obra(cp.Chapter):
         :param doc: pylatex document to write into.
         :param signaturesFileName: name of the file containing the signatures.
         '''
-        #doc.append(u"\\subportadilla{Presupuestos Generales}{Presupuesto de ejecución por contrata}" + '\n')
-        chapter= pylatex_utils.Chapter(title= u'Presupuesto de ejecución por contrata',numbering= False)
+        headerText= u'Presupuesto base de licitación'
+        chapter= pylatex_utils.Chapter(title= headerText,numbering= False)
         chapter.append(pylatex.Command('cleardoublepage'))
         center= pylatex.Center()
         center.append(pylatex_utils.LargeCommand())
-        center.append(pylatex.utils.bold(u'Presupuesto base de licitación'))
+        center.append(pylatex.utils.bold(headerText))
         center.append(pylatex_utils.largeCommand())
         chapter.append(center)
         chapter.append(pylatex.VerticalSpace('2cm'))
@@ -683,7 +683,7 @@ def bc3_to_yaml(inputFileName, outputFileName, cod='CodelessRoot', tit= 'Titlele
     outputFile.close()
 
 def yaml_to_pickle(inputFileName, outputFileName, cod='CodelessRoot', tit= 'TitlelessRoot'):
-    ''' Reads a BC3 file and creates the corresponding YAML format file.
+    ''' Reads a YAML file and creates the corresponding pickle format file.
 
     :param inputFileName: name of the input file.
     :param cod: construction site codename.
@@ -699,7 +699,7 @@ def yaml_to_pickle(inputFileName, outputFileName, cod='CodelessRoot', tit= 'Titl
         pickle.dump(site, fh)
 
 def pickle_to_yaml(inputFileName, outputFileName):
-    ''' Reads a BC3 file and creates the corresponding YAML format file.
+    ''' Reads a pickle file and creates the corresponding YAML format file.
 
     :param inputFileName: name of the input file.
     :param cod: construction site codename.
@@ -712,5 +712,20 @@ def pickle_to_yaml(inputFileName, outputFileName):
 
     # Write into YAML file.
     rootChapter.writeYaml(outputFileName)
+    
+def pickle_to_json(inputFileName, outputFileName):
+    ''' Reads a pickle file and creates the corresponding YAML format file.
+
+    :param inputFileName: name of the input file.
+    :param cod: construction site codename.
+    :param tit: constuction site description.
+    '''
+    # Read root object.
+    inputFile= open(inputFileName, 'rb')
+    rootChapter= pickle.load(inputFile)
+    inputFile.close()
+
+    # Write into YAML file.
+    rootChapter.writeJson(outputFileName)
 
 

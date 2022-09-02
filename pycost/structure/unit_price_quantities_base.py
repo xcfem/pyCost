@@ -51,7 +51,7 @@ class UnitPriceQuantitiesBase(epc.EntPyCost):
         return retval.quantize(self.ud.places)
 
     def getLtxPriceString(self):
-        return basic_types.human_readable(self.getRoundedPrice())
+        return basic_types.human_readable_currency(self.getRoundedPrice())
 
     def printLatexHeader(self, data_table, totalr, ancho):
         '''Prints header in the quantities table.'''
