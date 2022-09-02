@@ -725,7 +725,23 @@ def pickle_to_json(inputFileName, outputFileName):
     rootChapter= pickle.load(inputFile)
     inputFile.close()
 
-    # Write into YAML file.
+    # Write into JSON file.
+    rootChapter.writeJson(outputFileName)
+
+def yaml_to_json(inputFileName, outputFileName, cod='CodelessRoot', tit= 'TitlelessRoot'):
+    ''' Reads a YAML file and creates the corresponding json format file.
+
+    :param inputFileName: name of the input file.
+    :param cod: construction site codename.
+    :param tit: constuction site description.
+    '''
+    # Create root object.
+    rootChapter= Obra(cod= cod, tit= tit)
+
+    # Read data from file.
+    pendingLinks= rootChapter.readFromYaml(inputFileName)
+
+    # Write into JSON file.
     rootChapter.writeJson(outputFileName)
 
 
