@@ -1,0 +1,191 @@
+{
+  "code": "root##",
+  "title": "",
+  "sub_chapters": {
+    "owner_code": "root##",
+    "components": {
+      "E": {
+        "code": "E",
+        "title": "Estructuras",
+        "sub_chapters": {
+          "owner_code": "E",
+          "components": {
+            "EA": {
+              "code": "EA",
+              "title": "Acero",
+              "sub_chapters": {
+                "owner_code": "EA",
+                "components": {
+                  "EAS": {
+                    "code": "EAS",
+                    "title": "Pilares",
+                    "sub_chapters": {
+                      "owner_code": "EAS",
+                      "components": {}
+                    },
+                    "prices": {
+                      "elementary_prices": {},
+                      "units": {}
+                    },
+                    "chapter_quantities": {
+                      "0": {
+                        "ud": "EAS010",
+                        "measurements": {
+                          "0": {
+                            "commentary": "",
+                            "units": 0,
+                            "width": 0,
+                            "length": 0,
+                            "height": 0
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              },
+              "prices": {
+                "elementary_prices": {},
+                "units": {}
+              },
+              "chapter_quantities": {}
+            }
+          }
+        },
+        "prices": {
+          "elementary_prices": {},
+          "units": {}
+        },
+        "chapter_quantities": {}
+      }
+    }
+  },
+  "prices": {
+    "elementary_prices": {
+      "SINDESCO": {
+        "code": "SINDESCO",
+        "title": "sin_desc",
+        "long_description": "",
+        "unit": "",
+        "type": 3,
+        "price": 1.0
+      },
+      "re150101": {
+        "code": "re150101",
+        "title": "Envases de papel y cart\u00c3\u00b3n.",
+        "long_description": "Envases de papel y cart\u00c3\u00b3n.",
+        "unit": "kg",
+        "type": 0,
+        "price": 0.0
+      },
+      "re150104": {
+        "code": "re150104",
+        "title": "Envases met\u00c3\u00a1licos.",
+        "long_description": "Envases met\u00c3\u00a1licos.",
+        "unit": "kg",
+        "type": 0,
+        "price": 0.0
+      },
+      "re170201": {
+        "code": "re170201",
+        "title": "Madera.",
+        "long_description": "Madera.",
+        "unit": "kg",
+        "type": 0,
+        "price": 0.0
+      },
+      "re170203": {
+        "code": "re170203",
+        "title": "Pl\u00c3\u00a1stico.",
+        "long_description": "Pl\u00c3\u00a1stico.",
+        "unit": "kg",
+        "type": 0,
+        "price": 0.0
+      },
+      "re170604": {
+        "code": "re170604",
+        "title": "Materiales de aislamiento distintos de los especificados en los c\u00c3\u00b3digos 17 06 01 y 17 06 03.",
+        "long_description": "Materiales de aislamiento distintos de los especificados en los c\u00c3\u00b3digos 17 06 01 y 17 06 03.",
+        "unit": "kg",
+        "type": 0,
+        "price": 0.0
+      },
+      "mt07ala010dab": {
+        "code": "mt07ala010dab",
+        "title": "Acero laminado UNE-EN 10025 S275JR, en perfiles laminados en caliente, piezas simples, para aplicaciones estructurales, de las series IPN, IPE, HEB, HEA, HEM o UPN, acabado con imprimaci\u00c3\u00b3n antioxidante. Trabajado y montado en taller, para colocar con uniones soldadas en obra.",
+        "long_description": "Acero laminado UNE-EN 10025 S275JR, en perfiles laminados en caliente, piezas simples, para aplicaciones estructurales, de las series IPN, IPE, HEB, HEA, HEM o UPN, acabado con imprimaci\u00c3\u00b3n antioxidante. Trabajado y montado en taller, para colocar con uniones soldadas en obra.",
+        "unit": "kg",
+        "type": 3,
+        "price": 1.44
+      },
+      "mq08sol020": {
+        "code": "mq08sol020",
+        "title": "Equipo y elementos auxiliares para soldadura el\u00c3\u00a9ctrica.",
+        "long_description": "Equipo y elementos auxiliares para soldadura el\u00c3\u00a9ctrica.",
+        "unit": "h",
+        "type": 2,
+        "price": 3.42
+      },
+      "mo047": {
+        "code": "mo047",
+        "title": "Oficial 1\u00c2\u00aa montador de estructura met\u00c3\u00a1lica.",
+        "long_description": "Oficial 1\u00c2\u00aa montador de estructura met\u00c3\u00a1lica.",
+        "unit": "h",
+        "type": 1,
+        "price": 20.74
+      },
+      "mo094": {
+        "code": "mo094",
+        "title": "Ayudante montador de estructura met\u00c3\u00a1lica.",
+        "long_description": "Ayudante montador de estructura met\u00c3\u00a1lica.",
+        "unit": "h",
+        "type": 1,
+        "price": 19.68
+      },
+      "%": {
+        "code": "%",
+        "title": "Costes directos complementarios",
+        "long_description": "Costes directos complementarios",
+        "unit": "%",
+        "type": 0,
+        "price": 0.0
+      }
+    },
+    "units": {
+      "EAS010": {
+        "code": "EAS010",
+        "title": "Acero en pilares.",
+        "long_description": "Acero UNE-EN 10025 S275JR, en pilares formados por piezas simples de perfiles laminados en caliente de las series IPN, IPE, HEB, HEA, HEM o UPN, acabado con imprimaci\u00c3\u00b3n antioxidante, colocado con uniones soldadas en obra, a una altura de hasta 3 m.Criterio de valoraci\u00c3\u00b3n econ\u00c3\u00b3mica: El precio incluye las soldaduras, los cortes, los despuntes, las piezas especiales, las placas de arranque y de transici\u00c3\u00b3n de pilar inferior a superior, los casquillos y los elementos auxiliares de montaje.Incluye: Limpieza y preparaci\u00c3\u00b3n del plano de apoyo. Replanteo y marcado de los ejes. Colocaci\u00c3\u00b3n y fijaci\u00c3\u00b3n provisional del pilar. Aplomado y nivelaci\u00c3\u00b3n. Ejecuci\u00c3\u00b3n de las uniones soldadas.Criterio de medici\u00c3\u00b3n de proyecto: Peso nominal medido seg\u00c3\u00ban documentaci\u00c3\u00b3n gr\u00c3\u00a1fica de Proyecto.Criterio de medici\u00c3\u00b3n de obra: Se determinar\u00c3\u00a1, a partir del peso obtenido en b\u00c3\u00a1scula oficial de las unidades llegadas a obra, el peso de las unidades realmente ejecutadas seg\u00c3\u00ban especificaciones de Proyecto.",
+        "unit": "kg",
+        "components": {
+          "0": {
+            "factor": 1.0,
+            "production_rate": 1.0,
+            "ent_code": "mt07ala010dab"
+          },
+          "1": {
+            "factor": 1.0,
+            "production_rate": 0.015,
+            "ent_code": "mq08sol020"
+          },
+          "2": {
+            "factor": 1.0,
+            "production_rate": 0.015,
+            "ent_code": "mo047"
+          },
+          "3": {
+            "factor": 1.0,
+            "production_rate": 0.015,
+            "ent_code": "mo094"
+          },
+          "4": {
+            "factor": 1.0,
+            "production_rate": 0.02,
+            "ent_code": "%"
+          }
+        }
+      }
+    }
+  },
+  "chapter_quantities": {}
+}

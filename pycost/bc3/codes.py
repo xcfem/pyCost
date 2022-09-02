@@ -136,7 +136,8 @@ class Codigos(dict):
         cod= cod.strip('\\'); # Remove leading backslash.
 
         if(tipo=='V' or tipo=='K' or tipo=='L' or
-                tipo=='A' or tipo=='G' or tipo=='E'):
+                tipo=='A' or tipo=='G' or tipo=='E' or tipo=='X' or
+                tipo=='R'):
             logging.info("Ignoring '"+tipo+"' record.")
             return
 

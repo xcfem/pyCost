@@ -55,6 +55,7 @@ python tests/bc3/test_read_bc3_04.py
 #python tests/bc3/test_read_bc3_05.py
 python tests/bc3/test_read_bc3_06.py
 python tests/bc3/test_read_bc3_07.py
+python tests/bc3/test_read_bc3_08.py
 python tests/bc3/test_parametric_concept_01.py
 echo "$BLEU" "  YAML read tests." "$NORMAL"
 python tests/yaml/test_read_yaml_01.py
