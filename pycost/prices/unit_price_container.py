@@ -247,12 +247,13 @@ class Descompuestos(concept_dict.ConceptDict):
         :param dct: input dictionary.
         '''
         pendingLinks= list() # Links that cannot be set yet.
-        for key in dct:
-            p= unit_price.UnitPrice(key)
-            itemDict= dct[key]
-            pendingLinks.extend(p.setFromDict(itemDict))
-            self.Append(p)
-        pendingLinks.extend(super(Descompuestos, self).setFromDict(dct))
+        if(dct):
+            for key in dct:
+                p= unit_price.UnitPrice(key)
+                itemDict= dct[key]
+                pendingLinks.extend(p.setFromDict(itemDict))
+                self.Append(p)
+            pendingLinks.extend(super(Descompuestos, self).setFromDict(dct))
         return pendingLinks
 
     def clear(self):

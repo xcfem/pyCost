@@ -259,12 +259,13 @@ class ElementaryPrices(concept_dict.ConceptDict):
         :param dct: input dictionary.
         '''
         pendingLinks= list() # Links that cannot be set yet.
-        for key in dct:
-            p= elementary_price.ElementaryPrice(key)
-            itemDict= dct[key]
-            pendingLinks.extend(p.setFromDict(itemDict))
-            self.Append(p)
-        pendingLinks.extend(super(ElementaryPrices, self).setFromDict(dct))
+        if(dct):
+            for key in dct:
+                p= elementary_price.ElementaryPrice(key)
+                itemDict= dct[key]
+                pendingLinks.extend(p.setFromDict(itemDict))
+                self.Append(p)
+            pendingLinks.extend(super(ElementaryPrices, self).setFromDict(dct))
         return pendingLinks
 
     def clear(self):

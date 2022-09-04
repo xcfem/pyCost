@@ -313,12 +313,13 @@ class Subcapitulos(list, epc.EntPyCost):
         '''
         pendingLinks= list() # Links that cannot be set yet.
         components= dct['components']
-        for key in components:
-            chapterDict= components[key]
-            ch= chapter.Chapter(key)
-            pendingLinks.extend(ch.setFromDict(chapterDict))
-            self.append(ch)
-        pendingLinks.extend(epc.EntPyCost.setFromDict(self, dct))
+        if(components):
+            for key in components:
+                chapterDict= components[key]
+                ch= chapter.Chapter(key)
+                pendingLinks.extend(ch.setFromDict(chapterDict))
+                self.append(ch)
+            pendingLinks.extend(epc.EntPyCost.setFromDict(self, dct))
         return pendingLinks
 
     def clear(self):

@@ -1,0 +1,50 @@
+<?xml version="1.0" ?>
+<pyCost>
+	<code>ROOT##</code>
+	<title>Root concept</title>
+	<sub_chapters>
+		<owner_code>ROOT##</owner_code>
+		<components>
+			<key name="01#">
+				<code>01#</code>
+				<title>Subconcept 1</title>
+				<sub_chapters>
+					<owner_code>01#</owner_code>
+					<components/>
+				</sub_chapters>
+				<prices>
+					<elementary_prices/>
+					<units/>
+				</prices>
+				<chapter_quantities/>
+			</key>
+			<key name="02#">
+				<code>02#</code>
+				<title>Subconcept 2</title>
+				<sub_chapters>
+					<owner_code>02#</owner_code>
+					<components/>
+				</sub_chapters>
+				<prices>
+					<elementary_prices/>
+					<units/>
+				</prices>
+				<chapter_quantities/>
+			</key>
+		</components>
+	</sub_chapters>
+	<prices>
+		<elementary_prices>
+			<SINDESCO>
+				<code>SINDESCO</code>
+				<title>sin_desc</title>
+				<long_description/>
+				<unit/>
+				<type>3</type>
+				<price>1.0</price>
+			</SINDESCO>
+		</elementary_prices>
+		<units/>
+	</prices>
+	<chapter_quantities/>
+</pyCost>

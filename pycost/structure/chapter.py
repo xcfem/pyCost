@@ -258,6 +258,8 @@ class Chapter(bc3_entity.EntBC3):
 
         :param dct: input dictionary.
         '''
+        if(isinstance(dct, list)): # deal with xmltodict imported dictionaries.
+            dct= dct[0]
         pendingLinks= self.quantities.setFromDict(dct['chapter_quantities'])
         pendingLinks.extend(self.precios.setFromDict(dct['prices']))
         pendingLinks.extend(self.subcapitulos.setFromDict(dct['sub_chapters']))

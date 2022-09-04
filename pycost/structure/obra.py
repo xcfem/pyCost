@@ -9,6 +9,9 @@ __email__= "l.pereztato@ciccp.es"
 
 import yaml
 import json
+import xmltodict
+from dicttoxml import dicttoxml
+import xml.dom.minidom
 import pickle
 import logging
 import pylatex
@@ -631,6 +634,32 @@ class Obra(cp.Chapter):
         # Read data from file.
         outputFile= open(outputFileName, mode='w')
         outputs= json.dump(self.getDict(), outputFile, indent= indent)
+        outputFile.close()
+        
+    def readFromXml(self, inputFileName):
+        ''' Load data from a XML file.
+
+        :param inputFileName: name of the input file.
+        '''
+        # Read data from file.
+        inputFile= open(inputFileName, mode='r')
+        xmlString= inputFile.read()
+        inputFile.close()
+        dataDict= xmltodict.parse(xmlString)
+        pendingLinks= self.solvePendingLinks(self.setFromDict(dataDict['pyCost']))
+        return pendingLinks
+    
+    def writeXml(self, outputFileName, indent= 2):
+        ''' Write data to a XML file.
+
+        :param outputFileName: name of the output file.
+        '''
+        # Read data from file.
+        xml_string = dicttoxml(self.getDict(), custom_root='pyCost', attr_type=False)
+        dom = xml.dom.minidom.parseString(xml_string)
+        pretty_xml_as_string = dom.toprettyxml()
+        outputFile= open(outputFileName, mode='w')
+        outputFile.write(pretty_xml_as_string)
         outputFile.close()
 
     def readFromDictionaries(self, elementaryPricesDict, unitPricesDict):
