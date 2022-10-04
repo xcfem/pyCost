@@ -4,7 +4,7 @@ __pycache__/
 *$py.class
 
 # Local files
-./installed_files_history.txt
+installed_files_history.txt
 
 # C extensions
 *.so
