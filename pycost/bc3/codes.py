@@ -168,6 +168,9 @@ class Codigos(dict):
                 bc3Record.y= tokens
             elif(tipo=='P'):
                 bc3Record.p= tokens
+            elif(tipo=='O'):
+                logging.warning('Business-Relationship Type registry (~O) not supported yet.')
+                bc3Record.o= tokens
             else:
                 logging.error("Record of type: " + tipo + " unknown." + '\n')
 
