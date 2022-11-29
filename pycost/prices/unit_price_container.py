@@ -244,7 +244,16 @@ class Descompuestos(concept_dict.ConceptDict):
             
     def getDict(self):
         ''' Return a dictionary containing the object data.'''
-        retval= super(Descompuestos, self).getDict()
+        retval= dict()
+        # Populate with regular unit prices.
+        regularDict= super(Descompuestos, self).getDict()
+        retval['regular']= regularDict
+        # Populate with parametric unit prices.
+        parametricDict= dict()
+        for key in self.parametricConcepts:
+            parametricConcept= self.parametricConcepts[key]
+            parametricDict[key]= parametricConcept.getDict()
+        retval['parametric']= parametricDict
         return retval
         
     def setFromDict(self,dct):
@@ -253,13 +262,22 @@ class Descompuestos(concept_dict.ConceptDict):
         :param dct: input dictionary.
         '''
         pendingLinks= list() # Links that cannot be set yet.
-        if(dct):
-            for key in dct:
+        # Read regular unit prices.
+        regularDict= dct['regular']
+        if(regularDict):
+            for key in regularDict:
                 p= unit_price.UnitPrice(key)
-                itemDict= dct[key]
+                itemDict= regularDict[key]
                 pendingLinks.extend(p.setFromDict(itemDict))
                 self.Append(p)
-            pendingLinks.extend(super(Descompuestos, self).setFromDict(dct))
+            pendingLinks.extend(super(Descompuestos, self).setFromDict(regularDict))
+        parametricDict= dct['parametric']
+        if(parametricDict):
+            for key in parametricDict:
+                value= parametricDict[key]
+                param= parametric.Parametric()
+                param.setFromDict(value)
+                self.parametricConcepts[key]= param
         return pendingLinks
 
     def clear(self):

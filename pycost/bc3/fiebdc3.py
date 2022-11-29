@@ -358,12 +358,36 @@ class regBC3_m(regBC3):
 class regBC3_c(regBC3):
     ''' FIEBDC ~C record.'''
     def __init__(self,Str):
+        '''Constructor.
+
+        :param Str: string to decode.
+        '''
         self.unidad= ''
         self.resumen= ''
         self.precio= 0.0
         self.tipo= 0
         self.decod_str_bc3(Str)
         
+    def getDict(self):
+        ''' Return the member values in a dictionary.'''
+        retval= dict()
+        retval['unidad']= self.unidad
+        retval['resumen']= self.resumen
+        retval['precio']= self.precio
+        retval['tipo']= self.tipo        
+        return retval
+    
+    def setFromDict(self, dct):
+        ''' Set the objects members from the values in the argument 
+        dictionary.
+
+        :param dct: input dictionary.
+        '''
+        self.unidad= dct['unidad']
+        self.resumen= dct['resumen']
+        self.precio= dct['precio']
+        self.tipo= dct['tipo']
+                
     def decod_bc3(self, tokens):
         '''Decodifies tokens.'''
         if(len(tokens)>0):
@@ -405,6 +429,20 @@ class regBC3_t(regBC3):
         if(Str):
             self.decod_str_bc3(Str)
         
+    def getDict(self):
+        ''' Return the member values in a dictionary.'''
+        retval= dict()
+        retval['texto']= self.texto
+        return retval
+    
+    def setFromDict(self, dct):
+        ''' Set the objects members from the values in the argument 
+        dictionary.
+
+        :param dct: input dictionary.
+        '''
+        self.texto= dct['texto']
+        
     def decod_bc3(self, tokens):
         '''Decodification.'''
         self.texto= tokens[0]
@@ -423,6 +461,29 @@ class regBC3_p(regBC3):
         self.parameterLabelLetters= dict()
         if(Str):
             self.decod_str_bc3(Str)
+            
+    def getDict(self):
+        ''' Return the member values in a dictionary.'''
+        retval= dict()
+        retval['variables']= self.variables
+        retval['components']= self.components
+        retval['substitutionStatements']= self.substitutionStatements
+        retval['parameterLabelStatements']= self.parameterLabelStatements
+        retval['parameterLabelLetters']= self.parameterLabelLetters
+        return retval
+    
+    def setFromDict(self, dct):
+        ''' Set the objects members from the values in the argument 
+        dictionary.
+
+        :param dct: input dictionary.
+        '''
+        self.variables= dct['variables']
+        self.components= dct['components']
+        self.substitutionStatements= dct['substitutionStatements']
+        self.parameterLabelStatements= dct['parameterLabelStatements']
+        self.parameterLabelLetters= dct['parameterLabelLetters']
+
 
     @staticmethod
     def isVariable(token):
@@ -603,6 +664,26 @@ class regBC3_elemento(object):
         self.concept= c #Concepto.
         self.txt= t #Texto.
 
+    def getDict(self):
+        ''' Return the member values in a dictionary.'''
+        retval= dict()
+        retval['c']= self.concept.getDict()
+        retval['t']= self.txt.getDict()
+        return retval
+    
+    def setFromDict(self, dct):
+        ''' Set the objects members from the values in the argument 
+        dictionary.
+
+        :param dct: input dictionary.
+        '''
+        concept= regBC3_c('')
+        concept.setFromDict(dct['c'])
+        self.concept= concept
+        txt= regBC3_t('')
+        txt.setFromDict(dct['t'])
+        self.txt= txt
+        
     def getTitle(self):
         return self.concept.resumen
 
@@ -648,8 +729,14 @@ class regBC3_parametric(regBC3_elemento):
         :param c: concept.
         :param t: text.
         :param p: parameters.
-        '''        
+        '''
+        if(c is None):
+            c= regBC3_c('')
+        if(t is None):
+            t= regBC3_t('')
         super(regBC3_parametric, self).__init__(c,t)
+        if(p is None):
+            p= regBC3_p('')
         self.parameters= p # parameters.
 
     def getParameterOptions(self, parameterKey:str):
@@ -666,6 +753,20 @@ class regBC3_parametric(regBC3_elemento):
             logging.error('parameter: \''+parameterKey+'\' not found.')
         return retval
         
+    def getDict(self):
+        ''' Return the member values in a dictionary.'''
+        retval= super().getDict()
+        retval['parameters']= self.parameters.getDict()
+        return retval
+
+    def setFromDict(self, dct):
+        ''' Set the objects members from the values in the argument 
+        dictionary.
+
+        :param dct: input dictionary.
+        '''
+        super().setFromDict(dct)
+        self.parameters.setFromDict(dct['parameters'])
 
     def getParameterIndex(self, parameterKey:str, parameterOption:str):
         ''' Return the index of the parameterOption in the list of values

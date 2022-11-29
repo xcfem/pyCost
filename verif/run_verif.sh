@@ -67,7 +67,8 @@ python tests/yaml/test_read_yaml_06.py
 echo "$BLEU" "  XML read tests." "$NORMAL"
 python tests/xml/test_xml_01.py
 echo "$BLEU" "  JSON read/write tests." "$NORMAL"
-python tests/json/test_write_json.py
+python tests/json/test_write_json_01.py
+python tests/json/test_write_json_02.py
 echo "$BLEU" "  TEXT read tests." "$NORMAL"
 python tests/text/test_read_txt_01.py
 echo "$BLEU" "  pickle read/write tests." "$NORMAL"

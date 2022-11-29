@@ -1143,2545 +1143,2547 @@ prices:
       type: 3
       unit: ''
   units:
-    AU90100001:
-      code: AU90100001
-      components:
-        0:
-          ent_code: MOC0000100
-          factor: 1.0
-          production_rate: 0.0022
-        1:
-          ent_code: MOC0000500
-          factor: 1.0
-          production_rate: 0.0229
-        2:
-          ent_code: MQ04020010
-          factor: 1.0
-          production_rate: 0.016
-        3:
-          ent_code: MQ06020200
-          factor: 1.0
-          production_rate: 0.066
-        4:
-          ent_code: MQ02010010
-          factor: 1.0
-          production_rate: 0.03
-      long_description: 'EXCAVACIÓN DE ZANJA EN TIERRAS A MÁQUINA , CON PROFUNDIDAD
-        HASTA 4 M , SIN INCLUIR ENTIBACIÓN, CON AGOTAMIENTO, REFINO, APLOMADO DE PAREDES,
-        CARGA, DESCARGA Y TRANSPORTE AL LUGAR ASIGNADO EN EL INTERIOR DE LA OBRA DE
-        PRODUCTOS SOBRANTES, I/ HERRAMIENTAS Y MEDIOS AUXILIARES.
-
-        '
-      title: ' EXCAVACIÓN DE ZANJA EN TIERRAS A MÁQUINA , CON PROFUNDIDAD HASTA 4
-        M , SIN ENTIBACIÓN.'
-      unit: m³
-    AU90100004:
-      code: AU90100004
-      components:
-        0:
-          ent_code: MOC0000100
-          factor: 1.0
-          production_rate: 0.043
-        1:
-          ent_code: MOC0000500
-          factor: 1.0
-          production_rate: 0.43
-        2:
-          ent_code: MQ06020200
-          factor: 1.0
-          production_rate: 0.066
-        3:
-          ent_code: MQ02010010
-          factor: 1.0
-          production_rate: 0.03
-      long_description: ''
-      title: ' EXCAVACIÓN DE ZANJA A MANO, EN NORMAL, HASTA 4 M DE PROFUNDIDAD , SIN
-        ENTIBACIÓN.'
-      unit: m³
-    OCA090beadb:
-      code: OCA090beadb
-      components:
-        0:
-          ent_code: MQ03060500
-          factor: 1.0
-          production_rate: 0.1333
-        1:
-          ent_code: MQ0100A030
-          factor: 1.0
-          production_rate: 0.1333
-        2:
-          ent_code: MQ06020200
-          factor: 1.0
-          production_rate: 0.006
-        3:
-          ent_code: MQ06050000
-          factor: 1.0
-          production_rate: 0.02
-        4:
-          ent_code: MN01010001
-          factor: 1.0
-          production_rate: 0.013
-        5:
-          ent_code: MP01050002
-          factor: 1.0
-          production_rate: 0.034
-        6:
-          ent_code: MN02020005
-          factor: 1.0
-          production_rate: 1.02
-        7:
-          ent_code: MN02020100
-          factor: 1.0
-          production_rate: 1.0
-        8:
-          ent_code: '%VOL'
-          factor: 1.0
-          production_rate: 0.2
-        9:
-          ent_code: '%CIND'
-          factor: 1.0
-          production_rate: 0.06
-      long_description: 'Perforación de micropilote de diámetro >0,15 m - 0,20 m compuesto
-        por tubo acero 88,9 mm diámetro exterior y 9,5 mm de espesor con rosca de
-        cualquier tipo de acero, ejecutado con cualquier ángulo y en cualquier terreno,
-        i/ ensayos previos y en ejecución.
-
-        Trabajo: Diurno.
-
-        Banda de mantenimiento: No necesita intervalo.
-
-        Condiciones de ejecución: Volumen escaso.
-
-        '
-      title: ' Perforación de micropilote de diámetro >0,15 m '
-      unit: m
-    OCC010abcbN:
-      code: OCC010abcbN
-      components:
-        0:
-          ent_code: MQ14000035
-          factor: 1.0
-          production_rate: 0.26
-        1:
-          ent_code: '%VOL'
-          factor: 1.0
-          production_rate: 0.2
-        2:
-          ent_code: '%CIND'
-          factor: 1.0
-          production_rate: 0.06
-      long_description: 'Lanzamiento de viga pretensada tipo T de H=80 cm i/ transporte,
-        colocación y todos los materiales y medios necesarios para la correcta ejecución
-        de la unidad de obra.
-
-        Trabajo: Nocturno.
-
-        Banda de mantenimiento:i < 3 horas.
-
-        Condiciones de ejecución: Volumen escaso.
-
-        '
-      title: ' Lanzamiento de viga pretensada tipo T H=80 cm. (N/<3/E).'
-      unit: m
-    OCH020adb:
-      code: OCH020adb
-      components:
-        0:
-          ent_code: MN01090026
-          factor: 1.0
-          production_rate: 0.5
-        1:
-          ent_code: '%VOL'
-          factor: 1.0
-          production_rate: 0.2
-        2:
-          ent_code: '%CIND'
-          factor: 1.0
-          production_rate: 0.06
-      long_description: 'Sellado de juntas y refuerzo de los solapes del geocompuestos
-        de bentonita , canaletas, con pasta de bentonita de sodio natural (proporción
-        1:4 de bentonita con agua), bentonita en polvo; incluso limpieza del soporte
-        y eliminación de arrugas, piedras y elementos sueltos.
-
-        Trabajo: Diurno.
-
-        Banda de mantenimiento: No necesita intervalo.
-
-        Condiciones de ejecución: Volumen escaso.
-
-        '
-      title: ' Sellado de juntas y refuerzo de los solapes del geocompuestos de bentonita.
-        (D/NNI/E).'
-      unit: m
-    OCH040adb:
-      code: OCH040adb
-      components:
-        0:
-          ent_code: MN05060010
-          factor: 1.0
-          production_rate: 0.5
-        1:
-          ent_code: '%VOL'
-          factor: 1.0
-          production_rate: 0.2
-        2:
-          ent_code: '%CIND'
-          factor: 1.0
-          production_rate: 0.06
-      long_description: 'Impermeabilización de junta de dilatación mediante colocacion
-        de una franja de 50 cm de ancho de geocompuesto de bentonita sódica natural
-        en polvo contenida entre geotextiles de refuerzo, y un total de 5000 g/m²
-        de bentonita en polvo con un contenido en montmorillonita aprox. 90 %, resistencia
-        a tracción compuesto de 20 kN/m long. , p.p. de solapes, herramientas, medios
-        auxiliares y limpieza del lugar de trabajo.
-
-        Trabajo: Diurno.
-
-        Banda de mantenimiento: No necesita intervalo.
-
-        Condiciones de ejecución: Volumen escaso.
-
-        '
-      title: ' Impermeabilización de junta dilatación con geocompuesto bentonita.
-        (D/NNI/E).'
-      unit: m
-    OCH050badb:
-      code: OCH050badb
-      components:
-        0:
-          ent_code: MN05010002
-          factor: 1.0
-          production_rate: 1.05
-        1:
-          ent_code: MN05010003
-          factor: 1.0
-          production_rate: 1.1
-        2:
-          ent_code: '%VOL'
-          factor: 1.0
-          production_rate: 0.2
-        3:
-          ent_code: '%CIND'
-          factor: 1.0
-          production_rate: 0.06
-      long_description: 'Impermeabilización de paramentos horizontales enterrados
-        mediante colocación de lámina bituminosa de SBS de 1.5 mm de espesor y acabada
-        en film de polietileno de alta densidad (PEAD) de 0,10 mm de espesor, mediante
-        la lámina bituminosa,  incluso imprimación previa de la superficie con un
-        consumo de 1 kg/m² de emulsión bituminosa.
-
-        Trabajo: Diurno.
-
-        Banda de mantenimiento: No necesita intervalo.
-
-        Condiciones de ejecución: Volumen escaso.
-
-        '
-      title: ' Impermeabilización lámina autoadhesiva bituminosa en frío en paramentos
-        horizontales. (D/NNI/E).'
-      unit: m²
-    OCH060adb:
-      code: OCH060adb
-      components:
-        0:
-          ent_code: MN05030005
-          factor: 1.0
-          production_rate: 1.1
-        1:
-          ent_code: '%VOL'
-          factor: 1.0
-          production_rate: 0.2
-        2:
-          ent_code: '%CIND'
-          factor: 1.0
-          production_rate: 0.06
-      long_description: 'Lámina drenante fijada en trasdós de muros y estribos formado
-        por lámina drenante de geotextil y núcleo drenante intermedio, incluso solapes.
-
-        Trabajo: Diurno.
-
-        Banda de mantenimiento: No necesita intervalo.
-
-        Condiciones de ejecución: Volumen escaso.
-
-        '
-      title: ' Lámina drenante fijada en trasdós de muros y estribo. (D/NNI/E).'
-      unit: m²
-    OCH070adb:
-      code: OCH070adb
-      components:
-        0:
-          ent_code: MN01050008
-          factor: 1.0
-          production_rate: 1.8
-        1:
-          ent_code: '%VOL'
-          factor: 1.0
-          production_rate: 0.2
-        2:
-          ent_code: '%CIND'
-          factor: 1.0
-          production_rate: 0.06
-      long_description: 'Pintado de impermeabilización de paramento con emulsión bituminosa
-        catiónica al 50% de betún, tipo ECI.
-
-        Trabajo: Diurno.
-
-        Banda de mantenimiento: No necesita intervalo.
-
-        Condiciones de ejecución: Volumen escaso.
-
-        '
-      title: ' Pintado de impermeabilización de paramento con emulsión bituminosa
-        catiónica al 50% de betún, tipo ECI. (D/NNI/E).'
-      unit: m²
-    OCH090abcb:
-      code: OCH090abcb
-      components:
-        0:
-          ent_code: MQ16030225
-          factor: 1.0
-          production_rate: 0.39
-        1:
-          ent_code: MQ0103C215
-          factor: 1.0
-          production_rate: 0.39
-        2:
-          ent_code: MQ06020200
-          factor: 1.0
-          production_rate: 0.39
-        3:
-          ent_code: MQ04010105
-          factor: 1.0
-          production_rate: 0.39
-        4:
-          ent_code: MN03020002
-          factor: 1.0
-          production_rate: 32.0
-        5:
-          ent_code: MN01092039
-          factor: 1.0
-          production_rate: 1.0
-        6:
-          ent_code: MN05050018
-          factor: 1.0
-          production_rate: 1.05
-        7:
-          ent_code: MN05050019
-          factor: 1.0
-          production_rate: 0.2
-        8:
-          ent_code: MN05050020
-          factor: 1.0
-          production_rate: 0.105
-        9:
-          ent_code: MN18000086
-          factor: 1.0
-          production_rate: 1.0
-        10:
-          ent_code: '%VOL'
-          factor: 1.0
-          production_rate: 0.2
-        11:
-          ent_code: '%CIND'
-          factor: 1.0
-          production_rate: 0.06
-      long_description: 'Sellado y protección de junta de dilatación de tableros con
-        banda de elastómero termoplástico (TPE) de 1 mm de espesor dispuesta en fuelle
-        o bucle, incluida descubierta y reposición de balasto en la amplitud necesaria
-        con desplazamiento de traviesa si fuera necesario, limpieza del soporte y
-        del interior de la junta de posibles encastramientos, sellado con banda de
-        elastómero termoplástico (TPE) de 1 mm de espesor dispuesta en fuelle o bucle
-        adherida al soporte al menos en 6 cm a cada lado de la junta con resina epoxi,
-        banda de neopreno de 100 mm de anchura y 10 mm de espesor a cada lado de junta,
-        fijación de la misma según características del soporte y chapa de acero galvanizado
-        de dimensiones mínimas de 400x10 mm anclada al soporte mediante anclajes y
-        arandelas de métrica M8 galvanizados, totalmente terminado. Incluido parte
-        proporcional de replanteo, medios auxiliares, herramientas, maquinaria, materiales
-        (banda TPE, banda de neopreno, resina epoxi, chapa y anclajes), mano de obra,
-        control y aseguramiento de la calidad.
-
-        Trabajo: Nocturno.
-
-        Banda de mantenimiento:i < 3 horas.
-
-        Condiciones de ejecución: Volumen escaso.
-
-        '
-      title: ' Sellado y protección de junta de dilatación de tablero con banda de
-        elástomero termoplástico. (N/<3/E).'
-      unit: m
-    OCH090bbcb:
-      code: OCH090bbcb
-      components:
-        0:
-          ent_code: MQ16030225
-          factor: 1.0
-          production_rate: 0.39
-        1:
-          ent_code: MQ0103C215
-          factor: 1.0
-          production_rate: 0.39
-        2:
-          ent_code: MQ06020200
-          factor: 1.0
-          production_rate: 0.39
-        3:
-          ent_code: MQ04010105
-          factor: 1.0
-          production_rate: 0.39
-        4:
-          ent_code: MN05050019
-          factor: 1.0
-          production_rate: 0.7
-        5:
-          ent_code: MN05050022
-          factor: 1.0
-          production_rate: 1.1
-        6:
-          ent_code: MN01142003
-          factor: 1.0
-          production_rate: 0.01
-        7:
-          ent_code: '%VOL'
-          factor: 1.0
-          production_rate: 0.2
-        8:
-          ent_code: '%CIND'
-          factor: 1.0
-          production_rate: 0.06
-      long_description: 'Sellado y protección de junta de dilatación de tablero con
-        abertura hasta 3,75 cm con fondo de junta de espuma de polietileno de célula
-        cerrada de sección circular y masilla de poliuretano; incluida  descubierta
-        y reposición de balasto en la amplitud necesaria con desplazamiento de traviesa
-        si fuera necesario, limpieza del soporte y del interior de la junta de posibles  encastramientos,
-        masilla de poliuretano bicomponente, imprimación de poliuretano de los labios
-        de la junta. banda de neopreno de 100 mm de anchura y 10 mm de espesor a cada
-        lado de junta, fijación de la misma según características del soporte y chapa
-        de acero galvanizado de dimensiones mínimas de 400x10 mm anclada al soporte
-        mediante anclajes y arandelas de métrica M8 galvanizados, totalmente terminado.
-        Incluido parte proporcional de replanteo, medios auxiliares, herramientas,
-        maquinaria, materiales (imprimación, masilla y fondo de junta, chapa y anclajes),
-        mano de obra, control y aseguramiento de la calidad.
-
-        Trabajo: Nocturno.
-
-        Banda de mantenimiento:i < 3 horas.
-
-        Condiciones de ejecución: Volumen escaso.
-
-        '
-      title: ' Sellado y protección de junta de dilatación de tablero con fondo de
-        junta. (N/<3/E).'
-      unit: m
-    OCH090cbcb:
-      code: OCH090cbcb
-      components:
-        0:
-          ent_code: MQ16030225
-          factor: 1.0
-          production_rate: 0.26
-        1:
-          ent_code: MQ0103C215
-          factor: 1.0
-          production_rate: 0.26
-        2:
-          ent_code: MN05050019
-          factor: 1.0
-          production_rate: 0.7
-        3:
-          ent_code: MN05050022
-          factor: 1.0
-          production_rate: 1.1
-        4:
-          ent_code: MN01142003
-          factor: 1.0
-          production_rate: 0.01
-        5:
-          ent_code: '%VOL'
-          factor: 1.0
-          production_rate: 0.2
-        6:
-          ent_code: '%CIND'
-          factor: 1.0
-          production_rate: 0.06
-      long_description: 'Sellado de junta de dilatación desde parte inferior de tablero
-        con abertura hasta 3,75 cm., con fondo de junta de espuma de polietileno de
-        célula cerrada de sección circular y masilla de poliuretano; incluido limpieza
-        del soporte y del interior de la junta de posibles encastramientos, masilla
-        de poliuretano bicomponente, imprimación de poliuretano de los labios de la
-        junta, totalmente terminado.  Incluido parte proporcional de replanteo, medios
-        auxiliares, herramientas, maquinaria, materiales (imprimación, masilla y fondo
-        de junta), mano de obra, control y aseguramiento de la calidad.
-
-        Trabajo: Nocturno.
-
-        Banda de mantenimiento:i < 3 horas.
-
-        Condiciones de ejecución: Volumen escaso.
-
-        '
-      title: ' Sellado de junta de dilatación desde parte inferior de tablero. (N/<3/E).'
-      unit: m
-    OCI010aadb:
-      code: OCI010aadb
-      components:
-        0:
-          ent_code: MN05050008
-          factor: 1.0
-          production_rate: 0.6
-        1:
-          ent_code: MN01090002
-          factor: 1.0
-          production_rate: 0.2
-        2:
-          ent_code: '%VOL'
-          factor: 1.0
-          production_rate: 0.2
-        3:
-          ent_code: '%CIND'
-          factor: 1.0
-          production_rate: 0.06
-      long_description: 'Junta nueva de sellado con poliestireno expandido, corte
-        y demolición de ancho en zona ocupada por la junta i/ elementos de fijación
-        y sellado con resina epoxi enrasado con el pavimento.
-
-        Trabajo: Diurno.
-
-        Banda de mantenimiento: No necesita intervalo.
-
-        Condiciones de ejecución: Volumen escaso.
-
-        '
-      title: ' Junta nueva de sellado. (D/NNI/E).'
-      unit: m
-    OCJ010bcb:
-      code: OCJ010bcb
-      components:
-        0:
-          ent_code: MQ06020100
-          factor: 1.0
-          production_rate: 0.65
-        1:
-          ent_code: MN10020001
-          factor: 1.0
-          production_rate: 6.0
-        2:
-          ent_code: MN10020004
-          factor: 1.0
-          production_rate: 4.0
-        3:
-          ent_code: MN10020005
-          factor: 1.0
-          production_rate: 4.0
-        4:
-          ent_code: MN10020006
-          factor: 1.0
-          production_rate: 4.0
-        5:
-          ent_code: MN10020007
-          factor: 1.0
-          production_rate: 4.0
-        6:
-          ent_code: MN10030006
-          factor: 1.0
-          production_rate: 4.0
-        7:
-          ent_code: MN10030003
-          factor: 1.0
-          production_rate: 2.0
-        8:
-          ent_code: MN10030004
-          factor: 1.0
-          production_rate: 2.0
-        9:
-          ent_code: MN09050002
-          factor: 1.0
-          production_rate: 1.0
-        10:
-          ent_code: MN19000291
-          factor: 1.0
-          production_rate: 95.0
-        11:
-          ent_code: MN10030009
-          factor: 1.0
-          production_rate: 1.0
-        12:
-          ent_code: '%VOL'
-          factor: 1.0
-          production_rate: 0.2
-        13:
-          ent_code: '%CIND'
-          factor: 1.0
-          production_rate: 0.06
-      long_description: 'Conexión para puesta a tierra de armaduras y de elementos
-        metálicos del tablero en pasos elevados sobre el ferrocarril.
-
-        Trabajo: Nocturno.
-
-        Banda de mantenimiento: i < 3 horas.
-
-        Condiciones de ejecución: Volumen escaso.
-
-        '
-      title: ' Conexión para puesta a tierra de armaduras y de elementos metálicos
-        en pasos elevados sobre el ferrocarril. (N/<3/E).'
-      unit: ud
-    OCK010bcb:
-      code: OCK010bcb
-      components:
-        0:
-          ent_code: MQ14000000
-          factor: 1.0
-          production_rate: 0.65
-        1:
-          ent_code: MN06020001
-          factor: 1.0
-          production_rate: 1.0
-        2:
-          ent_code: AU10100001
-          factor: 1.0
-          production_rate: 0.09
-        3:
-          ent_code: '%VOL'
-          factor: 1.0
-          production_rate: 0.2
-        4:
-          ent_code: '%CIND'
-          factor: 1.0
-          production_rate: 0.06
-      long_description: 'Imposta prefabricada en viaductos ferroviarios.
-
-        Trabajo: Nocturno.
-
-        Banda de mantenimiento: i < 3 horas.
-
-        Condiciones de ejecución: Volumen escaso.
-
-        '
-      title: ' Imposta prefabricada en viaductos ferroviarios. (N/<3/E).'
-      unit: m
-    OCK040adb:
-      code: OCK040adb
-      components:
-        0:
-          ent_code: MQ11020020
-          factor: 1.0
-          production_rate: 0.16
-        1:
-          ent_code: MN01070001
-          factor: 1.0
-          production_rate: 0.002
-        2:
-          ent_code: MN01110002
-          factor: 1.0
-          production_rate: 0.3
-        3:
-          ent_code: MN03020000
-          factor: 1.0
-          production_rate: 24.43
-        4:
-          ent_code: MN01100061
-          factor: 1.0
-          production_rate: 1.0
-        5:
-          ent_code: MN03020300
-          factor: 1.0
-          production_rate: 1.0
-        6:
-          ent_code: '%VOL'
-          factor: 1.0
-          production_rate: 0.2
-        7:
-          ent_code: '%CIND'
-          factor: 1.0
-          production_rate: 0.06
-      long_description: 'Barandilla metálica galvanizada en viaducto de ferrocarril,
-        formada por perfil tubular de 100 mm de diámetro y espesor 4-6 mm, perfil
-        IPN-100 cada 2,00 m y 3 perfiles tubulares de 50 mm de diámetro y 3 mm de
-        espesor (según detalle) ejecutada con acero S 275 JR en perfiles laminados
-        o plancha, cortado a medida recibida mediante placa de reparto y acero para
-        armaduras B 500 S de límite elástico 5100 kp/cm² elaborado y mortero seco
-        de cemento 1:4 con aditivos plastificantes i/ imprimación antioxidante y doble
-        capa de pintura.(Según NAP 2-0-0.1 Puentes y Viaductos).
-
-        Trabajo: Diurno.
-
-        Banda de mantenimiento: No necesita intervalo.
-
-        Condiciones de ejecución: Volumen escaso.
-
-        '
-      title: ' Barandilla metálica en viaducto de ferrocarril. (D/NNI/E).'
-      unit: m
-    OCK050adb:
-      code: OCK050adb
-      components:
-        0:
-          ent_code: MQ14000000
-          factor: 1.0
-          production_rate: 0.015
-        1:
-          ent_code: MQ11020020
-          factor: 1.0
-          production_rate: 0.2
-        2:
-          ent_code: MN04020005
-          factor: 1.0
-          production_rate: 2.52
-        3:
-          ent_code: MN03020002
-          factor: 1.0
-          production_rate: 31.71
-        4:
-          ent_code: MN03020100
-          factor: 1.0
-          production_rate: 1.74
-        5:
-          ent_code: MN01100084
-          factor: 1.0
-          production_rate: 42.0
-        6:
-          ent_code: MN08080001
-          factor: 1.0
-          production_rate: 2.7
-        7:
-          ent_code: '%VOL'
-          factor: 1.0
-          production_rate: 0.2
-        8:
-          ent_code: '%CIND'
-          factor: 1.0
-          production_rate: 0.06
-      long_description: 'Módulo de cerramiento de 1,80 x 2,50 m de protección antivandalismo
-        en pasos superiores.
-
-        Trabajo: Diurno.
-
-        Banda de mantenimiento: No necesita intervalo.
-
-        Condiciones de ejecución: Volumen escaso.
-
-        '
-      title: ' Módulo de cerramiento de 1,80 x 2,50 m de protección antivandalismo
-        en pasos superiores. (D/NNI/E).'
-      unit: ud
-    OHA010aaadb:
-      code: OHA010aaadb
-      components:
-        0:
-          ent_code: MQ08060010
-          factor: 1.0
-          production_rate: 0.065
-        1:
-          ent_code: MQ08070200
-          factor: 1.0
-          production_rate: 0.04
-        2:
-          ent_code: MQ08110010
-          factor: 1.0
-          production_rate: 0.08
-        3:
-          ent_code: MQ0103C000
-          factor: 1.0
-          production_rate: 0.04
-        4:
-          ent_code: MQ0100A030
-          factor: 1.0
-          production_rate: 0.04
-        5:
-          ent_code: MN01060004
-          factor: 1.0
-          production_rate: 1.05
-        6:
-          ent_code: '%VOL'
-          factor: 1.0
-          production_rate: 0.2
-        7:
-          ent_code: '%CIND'
-          factor: 1.0
-          production_rate: 0.06
-      long_description: 'Hormigón en masa HM-20, de cualquier consistencia y tamaño
-        máximo de árido 20 mm, colocado en exterior, con grúa o bomba de hormigonado,
-        incluso vibrado, vigilancia y protección del hormigón según instrucción de
-        hormigón estructural vigente, maquinaria, herramientas y medios auxiliares
-        necesarios.
-
-        Trabajo: Diurno.
-
-        Banda de mantenimiento: No necesita intervalo
-
-        Condiciones de ejecución:Volumen escaso.
-
-        '
-      title: ' Hormigón en masa HM'
-      unit: m³
-    OHA020aaadb:
-      code: OHA020aaadb
-      components:
-        0:
-          ent_code: MQ08060010
-          factor: 1.0
-          production_rate: 0.065
-        1:
-          ent_code: MQ08070200
-          factor: 1.0
-          production_rate: 0.04
-        2:
-          ent_code: MQ08110010
-          factor: 1.0
-          production_rate: 0.12
-        3:
-          ent_code: MQ0103C000
-          factor: 1.0
-          production_rate: 0.04
-        4:
-          ent_code: MQ0100A030
-          factor: 1.0
-          production_rate: 0.04
-        5:
-          ent_code: MN01060100
-          factor: 1.0
-          production_rate: 1.05
-        6:
-          ent_code: '%VOL'
-          factor: 1.0
-          production_rate: 0.2
-        7:
-          ent_code: '%CIND'
-          factor: 1.0
-          production_rate: 0.06
-      long_description: 'Hormigón para armar o pretensar HA-25 o HP-25, elaborado
-        en central fija o móvil, de cualquier consistencia y tamaño máximo de árido
-        20 mm, colocado en exterior, con grúa o bomba de hormigonado, incluso vibrado,
-        vigilancia y protección del hormigón según instrucción de hormigón estructural
-        vigente, maquinaria, herramientas y medios auxiliares necesarios.
-
-        Trabajo: Diurno.
-
-        Banda de mantenimiento: No necesita intervalo.
-
-        Condiciones de ejecución: Volumen escaso.
-
-        '
-      title: ' Hormigón para armar o pretensar HA'
-      unit: m³
-    OHA020daadb:
-      code: OHA020daadb
-      components:
-        0:
-          ent_code: MQ08060010
-          factor: 1.0
-          production_rate: 0.065
-        1:
-          ent_code: MQ08070200
-          factor: 1.0
-          production_rate: 0.04
-        2:
-          ent_code: MQ08110010
-          factor: 1.0
-          production_rate: 0.12
-        3:
-          ent_code: MQ0103C000
-          factor: 1.0
-          production_rate: 0.04
-        4:
-          ent_code: MQ0100A030
-          factor: 1.0
-          production_rate: 0.04
-        5:
-          ent_code: MN01060400
-          factor: 1.0
-          production_rate: 1.05
-        6:
-          ent_code: '%VOL'
-          factor: 1.0
-          production_rate: 0.2
-        7:
-          ent_code: '%CIND'
-          factor: 1.0
-          production_rate: 0.06
-      long_description: 'Hormigón para armar o pretensar HA-40 o HP-40, elaborado
-        en central fija o móvil, de cualquier consistencia y tamaño máximo de árido
-        20 mm, colocado en exterior, con grúa o bomba de hormigonado, incluso vibrado,
-        vigilancia y protección del hormigón según instrucción de hormigón estructural
-        vigente, maquinaria, herramientas y medios auxiliares necesarios.
-
-        Trabajo: Diurno.
-
-        Banda de mantenimiento: No necesita intervalo.
-
-        Condiciones de ejecución: Volumen escaso.
-
-        '
-      title: ' Hormigón para armar o pretensar HA'
-      unit: m³
-    OHB010baadb:
-      code: OHB010baadb
-      components:
-        0:
-          ent_code: MN01110002
-          factor: 1.0
-          production_rate: 1.03
-        1:
-          ent_code: MN01100600
-          factor: 1.0
-          production_rate: 0.06
-        2:
-          ent_code: MN01100002
-          factor: 1.0
-          production_rate: 0.01
-        3:
-          ent_code: '%VOL'
-          factor: 1.0
-          production_rate: 0.2
-        4:
-          ent_code: '%CIND'
-          factor: 1.0
-          production_rate: 0.06
-      long_description: 'Acero corrugado B 500, colocado en elementos horizontales,
-        incluso p.p. de cortes, despuntes, alambre de atar y separadores, terminado.
-
-        Trabajo: Diurno
-
-        Banda de mantenimiento:No necesita intervalo
-
-        Condiciones de ejecución: Volumen escaso
-
-        '
-      title: ' Acero corrugado B 500, colocado en elementos horizontales. (D/NNI/E).'
-      unit: kg
-    OHB010bbadb:
-      code: OHB010bbadb
-      components:
-        0:
-          ent_code: MQ14000000
-          factor: 1.0
-          production_rate: 0.001
-        1:
-          ent_code: MN01110002
-          factor: 1.0
-          production_rate: 1.03
-        2:
-          ent_code: MN01100600
-          factor: 1.0
-          production_rate: 0.06
-        3:
-          ent_code: MN01100002
-          factor: 1.0
-          production_rate: 0.01
-        4:
-          ent_code: '%VOL'
-          factor: 1.0
-          production_rate: 0.2
-        5:
-          ent_code: '%CIND'
-          factor: 1.0
-          production_rate: 0.06
-      long_description: 'Acero corrugado B 500, colocado en elementos verticales,
-        incluso p.p. de cortes, despuntes, alambre de atar y separadores, terminado.
-
-        Trabajo: Diurno
-
-        Banda de mantenimiento:No necesita intervalo
-
-        Condiciones de ejecución: Volumen escaso
-
-        '
-      title: ' Acero corrugado B 500, colocado en elementos verticales. (D/NNI/E).'
-      unit: kg
-    OHB050adb:
-      code: OHB050adb
-      components:
-        0:
-          ent_code: MQ14000000
-          factor: 1.0
-          production_rate: 0.001
-        1:
-          ent_code: MQ03070205
-          factor: 1.0
-          production_rate: 0.003
-        2:
-          ent_code: MQ03060100
-          factor: 1.0
-          production_rate: 0.003
-        3:
-          ent_code: MQ03070210
-          factor: 1.0
-          production_rate: 0.003
-        4:
-          ent_code: MQ16020100
-          factor: 1.0
-          production_rate: 0.003
-        5:
-          ent_code: MN01050012
-          factor: 1.0
-          production_rate: 5.0
-        6:
-          ent_code: MN01100002
-          factor: 1.0
-          production_rate: 0.02
-        7:
-          ent_code: MN01100070
-          factor: 1.0
-          production_rate: 0.005
-        8:
-          ent_code: MN01100071
-          factor: 1.0
-          production_rate: 0.005
-        9:
-          ent_code: MN01100095
-          factor: 1.0
-          production_rate: 0.2
-        10:
-          ent_code: MN01110500
-          factor: 1.0
-          production_rate: 1.05
-        11:
-          ent_code: MN01110002
-          factor: 1.0
-          production_rate: 0.05
-        12:
-          ent_code: '%VOL'
-          factor: 1.0
-          production_rate: 0.2
-        13:
-          ent_code: '%CIND'
-          factor: 1.0
-          production_rate: 0.06
-      long_description: 'Acero especial en cordones para pretensar i/ vainas y todos
-        los accesorios necesarios, los anclajes activo y pasivo, acopladores, todas
-        las operaciones y equipos de tesado, las operaciones y equipos de inyección,
-        el sellado de cajetines.
-
-        Trabajo: Diurno.
-
-        Banda de mantenimiento: No necesita intervalo.
-
-        Condiciones de ejecución: Volumen escaso.
-
-        '
-      title: ' Acero especial en cordones para pretensar.'
-      unit: kg
-    OHC010aaadb:
-      code: OHC010aaadb
-      components:
-        0:
-          ent_code: MQ14000000
-          factor: 1.0
-          production_rate: 0.0125
-        1:
-          ent_code: MN01120001
-          factor: 1.0
-          production_rate: 3.0
-        2:
-          ent_code: MN01120005
-          factor: 1.0
-          production_rate: 3.0
-        3:
-          ent_code: MN01120003
-          factor: 1.0
-          production_rate: 1.0
-        4:
-          ent_code: MN01120013
-          factor: 1.0
-          production_rate: 0.075
-        5:
-          ent_code: MN01120011
-          factor: 1.0
-          production_rate: 0.4
-        6:
-          ent_code: '%VOL'
-          factor: 1.0
-          production_rate: 0.2
-        7:
-          ent_code: '%CIND'
-          factor: 1.0
-          production_rate: 0.06
-      long_description: 'Encofrado plano en paramento oculto, incluso posterior desencofrado
-        i/ limpieza, humedecido, aplicación de desencofrante, p.p. de elementos complementarios
-        para su estabilidad y adecuada ejecución.
-
-        Trabajo: Diurno.
-
-        Banda de mantenimiento: No necesita intervalo.
-
-        Condiciones de ejecución: Volumen escaso.
-
-        '
-      title: ' Encofrado plano en paramento oculto. (D/NNI/E).'
-      unit: m²
-    OHC010baadb:
-      code: OHC010baadb
-      components:
-        0:
-          ent_code: MQ14000000
-          factor: 1.0
-          production_rate: 0.0125
-        1:
-          ent_code: MN01120001
-          factor: 1.0
-          production_rate: 3.0
-        2:
-          ent_code: MN01120005
-          factor: 1.0
-          production_rate: 3.0
-        3:
-          ent_code: MN01120004
-          factor: 1.0
-          production_rate: 1.0
-        4:
-          ent_code: MN01120013
-          factor: 1.0
-          production_rate: 0.075
-        5:
-          ent_code: MN01120011
-          factor: 1.0
-          production_rate: 0.4
-        6:
-          ent_code: '%VOL'
-          factor: 1.0
-          production_rate: 0.2
-        7:
-          ent_code: '%CIND'
-          factor: 1.0
-          production_rate: 0.06
-      long_description: 'Encofrado plano en paramento visto, incluso posterior desencofrado
-        i/ limpieza, humedecido, aplicación de desencofrante, p.p. de elementos complementarios
-        para su estabilidad y adecuada ejecución.
-
-        Trabajo: Diurno.
-
-        Banda de mantenimiento: No necesita intervalo.
-
-        Condiciones de ejecución: Volumen escaso.
-
-        '
-      title: ' Encofrado plano en paramento visto. (D/NNI/E).'
-      unit: m²
-    PBA010a:
-      code: PBA010a
-      components:
-        0:
-          ent_code: MN14020012
-          factor: 1.0
-          production_rate: 1.0
-        1:
-          ent_code: '%CIND'
-          factor: 1.0
-          production_rate: 0.06
-      long_description: 'Redacción de "Proyecto e informe de prueba de carga" describiendo
-        los medios empleados y los resultados obtenidos i/la realización de los cálculos
-        y la definición de los planos que se considere necesario, en puente isostático
-        .
-
-        '
-      title: ' Redacción de "Proyecto e informe de prueba de carga" en puente isostático.'
-      unit: ud
-    PBA020aa:
-      code: PBA020aa
-      components:
-        0:
-          ent_code: MN14020003
-          factor: 1.0
-          production_rate: 1.0
-        1:
-          ent_code: '%CIND'
-          factor: 1.0
-          production_rate: 0.06
-      long_description: 'Realización de prueba de carga en puente isostático de un
-        vano <= 20 m o en el primer vano de un puente de varios vanos isostáticos
-        de luces <= 20 m.
-
-        '
-      title: ' Realización de prueba de carga en puente isostático de un vano <= 20
-        m o en el primer vano de un puente de varios vanos isostáticos de luces <=
-        20 m.'
-      unit: ud
-    SAA010b:
-      code: SAA010b
-      components:
-        0:
-          ent_code: MN16010102
-          factor: 1.0
-          production_rate: 1.0
-        1:
-          ent_code: '%CIND'
-          factor: 1.0
-          production_rate: 0.06
-      long_description: 'Casco de seguridad con arnés de cabeza ajustable por medio
-        de rueda dentada, para uso normal y eléctrico hasta 440 V.. Según R.D. 773/97
-        y R.D. 1407/92. Equipo de Protección Individual (EPI) con marcado de conformidad
-        CE.
-
-        '
-      title: ' Casco de seguridad ajustable rueda.'
-      unit: ud
-    SAA020c:
-      code: SAA020c
-      components:
-        0:
-          ent_code: MN16010108
-          factor: 1.0
-          production_rate: 1.0
-        1:
-          ent_code: '%CIND'
-          factor: 1.0
-          production_rate: 0.06
-      long_description: 'Pantalla de seguridad para soldador de poliamida y cristal
-        de 110x55 mm + casco con arnés de cabeza ajustable con rueda dentada. Según
-        UNE-EN 175, UNE-EN 379. Según R.D. 773/97 y R.D. 1407/92. Equipo de Protección
-        Individual (EPI) con marcado de conformidad CE.
-
-        '
-      title: ' Pantalla+casco seguridad soldar.'
-      unit: ud
-    SAA030d:
-      code: SAA030d
-      components:
-        0:
-          ent_code: MN16010113
-          factor: 1.0
-          production_rate: 1.0
-        1:
-          ent_code: '%CIND'
-          factor: 1.0
-          production_rate: 0.06
-      long_description: 'Gafas antipolvo antiempañables, panorámicas. Según UNE-EN
-        172. Según R.D. 773/97 y R.D. 1407/92. Equipo de Protección Individual (EPI)
-        con marcado de conformidad CE.
-
-        '
-      title: ' Gafas antipolvo.'
-      unit: ud
-    SAA070:
-      code: SAA070
-      components:
-        0:
-          ent_code: MN16010116
-          factor: 1.0
-          production_rate: 1.0
-        1:
-          ent_code: '%CIND'
-          factor: 1.0
-          production_rate: 0.06
-      long_description: 'Mascarilla de celulosa desechable para trabajos en ambiente
-        con polvo y humos. Según Según UNE-EN 136, R.D. 773/97 y R.D. 1407/92. Equipo
-        de protección individual (EPI) con marcado de conformidad CE.
-
-        '
-      title: ' MASCARILLA CELULOSA DESECHABLE'
-      unit: ud
-    SAB020a:
-      code: SAB020a
-      components:
-        0:
-          ent_code: MN16010224
-          factor: 1.0
-          production_rate: 1.0
-        1:
-          ent_code: '%CIND'
-          factor: 1.0
-          production_rate: 0.06
-      long_description: 'Conjunto de lluvia alta visibilidad compuesto por pantalón
-        y chaqueta. Ambos con tiras retroreflejantes microburbujas termoselladas,
-        color plata, 50 mm, montaje paralelo. Según UNE-EN 471, UNE-EN 343   y R.D.
-        773/97. Equipo de Protección Individual (EPI) con marcado de conformidad CE.
-
-        '
-      title: ' Conjunto lluvia alta visibilidad.'
-      unit: ud
-    SAB030c:
-      code: SAB030c
-      components:
-        0:
-          ent_code: MN16010218
-          factor: 1.0
-          production_rate: 1.0
-        1:
-          ent_code: '%CIND'
-          factor: 1.0
-          production_rate: 0.06
-      long_description: 'Chaleco de obras con bandas reflectantes. Según UNE-EN 471,
-        R.D. 773/97 y R.D. 1407/92. Equipo de Protección Individual (EPI) con marcado
-        de conformidad CE.
-
-        '
-      title: ' Chaleco de obras con bandas reflectantes.'
-      unit: ud
-    SAB040d:
-      code: SAB040d
-      components:
-        0:
-          ent_code: MN16010207
-          factor: 1.0
-          production_rate: 1.0
-        1:
-          ent_code: '%CIND'
-          factor: 1.0
-          production_rate: 0.06
-      long_description: 'Mono de trabajo de una pieza de poliéster-algodón. Según
-        UNE-EN 340, R.D. 773/97 y R.D. 1407/92. Equipo de Protección Individual (EPI)
-        con marcado de conformidad CE.
-
-        '
-      title: ' Mono de trabajo poliéster'
-      unit: ud
-    SAB080:
-      code: SAB080
-      components:
-        0:
-          ent_code: MN16010203
-          factor: 1.0
-          production_rate: 1.0
-        1:
-          ent_code: '%CIND'
-          factor: 1.0
-          production_rate: 0.06
-      long_description: 'Cinturón portaherramientas. Según R.D. 773/97 y R.D. 1407/92.
-        Equipo de protección individual (EPI) con marcado de conformidad CE.
-
-        '
-      title: ' CINTURÓN PORTAHERRAMIENTAS'
-      unit: ud
-    SAB100:
-      code: SAB100
-      components:
-        0:
-          ent_code: MN16010225
-          factor: 1.0
-          production_rate: 1.0
-        1:
-          ent_code: '%CIND'
-          factor: 1.0
-          production_rate: 0.06
-      long_description: 'Cinturón antivibratorio. Según R.D. 773/97 y R.D. 1407/92.
-        Equipo de protección individual (EPI) con marcado de conformidad CE.
-
-        '
-      title: ' CINTURÓN ANTIVIBRATORIO'
-      unit: ud
-    SAC010g:
-      code: SAC010g
-      components:
-        0:
-          ent_code: MN16010307
-          factor: 1.0
-          production_rate: 1.0
-        1:
-          ent_code: '%CIND'
-          factor: 1.0
-          production_rate: 0.06
-      long_description: 'Par de guantes de uso general de lona y serraje . Según UNE-EN
-        420, UNE-EN 388.Según R.D. 773/97 y R.D. 1407/92. Equipo de Protección Individual
-        (EPI) con marcado de conformidad CE.
-
-        '
-      title: ' Par de guantes de uso general de lona y serraje.'
-      unit: ud
-    SAC040:
-      code: SAC040
-      components:
-        0:
-          ent_code: MN16010317
-          factor: 1.0
-          production_rate: 1.0
-        1:
-          ent_code: '%CIND'
-          factor: 1.0
-          production_rate: 0.06
-      long_description: 'Par de manguitos reflectantes. Según Según UNE-EN 60984 y
-        R.D. 773/97. Equipo de protección individual (EPI) con marcado de conformidad
-        CE.
-
-        '
-      title: ' PAR MANGUITOS REFLECTANTES'
-      unit: ud
-    SAD010g:
-      code: SAD010g
-      components:
-        0:
-          ent_code: MN16010407
-          factor: 1.0
-          production_rate: 1.0
-        1:
-          ent_code: '%CIND'
-          factor: 1.0
-          production_rate: 0.06
-      long_description: 'Par de botas de seguridad para electricista hasta 5000 V
-        de tensión. Según UNE-EN ISO 20345, UNE-EN ISO 20346, UNE-EN ISO 20347. Según
-        R.D. 773/97 y R.D. 1407/92. Equipo de Protección Individual (EPI) con marcado
-        de conformidad CE.
-
-        '
-      title: ' Par de botas de seguridad.'
-      unit: ud
-    SAE080c:
-      code: SAE080c
-      components:
-        0:
-          ent_code: MN16010583
-          factor: 1.0
-          production_rate: 0.2
-        1:
-          ent_code: '%CIND'
-          factor: 1.0
-          production_rate: 0.06
-      long_description: 'Equipo completo para trabajos en vertical y horizontal compuesto
-        por un arnés de seguridad con amarre dorsal y pectoral, fabricado con cinta
-        de nailon de 45 mm y elementos metálicos de acero inoxidable, un dispositivo
-        anticaídas deslizante de doble función y un rollo de cuerda poliamida de 14
-        mm de 2 m con lazada, incluso bolsa portaequipo. Según UNE-EN 360, UNE-EN
-        ISO 1140, UNE-EN 353-2, R.D. 773/97 y R.D. 1407/92. Equipo de Protección Individual
-        (EPI) con marcado de conformidad CE. (amortizable en 5 usos)
-
-        '
-      title: ' Equipo completo para trabajo vertical y horizontal.'
-      unit: ud
-    SBA010a:
-      code: SBA010a
-      components:
-        0:
-          ent_code: MOC0000100
-          factor: 1.0
-          production_rate: 0.015
-        1:
-          ent_code: MOC0000200
-          factor: 1.0
-          production_rate: 0.15
-        2:
-          ent_code: MOC0000500
-          factor: 1.0
-          production_rate: 0.15
-        3:
-          ent_code: MN16020303
-          factor: 1.0
-          production_rate: 0.065
-        4:
-          ent_code: MN16020309
-          factor: 1.0
-          production_rate: 0.003
-        5:
-          ent_code: MN16020330
-          factor: 1.0
-          production_rate: 0.24
-        6:
-          ent_code: '%CIND'
-          factor: 1.0
-          production_rate: 0.06
-      long_description: 'Barandilla de protección de perímetros de forjados, compuesta
-        por guardacuerpos metálico cada 2,50 m (amortizable en 8 usos), fijado por
-        apriete al forjado, pasamanos y travesaño intermedio formado por tubo 50 mm
-        (amortizable en 10 usos), pintado en amarillo y negro, y rodapié de 15x5 cm
-        (amortizable en 3 usos), según norma UNE-EN 13374, incluso colocación y desmontaje
-        , según R.D. 486/97 y R.D. 1627/97
-
-        '
-      title: ' Barandilla de protección guardacuerpos metálicos (tubo 50 mm). Apriete
-        a forjado.'
-      unit: m
-    SBA010b:
-      code: SBA010b
-      components:
-        0:
-          ent_code: MOC0000100
-          factor: 1.0
-          production_rate: 0.03
-        1:
-          ent_code: MOC0000500
-          factor: 1.0
-          production_rate: 0.3
-        2:
-          ent_code: MN16020303
-          factor: 1.0
-          production_rate: 0.065
-        3:
-          ent_code: MN16020309
-          factor: 1.0
-          production_rate: 0.003
-        4:
-          ent_code: MN16020330
-          factor: 1.0
-          production_rate: 0.24
-        5:
-          ent_code: MN16020333
-          factor: 1.0
-          production_rate: 0.33
-        6:
-          ent_code: '%CIND'
-          factor: 1.0
-          production_rate: 0.06
-      long_description: 'Barandilla de protección de perímetros de forjados, compuesta
-        por guardacuerpos metálico cada 2,50 m (amortizable en 8 usos), anclados mediante
-        cápsulas de plástico embebidas en el forjado, pasamanos y travesaño intermedio
-        formado por tubo 50 mm (amortizable en 10 usos), pintado en amarillo, y rodapié
-        de 15x5 cm (amortizable en 3 usos), según norma UNE-EN 13374, incluso colocación
-        y desmontaje , según R.D. 486/97 y R.D. 1627/97
-
-        '
-      title: ' Barandilla de protección guardacuerpos metálicos (tubo 50 mm). Embebido
-        forjado.'
-      unit: m
-    SBA010f:
-      code: SBA010f
-      components:
-        0:
-          ent_code: MOC0000100
-          factor: 1.0
-          production_rate: 0.01
-        1:
-          ent_code: MOC0000200
-          factor: 1.0
-          production_rate: 0.1
-        2:
-          ent_code: MOC0000500
-          factor: 1.0
-          production_rate: 0.1
-        3:
-          ent_code: MN16020307
-          factor: 1.0
-          production_rate: 0.011
-        4:
-          ent_code: MN16020328
-          factor: 1.0
-          production_rate: 0.667
-        5:
-          ent_code: '%CIND'
-          factor: 1.0
-          production_rate: 0.06
-      long_description: 'Barandilla de protección lateral de zanjas, formada por tres
-        tabloncillos de madera de pino de 20x7 cm y estaquillas de madera de D=8 cm
-        hincadas en el terreno cada 1,00 m (amortizable en 3 usos), incluso colocación
-        y desmontaje , según R.D. 486/97 y R.D. 1627/97
-
-        '
-      title: ' Barandilla de protección protección lateral zanjas.'
-      unit: m
-    SBA040a:
-      code: SBA040a
-      components:
-        0:
-          ent_code: MOC0000100
-          factor: 1.0
-          production_rate: 0.01
-        1:
-          ent_code: MOC0000500
-          factor: 1.0
-          production_rate: 0.1
-        2:
-          ent_code: MN16020310
-          factor: 1.0
-          production_rate: 1.0
-        3:
-          ent_code: '%CIND'
-          factor: 1.0
-          production_rate: 0.06
-      long_description: 'Valla de contención de peatones, metálica, prolongable de
-        2,50 m de largo y 1,00 m de altura, color amarillo (amortizable para 20 usos),
-        incluso montaje y desmontaje, según R.D. 486/97 y R.D. 1627/97.
-
-        '
-      title: ' Valla contención de peatones.'
-      unit: ud
-    SBA060a:
-      code: SBA060a
-      components:
-        0:
-          ent_code: MOC0000100
-          factor: 1.0
-          production_rate: 0.005
-        1:
-          ent_code: MOC0000600
-          factor: 1.0
-          production_rate: 0.05
-        2:
-          ent_code: MOC0000500
-          factor: 1.0
-          production_rate: 0.05
-        3:
-          ent_code: MN16020322
-          factor: 1.0
-          production_rate: 1.0
-        4:
-          ent_code: '%CIND'
-          factor: 1.0
-          production_rate: 0.06
-      long_description: 'Puerta de acceso peatonal de chapa galvanizada de 1,00x2,00
-        m para colocación en valla de cerramiento de las mismas características, incluso
-        montaje y desmontaje, según R.D. 486/97 y R.D. 1627/97 (amortizable en 5 usos).
-
-        '
-      title: ' Puerta de acceso peatonal chapa 1,00x2,00 m.'
-      unit: ud
-    SBA070b:
-      code: SBA070b
-      components:
-        0:
-          ent_code: MOC0000100
-          factor: 1.0
-          production_rate: 0.005
-        1:
-          ent_code: MOC0000600
-          factor: 1.0
-          production_rate: 0.05
-        2:
-          ent_code: MOC0000500
-          factor: 1.0
-          production_rate: 0.05
-        3:
-          ent_code: MN16020314
-          factor: 1.0
-          production_rate: 1.0
-        4:
-          ent_code: '%CIND'
-          factor: 1.0
-          production_rate: 0.06
-      long_description: 'Alquiler m/mes de valla realizada con paneles prefabricados
-        de 3,50x2,00 m de altura, enrejados de 80x150 mm y D=8 mm de espesor, soldado
-        a tubos de D=40 mm y 1,50 mm de espesor, todo ello galvanizado en caliente,
-        sobre soporte de hormigón prefabricado de 230x600x150 mm, separados cada 3,50
-        m, incluso accesorios de fijación, p.p. de portón , incluso montaje y desmontaje,
-        según R.D. 486/97 y R.D. 1627/97.
-
-        '
-      title: ' Alquiler valla de enrejado galvanizado.'
-      unit: m
-    SBA080:
-      code: SBA080
-      components:
-        0:
-          ent_code: MOC0000100
-          factor: 1.0
-          production_rate: 0.01
-        1:
-          ent_code: MOC0000500
-          factor: 1.0
-          production_rate: 0.1
-        2:
-          ent_code: MN16020316
-          factor: 1.0
-          production_rate: 1.0
-        3:
-          ent_code: '%CIND'
-          factor: 1.0
-          production_rate: 0.06
-      long_description: 'Alquiler unidad/mes de valla de contención de peatones, metálica,
-        de 2,50 m de largo y 1,00 m de altura, color amarillo, incluso colocación
-        y desmontaje, según R.D. 486/97 y R.D. 1627/97.
-
-        '
-      title: ' ALQUILER VALLA CONTENCIÓN PEATONES'
-      unit: ud
-    SBA090a:
-      code: SBA090a
-      components:
-        0:
-          ent_code: MOC0000100
-          factor: 1.0
-          production_rate: 0.01
-        1:
-          ent_code: MOC0000200
-          factor: 1.0
-          production_rate: 0.1
-        2:
-          ent_code: MOC0000500
-          factor: 1.0
-          production_rate: 0.1
-        3:
-          ent_code: MN16020008
-          factor: 1.0
-          production_rate: 1.0
-        4:
-          ent_code: MN01010001
-          factor: 1.0
-          production_rate: 0.35
-        5:
-          ent_code: '%CIND'
-          factor: 1.0
-          production_rate: 0.06
-      long_description: 'Montaje o desmontaje de barrera de seguridad tipo new jersey
-        de plástico simple, incluido el suministro, siempre llenas (amortizable 10
-        usos).
-
-        '
-      title: ' Barrera de seguridad tipo new jersey de plástico simple.'
-      unit: ud
-    SBA100:
-      code: SBA100
-      components:
-        0:
-          ent_code: MOC0000100
-          factor: 1.0
-          production_rate: 0.03
-        1:
-          ent_code: MOC0000200
-          factor: 1.0
-          production_rate: 0.1
-        2:
-          ent_code: MOC0000600
-          factor: 1.0
-          production_rate: 0.3
-        3:
-          ent_code: MOC0000500
-          factor: 1.0
-          production_rate: 0.3
-        4:
-          ent_code: MN16070301
-          factor: 1.0
-          production_rate: 0.1
-        5:
-          ent_code: MN16020323
-          factor: 1.0
-          production_rate: 0.1
-        6:
-          ent_code: MN16020324
-          factor: 1.0
-          production_rate: 0.03
-        7:
-          ent_code: MN16020325
-          factor: 1.0
-          production_rate: 0.008
-        8:
-          ent_code: MN16020326
-          factor: 1.0
-          production_rate: 0.008
-        9:
-          ent_code: AU10100001
-          factor: 1.0
-          production_rate: 0.008
-        10:
-          ent_code: '%CIND'
-          factor: 1.0
-          production_rate: 0.06
-      long_description: 'Cercado con entelado metálico galvanizado de malla simple
-        torsión, trama 50/14 y postes de tubo de acero galvanizado por inmersión de
-        48 mm de diámetro y tornapuntas tubo acero galvanizado de 32 mm de diámetro,
-        montada, i/replanteo y recibido con hormigón, tensores, grupillas y accesorios
-        (amortizable en un diez usos), según R.D. 486/97 y R.D. 1627/97.
-
-        A instalar en trabajos que inciden o quedan proximos a la zona de seguridad
-        y se realizaran con tráfico ferroviario segun la NAR 6/16.
-
-        '
-      title: ' SEPARACION FÍSICA RÍGIDA PARA TRABAJOS EN O PRÓXIMOS A LA ZONA DE SEGURIDAD
-        CON TRAFICO FERROVIARIO'
-      unit: m
-    SBB010:
-      code: SBB010
-      components:
-        0:
-          ent_code: MN16040101
-          factor: 1.0
-          production_rate: 1.0
-        1:
-          ent_code: '%CIND'
-          factor: 1.0
-          production_rate: 0.06
-      long_description: 'Lámpara portátil de mano, con cesto protector y mango aislante,
-        según R.D. 614/2001.
-
-        '
-      title: ' LÁMPARA PORTÁTIL MANO'
-      unit: ud
-    SBC020a:
-      code: SBC020a
-      components:
-        0:
-          ent_code: MOC0000100
-          factor: 1.0
-          production_rate: 0.008
-        1:
-          ent_code: MOC0000200
-          factor: 1.0
-          production_rate: 0.08
-        2:
-          ent_code: MOC0000400
-          factor: 1.0
-          production_rate: 0.08
-        3:
-          ent_code: MN01110111
-          factor: 1.0
-          production_rate: 2.25
-        4:
-          ent_code: MN16070301
-          factor: 1.0
-          production_rate: 1.1
-        5:
-          ent_code: MN08040603
-          factor: 1.0
-          production_rate: 0.125
-        6:
-          ent_code: MN01100301
-          factor: 1.0
-          production_rate: 1.0
-        7:
-          ent_code: '%CIND'
-          factor: 1.0
-          production_rate: 0.06
-      long_description: 'Protección de hueco horizontal con mallazo electrosoldado
-        de 15x15 cm D=5 mm, para protección fijado con conectores al zuncho del hueco
-        y pasante sobre las tabicas y empotrado un metro a cada lado en la capa de
-        compresión por cada lado, incluso cinta de señalización a 0,90 m de altura
-        fijada con pies derechos , según R.D. 486/97 y R.D. 1627/97
-
-        '
-      title: ' Protección de hueco horizontal con mallazo.'
-      unit: m²
-    SBE010a:
-      code: SBE010a
-      components:
-        0:
-          ent_code: MOC0000100
-          factor: 1.0
-          production_rate: 0.025
-        1:
-          ent_code: MOC0000200
-          factor: 1.0
-          production_rate: 0.25
-        2:
-          ent_code: MOC0000500
-          factor: 1.0
-          production_rate: 0.25
-        3:
-          ent_code: MN16020213
-          factor: 1.0
-          production_rate: 0.02
-        4:
-          ent_code: MN16020214
-          factor: 1.0
-          production_rate: 0.7
-        5:
-          ent_code: MN16020221
-          factor: 1.0
-          production_rate: 0.6
-        6:
-          ent_code: '%CIND'
-          factor: 1.0
-          production_rate: 0.06
-      long_description: 'Red tipo horca 1ª planta vertical de seguridad de malla de
-        poliamida de 10x10 cm de paso, ennudada con cuerda de D=3 mm en módulos de
-        10x5 m incluso pescante metálico tipo horca de 7,50x2,00 m en tubo de 80x40x1,5
-        mm colocados cada 4,50 m, soporte mordaza (amortizable en 20 usos), anclajes
-        de red, cuerdas de unión y red (amortizable en 10 usos), incluso colocación
-        y desmontaje en primera puesta, según UNE-EN 1263,  R.D. 485/97 y R.D. 1627/97.
-
-        '
-      title: ' Red de seguridad tipo horca 1 planta.'
-      unit: m
-    SBF010:
-      code: SBF010
-      components:
-        0:
-          ent_code: MOC0000100
-          factor: 1.0
-          production_rate: 0.0001
-        1:
-          ent_code: MOC0000500
-          factor: 1.0
-          production_rate: 0.001
-        2:
-          ent_code: MN16020223
-          factor: 1.0
-          production_rate: 1.0
-        3:
-          ent_code: '%CIND'
-          factor: 1.0
-          production_rate: 0.06
-      long_description: 'Colocación de tapón protector de plástico "tipo seta" de
-        las puntas de acero en las esperas de las armaduras de la estructura de hormigón
-        armado, incluso retirada antes del vertido del hormigón.
-
-        '
-      title: ' TAPÓN PROTECTOR "TIPO SETA" ESPERAS ARMADURAS'
-      unit: ud
-    SBG010b:
-      code: SBG010b
-      components:
-        0:
-          ent_code: MOC0000100
-          factor: 1.0
-          production_rate: 0.005
-        1:
-          ent_code: MOC0000500
-          factor: 1.0
-          production_rate: 0.05
-        2:
-          ent_code: MN16020102
-          factor: 1.0
-          production_rate: 1.0
-        3:
-          ent_code: MN01100301
-          factor: 1.0
-          production_rate: 1.0
-        4:
-          ent_code: '%CIND'
-          factor: 1.0
-          production_rate: 0.06
-      long_description: 'Tapa provisional metálica para huecos de 50x50 cm, arquetas
-        o similares, incluso colocación.
-
-        '
-      title: ' Tapa provisional metálica para arqueta 51x51 cm.'
-      unit: ud
-    SBG010f:
-      code: SBG010f
-      components:
-        0:
-          ent_code: MOC0000100
-          factor: 1.0
-          production_rate: 0.02
-        1:
-          ent_code: MOC0000500
-          factor: 1.0
-          production_rate: 0.2
-        2:
-          ent_code: MN16020105
-          factor: 1.0
-          production_rate: 1.0
-        3:
-          ent_code: MN01100301
-          factor: 1.0
-          production_rate: 1.0
-        4:
-          ent_code: '%CIND'
-          factor: 1.0
-          production_rate: 0.06
-      long_description: 'Tapa provisional metálica para pozos, pilotes o asimilables
-        de 70x70 cm, arquetas o similares, incluso colocación.
-
-        '
-      title: ' Tapa provisional metálica para pozo 70x70 cm.'
-      unit: ud
-    SBI020:
-      code: SBI020
-      components:
-        0:
-          ent_code: MOC0000100
-          factor: 1.0
-          production_rate: 0.0129
-        1:
-          ent_code: MOC0000200
-          factor: 1.0
-          production_rate: 0.129
-        2:
-          ent_code: MN16020120
-          factor: 1.0
-          production_rate: 0.053
-        3:
-          ent_code: '%CIND'
-          factor: 1.0
-          production_rate: 0.06
-      long_description: 'Tope para camión en movimientos de tierras, con tablón de
-        madera  de pino y piquetas de barra de acero corrugado  de 20 mm de diámetro
-        ancladas al terreno de longitud 1,8 m, y con el desmontaje incluido.
-
-        '
-      title: ' PAR TOPES CAUCHO PARA RUEDAS'
-      unit: ud
-    SCA010ab:
-      code: SCA010ab
-      components:
-        0:
-          ent_code: MOC0000100
-          factor: 1.0
-          production_rate: 0.2
-        1:
-          ent_code: MOC0000500
-          factor: 1.0
-          production_rate: 2.0
-        2:
-          ent_code: MN16050209
-          factor: 1.0
-          production_rate: 1.0
-        3:
-          ent_code: MN16050234
-          factor: 1.0
-          production_rate: 0.085
-        4:
-          ent_code: '%CIND'
-          factor: 1.0
-          production_rate: 0.06
-      long_description: 'Mes de alquiler de de caseta prefabricada para comedor de
-        obra de dimensiones de 2 a 9 m2. Estructura y cerramiento de chapa galvanizada
-        pintada, aislamiento de poliestireno expandido autoextinguible, interior con
-        tablero melaminado en color. Cubierta de chapa galvanizada reforzada con perfil
-        de acero; fibra de vidrio de 60 mm, interior con tablex lacado. Suelo de aglomerado
-        revestido con PVC continuo de 2 mm, y poliestireno de 50 mm con apoyo en base
-        de chapa galvanizada de sección trapezoidal. Puerta de 0,80x2,00 m, de chapa
-        galvanizada de 1 mm, reforzada y con poliestireno de 20 mm, picaporte y cerradura.
-        Dos ventanas aluminio anodizado corredera, contraventana de acero galvanizado.
-        Instalación eléctrica a 220 V, toma de tierra, automático, 2 fluorescentes
-        de 40 W, enchufes para 1500 W y punto luz exterior de 60 W. Con transporte
-        a 150 km (ida y vuelta). Entrega y recogida del módulo con camión grúa. Según
-        R.D. 486/97 y R.D. 1627/97, incluso limpieza semanal.
-
-        '
-      title: ' Alquiler de comedor.'
-      unit: mes
-    SCA010cb:
-      code: SCA010cb
-      components:
-        0:
-          ent_code: MOC0000100
-          factor: 1.0
-          production_rate: 0.2
-        1:
-          ent_code: MOC0000500
-          factor: 1.0
-          production_rate: 2.0
-        2:
-          ent_code: MN16050206
-          factor: 1.0
-          production_rate: 1.0
-        3:
-          ent_code: MN16050301
-          factor: 1.0
-          production_rate: 0.0833
-        4:
-          ent_code: MN16050302
-          factor: 1.0
-          production_rate: 0.0167
-        5:
-          ent_code: MN16050303
-          factor: 1.0
-          production_rate: 0.0167
-        6:
-          ent_code: MN16050304
-          factor: 1.0
-          production_rate: 0.0167
-        7:
-          ent_code: MN16050305
-          factor: 1.0
-          production_rate: 0.0167
-        8:
-          ent_code: MN16050306
-          factor: 1.0
-          production_rate: 0.0167
-        9:
-          ent_code: MN16050307
-          factor: 1.0
-          production_rate: 0.0167
-        10:
-          ent_code: MN16050234
-          factor: 1.0
-          production_rate: 0.085
-        11:
-          ent_code: '%CIND'
-          factor: 1.0
-          production_rate: 0.06
-      long_description: 'Mes de alquiler de de caseta prefabricada para vestuarios
-        en obra de dimensiones de 2 a 9 m2. Estructura de acero galvanizado. Cubierta
-        y cerramiento lateral de chapa galvanizada trapezoidal de 0,6 mm reforzada
-        con perfiles de acero, interior prelacado. Suelo de aglomerado hidrófugo de
-        19 mm puerta de acero de 1 mm, de 0,80x2,00 m pintada con cerradura. Ventana
-        fija de cristal de 6 mm, recercado con perfil de goma. Con transporte a 150
-        km (ida y vuelta). Entrega y recogida del módulo con camión grúa. Según R.D.
-        486/97 y R.D. 1627/97, incluso limpieza semanal.
-
-        '
-      title: ' Alquiler de vestuarios.'
-      unit: mes
-    SCA010da:
-      code: SCA010da
-      components:
-        0:
-          ent_code: MOC0000100
-          factor: 1.0
-          production_rate: 0.2
-        1:
-          ent_code: MOC0000500
-          factor: 1.0
-          production_rate: 2.0
-        2:
-          ent_code: MN16050201
-          factor: 1.0
-          production_rate: 1.0
-        3:
-          ent_code: MN16050236
-          factor: 1.0
-          production_rate: 1.0
-        4:
-          ent_code: '%CIND'
-          factor: 1.0
-          production_rate: 0.06
-      long_description: 'Mes de alquiler de de WC químico estándar, compuesto por
-        urinario, inodoro y depósito para desecho de 266 l. Sin necesidad de instalación.
-        Incluso portes de entrega y recogida. Según R.D. 486/97 y R.D. 1627/97, incluso
-        limpieza, retirada de residuos a depuradora autorizada y reposición de químicos.
-
-        '
-      title: ' Alquiler de WC químico estándar.'
-      unit: mes
-    SCB010:
-      code: SCB010
-      components:
-        0:
-          ent_code: MOC0000100
-          factor: 1.0
-          production_rate: 0.01
-        1:
-          ent_code: MOC0000500
-          factor: 1.0
-          production_rate: 0.1
-        2:
-          ent_code: MN16050308
-          factor: 1.0
-          production_rate: 0.2
-        3:
-          ent_code: '%CIND'
-          factor: 1.0
-          production_rate: 0.06
-      long_description: 'Horno microondas, con plato giratorio incorporado (amortizable
-        en 5 usos).
-
-        '
-      title: ' HORNO MICROONDAS'
-      unit: ud
-    SCB020:
-      code: SCB020
-      components:
-        0:
-          ent_code: MOC0000100
-          factor: 1.0
-          production_rate: 0.01
-        1:
-          ent_code: MOC0000500
-          factor: 1.0
-          production_rate: 0.1
-        2:
-          ent_code: MN16050309
-          factor: 1.0
-          production_rate: 0.2
-        3:
-          ent_code: '%CIND'
-          factor: 1.0
-          production_rate: 0.06
-      long_description: 'Taquilla metálica individual para vestuario de 1,80 m de
-        altura en acero laminado en frío, con tratamiento antifosfatante y anticorrosivo,
-        con pintura secada al horno, cerradura, balda y tubo percha, lamas de ventilación
-        en puerta, colocada (amortizable en 5 usos).
-
-        '
-      title: ' TAQUILLA METÁLICA INDIVIDUAL'
-      unit: ud
-    SCB030:
-      code: SCB030
-      components:
-        0:
-          ent_code: MOC0000100
-          factor: 1.0
-          production_rate: 0.01
-        1:
-          ent_code: MOC0000500
-          factor: 1.0
-          production_rate: 0.1
-        2:
-          ent_code: MN16050310
-          factor: 1.0
-          production_rate: 0.2
-        3:
-          ent_code: '%CIND'
-          factor: 1.0
-          production_rate: 0.06
-      long_description: 'Mesa de melamina para comedor de obra con capacidad para
-        10 personas (amortizable en 5 usos).
-
-        '
-      title: ' MESA MELAMINA PARA 10 PERSONAS'
-      unit: ud
-    SCB040:
-      code: SCB040
-      components:
-        0:
-          ent_code: MOC0000100
-          factor: 1.0
-          production_rate: 0.01
-        1:
-          ent_code: MOC0000500
-          factor: 1.0
-          production_rate: 0.1
-        2:
-          ent_code: MN16050311
-          factor: 1.0
-          production_rate: 0.2
-        3:
-          ent_code: '%CIND'
-          factor: 1.0
-          production_rate: 0.06
-      long_description: 'Banco de madera con capacidad para 5 personas (amortizable
-        en 5 usos).
-
-        '
-      title: ' BANCO MADERA PARA 5 PERSONAS'
-      unit: ud
-    SCB050:
-      code: SCB050
-      components:
-        0:
-          ent_code: MOC0000100
-          factor: 1.0
-          production_rate: 0.01
-        1:
-          ent_code: MOC0000500
-          factor: 1.0
-          production_rate: 0.1
-        2:
-          ent_code: MN16050312
-          factor: 1.0
-          production_rate: 0.2
-        3:
-          ent_code: '%CIND'
-          factor: 1.0
-          production_rate: 0.06
-      long_description: 'Cubo para recogida de basuras (amortizable en 5 usos).
-
-        '
-      title: ' DEPÓSITO'
-      unit: ud
-    SCB100:
-      code: SCB100
-      components:
-        0:
-          ent_code: MOC0000100
-          factor: 1.0
-          production_rate: 0.01
-        1:
-          ent_code: MOC0000500
-          factor: 1.0
-          production_rate: 0.1
-        2:
-          ent_code: MN16050324
-          factor: 1.0
-          production_rate: 0.2
-        3:
-          ent_code: '%CIND'
-          factor: 1.0
-          production_rate: 0.06
-      long_description: 'Nevera eléctrica de 75 l de capacidad, colocada y con el
-        desmontaje incluido (amortizable en 5 usos).
-
-        '
-      title: ' NEVERA ELÉCTRICA'
-      unit: ud
-    SDA010c:
-      code: SDA010c
-      components:
-        0:
-          ent_code: MOC0000100
-          factor: 1.0
-          production_rate: 0.01
-        1:
-          ent_code: MOC0000500
-          factor: 1.0
-          production_rate: 0.1
-        2:
-          ent_code: MN16030103
-          factor: 1.0
-          production_rate: 1.0
-        3:
-          ent_code: '%CIND'
-          factor: 1.0
-          production_rate: 0.06
-      long_description: 'Extintor de de polvo químico ABC polivalente antibrasa de
-        eficacia 34A/144B, de 9 kg de agente extintor, con soporte, manómetro comprobable
-        y manguera con difusor. Medida la unidad instalada, según R.D. 486/97 y R.D.
-        1627/97
-
-        '
-      title: ' Extintor de polvo ABC 9 kg.'
-      unit: ud
-    SEA010:
-      code: SEA010
-      components:
-        0:
-          ent_code: MOC0000100
-          factor: 1.0
-          production_rate: 0.005
-        1:
-          ent_code: MOC0000500
-          factor: 1.0
-          production_rate: 0.05
-        2:
-          ent_code: MN16070301
-          factor: 1.0
-          production_rate: 1.1
-        3:
-          ent_code: '%CIND'
-          factor: 1.0
-          production_rate: 0.06
-      long_description: 'Cinta de balizamiento bicolor rojo/blanco de material plástico,
-        incluso colocación y desmontaje, según R.D. 485/97 y R.D. 1627/97.
-
-        '
-      title: ' CINTA BALIZAMIENTO BICOLOR 8 CM'
-      unit: m
-    SEA030:
-      code: SEA030
-      components:
-        0:
-          ent_code: MOC0000100
-          factor: 1.0
-          production_rate: 0.01
-        1:
-          ent_code: MOC0000500
-          factor: 1.0
-          production_rate: 0.1
-        2:
-          ent_code: MN16070304
-          factor: 1.0
-          production_rate: 1.0
-        3:
-          ent_code: '%CIND'
-          factor: 1.0
-          production_rate: 0.06
-      long_description: 'Boya destellante amarilla con carcasa de plástico y soporte
-        de anclaje, con célula fotoeléctrica y pilas, incluido colocación y desmontaje,
-        según R.D. 485/97 y R.D. 1627/97.
-
-        '
-      title: ' BOYA DESTELLANTE CON CÉLULA FOTOELÉCTRICA'
-      unit: ud
-    SEA100:
-      code: SEA100
-      components:
-        0:
-          ent_code: MOC0000100
-          factor: 1.0
-          production_rate: 0.0126
-        1:
-          ent_code: MOC0000400
-          factor: 1.0
-          production_rate: 0.126
-        2:
-          ent_code: MN16070119
-          factor: 1.0
-          production_rate: 1.0
-        3:
-          ent_code: '%CIND'
-          factor: 1.0
-          production_rate: 0.06
-      long_description: 'Luminaria para balizamiento fijo en color rojo, base metálica
-        y carcasa de vidrio moldeado acabado en color rojo con protección antivandálica
-        tipo hublott, lámpara de 40 w incandescente, accionamiento por célula fotoeléctrica
-        y conexionado a red auxiliar eléctrica, montaje y desmontaje.
-
-        '
-      title: ' LUMINARIA COLOR ROJO BALIZAM.'
-      unit: ud
-    SEB010a:
-      code: SEB010a
-      components:
-        0:
-          ent_code: MOC0000100
-          factor: 1.0
-          production_rate: 0.01
-        1:
-          ent_code: MOC0000500
-          factor: 1.0
-          production_rate: 0.1
-        2:
-          ent_code: MN16070201
-          factor: 1.0
-          production_rate: 1.0
-        3:
-          ent_code: '%CIND'
-          factor: 1.0
-          production_rate: 0.06
-      long_description: 'Cartel serigrafiado sobre planchas de PVC blanco de 0,6 mm
-        de espesor nominal. Tamaño 220x300 mm. Válidas para señales de obligación,
-        prohibición y advertencia, incluido colocación, según R.D. 485/97 y R.D. 1627/97.
-
-        '
-      title: ' 220x300 mm obligación/prohibición/advertencia.'
-      unit: ud
-    SEB020:
-      code: SEB020
-      components:
-        0:
-          ent_code: MOC0000100
-          factor: 1.0
-          production_rate: 0.01
-        1:
-          ent_code: MOC0000500
-          factor: 1.0
-          production_rate: 0.1
-        2:
-          ent_code: MN16070203
-          factor: 1.0
-          production_rate: 1.0
-        3:
-          ent_code: '%CIND'
-          factor: 1.0
-          production_rate: 0.06
-      long_description: 'Panel completo serigrafiado sobre planchas de pvc blanco
-        de 0,6 mm de espesor nominal. Tamaño 700x1000 mm. Válido para incluir hasta
-        15 símbolos de señales, incluso textos "prohibido el paso a toda persona ajena
-        a la obra", incluido colocación, según R.D. 485/97 y R.D. 1627/97.
-
-        '
-      title: ' PANEL COMPLETO PVC 700X1000 MM'
-      unit: ud
-    SEC010acb:
-      code: SEC010acb
-      components:
-        0:
-          ent_code: MOC0000100
-          factor: 1.0
-          production_rate: 0.03
-        1:
-          ent_code: MOC0000500
-          factor: 1.0
-          production_rate: 0.3
-        2:
-          ent_code: MN16070102
-          factor: 1.0
-          production_rate: 1.0
-        3:
-          ent_code: MN08040603
-          factor: 1.0
-          production_rate: 1.0
-        4:
-          ent_code: AU10100001
-          factor: 1.0
-          production_rate: 0.064
-        5:
-          ent_code: '%CIND'
-          factor: 1.0
-          production_rate: 0.06
-      long_description: 'Señal de seguridad triangular de L=90 cm, normalizada,  con
-        soporte de acero galvanizado de 80x40x2 mm y 2 m de altura, incluido p.p.
-        de apertura de pozo, hormigonado HM-20, colocación y desmontaje, según R.D.
-        485/97 y R.D. 1627/97.
-
-        '
-      title: ' Señal triangular de 90 cm con soporte.'
-      unit: ud
-    SEC010ccb:
-      code: SEC010ccb
-      components:
-        0:
-          ent_code: MOC0000100
-          factor: 1.0
-          production_rate: 0.03
-        1:
-          ent_code: MOC0000500
-          factor: 1.0
-          production_rate: 0.3
-        2:
-          ent_code: MN16070105
-          factor: 1.0
-          production_rate: 1.0
-        3:
-          ent_code: MN08040603
-          factor: 1.0
-          production_rate: 1.0
-        4:
-          ent_code: AU10100001
-          factor: 1.0
-          production_rate: 0.064
-        5:
-          ent_code: '%CIND'
-          factor: 1.0
-          production_rate: 0.06
-      long_description: 'Señal de seguridad circular de , normalizada,  con soporte
-        de acero galvanizado de 80x40x2 mm y 2 m de altura, incluido p.p. de apertura
-        de pozo, hormigonado HM-20, colocación y desmontaje, según R.D. 485/97 y R.D.
-        1627/97.
-
-        '
-      title: ' Señal circular de 90 cm con soporte.'
-      unit: ud
-    SEC010dab:
-      code: SEC010dab
-      components:
-        0:
-          ent_code: MOC0000100
-          factor: 1.0
-          production_rate: 0.03
-        1:
-          ent_code: MOC0000500
-          factor: 1.0
-          production_rate: 0.3
-        2:
-          ent_code: MN16070106
-          factor: 1.0
-          production_rate: 1.0
-        3:
-          ent_code: MN08040603
-          factor: 1.0
-          production_rate: 1.0
-        4:
-          ent_code: AU10100001
-          factor: 1.0
-          production_rate: 0.064
-        5:
-          ent_code: '%CIND'
-          factor: 1.0
-          production_rate: 0.06
-      long_description: 'Señal de seguridad stop de D60 cm, normalizada,  con soporte
-        de acero galvanizado de 80x40x2 mm y 2 m de altura, incluido p.p. de apertura
-        de pozo, hormigonado HM-20, colocación y desmontaje, según R.D. 485/97 y R.D.
-        1627/97.
-
-        '
-      title: ' Señal stop de 60 cm con soporte.'
-      unit: ud
-    SEC020:
-      code: SEC020
-      components:
-        0:
-          ent_code: MN16070109
-          factor: 1.0
-          production_rate: 1.0
-        1:
-          ent_code: '%CIND'
-          factor: 1.0
-          production_rate: 0.06
-      long_description: 'Señal de seguridad manual a dos caras: stop-dirección obligatoria,
-        tipo paleta, según R.D. 485/97 y R.D. 1627/97.
-
-        '
-      title: ' PALETA MANUAL 2 CARAS STOP'
-      unit: ud
-    SEC060:
-      code: SEC060
-      components:
-        0:
-          ent_code: MOC0000100
-          factor: 1.0
-          production_rate: 0.1
-        1:
-          ent_code: MOC0000500
-          factor: 1.0
-          production_rate: 1.0
-        2:
-          ent_code: '%CIND'
-          factor: 1.0
-          production_rate: 0.06
-      long_description: 'Señalista de obra.
-
-        '
-      title: ' SEÑALISTA DE OBRA'
-      unit: h
-    SED010:
-      code: SED010
-      components:
-        0:
-          ent_code: MN16020010
-          factor: 1.0
-          production_rate: 1.0
-        1:
-          ent_code: '%CIND'
-          factor: 1.0
-          production_rate: 0.06
-      long_description: 'Alquiler torre de iluminación para exterior, mástil telescópico
-        de 9 m de altura que funcionan con una manivela/polea Conjunto luminoso: 320
-        W fluorescente total de 4 focos. Voltaje de uso: 220 V
-
-        '
-      title: ' ALQUILER APOYO A LA ILUMINACIÓN. CONJUNTO DE FOCOS ILUMINACIÓN PROVISIONAL
-        EN REMOLQUE'
-      unit: mes
+    parametric: {}
+    regular:
+      AU90100001:
+        code: AU90100001
+        components:
+          0:
+            ent_code: MOC0000100
+            factor: 1.0
+            production_rate: 0.0022
+          1:
+            ent_code: MOC0000500
+            factor: 1.0
+            production_rate: 0.0229
+          2:
+            ent_code: MQ04020010
+            factor: 1.0
+            production_rate: 0.016
+          3:
+            ent_code: MQ06020200
+            factor: 1.0
+            production_rate: 0.066
+          4:
+            ent_code: MQ02010010
+            factor: 1.0
+            production_rate: 0.03
+        long_description: 'EXCAVACIÓN DE ZANJA EN TIERRAS A MÁQUINA , CON PROFUNDIDAD
+          HASTA 4 M , SIN INCLUIR ENTIBACIÓN, CON AGOTAMIENTO, REFINO, APLOMADO DE PAREDES,
+          CARGA, DESCARGA Y TRANSPORTE AL LUGAR ASIGNADO EN EL INTERIOR DE LA OBRA DE
+          PRODUCTOS SOBRANTES, I/ HERRAMIENTAS Y MEDIOS AUXILIARES.
+
+          '
+        title: ' EXCAVACIÓN DE ZANJA EN TIERRAS A MÁQUINA , CON PROFUNDIDAD HASTA 4
+          M , SIN ENTIBACIÓN.'
+        unit: m³
+      AU90100004:
+        code: AU90100004
+        components:
+          0:
+            ent_code: MOC0000100
+            factor: 1.0
+            production_rate: 0.043
+          1:
+            ent_code: MOC0000500
+            factor: 1.0
+            production_rate: 0.43
+          2:
+            ent_code: MQ06020200
+            factor: 1.0
+            production_rate: 0.066
+          3:
+            ent_code: MQ02010010
+            factor: 1.0
+            production_rate: 0.03
+        long_description: ''
+        title: ' EXCAVACIÓN DE ZANJA A MANO, EN NORMAL, HASTA 4 M DE PROFUNDIDAD , SIN
+          ENTIBACIÓN.'
+        unit: m³
+      OCA090beadb:
+        code: OCA090beadb
+        components:
+          0:
+            ent_code: MQ03060500
+            factor: 1.0
+            production_rate: 0.1333
+          1:
+            ent_code: MQ0100A030
+            factor: 1.0
+            production_rate: 0.1333
+          2:
+            ent_code: MQ06020200
+            factor: 1.0
+            production_rate: 0.006
+          3:
+            ent_code: MQ06050000
+            factor: 1.0
+            production_rate: 0.02
+          4:
+            ent_code: MN01010001
+            factor: 1.0
+            production_rate: 0.013
+          5:
+            ent_code: MP01050002
+            factor: 1.0
+            production_rate: 0.034
+          6:
+            ent_code: MN02020005
+            factor: 1.0
+            production_rate: 1.02
+          7:
+            ent_code: MN02020100
+            factor: 1.0
+            production_rate: 1.0
+          8:
+            ent_code: '%VOL'
+            factor: 1.0
+            production_rate: 0.2
+          9:
+            ent_code: '%CIND'
+            factor: 1.0
+            production_rate: 0.06
+        long_description: 'Perforación de micropilote de diámetro >0,15 m - 0,20 m compuesto
+          por tubo acero 88,9 mm diámetro exterior y 9,5 mm de espesor con rosca de
+          cualquier tipo de acero, ejecutado con cualquier ángulo y en cualquier terreno,
+          i/ ensayos previos y en ejecución.
+
+          Trabajo: Diurno.
+
+          Banda de mantenimiento: No necesita intervalo.
+
+          Condiciones de ejecución: Volumen escaso.
+
+          '
+        title: ' Perforación de micropilote de diámetro >0,15 m '
+        unit: m
+      OCC010abcbN:
+        code: OCC010abcbN
+        components:
+          0:
+            ent_code: MQ14000035
+            factor: 1.0
+            production_rate: 0.26
+          1:
+            ent_code: '%VOL'
+            factor: 1.0
+            production_rate: 0.2
+          2:
+            ent_code: '%CIND'
+            factor: 1.0
+            production_rate: 0.06
+        long_description: 'Lanzamiento de viga pretensada tipo T de H=80 cm i/ transporte,
+          colocación y todos los materiales y medios necesarios para la correcta ejecución
+          de la unidad de obra.
+
+          Trabajo: Nocturno.
+
+          Banda de mantenimiento:i < 3 horas.
+
+          Condiciones de ejecución: Volumen escaso.
+
+          '
+        title: ' Lanzamiento de viga pretensada tipo T H=80 cm. (N/<3/E).'
+        unit: m
+      OCH020adb:
+        code: OCH020adb
+        components:
+          0:
+            ent_code: MN01090026
+            factor: 1.0
+            production_rate: 0.5
+          1:
+            ent_code: '%VOL'
+            factor: 1.0
+            production_rate: 0.2
+          2:
+            ent_code: '%CIND'
+            factor: 1.0
+            production_rate: 0.06
+        long_description: 'Sellado de juntas y refuerzo de los solapes del geocompuestos
+          de bentonita , canaletas, con pasta de bentonita de sodio natural (proporción
+          1:4 de bentonita con agua), bentonita en polvo; incluso limpieza del soporte
+          y eliminación de arrugas, piedras y elementos sueltos.
+
+          Trabajo: Diurno.
+
+          Banda de mantenimiento: No necesita intervalo.
+
+          Condiciones de ejecución: Volumen escaso.
+
+          '
+        title: ' Sellado de juntas y refuerzo de los solapes del geocompuestos de bentonita.
+          (D/NNI/E).'
+        unit: m
+      OCH040adb:
+        code: OCH040adb
+        components:
+          0:
+            ent_code: MN05060010
+            factor: 1.0
+            production_rate: 0.5
+          1:
+            ent_code: '%VOL'
+            factor: 1.0
+            production_rate: 0.2
+          2:
+            ent_code: '%CIND'
+            factor: 1.0
+            production_rate: 0.06
+        long_description: 'Impermeabilización de junta de dilatación mediante colocacion
+          de una franja de 50 cm de ancho de geocompuesto de bentonita sódica natural
+          en polvo contenida entre geotextiles de refuerzo, y un total de 5000 g/m²
+          de bentonita en polvo con un contenido en montmorillonita aprox. 90 %, resistencia
+          a tracción compuesto de 20 kN/m long. , p.p. de solapes, herramientas, medios
+          auxiliares y limpieza del lugar de trabajo.
+
+          Trabajo: Diurno.
+
+          Banda de mantenimiento: No necesita intervalo.
+
+          Condiciones de ejecución: Volumen escaso.
+
+          '
+        title: ' Impermeabilización de junta dilatación con geocompuesto bentonita.
+          (D/NNI/E).'
+        unit: m
+      OCH050badb:
+        code: OCH050badb
+        components:
+          0:
+            ent_code: MN05010002
+            factor: 1.0
+            production_rate: 1.05
+          1:
+            ent_code: MN05010003
+            factor: 1.0
+            production_rate: 1.1
+          2:
+            ent_code: '%VOL'
+            factor: 1.0
+            production_rate: 0.2
+          3:
+            ent_code: '%CIND'
+            factor: 1.0
+            production_rate: 0.06
+        long_description: 'Impermeabilización de paramentos horizontales enterrados
+          mediante colocación de lámina bituminosa de SBS de 1.5 mm de espesor y acabada
+          en film de polietileno de alta densidad (PEAD) de 0,10 mm de espesor, mediante
+          la lámina bituminosa,  incluso imprimación previa de la superficie con un
+          consumo de 1 kg/m² de emulsión bituminosa.
+
+          Trabajo: Diurno.
+
+          Banda de mantenimiento: No necesita intervalo.
+
+          Condiciones de ejecución: Volumen escaso.
+
+          '
+        title: ' Impermeabilización lámina autoadhesiva bituminosa en frío en paramentos
+          horizontales. (D/NNI/E).'
+        unit: m²
+      OCH060adb:
+        code: OCH060adb
+        components:
+          0:
+            ent_code: MN05030005
+            factor: 1.0
+            production_rate: 1.1
+          1:
+            ent_code: '%VOL'
+            factor: 1.0
+            production_rate: 0.2
+          2:
+            ent_code: '%CIND'
+            factor: 1.0
+            production_rate: 0.06
+        long_description: 'Lámina drenante fijada en trasdós de muros y estribos formado
+          por lámina drenante de geotextil y núcleo drenante intermedio, incluso solapes.
+
+          Trabajo: Diurno.
+
+          Banda de mantenimiento: No necesita intervalo.
+
+          Condiciones de ejecución: Volumen escaso.
+
+          '
+        title: ' Lámina drenante fijada en trasdós de muros y estribo. (D/NNI/E).'
+        unit: m²
+      OCH070adb:
+        code: OCH070adb
+        components:
+          0:
+            ent_code: MN01050008
+            factor: 1.0
+            production_rate: 1.8
+          1:
+            ent_code: '%VOL'
+            factor: 1.0
+            production_rate: 0.2
+          2:
+            ent_code: '%CIND'
+            factor: 1.0
+            production_rate: 0.06
+        long_description: 'Pintado de impermeabilización de paramento con emulsión bituminosa
+          catiónica al 50% de betún, tipo ECI.
+
+          Trabajo: Diurno.
+
+          Banda de mantenimiento: No necesita intervalo.
+
+          Condiciones de ejecución: Volumen escaso.
+
+          '
+        title: ' Pintado de impermeabilización de paramento con emulsión bituminosa
+          catiónica al 50% de betún, tipo ECI. (D/NNI/E).'
+        unit: m²
+      OCH090abcb:
+        code: OCH090abcb
+        components:
+          0:
+            ent_code: MQ16030225
+            factor: 1.0
+            production_rate: 0.39
+          1:
+            ent_code: MQ0103C215
+            factor: 1.0
+            production_rate: 0.39
+          2:
+            ent_code: MQ06020200
+            factor: 1.0
+            production_rate: 0.39
+          3:
+            ent_code: MQ04010105
+            factor: 1.0
+            production_rate: 0.39
+          4:
+            ent_code: MN03020002
+            factor: 1.0
+            production_rate: 32.0
+          5:
+            ent_code: MN01092039
+            factor: 1.0
+            production_rate: 1.0
+          6:
+            ent_code: MN05050018
+            factor: 1.0
+            production_rate: 1.05
+          7:
+            ent_code: MN05050019
+            factor: 1.0
+            production_rate: 0.2
+          8:
+            ent_code: MN05050020
+            factor: 1.0
+            production_rate: 0.105
+          9:
+            ent_code: MN18000086
+            factor: 1.0
+            production_rate: 1.0
+          10:
+            ent_code: '%VOL'
+            factor: 1.0
+            production_rate: 0.2
+          11:
+            ent_code: '%CIND'
+            factor: 1.0
+            production_rate: 0.06
+        long_description: 'Sellado y protección de junta de dilatación de tableros con
+          banda de elastómero termoplástico (TPE) de 1 mm de espesor dispuesta en fuelle
+          o bucle, incluida descubierta y reposición de balasto en la amplitud necesaria
+          con desplazamiento de traviesa si fuera necesario, limpieza del soporte y
+          del interior de la junta de posibles encastramientos, sellado con banda de
+          elastómero termoplástico (TPE) de 1 mm de espesor dispuesta en fuelle o bucle
+          adherida al soporte al menos en 6 cm a cada lado de la junta con resina epoxi,
+          banda de neopreno de 100 mm de anchura y 10 mm de espesor a cada lado de junta,
+          fijación de la misma según características del soporte y chapa de acero galvanizado
+          de dimensiones mínimas de 400x10 mm anclada al soporte mediante anclajes y
+          arandelas de métrica M8 galvanizados, totalmente terminado. Incluido parte
+          proporcional de replanteo, medios auxiliares, herramientas, maquinaria, materiales
+          (banda TPE, banda de neopreno, resina epoxi, chapa y anclajes), mano de obra,
+          control y aseguramiento de la calidad.
+
+          Trabajo: Nocturno.
+
+          Banda de mantenimiento:i < 3 horas.
+
+          Condiciones de ejecución: Volumen escaso.
+
+          '
+        title: ' Sellado y protección de junta de dilatación de tablero con banda de
+          elástomero termoplástico. (N/<3/E).'
+        unit: m
+      OCH090bbcb:
+        code: OCH090bbcb
+        components:
+          0:
+            ent_code: MQ16030225
+            factor: 1.0
+            production_rate: 0.39
+          1:
+            ent_code: MQ0103C215
+            factor: 1.0
+            production_rate: 0.39
+          2:
+            ent_code: MQ06020200
+            factor: 1.0
+            production_rate: 0.39
+          3:
+            ent_code: MQ04010105
+            factor: 1.0
+            production_rate: 0.39
+          4:
+            ent_code: MN05050019
+            factor: 1.0
+            production_rate: 0.7
+          5:
+            ent_code: MN05050022
+            factor: 1.0
+            production_rate: 1.1
+          6:
+            ent_code: MN01142003
+            factor: 1.0
+            production_rate: 0.01
+          7:
+            ent_code: '%VOL'
+            factor: 1.0
+            production_rate: 0.2
+          8:
+            ent_code: '%CIND'
+            factor: 1.0
+            production_rate: 0.06
+        long_description: 'Sellado y protección de junta de dilatación de tablero con
+          abertura hasta 3,75 cm con fondo de junta de espuma de polietileno de célula
+          cerrada de sección circular y masilla de poliuretano; incluida  descubierta
+          y reposición de balasto en la amplitud necesaria con desplazamiento de traviesa
+          si fuera necesario, limpieza del soporte y del interior de la junta de posibles  encastramientos,
+          masilla de poliuretano bicomponente, imprimación de poliuretano de los labios
+          de la junta. banda de neopreno de 100 mm de anchura y 10 mm de espesor a cada
+          lado de junta, fijación de la misma según características del soporte y chapa
+          de acero galvanizado de dimensiones mínimas de 400x10 mm anclada al soporte
+          mediante anclajes y arandelas de métrica M8 galvanizados, totalmente terminado.
+          Incluido parte proporcional de replanteo, medios auxiliares, herramientas,
+          maquinaria, materiales (imprimación, masilla y fondo de junta, chapa y anclajes),
+          mano de obra, control y aseguramiento de la calidad.
+
+          Trabajo: Nocturno.
+
+          Banda de mantenimiento:i < 3 horas.
+
+          Condiciones de ejecución: Volumen escaso.
+
+          '
+        title: ' Sellado y protección de junta de dilatación de tablero con fondo de
+          junta. (N/<3/E).'
+        unit: m
+      OCH090cbcb:
+        code: OCH090cbcb
+        components:
+          0:
+            ent_code: MQ16030225
+            factor: 1.0
+            production_rate: 0.26
+          1:
+            ent_code: MQ0103C215
+            factor: 1.0
+            production_rate: 0.26
+          2:
+            ent_code: MN05050019
+            factor: 1.0
+            production_rate: 0.7
+          3:
+            ent_code: MN05050022
+            factor: 1.0
+            production_rate: 1.1
+          4:
+            ent_code: MN01142003
+            factor: 1.0
+            production_rate: 0.01
+          5:
+            ent_code: '%VOL'
+            factor: 1.0
+            production_rate: 0.2
+          6:
+            ent_code: '%CIND'
+            factor: 1.0
+            production_rate: 0.06
+        long_description: 'Sellado de junta de dilatación desde parte inferior de tablero
+          con abertura hasta 3,75 cm., con fondo de junta de espuma de polietileno de
+          célula cerrada de sección circular y masilla de poliuretano; incluido limpieza
+          del soporte y del interior de la junta de posibles encastramientos, masilla
+          de poliuretano bicomponente, imprimación de poliuretano de los labios de la
+          junta, totalmente terminado.  Incluido parte proporcional de replanteo, medios
+          auxiliares, herramientas, maquinaria, materiales (imprimación, masilla y fondo
+          de junta), mano de obra, control y aseguramiento de la calidad.
+
+          Trabajo: Nocturno.
+
+          Banda de mantenimiento:i < 3 horas.
+
+          Condiciones de ejecución: Volumen escaso.
+
+          '
+        title: ' Sellado de junta de dilatación desde parte inferior de tablero. (N/<3/E).'
+        unit: m
+      OCI010aadb:
+        code: OCI010aadb
+        components:
+          0:
+            ent_code: MN05050008
+            factor: 1.0
+            production_rate: 0.6
+          1:
+            ent_code: MN01090002
+            factor: 1.0
+            production_rate: 0.2
+          2:
+            ent_code: '%VOL'
+            factor: 1.0
+            production_rate: 0.2
+          3:
+            ent_code: '%CIND'
+            factor: 1.0
+            production_rate: 0.06
+        long_description: 'Junta nueva de sellado con poliestireno expandido, corte
+          y demolición de ancho en zona ocupada por la junta i/ elementos de fijación
+          y sellado con resina epoxi enrasado con el pavimento.
+
+          Trabajo: Diurno.
+
+          Banda de mantenimiento: No necesita intervalo.
+
+          Condiciones de ejecución: Volumen escaso.
+
+          '
+        title: ' Junta nueva de sellado. (D/NNI/E).'
+        unit: m
+      OCJ010bcb:
+        code: OCJ010bcb
+        components:
+          0:
+            ent_code: MQ06020100
+            factor: 1.0
+            production_rate: 0.65
+          1:
+            ent_code: MN10020001
+            factor: 1.0
+            production_rate: 6.0
+          2:
+            ent_code: MN10020004
+            factor: 1.0
+            production_rate: 4.0
+          3:
+            ent_code: MN10020005
+            factor: 1.0
+            production_rate: 4.0
+          4:
+            ent_code: MN10020006
+            factor: 1.0
+            production_rate: 4.0
+          5:
+            ent_code: MN10020007
+            factor: 1.0
+            production_rate: 4.0
+          6:
+            ent_code: MN10030006
+            factor: 1.0
+            production_rate: 4.0
+          7:
+            ent_code: MN10030003
+            factor: 1.0
+            production_rate: 2.0
+          8:
+            ent_code: MN10030004
+            factor: 1.0
+            production_rate: 2.0
+          9:
+            ent_code: MN09050002
+            factor: 1.0
+            production_rate: 1.0
+          10:
+            ent_code: MN19000291
+            factor: 1.0
+            production_rate: 95.0
+          11:
+            ent_code: MN10030009
+            factor: 1.0
+            production_rate: 1.0
+          12:
+            ent_code: '%VOL'
+            factor: 1.0
+            production_rate: 0.2
+          13:
+            ent_code: '%CIND'
+            factor: 1.0
+            production_rate: 0.06
+        long_description: 'Conexión para puesta a tierra de armaduras y de elementos
+          metálicos del tablero en pasos elevados sobre el ferrocarril.
+
+          Trabajo: Nocturno.
+
+          Banda de mantenimiento: i < 3 horas.
+
+          Condiciones de ejecución: Volumen escaso.
+
+          '
+        title: ' Conexión para puesta a tierra de armaduras y de elementos metálicos
+          en pasos elevados sobre el ferrocarril. (N/<3/E).'
+        unit: ud
+      OCK010bcb:
+        code: OCK010bcb
+        components:
+          0:
+            ent_code: MQ14000000
+            factor: 1.0
+            production_rate: 0.65
+          1:
+            ent_code: MN06020001
+            factor: 1.0
+            production_rate: 1.0
+          2:
+            ent_code: AU10100001
+            factor: 1.0
+            production_rate: 0.09
+          3:
+            ent_code: '%VOL'
+            factor: 1.0
+            production_rate: 0.2
+          4:
+            ent_code: '%CIND'
+            factor: 1.0
+            production_rate: 0.06
+        long_description: 'Imposta prefabricada en viaductos ferroviarios.
+
+          Trabajo: Nocturno.
+
+          Banda de mantenimiento: i < 3 horas.
+
+          Condiciones de ejecución: Volumen escaso.
+
+          '
+        title: ' Imposta prefabricada en viaductos ferroviarios. (N/<3/E).'
+        unit: m
+      OCK040adb:
+        code: OCK040adb
+        components:
+          0:
+            ent_code: MQ11020020
+            factor: 1.0
+            production_rate: 0.16
+          1:
+            ent_code: MN01070001
+            factor: 1.0
+            production_rate: 0.002
+          2:
+            ent_code: MN01110002
+            factor: 1.0
+            production_rate: 0.3
+          3:
+            ent_code: MN03020000
+            factor: 1.0
+            production_rate: 24.43
+          4:
+            ent_code: MN01100061
+            factor: 1.0
+            production_rate: 1.0
+          5:
+            ent_code: MN03020300
+            factor: 1.0
+            production_rate: 1.0
+          6:
+            ent_code: '%VOL'
+            factor: 1.0
+            production_rate: 0.2
+          7:
+            ent_code: '%CIND'
+            factor: 1.0
+            production_rate: 0.06
+        long_description: 'Barandilla metálica galvanizada en viaducto de ferrocarril,
+          formada por perfil tubular de 100 mm de diámetro y espesor 4-6 mm, perfil
+          IPN-100 cada 2,00 m y 3 perfiles tubulares de 50 mm de diámetro y 3 mm de
+          espesor (según detalle) ejecutada con acero S 275 JR en perfiles laminados
+          o plancha, cortado a medida recibida mediante placa de reparto y acero para
+          armaduras B 500 S de límite elástico 5100 kp/cm² elaborado y mortero seco
+          de cemento 1:4 con aditivos plastificantes i/ imprimación antioxidante y doble
+          capa de pintura.(Según NAP 2-0-0.1 Puentes y Viaductos).
+
+          Trabajo: Diurno.
+
+          Banda de mantenimiento: No necesita intervalo.
+
+          Condiciones de ejecución: Volumen escaso.
+
+          '
+        title: ' Barandilla metálica en viaducto de ferrocarril. (D/NNI/E).'
+        unit: m
+      OCK050adb:
+        code: OCK050adb
+        components:
+          0:
+            ent_code: MQ14000000
+            factor: 1.0
+            production_rate: 0.015
+          1:
+            ent_code: MQ11020020
+            factor: 1.0
+            production_rate: 0.2
+          2:
+            ent_code: MN04020005
+            factor: 1.0
+            production_rate: 2.52
+          3:
+            ent_code: MN03020002
+            factor: 1.0
+            production_rate: 31.71
+          4:
+            ent_code: MN03020100
+            factor: 1.0
+            production_rate: 1.74
+          5:
+            ent_code: MN01100084
+            factor: 1.0
+            production_rate: 42.0
+          6:
+            ent_code: MN08080001
+            factor: 1.0
+            production_rate: 2.7
+          7:
+            ent_code: '%VOL'
+            factor: 1.0
+            production_rate: 0.2
+          8:
+            ent_code: '%CIND'
+            factor: 1.0
+            production_rate: 0.06
+        long_description: 'Módulo de cerramiento de 1,80 x 2,50 m de protección antivandalismo
+          en pasos superiores.
+
+          Trabajo: Diurno.
+
+          Banda de mantenimiento: No necesita intervalo.
+
+          Condiciones de ejecución: Volumen escaso.
+
+          '
+        title: ' Módulo de cerramiento de 1,80 x 2,50 m de protección antivandalismo
+          en pasos superiores. (D/NNI/E).'
+        unit: ud
+      OHA010aaadb:
+        code: OHA010aaadb
+        components:
+          0:
+            ent_code: MQ08060010
+            factor: 1.0
+            production_rate: 0.065
+          1:
+            ent_code: MQ08070200
+            factor: 1.0
+            production_rate: 0.04
+          2:
+            ent_code: MQ08110010
+            factor: 1.0
+            production_rate: 0.08
+          3:
+            ent_code: MQ0103C000
+            factor: 1.0
+            production_rate: 0.04
+          4:
+            ent_code: MQ0100A030
+            factor: 1.0
+            production_rate: 0.04
+          5:
+            ent_code: MN01060004
+            factor: 1.0
+            production_rate: 1.05
+          6:
+            ent_code: '%VOL'
+            factor: 1.0
+            production_rate: 0.2
+          7:
+            ent_code: '%CIND'
+            factor: 1.0
+            production_rate: 0.06
+        long_description: 'Hormigón en masa HM-20, de cualquier consistencia y tamaño
+          máximo de árido 20 mm, colocado en exterior, con grúa o bomba de hormigonado,
+          incluso vibrado, vigilancia y protección del hormigón según instrucción de
+          hormigón estructural vigente, maquinaria, herramientas y medios auxiliares
+          necesarios.
+
+          Trabajo: Diurno.
+
+          Banda de mantenimiento: No necesita intervalo
+
+          Condiciones de ejecución:Volumen escaso.
+
+          '
+        title: ' Hormigón en masa HM'
+        unit: m³
+      OHA020aaadb:
+        code: OHA020aaadb
+        components:
+          0:
+            ent_code: MQ08060010
+            factor: 1.0
+            production_rate: 0.065
+          1:
+            ent_code: MQ08070200
+            factor: 1.0
+            production_rate: 0.04
+          2:
+            ent_code: MQ08110010
+            factor: 1.0
+            production_rate: 0.12
+          3:
+            ent_code: MQ0103C000
+            factor: 1.0
+            production_rate: 0.04
+          4:
+            ent_code: MQ0100A030
+            factor: 1.0
+            production_rate: 0.04
+          5:
+            ent_code: MN01060100
+            factor: 1.0
+            production_rate: 1.05
+          6:
+            ent_code: '%VOL'
+            factor: 1.0
+            production_rate: 0.2
+          7:
+            ent_code: '%CIND'
+            factor: 1.0
+            production_rate: 0.06
+        long_description: 'Hormigón para armar o pretensar HA-25 o HP-25, elaborado
+          en central fija o móvil, de cualquier consistencia y tamaño máximo de árido
+          20 mm, colocado en exterior, con grúa o bomba de hormigonado, incluso vibrado,
+          vigilancia y protección del hormigón según instrucción de hormigón estructural
+          vigente, maquinaria, herramientas y medios auxiliares necesarios.
+
+          Trabajo: Diurno.
+
+          Banda de mantenimiento: No necesita intervalo.
+
+          Condiciones de ejecución: Volumen escaso.
+
+          '
+        title: ' Hormigón para armar o pretensar HA'
+        unit: m³
+      OHA020daadb:
+        code: OHA020daadb
+        components:
+          0:
+            ent_code: MQ08060010
+            factor: 1.0
+            production_rate: 0.065
+          1:
+            ent_code: MQ08070200
+            factor: 1.0
+            production_rate: 0.04
+          2:
+            ent_code: MQ08110010
+            factor: 1.0
+            production_rate: 0.12
+          3:
+            ent_code: MQ0103C000
+            factor: 1.0
+            production_rate: 0.04
+          4:
+            ent_code: MQ0100A030
+            factor: 1.0
+            production_rate: 0.04
+          5:
+            ent_code: MN01060400
+            factor: 1.0
+            production_rate: 1.05
+          6:
+            ent_code: '%VOL'
+            factor: 1.0
+            production_rate: 0.2
+          7:
+            ent_code: '%CIND'
+            factor: 1.0
+            production_rate: 0.06
+        long_description: 'Hormigón para armar o pretensar HA-40 o HP-40, elaborado
+          en central fija o móvil, de cualquier consistencia y tamaño máximo de árido
+          20 mm, colocado en exterior, con grúa o bomba de hormigonado, incluso vibrado,
+          vigilancia y protección del hormigón según instrucción de hormigón estructural
+          vigente, maquinaria, herramientas y medios auxiliares necesarios.
+
+          Trabajo: Diurno.
+
+          Banda de mantenimiento: No necesita intervalo.
+
+          Condiciones de ejecución: Volumen escaso.
+
+          '
+        title: ' Hormigón para armar o pretensar HA'
+        unit: m³
+      OHB010baadb:
+        code: OHB010baadb
+        components:
+          0:
+            ent_code: MN01110002
+            factor: 1.0
+            production_rate: 1.03
+          1:
+            ent_code: MN01100600
+            factor: 1.0
+            production_rate: 0.06
+          2:
+            ent_code: MN01100002
+            factor: 1.0
+            production_rate: 0.01
+          3:
+            ent_code: '%VOL'
+            factor: 1.0
+            production_rate: 0.2
+          4:
+            ent_code: '%CIND'
+            factor: 1.0
+            production_rate: 0.06
+        long_description: 'Acero corrugado B 500, colocado en elementos horizontales,
+          incluso p.p. de cortes, despuntes, alambre de atar y separadores, terminado.
+
+          Trabajo: Diurno
+
+          Banda de mantenimiento:No necesita intervalo
+
+          Condiciones de ejecución: Volumen escaso
+
+          '
+        title: ' Acero corrugado B 500, colocado en elementos horizontales. (D/NNI/E).'
+        unit: kg
+      OHB010bbadb:
+        code: OHB010bbadb
+        components:
+          0:
+            ent_code: MQ14000000
+            factor: 1.0
+            production_rate: 0.001
+          1:
+            ent_code: MN01110002
+            factor: 1.0
+            production_rate: 1.03
+          2:
+            ent_code: MN01100600
+            factor: 1.0
+            production_rate: 0.06
+          3:
+            ent_code: MN01100002
+            factor: 1.0
+            production_rate: 0.01
+          4:
+            ent_code: '%VOL'
+            factor: 1.0
+            production_rate: 0.2
+          5:
+            ent_code: '%CIND'
+            factor: 1.0
+            production_rate: 0.06
+        long_description: 'Acero corrugado B 500, colocado en elementos verticales,
+          incluso p.p. de cortes, despuntes, alambre de atar y separadores, terminado.
+
+          Trabajo: Diurno
+
+          Banda de mantenimiento:No necesita intervalo
+
+          Condiciones de ejecución: Volumen escaso
+
+          '
+        title: ' Acero corrugado B 500, colocado en elementos verticales. (D/NNI/E).'
+        unit: kg
+      OHB050adb:
+        code: OHB050adb
+        components:
+          0:
+            ent_code: MQ14000000
+            factor: 1.0
+            production_rate: 0.001
+          1:
+            ent_code: MQ03070205
+            factor: 1.0
+            production_rate: 0.003
+          2:
+            ent_code: MQ03060100
+            factor: 1.0
+            production_rate: 0.003
+          3:
+            ent_code: MQ03070210
+            factor: 1.0
+            production_rate: 0.003
+          4:
+            ent_code: MQ16020100
+            factor: 1.0
+            production_rate: 0.003
+          5:
+            ent_code: MN01050012
+            factor: 1.0
+            production_rate: 5.0
+          6:
+            ent_code: MN01100002
+            factor: 1.0
+            production_rate: 0.02
+          7:
+            ent_code: MN01100070
+            factor: 1.0
+            production_rate: 0.005
+          8:
+            ent_code: MN01100071
+            factor: 1.0
+            production_rate: 0.005
+          9:
+            ent_code: MN01100095
+            factor: 1.0
+            production_rate: 0.2
+          10:
+            ent_code: MN01110500
+            factor: 1.0
+            production_rate: 1.05
+          11:
+            ent_code: MN01110002
+            factor: 1.0
+            production_rate: 0.05
+          12:
+            ent_code: '%VOL'
+            factor: 1.0
+            production_rate: 0.2
+          13:
+            ent_code: '%CIND'
+            factor: 1.0
+            production_rate: 0.06
+        long_description: 'Acero especial en cordones para pretensar i/ vainas y todos
+          los accesorios necesarios, los anclajes activo y pasivo, acopladores, todas
+          las operaciones y equipos de tesado, las operaciones y equipos de inyección,
+          el sellado de cajetines.
+
+          Trabajo: Diurno.
+
+          Banda de mantenimiento: No necesita intervalo.
+
+          Condiciones de ejecución: Volumen escaso.
+
+          '
+        title: ' Acero especial en cordones para pretensar.'
+        unit: kg
+      OHC010aaadb:
+        code: OHC010aaadb
+        components:
+          0:
+            ent_code: MQ14000000
+            factor: 1.0
+            production_rate: 0.0125
+          1:
+            ent_code: MN01120001
+            factor: 1.0
+            production_rate: 3.0
+          2:
+            ent_code: MN01120005
+            factor: 1.0
+            production_rate: 3.0
+          3:
+            ent_code: MN01120003
+            factor: 1.0
+            production_rate: 1.0
+          4:
+            ent_code: MN01120013
+            factor: 1.0
+            production_rate: 0.075
+          5:
+            ent_code: MN01120011
+            factor: 1.0
+            production_rate: 0.4
+          6:
+            ent_code: '%VOL'
+            factor: 1.0
+            production_rate: 0.2
+          7:
+            ent_code: '%CIND'
+            factor: 1.0
+            production_rate: 0.06
+        long_description: 'Encofrado plano en paramento oculto, incluso posterior desencofrado
+          i/ limpieza, humedecido, aplicación de desencofrante, p.p. de elementos complementarios
+          para su estabilidad y adecuada ejecución.
+
+          Trabajo: Diurno.
+
+          Banda de mantenimiento: No necesita intervalo.
+
+          Condiciones de ejecución: Volumen escaso.
+
+          '
+        title: ' Encofrado plano en paramento oculto. (D/NNI/E).'
+        unit: m²
+      OHC010baadb:
+        code: OHC010baadb
+        components:
+          0:
+            ent_code: MQ14000000
+            factor: 1.0
+            production_rate: 0.0125
+          1:
+            ent_code: MN01120001
+            factor: 1.0
+            production_rate: 3.0
+          2:
+            ent_code: MN01120005
+            factor: 1.0
+            production_rate: 3.0
+          3:
+            ent_code: MN01120004
+            factor: 1.0
+            production_rate: 1.0
+          4:
+            ent_code: MN01120013
+            factor: 1.0
+            production_rate: 0.075
+          5:
+            ent_code: MN01120011
+            factor: 1.0
+            production_rate: 0.4
+          6:
+            ent_code: '%VOL'
+            factor: 1.0
+            production_rate: 0.2
+          7:
+            ent_code: '%CIND'
+            factor: 1.0
+            production_rate: 0.06
+        long_description: 'Encofrado plano en paramento visto, incluso posterior desencofrado
+          i/ limpieza, humedecido, aplicación de desencofrante, p.p. de elementos complementarios
+          para su estabilidad y adecuada ejecución.
+
+          Trabajo: Diurno.
+
+          Banda de mantenimiento: No necesita intervalo.
+
+          Condiciones de ejecución: Volumen escaso.
+
+          '
+        title: ' Encofrado plano en paramento visto. (D/NNI/E).'
+        unit: m²
+      PBA010a:
+        code: PBA010a
+        components:
+          0:
+            ent_code: MN14020012
+            factor: 1.0
+            production_rate: 1.0
+          1:
+            ent_code: '%CIND'
+            factor: 1.0
+            production_rate: 0.06
+        long_description: 'Redacción de "Proyecto e informe de prueba de carga" describiendo
+          los medios empleados y los resultados obtenidos i/la realización de los cálculos
+          y la definición de los planos que se considere necesario, en puente isostático
+          .
+
+          '
+        title: ' Redacción de "Proyecto e informe de prueba de carga" en puente isostático.'
+        unit: ud
+      PBA020aa:
+        code: PBA020aa
+        components:
+          0:
+            ent_code: MN14020003
+            factor: 1.0
+            production_rate: 1.0
+          1:
+            ent_code: '%CIND'
+            factor: 1.0
+            production_rate: 0.06
+        long_description: 'Realización de prueba de carga en puente isostático de un
+          vano <= 20 m o en el primer vano de un puente de varios vanos isostáticos
+          de luces <= 20 m.
+
+          '
+        title: ' Realización de prueba de carga en puente isostático de un vano <= 20
+          m o en el primer vano de un puente de varios vanos isostáticos de luces <=
+          20 m.'
+        unit: ud
+      SAA010b:
+        code: SAA010b
+        components:
+          0:
+            ent_code: MN16010102
+            factor: 1.0
+            production_rate: 1.0
+          1:
+            ent_code: '%CIND'
+            factor: 1.0
+            production_rate: 0.06
+        long_description: 'Casco de seguridad con arnés de cabeza ajustable por medio
+          de rueda dentada, para uso normal y eléctrico hasta 440 V.. Según R.D. 773/97
+          y R.D. 1407/92. Equipo de Protección Individual (EPI) con marcado de conformidad
+          CE.
+
+          '
+        title: ' Casco de seguridad ajustable rueda.'
+        unit: ud
+      SAA020c:
+        code: SAA020c
+        components:
+          0:
+            ent_code: MN16010108
+            factor: 1.0
+            production_rate: 1.0
+          1:
+            ent_code: '%CIND'
+            factor: 1.0
+            production_rate: 0.06
+        long_description: 'Pantalla de seguridad para soldador de poliamida y cristal
+          de 110x55 mm + casco con arnés de cabeza ajustable con rueda dentada. Según
+          UNE-EN 175, UNE-EN 379. Según R.D. 773/97 y R.D. 1407/92. Equipo de Protección
+          Individual (EPI) con marcado de conformidad CE.
+
+          '
+        title: ' Pantalla+casco seguridad soldar.'
+        unit: ud
+      SAA030d:
+        code: SAA030d
+        components:
+          0:
+            ent_code: MN16010113
+            factor: 1.0
+            production_rate: 1.0
+          1:
+            ent_code: '%CIND'
+            factor: 1.0
+            production_rate: 0.06
+        long_description: 'Gafas antipolvo antiempañables, panorámicas. Según UNE-EN
+          172. Según R.D. 773/97 y R.D. 1407/92. Equipo de Protección Individual (EPI)
+          con marcado de conformidad CE.
+
+          '
+        title: ' Gafas antipolvo.'
+        unit: ud
+      SAA070:
+        code: SAA070
+        components:
+          0:
+            ent_code: MN16010116
+            factor: 1.0
+            production_rate: 1.0
+          1:
+            ent_code: '%CIND'
+            factor: 1.0
+            production_rate: 0.06
+        long_description: 'Mascarilla de celulosa desechable para trabajos en ambiente
+          con polvo y humos. Según Según UNE-EN 136, R.D. 773/97 y R.D. 1407/92. Equipo
+          de protección individual (EPI) con marcado de conformidad CE.
+
+          '
+        title: ' MASCARILLA CELULOSA DESECHABLE'
+        unit: ud
+      SAB020a:
+        code: SAB020a
+        components:
+          0:
+            ent_code: MN16010224
+            factor: 1.0
+            production_rate: 1.0
+          1:
+            ent_code: '%CIND'
+            factor: 1.0
+            production_rate: 0.06
+        long_description: 'Conjunto de lluvia alta visibilidad compuesto por pantalón
+          y chaqueta. Ambos con tiras retroreflejantes microburbujas termoselladas,
+          color plata, 50 mm, montaje paralelo. Según UNE-EN 471, UNE-EN 343   y R.D.
+          773/97. Equipo de Protección Individual (EPI) con marcado de conformidad CE.
+
+          '
+        title: ' Conjunto lluvia alta visibilidad.'
+        unit: ud
+      SAB030c:
+        code: SAB030c
+        components:
+          0:
+            ent_code: MN16010218
+            factor: 1.0
+            production_rate: 1.0
+          1:
+            ent_code: '%CIND'
+            factor: 1.0
+            production_rate: 0.06
+        long_description: 'Chaleco de obras con bandas reflectantes. Según UNE-EN 471,
+          R.D. 773/97 y R.D. 1407/92. Equipo de Protección Individual (EPI) con marcado
+          de conformidad CE.
+
+          '
+        title: ' Chaleco de obras con bandas reflectantes.'
+        unit: ud
+      SAB040d:
+        code: SAB040d
+        components:
+          0:
+            ent_code: MN16010207
+            factor: 1.0
+            production_rate: 1.0
+          1:
+            ent_code: '%CIND'
+            factor: 1.0
+            production_rate: 0.06
+        long_description: 'Mono de trabajo de una pieza de poliéster-algodón. Según
+          UNE-EN 340, R.D. 773/97 y R.D. 1407/92. Equipo de Protección Individual (EPI)
+          con marcado de conformidad CE.
+
+          '
+        title: ' Mono de trabajo poliéster'
+        unit: ud
+      SAB080:
+        code: SAB080
+        components:
+          0:
+            ent_code: MN16010203
+            factor: 1.0
+            production_rate: 1.0
+          1:
+            ent_code: '%CIND'
+            factor: 1.0
+            production_rate: 0.06
+        long_description: 'Cinturón portaherramientas. Según R.D. 773/97 y R.D. 1407/92.
+          Equipo de protección individual (EPI) con marcado de conformidad CE.
+
+          '
+        title: ' CINTURÓN PORTAHERRAMIENTAS'
+        unit: ud
+      SAB100:
+        code: SAB100
+        components:
+          0:
+            ent_code: MN16010225
+            factor: 1.0
+            production_rate: 1.0
+          1:
+            ent_code: '%CIND'
+            factor: 1.0
+            production_rate: 0.06
+        long_description: 'Cinturón antivibratorio. Según R.D. 773/97 y R.D. 1407/92.
+          Equipo de protección individual (EPI) con marcado de conformidad CE.
+
+          '
+        title: ' CINTURÓN ANTIVIBRATORIO'
+        unit: ud
+      SAC010g:
+        code: SAC010g
+        components:
+          0:
+            ent_code: MN16010307
+            factor: 1.0
+            production_rate: 1.0
+          1:
+            ent_code: '%CIND'
+            factor: 1.0
+            production_rate: 0.06
+        long_description: 'Par de guantes de uso general de lona y serraje . Según UNE-EN
+          420, UNE-EN 388.Según R.D. 773/97 y R.D. 1407/92. Equipo de Protección Individual
+          (EPI) con marcado de conformidad CE.
+
+          '
+        title: ' Par de guantes de uso general de lona y serraje.'
+        unit: ud
+      SAC040:
+        code: SAC040
+        components:
+          0:
+            ent_code: MN16010317
+            factor: 1.0
+            production_rate: 1.0
+          1:
+            ent_code: '%CIND'
+            factor: 1.0
+            production_rate: 0.06
+        long_description: 'Par de manguitos reflectantes. Según Según UNE-EN 60984 y
+          R.D. 773/97. Equipo de protección individual (EPI) con marcado de conformidad
+          CE.
+
+          '
+        title: ' PAR MANGUITOS REFLECTANTES'
+        unit: ud
+      SAD010g:
+        code: SAD010g
+        components:
+          0:
+            ent_code: MN16010407
+            factor: 1.0
+            production_rate: 1.0
+          1:
+            ent_code: '%CIND'
+            factor: 1.0
+            production_rate: 0.06
+        long_description: 'Par de botas de seguridad para electricista hasta 5000 V
+          de tensión. Según UNE-EN ISO 20345, UNE-EN ISO 20346, UNE-EN ISO 20347. Según
+          R.D. 773/97 y R.D. 1407/92. Equipo de Protección Individual (EPI) con marcado
+          de conformidad CE.
+
+          '
+        title: ' Par de botas de seguridad.'
+        unit: ud
+      SAE080c:
+        code: SAE080c
+        components:
+          0:
+            ent_code: MN16010583
+            factor: 1.0
+            production_rate: 0.2
+          1:
+            ent_code: '%CIND'
+            factor: 1.0
+            production_rate: 0.06
+        long_description: 'Equipo completo para trabajos en vertical y horizontal compuesto
+          por un arnés de seguridad con amarre dorsal y pectoral, fabricado con cinta
+          de nailon de 45 mm y elementos metálicos de acero inoxidable, un dispositivo
+          anticaídas deslizante de doble función y un rollo de cuerda poliamida de 14
+          mm de 2 m con lazada, incluso bolsa portaequipo. Según UNE-EN 360, UNE-EN
+          ISO 1140, UNE-EN 353-2, R.D. 773/97 y R.D. 1407/92. Equipo de Protección Individual
+          (EPI) con marcado de conformidad CE. (amortizable en 5 usos)
+
+          '
+        title: ' Equipo completo para trabajo vertical y horizontal.'
+        unit: ud
+      SBA010a:
+        code: SBA010a
+        components:
+          0:
+            ent_code: MOC0000100
+            factor: 1.0
+            production_rate: 0.015
+          1:
+            ent_code: MOC0000200
+            factor: 1.0
+            production_rate: 0.15
+          2:
+            ent_code: MOC0000500
+            factor: 1.0
+            production_rate: 0.15
+          3:
+            ent_code: MN16020303
+            factor: 1.0
+            production_rate: 0.065
+          4:
+            ent_code: MN16020309
+            factor: 1.0
+            production_rate: 0.003
+          5:
+            ent_code: MN16020330
+            factor: 1.0
+            production_rate: 0.24
+          6:
+            ent_code: '%CIND'
+            factor: 1.0
+            production_rate: 0.06
+        long_description: 'Barandilla de protección de perímetros de forjados, compuesta
+          por guardacuerpos metálico cada 2,50 m (amortizable en 8 usos), fijado por
+          apriete al forjado, pasamanos y travesaño intermedio formado por tubo 50 mm
+          (amortizable en 10 usos), pintado en amarillo y negro, y rodapié de 15x5 cm
+          (amortizable en 3 usos), según norma UNE-EN 13374, incluso colocación y desmontaje
+          , según R.D. 486/97 y R.D. 1627/97
+
+          '
+        title: ' Barandilla de protección guardacuerpos metálicos (tubo 50 mm). Apriete
+          a forjado.'
+        unit: m
+      SBA010b:
+        code: SBA010b
+        components:
+          0:
+            ent_code: MOC0000100
+            factor: 1.0
+            production_rate: 0.03
+          1:
+            ent_code: MOC0000500
+            factor: 1.0
+            production_rate: 0.3
+          2:
+            ent_code: MN16020303
+            factor: 1.0
+            production_rate: 0.065
+          3:
+            ent_code: MN16020309
+            factor: 1.0
+            production_rate: 0.003
+          4:
+            ent_code: MN16020330
+            factor: 1.0
+            production_rate: 0.24
+          5:
+            ent_code: MN16020333
+            factor: 1.0
+            production_rate: 0.33
+          6:
+            ent_code: '%CIND'
+            factor: 1.0
+            production_rate: 0.06
+        long_description: 'Barandilla de protección de perímetros de forjados, compuesta
+          por guardacuerpos metálico cada 2,50 m (amortizable en 8 usos), anclados mediante
+          cápsulas de plástico embebidas en el forjado, pasamanos y travesaño intermedio
+          formado por tubo 50 mm (amortizable en 10 usos), pintado en amarillo, y rodapié
+          de 15x5 cm (amortizable en 3 usos), según norma UNE-EN 13374, incluso colocación
+          y desmontaje , según R.D. 486/97 y R.D. 1627/97
+
+          '
+        title: ' Barandilla de protección guardacuerpos metálicos (tubo 50 mm). Embebido
+          forjado.'
+        unit: m
+      SBA010f:
+        code: SBA010f
+        components:
+          0:
+            ent_code: MOC0000100
+            factor: 1.0
+            production_rate: 0.01
+          1:
+            ent_code: MOC0000200
+            factor: 1.0
+            production_rate: 0.1
+          2:
+            ent_code: MOC0000500
+            factor: 1.0
+            production_rate: 0.1
+          3:
+            ent_code: MN16020307
+            factor: 1.0
+            production_rate: 0.011
+          4:
+            ent_code: MN16020328
+            factor: 1.0
+            production_rate: 0.667
+          5:
+            ent_code: '%CIND'
+            factor: 1.0
+            production_rate: 0.06
+        long_description: 'Barandilla de protección lateral de zanjas, formada por tres
+          tabloncillos de madera de pino de 20x7 cm y estaquillas de madera de D=8 cm
+          hincadas en el terreno cada 1,00 m (amortizable en 3 usos), incluso colocación
+          y desmontaje , según R.D. 486/97 y R.D. 1627/97
+
+          '
+        title: ' Barandilla de protección protección lateral zanjas.'
+        unit: m
+      SBA040a:
+        code: SBA040a
+        components:
+          0:
+            ent_code: MOC0000100
+            factor: 1.0
+            production_rate: 0.01
+          1:
+            ent_code: MOC0000500
+            factor: 1.0
+            production_rate: 0.1
+          2:
+            ent_code: MN16020310
+            factor: 1.0
+            production_rate: 1.0
+          3:
+            ent_code: '%CIND'
+            factor: 1.0
+            production_rate: 0.06
+        long_description: 'Valla de contención de peatones, metálica, prolongable de
+          2,50 m de largo y 1,00 m de altura, color amarillo (amortizable para 20 usos),
+          incluso montaje y desmontaje, según R.D. 486/97 y R.D. 1627/97.
+
+          '
+        title: ' Valla contención de peatones.'
+        unit: ud
+      SBA060a:
+        code: SBA060a
+        components:
+          0:
+            ent_code: MOC0000100
+            factor: 1.0
+            production_rate: 0.005
+          1:
+            ent_code: MOC0000600
+            factor: 1.0
+            production_rate: 0.05
+          2:
+            ent_code: MOC0000500
+            factor: 1.0
+            production_rate: 0.05
+          3:
+            ent_code: MN16020322
+            factor: 1.0
+            production_rate: 1.0
+          4:
+            ent_code: '%CIND'
+            factor: 1.0
+            production_rate: 0.06
+        long_description: 'Puerta de acceso peatonal de chapa galvanizada de 1,00x2,00
+          m para colocación en valla de cerramiento de las mismas características, incluso
+          montaje y desmontaje, según R.D. 486/97 y R.D. 1627/97 (amortizable en 5 usos).
+
+          '
+        title: ' Puerta de acceso peatonal chapa 1,00x2,00 m.'
+        unit: ud
+      SBA070b:
+        code: SBA070b
+        components:
+          0:
+            ent_code: MOC0000100
+            factor: 1.0
+            production_rate: 0.005
+          1:
+            ent_code: MOC0000600
+            factor: 1.0
+            production_rate: 0.05
+          2:
+            ent_code: MOC0000500
+            factor: 1.0
+            production_rate: 0.05
+          3:
+            ent_code: MN16020314
+            factor: 1.0
+            production_rate: 1.0
+          4:
+            ent_code: '%CIND'
+            factor: 1.0
+            production_rate: 0.06
+        long_description: 'Alquiler m/mes de valla realizada con paneles prefabricados
+          de 3,50x2,00 m de altura, enrejados de 80x150 mm y D=8 mm de espesor, soldado
+          a tubos de D=40 mm y 1,50 mm de espesor, todo ello galvanizado en caliente,
+          sobre soporte de hormigón prefabricado de 230x600x150 mm, separados cada 3,50
+          m, incluso accesorios de fijación, p.p. de portón , incluso montaje y desmontaje,
+          según R.D. 486/97 y R.D. 1627/97.
+
+          '
+        title: ' Alquiler valla de enrejado galvanizado.'
+        unit: m
+      SBA080:
+        code: SBA080
+        components:
+          0:
+            ent_code: MOC0000100
+            factor: 1.0
+            production_rate: 0.01
+          1:
+            ent_code: MOC0000500
+            factor: 1.0
+            production_rate: 0.1
+          2:
+            ent_code: MN16020316
+            factor: 1.0
+            production_rate: 1.0
+          3:
+            ent_code: '%CIND'
+            factor: 1.0
+            production_rate: 0.06
+        long_description: 'Alquiler unidad/mes de valla de contención de peatones, metálica,
+          de 2,50 m de largo y 1,00 m de altura, color amarillo, incluso colocación
+          y desmontaje, según R.D. 486/97 y R.D. 1627/97.
+
+          '
+        title: ' ALQUILER VALLA CONTENCIÓN PEATONES'
+        unit: ud
+      SBA090a:
+        code: SBA090a
+        components:
+          0:
+            ent_code: MOC0000100
+            factor: 1.0
+            production_rate: 0.01
+          1:
+            ent_code: MOC0000200
+            factor: 1.0
+            production_rate: 0.1
+          2:
+            ent_code: MOC0000500
+            factor: 1.0
+            production_rate: 0.1
+          3:
+            ent_code: MN16020008
+            factor: 1.0
+            production_rate: 1.0
+          4:
+            ent_code: MN01010001
+            factor: 1.0
+            production_rate: 0.35
+          5:
+            ent_code: '%CIND'
+            factor: 1.0
+            production_rate: 0.06
+        long_description: 'Montaje o desmontaje de barrera de seguridad tipo new jersey
+          de plástico simple, incluido el suministro, siempre llenas (amortizable 10
+          usos).
+
+          '
+        title: ' Barrera de seguridad tipo new jersey de plástico simple.'
+        unit: ud
+      SBA100:
+        code: SBA100
+        components:
+          0:
+            ent_code: MOC0000100
+            factor: 1.0
+            production_rate: 0.03
+          1:
+            ent_code: MOC0000200
+            factor: 1.0
+            production_rate: 0.1
+          2:
+            ent_code: MOC0000600
+            factor: 1.0
+            production_rate: 0.3
+          3:
+            ent_code: MOC0000500
+            factor: 1.0
+            production_rate: 0.3
+          4:
+            ent_code: MN16070301
+            factor: 1.0
+            production_rate: 0.1
+          5:
+            ent_code: MN16020323
+            factor: 1.0
+            production_rate: 0.1
+          6:
+            ent_code: MN16020324
+            factor: 1.0
+            production_rate: 0.03
+          7:
+            ent_code: MN16020325
+            factor: 1.0
+            production_rate: 0.008
+          8:
+            ent_code: MN16020326
+            factor: 1.0
+            production_rate: 0.008
+          9:
+            ent_code: AU10100001
+            factor: 1.0
+            production_rate: 0.008
+          10:
+            ent_code: '%CIND'
+            factor: 1.0
+            production_rate: 0.06
+        long_description: 'Cercado con entelado metálico galvanizado de malla simple
+          torsión, trama 50/14 y postes de tubo de acero galvanizado por inmersión de
+          48 mm de diámetro y tornapuntas tubo acero galvanizado de 32 mm de diámetro,
+          montada, i/replanteo y recibido con hormigón, tensores, grupillas y accesorios
+          (amortizable en un diez usos), según R.D. 486/97 y R.D. 1627/97.
+
+          A instalar en trabajos que inciden o quedan proximos a la zona de seguridad
+          y se realizaran con tráfico ferroviario segun la NAR 6/16.
+
+          '
+        title: ' SEPARACION FÍSICA RÍGIDA PARA TRABAJOS EN O PRÓXIMOS A LA ZONA DE SEGURIDAD
+          CON TRAFICO FERROVIARIO'
+        unit: m
+      SBB010:
+        code: SBB010
+        components:
+          0:
+            ent_code: MN16040101
+            factor: 1.0
+            production_rate: 1.0
+          1:
+            ent_code: '%CIND'
+            factor: 1.0
+            production_rate: 0.06
+        long_description: 'Lámpara portátil de mano, con cesto protector y mango aislante,
+          según R.D. 614/2001.
+
+          '
+        title: ' LÁMPARA PORTÁTIL MANO'
+        unit: ud
+      SBC020a:
+        code: SBC020a
+        components:
+          0:
+            ent_code: MOC0000100
+            factor: 1.0
+            production_rate: 0.008
+          1:
+            ent_code: MOC0000200
+            factor: 1.0
+            production_rate: 0.08
+          2:
+            ent_code: MOC0000400
+            factor: 1.0
+            production_rate: 0.08
+          3:
+            ent_code: MN01110111
+            factor: 1.0
+            production_rate: 2.25
+          4:
+            ent_code: MN16070301
+            factor: 1.0
+            production_rate: 1.1
+          5:
+            ent_code: MN08040603
+            factor: 1.0
+            production_rate: 0.125
+          6:
+            ent_code: MN01100301
+            factor: 1.0
+            production_rate: 1.0
+          7:
+            ent_code: '%CIND'
+            factor: 1.0
+            production_rate: 0.06
+        long_description: 'Protección de hueco horizontal con mallazo electrosoldado
+          de 15x15 cm D=5 mm, para protección fijado con conectores al zuncho del hueco
+          y pasante sobre las tabicas y empotrado un metro a cada lado en la capa de
+          compresión por cada lado, incluso cinta de señalización a 0,90 m de altura
+          fijada con pies derechos , según R.D. 486/97 y R.D. 1627/97
+
+          '
+        title: ' Protección de hueco horizontal con mallazo.'
+        unit: m²
+      SBE010a:
+        code: SBE010a
+        components:
+          0:
+            ent_code: MOC0000100
+            factor: 1.0
+            production_rate: 0.025
+          1:
+            ent_code: MOC0000200
+            factor: 1.0
+            production_rate: 0.25
+          2:
+            ent_code: MOC0000500
+            factor: 1.0
+            production_rate: 0.25
+          3:
+            ent_code: MN16020213
+            factor: 1.0
+            production_rate: 0.02
+          4:
+            ent_code: MN16020214
+            factor: 1.0
+            production_rate: 0.7
+          5:
+            ent_code: MN16020221
+            factor: 1.0
+            production_rate: 0.6
+          6:
+            ent_code: '%CIND'
+            factor: 1.0
+            production_rate: 0.06
+        long_description: 'Red tipo horca 1ª planta vertical de seguridad de malla de
+          poliamida de 10x10 cm de paso, ennudada con cuerda de D=3 mm en módulos de
+          10x5 m incluso pescante metálico tipo horca de 7,50x2,00 m en tubo de 80x40x1,5
+          mm colocados cada 4,50 m, soporte mordaza (amortizable en 20 usos), anclajes
+          de red, cuerdas de unión y red (amortizable en 10 usos), incluso colocación
+          y desmontaje en primera puesta, según UNE-EN 1263,  R.D. 485/97 y R.D. 1627/97.
+
+          '
+        title: ' Red de seguridad tipo horca 1 planta.'
+        unit: m
+      SBF010:
+        code: SBF010
+        components:
+          0:
+            ent_code: MOC0000100
+            factor: 1.0
+            production_rate: 0.0001
+          1:
+            ent_code: MOC0000500
+            factor: 1.0
+            production_rate: 0.001
+          2:
+            ent_code: MN16020223
+            factor: 1.0
+            production_rate: 1.0
+          3:
+            ent_code: '%CIND'
+            factor: 1.0
+            production_rate: 0.06
+        long_description: 'Colocación de tapón protector de plástico "tipo seta" de
+          las puntas de acero en las esperas de las armaduras de la estructura de hormigón
+          armado, incluso retirada antes del vertido del hormigón.
+
+          '
+        title: ' TAPÓN PROTECTOR "TIPO SETA" ESPERAS ARMADURAS'
+        unit: ud
+      SBG010b:
+        code: SBG010b
+        components:
+          0:
+            ent_code: MOC0000100
+            factor: 1.0
+            production_rate: 0.005
+          1:
+            ent_code: MOC0000500
+            factor: 1.0
+            production_rate: 0.05
+          2:
+            ent_code: MN16020102
+            factor: 1.0
+            production_rate: 1.0
+          3:
+            ent_code: MN01100301
+            factor: 1.0
+            production_rate: 1.0
+          4:
+            ent_code: '%CIND'
+            factor: 1.0
+            production_rate: 0.06
+        long_description: 'Tapa provisional metálica para huecos de 50x50 cm, arquetas
+          o similares, incluso colocación.
+
+          '
+        title: ' Tapa provisional metálica para arqueta 51x51 cm.'
+        unit: ud
+      SBG010f:
+        code: SBG010f
+        components:
+          0:
+            ent_code: MOC0000100
+            factor: 1.0
+            production_rate: 0.02
+          1:
+            ent_code: MOC0000500
+            factor: 1.0
+            production_rate: 0.2
+          2:
+            ent_code: MN16020105
+            factor: 1.0
+            production_rate: 1.0
+          3:
+            ent_code: MN01100301
+            factor: 1.0
+            production_rate: 1.0
+          4:
+            ent_code: '%CIND'
+            factor: 1.0
+            production_rate: 0.06
+        long_description: 'Tapa provisional metálica para pozos, pilotes o asimilables
+          de 70x70 cm, arquetas o similares, incluso colocación.
+
+          '
+        title: ' Tapa provisional metálica para pozo 70x70 cm.'
+        unit: ud
+      SBI020:
+        code: SBI020
+        components:
+          0:
+            ent_code: MOC0000100
+            factor: 1.0
+            production_rate: 0.0129
+          1:
+            ent_code: MOC0000200
+            factor: 1.0
+            production_rate: 0.129
+          2:
+            ent_code: MN16020120
+            factor: 1.0
+            production_rate: 0.053
+          3:
+            ent_code: '%CIND'
+            factor: 1.0
+            production_rate: 0.06
+        long_description: 'Tope para camión en movimientos de tierras, con tablón de
+          madera  de pino y piquetas de barra de acero corrugado  de 20 mm de diámetro
+          ancladas al terreno de longitud 1,8 m, y con el desmontaje incluido.
+
+          '
+        title: ' PAR TOPES CAUCHO PARA RUEDAS'
+        unit: ud
+      SCA010ab:
+        code: SCA010ab
+        components:
+          0:
+            ent_code: MOC0000100
+            factor: 1.0
+            production_rate: 0.2
+          1:
+            ent_code: MOC0000500
+            factor: 1.0
+            production_rate: 2.0
+          2:
+            ent_code: MN16050209
+            factor: 1.0
+            production_rate: 1.0
+          3:
+            ent_code: MN16050234
+            factor: 1.0
+            production_rate: 0.085
+          4:
+            ent_code: '%CIND'
+            factor: 1.0
+            production_rate: 0.06
+        long_description: 'Mes de alquiler de de caseta prefabricada para comedor de
+          obra de dimensiones de 2 a 9 m2. Estructura y cerramiento de chapa galvanizada
+          pintada, aislamiento de poliestireno expandido autoextinguible, interior con
+          tablero melaminado en color. Cubierta de chapa galvanizada reforzada con perfil
+          de acero; fibra de vidrio de 60 mm, interior con tablex lacado. Suelo de aglomerado
+          revestido con PVC continuo de 2 mm, y poliestireno de 50 mm con apoyo en base
+          de chapa galvanizada de sección trapezoidal. Puerta de 0,80x2,00 m, de chapa
+          galvanizada de 1 mm, reforzada y con poliestireno de 20 mm, picaporte y cerradura.
+          Dos ventanas aluminio anodizado corredera, contraventana de acero galvanizado.
+          Instalación eléctrica a 220 V, toma de tierra, automático, 2 fluorescentes
+          de 40 W, enchufes para 1500 W y punto luz exterior de 60 W. Con transporte
+          a 150 km (ida y vuelta). Entrega y recogida del módulo con camión grúa. Según
+          R.D. 486/97 y R.D. 1627/97, incluso limpieza semanal.
+
+          '
+        title: ' Alquiler de comedor.'
+        unit: mes
+      SCA010cb:
+        code: SCA010cb
+        components:
+          0:
+            ent_code: MOC0000100
+            factor: 1.0
+            production_rate: 0.2
+          1:
+            ent_code: MOC0000500
+            factor: 1.0
+            production_rate: 2.0
+          2:
+            ent_code: MN16050206
+            factor: 1.0
+            production_rate: 1.0
+          3:
+            ent_code: MN16050301
+            factor: 1.0
+            production_rate: 0.0833
+          4:
+            ent_code: MN16050302
+            factor: 1.0
+            production_rate: 0.0167
+          5:
+            ent_code: MN16050303
+            factor: 1.0
+            production_rate: 0.0167
+          6:
+            ent_code: MN16050304
+            factor: 1.0
+            production_rate: 0.0167
+          7:
+            ent_code: MN16050305
+            factor: 1.0
+            production_rate: 0.0167
+          8:
+            ent_code: MN16050306
+            factor: 1.0
+            production_rate: 0.0167
+          9:
+            ent_code: MN16050307
+            factor: 1.0
+            production_rate: 0.0167
+          10:
+            ent_code: MN16050234
+            factor: 1.0
+            production_rate: 0.085
+          11:
+            ent_code: '%CIND'
+            factor: 1.0
+            production_rate: 0.06
+        long_description: 'Mes de alquiler de de caseta prefabricada para vestuarios
+          en obra de dimensiones de 2 a 9 m2. Estructura de acero galvanizado. Cubierta
+          y cerramiento lateral de chapa galvanizada trapezoidal de 0,6 mm reforzada
+          con perfiles de acero, interior prelacado. Suelo de aglomerado hidrófugo de
+          19 mm puerta de acero de 1 mm, de 0,80x2,00 m pintada con cerradura. Ventana
+          fija de cristal de 6 mm, recercado con perfil de goma. Con transporte a 150
+          km (ida y vuelta). Entrega y recogida del módulo con camión grúa. Según R.D.
+          486/97 y R.D. 1627/97, incluso limpieza semanal.
+
+          '
+        title: ' Alquiler de vestuarios.'
+        unit: mes
+      SCA010da:
+        code: SCA010da
+        components:
+          0:
+            ent_code: MOC0000100
+            factor: 1.0
+            production_rate: 0.2
+          1:
+            ent_code: MOC0000500
+            factor: 1.0
+            production_rate: 2.0
+          2:
+            ent_code: MN16050201
+            factor: 1.0
+            production_rate: 1.0
+          3:
+            ent_code: MN16050236
+            factor: 1.0
+            production_rate: 1.0
+          4:
+            ent_code: '%CIND'
+            factor: 1.0
+            production_rate: 0.06
+        long_description: 'Mes de alquiler de de WC químico estándar, compuesto por
+          urinario, inodoro y depósito para desecho de 266 l. Sin necesidad de instalación.
+          Incluso portes de entrega y recogida. Según R.D. 486/97 y R.D. 1627/97, incluso
+          limpieza, retirada de residuos a depuradora autorizada y reposición de químicos.
+
+          '
+        title: ' Alquiler de WC químico estándar.'
+        unit: mes
+      SCB010:
+        code: SCB010
+        components:
+          0:
+            ent_code: MOC0000100
+            factor: 1.0
+            production_rate: 0.01
+          1:
+            ent_code: MOC0000500
+            factor: 1.0
+            production_rate: 0.1
+          2:
+            ent_code: MN16050308
+            factor: 1.0
+            production_rate: 0.2
+          3:
+            ent_code: '%CIND'
+            factor: 1.0
+            production_rate: 0.06
+        long_description: 'Horno microondas, con plato giratorio incorporado (amortizable
+          en 5 usos).
+
+          '
+        title: ' HORNO MICROONDAS'
+        unit: ud
+      SCB020:
+        code: SCB020
+        components:
+          0:
+            ent_code: MOC0000100
+            factor: 1.0
+            production_rate: 0.01
+          1:
+            ent_code: MOC0000500
+            factor: 1.0
+            production_rate: 0.1
+          2:
+            ent_code: MN16050309
+            factor: 1.0
+            production_rate: 0.2
+          3:
+            ent_code: '%CIND'
+            factor: 1.0
+            production_rate: 0.06
+        long_description: 'Taquilla metálica individual para vestuario de 1,80 m de
+          altura en acero laminado en frío, con tratamiento antifosfatante y anticorrosivo,
+          con pintura secada al horno, cerradura, balda y tubo percha, lamas de ventilación
+          en puerta, colocada (amortizable en 5 usos).
+
+          '
+        title: ' TAQUILLA METÁLICA INDIVIDUAL'
+        unit: ud
+      SCB030:
+        code: SCB030
+        components:
+          0:
+            ent_code: MOC0000100
+            factor: 1.0
+            production_rate: 0.01
+          1:
+            ent_code: MOC0000500
+            factor: 1.0
+            production_rate: 0.1
+          2:
+            ent_code: MN16050310
+            factor: 1.0
+            production_rate: 0.2
+          3:
+            ent_code: '%CIND'
+            factor: 1.0
+            production_rate: 0.06
+        long_description: 'Mesa de melamina para comedor de obra con capacidad para
+          10 personas (amortizable en 5 usos).
+
+          '
+        title: ' MESA MELAMINA PARA 10 PERSONAS'
+        unit: ud
+      SCB040:
+        code: SCB040
+        components:
+          0:
+            ent_code: MOC0000100
+            factor: 1.0
+            production_rate: 0.01
+          1:
+            ent_code: MOC0000500
+            factor: 1.0
+            production_rate: 0.1
+          2:
+            ent_code: MN16050311
+            factor: 1.0
+            production_rate: 0.2
+          3:
+            ent_code: '%CIND'
+            factor: 1.0
+            production_rate: 0.06
+        long_description: 'Banco de madera con capacidad para 5 personas (amortizable
+          en 5 usos).
+
+          '
+        title: ' BANCO MADERA PARA 5 PERSONAS'
+        unit: ud
+      SCB050:
+        code: SCB050
+        components:
+          0:
+            ent_code: MOC0000100
+            factor: 1.0
+            production_rate: 0.01
+          1:
+            ent_code: MOC0000500
+            factor: 1.0
+            production_rate: 0.1
+          2:
+            ent_code: MN16050312
+            factor: 1.0
+            production_rate: 0.2
+          3:
+            ent_code: '%CIND'
+            factor: 1.0
+            production_rate: 0.06
+        long_description: 'Cubo para recogida de basuras (amortizable en 5 usos).
+
+          '
+        title: ' DEPÓSITO'
+        unit: ud
+      SCB100:
+        code: SCB100
+        components:
+          0:
+            ent_code: MOC0000100
+            factor: 1.0
+            production_rate: 0.01
+          1:
+            ent_code: MOC0000500
+            factor: 1.0
+            production_rate: 0.1
+          2:
+            ent_code: MN16050324
+            factor: 1.0
+            production_rate: 0.2
+          3:
+            ent_code: '%CIND'
+            factor: 1.0
+            production_rate: 0.06
+        long_description: 'Nevera eléctrica de 75 l de capacidad, colocada y con el
+          desmontaje incluido (amortizable en 5 usos).
+
+          '
+        title: ' NEVERA ELÉCTRICA'
+        unit: ud
+      SDA010c:
+        code: SDA010c
+        components:
+          0:
+            ent_code: MOC0000100
+            factor: 1.0
+            production_rate: 0.01
+          1:
+            ent_code: MOC0000500
+            factor: 1.0
+            production_rate: 0.1
+          2:
+            ent_code: MN16030103
+            factor: 1.0
+            production_rate: 1.0
+          3:
+            ent_code: '%CIND'
+            factor: 1.0
+            production_rate: 0.06
+        long_description: 'Extintor de de polvo químico ABC polivalente antibrasa de
+          eficacia 34A/144B, de 9 kg de agente extintor, con soporte, manómetro comprobable
+          y manguera con difusor. Medida la unidad instalada, según R.D. 486/97 y R.D.
+          1627/97
+
+          '
+        title: ' Extintor de polvo ABC 9 kg.'
+        unit: ud
+      SEA010:
+        code: SEA010
+        components:
+          0:
+            ent_code: MOC0000100
+            factor: 1.0
+            production_rate: 0.005
+          1:
+            ent_code: MOC0000500
+            factor: 1.0
+            production_rate: 0.05
+          2:
+            ent_code: MN16070301
+            factor: 1.0
+            production_rate: 1.1
+          3:
+            ent_code: '%CIND'
+            factor: 1.0
+            production_rate: 0.06
+        long_description: 'Cinta de balizamiento bicolor rojo/blanco de material plástico,
+          incluso colocación y desmontaje, según R.D. 485/97 y R.D. 1627/97.
+
+          '
+        title: ' CINTA BALIZAMIENTO BICOLOR 8 CM'
+        unit: m
+      SEA030:
+        code: SEA030
+        components:
+          0:
+            ent_code: MOC0000100
+            factor: 1.0
+            production_rate: 0.01
+          1:
+            ent_code: MOC0000500
+            factor: 1.0
+            production_rate: 0.1
+          2:
+            ent_code: MN16070304
+            factor: 1.0
+            production_rate: 1.0
+          3:
+            ent_code: '%CIND'
+            factor: 1.0
+            production_rate: 0.06
+        long_description: 'Boya destellante amarilla con carcasa de plástico y soporte
+          de anclaje, con célula fotoeléctrica y pilas, incluido colocación y desmontaje,
+          según R.D. 485/97 y R.D. 1627/97.
+
+          '
+        title: ' BOYA DESTELLANTE CON CÉLULA FOTOELÉCTRICA'
+        unit: ud
+      SEA100:
+        code: SEA100
+        components:
+          0:
+            ent_code: MOC0000100
+            factor: 1.0
+            production_rate: 0.0126
+          1:
+            ent_code: MOC0000400
+            factor: 1.0
+            production_rate: 0.126
+          2:
+            ent_code: MN16070119
+            factor: 1.0
+            production_rate: 1.0
+          3:
+            ent_code: '%CIND'
+            factor: 1.0
+            production_rate: 0.06
+        long_description: 'Luminaria para balizamiento fijo en color rojo, base metálica
+          y carcasa de vidrio moldeado acabado en color rojo con protección antivandálica
+          tipo hublott, lámpara de 40 w incandescente, accionamiento por célula fotoeléctrica
+          y conexionado a red auxiliar eléctrica, montaje y desmontaje.
+
+          '
+        title: ' LUMINARIA COLOR ROJO BALIZAM.'
+        unit: ud
+      SEB010a:
+        code: SEB010a
+        components:
+          0:
+            ent_code: MOC0000100
+            factor: 1.0
+            production_rate: 0.01
+          1:
+            ent_code: MOC0000500
+            factor: 1.0
+            production_rate: 0.1
+          2:
+            ent_code: MN16070201
+            factor: 1.0
+            production_rate: 1.0
+          3:
+            ent_code: '%CIND'
+            factor: 1.0
+            production_rate: 0.06
+        long_description: 'Cartel serigrafiado sobre planchas de PVC blanco de 0,6 mm
+          de espesor nominal. Tamaño 220x300 mm. Válidas para señales de obligación,
+          prohibición y advertencia, incluido colocación, según R.D. 485/97 y R.D. 1627/97.
+
+          '
+        title: ' 220x300 mm obligación/prohibición/advertencia.'
+        unit: ud
+      SEB020:
+        code: SEB020
+        components:
+          0:
+            ent_code: MOC0000100
+            factor: 1.0
+            production_rate: 0.01
+          1:
+            ent_code: MOC0000500
+            factor: 1.0
+            production_rate: 0.1
+          2:
+            ent_code: MN16070203
+            factor: 1.0
+            production_rate: 1.0
+          3:
+            ent_code: '%CIND'
+            factor: 1.0
+            production_rate: 0.06
+        long_description: 'Panel completo serigrafiado sobre planchas de pvc blanco
+          de 0,6 mm de espesor nominal. Tamaño 700x1000 mm. Válido para incluir hasta
+          15 símbolos de señales, incluso textos "prohibido el paso a toda persona ajena
+          a la obra", incluido colocación, según R.D. 485/97 y R.D. 1627/97.
+
+          '
+        title: ' PANEL COMPLETO PVC 700X1000 MM'
+        unit: ud
+      SEC010acb:
+        code: SEC010acb
+        components:
+          0:
+            ent_code: MOC0000100
+            factor: 1.0
+            production_rate: 0.03
+          1:
+            ent_code: MOC0000500
+            factor: 1.0
+            production_rate: 0.3
+          2:
+            ent_code: MN16070102
+            factor: 1.0
+            production_rate: 1.0
+          3:
+            ent_code: MN08040603
+            factor: 1.0
+            production_rate: 1.0
+          4:
+            ent_code: AU10100001
+            factor: 1.0
+            production_rate: 0.064
+          5:
+            ent_code: '%CIND'
+            factor: 1.0
+            production_rate: 0.06
+        long_description: 'Señal de seguridad triangular de L=90 cm, normalizada,  con
+          soporte de acero galvanizado de 80x40x2 mm y 2 m de altura, incluido p.p.
+          de apertura de pozo, hormigonado HM-20, colocación y desmontaje, según R.D.
+          485/97 y R.D. 1627/97.
+
+          '
+        title: ' Señal triangular de 90 cm con soporte.'
+        unit: ud
+      SEC010ccb:
+        code: SEC010ccb
+        components:
+          0:
+            ent_code: MOC0000100
+            factor: 1.0
+            production_rate: 0.03
+          1:
+            ent_code: MOC0000500
+            factor: 1.0
+            production_rate: 0.3
+          2:
+            ent_code: MN16070105
+            factor: 1.0
+            production_rate: 1.0
+          3:
+            ent_code: MN08040603
+            factor: 1.0
+            production_rate: 1.0
+          4:
+            ent_code: AU10100001
+            factor: 1.0
+            production_rate: 0.064
+          5:
+            ent_code: '%CIND'
+            factor: 1.0
+            production_rate: 0.06
+        long_description: 'Señal de seguridad circular de , normalizada,  con soporte
+          de acero galvanizado de 80x40x2 mm y 2 m de altura, incluido p.p. de apertura
+          de pozo, hormigonado HM-20, colocación y desmontaje, según R.D. 485/97 y R.D.
+          1627/97.
+
+          '
+        title: ' Señal circular de 90 cm con soporte.'
+        unit: ud
+      SEC010dab:
+        code: SEC010dab
+        components:
+          0:
+            ent_code: MOC0000100
+            factor: 1.0
+            production_rate: 0.03
+          1:
+            ent_code: MOC0000500
+            factor: 1.0
+            production_rate: 0.3
+          2:
+            ent_code: MN16070106
+            factor: 1.0
+            production_rate: 1.0
+          3:
+            ent_code: MN08040603
+            factor: 1.0
+            production_rate: 1.0
+          4:
+            ent_code: AU10100001
+            factor: 1.0
+            production_rate: 0.064
+          5:
+            ent_code: '%CIND'
+            factor: 1.0
+            production_rate: 0.06
+        long_description: 'Señal de seguridad stop de D60 cm, normalizada,  con soporte
+          de acero galvanizado de 80x40x2 mm y 2 m de altura, incluido p.p. de apertura
+          de pozo, hormigonado HM-20, colocación y desmontaje, según R.D. 485/97 y R.D.
+          1627/97.
+
+          '
+        title: ' Señal stop de 60 cm con soporte.'
+        unit: ud
+      SEC020:
+        code: SEC020
+        components:
+          0:
+            ent_code: MN16070109
+            factor: 1.0
+            production_rate: 1.0
+          1:
+            ent_code: '%CIND'
+            factor: 1.0
+            production_rate: 0.06
+        long_description: 'Señal de seguridad manual a dos caras: stop-dirección obligatoria,
+          tipo paleta, según R.D. 485/97 y R.D. 1627/97.
+
+          '
+        title: ' PALETA MANUAL 2 CARAS STOP'
+        unit: ud
+      SEC060:
+        code: SEC060
+        components:
+          0:
+            ent_code: MOC0000100
+            factor: 1.0
+            production_rate: 0.1
+          1:
+            ent_code: MOC0000500
+            factor: 1.0
+            production_rate: 1.0
+          2:
+            ent_code: '%CIND'
+            factor: 1.0
+            production_rate: 0.06
+        long_description: 'Señalista de obra.
+
+          '
+        title: ' SEÑALISTA DE OBRA'
+        unit: h
+      SED010:
+        code: SED010
+        components:
+          0:
+            ent_code: MN16020010
+            factor: 1.0
+            production_rate: 1.0
+          1:
+            ent_code: '%CIND'
+            factor: 1.0
+            production_rate: 0.06
+        long_description: 'Alquiler torre de iluminación para exterior, mástil telescópico
+          de 9 m de altura que funcionan con una manivela/polea Conjunto luminoso: 320
+          W fluorescente total de 4 focos. Voltaje de uso: 220 V
+
+          '
+        title: ' ALQUILER APOYO A LA ILUMINACIÓN. CONJUNTO DE FOCOS ILUMINACIÓN PROVISIONAL
+          EN REMOLQUE'
+        unit: mes
 sub_chapters:
   components: {}
   owner_code: test

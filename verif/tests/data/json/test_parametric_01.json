@@ -1,0 +1,236 @@
+{
+  "code": "ROOT##",
+  "title": "BASE PRECIOS",
+  "sub_chapters": {
+    "owner_code": "ROOT##",
+    "components": {}
+  },
+  "prices": {
+    "elementary_prices": {
+      "SINDESCO": {
+        "code": "SINDESCO",
+        "title": "sin_desc",
+        "long_description": "",
+        "unit": "",
+        "type": 3,
+        "price": 1.0
+      },
+      "MOC0000200": {
+        "code": "MOC0000200",
+        "title": "OFICIAL 1A",
+        "long_description": "",
+        "unit": "h",
+        "type": 1,
+        "price": 21.51
+      },
+      "MOC0000500": {
+        "code": "MOC0000500",
+        "title": "PE\u00d3N",
+        "long_description": "",
+        "unit": "h",
+        "type": 1,
+        "price": 19.92
+      },
+      "MOC0000600": {
+        "code": "MOC0000600",
+        "title": "AYUDANTE",
+        "long_description": "",
+        "unit": "h",
+        "type": 1,
+        "price": 20.42
+      },
+      "MOC0000201": {
+        "code": "MOC0000201",
+        "title": "OFICIAL 1A NOCTURNO",
+        "long_description": "",
+        "unit": "h",
+        "type": 1,
+        "price": 26.89
+      },
+      "MOC0000501": {
+        "code": "MOC0000501",
+        "title": "PE\u00d3N NOCTURNO",
+        "long_description": "",
+        "unit": "h",
+        "type": 1,
+        "price": 24.9
+      },
+      "MOC0000601": {
+        "code": "MOC0000601",
+        "title": "AYUDANTE NOCTURNO",
+        "long_description": "",
+        "unit": "h",
+        "type": 1,
+        "price": 25.53
+      },
+      "MN26123064": {
+        "code": "MN26123064",
+        "title": "CONJUNTO MET\u00c1LICO PARA APEOS",
+        "long_description": "",
+        "unit": "ud",
+        "type": 3,
+        "price": 1.94
+      },
+      "MN01123001": {
+        "code": "MN01123001",
+        "title": "MADERA DE PINO PARA ENTIBACIONES",
+        "long_description": "MADERA DE PINO PARA ENTIBACIONES",
+        "unit": "m\u00b3",
+        "type": 3,
+        "price": 231.15
+      },
+      "MN01120024": {
+        "code": "MN01120024",
+        "title": "PUNTAS DE ACERO DE 20X100 MM",
+        "long_description": "PUNTAS DE ACERO DE 20X100 MM",
+        "unit": "kg",
+        "type": 3,
+        "price": 10.18
+      },
+      "%VOL": {
+        "code": "%VOL",
+        "title": "Sobrecoste por volumen escaso",
+        "long_description": "",
+        "unit": "%",
+        "type": 0,
+        "price": 0.0
+      },
+      "%CIND": {
+        "code": "%CIND",
+        "title": "Costes indirectos",
+        "long_description": "",
+        "unit": "%",
+        "type": 0,
+        "price": 0.0
+      }
+    },
+    "units": {
+      "regular": {},
+      "parametric": {
+        "AAA010$": {
+          "c": {
+            "unidad": "m\u00b2",
+            "resumen": "APEO DE ESTRUCTURAS",
+            "precio": 0.0,
+            "tipo": 0
+          },
+          "t": {
+            "texto": ""
+          },
+          "parameters": {
+            "variables": {
+              "numO": [
+                1.1,
+                1.2,
+                1.3,
+                1.0
+              ],
+              "numP": [
+                0.5,
+                0.85
+              ],
+              "strF": [
+                "D",
+                "N",
+                "-"
+              ],
+              "strG": [
+                "R",
+                "E",
+                "-"
+              ],
+              "strH": [
+                ">5",
+                "3 a 5",
+                "<3",
+                "NNI"
+              ],
+              "strI": [
+                "c/madera",
+                "c/metal"
+              ],
+              "strJ": [
+                "Apeo de estructura, hasta una altura m\u00e1xima de 3 m, mediante sopandas, puntales y durmientes de madera, con parte proporcional de medios auxiliares y trabajos previos de limpieza para apoyos. Medida superficie realmente apeada descontando huecos.",
+                "Apeo de estructura, hasta una altura m\u00e1xima de 6 m, mediante sopandas, puntales y durmientes met\u00e1licos, con parte proporcional de medios auxiliares y trabajos previos de limpieza para apoyos. Medida superficie realmente apeada descontando huecos."
+              ]
+            },
+            "components": {
+              "MOC0000200": [
+                "(%P(%A)*%O(%D))*(%B=a)",
+                "(%P(%A)*%O(%D))*0.67*(%B=c)"
+              ],
+              "MOC0000500": [
+                "(0.5*%P(%A)*%O(%D))*(%B=a)",
+                "(0.5*%P(%A)*%O(%D))*0.67*(%B=c)"
+              ],
+              "MOC0000600": [
+                "(%P(%A)*%O(%D))*(%B=a)",
+                "(%P(%A)*%O(%D))*0.67*(%B=c)"
+              ],
+              "MOC0000201": [
+                "(%P(%A)*%O(%D))*(%B=b)",
+                "(%P(%A)*%O(%D))*0.33*(%B=c)"
+              ],
+              "MOC0000501": [
+                "(0.5*%P(%A)*%O(%D))*(%B=b)",
+                "(0.5*%P(%A)*%O(%D))*0.33*(%B=c)"
+              ],
+              "MOC0000601": [
+                "(%P(%A)*%O(%D))*(%B=b)",
+                "(%P(%A)*%O(%D))*0.33*(%B=c)"
+              ],
+              "MN26123064": [
+                "1*(%A=b)"
+              ],
+              "MN01123001": [
+                "0.11*(%A=a)"
+              ],
+              "MN01120024": [
+                "0.05*(%A=a)"
+              ],
+              "%%VOL": [
+                "0.20*(%C=b)"
+              ],
+              "%%CIND": [
+                "0.06"
+              ]
+            },
+            "substitutionStatements": {
+              "RESUMEN": "Apeo de estructuras $I(%A) $A. ($F(%B)/$H(%D)/$G(%C))",
+              "TEXTO": "$J(%A) Seg\u00fan normativa de aplicaci\u00f3n nacional y/o equivalente europea. Trabajo: $B. Banda de mantenimiento: $D. Condiciones de ejecuci\u00f3n: $C."
+            },
+            "parameterLabelStatements": {
+              "altura_de_apeo": [
+                "<3 m",
+                "<6 m"
+              ],
+              "trabajo": [
+                "Diurno",
+                "Nocturno",
+                "Cualquier franja horaria"
+              ],
+              "condiciones_de_ejecuci\u00f3n": [
+                "Volumen relevante",
+                "Volumen escaso",
+                "Cualquier condici\u00f3n de ejecuci\u00f3n"
+              ],
+              "banda_de_mantenimiento": [
+                "i>=5 horas",
+                "3<=i<5 horas",
+                "i<3 horas",
+                "No necesita intervalo"
+              ]
+            },
+            "parameterLabelLetters": {
+              "altura_de_apeo": "A",
+              "trabajo": "B",
+              "condiciones_de_ejecuci\u00f3n": "C",
+              "banda_de_mantenimiento": "D"
+            }
+          }
+        }
+      }
+    }
+  },
+  "chapter_quantities": {}
+}

@@ -14,7 +14,10 @@
 				</sub_chapters>
 				<prices>
 					<elementary_prices/>
-					<units/>
+					<units>
+						<regular/>
+						<parametric/>
+					</units>
 				</prices>
 				<chapter_quantities/>
 			</key>
@@ -27,7 +30,10 @@
 				</sub_chapters>
 				<prices>
 					<elementary_prices/>
-					<units/>
+					<units>
+						<regular/>
+						<parametric/>
+					</units>
 				</prices>
 				<chapter_quantities/>
 			</key>
@@ -44,7 +50,10 @@
 				<price>1.0</price>
 			</SINDESCO>
 		</elementary_prices>
-		<units/>
+		<units>
+			<regular/>
+			<parametric/>
+		</units>
 	</prices>
 	<chapter_quantities/>
 </pyCost>

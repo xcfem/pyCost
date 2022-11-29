@@ -9,7 +9,9 @@ prices:
       title: sin_desc
       type: 3
       unit: ''
-  units: {}
+  units:
+    parametric: {}
+    regular: {}
 sub_chapters:
   components:
     01#:
@@ -187,7 +189,9 @@ sub_chapters:
             title: Subsubconcept 1B
             type: 0
             unit: ''
-        units: {}
+        units:
+          parametric: {}
+          regular: {}
       sub_chapters:
         components: {}
         owner_code: 01#
@@ -197,7 +201,9 @@ sub_chapters:
       code: 02#
       prices:
         elementary_prices: {}
-        units: {}
+        units:
+          parametric: {}
+          regular: {}
       sub_chapters:
         components: {}
         owner_code: 02#
@@ -214,7 +220,9 @@ sub_chapters:
             title: Subsubconcept C
             type: 0
             unit: ''
-        units: {}
+        units:
+          parametric: {}
+          regular: {}
       sub_chapters:
         components: {}
         owner_code: 03#

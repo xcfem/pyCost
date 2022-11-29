@@ -25,7 +25,10 @@
                     },
                     "prices": {
                       "elementary_prices": {},
-                      "units": {}
+                      "units": {
+                        "regular": {},
+                        "parametric": {}
+                      }
                     },
                     "chapter_quantities": {
                       "0": {
@@ -46,7 +49,10 @@
               },
               "prices": {
                 "elementary_prices": {},
-                "units": {}
+                "units": {
+                  "regular": {},
+                  "parametric": {}
+                }
               },
               "chapter_quantities": {}
             }
@@ -54,7 +60,10 @@
         },
         "prices": {
           "elementary_prices": {},
-          "units": {}
+          "units": {
+            "regular": {},
+            "parametric": {}
+          }
         },
         "chapter_quantities": {}
       }
@@ -152,39 +161,42 @@
       }
     },
     "units": {
-      "EAS010": {
-        "code": "EAS010",
-        "title": "Acero en pilares.",
-        "long_description": "Acero UNE-EN 10025 S275JR, en pilares formados por piezas simples de perfiles laminados en caliente de las series IPN, IPE, HEB, HEA, HEM o UPN, acabado con imprimaci\u00c3\u00b3n antioxidante, colocado con uniones soldadas en obra, a una altura de hasta 3 m.Criterio de valoraci\u00c3\u00b3n econ\u00c3\u00b3mica: El precio incluye las soldaduras, los cortes, los despuntes, las piezas especiales, las placas de arranque y de transici\u00c3\u00b3n de pilar inferior a superior, los casquillos y los elementos auxiliares de montaje.Incluye: Limpieza y preparaci\u00c3\u00b3n del plano de apoyo. Replanteo y marcado de los ejes. Colocaci\u00c3\u00b3n y fijaci\u00c3\u00b3n provisional del pilar. Aplomado y nivelaci\u00c3\u00b3n. Ejecuci\u00c3\u00b3n de las uniones soldadas.Criterio de medici\u00c3\u00b3n de proyecto: Peso nominal medido seg\u00c3\u00ban documentaci\u00c3\u00b3n gr\u00c3\u00a1fica de Proyecto.Criterio de medici\u00c3\u00b3n de obra: Se determinar\u00c3\u00a1, a partir del peso obtenido en b\u00c3\u00a1scula oficial de las unidades llegadas a obra, el peso de las unidades realmente ejecutadas seg\u00c3\u00ban especificaciones de Proyecto.",
-        "unit": "kg",
-        "components": {
-          "0": {
-            "factor": 1.0,
-            "production_rate": 1.0,
-            "ent_code": "mt07ala010dab"
-          },
-          "1": {
-            "factor": 1.0,
-            "production_rate": 0.015,
-            "ent_code": "mq08sol020"
-          },
-          "2": {
-            "factor": 1.0,
-            "production_rate": 0.015,
-            "ent_code": "mo047"
-          },
-          "3": {
-            "factor": 1.0,
-            "production_rate": 0.015,
-            "ent_code": "mo094"
-          },
-          "4": {
-            "factor": 1.0,
-            "production_rate": 0.02,
-            "ent_code": "%"
+      "regular": {
+        "EAS010": {
+          "code": "EAS010",
+          "title": "Acero en pilares.",
+          "long_description": "Acero UNE-EN 10025 S275JR, en pilares formados por piezas simples de perfiles laminados en caliente de las series IPN, IPE, HEB, HEA, HEM o UPN, acabado con imprimaci\u00c3\u00b3n antioxidante, colocado con uniones soldadas en obra, a una altura de hasta 3 m.Criterio de valoraci\u00c3\u00b3n econ\u00c3\u00b3mica: El precio incluye las soldaduras, los cortes, los despuntes, las piezas especiales, las placas de arranque y de transici\u00c3\u00b3n de pilar inferior a superior, los casquillos y los elementos auxiliares de montaje.Incluye: Limpieza y preparaci\u00c3\u00b3n del plano de apoyo. Replanteo y marcado de los ejes. Colocaci\u00c3\u00b3n y fijaci\u00c3\u00b3n provisional del pilar. Aplomado y nivelaci\u00c3\u00b3n. Ejecuci\u00c3\u00b3n de las uniones soldadas.Criterio de medici\u00c3\u00b3n de proyecto: Peso nominal medido seg\u00c3\u00ban documentaci\u00c3\u00b3n gr\u00c3\u00a1fica de Proyecto.Criterio de medici\u00c3\u00b3n de obra: Se determinar\u00c3\u00a1, a partir del peso obtenido en b\u00c3\u00a1scula oficial de las unidades llegadas a obra, el peso de las unidades realmente ejecutadas seg\u00c3\u00ban especificaciones de Proyecto.",
+          "unit": "kg",
+          "components": {
+            "0": {
+              "factor": 1.0,
+              "production_rate": 1.0,
+              "ent_code": "mt07ala010dab"
+            },
+            "1": {
+              "factor": 1.0,
+              "production_rate": 0.015,
+              "ent_code": "mq08sol020"
+            },
+            "2": {
+              "factor": 1.0,
+              "production_rate": 0.015,
+              "ent_code": "mo047"
+            },
+            "3": {
+              "factor": 1.0,
+              "production_rate": 0.015,
+              "ent_code": "mo094"
+            },
+            "4": {
+              "factor": 1.0,
+              "production_rate": 0.02,
+              "ent_code": "%"
+            }
           }
         }
-      }
+      },
+      "parametric": {}
     }
   },
   "chapter_quantities": {}

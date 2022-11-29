@@ -9,7 +9,9 @@ prices:
       title: sin_desc
       type: 3
       unit: ''
-  units: {}
+  units:
+    parametric: {}
+    regular: {}
 sub_chapters:
   components:
     01#:
@@ -63,7 +65,9 @@ sub_chapters:
             title: Subsubconcept A01
             type: 0
             unit: ''
-        units: {}
+        units:
+          parametric: {}
+          regular: {}
       sub_chapters:
         components: {}
         owner_code: 01#

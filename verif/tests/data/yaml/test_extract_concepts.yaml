@@ -86,73 +86,75 @@ prices:
       type: 3
       unit: ud
   units:
-    ACERO0103:
-      code: ACERO0103
-      components:
-        0:
-          ent_code: OFICFER
-          factor: 1.0
-          production_rate: 0.015
-        1:
-          ent_code: PEONES
-          factor: 1.0
-          production_rate: 0.015
-        2:
-          ent_code: MAACE0201
-          factor: 1.0
-          production_rate: 1.0
-        3:
-          ent_code: '%003'
-          factor: 1.0
-          production_rate: 0.03
-      long_description: Acero en barras corrugadas, UNE-EN 10080 B 500 SD, incluso
-        corte, ferrallado, colocación y p.p. de atado con alambre recocido, despuntes,
-        incluso separadores de plástico rígidos, elaborado en taller y colocado en
-        obra, diámetros varios.
-      title: Acero en barras corrugadas, UNE-EN 10080 B 500 SD, incluso corte, ferrallado,
-        colocación y p.p. de atado con alambre recocido, despuntes, incluso separadores
-        de plástico rígidos, elaborado en taller y colocado en obra, diámetros varios.
-      unit: Kg.
-    AR0005b:
-      code: AR0005b
-      components:
-        0:
-          ent_code: OFICJAR
-          factor: 1.0
-          production_rate: 0.02
-        1:
-          ent_code: PEONES
-          factor: 1.0
-          production_rate: 0.03
-        2:
-          ent_code: VER3l
-          factor: 1.0
-          production_rate: 1.0
-        3:
-          ent_code: MAMV01a
-          factor: 1.0
-          production_rate: 0.01
-        4:
-          ent_code: PBGA01a
-          factor: 1.0
-          production_rate: 0.02
-        5:
-          ent_code: '%'
-          factor: 1.0
-          production_rate: 0.03
-      long_description: Suministro y plantación de Verbena bonaerensis  C-3L  40 cm
-        de alltura.perfectamente enraizado y formado, con un mínimo de tres meses
-        de cultivo en el contenedor presentado. Libre de lesión o enfermedad alguna,
-        aprobado y seleccionado en origen por la dirección facultativa. Apertura de
-        hoyo de 0,60x,0,60x0,60, retirada de la excavación y relleno con sustrato
-        de plantación compuesto de 60% de arena de sílice 0,1 a 4 mm, 20% compost
-        de origen vegetal, 20% tierra vegetal de textura franco arenosa (Porcentajes
-        en peso) y una conductividad eléctrica menor de 0,8 dS/m según NTJ 05T,incluso
-        tapado y apretado, riegos de plantación con manguera según pliego de condiciones
-        y hasta el funcionamiento normalizado de la instalación de riego, medida la
-        unidad suministrada en obra.
-      title: Verbena bonaerensis C-3L 40 cm altura
-      unit: Ud
+    parametric: {}
+    regular:
+      ACERO0103:
+        code: ACERO0103
+        components:
+          0:
+            ent_code: OFICFER
+            factor: 1.0
+            production_rate: 0.015
+          1:
+            ent_code: PEONES
+            factor: 1.0
+            production_rate: 0.015
+          2:
+            ent_code: MAACE0201
+            factor: 1.0
+            production_rate: 1.0
+          3:
+            ent_code: '%003'
+            factor: 1.0
+            production_rate: 0.03
+        long_description: Acero en barras corrugadas, UNE-EN 10080 B 500 SD, incluso
+          corte, ferrallado, colocación y p.p. de atado con alambre recocido, despuntes,
+          incluso separadores de plástico rígidos, elaborado en taller y colocado
+          en obra, diámetros varios.
+        title: Acero en barras corrugadas, UNE-EN 10080 B 500 SD, incluso corte, ferrallado,
+          colocación y p.p. de atado con alambre recocido, despuntes, incluso separadores
+          de plástico rígidos, elaborado en taller y colocado en obra, diámetros varios.
+        unit: Kg.
+      AR0005b:
+        code: AR0005b
+        components:
+          0:
+            ent_code: OFICJAR
+            factor: 1.0
+            production_rate: 0.02
+          1:
+            ent_code: PEONES
+            factor: 1.0
+            production_rate: 0.03
+          2:
+            ent_code: VER3l
+            factor: 1.0
+            production_rate: 1.0
+          3:
+            ent_code: MAMV01a
+            factor: 1.0
+            production_rate: 0.01
+          4:
+            ent_code: PBGA01a
+            factor: 1.0
+            production_rate: 0.02
+          5:
+            ent_code: '%'
+            factor: 1.0
+            production_rate: 0.03
+        long_description: Suministro y plantación de Verbena bonaerensis  C-3L  40
+          cm de alltura.perfectamente enraizado y formado, con un mínimo de tres meses
+          de cultivo en el contenedor presentado. Libre de lesión o enfermedad alguna,
+          aprobado y seleccionado en origen por la dirección facultativa. Apertura
+          de hoyo de 0,60x,0,60x0,60, retirada de la excavación y relleno con sustrato
+          de plantación compuesto de 60% de arena de sílice 0,1 a 4 mm, 20% compost
+          de origen vegetal, 20% tierra vegetal de textura franco arenosa (Porcentajes
+          en peso) y una conductividad eléctrica menor de 0,8 dS/m según NTJ 05T,incluso
+          tapado y apretado, riegos de plantación con manguera según pliego de condiciones
+          y hasta el funcionamiento normalizado de la instalación de riego, medida
+          la unidad suministrada en obra.
+        title: Verbena bonaerensis C-3L 40 cm altura
+        unit: Ud
 sub_chapters:
   components: {}
   owner_code: extracted

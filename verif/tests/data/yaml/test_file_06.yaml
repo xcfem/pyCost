@@ -40,28 +40,30 @@ prices:
       type: 3
       unit: kg.
   units:
-    ACERO0103:
-      code: ACERO0103
-      components:
-        0:
-          ent_code: OFICFER
-          factor: 1.0
-          production_rate: 0.015
-        1:
-          ent_code: PEONES
-          factor: 1.0
-          production_rate: 0.015
-        2:
-          ent_code: MAACE0201
-          factor: 1.0
-          production_rate: 1.0
-        3:
-          ent_code: '%003'
-          factor: 1.0
-          production_rate: 0.03
-      long_description: "Reinforcement steel."
-      title: ''
-      unit: ''
+    parametric: {}
+    regular:
+      ACERO0103:
+        code: ACERO0103
+        components:
+          0:
+            ent_code: OFICFER
+            factor: 1.0
+            production_rate: 0.015
+          1:
+            ent_code: PEONES
+            factor: 1.0
+            production_rate: 0.015
+          2:
+            ent_code: MAACE0201
+            factor: 1.0
+            production_rate: 1.0
+          3:
+            ent_code: '%003'
+            factor: 1.0
+            production_rate: 0.03
+        long_description: "Reinforcement steel."
+        title: ''
+        unit: ''
 sub_chapters: 
   components: {}
   owner_code: TEST_PROJECT##

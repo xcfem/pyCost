@@ -94,46 +94,48 @@ prices:
       type: 0
       unit: kg
   units:
-    EAS005:
-      code: EAS005
-      components:
-        0:
-          ent_code: mt07ala011k
-          factor: 1.0
-          production_rate: 5.888
-        1:
-          ent_code: mt07aco010c
-          factor: 1.0
-          production_rate: 1.775
-        2:
-          ent_code: mq08sol020
-          factor: 1.0
-          production_rate: 0.015
-        3:
-          ent_code: mo047
-          factor: 1.0
-          production_rate: 0.297
-        4:
-          ent_code: mo094
-          factor: 1.0
-          production_rate: 0.297
-        5:
-          ent_code: '%'
-          factor: 1.0
-          production_rate: 0.02
-      long_description: 'Placa de anclaje de acero UNE-EN 10025 S275JR en perfil plano,
-        con taladro central biselado, de 250x250 mm y espesor 12 mm, con 4 pernos
-        soldados, de acero corrugado UNE-EN 10080 B 500 S de 12 mm de diámetro y 50
-        cm de longitud total.Criterio de valoración económica: El precio incluye los
-        cortes, los despuntes, la preparación de bordes, las pletinas, las piezas
-        especiales y los elementos auxiliares de montaje.Incluye: Limpieza y preparación
-        del plano de apoyo. Replanteo y marcado de los ejes. Colocación y fijación
-        provisional de la placa. Aplomado y nivelación.Criterio de medición de proyecto:
-        Número de unidades previstas, según documentación gráfica de Proyecto.Criterio
-        de medición de obra: Se medirá el número de unidades realmente ejecutadas
-        según especificaciones de Proyecto.'
-      title: Placa de anclaje de acero, con pernos soldados.
-      unit: Ud
+    parametric: {}
+    regular:
+      EAS005:
+        code: EAS005
+        components:
+          0:
+            ent_code: mt07ala011k
+            factor: 1.0
+            production_rate: 5.888
+          1:
+            ent_code: mt07aco010c
+            factor: 1.0
+            production_rate: 1.775
+          2:
+            ent_code: mq08sol020
+            factor: 1.0
+            production_rate: 0.015
+          3:
+            ent_code: mo047
+            factor: 1.0
+            production_rate: 0.297
+          4:
+            ent_code: mo094
+            factor: 1.0
+            production_rate: 0.297
+          5:
+            ent_code: '%'
+            factor: 1.0
+            production_rate: 0.02
+        long_description: 'Placa de anclaje de acero UNE-EN 10025 S275JR en perfil
+          plano, con taladro central biselado, de 250x250 mm y espesor 12 mm, con
+          4 pernos soldados, de acero corrugado UNE-EN 10080 B 500 S de 12 mm de diámetro
+          y 50 cm de longitud total.Criterio de valoración económica: El precio incluye
+          los cortes, los despuntes, la preparación de bordes, las pletinas, las piezas
+          especiales y los elementos auxiliares de montaje.Incluye: Limpieza y preparación
+          del plano de apoyo. Replanteo y marcado de los ejes. Colocación y fijación
+          provisional de la placa. Aplomado y nivelación.Criterio de medición de proyecto:
+          Número de unidades previstas, según documentación gráfica de Proyecto.Criterio
+          de medición de obra: Se medirá el número de unidades realmente ejecutadas
+          según especificaciones de Proyecto.'
+        title: Placa de anclaje de acero, con pernos soldados.
+        unit: Ud
 sub_chapters:
   components:
     E:
@@ -141,7 +143,9 @@ sub_chapters:
       code: E
       prices:
         elementary_prices: {}
-        units: {}
+        units:
+          parametric: {}
+          regular: {}
       sub_chapters:
         components:
           EA:
@@ -149,7 +153,9 @@ sub_chapters:
             code: EA
             prices:
               elementary_prices: {}
-              units: {}
+              units:
+                parametric: {}
+                regular: {}
             sub_chapters:
               components:
                 EAS:
@@ -166,7 +172,9 @@ sub_chapters:
                   code: EAS
                   prices:
                     elementary_prices: {}
-                    units: {}
+                    units:
+                      parametric: {}
+                      regular: {}
                   sub_chapters:
                     components: {}
                     owner_code: EAS

@@ -15,13 +15,14 @@ from pycost.bc3 import bc3_component
 
 class Parametric(fiebdc3.regBC3_parametric):
     ''' Parametric concept as defined in the FIEBDC-3 specification.'''
-    def __init__(self,c,t,p):
+    
+    def __init__(self,c= None,t= None,p= None):
         ''' Constructor.
 
         :param c: concept.
         :param t: text.
         :param p: parameters.
-        '''        
+        '''
         super(Parametric, self).__init__(c,t,p)
 
     def getUnitPrice(self, code, options, rootChapter):
