@@ -23,7 +23,9 @@ from pycost.prices import elementary_price
 from pycost.prices import unit_price
 from pycost.utils import pylatex_utils
 from pycost.utils import basic_types
+from pycost.bc3 import fiebdc3
 import tempfile
+import re # strip comments
 
 def print_tree(current_node, indent="", last='updown'):
 
@@ -66,6 +68,9 @@ def preprocess_file(inputFile):
     :param inputFile: input file.
     '''
     separator= '~'
+    def stripComments(code):
+        code = str(code)
+        return re.sub(r'(?m)#.*\n', '\n', code)
     def each_chunk(stream):
         buffer = ''
         while True:  # until EOF
@@ -81,11 +86,35 @@ def preprocess_file(inputFile):
                     break
                 else:
                     yield part
+    def replace_newlines_inside_string(inputString):
+        ''' Replace \n characters between double quotation marks (").
+
+        :param inputString: input string.
+        '''
+        retval= ''
+        insideDoubleQuotation= False
+        for c in inputString:
+            if(c=='"'):
+                insideDoubleQuotation= not insideDoubleQuotation
+            if(c=='\n') and insideDoubleQuotation:
+                c= ' '#'std::endl' # for later processing.
+            retval+= c
+        return retval
     tmpFile= tempfile.NamedTemporaryFile(suffix='.bc3', mode='w', encoding='utf-8', delete=False)
     for chunk in each_chunk(inputFile):
         if(len(chunk)>0):
             if(chunk[0]=='P'): # Parametric concept.
-                chunk= chunk.replace('\n','&') # replace newline characters.
+                chunk= stripComments(chunk) # Remove comments.
+                chunk= replace_newlines_inside_string(chunk)
+                chunk= re.sub('\n\n+', '\n', chunk) # Remove multiple \n
+                chunk= re.sub('\s+\n', '\n', chunk) # Remove spaces
+                chunk= re.sub('\n\s+', '\n', chunk)
+                chunk= chunk.replace('\t',' ')
+                chunk= chunk.replace('=\n','= ')
+                chunk= chunk.replace('+\n','+ ')
+                chunk= chunk.replace(',\n',', ')
+                chunk= chunk.replace('.\n','. ')
+                chunk= chunk.replace('\n',fiebdc3.parameter_tokens_separator) # replace newline characters.
             else:    
                 chunk= chunk.replace('\n','') # remove newline characters.
             chunk= separator+chunk+'\n'

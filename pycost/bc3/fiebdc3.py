@@ -13,6 +13,8 @@ import sys
 from colorama import Fore
 from colorama import Style
 
+parameter_tokens_separator= '\t'
+
 def es_codigo_obra(c):
     '''Returns true if c it's the code of a project.'''
     sz= len(c)
@@ -496,17 +498,29 @@ class regBC3_p(regBC3):
         prefix= token[0]
         if((prefix=='%') or (prefix=='$')):
             letter= token[1]
-            if(letter in ['A', 'B', 'C', 'D', 'F', 'G', 'H', 'I', 'J', 'K']):
+            if(letter in ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N']):
                 retval= True
-            elif(letter in ['O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X']):
+            elif(letter in ['O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z']):
+                retval= True
+        return retval
+
+    @staticmethod
+    def isVariableAssignment(token):
+        '''Return true if the token corresponds to a variable assignment.
+
+        :param token: text to analyze. 
+        '''
+        retval= False
+        if(self.isVariable(token)):
+            if('=' in token):
                 retval= True
         return retval
     
     @staticmethod
     def isDecompositionStatement(token):
-        '''Return true if the token corresponds to a variable.
+        '''Return true if the token corresponds to decomposition statement.
 
-        :param token: text to analyze. 
+        :param token: text to analyze.
         '''
         # See page 29 of the format definition document.
         retval= False
@@ -549,10 +563,25 @@ class regBC3_p(regBC3):
                 retval= True
         return retval
     
+    @staticmethod
+    def isExpression(token):
+        '''Return true if the token corresponds to an expression.
+
+        :param token: text to analyze. 
+        '''
+        retval= False
+        if('%' in token):
+            retval= True
+        if('/' in token):
+            retval= True
+        elif 'ATOF' in token:
+            retval= True
+        return retval
+    
     def decod_bc3(self, tokens):
         '''Decodification.'''
         for tk in tokens:
-            innerTokens= tk.split('&')
+            innerTokens= tk.split(parameter_tokens_separator)
             substitutionStatementContinues= False
             for itk in innerTokens:
                 itk= itk.strip()
@@ -567,23 +596,31 @@ class regBC3_p(regBC3):
                 if(len(itk)>0):
                     prefix= itk[0]
                     if(self.isVariable(itk)):
-                        expr= itk.split('=')
-                        varName= expr[0][:2]
-                        if(prefix=='%'): # Numerical assignment statement.
-                            values= expr[1].split(',')
-                            tmp= list()
-                            for v in values:
-                                tmp.append(float(v))
-                            values= tmp
-                        elif(prefix=='$'):# Alphanumeric assignment statement.
-                            values = re.split(r',(?=")', expr[1])
-                            tmp= list()
-                            for v in values:
-                                tmp.append(v.strip('"'))
-                            values= tmp
-                        varName= varName.replace('%', 'num')
-                        varName= varName.replace('$', 'str')
-                        self.variables[varName]= values
+                        if('=' in itk): # is assignment.
+                            expr= itk.split('=', 1)
+                            varName= expr[0][:2]
+                            if(prefix=='%'): # Numerical assignment statement.
+                                if(self.isExpression(expr[1])): # is expression
+                                    values= expr[1]
+                                else: # is list of values.
+                                    values= expr[1].split(',')
+                                    tmp= list()
+                                    for v in values:
+                                        if(len(v)>0):
+                                            tmp.append(float(v))
+                                    values= tmp
+                            elif(prefix=='$'):# Alphanumeric assignment statement.
+                                values = re.split(r',(?=")', expr[1])
+                                tmp= list()
+                                for v in values:
+                                    tmp.append(v.strip('"'))
+                                values= tmp
+                            varName= varName.replace('%', 'num')
+                            varName= varName.replace('$', 'str')
+                            self.variables[varName]= values
+                        else: #not assignment.
+                            lastStatement= itk
+                            substitutionStatementContinues= True
                     elif(self.isDecompositionStatement(itk)):
                          expr= itk.split(':')
                          code= expr[0].strip()
@@ -634,7 +671,8 @@ class regBC3_p(regBC3):
                         self.parameterLabelStatements[key]= values
                         self.parameterLabelLetters[key]= letter
                     else:
-                        logging.error('Unknown token in parametric concept: '+itk)
+                        logging.error('Unknown token in parametric concept: \''+itk+'\'')
+                        #exit(1)
         return tokens
 
     def writeParameterLabelStatements(self, os= sys.stdout):
