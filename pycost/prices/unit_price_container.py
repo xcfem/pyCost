@@ -228,7 +228,13 @@ class Descompuestos(concept_dict.ConceptDict):
 
     def getParametricConcept(self, key):
         ''' Return the parametric concept identified by the key.'''
-        return self.parametricConcepts[key]
+        retval= None
+        if key in self.parametricConcepts:
+            retval= self.parametricConcepts[key]
+        else:
+            logging.error('parametric concept: \''+str(key)+'\' not found. Candidates are:')
+            logging.info(str(self.parametricConcepts.keys()))
+        return retval
 
     def writeParametricConcepts(self, os= sys.stdout):
         ''' Writes a report of the parametrics concepts.'''
