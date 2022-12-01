@@ -144,8 +144,10 @@ class RetainingWall(SlopedWallBase):
 
         :ivar price: instance of object UnitPriceQuantities '''
         price.quantities.append(MeasurementRecord(self.textComment,self.nUnits,self.Length,None,None))
+        
     def addJointsQuant(self,price):
         '''Add dilatation-joint quantities to the price defined as parameter
+
         :ivar price: instance of object UnitPriceQuantities '''
         if self.JointLateral1.lower()[0]=='y':
             H=self.maxHeight
@@ -153,7 +155,29 @@ class RetainingWall(SlopedWallBase):
         if self.JointLateral2.lower()[0]=='y':
             H=round(self.maxHeight-self.Length*self.SlopeTopFace,2)
             price.quantities.append(MeasurementRecord(self.textComment,self.nUnits,None,None,H))
+            
+    def drainageFillMaterial(self,price,wHeel,slopeFilling=0):
+        '''Add the drainage-fill-material quantities in the back of the wall
+        to the price defined as parameter
 
+        :ivar price: instance of object UnitPriceQuantities 
+        :ivar wHeel: width of the footing heel (back slope inluded)
+        :ivar slopeFilling: slope of the filling V:H (defaults to 0-> horizontal)
+        '''
+        minHeight=self.Height-self.SlopeTopFace*self.Length
+        QuadSurfMax=self.Height*wHeel
+        if self.SlopeFrontFace>0:
+            toDiscount=0.5*self.Height*self.Height*self.SlopeEarthFace
+            QuadSurfMax=QuadSurfMax-toDiscount
+        QuadSurfMin=minHeight*wHeel
+        if self.SlopeFrontFace>0:
+            toDiscount=0.5*minHeight*minHeight*self.SlopeEarthFace
+            QuadSurfMin=QuadSurfMin-toDiscount
+        price.quantities.append(MeasurementRecord(self.textComment,0.5,QuadSurfMax+QuadSurfMin,self.Length,None))
+        if slopeFilling:
+            price.quantities.append(MeasurementRecord(self.textComment,0.5,wHeel,wHeel*slopeFilling,self.Length))
+        
+        
         
 class TwoExposedSideWall(SlopedWallBase):
     '''Quantities of a two-exposed-side wall.
