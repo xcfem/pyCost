@@ -20,7 +20,7 @@ class Quantities(list, epy.EntPyCost):
         ''' Constructor.'''
         super(Quantities, self).__init__()
         epy.EntPyCost.__init__(self)
-        
+            
     def getTotalUnits(self):
         '''Return the total number of units.'''
         t= measurement_record.MeasurementRecord.dimension(0.0)

@@ -164,10 +164,10 @@ class RetainingWall(SlopedWallBase):
         :ivar wHeel: width of the footing heel (back slope inluded)
         :ivar slopeFilling: slope of the filling V:H (defaults to 0-> horizontal)
         '''
-        minHeight=self.Height-self.SlopeTopFace*self.Length
-        QuadSurfMax=self.Height*wHeel
+        minHeight=self.maxHeight-self.SlopeTopFace*self.Length
+        QuadSurfMax=self.maxHeight*wHeel
         if self.SlopeFrontFace>0:
-            toDiscount=0.5*self.Height*self.Height*self.SlopeEarthFace
+            toDiscount=0.5*self.maxHeight*self.maxHeight*self.SlopeEarthFace
             QuadSurfMax=QuadSurfMax-toDiscount
         QuadSurfMin=minHeight*wHeel
         if self.SlopeFrontFace>0:

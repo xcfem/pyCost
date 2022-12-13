@@ -23,7 +23,24 @@ class ChapterQuantities(list, epc.EntPyCost):
     def __init__(self):
         super(ChapterQuantities, self).__init__()
         epc.EntPyCost.__init__(self, owner= None)
+
+    def appendToExistingCode(self, unitPriceQuantities):
+        ''' Tries to append the argument to an existing code on
+        this container. In it doesn't exists it creates a new
+        record.
         
+        :param unitPriceQuantities: quantities to append.
+        '''
+        unitPriceCode= unitPriceQuantities.getUnitPriceCode()
+        codeFound= False
+        for upq in self: # search for the code in this container.
+            uPCode= upq.getUnitPriceCode()
+            if(uPCode==unitPriceCode): # code found.
+                upq.quantities.extend(unitPriceQuantities.quantities)
+                codeFound= True
+        if(not codeFound):
+            super(ChapterQuantities, self).append(unitPriceQuantities)
+            
     def getLtxPriceString(self):
         ''' Return the price in as a string in human readable format.'''
         return basic_types.human_readable_currency(self.getRoundedPrice())
