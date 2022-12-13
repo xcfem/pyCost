@@ -26,11 +26,11 @@ parametricConceptKeys= site.precios.unidades.getParametricConceptsKeys()
 # Get the first parametric concept
 pConcept= site.precios.unidades.getParametricConcept(key= parametricConceptKeys[0])
 
-print('parameterLabelLetters.keys=',pConcept.parameters.parameterLabelLetters.keys())
-print('parameterLabelStatements=',pConcept.parameters.parameterLabelStatements)
+# print('parameterLabelLetters.keys=',pConcept.parameters.parameterLabelLetters.keys())
+# print('parameterLabelStatements=',pConcept.parameters.parameterLabelStatements)
 # # Write the object parameters and its options.
-pConcept.writeParameterOptions()
-quit()
+#pConcept.writeParameterOptions()
+
 # Set the values for the optional parameters.
 options= [('altura_de_apeo', '<6 m'), ('condiciones_de_ejecución', 'Volumen escaso'), ('trabajo', 'Diurno'), ('banda_de_mantenimiento', 'i<3 horas')]
 
