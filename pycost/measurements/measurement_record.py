@@ -192,7 +192,10 @@ class MeasurementRecord(epc.EntPyCost):
         row.append(components[3])
         row.append(components[4])
         total= self.getRoundedTotal()
-        if(total!=zero): str_t= basic_types.human_readable(total)
+        if(total!=zero):
+            str_t= basic_types.human_readable(total)
+        else:
+            str_t= ''
         row.append(str_t)
         data_table.add_row(row)
 
