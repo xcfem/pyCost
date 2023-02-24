@@ -117,15 +117,6 @@ class FootingBase(object):
         self.addFormworkQuant(priceQ)
         chapter.quantities.appendToExistingCode(priceQ)
 
-    def addFormworkQuant2chapter(self,chapter,price):
-        '''Add formwork quantities to the price defined as parameter
-
-        :param chapter: chapter
-        :param price: price (can be reached as presup.findPrice(priceCode))
-        '''
-        priceQ=UnitPriceQuantities(price)
-        self.addFormworkQuant(priceQ)
-        chapter.quantities.appendToExistingCode(priceQ)
 
     def addReinfConcreteQuant(self,priceQ):
         '''Add reinforcing concrete quantities to be added to a pyCost 

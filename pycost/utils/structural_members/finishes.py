@@ -48,7 +48,7 @@ def addSidewalkQuant(priceQ,textComment,nUnits,length,width,height):
     priceQ.appendMeasurement(textComment,nUnits, length, width, height)
      
 def addSidewalkQuant2chapter(chapter,price,textComment,nUnits,length,width,height):
-    '''Add sidewalk quantities to the chapter and price defined as parameters
+    '''Add sidewalk  quantities to the chapter and price defined as parameters
 
     :param chapter: chapter
     :param price: price (can be reached as presup.findPrice(priceCode))

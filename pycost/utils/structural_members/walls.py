@@ -109,21 +109,21 @@ class RetainingWall(SlopedWallBase):
     :ivar reinfQuant: reinforcement quantity
     :ivar SlopeTopFace: slope of the top face (V:H) (defaults to 0)
     :ivar SlopeFrontFace: vertical slope at the front face (H:V) (defaults to 0)
-    :ivar SlopeEarthFace: vertical slope of the earth-face (H:V) (defaults to 0)
-    :ivar FormworkLateral1: if formwork on the highgest lateral face ='Y' 
-    (defaults to yes)
-    :ivar FormworkLateral2: if formwork on the lowest lateral face ='Y' 
-    (defaults to yes)
-    :ivar JointLateral1: if dilatation joint in the highgest lateral face ='Y'
-    (defaults to 'N')
-    :ivar JointLateral2: if dilatation joint in the lowest lateral face ='Y'
-    (defaults to 'N')
+    :ivar SlopeBackFace: vertical slope of the earth-face =backface (H:V) (defaults to 0)
+    :ivar FormworkLateral1: if formwork on the highgest lateral face =True 
+    (defaults to True)
+    :ivar FormworkLateral2: if formwork on the lowest lateral face =True 
+    (defaults to True)
+    :ivar JointLateral1: if dilatation joint in the highgest lateral face =True
+    (defaults to False)
+    :ivar JointLateral2: if dilatation joint in the lowest lateral face =True
+    (defaults to False)
 
     '''
     
-    def __init__(self,textComment,nUnits,Length,Height,Thickness,reinfQuant,SlopeTopFace=0,SlopeFrontFace=0,SlopeEarthFace=0,FormworkLateral1='Y',FormworkLateral2='Y',JointLateral1='N',JointLateral2='N'):
+    def __init__(self,textComment,nUnits,Length,Height,Thickness,reinfQuant,SlopeTopFace=0,SlopeFrontFace=0,SlopeBackFace=0,FormworkLateral1=True,FormworkLateral2=True,JointLateral1=False,JointLateral2=False):
         self.maxHeight=Height
-        super(RetainingWall,self).__init__(textComment,nUnits,Length,Height,Thickness,reinfQuant,SlopeTopFace,SlopeFrontFace,SlopeEarthFace)
+        super(RetainingWall,self).__init__(textComment,nUnits,Length,Height,Thickness,reinfQuant,SlopeTopFace,SlopeFrontFace,SlopeBackFace)
         self.FormworkLateral1=FormworkLateral1
         self.FormworkLateral2=FormworkLateral2
         self.JointLateral1=JointLateral1
@@ -135,12 +135,12 @@ class RetainingWall(SlopedWallBase):
         :ivar priceQ: instance of object UnitPriceQuantities '''
         formWidth=round(self.meanHeight*math.sqrt(1+self.SlopeBackFace**2),2)
         priceQ.quantities.append(MeasurementRecord(self.textComment,self.nUnits,self.Length,formWidth,None))
-        if self.FormworkLateral1.lower()[0]=='y':
+        if self.FormworkLateral1:
             H=self.maxHeight
             B1=self.Thickness
             B2=self.Thickness+H*self.SlopeFrontFace+H*self.SlopeBackFace
             priceQ.quantities.append(MeasurementRecord(self.textComment,self.nUnits,None,round((B1+B2)/2.,2),H))
-        if self.FormworkLateral2.lower()[0]=='y':
+        if self.FormworkLateral2:
             H=round(self.maxHeight-self.Length*self.SlopeTopFace,2)
             B1=self.Thickness
             B2=self.Thickness+H*self.SlopeFrontFace+H*self.SlopeBackFace
@@ -225,10 +225,10 @@ class RetainingWall(SlopedWallBase):
         '''Add dilatation-joint quantities to the price defined as parameter
 
         :ivar priceQ: instance of object UnitPriceQuantities '''
-        if self.JointLateral1.lower()[0]=='y':
+        if self.JointLateral1:
             H=self.maxHeight
             priceQ.quantities.append(MeasurementRecord(self.textComment,self.nUnits,None,None,H))
-        if self.JointLateral2.lower()[0]=='y':
+        if self.JointLateral2:
             H=round(self.maxHeight-self.Length*self.SlopeTopFace,2)
             priceQ.quantities.append(MeasurementRecord(self.textComment,self.nUnits,None,None,H))
             
@@ -253,11 +253,11 @@ class RetainingWall(SlopedWallBase):
         minHeight=self.maxHeight-self.SlopeTopFace*self.Length
         QuadSurfMax=self.maxHeight*wHeel
         if self.SlopeFrontFace>0:
-            toDiscount=0.5*self.maxHeight*self.maxHeight*self.SlopeEarthFace
+            toDiscount=0.5*self.maxHeight*self.maxHeight*self.SlopeBackFace
             QuadSurfMax=QuadSurfMax-toDiscount
         QuadSurfMin=minHeight*wHeel
         if self.SlopeFrontFace>0:
-            toDiscount=0.5*minHeight*minHeight*self.SlopeEarthFace
+            toDiscount=0.5*minHeight*minHeight*self.SlopeBackFace
             QuadSurfMin=QuadSurfMin-toDiscount
         priceQ.quantities.append(MeasurementRecord(self.textComment,0.5,QuadSurfMax+QuadSurfMin,self.Length,None))
         if slopeFilling:
@@ -289,13 +289,13 @@ class TwoExposedSideWall(SlopedWallBase):
     :ivar SlopeTopFace: slope of the top face (V:H) (defaults to 0)
     :ivar SlopeFrontFace: vertical slope at the front face (H:V) (defaults to 0)
     :ivar SlopeBackFace: vertical slope of the back face (H:V) (defaults to 0)
-    :ivar FormworkLateral1: if formwork on the highgest lateral face ='Y' (defaults 
-    to yes)
-    :ivar FormworkLateral2: if formwork on the highgest lateral face ='Y' (defaults 
-    to yes)
+    :ivar FormworkLateral1: if formwork on the highgest lateral face =True (defaults 
+    to True)
+    :ivar FormworkLateral2: if formwork on the highgest lateral face =True (defaults 
+    to True)
     '''
     
-    def __init__(self,textComment,nUnits,Length,Height,Thickness,reinfQuant,SlopeTopFace=0,SlopeFrontFace=0,SlopeBackFace=0,FormworkLateral1='Y',FormworkLateral2='Y'):
+    def __init__(self,textComment,nUnits,Length,Height,Thickness,reinfQuant,SlopeTopFace=0,SlopeFrontFace=0,SlopeBackFace=0,FormworkLateral1=True,FormworkLateral2=True):
         self.maxHeight=Height
         super(TwoExposedSideWall,self).__init__(textComment,nUnits,Length,Height,Thickness,reinfQuant,SlopeTopFace,SlopeFrontFace,SlopeBackFace)
         self.FormworkLateral1=FormworkLateral1
@@ -309,12 +309,12 @@ class TwoExposedSideWall(SlopedWallBase):
         priceQ.quantities.append(MeasurementRecord(self.textComment,self.nUnits,self.Length,formWidth,None))
         formWidth=round(self.meanHeight*math.sqrt(1+self.SlopeBackFace**2),2)
         priceQ.quantities.append(MeasurementRecord(self.textComment,self.nUnits,self.Length,formWidth,None))
-        if self.FormworkLateral1.lower()[0]=='y':
+        if self.FormworkLateral1:
             H=self.maxHeight
             B1=self.Thickness
             B2=self.Thickness+H*self.SlopeFrontFace+H*self.SlopeBackFace
             priceQ.quantities.append(MeasurementRecord(self.textComment,self.nUnits,None,round((B1+B2)/2.,2),H))
-        if self.FormworkLateral2.lower()[0]=='y':
+        if self.FormworkLateral2:
             H=round(self.maxHeight-self.Length*self.SlopeTopFace,2)
             B1=self.Thickness
             B2=self.Thickness+H*self.SlopeFrontFace+H*self.SlopeBackFace
@@ -333,7 +333,7 @@ class TwoExposedSideWall(SlopedWallBase):
 
 
 '''
-wall=RetainingWall(textComment='wall',nUnits=2,Length=5,Height=4,Thickness=0.3,reinfQuant=5000,SlopeTopFace=1/4.,SlopeFrontFace=1/15.,SlopeEarthFace=1/12.,FormworkLateral1='Y',FormworkLateral2='Y')    
+wall=RetainingWall(textComment='wall',nUnits=2,Length=5,Height=4,Thickness=0.3,reinfQuant=5000,SlopeTopFace=1/4.,SlopeFrontFace=1/15.,SlopeBackFace=1/12.,FormworkLateral1=True,FormworkLateral2=True)    
 
-wallExp=TwoExposedSideWall(textComment='wall',Length=5,nUnits=2,Height=4,Thickness=0.3,reinfQuant=5000,SlopeTopFace=1/4.,SlopeFrontFace=1/15.,SlopeBackFace=1/12.,FormworkLateral1='Y',FormworkLateral2='Y')    
+wallExp=TwoExposedSideWall(textComment='wall',Length=5,nUnits=2,Height=4,Thickness=0.3,reinfQuant=5000,SlopeTopFace=1/4.,SlopeFrontFace=1/15.,SlopeBackFace=1/12.,FormworkLateral1=True,FormworkLateral2=True)    
 '''

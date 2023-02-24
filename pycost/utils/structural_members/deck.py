@@ -19,7 +19,7 @@ class DeckUnifCrossSect(object):
     :nUnits: number of units
     :LdeckUnifSect: length of bridge with uniform cross-section
     :AreaUnifSect: area of uniform cross-section 
-    :reinfQuant: reinforcement quantity
+    :reinfQuant: reinforcement quantity (total kg)
     :LexposFormwork: length of formwork in exposed sides of the cross-section
     :LhiddFormwork: length of formwork in hidden sides of the cross-section
                    (defaults to None)
@@ -74,7 +74,7 @@ class DeckUnifCrossSect(object):
         self.addReinforcementQuant(priceQ,percLosses)
         chapter.quantities.appendToExistingCode(priceQ)
 
-   def addExposedWallFormworkQuant(self,priceQ):
+    def addExposedWallFormworkQuant(self,priceQ):
         '''Add exposed-wall formwork quantities to the price defined as parameter
 
         :param priceQ: instance of object UnitPriceQuantities 
@@ -82,7 +82,7 @@ class DeckUnifCrossSect(object):
         if self.LexposFormwork>0:
                 priceQ.quantities.append(MeasurementRecord(self.textComment,self.nUnits,self.LdeckUnifSect,self.LexposFormwork,None))
         
-   def addExposedWallFormworkQuant2chapter(self,chapter,price):
+    def addExposedWallFormworkQuant2chapter(self,chapter,price):
         '''Add exposed-wall formwork quantities to the price defined as parameter
          
         :param chapter: chapter
@@ -112,6 +112,6 @@ class DeckUnifCrossSect(object):
         self.addHiddenWallFormworkQuant(priceQ)
         chapter.quantities.appendToExistingCode(priceQ)
 
-'
+'''
 deck=DeckUnifCrossSect('deck',nUnits=2,LdeckUnifSect=30,AreaUnifSect=1.5,reinfQuant=5000,LexposFormwork=2.5,nLateralFormwork=0)    
 '''
