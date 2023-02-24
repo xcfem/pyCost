@@ -9,36 +9,76 @@ __email__= "ana.Ortega@ciccp.es "
 
 import math
 from pycost.measurements.measurement_record import MeasurementRecord
+from pycost.structure.unit_price_quantities import UnitPriceQuantities
 
 
 
-def addNeopreneBearingPadQuant(price,textComment,nUnits,length,width,height):
+def addNeopreneBearingPadQuant(priceQ,textComment,nUnits,length,width,height):
     '''Add neoprene bearing pad quantities to the price defined as parameter
 
-    :param price: instance of object UnitPriceQuantities
+    :param priceQ: instance of object UnitPriceQuantities
     :param textComment:   string to comment each measuremt line generated 
     :param nUnits: number of units
     :param length, width, height: dimensions of the neoprene pad (usually in dm)
     '''
-    price.appendMeasurement(textComment,nUnits, length, width, height)
-    
-def addSidewalkQuant(price,textComment,nUnits,length,width,height):
+    priceQ.appendMeasurement(textComment,nUnits, length, width, height)
+
+def addNeopreneBearingPadQuant2chapter(chapter,price,textComment,nUnits,length,width,height):
+    '''Add neoprene bearing pad quantities to the chapter and price defined as parameters
+
+    :param chapter: chapter
+    :param price: price (can be reached as presup.findPrice(priceCode))
+    :param textComment:   string to comment each measuremt line generated 
+    :param nUnits: number of units
+    :param length, width, height: dimensions of the neoprene pad (usually in dm)
+     '''
+    priceQ=UnitPriceQuantities(price)
+    addNeopreneBearingPadQuant(priceQ,textComment,nUnits,length,width,height)
+    chapter.quantities.appendToExistingCode(priceQ)
+
+
+def addSidewalkQuant(priceQ,textComment,nUnits,length,width,height):
     '''Add sidewalk quantities to the price defined as parameter
 
-    :param price: instance of object UnitPriceQuantities
+    :param priceQ: instance of object UnitPriceQuantities
     :param textComment:   string to comment each measuremt line generated 
     :param nUnits: number of units
     :param length, width, height: dimensions of the sidewalk
     '''
-    price.appendMeasurement(textComment,nUnits, length, width, height)
+    priceQ.appendMeasurement(textComment,nUnits, length, width, height)
      
-def addGenericQuant(price,textComment,nUnits,length,width,height):
+def addSidewalkQuant2chapter(chapter,price,textComment,nUnits,length,width,height):
+    '''Add sidewalk quantities to the chapter and price defined as parameters
+
+    :param chapter: chapter
+    :param price: price (can be reached as presup.findPrice(priceCode))
+    :param textComment:   string to comment each measuremt line generated 
+    :param nUnits: number of units
+    :param length, width, height: dimensions of the sidewalk
+    '''
+    priceQ=UnitPriceQuantities(price)
+    addSidewalkQuant(priceQ,textComment,nUnits,length,width,height)
+    chapter.quantities.appendToExistingCode(priceQ)
+
+def addGenericQuant(priceQ,textComment,nUnits,length,width,height):
     '''Add generic quantities to the price defined as parameter
 
-    :param price: instance of object UnitPriceQuantities
+    :param priceQ: instance of object UnitPriceQuantities
     :param textComment:   string to comment each measuremt line generated 
     :param nUnits: number of units
     :param length, width, height: dimensions
     '''
-    price.appendMeasurement(textComment,nUnits, length, width, height)
+    priceQ.appendMeasurement(textComment,nUnits, length, width, height)
      
+def addGenericQuant2chapter(chapter,price,textComment,nUnits,length,width,height):
+    '''Add generic quantities to the chapter and price defined as parameters
+
+    :param chapter: chapter
+    :param price: price (can be reached as presup.findPrice(priceCode))
+    :param textComment:   string to comment each measuremt line generated 
+    :param nUnits: number of units
+    :param length, width, height: dimensions
+    '''
+    priceQ=UnitPriceQuantities(price)
+    addGenericQuant(priceQ,textComment,nUnits,length,width,height)
+    chapter.quantities.appendToExistingCode(priceQ)

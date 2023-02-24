@@ -11,6 +11,7 @@ __email__= "ana.Ortega@ciccp.es "
 
 import math
 from pycost.measurements.measurement_record import MeasurementRecord
+from pycost.structure.unit_price_quantities import UnitPriceQuantities
 
 class WallBase(object):
     '''Base class to calculate quantities of a wall.
@@ -30,22 +31,48 @@ class WallBase(object):
         self.meanThickness=meanThickness
         self.reinfQuant=reinfQuant
 
-    def addReinfConcreteQuant(self,price):
-        '''Add reinforcing concrete quantities to be added to a pyCost 
-        project '''
-        price.quantities.append(MeasurementRecord(self.textComment,self.nUnits, self.Length, self.meanThickness, self.meanHeight))
-                
-    def addReinforcementQuant(self,price,percLosses):
+    def addReinfConcreteQuant(self,priceQ):
+        '''
+        Add reinforcing concrete quantities to he price defined as parameter
+
+        :ivar priceQ: instance of object UnitPriceQuantities 
+        '''
+        priceQ.quantities.append(MeasurementRecord(self.textComment,self.nUnits, self.Length, self.meanThickness, self.meanHeight))
+
+    def addReinfConcreteQuant2chapter(self,chapter,price):
+        ''' 
+        Add reinforcing concrete quantities to he price defined as parameter
+        
+        :param chapter: chapter
+        :param price: price (can be reached as presup.findPrice(priceCode))
+        '''
+        priceQ=UnitPriceQuantities(price)
+        self.addReinfConcreteQuant(priceQ)
+        chapter.quantities.appendToExistingCode(priceQ)
+
+    def addReinforcementQuant(self,priceQ,percLosses):
         '''Add reinforcement quantities to the price defined as parameter
 
-        :ivar price: instance of object UnitPriceQuantities (if 0-> no quantitie is
+        :ivar priceQ: instance of object UnitPriceQuantities (if 0-> no quantitie is
                 added)
         :ivar percLosses: percentage to add for cutting losses (if 0-> no loss)
         '''
         if self.reinfQuant>0:
-            price.quantities.append(MeasurementRecord(self.textComment + ' s/med. aux.',1, self.reinfQuant, None, None))
+            priceQ.quantities.append(MeasurementRecord(self.textComment + ' s/med. aux.',1, self.reinfQuant, None, None))
             if percLosses>0:
-                price.quantities.append(MeasurementRecord(self.textComment +' '+ str(percLosses) + '% despuntes y despieces',1, round(percLosses/100.*self.reinfQuant,2), None, None))
+                priceQ.quantities.append(MeasurementRecord(self.textComment +' '+ str(percLosses) + '% despuntes y despieces',1, round(percLosses/100.*self.reinfQuant,2), None, None))
+        
+    def addReinforcementQuant2chapter(self,chapter,price,percLosses):
+        '''Add reinforcement quantities to the chapter and price defined as parameters
+
+        :param chapter: chapter
+        :param price: price (can be reached as presup.findPrice(priceCode))
+        :ivar percLosses: percentage to add for cutting losses (if 0-> no loss)
+        '''
+        priceQ=UnitPriceQuantities(price)
+        self.addReinforcementQuant(priceQ,percLosses)
+        chapter.quantities.appendToExistingCode(priceQ)
+       
         
 class SlopedWallBase(WallBase):
     '''Base class to calculate quantities of a sloped wall.
@@ -102,65 +129,124 @@ class RetainingWall(SlopedWallBase):
         self.JointLateral1=JointLateral1
         self.JointLateral2=JointLateral2
 
-    def addHiddenWallFormworkQuant(self,price):
+    def addHiddenWallFormworkQuant(self,priceQ):
         '''Add hidden-wall formwork quantities to the price defined as parameter
 
-        :ivar price: instance of object UnitPriceQuantities '''
+        :ivar priceQ: instance of object UnitPriceQuantities '''
         formWidth=round(self.meanHeight*math.sqrt(1+self.SlopeBackFace**2),2)
-        price.quantities.append(MeasurementRecord(self.textComment,self.nUnits,self.Length,formWidth,None))
+        priceQ.quantities.append(MeasurementRecord(self.textComment,self.nUnits,self.Length,formWidth,None))
         if self.FormworkLateral1.lower()[0]=='y':
             H=self.maxHeight
             B1=self.Thickness
             B2=self.Thickness+H*self.SlopeFrontFace+H*self.SlopeBackFace
-            price.quantities.append(MeasurementRecord(self.textComment,self.nUnits,None,round((B1+B2)/2.,2),H))
+            priceQ.quantities.append(MeasurementRecord(self.textComment,self.nUnits,None,round((B1+B2)/2.,2),H))
         if self.FormworkLateral2.lower()[0]=='y':
             H=round(self.maxHeight-self.Length*self.SlopeTopFace,2)
             B1=self.Thickness
             B2=self.Thickness+H*self.SlopeFrontFace+H*self.SlopeBackFace
-            price.quantities.append(MeasurementRecord(self.textComment,self.nUnits,None,round((B1+B2)/2.,2),H))
+            priceQ.quantities.append(MeasurementRecord(self.textComment,self.nUnits,None,round((B1+B2)/2.,2),H))
         
-    def addExposedWallFormworkQuant(self,price):
+    def addHiddenWallFormworkQuant2chapter(self,chapter,price):
+        '''Add hidden-wall formwork quantities to the chapter and price defined as parameters
+        :param chapter: chapter
+        :param price: price (can be reached as presup.findPrice(priceCode))
+        '''
+        priceQ=UnitPriceQuantities(price)
+        self.addHiddenWallFormworkQuant(priceQ)
+        chapter.quantities.appendToExistingCode(priceQ)
+        
+    def addExposedWallFormworkQuant(self,priceQ):
         '''Add exposed-wall formwork quantities to the price defined as parameter
 
-        :ivar price: instance of object UnitPriceQuantities '''
+        :ivar priceQ: instance of object UnitPriceQuantities '''
         formWidth=round(self.meanHeight*math.sqrt(1+self.SlopeFrontFace**2),2)
-        price.quantities.append(MeasurementRecord(self.textComment,self.nUnits,self.Length,formWidth,None))
+        priceQ.quantities.append(MeasurementRecord(self.textComment,self.nUnits,self.Length,formWidth,None))
         
-    def addWaterproofingPrimerQuant(self,price):
+    def addExposedWallFormworkQuant2chapter(self,chapter,price):
+        '''Add exposed-wall formwork quantities to the price defined as parameter
+        :param price: price (can be reached as presup.findPrice(priceCode))
+        :ivar percLosses: percentage to add for cutting losses (if 0-> no loss)
+        '''
+        priceQ=UnitPriceQuantities(price)
+        self.addExposedWallFormworkQuant(priceQ)
+        chapter.quantities.appendToExistingCode(priceQ)
+
+    def addWaterproofingPrimerQuant(self,priceQ):
         '''Add waterproofing primer quantities to the price defined as parameter
 
-        :ivar price: instance of object UnitPriceQuantities '''
+        :ivar priceQ: instance of object UnitPriceQuantities '''
         watproofWidth=round(self.meanHeight*math.sqrt(1+self.SlopeBackFace**2),2)
-        price.quantities.append(MeasurementRecord(self.textComment,self.nUnits,self.Length,watproofWidth,None))
-                
-    def addWaterproofingLayerQuant(self,price):
+        priceQ.quantities.append(MeasurementRecord(self.textComment,self.nUnits,self.Length,watproofWidth,None))
+
+    def addWaterproofingPrimerQuant2chapter(self,chapter,price):
+        '''Add waterproofing primer quantities to the price defined as parameter
+
+        :param chapter: chapter
+        :param price: price (can be reached as presup.findPrice(priceCode))
+        '''
+        priceQ=UnitPriceQuantities(price)
+        self.addWaterproofingPrimerQuant(priceQ)
+        chapter.quantities.appendToExistingCode(priceQ)
+ 
+    def addWaterproofingLayerQuant(self,priceQ):
         '''Add waterproofing layer quantities to the price defined as parameter
 
-        :ivar price: instance of object UnitPriceQuantities '''
-        self.addWaterproofingPrimerQuant(price)
+        :ivar priceQ: instance of object UnitPriceQuantities '''
+        self.addWaterproofingPrimerQuant(priceQ)
 
-    def addDrainageTubeQuant(self,price):
+    def addWaterproofingLayerQuant2chapter(self,chapter,price):
+        '''Add waterproofing layer quantities to the price defined as parameter
+ 
+        :param chapter: chapter
+        :param price: price (can be reached as presup.findPrice(priceCode))
+        '''
+        priceQ=UnitPriceQuantities(price)
+        self.addWaterproofingLayerQuant(priceQ)
+        chapter.quantities.appendToExistingCode(priceQ)
+
+        
+    def addDrainageTubeQuant(self,priceQ):
         '''Add drainage tube quantities to the price defined as parameter
 
-        :ivar price: instance of object UnitPriceQuantities '''
-        price.quantities.append(MeasurementRecord(self.textComment,self.nUnits,self.Length,None,None))
+        :ivar priceQ: instance of object UnitPriceQuantities '''
+        priceQ.quantities.append(MeasurementRecord(self.textComment,self.nUnits,self.Length,None,None))
         
-    def addJointsQuant(self,price):
+    def addDrainageTubeQuant2chapter(self,chapter,price):
+        '''Add drainage tube quantities to the chapter and price  defined as parameters
+ 
+        :param chapter: chapter
+        :param price: price (can be reached as presup.findPrice(priceCode))
+        '''
+        priceQ=UnitPriceQuantities(price)
+        self.addDrainageTubeQuant(priceQ)
+        chapter.quantities.appendToExistingCode(priceQ)
+
+    def addJointsQuant(self,priceQ):
         '''Add dilatation-joint quantities to the price defined as parameter
 
-        :ivar price: instance of object UnitPriceQuantities '''
+        :ivar priceQ: instance of object UnitPriceQuantities '''
         if self.JointLateral1.lower()[0]=='y':
             H=self.maxHeight
-            price.quantities.append(MeasurementRecord(self.textComment,self.nUnits,None,None,H))
+            priceQ.quantities.append(MeasurementRecord(self.textComment,self.nUnits,None,None,H))
         if self.JointLateral2.lower()[0]=='y':
             H=round(self.maxHeight-self.Length*self.SlopeTopFace,2)
-            price.quantities.append(MeasurementRecord(self.textComment,self.nUnits,None,None,H))
+            priceQ.quantities.append(MeasurementRecord(self.textComment,self.nUnits,None,None,H))
             
-    def drainageFillMaterial(self,price,wHeel,slopeFilling=0):
+    def addJointsQuant2chapter(self,chapter,price):
+        '''Add dilatation-joint quantities to the chapter and price defined as parameters
+ 
+        :param chapter: chapter
+        :param price: price (can be reached as presup.findPrice(priceCode))
+        '''
+        priceQ=UnitPriceQuantities(price)
+        self.addJointsQuant(priceQ)
+        chapter.quantities.appendToExistingCode(priceQ)
+       
+    def drainageFillMaterial(self,priceQ,wHeel,slopeFilling=0):
         '''Add the drainage-fill-material quantities in the back of the wall
         to the price defined as parameter
 
-        :ivar price: instance of object UnitPriceQuantities 
+        :ivar priceQ: instance of object UnitPriceQuantities 
         :ivar wHeel: width of the footing heel (back slope inluded)
         :ivar slopeFilling: slope of the filling V:H (defaults to 0-> horizontal)
         '''
@@ -173,11 +259,23 @@ class RetainingWall(SlopedWallBase):
         if self.SlopeFrontFace>0:
             toDiscount=0.5*minHeight*minHeight*self.SlopeEarthFace
             QuadSurfMin=QuadSurfMin-toDiscount
-        price.quantities.append(MeasurementRecord(self.textComment,0.5,QuadSurfMax+QuadSurfMin,self.Length,None))
+        priceQ.quantities.append(MeasurementRecord(self.textComment,0.5,QuadSurfMax+QuadSurfMin,self.Length,None))
         if slopeFilling:
-            price.quantities.append(MeasurementRecord(self.textComment,0.5,wHeel,wHeel*slopeFilling,self.Length))
-        
-        
+            priceQ.quantities.append(MeasurementRecord(self.textComment,0.5,wHeel,wHeel*slopeFilling,self.Length))
+
+    def drainageFillMaterial2chapter(self,chapter,price,wHeel,slopeFilling=0):
+        '''Add the drainage-fill-material quantities in the back of the wall
+        to the price defined as parameter
+        :ivar wHeel: width of the footing heel (back slope inluded)
+        :ivar slopeFilling: slope of the filling V:H (defaults to 0-> horizontal)
+
+        :param chapter: chapter
+        :param price: price (can be reached as presup.findPrice(priceCode))
+        '''
+        priceQ=UnitPriceQuantities(price)
+        self.drainageFillMaterial(priceQ,wHeel,slopeFilling)
+        chapter.quantities.appendToExistingCode(priceQ)
+
         
 class TwoExposedSideWall(SlopedWallBase):
     '''Quantities of a two-exposed-side wall.
@@ -203,25 +301,37 @@ class TwoExposedSideWall(SlopedWallBase):
         self.FormworkLateral1=FormworkLateral1
         self.FormworkLateral2=FormworkLateral2
 
-    def addExposedWallFormworkQuant(self,price):
+    def addExposedWallFormworkQuant(self,priceQ):
         '''Add exposed-wall formwork quantities to the price defined as parameter
 
-        :ivar price: instance of object UnitPriceQuantities '''
+        :ivar priceQ: instance of object UnitPriceQuantities '''
         formWidth=round(self.meanHeight*math.sqrt(1+self.SlopeFrontFace**2),2)
-        price.quantities.append(MeasurementRecord(self.textComment,self.nUnits,self.Length,formWidth,None))
+        priceQ.quantities.append(MeasurementRecord(self.textComment,self.nUnits,self.Length,formWidth,None))
         formWidth=round(self.meanHeight*math.sqrt(1+self.SlopeBackFace**2),2)
-        price.quantities.append(MeasurementRecord(self.textComment,self.nUnits,self.Length,formWidth,None))
+        priceQ.quantities.append(MeasurementRecord(self.textComment,self.nUnits,self.Length,formWidth,None))
         if self.FormworkLateral1.lower()[0]=='y':
             H=self.maxHeight
             B1=self.Thickness
             B2=self.Thickness+H*self.SlopeFrontFace+H*self.SlopeBackFace
-            price.quantities.append(MeasurementRecord(self.textComment,self.nUnits,None,round((B1+B2)/2.,2),H))
+            priceQ.quantities.append(MeasurementRecord(self.textComment,self.nUnits,None,round((B1+B2)/2.,2),H))
         if self.FormworkLateral2.lower()[0]=='y':
             H=round(self.maxHeight-self.Length*self.SlopeTopFace,2)
             B1=self.Thickness
             B2=self.Thickness+H*self.SlopeFrontFace+H*self.SlopeBackFace
-            price.quantities.append(MeasurementRecord(self.textComment,self.nUnits,None,round((B1+B2)/2.,2),H))
-        
+            priceQ.quantities.append(MeasurementRecord(self.textComment,self.nUnits,None,round((B1+B2)/2.,2),H))
+
+
+    def addExposedWallFormworkQuant2chapter(self,chapter,price):
+        '''Add exposed-wall formwork quantities to the chapter and price defined as parameters
+ 
+        :param chapter: chapter
+        :param price: price (can be reached as presup.findPrice(priceCode))
+        '''
+        priceQ=UnitPriceQuantities(price)
+        self.addExposedWallFormworkQuant(priceQ)
+        chapter.quantities.appendToExistingCode(priceQ)
+
+
 '''
 wall=RetainingWall(textComment='wall',nUnits=2,Length=5,Height=4,Thickness=0.3,reinfQuant=5000,SlopeTopFace=1/4.,SlopeFrontFace=1/15.,SlopeEarthFace=1/12.,FormworkLateral1='Y',FormworkLateral2='Y')    
 

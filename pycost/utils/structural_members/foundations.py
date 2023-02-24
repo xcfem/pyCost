@@ -10,6 +10,7 @@ __email__= "ana.Ortega@ciccp.es "
 import math
 from pycost.measurements.measurement_record import MeasurementRecord
 from pycost.utils.structural_members import columns
+from pycost.structure.unit_price_quantities import UnitPriceQuantities
 
 class FootingBase(object):
     '''Base class to calculate quantities of a footing foundation.
@@ -42,59 +43,127 @@ class FootingBase(object):
         self.Lformwork=Lformwork
         self.Lexcav=Lexcav
 
-    def addExcavationQuant(self,price):
+    def addExcavationQuant(self,priceQ):
         '''Add excavation quantities to the price defined as parameter
 
-        :ivar price: instance of object UnitPriceQuantities
+        :ivar priceQ: instance of object UnitPriceQuantities
         '''
         if self.excavHeight>0:
-            price.quantities.append(MeasurementRecord(self.textComment,self.nUnits, self.mnLength, self.mnWidth, self.excavHeight))
+            priceQ.quantities.append(MeasurementRecord(self.textComment,self.nUnits, self.mnLength, self.mnWidth, self.excavHeight))
             if self.Lexcav>0:
-                price.quantities.append(MeasurementRecord(self.textComment,0.5,self.Lexcav,round(self.excavHeight*self.excavSlope,2),self.excavHeight))
+                priceQ.quantities.append(MeasurementRecord(self.textComment,0.5,self.Lexcav,round(self.excavHeight*self.excavSlope,2),self.excavHeight))
+
+    def addExcavationQuant2chapter(self,chapter,price):
+        '''Add excavation quantities to the chapter and price defined as parameters
+
+        :param chapter: chapter
+        :param price: price (can be reached as presup.findPrice(priceCode))
+        '''
+        priceQ=UnitPriceQuantities(price)
+        self.addExcavationQuant(priceQ)
+        chapter.quantities.appendToExistingCode(priceQ)
 
                                    
-    def addLeanConcreteQuant(self,price):
+    def addLeanConcreteQuant(self,priceQ):
         '''Add lean concrete quantities to the price defined as parameter
 
-        :ivar price: instance of object UnitPriceQuantities
+        :ivar priceQ: instance of object UnitPriceQuantities
         '''
         if self.ThickLeanConcr >0:
-            price.quantities.append(MeasurementRecord(self.textComment,self.nUnits, self.mnLength, self.mnWidth, self.ThickLeanConcr))
+            priceQ.quantities.append(MeasurementRecord(self.textComment,self.nUnits, self.mnLength, self.mnWidth, self.ThickLeanConcr))
         
-    def addFillingQuant(self,price):
+    def addLeanConcreteQuant2chapter(self,chapter,price):
+        '''Add lean concrete quantities to the price defined as parameter
+        :param chapter: chapter
+        :param price: price (can be reached as presup.findPrice(priceCode))
+        '''
+        priceQ=UnitPriceQuantities(price)
+        self.addLeanConcreteQuant(priceQ)
+        chapter.quantities.appendToExistingCode(priceQ)
+
+    def addFillingQuant(self,priceQ):
         '''Add filling material quantities to the price defined as parameter
 
-        :ivar price: instance of object UnitPriceQuantities
+        :ivar priceQ: instance of object UnitPriceQuantities
         '''
         if self.fillingHeight>(self.Hfooting+self.ThickLeanConcr):
-            price.quantities.append(MeasurementRecord(self.textComment,self.nUnits, self.mnLength, self.mnWidth, self.fillingHeight-self.Hfooting-self.ThickLeanConcr))
+            priceQ.quantities.append(MeasurementRecord(self.textComment,self.nUnits, self.mnLength, self.mnWidth, self.fillingHeight-self.Hfooting-self.ThickLeanConcr))
         if self.Lexcav>0 and self.fillingHeight>0:
-            price.quantities.append(MeasurementRecord(self.textComment,self.nUnits*0.5,self.Lexcav,round(self.fillingHeight*self.excavSlope,2),self.fillingHeight))
+            priceQ.quantities.append(MeasurementRecord(self.textComment,self.nUnits*0.5,self.Lexcav,round(self.fillingHeight*self.excavSlope,2),self.fillingHeight))
         
-    def addFormworkQuant(self,price):
+    def addFillingQuant2chapter(self,chapter,price):
+        '''Add filling material quantities to the chapter and price defined as parameters
+         :param chapter: chapter
+        :param price: price (can be reached as presup.findPrice(priceCode))
+        '''
+        priceQ=UnitPriceQuantities(price)
+        self.addFillingQuant(priceQ)
+        chapter.quantities.appendToExistingCode(priceQ)
+
+    def addFormworkQuant(self,priceQ):
         '''Add formwork quantities to the price defined as parameter
 
-        :ivar price: instance of object UnitPriceQuantities '''
+        :ivar priceQ: instance of object UnitPriceQuantities '''
         if self.Lformwork>0:
-            price.quantities.append(MeasurementRecord(self.textComment,self.nUnits, self.Lformwork, None, self.Hfooting))
+            priceQ.quantities.append(MeasurementRecord(self.textComment,self.nUnits, self.Lformwork, None, self.Hfooting))
         
-    def addReinfConcreteQuant(self,price):
+    def addFormworkQuant2chapter(self,chapter,price):
+        '''Add formwork quantities to the price defined as parameter
+
+        :param chapter: chapter
+        :param price: price (can be reached as presup.findPrice(priceCode))
+        '''
+        priceQ=UnitPriceQuantities(price)
+        self.addFormworkQuant(priceQ)
+        chapter.quantities.appendToExistingCode(priceQ)
+
+    def addFormworkQuant2chapter(self,chapter,price):
+        '''Add formwork quantities to the price defined as parameter
+
+        :param chapter: chapter
+        :param price: price (can be reached as presup.findPrice(priceCode))
+        '''
+        priceQ=UnitPriceQuantities(price)
+        self.addFormworkQuant(priceQ)
+        chapter.quantities.appendToExistingCode(priceQ)
+
+    def addReinfConcreteQuant(self,priceQ):
         '''Add reinforcing concrete quantities to be added to a pyCost 
         project '''
-        price.quantities.append(MeasurementRecord(self.textComment,self.nUnits, self.mnLength, self.mnWidth, self.Hfooting))
+        priceQ.quantities.append(MeasurementRecord(self.textComment,self.nUnits, self.mnLength, self.mnWidth, self.Hfooting))
         
-    def addReinforcementQuant(self,price,percLosses):
+    def addReinfConcreteQuant2chapter(self,chapter,price):
+        '''Add reinforcing concrete quantities to a chapter and price passed as parameters
+
+        :param chapter: chapter
+        :param price: price (can be reached as presup.findPrice(priceCode))
+        '''
+        priceQ=UnitPriceQuantities(price)
+        self.addReinfConcreteQuant(priceQ)
+        chapter.quantities.appendToExistingCode(priceQ)
+
+    def addReinforcementQuant(self,priceQ,percLosses):
         '''Add reinforcement quantities to the price defined as parameter
 
-        :ivar price: instance of object UnitPriceQuantities (if 0-> no quantitie is
+        :ivar priceQ: instance of object UnitPriceQuantities (if 0-> no quantitie is
                 added)
         :ivar percLosses: percentage to add for cutting losses (if 0-> no loss)
         '''
         if self.reinfQuant>0:
-            price.quantities.append(MeasurementRecord(self.textComment + ' s/med. aux.',1, self.reinfQuant, None, None))
+            priceQ.quantities.append(MeasurementRecord(self.textComment + ' s/med. aux.',1, self.reinfQuant, None, None))
             if percLosses>0:
-                price.quantities.append(MeasurementRecord(self.textComment + ' ' + str(percLosses) + '% despuntes y despieces',1, round(percLosses/100.*self.reinfQuant,2), None, None))
+                priceQ.quantities.append(MeasurementRecord(self.textComment + ' ' + str(percLosses) + '% despuntes y despieces',1, round(percLosses/100.*self.reinfQuant,2), None, None))
         
+    def addReinforcementQuant2chapter(self,chapter,price,percLosses):
+        '''Add reinforcement quantities to the chapter and price defined as parameters
+
+        :param chapter: chapter
+        :param price: price (can be reached as presup.findPrice(priceCode))
+        '''
+        priceQ=UnitPriceQuantities(price)
+        self.addReinforcementQuant(priceQ,percLosses)
+        chapter.quantities.appendToExistingCode(priceQ)
+
 
 class FootingRectang(FootingBase):
     '''Quantities of a rectangular-based footing foundation.
@@ -182,13 +251,25 @@ class pile(columns.ColumnCylind):
     def __init__(self,textComment,nPiles,DiamPile,Hpile,reinfQuant):
         super(pile,self).__init__(textComment,nPiles,DiamPile,Hpile,reinfQuant)
 
-    def addPileDrillingQuant(self,price):
+    def addPileDrillingQuant(self,priceQ):
         '''Add quantities of pile drilling to he price defined as parameter
 
-        :param price: instance of object UnitPriceQuantities '''
+        :param priceQ: instance of object UnitPriceQuantities '''
         
-        price.quantities.append(MeasurementRecord(self.textComment,self.nShafts, self.Hcolumn, None, None))
+        priceQ.quantities.append(MeasurementRecord(self.textComment,self.nShafts, self.Hcolumn, None, None))
 
+    def addPileDrillingQuant2chapter(self,chapter,price):
+        '''Add quantities of pile drilling to he chapter and price defined as parameters
+
+        :param chapter: chapter
+        :param price: price (can be reached as presup.findPrice(priceCode))
+        '''
+        priceQ=UnitPriceQuantities(price)
+        self.addPileDrillingQuant(priceQ)
+        chapter.quantities.appendToExistingCode(priceQ)
+
+
+        
 '''
 fotRect=FootingRectang('fotRect',nUnits=3,LengthSide1=2,LengthSide2=4,Hfooting=0.75,ThickLeanConcr=0.10,excavHeight=2.75,excavSlope=3/2.,fillingHeight=1.75,reinfQuant=2750,Lformwork=6,Lexcav=7)
 
