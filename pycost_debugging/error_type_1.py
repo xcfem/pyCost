@@ -12,7 +12,7 @@ bp=presup.readFromJson(basePrecios)
 def load_param_prices(lstCod):
     ''' Load parametric prices from full codes in the list given as parameter
     '''
-    optIds=['a','b','c','d','e','f','g','h']
+    optIds=['a','b','c','d','e','f','g','h','i']
     for cod in lstCod:
         splCod=re.split('(\d+)',cod)
         selectOptions=splCod[-1]

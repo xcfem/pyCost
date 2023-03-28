@@ -831,11 +831,16 @@ class regBC3_parametric(regBC3_elemento):
         selectedParameters= dict()
         for v in options:
             parameterKey= v[0] # identifier of the parameter.
+            print('parameterKey=',parameterKey)
             parameterOption= v[1] # option chose for this parameter.
+            print('parameterOption=',parameterOption)
             letter= self.parameters.parameterLabelLetters[parameterKey]
+            print('letter=',letter)
             index= self.getParameterIndex(parameterKey, parameterOption)
+            print('index=',index)
             selectedParameters['num'+letter]= index
             selectedParameters['str'+letter]= parameterOption
+            print('selectedParameters=',selectedParameters)
         return selectedParameters
 
     def getComponents(self, options):
@@ -847,6 +852,7 @@ class regBC3_parametric(regBC3_elemento):
         retval= dict()
         selectedParameters= self.computeSelectedParameters(options)
         for key in self.parameters.components:
+            print('components=',self.parameters.components)
             cList= self.parameters.components[key]
             for c in cList:
                 c= c.replace('=', '==')
@@ -864,6 +870,7 @@ class regBC3_parametric(regBC3_elemento):
                 value= eval(c, self.parameters.variables)
                 if(value!=0.0):
                     retval[key]= value
+        print('retval=',retval)
         return retval
 
     def getSubstitutionStatementValue(self, options, substitutionStatementNames):

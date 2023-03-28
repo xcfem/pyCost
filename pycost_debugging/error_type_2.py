@@ -37,5 +37,5 @@ def load_param_prices(lstCod):
         presup.precios.unidades.Append(unitPrice)
 
 
-lstCod=['OAD090bcd']#,'ABD100bgccd','OHA010abcdc','OHA020bacdc', 'OHB010bacdc','OHB010bbcdc','AHA400bbccd']
+lstCod=['OAD090bcd']#,'ABD100bgccd','OHA010abcdc','OHA020bacdc', 'OHB010bacdc','OHB010bbcdc','AHA400bbccd'] <>?
 load_param_prices(lstCod)
