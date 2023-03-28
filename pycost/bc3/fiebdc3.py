@@ -600,7 +600,7 @@ class regBC3_p(regBC3):
                             expr= itk.split('=', 1)
                             leftHandSide= expr[0]
                             if('(' in leftHandSide): # Has indexes.
-                                indexes= leftHandSide.split('(',1)[1][:-1]
+                                indexes= leftHandSide.split('(',1)[1].split(')')[0]
                                 if(',' in indexes):
                                     indexes= indexes.split(',')
                                 else:
@@ -627,6 +627,7 @@ class regBC3_p(regBC3):
                             varName= varName.replace('%', 'num')
                             varName= varName.replace('$', 'str')
                             if(len(indexes)>1): # is a matrix (not a vector)
+                                print('values=',values)
                                 noRows= int(indexes[0])
                                 noCols= int(indexes[1])
                                 matrix= list()
