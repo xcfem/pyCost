@@ -8,6 +8,7 @@ __version__= "3.0"
 __email__= "l.pereztato@ciccp.es"
 
 
+import logging
 from pycost.bc3 import fiebdc3
 from pycost.prices import unit_price
 from pycost.bc3 import fr_entity

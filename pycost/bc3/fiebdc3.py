@@ -598,7 +598,16 @@ class regBC3_p(regBC3):
                     if(self.isVariable(itk)):
                         if('=' in itk): # is assignment.
                             expr= itk.split('=', 1)
-                            varName= expr[0][:2]
+                            leftHandSide= expr[0]
+                            if('(' in leftHandSide): # Has indexes.
+                                indexes= leftHandSide.split('(',1)[1][:-1]
+                                if(',' in indexes):
+                                    indexes= indexes.split(',')
+                                else:
+                                    indexes= [indexes]
+                            else:
+                                indexes= []
+                            varName= leftHandSide[:2]
                             if(prefix=='%'): # Numerical assignment statement.
                                 if(self.isExpression(expr[1])): # is expression
                                     values= expr[1]
@@ -617,6 +626,17 @@ class regBC3_p(regBC3):
                                 values= tmp
                             varName= varName.replace('%', 'num')
                             varName= varName.replace('$', 'str')
+                            if(len(indexes)>1): # is a matrix (not a vector)
+                                noRows= int(indexes[0])
+                                noCols= int(indexes[1])
+                                matrix= list()
+                                for i in range(0,noRows):
+                                    row= list()
+                                    for j in range(1,noCols):
+                                        ijElem= values.pop(0)
+                                        row.append(ijElem)
+                                    matrix.append(row)
+                                values= matrix
                             self.variables[varName]= values
                         else: #not assignment.
                             lastStatement= itk
@@ -667,7 +687,10 @@ class regBC3_p(regBC3):
                                 v= v.replace(' < ', '<')
                                 tmp.append(v)
                         values= tmp
-                        letter= chr(len(self.parameterLabelStatements)+ord('A'))
+                        order= len(self.parameterLabelStatements)
+                        if(order>3): # letter 'E' reserved for error (good design indeed).
+                            order+= 1
+                        letter= chr(order+ord('A'))
                         self.parameterLabelStatements[key]= values
                         self.parameterLabelLetters[key]= letter
                     else:
@@ -831,16 +854,11 @@ class regBC3_parametric(regBC3_elemento):
         selectedParameters= dict()
         for v in options:
             parameterKey= v[0] # identifier of the parameter.
-            print('parameterKey=',parameterKey)
             parameterOption= v[1] # option chose for this parameter.
-            print('parameterOption=',parameterOption)
             letter= self.parameters.parameterLabelLetters[parameterKey]
-            print('letter=',letter)
             index= self.getParameterIndex(parameterKey, parameterOption)
-            print('index=',index)
             selectedParameters['num'+letter]= index
             selectedParameters['str'+letter]= parameterOption
-            print('selectedParameters=',selectedParameters)
         return selectedParameters
 
     def getComponents(self, options):
@@ -851,8 +869,8 @@ class regBC3_parametric(regBC3_elemento):
         '''
         retval= dict()
         selectedParameters= self.computeSelectedParameters(options)
+        pattern= re.compile(r"\((\d+),(\d+)\)")
         for key in self.parameters.components:
-            print('components=',self.parameters.components)
             cList= self.parameters.components[key]
             for c in cList:
                 c= c.replace('=', '==')
@@ -867,10 +885,11 @@ class regBC3_parametric(regBC3_elemento):
                     c= c.replace(spKey, str(value))
                 for varKey in self.parameters.variables:
                     value= self.parameters.variables[varKey]
+                # Replace matrix indexes
+                c= pattern.sub(r'[\1][\2]',c)
                 value= eval(c, self.parameters.variables)
                 if(value!=0.0):
                     retval[key]= value
-        print('retval=',retval)
         return retval
 
     def getSubstitutionStatementValue(self, options, substitutionStatementNames):
@@ -905,7 +924,6 @@ class regBC3_parametric(regBC3_elemento):
         replacements= p.findall(retval)
         for r in replacements:
             value= eval(r, self.parameters.variables)
-            print(r, value)
             retval= retval.replace(r, value)
         return retval
     
