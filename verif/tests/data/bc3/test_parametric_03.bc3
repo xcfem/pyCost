@@ -1,0 +1,81 @@
+~V||FIEBDC-3/2007\70722|pyCost 1.0|\|utf-8||
+~C|ROOT##||BASE PRECIOS||12082022||
+~C|A#||ARQUITECTURA||23112018||
+~C|AA#||ACTUACIONES PREVIAS||||
+~C|AAA#||CONSOLIDACIONES||||
+~D|AAA#|OCA090$\\1.0000\AAA020$\\1.0000\AAA030$\\1.0000\|
+~C|EBA010$|ud|EQUIPO DE MÉNSULA EN CELOSÍA SIN REGULACIÓN DE TENSIÓN (NORMAL)||13032019||
+~P|EBA010$|\OPERACIÓN\Suministro y montaje\Suministro\Montaje\Desmontaje\Sustitución\ Ajuste y regulación\
+\MÉNSULA - ATIRANTADO\ dentro - recta \ dentro - curva \ fuera - recta \ fuera - curva\
+\TRABAJO\ Diurno \ Nocturno \
+\BANDA DE MANTENIMIENTO\ i >= 5 horas (con corte de tensión)\3 <= i < 5 horas (con corte de tensión)\i < 3 horas (con corte de tensión)\No necesita intervalo (sin corte de tensión)\
+\CONDICIONES DE EJECUCIÓN\Volumen relevante\Volumen escaso\
+
+%O(4)=1.1,1.2,1.3,1
+
+$L(2,2)="D","N",
+	"R", "E"
+
+$M(4)=">5","3 a 5","<3","NNI"
+
+$R(2,5) = "dentro", "dentro", "fuera", "fuera", "cola de anclaje",
+	  "recta", "curva", "recta", "curva", "amarre"
+
+%U(6)=1,0.05,1,0.6,1.4, 0.3
+
+$S(6) = "Incluye desplazamientos, maquinaria, herramientas y medios auxiliares necesarios para el montaje. Totalmente montado.", 
+	"Incluye el transporte del material suministrado a almacen de ADIF, ZIA o tajo que defina la Dirección de Obra, incluye los medios auxiliares necesarios.",
+	"Incluye el transporte de los materiales desde almacen de Adif o ZIA a la ubicación del montaje, desplazamientos, maquinaria, herramientas y medios auxiliares necesarios para el montaje. Totalmente montado.",
+	"Incluye carga, descarga y retirada de material desmontado, así como el traslado a zona de clasificación de materiales en el interior de la obra.",
+	"Incluye el desmontaje de elemento a sustituir, carga, descarga y retirada de material desmontado, así como el traslado a zona de clasificación de materiales en el interior de la obra. Incluye el montaje del nuevo elemento, desplazamientos, maquinaria, herramientas y medios auxiliares necesarios para el montaje. Totalmente montado.",
+	"Incluye desplazamientos, maquinaria, herramientas y medios auxiliares necesarios para el montaje. Totalmente ajustado."
+
+
+# mano de obra
+
+MOM0001600: 1.63 * %O(%D) * %U(%A) * (%C=a)
+MOM0001601: 1.63 * %O(%D) * %U(%A) * (%C=b)
+
+
+# materiales
+
+MN18009682: 1 * (%B<c) * (%A<>c & %A<>d & %A<>f)
+MN18009683: 1 * (%B=c @ %B=d) * (%A<>c & %A<>d & %A<>f)
+MN18000267: 1 * (%A<>c & %A<>d & %A<>f)
+MN18001024: 1 * (%B=a @ %B=c) * (%A<>c & %A<>d & %A<>f)
+MN18001025: 1 * (%B=b @ %B=d) * (%A<>c & %A<>d & %A<>f)
+
+
+# maquinaria
+
+MQ11070050: 0.4912 * %O(%D) * %U(%A)
+MQ06020005: 0.4912 * %O(%D) * %U(%A)
+
+# volumen
+%%VOL: 0.20 * (%F=b)
+
+# costes indirectos
+%%CIND: 0.06
+
+
+#textos
+
+\RESUMEN\ $A de equipo de ménsula en celosía con ménsula tipo $R(a,%B), tirante sin regulación de tensión  y atirantado en $R(b,%B) ($L(a,%C)/$M(%D)/$L(b,%F)) \
+
+\TEXTO\ $A de equipo de ménsula en celosía con ménsula tipo $R(a,%B), tirante sin regulación de tensión y un atirantado en $R(b,%B). $S(%A)
+
+Trabajo: $C.
+Banda de mantenimiento: $D.
+Condiciones de ejecución: $F. \|
+
+~C|MOM0001600|h|BRIGADA ELECTRIFICACION. C.METAL|143.76|11022022|1|
+~C|MOM0001601|h|BRIGADA ELECTRIFICACION NOCTURNO. C.METAL|179.7|11022022|1|
+~C|MN18009682|ud|CONJUNTO DE MÉNSULA B1 Y TIRANTE SIN GIRO PARA ATIRANTADO DENTRO EN CC (NORMAL)|220.54|14032022|3|
+~C|MN18009683|ud|CONJUNTO DE MÉNSULA B2 Y TIRANTE SIN GIRO PARA ATIRANTADO FUERA EN CC (NORMAL)|259.47|14032022|3|
+~C|MN18000267|ud|CONJUNTO DE SUSPENSIÓN PARA MÉNSULA SIN REGULACION DE TENSIÓN EN CC|81.07|26052009|3|
+~C|MN18001024|ud|CONJUNTO DE ATIRANTADO CA160 PARA 2 HILOS DE CONTACTO EN RECTA|145.4|26052009|3|
+~C|MN18001025|ud|CONJUNTO DE ATIRANTADO CA160 PARA 2 HILOS DE CONTACTO EN CURVA|166.7|26052009|3|
+~C|MQ11070050|h|VEHÍCULO BIVIAL CON CASTILLETE Y GRÚA|81.29|30042009|2|
+~C|MQ06020005|h|CAMIÓN CON CAJA FIJA, PARA 16 T|75.02|27122017|2|
+~C|%VOL|%|Sobrecoste por volumen escaso||16102018|%|
+~C|%CIND|%|Costes indirectos|||%|

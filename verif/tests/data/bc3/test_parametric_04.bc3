@@ -1,0 +1,128 @@
+~V||FIEBDC-3/2007\70722|pyCost 1.0|\|utf-8||
+~C|ROOT##||BASE PRECIOS||12082022||
+~C|A#||ARQUITECTURA||23112018||
+~C|AA#||ACTUACIONES PREVIAS||||
+~C|AAA#||CONSOLIDACIONES||||
+~D|AAA#|OCA090$\\1.0000\AAA020$\\1.0000\AAA030$\\1.0000\|
+
+~C|EPD010$|ud|ARQUITECTURA DE COMUNICACIONES (AV-25kV)||19022020||
+
+~P|EPD010$|\OPERACIÓN\Suministro\Suministro, montaje y puesta en servicio\  Montaje \ Puesta en servicio\
+\ EDIFICIO DE CONTROL \ subestación  \ centro de autotransformación final \ centro de autotransformación intermedio \
+\ DISPOSICIÓN \ adosada a REE \ alejada de REE \ con 4 autotransformadores \ con 2 autotransformadores \ con 1 autotransformador \
+\ ROUTER - SWITCH\ 1 Gbit/s - 1 Gbit/s\ 1 Gbit/s - 100 Mbit/s\ 100 Mbit/s - 100 Mbit/s \
+\TRABAJO-CORTE DE TENSIÓN\ diurno, con corte de tensión \ diurno, sin corte de tensión \ nocturno, con corte de tensión \ nocturno, sin corte de tensión \
+
+#combinaciones no válidas
+$E="combinación no válida"
+
+%E = (%B=a & %C>b) + (%B=b & %C=a) + (%B=b & %C=b) + (%B=b & %C=e) + (%B=c & %C=a) + (%B=c & %C=b) + (%B=c & %C=c) + (%A=a & %F<>b)
+
+
+$L(3,4) = "D", "D", "N", "N",
+          "Con corte de tensión.", "Sin corte de tensión.", "Con corte de tensión.", "Sin corte de tensión.",
+          "Diurno", "Diurno", "Nocturno", "Nocturno"
+
+#matriz de coeficientes parametro corte de tensión (con, sin)
+%Z(4) = 1.5, 1, 1.5, 1
+
+#Matriz de coletillas 
+
+$N(4)= "Incluye el propio suministro, el transporte, la carga y la descarga del material a pie de obra.", 
+       "Incluye el propio suministro, el transporte, la carga y la descarga del material a pie de obra. Incluye el montaje de todos los elementos del equipo de medida, así como las modificaciones que fuesen necesarias en el resto del sistema, pruebas hasta su correcto funcionamiento, los desplazamientos, pequeño material, herramientas, maquinaria, medios auxiliares. Todo ello con las características técnicas, de montaje, funcionamiento y documentación según especificaciones técnicas de ADIF vigentes. ",
+       "Incluye el montaje de todos los elementos del equipo de medida, así como las modificaciones que fuesen necesarias en el resto del sistema, pruebas hasta su correcto funcionamiento, los desplazamientos, pequeño material, herramientas, maquinaria, medios auxiliares. Todo ello con las características técnicas, de montaje, funcionamiento y documentación según especificaciones técnicas de ADIF vigentes.",
+       "Comprende el desarrollo del software necesario para el equipo a instalar, así como  las modificaciones de software que sean necesarias en el resto del control, para el correcto funcionamiento de todo el sistema, incluso licencias del software comercial. Totalmente instalado, probado y puesto en servicio. Todo ello con las características técnicas, funcionamiento y documentación según especificaciones técnicas de ADIF vigentes."   
+
+
+#Matriz con coeficientes del parametro operación para m.d.o y maquinaria
+%Q(4) = 0,1,0.66,0.33
+
+
+#Matriz de rendimientos m.d.o
+
+%R(3,5) = 10, 	11,	0, 	0, 	0,
+	  
+          0,  	0,	9, 	9,	0,
+
+	  0,	0,	0,	5.5,	5.5
+
+
+#Matriz de rendimientos de materiales
+
+# edif	 	se	ati	atf	
+%T(5,3) = 	13,	0,	0,      # ados ree
+		15,	0,	0,	# alej ree	
+		0,	13,	0,	# 4 autotransf
+		0,	11,	8,	# 2 autotransf
+		0,	0,	7
+
+
+# edif	 	se	ati	atf	
+%S(5,3) = 	40,	0,	0,      # ados ree
+		50,	0,	0,	# alej ree	
+		0,	19,	0,	# 4 autotransf
+		0,	19,	8,	# 2 autotransf
+		0,	0,	8
+
+
+# edif	 	se	ati	atf	
+%X(5,3) = 	2,	0,	0,      # ados ree
+		2,	0,	0,	# alej ree	
+		0,	4,	0,	# 4 autotransf
+		0,	4,	2,	# 2 autotransf
+		0,	0,	2
+
+#Matriz de texto propia
+$J(3,5) = $B, $B, "", "", "",
+          "", "", $B, $B + " con conexión colateral", "",
+          "", "","", $B, $B + " y dos feeders"
+
+
+# mano de obra
+
+MOM0001500 : %R(%B,%C) * %Q(%A) * %Z(%F) * (%F<c)
+
+MOM0001501 : %R(%B,%C) * %Q(%A) * %Z(%F) * (%F>b)
+
+#materiales principales
+
+MN18008742 : %T(%C,%B) * (%A<c) * (%D<>a)
+
+MN18008747 : %T(%C,%B) * (%A<c) * (%D=a)
+
+MN18008743 : %T(%C,%B) * (%A<c)
+
+MN18008748 : 2 *(%A<c)
+
+MN18008749  : %S(%C,%B) * (%A<c)
+
+MN18008751 : %X(%C,%B) * (%A<c) * (%D<>c)
+
+MN18009736 : %X(%C,%B) * (%A<c) * (%D=c)
+
+#Material auxiliar
+
+MN18008750: (5 * (%B=a @ %B=c)  + 8 * (%B=b)) * %Q(%A)
+
+
+# costes indirectos
+%%CIND: 0.06
+
+
+\ RESUMEN \ $A arquitectura de comunicaciones routers y switches $D en $B. $L(b,%F) ($L(a,%F)/-/-). \
+
+\ TEXTO \ $A de arquitectura de SICD, $A de routers y switches $D e instalación , tendido y conexionado de switches  y routers con el cable de fibra óptica en $B $C según condiciones técnicas del sistema integrado de control distribuido en subestaciones y centros de autotransformación, u otro documento similar, en vigor. $N(%A) $L(b,%F)
+Trabajo: $L(c,%F). \|
+
+
+~C|MOM0001500|h|EQUIPO PARA INSTALACIONES ELÉCTRICAS. C.METAL|104.53|23111999|1|
+~C|MOM0001501|h|EQUIPO PARA INSTALACIONES ELÉCTRICAS NOCTURNO. C.METAL|130.66|21092018|1|
+~C|MN18008742|ud|UNIDAD DE COMUNICACIONES (SWITCH) PARA ANILLO 61850 100 MBIT/S|842.664|05052009|3|
+~C|MN18008743|ud|LATIGUILLO DE FIBRA ÓPTICA MULTIMODO PARA RED DE COMUNICACIONES|115.464|05052009|3|
+~C|MN18008747|ud|UNIDAD DE COMUNICACIONES (SWITCH) PARA ANILLO 61850 1 GBIT/S|4216.068|05052009|3|
+~C|MN18008748|ud|LATIGUILLO DE FIBRA ÓPTICA MONOMODO PARA CONEXIÓN ENTRE SWITCHES Y EL CONCENTRADOR DE FIBRA ÓPTICA|115.464|05052009|3|
+~C|MN18008749|ud|CABLE DE PARES DE COBRE (STP CAT - 5) DE 10M|5.22|25052009|3|
+~C|MN18008751|ud|UNIDAD DE COMUNICACIONES (ROUTER) PARA ANILLO 61850 1 GBIT/S|4974.96|05052009|3|
+~C|MN18009736|ud|UNIDAD DE COMUNICACIONES (ROUTER) PARA ANILLO 61850 100 MBIT/S|994.344|22032022|3|
+~C|MN18008750|ud|MATERIAL AUXILIAR PARA INSTALACIONES Y MONTAJE PARA COMUNICACIONES DE SE/ATI/ATF|94.152|25052009|3|
+~C|%CIND|%|Costes indirectos|||%|

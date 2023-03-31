@@ -50,6 +50,21 @@ def limpia_str(inputStr):
         retval= retval.replace(chr(13),'')
     return retval
 
+def repl_lowcase_letter(match):
+    '''In a group of type "([a-z]" replaces the 'a' by '0', 'b' by '1', ....'''
+    match1=match.group(1)
+    match1=ord(match1)-97
+    return str(match1)
+
+def repl_lowcase_letter_index(match):
+    '''In a group of type "([a-z]," or ",[a-z])"  replaces the 'a' by '0', 'b' by '1', ....'''
+    match1=match.group(1)
+    match2 = match.group(2)
+    match2=ord(match2)-97
+    match3 = match.group(3)
+    return match1+str(match2)+match3
+
+    
 class regBC3(object):
     def decod_bc3(self, strtk):
         logging.error('decod_bc3 not implemented.')
@@ -596,7 +611,7 @@ class regBC3_p(regBC3):
                 if(len(itk)>0):
                     prefix= itk[0]
                     if(self.isVariable(itk)):
-                        if('=' in itk): # is assignment.
+                        if('=' in itk): # is asignment.
                             expr= itk.split('=', 1)
                             leftHandSide= expr[0]
                             if('(' in leftHandSide): # Has indexes.
@@ -619,21 +634,21 @@ class regBC3_p(regBC3):
                                             tmp.append(float(v))
                                     values= tmp
                             elif(prefix=='$'):# Alphanumeric assignment statement.
-                                values = re.split(r',(?=")', expr[1])
+                                values=expr[1].split(',')
                                 tmp= list()
                                 for v in values:
-                                    tmp.append(v.strip('"'))
-                                values= tmp
+                                    tmp.append(v.strip(' " '))
+                                values= tmp 
                             varName= varName.replace('%', 'num')
                             varName= varName.replace('$', 'str')
                             if(len(indexes)>1): # is a matrix (not a vector)
-                                print('values=',values)
+                                
                                 noRows= int(indexes[0])
                                 noCols= int(indexes[1])
                                 matrix= list()
                                 for i in range(0,noRows):
                                     row= list()
-                                    for j in range(1,noCols):
+                                    for j in range(1,noCols+1):
                                         ijElem= values.pop(0)
                                         row.append(ijElem)
                                     matrix.append(row)
@@ -874,9 +889,12 @@ class regBC3_parametric(regBC3_elemento):
         for key in self.parameters.components:
             cList= self.parameters.components[key]
             for c in cList:
+                c=re.sub(r'([a-z])',repl_lowcase_letter,c)
                 c= c.replace('=', '==')
                 c= c.replace('%', 'num')
                 c= c.replace('$', 'str')
+                c=c.replace('<>','!=')
+                c=c.replace('@', ' or ')
                 for i in range(0, len(selectedParameters)):
                     charToReplace= chr(ord('a')+i)
                     c= c.replace(charToReplace, str(i))
@@ -888,6 +906,7 @@ class regBC3_parametric(regBC3_elemento):
                     value= self.parameters.variables[varKey]
                 # Replace matrix indexes
                 c= pattern.sub(r'[\1][\2]',c)
+                c=c.replace('&','and')
                 value= eval(c, self.parameters.variables)
                 if(value!=0.0):
                     retval[key]= value
@@ -909,14 +928,20 @@ class regBC3_parametric(regBC3_elemento):
                 break
         retval= retval.replace('%', 'num')
         retval= retval.replace('$', 'str')
+        retval=re.sub(r'(\()([a-z])(,)',repl_lowcase_letter_index,retval)
+        retval=re.sub(r'(,)([a-z])(\))',repl_lowcase_letter_index,retval)
+        retval=re.sub(r'str([A-Z])\(([a-zA-Z_0-9]*),([a-zA-Z_0-9]*)\)',r'str\1[\2][\3]',retval)
         selectedParameters= self.computeSelectedParameters(options)
         for spKey in selectedParameters:
             retval= retval.replace('('+spKey+')', '['+spKey+']')
             value= selectedParameters[spKey]
             retval= retval.replace(spKey, str(value))
         # Extract string replacement patterns
-        p = re.compile("(str[A-Z]\[[0-9]+\])")
-        replacements= p.findall(retval)
+        p = re.compile("(str[A-Z]\[[0-9]+\]?!\[)")
+        replacements1= p.findall(retval)
+        p = re.compile(r'str[A-Z]\[[a-zA-Z_0-9]*\]\[[a-zA-Z_0-9]*\]')
+        replacements2=p.findall(retval)
+        replacements=replacements1+replacements2
         for r in replacements:
             value= eval(r, self.parameters.variables)
             retval= retval.replace(r, value)
