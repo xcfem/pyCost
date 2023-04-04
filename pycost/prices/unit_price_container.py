@@ -263,21 +263,27 @@ class Descompuestos(concept_dict.ConceptDict):
         '''
         pendingLinks= list() # Links that cannot be set yet.
         # Read regular unit prices.
-        regularDict= dct['regular']
-        if(regularDict):
-            for key in regularDict:
-                p= unit_price.UnitPrice(key)
-                itemDict= regularDict[key]
-                pendingLinks.extend(p.setFromDict(itemDict))
-                self.Append(p)
-            pendingLinks.extend(super(Descompuestos, self).setFromDict(regularDict))
-        parametricDict= dct['parametric']
-        if(parametricDict):
-            for key in parametricDict:
-                value= parametricDict[key]
-                param= parametric.Parametric()
-                param.setFromDict(value)
-                self.parametricConcepts[key]= param
+        if('regular' in dct):
+            regularDict= dct['regular']
+            if(regularDict):
+                for key in regularDict:
+                    p= unit_price.UnitPrice(key)
+                    itemDict= regularDict[key]
+                    pendingLinks.extend(p.setFromDict(itemDict))
+                    self.Append(p)
+                pendingLinks.extend(super(Descompuestos, self).setFromDict(regularDict))
+        else:
+            logging.log(0,'No regular unit prices.')
+        if('parametric' in dct):
+            parametricDict= dct['parametric']
+            if(parametricDict):
+                for key in parametricDict:
+                    value= parametricDict[key]
+                    param= parametric.Parametric()
+                    param.setFromDict(value)
+                    self.parametricConcepts[key]= param
+        else:
+            logging.log(0,'No parametric prices.')
         return pendingLinks
 
     def clear(self):
