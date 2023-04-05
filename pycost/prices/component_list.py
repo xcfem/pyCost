@@ -25,6 +25,18 @@ class ComponentList(list, epc.EntPyCost):
     def getPrice(self):
         return self.getRoundedPrice()
 
+    def removeConcept(self, conceptToRemoveCode):
+        ''' Remove the concept whose code is being passed as parameter.
+
+        :param conceptToRemoveCode: code of the concept to remove.
+        '''
+        toRemove= list()
+        for i in self:
+            if(i.CodigoEntidad()==conceptToRemoveCode):
+                toRemove.append(i)
+        for j in toRemove:
+            self.remove(j)
+                
     def dependsOnConcept(self, priceCode):
         ''' Return the true if the pric whose code is passed as parameter
         makes part of this component list.

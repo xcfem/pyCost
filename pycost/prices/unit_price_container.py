@@ -60,13 +60,10 @@ class Descompuestos(concept_dict.ConceptDict):
 
         :param conceptToRemoveCode: code of the concept to remove.
         '''
-        keysToRemove= list()
         for key in self.concepts:
             concept= self.concepts[key]
             if(concept.dependsOnConcept(conceptToRemoveCode)):
-                keysToRemove.append(key)
-        for key in keysToRemove:
-            self.concepts.remove(key)
+                concept.removeConcept(conceptToRemoveCode)
 
     def getConceptsThatDependOn(self, priceCode):
         ''' Return the prices which depend on the one whose code

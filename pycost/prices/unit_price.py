@@ -51,6 +51,13 @@ class UnitPrice(ms.Measurable):
         '''
         return self.components.dependsOnConcept(priceCode)
 
+    def removeConcept(self, conceptToRemoveCode):
+        ''' Remove the concept whose code is being passed as parameter.
+
+        :param conceptToRemoveCode: code of the concept to remove.
+        '''
+        self.components.removeConcept(conceptToRemoveCode)
+                
     def replaceConcept(self, oldPriceCode, newPrice):
         ''' Return the prices which depend on the one whose code
             is passed as parameter.

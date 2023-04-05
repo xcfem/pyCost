@@ -104,6 +104,14 @@ class Chapter(bc3_entity.EntBC3):
         self.quantities.removeConcept(conceptToRemoveCode)
         self.subcapitulos.removeConcept(conceptToRemoveCode)
         self.precios.removeConcept(conceptToRemoveCode)
+        
+    def removeConcepts(self, codesToRemove):
+        ''' Remove the concepts whose codes are being passed as parameter.
+
+        :param codesToRemove: list with the codes of the concepts to remove.
+        '''
+        for code in codesToRemove:
+            self.removeConcept(code)
     
     def replacePrices(self, replacementsTable):
         ''' Replace the prices as indicated by the pairs 
