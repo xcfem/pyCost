@@ -25,6 +25,43 @@ class ComponentList(list, epc.EntPyCost):
     def getPrice(self):
         return self.getRoundedPrice()
 
+    def removeConcept(self, conceptToRemoveCode):
+        ''' Remove the concept whose code is being passed as parameter.
+
+        :param conceptToRemoveCode: code of the concept to remove.
+        '''
+        toRemove= list()
+        for i in self:
+            if(i.CodigoEntidad()==conceptToRemoveCode):
+                toRemove.append(i)
+        for j in toRemove:
+            self.remove(j)
+                
+    def dependsOnConcept(self, priceCode):
+        ''' Return the true if the pric whose code is passed as parameter
+        makes part of this component list.
+
+        :param priceCode: code of the price on which the returned prices depend.
+        '''
+        retval= False
+        for i in self:
+            if(i.CodigoEntidad()==priceCode):
+                retval= True
+                break
+        return retval
+    
+    def replaceConcept(self, oldPriceCode, newPrice):
+        ''' Return the prices which depend on the one whose code
+            is passed as parameter.
+
+        :param oldPriceCode: code of the price to replace.
+        :param newPrice: replacement price (not the code, the object).
+        '''
+        for i in self:
+            code= i.CodigoEntidad()
+            if(code==oldPriceCode):
+                i.ent= newPrice # Replaces the price.
+        
     def AsignaFactor(self, f):
         '''Asigna el valor f a los factores de toda la descomposición.'''
         for i in self:

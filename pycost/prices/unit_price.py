@@ -42,7 +42,31 @@ class UnitPrice(ms.Measurable):
         
     def getType(self):
         return basic_types.mat; #XXX provisional.
-    
+
+    def dependsOnConcept(self,  priceCode):
+        ''' Return the prices which depend on the one whose code
+            is passed as parameter.
+
+        :param priceCode: code of the price on which the returned prices depend.
+        '''
+        return self.components.dependsOnConcept(priceCode)
+
+    def removeConcept(self, conceptToRemoveCode):
+        ''' Remove the concept whose code is being passed as parameter.
+
+        :param conceptToRemoveCode: code of the concept to remove.
+        '''
+        self.components.removeConcept(conceptToRemoveCode)
+                
+    def replaceConcept(self, oldPriceCode, newPrice):
+        ''' Return the prices which depend on the one whose code
+            is passed as parameter.
+
+        :param oldPriceCode: code of the price to replace.
+        :param newPrice: replacement price (not the code, the object).
+        '''
+        return self.components.replaceConcept(oldPriceCode, newPrice)
+            
     def getPrice(self):
         return self.components.getPrice()
 

@@ -155,7 +155,24 @@ class Obra(cp.Chapter):
         if not retval:
             logging.error('unit price: '+ cod + ' not found.')
         return retval
+    
+    def replacePrices(self, replacementsTable):
+        ''' Replace the prices as indicated by the pairs 
+            [oldPriceCode, newPriceCode] in the argument table.
 
+        :param replacementsTable: list of replacement pairs.
+        '''
+        # De-reference the new prices.
+        newReplacementsTable= list()
+        for pair in replacementsTable:
+            oldPriceCode= pair[0]
+            newPriceCode= pair[1]
+            newPrice= self.getUnitPrice(newPriceCode)
+            if(newPrice):
+                newReplacementsTable.append([oldPriceCode, newPrice])
+        # Call the ancestor method with de-referenced new prices.
+        super(Obra, self).replacePrices(newReplacementsTable)
+        
     def CodigoBC3(self):
         return super(Obra,self).CodigoBC3() + "#"
 

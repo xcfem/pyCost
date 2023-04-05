@@ -42,12 +42,16 @@ python tests/raw_pycost/test_05.py
 python tests/raw_pycost/test_indirect_cost.py
 
 echo "$BLEU" "  Misc tests." "$NORMAL"
-python tests/test_extract_concepts.py
-python tests/test_extract_concepts_regex.py
-python tests/test_merge_concepts_01.py
-python tests/test_merge_concepts_02.py
 python tests/test_bad_price_component.py
-python tests/test_employed_prices.py
+echo "$BLEU" "  Database manipulation." "$NORMAL"
+python tests/database_manipulation/test_extract_concepts.py
+python tests/database_manipulation/test_extract_concepts_regex.py
+python tests/database_manipulation/test_merge_concepts_01.py
+python tests/database_manipulation/test_merge_concepts_02.py
+python tests/database_manipulation/test_employed_prices.py
+python tests/database_manipulation/test_concept_substitution_01.py
+python tests/database_manipulation/test_remove_concept_01.py
+
 echo "$BLEU" "  FieBDC3 read tests." "$NORMAL"
 python tests/bc3/test_read_bc3_01.py
 python tests/bc3/test_read_bc3_02.py

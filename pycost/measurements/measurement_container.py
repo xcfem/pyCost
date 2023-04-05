@@ -40,7 +40,29 @@ class ChapterQuantities(list, epc.EntPyCost):
                 codeFound= True
         if(not codeFound):
             super(ChapterQuantities, self).append(unitPriceQuantities)
-            
+ 
+    def removeConcept(self, conceptToRemoveCode):
+        ''' Remove the concept whose code is being passed as parameter.
+
+        :param conceptToRemoveCode: code of the concept to remove.
+        '''
+        itemsToRemove= self.getConceptsThatDependOn(conceptToRemoveCode)
+        for item in itemsToRemove:
+            self.remove(item)
+
+    def getConceptsThatDependOn(self, priceCode):
+        ''' Return the prices measurements which depend on the one whose code
+            is passed as parameter.
+
+        :param priceCode: code of the price on which the returned prices depend.
+        '''
+        retval= list()
+        for upq in self: # search for the code in this container.
+            uPCode= upq.getUnitPriceCode()
+            if(uPCode==priceCode): # code found.
+                retval.append(upCode)
+        return retval
+           
     def getLtxPriceString(self):
         ''' Return the price in as a string in human readable format.'''
         return basic_types.human_readable_currency(self.getRoundedPrice())

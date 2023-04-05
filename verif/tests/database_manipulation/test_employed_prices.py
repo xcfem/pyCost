@@ -22,7 +22,7 @@ pth= os.path.dirname(__file__)
 # print("pth= ", pth)
 if(not pth):
     pth= '.'
-pendingLinks= site.readFromYaml(pth+'/data/yaml/test_file_05.yaml')
+pendingLinks= site.readFromYaml(pth+'/../data/yaml/test_file_05.yaml')
 
 employedPrices= site.getEmployedPrices(lowerMeasurementBound= 1000.0)
 employedPricesRef= ['DMOVI3001', 'DSELECRI', 'RELL0301', 'ACERO0103', 'DRIESUB', 'USJT10abz', 'DPAVHORPUL', 'DALPEDR']

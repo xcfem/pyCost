@@ -55,6 +55,29 @@ class Descompuestos(concept_dict.ConceptDict):
 
         i.Append(j,f,r)
 
+    def removeConcept(self, conceptToRemoveCode):
+        ''' Remove the concept whose code is being passed as parameter.
+
+        :param conceptToRemoveCode: code of the concept to remove.
+        '''
+        for key in self.concepts:
+            concept= self.concepts[key]
+            if(concept.dependsOnConcept(conceptToRemoveCode)):
+                concept.removeConcept(conceptToRemoveCode)
+
+    def getConceptsThatDependOn(self, priceCode):
+        ''' Return the prices which depend on the one whose code
+            is passed as parameter.
+
+        :param priceCode: code of the price on which the returned prices depend.
+        '''
+        retval= list()
+        for key in self.concepts:
+            concept= self.concepts[key]
+            if(concept.dependsOnConcept(priceCode)):
+                retval.append(concept)
+        return retval
+
     def LeeBC3Fase1(self, cds):
         '''Read the units whitout its components.'''
         for key in cds:
@@ -273,7 +296,7 @@ class Descompuestos(concept_dict.ConceptDict):
                     self.Append(p)
                 pendingLinks.extend(super(Descompuestos, self).setFromDict(regularDict))
         else:
-            logging.log(0,'No regular unit prices.')
+            logging.info('No regular unit prices.')
         if('parametric' in dct):
             parametricDict= dct['parametric']
             if(parametricDict):
@@ -283,7 +306,7 @@ class Descompuestos(concept_dict.ConceptDict):
                     param.setFromDict(value)
                     self.parametricConcepts[key]= param
         else:
-            logging.log(0,'No parametric prices.')
+            logging.info('No parametric prices.')
         return pendingLinks
 
     def clear(self):

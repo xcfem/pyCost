@@ -156,8 +156,8 @@ class Codigos(dict):
                 bc3Record.c= tokens
             elif(tipo=='D'):
                 if len(tokens)<2:
-                    logging.log(u"No components for concept: \'" + cod
-                              + "\' decomposition ignored." + '\n')
+                    logging.info(u"No components for concept: \'" + cod
+                                 + "\' decomposition ignored." + '\n')
                 else:
                     bc3Record.d= tokens
             elif(tipo=='T'):

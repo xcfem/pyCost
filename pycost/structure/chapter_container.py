@@ -50,6 +50,25 @@ class Subcapitulos(list, epc.EntPyCost):
             retval+= (j).NumDescompuestos(filterBy= filterBy)
         return retval
 
+    def removeConcept(self, conceptToRemoveCode):
+        ''' Remove the concept whose code is being passed as parameter.
+
+        :param conceptToRemoveCode: code of the concept to remove.
+        '''
+        for chapter in self:
+            chapter.removeConcept(conceptToRemoveCode)
+    
+    def getConceptsThatDependOn(self, priceCode):
+        ''' Return the prices which depend on the one whose code
+            is passed as parameter.
+
+        :param priceCode: code of the price on which the returned prices depend.
+        '''
+        retval= list()
+        for chapter in self:
+            retval+= chapter.getConceptsThatDependOn(priceCode)
+        return retval
+
     def getPrice(self):
         p= 0.0
         for j in self:

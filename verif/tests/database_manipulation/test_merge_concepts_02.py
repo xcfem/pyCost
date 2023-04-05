@@ -20,8 +20,8 @@ if(not pth):
     pth= '.'
 
 # Read price data from two databases
-pendingLinks= site.readFromYaml(pth+'/./data/yaml/test_03_prices.yaml')
-pendingLinks= site.readFromYaml(pth+'/./data/yaml/test_file_07.yaml')
+pendingLinks= site.readFromYaml(pth+'/../data/yaml/test_03_prices.yaml')
+pendingLinks= site.readFromYaml(pth+'/../data/yaml/test_file_07.yaml')
 
 ch01= site.subcapitulos.newChapter(Chapter(cod= '01', tit= 'Chapter 01'))
 
