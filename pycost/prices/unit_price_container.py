@@ -296,7 +296,7 @@ class Descompuestos(concept_dict.ConceptDict):
                     self.Append(p)
                 pendingLinks.extend(super(Descompuestos, self).setFromDict(regularDict))
         else:
-            logging.log(0,'No regular unit prices.')
+            logging.info('No regular unit prices.')
         if('parametric' in dct):
             parametricDict= dct['parametric']
             if(parametricDict):
@@ -306,7 +306,7 @@ class Descompuestos(concept_dict.ConceptDict):
                     param.setFromDict(value)
                     self.parametricConcepts[key]= param
         else:
-            logging.log(0,'No parametric prices.')
+            logging.info('No parametric prices.')
         return pendingLinks
 
     def clear(self):
