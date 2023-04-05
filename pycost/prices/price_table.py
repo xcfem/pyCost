@@ -61,6 +61,24 @@ class CuaPre(epc.EntPyCost):
     def TieneDescompuestos(self, filterBy= None):
         return (self.NumDescompuestos(filterBy= filterBy)>0)
 
+    def removeConcept(self, conceptToRemoveCode):
+        ''' Remove the concept whose code is being passed as parameter.
+
+        :param conceptToRemoveCode: code of the concept to remove.
+        '''
+        self.unidades.removeConcept(conceptToRemoveCode)
+        self.elementos.removeConcept(conceptToRemoveCode)
+
+    def getConceptsThatDependOn(self, priceCode):
+        ''' Return the prices which depend on the one whose code
+            is passed as parameter.
+
+        :param priceCode: code of the price on which the returned prices depend.
+        '''
+        # Elementary prices doesn't depend on anything.
+        return self.unidades.getConceptsThatDependOn(priceCode)
+        
+    
     def appendComponent(self, cod_ud, cod_el, r, f= 1.0):
         self.unidades.appendComponent(elementos,cod_ud,cod_el,r,f)
 

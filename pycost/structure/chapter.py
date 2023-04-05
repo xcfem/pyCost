@@ -85,6 +85,44 @@ class Chapter(bc3_entity.EntBC3):
         '''
         return (self.NumDescompuestos(filterBy= filterBy)>0)
     
+    def getConceptsThatDependOn(self, priceCode):
+        ''' Return the prices or quantities which depend on the one whose code
+            is passed as parameter.
+
+        :param priceCode: code of the price on which the returned prices depend.
+        '''
+        retval= self.precios.getConceptsThatDependOn(priceCode)
+        retval+= self.subcapitulos.getConceptsThatDependOn(priceCode)
+        retval+= self.quantities.getConceptsThatDependOn(priceCode)
+        return retval
+
+    def removeConcept(self, conceptToRemoveCode):
+        ''' Remove the concept whose code is being passed as parameter.
+
+        :param conceptToRemoveCode: code of the concept to remove.
+        '''
+        self.quantities.removeConcept(conceptToRemoveCode)
+        self.subcapitulos.removeConcept(conceptToRemoveCode)
+        self.precios.removeConcept(conceptToRemoveCode)
+    
+    def replacePrices(self, replacementsTable):
+        ''' Replace the prices as indicated by the pairs 
+            [oldPriceCode, newPrice] in the argument table.
+
+        :param replacementsTable: list of replacement pairs.
+        '''
+        affectedConcepts= list()
+        for pair in replacementsTable:
+            # Retrieve the affected records.
+            oldPriceCode= pair[0]
+            affectedConcepts+= self.getConceptsThatDependOn(oldPriceCode)
+            # Then replace the old price by the new one.
+            newPrice= pair[1]
+            for concept in affectedConcepts:
+                concept.replaceConcept(oldPriceCode, newPrice)
+            # And get rid of the old concept.
+            self.removeConcept(oldPriceCode)
+            
     def GetBuscadorDescompuestos(self):
         return self.precios.GetBuscadorDescompuestos()
     

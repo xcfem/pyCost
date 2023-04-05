@@ -55,6 +55,32 @@ class Descompuestos(concept_dict.ConceptDict):
 
         i.Append(j,f,r)
 
+    def removeConcept(self, conceptToRemoveCode):
+        ''' Remove the concept whose code is being passed as parameter.
+
+        :param conceptToRemoveCode: code of the concept to remove.
+        '''
+        keysToRemove= list()
+        for key in self.concepts:
+            concept= self.concepts[key]
+            if(concept.dependsOnConcept(conceptToRemoveCode)):
+                keysToRemove.append(key)
+        for key in keysToRemove:
+            self.concepts.remove(key)
+
+    def getConceptsThatDependOn(self, priceCode):
+        ''' Return the prices which depend on the one whose code
+            is passed as parameter.
+
+        :param priceCode: code of the price on which the returned prices depend.
+        '''
+        retval= list()
+        for key in self.concepts:
+            concept= self.concepts[key]
+            if(concept.dependsOnConcept(priceCode)):
+                retval.append(concept)
+        return retval
+
     def LeeBC3Fase1(self, cds):
         '''Read the units whitout its components.'''
         for key in cds:

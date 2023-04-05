@@ -37,6 +37,14 @@ class ElementaryPrices(concept_dict.ConceptDict):
                     retval+= 1
         return retval
 
+    def removeConcept(self, conceptToRemoveCode):
+        ''' Remove the concept whose code is being passed as parameter.
+
+        :param conceptToRemoveCode: code of the concept to remove.
+        '''
+        if(conceptToRemoveCode in self.concepts):
+            self.concepts.pop(conceptToRemoveCode)
+
     def WriteHCalc(os):
         logging.error("ElementaryPrices.WriteHCalc no implementada." + '\n')
 
