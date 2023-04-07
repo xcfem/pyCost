@@ -47,12 +47,22 @@ measurements= unit_price_quantities.UnitPriceQuantities(site.getUnitPrice(unitPr
 measurements.appendMeasurement(textComment='test parametric price.', nUnits= 1, length= None, width=None, height=None)
 ch01.appendUnitPriceQuantities(measurements)
 
+# Check text substitutions.
+texts= list()
+for key in site.precios.unidades.concepts:
+    ud= site.precios.unidades.concepts[key]
+    texts.append(ud.title)
+    texts.append(ud.long_description)
+refTexts= ['Perforación de micropilote de diámetro >0,15 m - 0,20 m, armado con tubo acero 88,9 mm diámetro exterior y 9,5 mm de espesor. (N/<3/E).', 'Perforación de micropilote de diámetro >0,15 m - 0,20 m compuesto por tubo acero 88,9 mm diámetro exterior y 9,5 mm de espesor con rosca de cualquier tipo de acero, ejecutado con cualquier ángulo y en cualquier terreno, i/ ensayos previos y en ejecución. Trabajo: Nocturno. Banda de mantenimiento: i<3 horas. Condiciones de ejecución: Volumen escaso.']
+textsOK= (texts==refTexts)
+
 # Compute cost.
 cost= site.getPrice()
 totalRefCost= 133.83
 ratio1= abs(cost-totalRefCost)/totalRefCost
 
 '''
+print(texts)
 print('cost= ', cost)
 print('ratio1= ', ratio1)
 '''
@@ -60,7 +70,7 @@ print('ratio1= ', ratio1)
 import os
 import logging
 fname= os.path.basename(__file__)
-if (ratio1<1e-6):
+if (ratio1<1e-6) and textsOK:
     print('test: '+fname+': ok.')
 else:
     logging.error('test: '+fname+' ERROR.')

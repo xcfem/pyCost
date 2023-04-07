@@ -50,12 +50,22 @@ measurements= unit_price_quantities.UnitPriceQuantities(site.getUnitPrice(unitPr
 measurements.appendMeasurement(textComment='test parametric price.', nUnits= 4, length= 2, width=12, height=None)
 ch01.appendUnitPriceQuantities(measurements)
 
+# Check text substitutions.
+texts= list()
+for key in site.precios.unidades.concepts:
+    ud= site.precios.unidades.concepts[key]
+    texts.append(ud.title)
+    texts.append(ud.long_description)
+refTexts= ['Apeo de estructuras c/metal <6 m. (D/<3/E)', 'Apeo de estructura, hasta una altura máxima de 6 m, mediante sopandas, puntales y durmientes metálicos, con parte proporcional de medios auxiliares y trabajos previos de limpieza para apoyos. Medida superficie realmente apeada descontando huecos. Según normativa de aplicación nacional y/o equivalente europea. Trabajo: Diurno. Banda de mantenimiento: i<3 horas. Condiciones de ejecución: Volumen escaso.']
+textsOK= (texts==refTexts)
+
 # Compute cost.
 cost= site.getPrice()
 totalRefCost= 7237.4400000000005
 ratio1= abs(cost-totalRefCost)/totalRefCost
 
 '''
+print(texts)
 print('cost= ', cost)
 print('ratio1= ', ratio1)
 '''
@@ -63,7 +73,7 @@ print('ratio1= ', ratio1)
 import os
 import logging
 fname= os.path.basename(__file__)
-if (ratio1<1e-6):
+if (ratio1<1e-6) and textsOK:
     print('test: '+fname+': ok.')
 else:
     logging.error('test: '+fname+' ERROR.')
