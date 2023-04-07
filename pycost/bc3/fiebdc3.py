@@ -704,7 +704,7 @@ class regBC3_p(regBC3):
                             substitutionStatementContinues= False
                             expr= itk.split('\\')
                             if(itk[0]=='\\'):
-                                key= expr[1]
+                                key= expr[1].strip()
                                 value= expr[2]
                             else:
                                 key= expr[0]
@@ -962,9 +962,9 @@ class regBC3_parametric(regBC3_elemento):
                 break
         retval= retval.replace('%', 'num')
         retval= retval.replace('$', 'str')
-        retval=re.sub(r'(\()([a-z])(,)',repl_lowcase_letter_index,retval)
-        retval=re.sub(r'(,)([a-z])(\))',repl_lowcase_letter_index,retval)
-        retval=re.sub(r'str([A-Z])\(([a-zA-Z_0-9]*),([a-zA-Z_0-9]*)\)',r'str\1[\2][\3]',retval)
+        retval= re.sub(r'(\()([a-z])(,)',repl_lowcase_letter_index,retval)
+        retval= re.sub(r'(,)([a-z])(\))',repl_lowcase_letter_index,retval)
+        retval= re.sub(r'str([A-Z])\(([a-zA-Z_0-9]*),([a-zA-Z_0-9]*)\)',r'str\1[\2][\3]',retval)
         # Replace selected values.
         selectedParameters= self.computeSelectedParameters(options)
         for spKey in selectedParameters:

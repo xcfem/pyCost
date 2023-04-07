@@ -53,12 +53,23 @@ measurements= unit_price_quantities.UnitPriceQuantities(site.getUnitPrice(unitPr
 measurements.appendMeasurement(textComment='test parametric price.', nUnits= 1, length= None, width=None, height=None)
 ch01.appendUnitPriceQuantities(measurements)
 
+# Check text substitutions.
+texts= list()
+for key in site.precios.unidades.concepts:
+    ud= site.precios.unidades.concepts[key]
+    texts.append(ud.title)
+    texts.append(ud.long_description)
+
+refTexts= ['Casco de seguridad ajustable rueda.', 'Casco de seguridad con arnés de cabeza ajustable por medio de rueda dentada, para uso normal y eléctrico hasta 440 V.. Según R.D. 773/97 y R.D. 1407/92. Equipo de Protección Individual (EPI) con marcado de conformidad CE.']
+textsOK= (texts==refTexts)
+
 # Compute cost.
 cost= site.getPrice()
 totalRefCost= 11.20
 ratio1= abs(cost-totalRefCost)/totalRefCost
 
 '''
+print(texts)
 print('cost= ', cost)
 print('ratio1= ', ratio1)
 '''
@@ -66,7 +77,7 @@ print('ratio1= ', ratio1)
 import os
 import logging
 fname= os.path.basename(__file__)
-if (ratio1<1e-2):
+if (ratio1<1e-2) and textsOK:
     print('test: '+fname+': ok.')
 else:
     logging.error('test: '+fname+' ERROR.')

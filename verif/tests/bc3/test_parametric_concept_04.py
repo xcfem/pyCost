@@ -35,8 +35,6 @@ pConcept= site.precios.unidades.getParametricConcept(key= parametricConceptKeys[
 #pConcept.writeParameterOptions()
 
 
-# Write the object parameters and its options.
-# pConcept.writeParameterOptions()
 # Set the values for the optional parameters.
 options= [('operación','Suministro, montaje y puesta en servicio'), ('edificio_de_control', 'subestación'), ('disposición', 'adosada a REE'), ('router_-_switch', '1 Gbit/s - 100 Mbit/s'), ('trabajo-corte_de_tensión','nocturno, con corte de tensión')]
 
@@ -54,12 +52,22 @@ measurements= unit_price_quantities.UnitPriceQuantities(site.getUnitPrice(unitPr
 measurements.appendMeasurement(textComment='test parametric price.', nUnits= 1, length= None, width=None, height=None)
 ch01.appendUnitPriceQuantities(measurements)
 
+# Check text substitutions.
+texts= list()
+for key in site.precios.unidades.concepts:
+    ud= site.precios.unidades.concepts[key]
+    texts.append(ud.title)
+    texts.append(ud.long_description)
+refTexts= [' Suministro, montaje y puesta en servicio arquitectura de comunicaciones routers y switches 1 Gbit/s - 100 Mbit/s en subestación. Con corte de tensión. (N/-/-). ', ' Suministro, montaje y puesta en servicio de arquitectura de SICD, Suministro, montaje y puesta en servicio de routers y switches 1 Gbit/s - 100 Mbit/s e instalación , tendido y conexionado de switches  y routers con el cable de fibra óptica en subestación adosada a REE según condiciones técnicas del sistema integrado de control distribuido en subestaciones y centros de autotransformación, u otro documento similar, en vigor. Incluye el propio suministro, el transporte, la carga y la descarga del material a pie de obra. Incluye el montaje de todos los elementos del equipo de medida, así como las modificaciones que fuesen necesarias en el resto del sistema, pruebas hasta su correcto funcionamiento, los desplazamientos, pequeño material, herramientas, maquinaria, medios auxiliares. Todo ello con las características técnicas, de montaje, funcionamiento y documentación según especificaciones técnicas de ADIF vigentes.  Con corte de tensión.. Trabajo: Nocturno. ']
+textsOK= (texts==refTexts)
+
 # Compute cost.
 cost= site.getPrice()
 totalRefCost= 26792.40
 ratio1= abs(cost-totalRefCost)/totalRefCost
 
 '''
+print(texts)
 print('cost= ', cost)
 print('ratio1= ', ratio1)
 '''
@@ -67,7 +75,7 @@ print('ratio1= ', ratio1)
 import os
 import logging
 fname= os.path.basename(__file__)
-if (ratio1<1e-6):
+if (ratio1<1e-6) and textsOK:
     print('test: '+fname+': ok.')
 else:
     logging.error('test: '+fname+' ERROR.')

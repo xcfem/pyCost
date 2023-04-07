@@ -35,8 +35,6 @@ pConcept= site.precios.unidades.getParametricConcept(key= parametricConceptKeys[
 #pConcept.writeParameterOptions()
 
 
-# Write the object parameters and its options.
-# pConcept.writeParameterOptions()
 # Set the values for the optional parameters.
 options= [('operación', 'Suministro y montaje'), ('ménsula_-_atirantado', 'dentro - curva'), ('trabajo', 'Nocturno'), ('banda_de_mantenimiento', 'i<3 horas (con corte de tensión)'), ('condiciones_de_ejecución', 'Volumen escaso')]
 
@@ -54,12 +52,22 @@ measurements= unit_price_quantities.UnitPriceQuantities(site.getUnitPrice(unitPr
 measurements.appendMeasurement(textComment='test parametric price.', nUnits= 1, length= None, width=None, height=None)
 ch01.appendUnitPriceQuantities(measurements)
 
+# Check text substitutions.
+texts= list()
+for key in site.precios.unidades.concepts:
+    ud= site.precios.unidades.concepts[key]
+    texts.append(ud.title)
+    texts.append(ud.long_description)
+refTexts= [' Suministro y montaje de equipo de ménsula en celosía con ménsula tipo dentro, tirante sin regulación de tensión  y atirantado en curva (N/<3/E) ', ' Suministro y montaje de equipo de ménsula en celosía con ménsula tipo dentro, tirante sin regulación de tensión y un atirantado en curva. Incluye desplazamientos, maquinaria, herramientas y medios auxiliares necesarios para el montaje. Totalmente montado.. Trabajo: Nocturno. Banda de mantenimiento: i<3 horas (con corte de tensión). Condiciones de ejecución: Volumen escaso. ']
+textsOK= (texts==refTexts)
+
 # Compute cost.
 cost= site.getPrice()
 totalRefCost= 1207.00
 ratio1= abs(cost-totalRefCost)/totalRefCost
 
 '''
+print(texts)
 print('cost= ', cost)
 print('ratio1= ', ratio1)
 '''
@@ -67,7 +75,7 @@ print('ratio1= ', ratio1)
 import os
 import logging
 fname= os.path.basename(__file__)
-if (ratio1<1e-4):
+if (ratio1<1e-4) and textsOK:
     print('test: '+fname+': ok.')
 else:
     logging.error('test: '+fname+' ERROR.')
