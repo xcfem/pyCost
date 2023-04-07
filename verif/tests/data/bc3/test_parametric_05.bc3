@@ -1,0 +1,48 @@
+~V||FIEBDC-3/2007\70722|pyCost 1.0|\|utf-8||
+~C|ROOT##||BASE PRECIOS||12082022||
+~C|A#||ARQUITECTURA||23112018||
+~C|AA#||ACTUACIONES PREVIAS||||
+~C|AAA#||CONSOLIDACIONES||||
+~D|AAA#|OCA090$\\1.0000\AAA020$\\1.0000\AAA030$\\1.0000\|
+
+~C|SAA010$|ud|CASCOS||26102018||
+~P|SAA010$|\TIPO\Casco de seguridad ajustable atalajes\Casco de seguridad ajustable rueda\Casco+protector de oídos\Casco de seguridad dieléctrico\Casco trabajo en altura\
+
+
+#Declaraciones
+
+	#Textos
+	$W(5)="Casco de seguridad con atalaje provisto de 6 puntos de anclaje, para uso normal y eléctrico hasta 440 V",
+	      "Casco de seguridad con arnés de cabeza ajustable por medio de rueda dentada, para uso normal y eléctrico hasta 440 V.",
+	      "Conjunto formado por casco con atalaje provisto de 6 puntos de anclaje + protectores de oídos acoplables. Según UNE-EN 458, UNE-EN 352",
+	      "Casco de seguridad dieléctrico con pantalla para protección de descargas eléctricas (amortizable en 5 usos)",
+	      "Casco de seguridad sin ventilar para trabajos verticales, con visera corta para facilitar la visión hacia arriba. Incluye barboquejo de 4 puntos de sujeción. Fabricado en polietileno de alta densidad (PEHD) con resistencia a temperaturas de hasta -30ºC y una resistencia eléctrica de hasta 1000 V. Peso: 375 g. Colores: Blanco y amarillo. Según UNE-EN 397, UNE-EN 50365"
+
+	$X="Según R.D. 773/97 y R.D. 1407/92. Equipo de Protección Individual (EPI) con marcado de conformidad CE."
+
+#Descompuesto
+
+ #Materiales
+
+MN16010125 : 1 * (%A=a)
+MN16010102 : 1 * (%A=b)
+MN16010103 : 1 * (%A=c)
+MN16010105 : 1 * (%A=d)
+MN16010123 : 1 * (%A=e)
+
+
+ #Costes indirectos
+
+%%CIND : 0.06
+
+#Texto
+
+\RESUMEN\$A.\
+\TEXTO\$W(%A). $X\|
+
+~C|MN16010125|ud|CASCO SEGURIDAD BÁSICO|5.46|02012016|3|
+~C|MN16010102|ud|CASCO SEGURIDAD CON RUEDA|10.64|02012016|3|
+~C|MN16010103|ud|CASCO SEGURIDAD + PROTECTOR OÍDOSS|20.83|02012016|3|
+~C|MN16010105|ud|CASCO SEGURIDAD DIELÉCTRICA CON PANTALLA|19.95|02012016|3|
+~C|MN16010123|ud|CASCO TRABAJOS EN ALTURA|18.17|02012016|3|
+~C|%CIND|%|Costes indirectos|||%|

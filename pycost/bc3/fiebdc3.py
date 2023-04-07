@@ -64,7 +64,26 @@ def repl_lowcase_letter_index(match):
     match3 = match.group(3)
     return match1+str(match2)+match3
 
-    
+def parse_comma_separated_list(inputString, delimiter= ',', quotationMark= '"'):
+    retval= list()
+    item= str()
+    quotedString= False
+    for c in inputString:
+        if(c==quotationMark):
+            item+= c
+            if(not quotedString): # Quoted string starts.
+                quotedString= True
+            else: # Quoted string ends.
+                quotedString= False
+        else:
+            if(c==delimiter and not quotedString): # item ends.
+                retval.append(item)
+                item= str()
+            else:
+                item+=c
+    retval.append(item)
+    return retval
+
 class regBC3(object):
     def decod_bc3(self, strtk):
         logging.error('decod_bc3 not implemented.')
@@ -634,11 +653,23 @@ class regBC3_p(regBC3):
                                             tmp.append(float(v))
                                     values= tmp
                             elif(prefix=='$'):# Alphanumeric assignment statement.
-                                values=expr[1].split(',')
+                                #values= re.split(r',(?=")', expr[1]) #expr[1].split(',')
+                                expr[1]= expr[1].replace('$', 'str')
+                                parsedValues= parse_comma_separated_list(expr[1])
                                 tmp= list()
-                                for v in values:
-                                    tmp.append(v.strip(' " '))
-                                values= tmp 
+                                for parsedV in parsedValues:
+                                    tmpStr= parsedV.strip()
+                                    # Remove the double quotes only if it starts and ends with double quotes.
+                                    if((tmpStr[0]=='"') and (tmpStr[-1]=='"')): # 
+                                       tmpStr= tmpStr[1:-1]
+                                    tmp.append(tmpStr)
+                                if(len(tmp)>1):
+                                    values= tmp
+                                elif(len(tmp)>0):
+                                    values= tmp[0]
+                                else:
+                                    logging.error('Something went wrong when parsing\''+itk+'\'')
+                                    exit(1)
                             varName= varName.replace('%', 'num')
                             varName= varName.replace('$', 'str')
                             if(len(indexes)>1): # is a matrix (not a vector)
@@ -873,8 +904,11 @@ class regBC3_parametric(regBC3_elemento):
             parameterOption= v[1] # option chose for this parameter.
             letter= self.parameters.parameterLabelLetters[parameterKey]
             index= self.getParameterIndex(parameterKey, parameterOption)
-            selectedParameters['num'+letter]= index
-            selectedParameters['str'+letter]= parameterOption
+            # store selected parameters in dictionary
+            numKey= 'num'+letter
+            selectedParameters[numKey]= index
+            strKey= 'str'+letter
+            selectedParameters[strKey]= parameterOption
         return selectedParameters
 
     def getComponents(self, options):
@@ -931,13 +965,14 @@ class regBC3_parametric(regBC3_elemento):
         retval=re.sub(r'(\()([a-z])(,)',repl_lowcase_letter_index,retval)
         retval=re.sub(r'(,)([a-z])(\))',repl_lowcase_letter_index,retval)
         retval=re.sub(r'str([A-Z])\(([a-zA-Z_0-9]*),([a-zA-Z_0-9]*)\)',r'str\1[\2][\3]',retval)
+        # Replace selected values.
         selectedParameters= self.computeSelectedParameters(options)
         for spKey in selectedParameters:
             retval= retval.replace('('+spKey+')', '['+spKey+']')
             value= selectedParameters[spKey]
             retval= retval.replace(spKey, str(value))
-        # Extract string replacement patterns
-        p = re.compile("(str[A-Z]\[[0-9]+\]?!\[)")
+        # Extract string replacement patterns (with brackets)
+        p = re.compile(r"str[A-Z]\[[0-9]+\](?!\[)")
         replacements1= p.findall(retval)
         p = re.compile(r'str[A-Z]\[[a-zA-Z_0-9]*\]\[[a-zA-Z_0-9]*\]')
         replacements2=p.findall(retval)
@@ -945,12 +980,25 @@ class regBC3_parametric(regBC3_elemento):
         for r in replacements:
             value= eval(r, self.parameters.variables)
             retval= retval.replace(r, value)
-        # Extract number replacement patterns
+        # Extract number replacement patterns (with brackets)
         p = re.compile("(num[A-Z]\[[0-9]+\])")
         replacements= p.findall(retval)
         for r in replacements:
             value= eval(r, self.parameters.variables)
             retval= retval.replace(r, value)
+        # Extract string replacement patterns (without brackets)
+        p = re.compile(r'str[O-X]')
+        replacements3= p.findall(retval)
+        for r in replacements3:
+            value= eval(r, self.parameters.variables)
+            retval= retval.replace(r, value)
+        # Extract number replacement patterns (without brackets)
+        p = re.compile("(num[O-X]\[[0-9]+\])")
+        replacements4= p.findall(retval)
+        for r in replacements4:
+            value= eval(r, self.parameters.variables)
+            retval= retval.replace(r, value)
+            
         return retval
     
     def getSummary(self, options):
