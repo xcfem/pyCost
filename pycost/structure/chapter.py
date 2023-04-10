@@ -49,6 +49,17 @@ class Chapter(bc3_entity.EntBC3):
         self.precios= price_table.CuaPre() #Para precios elementales y
                                #descompuestos clasificados por capítulos.
 
+    def newElementaryPrice(self, code, shortDescription, price, typ, unit, longDescription= None):
+        ''' Define an elementary price.
+
+        :param code: price identifier.
+        :param shortDescription: short description of the price.
+        :param typ: price type (labor, machinery, materials or unclassified).
+        :param unit: unit (m, kg,...).
+        :param longDescription: long description of the price.
+        '''
+        return self.precios.newElementaryPrice(code= code, shortDescription= shortDescription, price= price, typ= typ, unit= unit, longDescription= longDescription)
+
     def NumElementales(self, filterBy= None):
         ''' Return the number of elementary prices in this chapter and its
             sub-chapters. If filterBy is not None return only the number of 
@@ -76,6 +87,29 @@ class Chapter(bc3_entity.EntBC3):
         '''
         return self.precios.NumDescompuestos(filterBy= filterBy)+self.subcapitulos.NumDescompuestos(filterBy= filterBy)
     
+    def newCompoundPrice(self, code, shortDescription, components, unit, longDescription= None):
+        ''' Define a compound price.
+
+        :param code: price identifier.
+        :param shortDescription: short description of the price.
+        :param components: price decomposition.
+        :param unit: unit (m, kg,...).
+        :param longDescription: long description of the price.
+        '''
+        # Dereference the prices in the component list.
+        derefComponents= list()
+        for comp in components:
+            key= comp[0]
+            price= self.findPrice(key)
+            if(price):
+                tpl= (price, comp[1], comp[2])
+                derefComponents.append(tpl)
+            else:
+                logging.error('Price: '+str(key)+' not found.')
+        retval= self.precios.newCompoundPrice(code= code, shortDescription= shortDescription, components= derefComponents, unit= unit, longDescription= longDescription)
+        return retval
+        
+        
     def TieneDescompuestos(self, filterBy= None):
         ''' Return true if the chapter has compound prices. If filterBy 
         is not None return true only if the number of compound prices 

@@ -40,6 +40,22 @@ class Descompuestos(concept_dict.ConceptDict):
                     retval+= 1
         return retval
     
+    def newCompoundPrice(self, code, shortDescription, components, unit, longDescription= None):
+        ''' Define a compount price.
+
+        :param code: price identifier.
+        :param shortDescription: short description of the price.
+        :param components: price decomposition.
+        :param unit: unit (m, kg,...).
+        :param longDescription: long description of the price.
+        '''
+        if(code in self.concepts):
+            logging.warning('Code: '+code+' already exists in the price table.')
+        newPrice= unit_price.UnitPrice(cod= code, desc= shortDescription, ud= unit, ld= longDescription)
+        newPrice.components.setFromTupleList(components)
+        self.Append(newPrice)
+        return newPrice
+    
     def appendComponent(self, el, cod_ud, cod_el, r, f):
         ''' Append a new component to the container.
 

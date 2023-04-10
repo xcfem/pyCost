@@ -37,6 +37,21 @@ class ElementaryPrices(concept_dict.ConceptDict):
                     retval+= 1
         return retval
 
+    def newElementaryPrice(self, code, shortDescription, price, typ, unit, longDescription= None):
+        ''' Define an elementary price.
+
+        :param code: price identifier.
+        :param shortDescription: short description of the price.
+        :param typ: price type (labor, machinery, materials or unclassified).
+        :param unit: unit (m, kg,...).
+        :param longDescription: long description of the price.
+        '''
+        if(code in self.concepts):
+            logging.warning('Code: '+code+' already exists in the price table.')
+        newPrice= elementary_price.ElementaryPrice(cod=code, tit=shortDescription, ud= unit, p= price, tp= typ, long_description= longDescription)
+        self.Append(newPrice)
+        return newPrice
+        
     def removeConcept(self, conceptToRemoveCode):
         ''' Remove the concept whose code is being passed as parameter.
 

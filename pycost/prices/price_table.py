@@ -49,6 +49,17 @@ class CuaPre(epc.EntPyCost):
         
         return (self.NumElementales(filterBy= filterBy)>0)
 
+    def newElementaryPrice(self, code, shortDescription, price, typ, unit, longDescription= None):
+        ''' Define an elementary price.
+
+        :param code: price identifier.
+        :param shortDescription: short description of the price.
+        :param typ: price type (labor, machinery, materials or unclassified).
+        :param unit: unit (m, kg,...).
+        :param longDescription: long description of the price.
+        '''
+        return self.elementos.newElementaryPrice(code= code, shortDescription= shortDescription, price= price, typ= typ, unit= unit, longDescription= longDescription)
+        
     def NumDescompuestos(self, filterBy= None):
         ''' Return the number of compound prices. If filterBy is not None
         return only the number of compound prices whose code is also in the
@@ -57,6 +68,17 @@ class CuaPre(epc.EntPyCost):
         :param filterBy: count only if the code is in this list.
         '''
         return self.unidades.size(filterBy= filterBy)
+    
+    def newCompoundPrice(self, code, shortDescription, components, unit, longDescription= None):
+        ''' Define a compount price.
+
+        :param code: price identifier.
+        :param shortDescription: short description of the price.
+        :param components: price decomposition.
+        :param unit: unit (m, kg,...).
+        :param longDescription: long description of the price.
+        '''
+        return self.unidades.newCompoundPrice(code= code, shortDescription= shortDescription, components= components, unit= unit, longDescription= longDescription)
 
     def TieneDescompuestos(self, filterBy= None):
         return (self.NumDescompuestos(filterBy= filterBy)>0)

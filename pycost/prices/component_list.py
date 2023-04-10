@@ -13,6 +13,7 @@ from pycost.utils import EntPyCost as epc
 from pycost.prices.price_justification import PriceJustificationList as pjl
 from pycost.prices.price_justification import PriceJustificationRecordContainer as pjrc
 from pycost.bc3 import bc3_component
+from pycost.bc3 import fr_entity
 from pycost.utils import basic_types
 
 class ComponentList(list, epc.EntPyCost):
@@ -210,3 +211,12 @@ class ComponentList(list, epc.EntPyCost):
             exit(1)           
         return pendingLinks
 
+    def setFromTupleList(self, tupleList):
+        ''' Read member values from a list of tuples.
+
+        :param tupleList: list of tuples.
+        '''
+        for tp in tupleList:
+            price= tp[0]
+            comp= bc3_component.BC3Component(price, fr= fr_entity.EntFR(f= tp[1], r=tp[2]))
+            self.append(comp)
