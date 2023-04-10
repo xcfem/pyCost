@@ -73,7 +73,6 @@ class ElementaryPrice(m.Measurable):
 
         :param dct: input dictionary.
         '''
-#        print('dct=',dct)
         self.tipo= dct['type']
         self.precio= dct['price']
         return super(ElementaryPrice, self).setFromDict(dct)
