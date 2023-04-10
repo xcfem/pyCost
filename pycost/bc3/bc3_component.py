@@ -108,7 +108,11 @@ class BC3Component(fr_entity.EntFR):
         :param dct: input dictionary.
         '''
         pendingLinks= list() # Links that cannot be set yet.
-        ent_code= dct['ent_code']
+        if(isinstance(dct, dict)):
+            ent_code= dct['ent_code']
+        else:
+            logging.error('Expected a dictionary, received a: '+str(type(dct))+' with value: '+str(dct))
+            exit(1)
         self.ent= None
         pendingLinks.append({'object':self, 'attr':'ent', 'key':ent_code}) 
         pendingLinks.extend(super(BC3Component,self).setFromDict(dct))
