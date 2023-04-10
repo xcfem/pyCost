@@ -198,11 +198,15 @@ class ComponentList(list, epc.EntPyCost):
         :param dct: input dictionary.
         '''
         pendingLinks= list() # Links that cannot be set yet.
-        for key in dct:
-            comp= bc3_component.BC3Component(key)
-            itemDict= dct[key]
-            pendingLinks.extend(comp.setFromDict(itemDict))
-            self.append(comp)
-        pendingLinks.extend(epc.EntPyCost.setFromDict(self, dct))
+        if(isinstance(dct, dict)):
+            for key in dct:
+                comp= bc3_component.BC3Component(key)
+                itemDict= dct[key]
+                pendingLinks.extend(comp.setFromDict(itemDict))
+                self.append(comp)
+            pendingLinks.extend(epc.EntPyCost.setFromDict(self, dct))
+        else:
+            logging.error('Expected a dictionary, received a: '+str(type(dct))+' with value: '+str(dct))
+            exit(1)           
         return pendingLinks
 
