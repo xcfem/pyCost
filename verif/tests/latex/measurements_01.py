@@ -14,7 +14,9 @@ pth= os.path.dirname(__file__)
 # print("pth= ", pth)
 if(not pth):
     pth= '.'
-exec(open(pth+"/./test_estimates.py").read())
+import test_estimates
+
+obra= test_estimates.test(pth)
 
 doc= pylatex.Document(documentclass= 'book')
 doc.packages.append(pylatex.Package('babel', options = ['spanish']))
