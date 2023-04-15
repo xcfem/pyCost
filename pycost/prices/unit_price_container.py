@@ -209,7 +209,7 @@ class Descompuestos(concept_dict.ConceptDict):
                 data_table.add_hline()
                 data_table.end_table_last_footer()
                 filteredConcepts= self.filterConcepts(filterBy= filterBy)
-                for key in filteredConcepts:
+                for key in sorted(filteredConcepts):
                     data_table.add_empty_row()
                     self.concepts[key].writePriceTableOneIntoLatexDocument(data_table)
                     data_table.add_empty_row()
@@ -230,7 +230,7 @@ class Descompuestos(concept_dict.ConceptDict):
                 doc.append(pylatex_utils.SmallCommand())
                 longTableStr= 'l'
                 with doc.create(pylatex_utils.LongTable(longTableStr)) as data_table:
-                    for key in filteredConcepts:
+                    for key in sorted(filteredConcepts):
                         self.concepts[key].writePriceJustification(data_table)
                         retval.append(key)
                 doc.append(pylatex_utils.NormalSizeCommand())
@@ -248,7 +248,7 @@ class Descompuestos(concept_dict.ConceptDict):
             longTableStr= 'l'
             with doc.create(pylatex_utils.LongTable(longTableStr)) as data_table:
                 filteredConcepts= self.filterConcepts(filterBy= filterBy)
-                for key in filteredConcepts:
+                for key in sorted(filteredConcepts):
                     self.concepts[key].writePriceTableTwoIntoLatexDocument(data_table)
             doc.append(pylatex_utils.NormalSizeCommand())
 

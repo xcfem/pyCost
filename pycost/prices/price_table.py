@@ -25,9 +25,11 @@ class CuaPre(epc.EntPyCost):
         self.unidades= unit_price_container.Descompuestos() #Unidades de obra.
 
     def Elementales(self):
+        ''' Return the container of the elementary prices.'''
         return self.elementos
 
     def UdsObra(self):
+        ''' Return the container of the compount prices.'''
         return self.unidades
 
     def NumElementales(self, filterBy= None):
