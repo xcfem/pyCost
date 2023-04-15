@@ -245,7 +245,7 @@ class ElementaryPrices(concept_dict.ConceptDict):
         '''
         # Get concepts to write.
         filteredConcepts= list()
-        for key in self.concepts:
+        for key in sorted(self.concepts):
             el= self.concepts[key]
             if(el.getType() == tipo):            
                 if(filterBy is not None):
