@@ -23,26 +23,38 @@ class PriceJustificationList(object):
     :ivar percentages: percentage (ex: indirect costs) (instance of PriceJustificationRecord class)
     '''
     
-    def __init__(self,pa, mano, mater, maqui, otr, perc):
+    def __init__(self,pa, labor, materials, machinery, others, labor_perc, materials_perc, machinery_perc, others_perc):
         ''' Constructor.
 
         :param pa: True if cumulated percentages.
-        :param mano: labor (instance of PriceJustificationRecord class)
+        :param labor: labor (instance of PriceJustificationRecord class)
         :param mater: materials (instance of PriceJustificationRecord class)
         :param maqui: machinery (instance of PriceJustificationRecord class)
         :param otr: not-classified elemental price (instance of PriceJustificationRecord class)
-        :param perc: percentage (ex: indirect costs) (instance of PriceJustificationRecordContainer class)
+        :param labor_perc: labor cost expressed as percentage of the total price.
+        :param materials_perc: materials cost expressed as percentage of the total price.
+        :param machinery_perc: machinery cost expressed as percentage of the total price.
+        :param others_perc: not classified expressed as percentage of the total price (ex: indirect costs) (instance of PriceJustificationRecordContainer class)
         '''
         self.cumulated_percentages= pa
-        self.mano_de_obra= mano
-        self.materiales= mater
-        self.maquinaria= maqui
-        self.otros= otr
-        self.percentages= perc
+        self.mano_de_obra= labor
+        self.materiales= materials
+        self.maquinaria= machinery
+        self.otros= others
+        self.labor_perc= labor_perc
+        self.materials_perc= materials_perc
+        self.machinery_perc= machinery_perc
+        self.percentages= others_perc
         base= basic_types.ppl_price(self.Base())
         if self.cumulated_percentages:
+            self.labor_perc.SetBaseAcum(base)
+            self.materials_perc.SetBaseAcum(base)
+            self.machinery_perc.SetBaseAcum(base)
             self.percentages.SetBaseAcum(base)
         else:
+            self.labor_perc.SetBase(base)
+            self.materials_perc.SetBase(base)
+            self.machinery_perc.SetBase(base)
             self.percentages.SetBase(base)
     
     def Base(self):
@@ -52,9 +64,17 @@ class PriceJustificationList(object):
         retval+= self.otros.getTotal()
         return retval
 
+    def getPercentagesCost(self):
+        ''' Return the cost due to the percentages.'''
+        retval= self.labor_perc.getTotal()
+        retval+= self.materials_perc.getTotal()
+        retval+= self.machinery_perc.getTotal()
+        retval+= self.percentages.getTotal()
+        return retval
+
     def getTotal(self):
         retval= basic_types.ppl_justification(self.Base())
-        retval+= self.percentages.getTotal()
+        retval+= self.getPercentagesCost()
         return retval
 
     def Redondeo(self):

@@ -1,0 +1,137 @@
+{
+  "code": "root##",
+  "title": "",
+  "sub_chapters": {
+    "owner_code": "root##",
+    "components": {
+      "E": {
+        "code": "I",
+        "title": "Instalaciones",
+        "sub_chapters": {
+          "owner_code": "I",
+          "components": {
+            "IE": {
+              "code": "IE",
+              "title": "Acero",
+              "sub_chapters": {
+                "owner_code": "IE",
+                "components": {
+                  "IES": {
+                    "code": "IES",
+                    "title": "Interruptores",
+                    "sub_chapters": {
+                      "owner_code": "IES",
+                      "components": {}
+                    },
+                    "prices": {
+                      "elementary_prices": {},
+                      "units": {
+                        "regular": {},
+                        "parametric": {}
+                      }
+                    },
+                    "chapter_quantities": {
+                      "0": {
+                        "ud": "CM1E18CE020",
+                        "measurements": {
+                          "0": {
+                            "commentary": "",
+                            "units": 1,
+                            "width": 0,
+                            "length": 0,
+                            "height": 0
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              },
+              "prices": {
+                "elementary_prices": {},
+                "units": {
+                  "regular": {},
+                  "parametric": {}
+                }
+              },
+              "chapter_quantities": {}
+            }
+          }
+        },
+        "prices": {
+          "elementary_prices": {},
+          "units": {
+            "regular": {},
+            "parametric": {}
+          }
+        },
+        "chapter_quantities": {}
+      }
+    }
+  },
+  "prices": {
+    "elementary_prices": {
+      "SINDESCO": {
+        "code": "SINDESCO",
+        "title": "sin_desc",
+        "long_description": "",
+        "unit": "",
+        "type": 3,
+        "price": 1.0
+      },
+      "%PM0200": {
+        "code": "%PM0200",
+        "title": "Pequeño Material",
+        "long_description": "",
+        "unit": "%",
+        "type": 3,
+        "price": 2.0
+      },
+      "CM1O01OB200": {
+        "code": "CM1O01OB200",
+        "title": "Oficial 1ª electricista",
+        "long_description": "",
+        "unit": "h",
+        "type": 1,
+        "price": 22.6
+      },
+      "CM1P16NE030": {
+        "code": "CM1P16NE030",
+        "title": "Interruptor crepuscular compacto 5-300 lux",
+        "long_description": "",
+        "unit": "u",
+        "type": 3,
+        "price": 72.56
+      }
+    },
+    "units": {
+      "regular": {
+        "CM1E18CE020": {
+          "code": "CM1E18CE020",
+          "title": "INTERRUPTOR CREPUSCULAR",
+          "long_description": "Interruptor crepuscular compacto, de contacto simple con potencial, de 5 a 300 lux logarítmico, para el control de instalaciones de alumbrado con sistema de fijación, para instalar tanto en báculo como en superficie. Tensión nominal 230 V, frecuencia nominal 50 Hz, poder de ruptura 10 A / 230 V, consumo propio 1 W. Totalmente instalado, cableado y conexionado. Materiales con marcado CE según Reglamento (UE) 305/2011 e instalación conforme al R.D. 1890/2008, CTE DB-HE-3, CTE DB-SUA-4 y NTE-IEE. Base de precios de la Construcción de la Comunidad de Madrid. Precio particularizado para el Área1.",
+          "unit": "u",
+          "components": {
+            "0": {
+              "factor": 1.0,
+              "production_rate": 0.3,
+              "ent_code": "CM1O01OB200"
+            },
+            "1": {
+              "factor": 1.0,
+              "production_rate": 1.0,
+              "ent_code": "CM1P16NE030"
+            },
+            "2": {
+              "factor": 1.0,
+              "production_rate": 0.02,
+              "ent_code": "%PM0200"
+            }
+          }
+        }
+      },
+      "parametric": {}
+    }
+  },
+  "chapter_quantities": {}
+}

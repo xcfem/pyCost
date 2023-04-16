@@ -143,19 +143,40 @@ class ComponentList(list, epc.EntPyCost):
         return lista
 
     def getPourcentagesForType(self, typo):
+        ''' Return the elementary prices that correspondo to a pourcentage
+            and its type coincides with the specified in the argument.
+
+        :param typo: type of the price (work, machinery, materials or without classification).
+        '''
         lista= pjrc.PriceJustificationRecordContainer(typo)
         for i in self:
             if (i).getType()==typo and (i).isPercentage():
                 lista.append((i).getPriceJustificationRecord(0.0))
         return lista
 
+    def getPourcentages(self):
+        ''' Return the elementary prices that correspondo to a pourcentage
+            regardless of its type.'''
+        lista= pjrc.PriceJustificationRecordContainer(basic_types.sin_clasif)
+        for i in self:
+            if (i).isPercentage():
+                lista.append((i).getPriceJustificationRecord(0.0))
+        return lista
+        
 
     def getPriceJustificationList(self, pa):
         ''' Return the price justification list.
 
         :param pa: True percentages must be cumulated.
         '''
-        return pjl.PriceJustificationList(pa,self.getElementaryPricesOfType(basic_types.mdo),self.getElementaryPricesOfType(basic_types.mat),self.getElementaryPricesOfType(basic_types.maq),self.getElementaryPricesOfType(basic_types.sin_clasif),self.getPourcentagesForType(basic_types.sin_clasif))
+        return pjl.PriceJustificationList(pa,labor= self.getElementaryPricesOfType(basic_types.mdo),
+                                          materials= self.getElementaryPricesOfType(basic_types.mat),
+                                          machinery= self.getElementaryPricesOfType(basic_types.maq),
+                                          others= self.getElementaryPricesOfType(basic_types.sin_clasif),
+                                          labor_perc= self.getPourcentagesForType(basic_types.mdo),
+                                          materials_perc= self.getPourcentagesForType(basic_types.mat),
+                                          machinery_perc= self.getPourcentagesForType(basic_types.maq),
+                                          others_perc= self.getPourcentagesForType(basic_types.sin_clasif))
 
 
     def writePriceJustification(self, data_table, pa):
