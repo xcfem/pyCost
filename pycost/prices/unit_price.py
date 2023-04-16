@@ -161,11 +161,13 @@ class UnitPrice(ms.Measurable):
 
         :param data_table: pylatex tabular data to populate.
         '''
-        tableStr= 'l r l p{5cm} r r'
+        descriptionColumnWidth= 60
+        unitDescriptionWidth= descriptionColumnWidth+35
+        tableStr= 'l r l p{'+str(descriptionColumnWidth)+'mm} r r'
         nested_data_table= pylatex.Tabular(tableStr)
         row= [pylatex_utils.ascii2latex(self.Codigo())]
         row.append(pylatex_utils.ascii2latex(self.Unidad()))
-        row.append(pylatex.table.MultiColumn(4, align=pylatex.utils.NoEscape('p{8cm}'),data=pylatex_utils.ascii2latex(self.getNoEmptyDescription())))
+        row.append(pylatex.table.MultiColumn(4, align=pylatex.utils.NoEscape('p{'+str(unitDescriptionWidth)+'mm}'),data=pylatex_utils.ascii2latex(self.getNoEmptyDescription())))
         nested_data_table.add_row(row)
         #Header
         headerRow= [u'Código',u'Rdto.',u'Ud.',u'Descripción',u'Unit.',u'Total']
