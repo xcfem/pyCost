@@ -100,7 +100,7 @@ class PriceJustificationList(object):
         return basic_types.to_words(self.getTotalCP1(),genero)
 
     def __len__(self):
-        return len(self.mano_de_obra)+len(self.materiales)+len(self.maquinaria)+len(self.otros)+len(self.percentages)
+        return len(self.mano_de_obra)+len(self.materiales)+len(self.maquinaria)+len(self.otros)+len(self.labor_perc)+len(self.materials_perc)+len(self.machinery_perc)+len(self.percentages)
 
 
     def writePriceJustification(self, data_table):
@@ -117,8 +117,11 @@ class PriceJustificationList(object):
             data_table.add_row(row)
         else:
             self.mano_de_obra.writePriceJustification(data_table)
+            self.labor_perc.writePriceJustification(data_table)
             self.materiales.writePriceJustification(data_table)
+            self.materials_perc.writePriceJustification(data_table)
             self.maquinaria.writePriceJustification(data_table)
+            self.machinery_perc.writePriceJustification(data_table)
             self.otros.writePriceJustification(data_table)
             self.percentages.writePriceJustification(data_table)
             #Suma
@@ -149,8 +152,11 @@ class PriceJustificationList(object):
         else:
             data_table.add_empty_row()
             self.mano_de_obra.writePriceTableTwoIntoLatexDocument(data_table)
+            self.labor_perc.writePriceTableTwoIntoLatexDocumentPorc(data_table)
             self.materiales.writePriceTableTwoIntoLatexDocument(data_table)
+            self.materials_perc.writePriceTableTwoIntoLatexDocumentPorc(data_table)
             self.maquinaria.writePriceTableTwoIntoLatexDocument(data_table)
+            self.machinery_perc.writePriceTableTwoIntoLatexDocumentPorc(data_table)
             self.otros.writePriceTableTwoIntoLatexDocument(data_table)
             self.percentages.writePriceTableTwoIntoLatexDocumentPorc(data_table)
             #Suma

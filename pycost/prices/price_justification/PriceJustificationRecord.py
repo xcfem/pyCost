@@ -60,15 +60,19 @@ class PriceJustificationRecord(object):
         retval*= self.rdto
         return retval
 
+    def getStrUnary(self):
+        if self.is_percentage:
+            retval= basic_types.human_readable(self.unitario) + pylatex_utils.ltx_percent # Percentage
+        else:
+            retval= basic_types.human_readable(self.unitario) # price per unit.
+        return retval
+
     def writePriceJustification(self, data_table):
         row= [self.codigo]
         row.append(basic_types.human_readable(self.rdto))
         row.append(self.unidad)
         row.append(self.titulo)
-        if self.is_percentage:
-            strUnary= basic_types.human_readable(self.unitario) + pylatex_utils.ltx_percent # Percentage
-        else:
-            strUnary= basic_types.human_readable(self.unitario) # price per unit.
+        strUnary= self.getStrUnary()
         row.append(strUnary)
         row.append(basic_types.human_readable(self.getTotal()))
         data_table.add_row(row)
@@ -76,7 +80,9 @@ class PriceJustificationRecord(object):
 
     def writePriceTableTwoIntoLatexDocument(self, data_table):
         ''' Write row of a percentage price (e.g. indirect costs) in price table number two'''
-        if(self.is_percentage): data_table.add_row(['','',pylatex_utils.ascii2latex(self.titulo),basic_types.human_readable(self.getTotal())])
+        if(self.is_percentage):
+            description= pylatex_utils.ascii2latex(self.titulo)+' ('+self.getStrUnary()+')'
+            data_table.add_row(['','',description,basic_types.human_readable(self.getTotal())])
 
     
  
