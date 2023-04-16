@@ -58,7 +58,7 @@ class UnitPriceQuantitiesBase(epc.EntPyCost):
         row= [pylatex_utils.ascii2latex(self.getUnitPriceCode())]
         row.append(str(totalr))
         row.append(' ' + pylatex_utils.ascii2latex(self.UnidadMedida()))
-        row.append((pylatex.table.MultiColumn(3,align= pylatex.utils.NoEscape(ancho),data= pylatex.utils.NoEscape('\\scriptsize '+pylatex_utils.ascii2latex(self.ud.getLongDescription())+ '\\normalsize'))))
+        row.append((pylatex.table.MultiColumn(3,align= pylatex.utils.NoEscape(ancho),data= pylatex.utils.NoEscape('\\scriptsize '+pylatex_utils.ascii2latex(self.ud.getNoEmptyDescription())+ '\\normalsize'))))
         data_table.add_row(row)
 
     def ImprCompLtxMed(self, doc, other):
@@ -115,7 +115,7 @@ class UnitPriceQuantitiesBase(epc.EntPyCost):
         totalr=  basic_types.human_readable(self.getRoundedTotal())
         row= [pylatex_utils.ascii2latex(self.getUnitPriceCode())]
         row.append(totalr+ " " + pylatex_utils.ascii2latex(self.UnidadMedida()))
-        row.append(pylatex.table.MultiColumn(1, align=pylatex.utils.NoEscape(ancho),data=self.ud.getLongDescription()))
+        row.append(pylatex.table.MultiColumn(1, align=pylatex.utils.NoEscape(ancho),data= self.ud.getNoEmptyDescription()))
         row.append(self.getUnitLtxPriceString())
         row.append(self.getLtxPriceString())
         return row
@@ -138,7 +138,7 @@ class UnitPriceQuantitiesBase(epc.EntPyCost):
     def WriteHCalcMed(self, os):
         os.write(getUnitPriceCode() + tab
            + en_humano(self.getTotal(),3) + tab + pylatex_utils.ascii2latex(UnidadMedida()) + tab
-           + '"' + pylatex_utils.ascii2latex(self.ud.getLongDescription()()) + '"' + '\n'
+           + '"' + pylatex_utils.ascii2latex(self.ud.getNoEmptyDescription()()) + '"' + '\n'
            + "Texto" + tab
            + "Unidades" + tab
            + "Largo" + tab
@@ -149,7 +149,7 @@ class UnitPriceQuantitiesBase(epc.EntPyCost):
 
     def WriteHCalcPre(self, os):
         os.write(getUnitPriceCode() + tab
-           + self.getTotal() + tab + UnidadMedida() + tab + self.ud.getLongDescription()() + tab
+           + self.getTotal() + tab + UnidadMedida() + tab + self.ud.getNoEmptyDescription()() + tab
            + getUnitPriceString() + tab
            + getPrice() + '\n')
 

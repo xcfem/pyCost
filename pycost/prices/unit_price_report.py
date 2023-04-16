@@ -23,7 +23,7 @@ class UnitPriceReport(object):
         precision= 2
         if self.ud:
             row= [self.ud.Codigo()]
-            row.append(pylatex_utils.ascii2latex(self.ud.getLongDescription()))
+            row.append(pylatex_utils.ascii2latex(self.ud.getNoEmptyDescription()))
             row.append(basic_types.human_readable(self.med_total,precision))
             row.append(basic_types.human_readable(self.med_total*float(self.ud.getPrice()),precision))
             data_table.add_row(row)

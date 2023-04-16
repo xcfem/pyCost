@@ -46,6 +46,15 @@ class Measurable(eBC3.EntBC3):
 
     def Unidad(self):
         return self.unidad
+    
+    def getNoEmptyDescription(self):
+        ''' Return the long description of the price or, if empty, returns the
+            short one.
+        '''
+        retval= self.getLongDescription()
+        if(len(retval)==0):
+            retval= self.getTitle()
+        return retval        
 
     def WriteBC3(self, os):
         self.WriteConceptoBC3(os)

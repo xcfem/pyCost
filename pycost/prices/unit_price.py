@@ -156,7 +156,6 @@ class UnitPrice(ms.Measurable):
         self.components= copia(otra.components)
         return self.components.FuerzaPrecio(objetivo)
 
-
     def writePriceJustification(self, data_table):
         ''' Write price justification in the table argument.
 
@@ -166,7 +165,7 @@ class UnitPrice(ms.Measurable):
         nested_data_table= pylatex.Tabular(tableStr)
         row= [pylatex_utils.ascii2latex(self.Codigo())]
         row.append(pylatex_utils.ascii2latex(self.Unidad()))
-        row.append(pylatex.table.MultiColumn(4, align=pylatex.utils.NoEscape('p{8cm}'),data=pylatex_utils.ascii2latex(self.getLongDescription())))
+        row.append(pylatex.table.MultiColumn(4, align=pylatex.utils.NoEscape('p{8cm}'),data=pylatex_utils.ascii2latex(self.getNoEmptyDescription())))
         nested_data_table.add_row(row)
         #Header
         headerRow= [u'Código',u'Rdto.',u'Ud.',u'Descripción',u'Unit.',u'Total']
@@ -179,7 +178,7 @@ class UnitPrice(ms.Measurable):
     def getLtxCodeUnitDescription(self):
         retval= [pylatex_utils.ascii2latex(self.Codigo())]
         retval.append(pylatex_utils.ascii2latex(self.Unidad()))
-        retval.append(pylatex_utils.ascii2latex(self.getLongDescription()))
+        retval.append(pylatex_utils.ascii2latex(self.getNoEmptyDescription()))
         return retval
 
     def writePriceTableOneIntoLatexDocument(self, data_table):
@@ -205,7 +204,7 @@ class UnitPrice(ms.Measurable):
     def WriteHCalc(self, os):
         os.write(self.Codigo() + tab
            + pylatex_utils.ascii2latex(self.Unidad()) + tab
-           + '"' + pylatex_utils.ascii2latex(self.getLongDescription()) + '"' + tab
+           + '"' + pylatex_utils.ascii2latex(self.getNoEmptyDescription()) + '"' + tab
            + '"' + self.StrPriceToWords(True) + '"' + tab
            + getPriceString() + '\n')
 
