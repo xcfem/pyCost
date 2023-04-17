@@ -548,18 +548,25 @@ class Chapter(bc3_entity.EntBC3):
                 docPart.append(pylatex_utils.NormalSizeCommand())
             doc.append(docPart)
 
-    def WriteHCalcMed(self, os, parentSection):
-        if parentSection!='root':
-            os.write(self.getTitle() + '\n')
-        self.quantities.WriteHCalcMed(os)
-        self.subcapitulos.WriteHCalcMed(os,parentSection)
+    def writeSpreadsheetQuantities(self, sheet, parentSection):
+        ''' Write the quantities in the spreadsheet argument.
 
-    def WriteHCalcPre(self, os, parentSection):
-        if parentSection!='root':
-            os.write(self.getTitle() + '\n')
-        self.quantities.WriteHCalcPre(os)
-        os.write(tab + tab + tab + tab + "Total: " + tab + self.getTitle() + tab + self.getPriceString() + '\n')
-        self.subcapitulos.WriteHCalcPre(os,parentSection)
+        :param sheet: spreadsheet to write into.
+        :param parentSection: name of the parent section.
+        '''
+        self.quantities.writeSpreadsheetQuantities(sheet)
+        self.subcapitulos.writeSpreadsheetQuantities(sheet, parentSection)
+
+    def writeSpreadsheetBudget(self, sheet, parentSection):
+        ''' Write the budget in the spreadsheet argument.
+
+        :param sheet: spreadsheet to write into.
+        :param parentSection: name of the parent section.
+        '''
+        self.quantities.writeSpreadsheetBudget(sheet)
+        sheet.row+= [None, None, None, None,"Total: ",self.getTitle(),None,self.getPriceString()]
+        sheet.row+= [None]
+        self.subcapitulos.writeSpreadsheetBudget(sheet,parentSection)
 
     def getQuantitiesReport(self):
         ''' Return a report containing the total measurement for 

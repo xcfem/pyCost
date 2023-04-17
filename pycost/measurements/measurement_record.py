@@ -199,17 +199,32 @@ class MeasurementRecord(epc.EntPyCost):
         row.append(str_t)
         data_table.add_row(row)
 
-    def WriteHCalc(self, os):
-        os.write('"' + self.comentario + '"' + tab)
-        if(self.unidades!=0.0): os.write(self.unidades)
-        os.write(tab)
-        if(self.largo!=0.0): os.write(self.largo)
-        os.write(tab)
-        if(self.ancho!=0.0): os.write(self.ancho)
-        os.write(tab)
-        if(self.alto!=0.0): os.write(self.alto)
-        os.write(tab)
+    def writeSpreadsheet(self, sheet):
+        ''' Write the quantities in the spreadsheet argument.
+
+        :param sheet: spreadsheet to write into.
+        '''
+        row= [self.comentario]
+        if(self.unidades!=0.0):
+            row.append(self.unidades)
+        else:
+            row.append(None)
+        if(self.largo!=0.0):
+            row.append(self.largo)
+        else:
+            row.append(None)
+        if(self.ancho!=0.0):
+            row.append(self.ancho)
+        else:
+            row.append(None)
+        if(self.alto!=0.0):
+            row.append(self.alto)
+        else:
+            row.append(None)
         total= self.getTotal()
-        if(total!=0.0): os.write(total)
-        os.write('\n')
+        if(total!=0.0):
+            row.append(total)
+        else:
+            row.append(None)
+        sheet.row+= row
 

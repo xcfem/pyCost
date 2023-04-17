@@ -203,13 +203,21 @@ class ChapterQuantities(list, epc.EntPyCost):
             doc.append(pylatex_utils.NormalSizeCommand())
 
 
-    def WriteHCalcMed(self, os):
-        for i in self:
-            (i).WriteHCalcMed(os)
+    def writeSpreadsheetQuantities(self, sheet):
+        ''' Write the quantities in the spreadsheet argument.
 
-    def WriteHCalcPre(self, os):
+        :param sheet: spreadsheet to write into.
+        '''
         for i in self:
-            (i).WriteHCalcPre(os)
+            (i).writeSpreadsheetQuantities(sheet)
+
+    def writeSpreadsheetBudget(self, sheet):
+        ''' Write the budgets in the spreadsheet argument.
+
+        :param sheet: spreadsheet to write into.
+        '''
+        for i in self:
+            (i).writeSpreadsheetBudget(sheet)
 
     def getQuantitiesReport(self):
         ''' Return a report containing the total measurement for 

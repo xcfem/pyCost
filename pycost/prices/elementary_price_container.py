@@ -60,8 +60,8 @@ class ElementaryPrices(concept_dict.ConceptDict):
         if(conceptToRemoveCode in self.concepts):
             self.concepts.pop(conceptToRemoveCode)
 
-    def WriteHCalc(os):
-        logging.error("ElementaryPrices.WriteHCalc no implementada." + '\n')
+    def writeSpreadsheet(self, sheet):
+        logging.error("ElementaryPrices.writeSpreadsheet not implemented." + '\n')
 
     @staticmethod
     def writeLatexHeader(doc, tipo):

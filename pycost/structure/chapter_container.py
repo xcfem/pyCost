@@ -292,13 +292,23 @@ class Subcapitulos(list, epc.EntPyCost):
             (j).writePartialBudgetsIntoLatexDocument(doc,sectName)
 
 
-    def WriteHCalcMed(self, os, parentSection):
-        for j in self:
-            (j).WriteHCalcMed(os,parentSection)
+    def writeSpreadsheetQuantities(self, sheet, parentSection):
+        ''' Write the quantities in the spreadsheet argument.
 
-    def WriteHCalcPre(self, os, parentSection):
+        :param sheet: spreadsheet to write into.
+        :param parentSection: name of the parent section.
+        '''
         for j in self:
-            (j).WriteHCalcPre(os, parentSection)
+            (j).writeSpreadsheetQuantities(sheet, parentSection)
+
+    def writeSpreadsheetBudget(self, sheet, parentSection):
+        ''' Write the partial budgets in the spreadsheet argument.
+
+        :param sheet: spreadsheet to write into.
+        :param parentSection: name of the parent section.
+        '''
+        for j in self:
+            (j).writeSpreadsheetBudget(sheet, parentSection)
 
     def hasQuantities(self):
         '''Returns true if al least one of the chapters have quantities.'''

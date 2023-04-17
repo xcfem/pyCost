@@ -252,14 +252,10 @@ class Descompuestos(concept_dict.ConceptDict):
                     self.concepts[key].writePriceTableTwoIntoLatexDocument(data_table)
             doc.append(pylatex_utils.NormalSizeCommand())
 
-    def WriteHCalc(self, os):
-        os.write(u"Código" + tab
-           + "Ud." + tab
-           + u"Denominación" + tab
-           + "Precio en letra" + tab
-           + "Precio en cifra" + '\n')
+    def writeSpreadsheet(self, sheet):
+        sheet.row+= [u"Código", "Ud.", "Denominación", "Precio en letra", "Precio en cifra"]
         for j in self.concepts:
-            self.concepts[j].WriteHCalc(os)
+            self.concepts[j].writeSpreadsheet(sheet)
 
     def getParametricConceptsKeys(self):
         ''' Return the keys of the parametric concepts.'''

@@ -134,24 +134,23 @@ class UnitPriceQuantitiesBase(epc.EntPyCost):
         data_table.add_row(row)
         data_table.add_empty_row()
 
-    #HCalc
-    def WriteHCalcMed(self, os):
-        os.write(getUnitPriceCode() + tab
-           + en_humano(self.getTotal(),3) + tab + pylatex_utils.ascii2latex(UnidadMedida()) + tab
-           + '"' + pylatex_utils.ascii2latex(self.ud.getNoEmptyDescription()()) + '"' + '\n'
-           + "Texto" + tab
-           + "Unidades" + tab
-           + "Largo" + tab
-           + "Ancho" + tab
-           + "Alto" + tab
-           + "Parcial" + '\n')
-        quantities.WriteHCalc(os)
+    # Spreadsheet ouput.
+    def writeSpreadsheetQuantities(self, sheet):
+        ''' Write the quantities in the spreadsheet argument.
 
-    def WriteHCalcPre(self, os):
-        os.write(getUnitPriceCode() + tab
-           + self.getTotal() + tab + UnidadMedida() + tab + self.ud.getNoEmptyDescription()() + tab
-           + getUnitPriceString() + tab
-           + getPrice() + '\n')
+        :param sheet: spreadsheet to write into.
+        '''
+        sheet.row+= [self.getUnitPriceCode(), basic_types.human_readable(self.getTotal(),3), pylatex_utils.ascii2latex(self.UnidadMedida()), pylatex_utils.ascii2latex(self.ud.getNoEmptyDescription())]
+        sheet.row+= ["Texto", "Unidades", "Largo", "Ancho", "Alto", "Parcial"]
+        self.quantities.writeSpreadsheet(sheet)
+        sheet.row+= [None,None,None,None,None,None]
+
+    def writeSpreadsheetBudget(self, sheet):
+        ''' Write the budget in the spreadsheet argument.
+
+        :param sheet: spreadsheet to write into.
+        '''
+        sheet.row+= [self.getUnitPriceCode(), self.getTotal(),  self.UnidadMedida(),  self.ud.getNoEmptyDescription(), self.getUnitPriceString(), self.getPrice()]
 
     def WriteBC3RegM(self, os, cap_padre, pos):
         os.write("~M|" + cap_padre + '\\' + self.getUnitPriceCode() + '|'

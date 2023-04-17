@@ -204,9 +204,13 @@ class CuaPre(epc.EntPyCost):
         writePriceTableOneIntoLatexDocument(doc, filterBy= filterBy)
         writePriceTableTwoIntoLatexDocument(doc, filterBy= filterBy)
 
-    def WriteHCalc(self, os):
-        self.elementos.WriteHCalc(os)
-        self.unidades.WriteHCalc(os)
+    def writeSpreadsheet(self, book):
+        ''' Write the prices in the work book argument.
+
+        :param book: spreadsheet book.
+        '''
+        self.elementos.writeSpreadsheet(book['Elementales'])
+        self.unidades.writeSpreadsheet(book['CuaPre1'])
 
     def SimulaDescomp(self, origen, destino):
         self.unidades.SimulaDescomp(origen,destino)

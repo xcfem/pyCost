@@ -26,6 +26,8 @@ from pycost.utils import basic_types
 from pycost.bc3 import fiebdc3
 import tempfile
 import re # strip comments
+import pyexcel # spreadsheets.
+from collections import OrderedDict # spreadsheets
 
 def print_tree(current_node, indent="", last='updown'):
 
@@ -601,17 +603,44 @@ class Obra(cp.Chapter):
         retval= pylatex.Document(documentclass= 'article')
         im.printLtx(retval)
         return retval
+    
+    def writeSpreadsheetQuantities(self, book):
+        ''' Write the quantities in the work book argument.
+
+        :param book: spreadsheet book.
+        '''
+        sheet= book['Mediciones']
+        sheet.row+= [self.getTitle()]
+        super(Obra, self).writeSpreadsheetQuantities(sheet, parentSection= 'root')
         
-    def WriteHCalc(self, outputFile):
+    def writeSpreadsheetBudget(self, book, parentSection):
+        sheet= book['PreParc']
+        print(self.getTitle())
+        sheet.row+= [self.getTitle()]
+        super(Obra, self).writeSpreadsheetBudget(sheet, parentSection= 'root')
+        
+    def writeSpreadsheet(self, outputFileName):
         ''' Write data using spreadsheet format
  
+        :param outputFile: name of the output file.
         '''
-        doc.create(basic_types.quantitesCaption + '\n')
-        super(Obra,self).WriteHCalcMed(outputFile,'root')
-        doc.create("Cuadros de precios" + '\n')
-        precidoc.createHCalc(outputFile)
-        doc.create("Presupuestos parciales" + '\n')
-        super(Obra,self).WriteHCalcPre(outputFile,'root')
+        # Create spreadsheet book.
+        sheetNames= OrderedDict()
+        sheetNames.update({'Mediciones': []})
+        sheetNames.update({"CuaPre1": []})
+        sheetNames.update({"CuaPre2": []})
+        sheetNames.update({"PreParc": []})
+        sheetNames.update({"Elementales": []})
+        pyexcel.save_book_as(bookdict=sheetNames, dest_file_name= outputFileName)
+        book= pyexcel.get_book(file_name=outputFileName)
+        # Populate it with quantities.
+        self.writeSpreadsheetQuantities(book)
+        # with prices.
+        self.precios.writeSpreadsheet(book)
+        # and with partial budgets.
+        self.writeSpreadsheetBudget(book,'root')
+        # Save the modified document.
+        book.save_as(outputFileName)
 
     def getPriceDescriptions(self, codes, latex= True):
         ''' Return a list populated with the codes and the corresponding

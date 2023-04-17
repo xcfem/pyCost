@@ -116,10 +116,15 @@ class Quantities(list, epy.EntPyCost):
             (i).printLtx(data_table,"p{3.5cm}")
         data_table.add_empty_row()
 
-    def WriteHCalc(self, os):
+    def writeSpreadsheet(self, sheet):
+        ''' Write the quantities in the spreadsheet argument.
+
+        :param sheet: spreadsheet to write into.
+        '''
         for i in self:
-            (i).WriteHCalc(os)
-        os.write(",,,,Suma ..." + tab + Total() + '\n' + '\n')
+            (i).writeSpreadsheet(sheet)
+        sheet.row+= [None,None,None,None,'Suma ...',self.getTotal()]
+        sheet.row+= []
 
     def getDict(self):
         ''' Return a dictionary containing the object data.'''

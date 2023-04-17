@@ -203,12 +203,8 @@ class UnitPrice(ms.Measurable):
         self.components.writePriceTableTwoIntoLatexDocument(nested_data_table,True); #XXX Here cumulated percentages.
         data_table.add_row([nested_data_table])
 
-    def WriteHCalc(self, os):
-        os.write(self.Codigo() + tab
-           + pylatex_utils.ascii2latex(self.Unidad()) + tab
-           + '"' + pylatex_utils.ascii2latex(self.getNoEmptyDescription()) + '"' + tab
-           + '"' + self.StrPriceToWords(True) + '"' + tab
-           + getPriceString() + '\n')
+    def writeSpreadsheet(self, sheet):
+        sheet.row+= [self.Codigo(), pylatex_utils.ascii2latex(self.Unidad()),pylatex_utils.ascii2latex(self.getNoEmptyDescription()),self.StrPriceToWords(True) ,self.getPriceString()]
 
     def getDict(self):
         ''' Return a dictionary containing the object data.'''
