@@ -585,8 +585,8 @@ class Chapter(bc3_entity.EntBC3):
         :param parentSection: section command for the parent chapter.
         :param recursive: if true apply recursion through chapters.
         '''
-        if(self.hasQuantities() and depth<maxDepth):
-            row= (maxDepth+2)*[None]
+        if(self.hasQuantities() and depth<=maxDepth):
+            row= (maxDepth+3)*[None]
             row[depth]= self.getTitle()
             row[-1]= self.getPrice()
             sheet.row+= row
