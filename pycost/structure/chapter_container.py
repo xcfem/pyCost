@@ -26,6 +26,22 @@ class Subcapitulos(list, epc.EntPyCost):
     def getContenedor(self):
         return self
 
+    def setOwner(self, parent):
+        ''' Set the parent chapter.
+
+        :param parent: parent chapter.
+        '''
+        self.owner= parent
+        for j in self:
+            j.setOwner(parent= parent)
+            
+    def getHeights(self):
+        ''' Return the heights of the chapters.'''
+        retval= list()
+        for j in self:
+            retval.append(j.getHeight())
+        return retval
+            
     def NumElementales(self, filterBy= None):
         ''' Return the number of elementary prices. If filterBy is not None
         return only the number of elementary prices whose code is also in the
@@ -291,6 +307,16 @@ class Subcapitulos(list, epc.EntPyCost):
         for j in self:
             (j).writePartialBudgetsIntoLatexDocument(doc,sectName)
 
+    def writeSpreadsheetSummary(self, sheet, depth, recursive, maxDepth):
+        ''' Write summary report.
+
+        :param sheet: spreadsheet to write into.
+        :param parentSection: section command for the parent chapter.
+        :param recursive: if true apply recursion through chapters.
+        '''
+        if len(self):
+            for j in self:
+                (j).writeSpreadsheetSummary(sheet= sheet, depth= depth, recursive= recursive, maxDepth= maxDepth)
 
     def writeSpreadsheetQuantities(self, sheet, parentSection):
         ''' Write the quantities in the spreadsheet argument.

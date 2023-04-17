@@ -139,7 +139,16 @@ class Obra(cp.Chapter):
         elem= elementary_price.ElementaryPrice("SINDESCO",basic_types.sin_desc_string,"",1.0,basic_types.mat)
         self.precios.Elementales().Append(elem)
         self.percentages= pc.Percentages()
-        
+
+    def isRootChapter(self):
+        ''' Returns true.'''
+        return True
+    
+    def getHeight(self):
+        ''' Return the height of the tree.'''
+        self.setOwner(parent= self) # Compute chapters owners.
+        return super(Obra,self).getHeight()
+    
     def nombre_clase(self):
         return "Obra"
 
@@ -604,6 +613,16 @@ class Obra(cp.Chapter):
         im.printLtx(retval)
         return retval
     
+    def writeSpreadsheetSummary(self, book, maxDepth):
+        ''' Write partial budgets summary.
+
+        :param book: spreadsheet book.
+        '''
+        self.setOwner(parent= self) # Compute chapters owners.
+        sheet= book['Resumen']
+        sheet.row+= ['Resumen de los presupuestos parciales']
+        super(Obra,self).writeSpreadsheetSummary(sheet, depth= 0, maxDepth= maxDepth)
+
     def writeSpreadsheetQuantities(self, book):
         ''' Write the quantities in the work book argument.
 
@@ -613,13 +632,12 @@ class Obra(cp.Chapter):
         sheet.row+= [self.getTitle()]
         super(Obra, self).writeSpreadsheetQuantities(sheet, parentSection= 'root')
         
-    def writeSpreadsheetBudget(self, book, parentSection):
+    def writeSpreadsheetBudget(self, book):
         sheet= book['PreParc']
-        print(self.getTitle())
         sheet.row+= [self.getTitle()]
         super(Obra, self).writeSpreadsheetBudget(sheet, parentSection= 'root')
         
-    def writeSpreadsheet(self, outputFileName):
+    def writeSpreadsheet(self, outputFileName, summaryMaxDepth= None):
         ''' Write data using spreadsheet format
  
         :param outputFile: name of the output file.
@@ -630,6 +648,7 @@ class Obra(cp.Chapter):
         sheetNames.update({"CuaPre1": []})
         sheetNames.update({"CuaPre2": []})
         sheetNames.update({"PreParc": []})
+        sheetNames.update({"Resumen": []})
         sheetNames.update({"Elementales": []})
         pyexcel.save_book_as(bookdict=sheetNames, dest_file_name= outputFileName)
         book= pyexcel.get_book(file_name=outputFileName)
@@ -638,7 +657,11 @@ class Obra(cp.Chapter):
         # with prices.
         self.precios.writeSpreadsheet(book)
         # and with partial budgets.
-        self.writeSpreadsheetBudget(book,'root')
+        self.writeSpreadsheetBudget(book)
+        # write summary.
+        if(not summaryMaxDepth):
+            summaryMaxDepth= self.getHeight()
+        self.writeSpreadsheetSummary(book, maxDepth= summaryMaxDepth)
         # Save the modified document.
         book.save_as(outputFileName)
 

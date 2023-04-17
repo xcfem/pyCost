@@ -49,6 +49,10 @@ class Chapter(bc3_entity.EntBC3):
         self.precios= price_table.CuaPre() #Para precios elementales y
                                #descompuestos clasificados por capítulos.
 
+    def isRootChapter(self):
+        ''' Returns false.'''
+        return False
+    
     def newElementaryPrice(self, code, shortDescription, price, typ, unit, longDescription= None):
         ''' Define an elementary price.
 
@@ -491,6 +495,7 @@ class Chapter(bc3_entity.EntBC3):
                 doc.append(pylatex_utils.NormalSizeCommand())
             if(recursive):
                 self.subcapitulos.ImprLtxResumen(doc,pylatex_utils.getLatexSection(parentSection),recursive)
+                
     def ImprCompLtxPre(self, doc, parentSection, other):
         ''' Write a comparison report.
 
@@ -524,6 +529,31 @@ class Chapter(bc3_entity.EntBC3):
         else:
             return self.subcapitulos.hasQuantities()
         
+    def setOwner(self, parent):
+        if(len(self.subcapitulos)>0):
+            self.subcapitulos.setOwner(parent= self)
+        if(not self.isRootChapter()):
+            self.owner= parent
+            
+    def findDepth(self):
+        ''' Return the height of the chapter tree.'''
+        if(self.isRootChapter()):
+            retval= 0
+        else:
+            if(self.owner):
+                retval= self.owner.findDepth()+1
+            else:
+                retval= 0
+        return retval
+    
+    def getHeight(self):
+        ''' Return the height of the tree.'''
+        retval= self.findDepth()
+        if(len(self.subcapitulos)>0):
+            depths= self.subcapitulos.getHeights()
+            retval= max(retval, max(depths))
+        return retval
+
     def writePartialBudgetsIntoLatexDocument(self, doc, parentSection):
         '''Write partial budgets in the pylatex document argument.
 
@@ -547,6 +577,21 @@ class Chapter(bc3_entity.EntBC3):
                 docPart.append(pylatex.NewLine())
                 docPart.append(pylatex_utils.NormalSizeCommand())
             doc.append(docPart)
+            
+    def writeSpreadsheetSummary(self, sheet, depth, maxDepth, recursive= True):
+        ''' Write a summary report.
+
+        :param sheet: spreadsheet to write into.
+        :param parentSection: section command for the parent chapter.
+        :param recursive: if true apply recursion through chapters.
+        '''
+        if(self.hasQuantities() and depth<maxDepth):
+            row= (maxDepth+2)*[None]
+            row[depth]= self.getTitle()
+            row[-1]= self.getPrice()
+            sheet.row+= row
+            if(recursive):
+                self.subcapitulos.writeSpreadsheetSummary(sheet, depth= depth+1, recursive= recursive, maxDepth= maxDepth)
 
     def writeSpreadsheetQuantities(self, sheet, parentSection):
         ''' Write the quantities in the spreadsheet argument.
@@ -554,6 +599,7 @@ class Chapter(bc3_entity.EntBC3):
         :param sheet: spreadsheet to write into.
         :param parentSection: name of the parent section.
         '''
+        sheet.row+= [self.getTitle()]
         self.quantities.writeSpreadsheetQuantities(sheet)
         self.subcapitulos.writeSpreadsheetQuantities(sheet, parentSection)
 
@@ -563,6 +609,7 @@ class Chapter(bc3_entity.EntBC3):
         :param sheet: spreadsheet to write into.
         :param parentSection: name of the parent section.
         '''
+        sheet.row+= [self.getTitle()]
         self.quantities.writeSpreadsheetBudget(sheet)
         sheet.row+= [None, None, None, None,"Total: ",self.getTitle(),None,self.getPriceString()]
         sheet.row+= [None]
