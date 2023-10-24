@@ -113,7 +113,6 @@ class Chapter(bc3_entity.EntBC3):
         retval= self.precios.newCompoundPrice(code= code, shortDescription= shortDescription, components= derefComponents, unit= unit, longDescription= longDescription)
         return retval
         
-        
     def TieneDescompuestos(self, filterBy= None):
         ''' Return true if the chapter has compound prices. If filterBy 
         is not None return true only if the number of compound prices 
@@ -284,7 +283,6 @@ class Chapter(bc3_entity.EntBC3):
         retval= self.precios.findPricesRegex(regex)
         retval.extend(self.subcapitulos.findPricesRegex(regex))
         return retval
-        
     
     def extractConcepts(self, conceptCodes, recipientChapter):
         ''' Dumps the concepts corresponding to the codes in the argument list
@@ -293,7 +291,6 @@ class Chapter(bc3_entity.EntBC3):
         :param conceptCodes: concepts to extract.
         :param recipientChapter: chapter that will receive the 
                                  extracted concepts.
-        :param tit: constuction site description.
         '''
         for cCode in conceptCodes:
             # Search concept.
@@ -309,7 +306,6 @@ class Chapter(bc3_entity.EntBC3):
         :param conceptCodes: concepts to extract.
         :param recipientChapter: chapter that will receive the 
                                  extracted concepts.
-        :param tit: constuction site description.
         '''
         for cCode in conceptCodes:
             # Search for elementary price.
@@ -318,6 +314,24 @@ class Chapter(bc3_entity.EntBC3):
             if(len(prices)>0):
                 for p in prices:
                     p.appendToChapter(recipientChapter)
+        return recipientChapter
+
+    def extractChapters(self, chapterCodes, recipientChapter):
+        ''' Dumps the concepts corresponding to the codes in the argument list
+            in the recipient chapter.
+
+        :param conceptCodes: concepts to extract.
+        :param recipientChapter: chapter that will receive the 
+                                 extracted concepts.
+        '''
+        employedPrices= set()
+        for chapterCode in chapterCodes:
+            # Search concept.
+            chapter= self.BuscaCodigo(chapterCode)
+            if(chapter):
+                employedPrices.update(chapter.getEmployedPrices())
+                recipientChapter.subcapitulos.newChapter(chapter)
+        recipientChapter= self.extractConcepts(employedPrices, recipientChapter)
         return recipientChapter
     
     def WritePreciosBC3(self, os):
@@ -643,17 +657,15 @@ class Chapter(bc3_entity.EntBC3):
         :param lowerMeasurementBound: lower bound for the total measurement.
         '''
         employedPrices= self.getEmployedPrices(lowerMeasurementBound= lowerMeasurementBound)
-        retval= list()
+        retval= set()
         for key in employedPrices:
             price= self.findPrice(key)
             if(hasattr(price, 'components')): # is a compound price
                 for c in price.components:
                     code= c.CodigoEntidad()
-                    if(code not in retval):
-                        retval.append(code)
+                    retval.add(code)
             else: # it's an elementary price already.
-                if(key not in retval):
-                    retval.append(key)
+                retval.add(key)
         return retval
        
     def clear(self):
