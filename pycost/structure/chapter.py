@@ -219,8 +219,9 @@ class Chapter(bc3_entity.EntBC3):
         if ruta:
             retval= self.subcapitulos.Busca(ruta)
             if not retval:
-                logging.error(u"Chapter.BuscaSubcapitulo: no se encontró el subcapítulo: " + ruta[1]
-                          + u" en el capítulo: " + self.Codigo() + " (" + self.getTitle()
+                className= type(self).__name__
+                methodName= sys._getframe(0).f_code.co_name
+                logging.error(className+'.'+methodName+"; chapter with code: " + ruta[1] + " not found in chapter: '"+str(self.Codigo()) + " (" + self.getTitle()
                           + ") (ruta: " + ruta + ')' + '\n')
                 #Si no encuentra el capítulo devuelve este mismo
                 retval= self
@@ -228,13 +229,15 @@ class Chapter(bc3_entity.EntBC3):
     
     def BuscaSubcapitulo(self, lst):
         '''Search the sub-chapter indicated by
-           the list of the form ['1', '2', '1', '4']. '''
+           the given list, which has the form ['1', '2', '1', '4']. '''
         retval= None
         sz= len(lst)
         if(sz>0): # not empty.
             indice= int(lst.pop(0))
             if(indice>len(self.subcapitulos)):
-                logging.error(u"Chapter: " + str(indice) + " not found in chapter: "+str(self.Codigo()) + '\n')
+                className= type(self).__name__
+                methodName= sys._getframe(0).f_code.co_name
+                logging.error(className+'.'+methodName+"; chapter with index: " + str(indice) + " not found in chapter: '"+str(self.Codigo()) + "' returning None.\n")
                 return None
             if(sz==1): # it must be a subchapter of this one.
                 retval= self.subcapitulos[indice-1]
@@ -242,7 +245,9 @@ class Chapter(bc3_entity.EntBC3):
             elif(sz>1): # still diging.
                 return self.subcapitulos[indice-1].BuscaSubcapitulo(lst)
         else:
-            logging.error(u"Empty list argument: " + str(lst) + '\n')
+            className= type(self).__name__
+            methodName= sys._getframe(0).f_code.co_name
+            logging.error(className+'.'+methodName+"; empty list argument: " + str(lst) + " in chapter: '"+str(self.Codigo()) + "' returning None.\n")
             return None
 
         logging.error("sale por aqui (y no debiera) en el capitulo: " + self.Codigo() + '\n')

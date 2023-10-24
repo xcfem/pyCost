@@ -98,7 +98,7 @@ class Subcapitulos(list, epc.EntPyCost):
             p+= (j).getRoundedPrice()
         return p
 
-    def Busca(self,ruta):
+    def Busca(self, ruta):
         if(len(ruta)==0): return None
         indice= int(ruta[0])-1
         existe= (indice<size())
@@ -186,7 +186,9 @@ class Subcapitulos(list, epc.EntPyCost):
 
 
             else:
-                logging.error(u"LeeBC3Caps; No se encontró el capítulo: " + i.Codigo() + '\n')
+                className= type(self).__name__
+                methodName= sys._getframe(0).f_code.co_name
+                logging.error(className+'.'+methodName+"; chapter with code: '"+ str(i.Codigo())+"' not found.\n")
                 continue
 
 

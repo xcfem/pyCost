@@ -7,6 +7,7 @@ __license__= "GPL"
 __version__= "3.0"
 __email__= "l.pereztato@ciccp.es"
 
+import sys
 import yaml
 import json
 import xmltodict
@@ -300,6 +301,11 @@ class Obra(cp.Chapter):
         self.subcapitulos.newChapters(components)
 
     def readQuantitiesFromBC3(self, co):
+        ''' Read measurements records from a FIEBDC-3 file.
+
+        :param co: measurement records.
+        '''
+        retval= True
         med= co.getQuantityData()
         if(len(med)<1):
             logging.info("No quantities in BC3 file.")
@@ -310,14 +316,16 @@ class Obra(cp.Chapter):
             cod_unidad= reg.CodigoUnidad().partition('@')[0]
             ud= self.findPrice(cod_unidad)
             if not ud:
-                logging.error(u"Obra.readQuantitiesFromBC3: No se encontró el precio: \'"
-                          + cod_unidad + "\'" + '\n')
+                className= type(self).__name__
+                methodName= sys._getframe(0).f_code.co_name
+                logging.error(className+'.'+methodName+"; no se encontró el precio: \'" + cod_unidad + "\'" + '\n')
                 logging.error(u"  El concepto de código: \'" + cod_unidad + "\'")
                 if not co.ExisteConcepto(cod_unidad):
                     logging.error(" no existe." + '\n')
                 else:
                     logging.error(" exists in the table: "
                               + co.StrTablaConcepto(cod_unidad) + '\n')
+                retval= False
             else:
                 m= unit_price_quantities.UnitPriceQuantities(ud)
                 m.readBC3(reg.Datos())
@@ -329,7 +337,16 @@ class Obra(cp.Chapter):
                 if c:
                     c.appendUnitPriceQuantities(m)
                 else:
-                    logging.error(u"No se encontró el capítulo: " + chapterCode + '\n')
+                    className= type(self).__name__
+                    methodName= sys._getframe(0).f_code.co_name
+                    c= self.findPrice(chapterCode)
+                    if(c):
+                        logging.error(className+'.'+methodName+"; parent concept '"+str(chapterCode)+ "' is not a chapter. Measurements outside chapters are not supported yet.\n")
+                        retval= False
+                    else:
+                        logging.error(className+'.'+methodName+"; chapter with code '"+str(chapterCode)+ "' not found.\n")
+                        retval= False
+        return retval
 
 
     def readBC3(self, inputFile):
@@ -381,8 +398,9 @@ class Obra(cp.Chapter):
 
         logging.info("Reading quantities...")
 
-        self.readQuantitiesFromBC3(co)
+        retval= self.readQuantitiesFromBC3(co)
         logging.info("done." + '\n')
+        return retval
 
     def ImprLtxPresEjecMat(self, doc, signaturesFileName= 'firmas'):
         ''' Write the budget for material execution.
