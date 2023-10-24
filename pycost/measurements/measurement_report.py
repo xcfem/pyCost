@@ -31,11 +31,12 @@ class QuantitiesReport(dict):
 
         :param lowerMeasurementBound: lower bound for the total measurement.
         '''
-        retval= list()
+        retval= set()
         for key in self:
             totalMeasurement= self[key]
             if(totalMeasurement>lowerMeasurementBound):
-                retval.append(key.Codigo())
+                code= key.Codigo()
+                retval.add(code)
         return retval
 
     def printLtx(self, doc):

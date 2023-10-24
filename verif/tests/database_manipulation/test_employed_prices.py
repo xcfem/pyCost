@@ -25,10 +25,10 @@ if(not pth):
 pendingLinks= site.readFromYaml(pth+'/../data/yaml/test_file_05.yaml')
 
 employedPrices= site.getEmployedPrices(lowerMeasurementBound= 1000.0)
-employedPricesRef= ['DMOVI3001', 'DSELECRI', 'RELL0301', 'ACERO0103', 'DRIESUB', 'USJT10abz', 'DPAVHORPUL', 'DALPEDR']
+employedPricesRef= {'DSELECRI', 'DRIESUB', 'USJT10abz', 'RELL0301', 'DPAVHORPUL', 'ACERO0103', 'DALPEDR', 'DMOVI3001'}
 
 employedElementaryPrices= site.getEmployedElementaryPrices(lowerMeasurementBound= 1000.0)
-employedElementaryPricesRef= ['MQRETR0102', 'PEON', 'MQCAMI0101', '%003', 'UTAMIZ', 'UPALA0101', 'UTRITU', 'UCOMP0202', 'UCAMI0201', 'UMOTO0102', 'OFICFER', 'PEONES', 'MAACE0201', 'OFICMON', 'TH66072', 'TK26300', 'Q004', 'Q003', '%UMAUX0103', 'OFICJAR', 'MMME.6a', 'MO0101', 'MO0201', 'UHORACERO', 'C2003000', 'PULI', 'UZAHO0102', 'UBULL0101', 'UAREN0103']      
+employedElementaryPricesRef= {'PEONES', 'UPALA0101', 'MO0201', 'UCAMI0201', 'TK26300', 'MQRETR0102', '%UMAUX0103', 'UCOMP0202', 'MO0101', 'UBULL0101', 'UZAHO0102', 'PULI', 'TH66072', 'UAREN0103', 'OFICMON', 'Q003', 'UMOTO0102', 'MAACE0201', 'MMME.6a', 'Q004', '%003', 'UTRITU', 'UHORACERO', 'OFICFER', 'PEON', 'UTAMIZ', 'MQCAMI0101', 'C2003000', 'OFICJAR'}
 
 '''
 print(employedPrices)
