@@ -214,19 +214,19 @@ class Chapter(bc3_entity.EntBC3):
     def LeeBC3DescompFase2(self, descompuestos, rootChapter):
         return self.precios.LeeBC3DescompFase2(descompuestos, rootChapter= rootChapter)
     
-    def findSubchapter(self, ruta):
+    def BuscaSubcapitulo(self, ruta):
         retval= None
         if ruta:
             retval= self.subcapitulos.Busca(ruta)
             if not retval:
-                logging.error(u"Chapter.findSubchapter: no se encontró el subcapítulo: " + ruta[1]
+                logging.error(u"Chapter.BuscaSubcapitulo: no se encontró el subcapítulo: " + ruta[1]
                           + u" en el capítulo: " + self.Codigo() + " (" + self.getTitle()
                           + ") (ruta: " + ruta + ')' + '\n')
                 #Si no encuentra el capítulo devuelve este mismo
                 retval= self
         return retval
     
-    def findSubchapter(self, lst):
+    def BuscaSubcapitulo(self, lst):
         '''Search the sub-chapter indicated by
            the list of the form ['1', '2', '1', '4']. '''
         retval= None
@@ -240,7 +240,7 @@ class Chapter(bc3_entity.EntBC3):
                 retval= self.subcapitulos[indice-1]
                 return retval
             elif(sz>1): # still diging.
-                return self.subcapitulos[indice-1].findSubchapter(lst)
+                return self.subcapitulos[indice-1].BuscaSubcapitulo(lst)
         else:
             logging.error(u"Empty list argument: " + str(lst) + '\n')
             return None

@@ -193,13 +193,13 @@ class Obra(cp.Chapter):
         if(cap_padre==""): #root chapter.
             subcapitulos.newChapter(cap)
         else:
-            self.findSubchapter(cap_padre).getSubcapitulos().newChapter(cap)
+            self.BuscaSubcapitulo(cap_padre).getSubcapitulos().newChapter(cap)
 
     def appendUnitPriceQuantities(self, cap_padre, m):
         ''' Appends la partida being passed as parameter
             to the sub-chapter indicated by the string
             of the form 1\2\1\4.'''
-        findSubchapter(cap_padre).appendUnitPriceQuantities(m)
+        BuscaSubcapitulo(cap_padre).appendUnitPriceQuantities(m)
 
     def LeeMedicSpre(self, inputFile):
         cdg= ""
@@ -285,7 +285,7 @@ class Obra(cp.Chapter):
 
     def findChapterMedicion(self,ruta):
         ruta.pop(-1) #Eliminamos el último elemento que es la posición.
-        return self.findSubchapter(ruta)
+        return self.BuscaSubcapitulo(ruta)
 
 
     def LeeBC3DatosObra(self, rootChapterDict):
