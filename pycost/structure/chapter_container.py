@@ -109,7 +109,7 @@ class Subcapitulos(list, epc.EntPyCost):
         else:
             sc= self[indice]
             ruta.pop_front()
-            return sc.BuscaSubcapitulo(ruta)
+            return sc.findSubchapter(ruta)
         return None
 
     def BuscaCodigo(self, nmb):
