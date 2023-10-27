@@ -140,6 +140,10 @@ class Subcapitulos(list, epc.EntPyCost):
         return retval
 
     def newChapter(self, c):
+        ''' Append the given chapter to the container.
+
+        :param c: chapter to append.
+        '''
         self.append(c)
         return c
 

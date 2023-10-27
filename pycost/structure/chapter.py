@@ -19,6 +19,7 @@ from pycost.bc3 import bc3_component
 from pycost.structure import chapter_container
 from pycost.prices import price_table
 from pycost.prices import unit_price_container
+from pycost.structure import unit_price_quantities
 from pycost.utils import pylatex_utils
 from pycost.utils import basic_types
 
@@ -201,7 +202,25 @@ class Chapter(bc3_entity.EntBC3):
     def CuadroPrecios(self):
         return self.precios
     def appendUnitPriceQuantities(self, m):
+        ''' Append the UnitPriceQuantities object to the quantities container.
+
+        :param m: quantities to append.
+        '''
         self.quantities.append(m)
+    def appendQuantitiesList(self, priceCode, measurements):
+        ''' Append the given list of quantities to the quantities container.
+
+        :param priceCode: code of the price of the material being quantified.
+        :param measurements: list of (remark, numberOfUnits, lenght, width, height) tuples.
+        '''
+        root= self.getRootChapter()
+        quantities= unit_price_quantities.UnitPriceQuantities(root.getUnitPrice(priceCode))
+        for row in measurements:
+
+            quantities.appendMeasurement(textComment=row[0], nUnits= row[1], length= row[2], width= row[3], height= row[4])
+        self.appendUnitPriceQuantities(quantities)
+        
+        
     def getBC3Component(self):
         '''Return this chapter as a component.'''
         return bc3_component.BC3Component(e= self,fr= self.fr)
@@ -315,6 +334,14 @@ class Chapter(bc3_entity.EntBC3):
                 for p in prices:
                     p.appendToChapter(recipientChapter)
         return recipientChapter
+
+    def newSubChapter(self, c):
+        ''' Append the given chapter to the container.
+
+        :param c: chapter to append.
+        '''
+        c.owner= self
+        return self.subcapitulos.newChapter(c)
 
     def extractChapters(self, chapterCodes, recipientChapter):
         ''' Dumps the concepts corresponding to the codes in the argument list
@@ -573,6 +600,17 @@ class Chapter(bc3_entity.EntBC3):
             retval= max(retval, max(depths))
         return retval
 
+    def getRootChapter(self):
+        ''' Return the root of the chapter three.'''
+        if(self.isRootChapter()):
+            retval= self
+        else:
+            if(self.owner):
+                retval= self.owner.getRootChapter()
+            else:
+                retval= None
+        return retval
+        
     def writePartialBudgetsIntoLatexDocument(self, doc, parentSection):
         '''Write partial budgets in the pylatex document argument.
 
