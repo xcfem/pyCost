@@ -11,6 +11,7 @@ import logging
 import sys
 import pylatex
 import re
+import json
 from decimal import Decimal
 from pycost.measurements import measurement_container
 from pycost.bc3 import fr_entity
@@ -375,24 +376,38 @@ class Chapter(bc3_entity.EntBC3):
         self.WriteQuantitiesBC3(os,pos)
         self.WriteSubChaptersBC3(os,pos)
 
-    def getDict(self):
-        ''' Return a dictionary containing the object data.'''
-        retval= super(Chapter, self).getDict()
+    def getMembersDict(self):
+        ''' Return a dictionary containing the data of the chapter members.'''
+        retval= dict()
         retval['sub_chapters']= self.subcapitulos.getDict()
         retval['prices']= self.precios.getDict()
         retval['chapter_quantities']= self.quantities.getDict()
         return retval
+
+    def setMembersFromDict(self,dct):
+        ''' Read member values from a dictionary.
+
+        :param dct: input dictionary.
+        '''
+        pendingLinks= self.quantities.setFromDict(dct['chapter_quantities'])
+        pendingLinks.extend(self.precios.setFromDict(dct['prices']))
+        pendingLinks.extend(self.subcapitulos.setFromDict(dct['sub_chapters']))
+        return pendingLinks
+    
+    def getDict(self):
+        ''' Return a dictionary containing the object data.'''
+        retval= super(Chapter, self).getDict()
+        retval.update(self.getMembersDict())
+        return retval
         
     def setFromDict(self,dct):
-        ''' Read member values from a dictionary.
+        ''' Read object from a dictionary.
 
         :param dct: input dictionary.
         '''
         if(isinstance(dct, list)): # deal with xmltodict imported dictionaries.
             dct= dct[0]
-        pendingLinks= self.quantities.setFromDict(dct['chapter_quantities'])
-        pendingLinks.extend(self.precios.setFromDict(dct['prices']))
-        pendingLinks.extend(self.subcapitulos.setFromDict(dct['sub_chapters']))
+        pendingLinks= self.setMembersFromDict(dct)
         pendingLinks.extend(super(Chapter, self).setFromDict(dct))
         return pendingLinks
 
@@ -401,13 +416,16 @@ class Chapter(bc3_entity.EntBC3):
 
         :param pendingLinks: list of pending links.
         '''
+        rootChapter= self.getRootChapter()
+        if(rootChapter is None):
+            rootChapter= self
         missingCodes= list()
         for link in pendingLinks:
             key= link['key']
             obj= link['object']
-            value= self.findPrice(key)
+            value= rootChapter.findPrice(key)
             if(value is None):
-                value= self.BuscaCodigo(key)
+                value= rootChapter.BuscaCodigo(key)
             if(value):
                 attribute= link['attr']
                 if(hasattr(obj, attribute)):
@@ -706,6 +724,50 @@ class Chapter(bc3_entity.EntBC3):
                 retval.add(key)
         return retval
        
+    def writeMembersToJSON(self, outputFileName, indent= 2):
+        ''' Write data to a JSON file.
+
+        :param outputFileName: name of the output file.
+        '''
+        # Write data to file.
+        outputFile= open(outputFileName, mode='w')
+        outputs= json.dump(self.getMembersDict(), outputFile, indent= indent)
+        outputFile.close()
+        
+    def readMembersFromJSON(self, inputFileName):
+        ''' Read member data from a JSON file.
+
+        :param inputFileName: name of the output file.
+        '''
+        # Read data from file.
+        inputFile= open(inputFileName, mode='r')
+        dataDict= json.load(inputFile)
+        inputFile.close()
+        pendingLinks= self.solvePendingLinks(self.setMembersFromDict(dataDict))
+        return pendingLinks
+        
+    def readFromJson(self, inputFileName):
+        ''' Load data from a JSON file.
+
+        :param inputFileName: name of the input file.
+        '''
+        # Read data from file.
+        inputFile= open(inputFileName, mode='r')
+        dataDict= json.load(inputFile)
+        inputFile.close()
+        pendingLinks= self.solvePendingLinks(self.setFromDict(dataDict))
+        return pendingLinks
+        
+    def writeJson(self, outputFileName, indent= 2):
+        ''' Write data to a JSON file.
+
+        :param outputFileName: name of the output file.
+        '''
+        # Write data to file.
+        outputFile= open(outputFileName, mode='w')
+        outputs= json.dump(self.getDict(), outputFile, indent= indent)
+        outputFile.close()
+        
     def clear(self):
         '''removes all items from the chapter.'''
         self.quantities.clear()

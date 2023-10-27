@@ -729,28 +729,6 @@ class Obra(cp.Chapter):
         outputFile= open(outputFileName, mode='w')
         outputs= yaml.dump(self.getDict(), outputFile, allow_unicode=True)
         outputFile.close()
-
-    def readFromJson(self, inputFileName):
-        ''' Load data from a JSON file.
-
-        :param inputFileName: name of the input file.
-        '''
-        # Read data from file.
-        inputFile= open(inputFileName, mode='r')
-        dataDict= json.load(inputFile)
-        inputFile.close()
-        pendingLinks= self.solvePendingLinks(self.setFromDict(dataDict))
-        return pendingLinks
-    
-    def writeJson(self, outputFileName, indent= 2):
-        ''' Write data to a JSON file.
-
-        :param outputFileName: name of the output file.
-        '''
-        # Read data from file.
-        outputFile= open(outputFileName, mode='w')
-        outputs= json.dump(self.getDict(), outputFile, indent= indent)
-        outputFile.close()
         
     def readFromXml(self, inputFileName):
         ''' Load data from a XML file.
