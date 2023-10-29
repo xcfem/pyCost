@@ -40,6 +40,22 @@ class ChapterQuantities(list, epc.EntPyCost):
                 codeFound= True
         if(not codeFound):
             super(ChapterQuantities, self).append(unitPriceQuantities)
+
+    def getQuantitiesForPrice(self, unitPriceCode):
+        ''' Return the quantities corresponding to the price with the
+            given code.
+
+        :param unitPriceCode: code of the price whose quantities will be
+                              retrieved.
+        '''
+        retval= None
+        codeFound= False
+        for upq in self: # search for the code in this container.
+            uPCode= upq.getUnitPriceCode()
+            if(uPCode == unitPriceCode): # code found.
+                retval= upq
+                break
+        return retval
  
     def removeConcept(self, conceptToRemoveCode):
         ''' Remove the concept whose code is being passed as parameter.
