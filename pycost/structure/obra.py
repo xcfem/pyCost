@@ -693,13 +693,19 @@ class Obra(cp.Chapter):
         for code in codes:
             txtCode= code
             unitPrice= self.findPrice(code)
-            unit= unitPrice.unidad
-            description= unitPrice.long_description
-            if(latex):
-                txtCode= pylatex_utils.ascii2latex(txtCode)
-                unit= pylatex_utils.ascii2latex(unit)
-                description= pylatex_utils.ascii2latex(description)
-            retval.append([txtCode, unit, description])
+            if(unitPrice):
+                unit= unitPrice.unidad
+                description= unitPrice.long_description
+                if(latex):
+                    txtCode= pylatex_utils.ascii2latex(txtCode)
+                    unit= pylatex_utils.ascii2latex(unit)
+                    description= pylatex_utils.ascii2latex(description)
+                retval.append([txtCode, unit, description])
+            else:
+                className= type(self).__name__
+                methodName= sys._getframe(0).f_code.co_name
+                logging.error(className+'.'+methodName+"; no se encontró el precio: \'" + code + "\'\n")
+                
         return retval
 
     def SimulaDescomp(self, origen, destino):
