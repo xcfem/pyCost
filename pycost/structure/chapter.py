@@ -86,7 +86,20 @@ class Chapter(bc3_entity.EntBC3):
         if type(lstQuants[0]) is not list:
             lstQuants=[lstQuants]
         for lqt in lstQuants:
+            if(len(lqt)!=5):
+                errorMsg= '; the number of items must be 5, the list argument for '
+                errorMsg+= currentPrice.Codigo()+' has: '+str(len(lqt)+'.')    
+                className= type(self).__name__
+                funcName= sys._getframe(0).f_code.co_name
+                logging.error(funcName+errMsg)
+                exit(1)                
             txt=lqt[0]
+            if(not isinstance(txt, str)):
+                errorMsg= '; the type of the first item for '+currentPrice.Codigo()+'is: '+str(type(txt))+'. A string was expected.'  
+                className= type(self).__name__
+                funcName= sys._getframe(0).f_code.co_name
+                logging.error(funcName+errorMsg)
+                exit(1)
             if not txt: txt=' '
             units=lqt[1]
             length=lqt[2]
@@ -105,8 +118,10 @@ class Chapter(bc3_entity.EntBC3):
                
         '''
         for cod in dictQuants.keys():
-            lstQuants=dictQuants[cod]
+            lstQuants= dictQuants[cod]
+            comment= dictQuants[cod][0]
             self.addConceptMeasurementFromList(cod,lstQuants)
+            
  
     def NumElementales(self, filterBy= None):
         ''' Return the number of elementary prices in this chapter and its
