@@ -334,7 +334,6 @@ def ltx_multicolumn(textStr):
 
 def ascii2latex(s):
     '''Return the equivalent latex code.'''
-    tmp= s
     # if type(s) == textStr:
     #     # Ignore errors even if the string is not proper UTF-8 or has
     #     # broken marker bytes.
@@ -344,24 +343,31 @@ def ascii2latex(s):
     #     # Assume the value object has proper __unicode__() method
     #     tmp= unicode(s)
     #tmp= s.encode('ascii',errors='replace') #unicode(s, errors='replace')
-    if(tmp.find('\\')): # Has scape characters.
-     tmp.replace('\\(','(')
-    if(tmp.find('\\')):
-     tmp.replace('\\)',')')
-    if(tmp.find('\\')):
-     tmp.replace('\\[','[')
-    if(tmp.find('\\')):
-     tmp.replace('\\]',']')
-    retval= ''
-    for c in tmp:
-        if(c=='_'): retval+= '\\'
-        if(c=='%'): retval+= '\\'
-        if(c=='$'): retval+= '\\'
-        if(c=='&'): retval+= '\\'
-        if(c=='>'):
-            retval+= '$>$'
-            continue
-        retval+= c
+    if(isinstance(s,str)):
+        tmp= s
+        if(tmp.find('\\')): # Has scape characters.
+         tmp.replace('\\(','(')
+        if(tmp.find('\\')):
+         tmp.replace('\\)',')')
+        if(tmp.find('\\')):
+         tmp.replace('\\[','[')
+        if(tmp.find('\\')):
+         tmp.replace('\\]',']')
+        retval= ''
+        for c in tmp:
+            if(c=='_'): retval+= '\\'
+            if(c=='%'): retval+= '\\'
+            if(c=='$'): retval+= '\\'
+            if(c=='&'): retval+= '\\'
+            if(c=='>'):
+                retval+= '$>$'
+                continue
+            retval+= c
+    else:
+        warningMsg= '; the type of the argument is: '+str(type(s)+'. A string was expected.')    
+        funcName= sys._getframe(0).f_code.co_name
+        logging.warning(funcName+errMsg)
+        retval= s
     return retval
 
 def removeLtxTemporaryFiles(latexFileName):
