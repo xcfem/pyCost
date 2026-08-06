@@ -433,8 +433,9 @@ class Obra(cp.Chapter):
             chapter.append(pylatex.Command('input{'+signaturesFileName+'}'))
         doc.append(chapter)
 
-    def WriteBC3(self, os, pos= ''):
-        os.write("~V|XC, S.L.|FIEBDC-3/2012|pyCost 0.1|\n")
+    def WriteBC3(self, os, pos= '', encoding= 'ANSI'):
+        v_record= "~V|XC, S.L.|FIEBDC-3/2020|pyCost 0.2|||"+encoding+"|\n"
+        os.write(v_record)
         self.WritePreciosBC3(os)
         self.WriteConceptoBC3(os)
         self.WriteDescompBC3(os)
