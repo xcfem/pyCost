@@ -434,8 +434,10 @@ class Obra(cp.Chapter):
         doc.append(chapter)
 
     def WriteBC3(self, os, pos= '', encoding= 'ANSI'):
-        v_record= "~V|XC, S.L.|FIEBDC-3/2020|pyCost 0.2|||"+encoding+"|\n"
+        v_record= "~V|XC, S.L.|FIEBDC-3/2020|pyCost 0.2||"+encoding+"|\n"
         os.write(v_record)
+        k_record= "~K|3\\3\\4\\3\\4\\2\\2\\2\\EUR\\|0.0\\6\\13\\0\\0|3\\2\\\\2\\3\\\\2\\4\\5\\3\\3\\4\\4\\3\\EUR\\||\n"
+        os.write(k_record)
         self.WritePreciosBC3(os)
         self.WriteConceptoBC3(os)
         self.WriteDescompBC3(os)
