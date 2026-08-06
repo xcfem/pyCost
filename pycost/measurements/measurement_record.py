@@ -140,18 +140,24 @@ class MeasurementRecord(epc.EntPyCost):
         self.ancho= m['ancho']
         self.alto= m['alto']
 
-    def getComponents(self):
+    def getComponents(self, useLocale= True):
         '''Return measurement components: 
            [description,number of units, length, width and height].'''
         retval= [ self.comentario, '','','','']
-        if(self.unidades): retval[1]= f'{self.unidades:n}' # self.getUnitsString()
-        if(self.largo): retval[2]= f'{self.largo:n}' # self.getLengthString()
-        if(self.ancho): retval[3]= f'{self.ancho:n}' # self.getWidthString()
-        if(self.alto): retval[4]= f'{self.alto:n}' # self.getHeightString()
+        if(useLocale):
+            if(self.unidades): retval[1]= f'{self.unidades:n}' 
+            if(self.largo): retval[2]= f'{self.largo:n}' 
+            if(self.ancho): retval[3]= f'{self.ancho:n}' 
+            if(self.alto): retval[4]= f'{self.alto:n}'
+        else:
+            if(self.unidades): retval[1]= f'{self.unidades:f}' 
+            if(self.largo): retval[2]= f'{self.largo:f}' 
+            if(self.ancho): retval[3]= f'{self.ancho:f}' 
+            if(self.alto): retval[4]= f'{self.alto:f}'            
         return retval
     
     def WriteBC3(self, os):
-        components= self.getComponents()
+        components= self.getComponents(useLocale= False)
         os.write('\\' + components[0] + '\\'
            + components[1] + '\\'
            + components[2] + '\\'
